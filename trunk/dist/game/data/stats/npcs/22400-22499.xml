@@ -24,8 +24,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4065" level="9" /> <!-- NPC Heal -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -96,8 +94,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4065" level="9" /> <!-- NPC Heal -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -176,8 +172,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4178" level="12" /> <!-- BOSS Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -256,8 +250,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -334,7 +326,7 @@
 		<sex>MALE</sex>
 		<acquire exp="74708" sp="17" />
 		<stats>
-			<vitals hp="3643.38976668326" hpRegen="8.5" mp="1743.0" mpRegen="3" />
+			<vitals hp="21860.33860009956" hpRegen="8.5" mp="1743.0" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -351,8 +343,6 @@
 		<skillList>
 			<skill id="4104" level="10" /> <!-- Flame -->
 			<skill id="4160" level="10" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -423,7 +413,7 @@
 		<sex>MALE</sex>
 		<acquire exp="50400" sp="12" />
 		<stats>
-			<vitals hp="3643.38976668326" hpRegen="8.5" mp="1743.0" mpRegen="3" />
+			<vitals hp="14573.55906673304" hpRegen="8.5" mp="1743.0" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -439,8 +429,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="10" /> <!-- NPC Strike -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -515,7 +503,7 @@
 		<sex>MALE</sex>
 		<acquire exp="47379" sp="11" />
 		<stats>
-			<vitals hp="3643.38976668326" hpRegen="8.5" mp="1743.0" mpRegen="3" />
+			<vitals hp="14573.55906673304" hpRegen="8.5" mp="1743.0" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -532,8 +520,6 @@
 		<skillList>
 			<skill id="4157" level="10" /> <!-- NPC Blaze - Magic -->
 			<skill id="4160" level="10" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -608,7 +594,7 @@
 		<sex>MALE</sex>
 		<acquire exp="51667" sp="12" />
 		<stats>
-			<vitals hp="3643.38976668326" hpRegen="8.5" mp="1743.0" mpRegen="3" />
+			<vitals hp="14573.55906673304" hpRegen="8.5" mp="1743.0" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -625,8 +611,6 @@
 		<skillList>
 			<skill id="4072" level="10" /> <!-- Stun -->
 			<skill id="4078" level="10" /> <!-- NPC Flamestrike -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -709,8 +693,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -786,8 +768,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -862,8 +842,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -937,8 +915,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1016,8 +992,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4078" level="9" /> <!-- NPC Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1103,8 +1077,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1202,8 +1174,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1306,8 +1276,6 @@
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1701,8 +1669,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1799,8 +1765,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1899,8 +1863,6 @@
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1997,8 +1959,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2094,8 +2054,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2196,8 +2154,6 @@
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2590,8 +2546,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2689,8 +2643,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2791,8 +2743,6 @@
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2889,8 +2839,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2988,8 +2936,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3090,8 +3036,6 @@
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3188,8 +3132,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3287,8 +3229,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3389,8 +3329,6 @@
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3487,8 +3425,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3585,8 +3521,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3686,8 +3620,6 @@
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3783,8 +3715,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3881,8 +3811,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3982,8 +3910,6 @@
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4079,8 +4005,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4177,8 +4101,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4279,8 +4201,6 @@
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4379,8 +4299,6 @@
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4047" level="2" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4437,8 +4355,6 @@
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4047" level="2" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4498,8 +4414,6 @@
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4098" level="3" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
@@ -4560,8 +4474,6 @@
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4047" level="3" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4618,8 +4530,6 @@
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4047" level="3" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4679,8 +4589,6 @@
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4098" level="4" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
@@ -4740,8 +4648,6 @@
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4047" level="4" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4797,8 +4703,6 @@
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4047" level="4" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4857,8 +4761,6 @@
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4098" level="5" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
@@ -4919,8 +4821,6 @@
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4047" level="5" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4977,8 +4877,6 @@
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4047" level="5" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5037,8 +4935,6 @@
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4098" level="6" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
@@ -5098,8 +4994,6 @@
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4047" level="6" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5155,8 +5049,6 @@
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4047" level="6" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5215,8 +5107,6 @@
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4098" level="7" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->

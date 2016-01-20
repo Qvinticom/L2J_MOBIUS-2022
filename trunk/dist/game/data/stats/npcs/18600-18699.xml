@@ -39,8 +39,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
@@ -104,8 +102,6 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="4" /> <!-- Extremely Weak P. Def. -->
@@ -138,8 +134,6 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="4" /> <!-- Extremely Weak P. Def. -->
@@ -172,8 +166,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -206,8 +198,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -240,8 +230,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -274,8 +262,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -319,8 +305,6 @@
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4287" level="2" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -381,8 +365,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4287" level="2" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -446,8 +428,6 @@
 		<skillList>
 			<skill id="4137" level="4" /> <!-- Hydro Screw -->
 			<skill id="4287" level="2" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -497,7 +477,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="31200" sp="7" />
 		<stats>
-			<vitals hp="19247" hpRegen="9" mp="343.8" mpRegen="1.8" />
+			<vitals hp="19247" hpRegen="9" mp="687.6" mpRegen="1.8" />
 			<attack physical="137.86467" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="121.98819" magical="89.26566" />
 			<attribute>
@@ -513,8 +493,6 @@
 		<skillList>
 			<skill id="4065" level="3" /> <!-- NPC Heal -->
 			<skill id="4287" level="2" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="10" /> <!-- MP Increase (2x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -566,7 +544,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2085" sp="22" />
 		<stats>
-			<vitals hp="1087" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
+			<vitals hp="543.5" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="129.23095" magical="94.5656" />
 			<attribute>
@@ -581,8 +559,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4137" level="4" /> <!-- Hydro Screw -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -636,7 +612,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2101" sp="28" />
 		<stats>
-			<vitals hp="1126" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+			<vitals hp="563" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<attribute>
@@ -651,8 +627,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4137" level="4" /> <!-- Hydro Screw -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -706,7 +680,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2186" sp="35" />
 		<stats>
-			<vitals hp="1165" hpRegen="4.5" mp="463.32" mpRegen="1.8" />
+			<vitals hp="582.5" hpRegen="4.5" mp="463.32" mpRegen="1.8" />
 			<attack physical="166.06476" magical="113.4007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="152.46752" magical="111.56912" />
 			<attribute>
@@ -721,8 +695,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4137" level="4" /> <!-- Hydro Screw -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -777,7 +749,7 @@
 		<equipment rhand="150" lhand="103" /> <!-- rhand: Elemental Sword lhand: Tower Shield -->
 		<acquire exp="2101" sp="28" />
 		<stats>
-			<vitals hp="1126" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+			<vitals hp="563" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<attribute>
@@ -792,8 +764,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4078" level="4" /> <!-- NPC Flamestrike -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -847,7 +817,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2186" sp="35" />
 		<stats>
-			<vitals hp="1165" hpRegen="4.5" mp="463.32" mpRegen="1.8" />
+			<vitals hp="582.5" hpRegen="4.5" mp="463.32" mpRegen="1.8" />
 			<attack physical="166.06476" magical="113.4007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="152.46752" magical="111.56912" />
 			<attribute>
@@ -862,8 +832,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4078" level="4" /> <!-- NPC Flamestrike -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -913,7 +881,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2101" sp="28" />
 		<stats>
-			<vitals hp="1126" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+			<vitals hp="563" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<attribute>
@@ -928,8 +896,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4137" level="4" /> <!-- Hydro Screw -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -970,7 +936,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2101" sp="28" />
 		<stats>
-			<vitals hp="809.52639" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+			<vitals hp="404.763195" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<attribute>
@@ -983,8 +949,6 @@
 		</stats>
 		<status attackable="false" undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1006,7 +970,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2101" sp="28" />
 		<stats>
-			<vitals hp="711" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+			<vitals hp="355.5" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<attribute>
@@ -1019,8 +983,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1042,7 +1004,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2101" sp="28" />
 		<stats>
-			<vitals hp="711" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+			<vitals hp="355.5" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<attribute>
@@ -1055,8 +1017,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1093,8 +1053,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4287" level="2" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1115,7 +1073,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2272" sp="44" />
 		<stats>
-			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
+			<vitals hp="525.40826" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
 			<attack physical="198.34591" magical="135.44454" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="120.65578" />
 			<attribute>
@@ -1128,8 +1086,6 @@
 		</stats>
 		<status attackable="false" undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1151,7 +1107,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="3127" sp="174" />
 		<stats>
-			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<vitals hp="992.77963" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="252.49346" magical="184.76376" />
 			<attribute>
@@ -1163,8 +1119,6 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1196,7 +1150,7 @@
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
 		<acquire exp="4815" sp="1" />
 		<stats>
-			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<vitals hp="992.77963" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="252.49346" magical="184.76376" />
 			<attribute>
@@ -1211,8 +1165,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4120" level="6" /> <!-- Stun -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1263,7 +1215,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2827" sp="151" />
 		<stats>
-			<vitals hp="1828.68266" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<vitals hp="914.34133" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<attribute>
@@ -1277,8 +1229,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1333,7 +1283,7 @@
 		<equipment rhand="78" /> <!-- rhand: Great Sword -->
 		<acquire exp="3127" sp="174" />
 		<stats>
-			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<vitals hp="992.77963" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="252.49346" magical="184.76376" />
 			<attribute>
@@ -1347,8 +1297,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1403,7 +1351,7 @@
 		<equipment rhand="225" lhand="945" /> <!-- rhand: Mithril Dagger lhand: Skeleton Buckler -->
 		<acquire exp="3443" sp="199" />
 		<stats>
-			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="1070.910635" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -1417,8 +1365,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1473,7 +1419,7 @@
 		<equipment rhand="225" lhand="945" /> <!-- rhand: Mithril Dagger lhand: Skeleton Buckler -->
 		<acquire exp="3443" sp="199" />
 		<stats>
-			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="1070.910635" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
@@ -1487,8 +1433,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1540,7 +1484,7 @@
 		<equipment rhand="232" /> <!-- rhand: Dark Elven Dagger -->
 		<acquire exp="4400" sp="1" />
 		<stats>
-			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<vitals hp="992.77963" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="252.49346" magical="184.76376" />
 			<attribute>
@@ -1555,8 +1499,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1624,8 +1566,6 @@
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1692,8 +1632,6 @@
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1760,8 +1698,6 @@
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1828,8 +1764,6 @@
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1884,8 +1818,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1921,8 +1853,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2101,8 +2031,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4067" level="7" /> <!-- NPC Mortal Blow -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2372,8 +2300,6 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3211,8 +3137,6 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3671,8 +3595,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3706,8 +3628,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3741,8 +3661,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3775,8 +3693,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3811,8 +3727,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3853,8 +3767,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3891,8 +3803,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3925,8 +3835,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3946,7 +3854,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats>
-			<vitals hp="39.74519" hpRegen="2" mp="40.0" mpRegen="0.9" />
+			<vitals hp="9.9362975" hpRegen="2" mp="40.0" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="44.44444" magical="32.52252" />
 			<attribute>
@@ -3959,8 +3867,6 @@
 		</stats>
 		<status showName="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3981,7 +3887,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats>
-			<vitals hp="39.74519" hpRegen="2" mp="40.0" mpRegen="0.9" />
+			<vitals hp="9.9362975" hpRegen="2" mp="40.0" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="44.44444" magical="32.52252" />
 			<attribute>
@@ -3994,8 +3900,6 @@
 		</stats>
 		<status showName="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4016,7 +3920,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats>
-			<vitals hp="39.74519" hpRegen="2" mp="40.0" mpRegen="0.9" />
+			<vitals hp="9.9362975" hpRegen="2" mp="40.0" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="44.44444" magical="32.52252" />
 			<attribute>
@@ -4029,8 +3933,6 @@
 		</stats>
 		<status showName="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4051,7 +3953,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats>
-			<vitals hp="39.74519" hpRegen="2" mp="40.0" mpRegen="0.9" />
+			<vitals hp="9.9362975" hpRegen="2" mp="40.0" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="44.44444" magical="32.52252" />
 			<attribute>
@@ -4064,8 +3966,6 @@
 		</stats>
 		<status showName="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4086,7 +3986,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats>
-			<vitals hp="39.74519" hpRegen="2" mp="40.0" mpRegen="0.9" />
+			<vitals hp="9.9362975" hpRegen="2" mp="40.0" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="44.44444" magical="32.52252" />
 			<attribute>
@@ -4099,8 +3999,6 @@
 		</stats>
 		<status showName="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4134,8 +4032,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4168,8 +4064,6 @@
 		</stats>
 		<status attackable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4202,8 +4096,6 @@
 		</stats>
 		<status attackable="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4243,8 +4135,6 @@
 		</stats>
 		<status attackable="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4284,8 +4174,6 @@
 		</stats>
 		<status attackable="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4325,8 +4213,6 @@
 		</stats>
 		<status attackable="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4366,8 +4252,6 @@
 		</stats>
 		<status attackable="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4407,8 +4291,6 @@
 		</stats>
 		<status attackable="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4448,8 +4330,6 @@
 		</stats>
 		<status attackable="false" talkable="false" flying="true" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4489,8 +4369,6 @@
 		</stats>
 		<status attackable="false" talkable="false" flying="true" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4530,8 +4408,6 @@
 		</stats>
 		<status attackable="false" talkable="false" flying="true" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4571,8 +4447,6 @@
 		</stats>
 		<status attackable="false" talkable="false" flying="true" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4612,8 +4486,6 @@
 		</stats>
 		<status attackable="false" talkable="false" flying="true" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4653,8 +4525,6 @@
 		</stats>
 		<status attackable="false" talkable="false" flying="true" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4694,8 +4564,6 @@
 		</stats>
 		<status attackable="false" talkable="false" flying="true" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4735,8 +4603,6 @@
 		</stats>
 		<status attackable="false" talkable="false" flying="true" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4776,8 +4642,6 @@
 		</stats>
 		<status attackable="false" talkable="false" flying="true" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4819,8 +4683,6 @@
 		<status canMove="false" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4868,8 +4730,6 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4157" level="6" /> <!-- NPC Blaze - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4919,8 +4779,6 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4152" level="6" /> <!-- NPC HP Drain - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4959,8 +4817,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4997,8 +4853,6 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5031,8 +4885,6 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5065,8 +4917,6 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

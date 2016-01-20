@@ -29,8 +29,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -89,8 +87,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -149,8 +145,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -209,8 +203,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -269,8 +261,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -329,8 +319,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -383,7 +371,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2145" sp="200" />
 		<stats>
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="1147.74077" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<attribute>
@@ -402,8 +390,6 @@
 			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
 			<skill id="4072" level="6" /> <!-- Stun -->
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -441,7 +427,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2145" sp="200" />
 		<stats>
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="1147.74077" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<attribute>
@@ -456,8 +442,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -511,7 +495,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2275" sp="218" />
 		<stats>
-			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<vitals hp="1197.727665" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
 			<attack physical="667.50361" magical="455.81844" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="213.05139" />
 			<attribute>
@@ -530,8 +514,6 @@
 			<skill id="4073" level="6" /> <!-- Stun -->
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -569,7 +551,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2275" sp="218" />
 		<stats>
-			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<vitals hp="1197.727665" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
 			<attack physical="667.50361" magical="455.81844" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="213.05139" />
 			<attribute>
@@ -584,8 +566,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -640,7 +620,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2019" sp="183" />
 		<stats>
-			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="1096.71571" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
 			<attack physical="582.81759" magical="397.98887" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="198.95754" />
 			<attribute>
@@ -657,8 +637,6 @@
 			<skill id="2188" level="1" /> <!-- Golden Spice -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -699,7 +677,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2019" sp="183" />
 		<stats>
-			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="1096.71571" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
 			<attack physical="582.81759" magical="397.98887" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="198.95754" />
 			<attribute>
@@ -714,8 +692,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -775,8 +751,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -810,8 +784,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -844,8 +816,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -878,8 +848,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -912,8 +880,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -958,8 +924,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -994,8 +958,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1028,8 +990,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1062,8 +1022,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1188,8 +1146,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1316,8 +1272,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1443,8 +1397,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1563,8 +1515,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1661,8 +1611,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1760,8 +1708,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1798,8 +1744,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1846,8 +1790,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1970,8 +1912,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2075,8 +2015,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2180,8 +2118,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2271,8 +2207,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2357,8 +2291,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2393,8 +2325,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2432,8 +2362,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2576,8 +2504,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2750,8 +2676,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2921,8 +2845,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2956,8 +2878,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2990,8 +2910,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3024,8 +2942,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3058,8 +2974,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3092,8 +3006,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3126,8 +3038,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3160,8 +3070,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3194,8 +3102,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3228,8 +3134,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3262,8 +3166,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3296,8 +3198,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3330,8 +3230,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3364,8 +3262,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3422,8 +3318,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3522,8 +3416,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3557,8 +3449,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3591,8 +3481,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3683,8 +3571,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3777,8 +3663,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3812,8 +3696,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3952,7 +3834,7 @@
 	<npc id="16080" level="55" type="L2Npc" name="Magmeld Fairy">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3974,7 +3856,7 @@
 	<npc id="16081" level="55" type="L2Npc" name="Fairy of Life">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3996,7 +3878,7 @@
 	<npc id="16082" level="55" type="L2Npc" name="Tersi's Spirit">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -4018,7 +3900,7 @@
 	<npc id="16083" level="55" type="L2Npc" name="Propeller Boy Agathion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4040,7 +3922,7 @@
 	<npc id="16084" level="55" type="L2Npc" name="Magical Girl Agathion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4062,7 +3944,7 @@
 	<npc id="16085" level="55" type="L2Npc" name="Cobra Agathion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4084,7 +3966,7 @@
 	<npc id="16086" level="55" type="L2Npc" name="Baby Ufa Agathion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4106,7 +3988,7 @@
 	<npc id="16087" level="55" type="L2Npc" name="Agathion - XP Bottle">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4128,7 +4010,7 @@
 	<npc id="16088" level="55" type="L2Npc" name="Agathion Hye-jin Jang">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4150,7 +4032,7 @@
 	<npc id="16089" level="55" type="L2Npc" name="Agathion Hyuk Jang">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4172,7 +4054,7 @@
 	<npc id="16090" level="55" type="L2Npc" name="Agathion Soo-ro Kim">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4194,7 +4076,7 @@
 	<npc id="16091" level="55" type="L2Npc" name="Agathion Jaebum Park">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4216,7 +4098,7 @@
 	<npc id="16092" level="55" type="L2Npc" name="Agathion Shin-young Kim">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4238,7 +4120,7 @@
 	<npc id="16093" level="55" type="L2Npc" name="Flame Spirit">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4260,7 +4142,7 @@
 	<npc id="16094" level="55" type="L2Npc" name="Clan-exclusive Pet">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="91" hpRegen="7.5" mp="91" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4282,7 +4164,7 @@
 	<npc id="16095" level="55" type="L2Npc" name="Clan-exclusive Pet">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="6281" hpRegen="7.5" mp="6281" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4304,7 +4186,7 @@
 	<npc id="16096" level="55" type="L2Npc" name="Clan-exclusive Pet">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="5947" hpRegen="7.5" mp="5947" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4326,7 +4208,7 @@
 	<npc id="16097" level="55" type="L2Npc" name="Clan-exclusive Pet for Training">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="6281" hpRegen="7.5" mp="6281" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4348,7 +4230,7 @@
 	<npc id="16098" level="55" type="L2Npc" name="Sin Eater">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="196" hpRegen="7.5" mp="196" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -4370,7 +4252,7 @@
 	<npc id="16099" level="55" type="L2Npc" name="Sin Eater">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="196" hpRegen="7.5" mp="196" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />

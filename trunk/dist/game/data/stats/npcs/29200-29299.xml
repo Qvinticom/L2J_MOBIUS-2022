@@ -3,7 +3,7 @@
 	<npc id="29200" level="99" type="L2Npc" name="Earth Wyrm Tail">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="229638943" hpRegen="7.5" mp="229638943" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -30,7 +30,7 @@
 	<npc id="29201" level="99" type="L2Npc" name="Earth Wyrm Victim">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1536018" hpRegen="7.5" mp="1536018" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -57,7 +57,7 @@
 	<npc id="29202" level="99" type="L2Npc" name="Earth Wyrm Victim">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1536018" hpRegen="7.5" mp="1536018" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -84,7 +84,7 @@
 	<npc id="29203" level="99" type="L2Npc" name="Earth Wyrm Victim">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1536018" hpRegen="7.5" mp="1536018" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -110,7 +110,7 @@
 	<npc id="29204" level="99" type="L2Npc" name="Larva">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="6144074" hpRegen="7.5" mp="6144074" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -137,7 +137,7 @@
 	<npc id="29205" level="99" type="L2Npc" name="Tentacle">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2111848" hpRegen="7.5" mp="2111848" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -168,7 +168,7 @@
 	<npc id="29206" level="99" type="L2Npc" name="Stomach Gland">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="736170" hpRegen="7.5" mp="736170" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -194,7 +194,7 @@
 	<npc id="29207" level="99" type="L2Npc" name="Larva">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="3248143" hpRegen="7.5" mp="3248143" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -221,7 +221,7 @@
 	<npc id="29208" level="99" type="L2Npc" name="Larva">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2111848" hpRegen="7.5" mp="2111848" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -248,7 +248,7 @@
 	<npc id="29209" level="99" type="L2Npc" name="Octavis">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="84518703" hpRegen="7.5" mp="84518703" mpRegen="2.7" />
 			<attack physical="600000" magical="400000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6000" magical="4000" />
@@ -276,7 +276,7 @@
 	<npc id="29210" level="99" type="L2Npc" name="Octavis' Beast">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BEAST</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2208510" hpRegen="7.5" mp="2208510" mpRegen="2.7" />
 			<attack physical="300000" magical="250000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6000" magical="4000" />
@@ -304,7 +304,7 @@
 	<npc id="29211" level="99" type="L2Npc" name="Octavis">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="73285059" hpRegen="7.5" mp="73285059" mpRegen="2.7" />
 			<attack physical="800000" magical="600000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="8000" magical="6000" />
@@ -541,7 +541,7 @@
 	<npc id="29214" level="97" type="L2Npc" name="Crystal Prison Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="36245" hpRegen="7.5" mp="36245" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -568,7 +568,7 @@
 	<npc id="29215" level="97" type="L2Npc" name="Crystalline Golem">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="362451" hpRegen="7.5" mp="362451" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -594,7 +594,7 @@
 	<npc id="29216" level="97" type="L2Npc" name="Crystalline Golem">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="36245" hpRegen="7.5" mp="36245" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -620,7 +620,7 @@
 	<npc id="29217" level="97" type="L2Npc" name="Crystal Prison Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="24903" hpRegen="7.5" mp="24903" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -742,7 +742,7 @@
 	<npc id="29219" level="98" type="L2Npc" name="Hell's Disciple">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="180317" hpRegen="7.5" mp="180317" mpRegen="2.7" />
 			<attack physical="670608" magical="593424" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4541" magical="5550" />
@@ -770,7 +770,7 @@
 	<npc id="29220" level="99" type="L2Npc" name="Larva">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2208510" hpRegen="7.5" mp="2208510" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -797,7 +797,7 @@
 	<npc id="29221" level="99" type="L2Npc" name="Larva">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="3248143" hpRegen="7.5" mp="3248143" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -824,7 +824,7 @@
 	<npc id="29222" level="99" type="L2Npc" name="Earth Wyrm Tail">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="18720498" hpRegen="7.5" mp="18720498" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -850,7 +850,7 @@
 	<npc id="29223" level="97" type="L2Npc" name="Antharas" title="Land Dragon">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="203200999" hpRegen="7.5" mp="203200999" mpRegen="2.7" />
 			<attack physical="336000" magical="252000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3780" magical="3848" />
@@ -879,7 +879,7 @@
 	<npc id="29224" level="97" type="L2Npc" name="Behemoth Dragon">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1055924" hpRegen="7.5" mp="1055924" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2520" magical="2565" />
@@ -910,7 +910,7 @@
 	<npc id="29225" level="97" type="L2Npc" name="Tarask Dragon">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1055924" hpRegen="7.5" mp="1055924" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2520" magical="2565" />
@@ -941,7 +941,7 @@
 	<npc id="29226" level="97" type="L2Npc" name="Dragon Bomber">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="54848" hpRegen="7.5" mp="54848" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2520" magical="2565" />
@@ -969,7 +969,7 @@
 	<npc id="29227" level="97" type="L2Npc" name="Dragon Bomber">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="54848" hpRegen="7.5" mp="54848" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2520" magical="2565" />
@@ -997,7 +997,7 @@
 	<npc id="29228" level="97" type="L2Npc" name="Valakas" title="Fire Dragon">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="203200999" hpRegen="7.5" mp="203200999" mpRegen="2.7" />
 			<attack physical="336000" magical="252000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3780" magical="3848" />
@@ -1027,7 +1027,7 @@
 	<npc id="29229" level="97" type="L2Npc" name="Lavasaurus Alpha">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="71440" hpRegen="7.5" mp="71440" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1680" magical="1710" />
@@ -1056,7 +1056,7 @@
 	<npc id="29230" level="97" type="L2Npc" name="Dragon Treater">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="20314" hpRegen="7.5" mp="20314" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2520" magical="2565" />
@@ -1083,7 +1083,7 @@
 	<npc id="29231" level="95" type="L2Npc" name="Earth Wyrm Victim">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1613321" hpRegen="7.5" mp="1613321" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1115,7 +1115,7 @@
 	<npc id="29232" level="99" type="L2Npc" name="Reward" title="Earth Wyrm">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1613321" hpRegen="7.5" mp="1613321" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1138,7 +1138,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<acquire exp="5659322035" sp="23311176" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="98413151" hpRegen="7.5" mp="98413151" mpRegen="2.7" />
 			<attack physical="450000" magical="300000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="6000" magical="4000" />
@@ -1171,7 +1171,7 @@
 	<npc id="29234" level="99" type="L2Npc" name="Tauti">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="238200786" hpRegen="7.5" mp="238200786" mpRegen="2.7" />
 			<attack physical="600000" magical="400000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="9000" magical="6000" />
@@ -1204,7 +1204,7 @@
 	<npc id="29235" level="99" type="L2Npc" name="Tauti">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="238200786" hpRegen="7.5" mp="238200786" mpRegen="2.7" />
 			<attack physical="450000" magical="300000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="6000" magical="4000" />
@@ -1537,7 +1537,7 @@
 	<npc id="29239" level="99" type="L2Npc" name="Tauti">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="98413151" hpRegen="7.5" mp="98413151" mpRegen="2.7" />
 			<attack physical="750000" magical="500000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="9000" magical="6000" />
@@ -1672,7 +1672,7 @@
 	<npc id="29241" level="99" type="L2Npc" name="Lyn Draco">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1594379" hpRegen="7.5" mp="1594379" mpRegen="2.7" />
 			<attack physical="500000" magical="400000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5000" magical="4000" />
@@ -1705,7 +1705,7 @@
 	<npc id="29242" level="99" type="L2Npc" name="Lyn Draco">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1594379" hpRegen="7.5" mp="1594379" mpRegen="2.7" />
 			<attack physical="500000" magical="400000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5000" magical="4000" />
@@ -1741,7 +1741,7 @@
 	<npc id="29243" level="99" type="L2Npc" name="Lyn Draco">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1594379" hpRegen="7.5" mp="1594379" mpRegen="2.7" />
 			<attack physical="500000" magical="400000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5000" magical="4000" />

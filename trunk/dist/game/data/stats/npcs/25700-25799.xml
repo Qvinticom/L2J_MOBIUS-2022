@@ -25,8 +25,6 @@
 		</stats>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -167,8 +165,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -279,8 +275,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -320,8 +314,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -370,8 +362,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -421,8 +411,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -474,8 +462,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4098" level="10" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -526,8 +512,6 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="8" /> <!-- BOSS Might -->
 			<skill id="4177" level="8" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -563,7 +547,7 @@
 		<sex>MALE</sex>
 		<acquire exp="16653943" sp="3996" raidPoints="1461.5545" />
 		<stats>
-			<vitals hp="280911.661939328" hpRegen="36.8918887774779" mp="17774.0" mpRegen="400" />
+			<vitals hp="842734.985817984" hpRegen="36.8918887774779" mp="17774.0" mpRegen="400" />
 			<attack physical="10229.1336718125" magical="1682.35468775538" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3184.75296" magical="1553.64" />
 			<attribute>
@@ -579,8 +563,6 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4178" level="8" /> <!-- BOSS Flamestrike -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -621,7 +603,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="16110.4741695923" hpRegen="17.7763833411484" mp="1777.4" mpRegen="3" />
+			<vitals hp="48331.4225087769" hpRegen="17.7763833411484" mp="1777.4" mpRegen="3" />
 			<attack physical="3582.73437561952" magical="2446.5431410217" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="530.79216" magical="258.937040508719" />
 			<attribute>
@@ -637,8 +619,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -664,7 +644,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="16110.4741695923" hpRegen="17.7763833411484" mp="1777.4" mpRegen="20" />
+			<vitals hp="48331.4225087769" hpRegen="17.7763833411484" mp="1777.4" mpRegen="20" />
 			<attack physical="2388.48958374635" magical="1631.02876068113" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="530.79216" magical="258.937040508719" />
 			<attribute>
@@ -680,8 +660,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4214" level="8" /> <!-- BOSS Reflect Damage -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -732,8 +710,6 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4182" level="9" /> <!-- Poison -->
 			<skill id="4189" level="9" /> <!-- Paralysis -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -796,8 +772,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -871,8 +845,6 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4084" level="2" /> <!-- Resist Physical Attack -->
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -923,8 +895,6 @@
 		<skillList>
 			<skill id="2369" level="1" /> <!-- Water Dragon Scale -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -982,8 +952,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1616,8 +1584,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1669,8 +1635,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1713,8 +1677,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1757,8 +1719,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1799,8 +1759,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1883,7 +1841,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="18734.280667127" hpRegen="190.897045965523" mp="1777.4" mpRegen="3" />
+			<vitals hp="37468.561334254" hpRegen="190.897045965523" mp="1777.4" mpRegen="3" />
 			<attack physical="10247.9853769394" magical="6998.04554416799" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="566.178304" magical="621.45708" />
 			<attribute>
@@ -1899,8 +1857,6 @@
 		<skillList>
 			<skill id="4285" level="4" /> <!-- Resist Sleep Attacks -->
 			<skill id="4287" level="4" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
@@ -1929,7 +1885,7 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="18734.280667127" hpRegen="190.897045965523" mp="1777.4" mpRegen="3" />
+			<vitals hp="37468.561334254" hpRegen="190.897045965523" mp="1777.4" mpRegen="3" />
 			<attack physical="10247.9853769394" magical="6998.04554416799" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="566.178304" magical="621.45708" />
 			<attribute>
@@ -1945,8 +1901,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4274" level="4" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->

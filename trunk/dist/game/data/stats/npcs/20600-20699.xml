@@ -33,8 +33,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="4" /> <!-- Stun -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -143,8 +141,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -253,8 +249,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4040" level="4" /> <!-- NPC Bow Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -361,8 +355,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -477,8 +469,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="4" /> <!-- Stun -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -587,8 +577,6 @@
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4078" level="4" /> <!-- NPC Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -687,7 +675,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3423" sp="1" />
 		<stats>
-			<vitals hp="515.17856" hpRegen="3.5" mp="286.92" mpRegen="1.5" />
+			<vitals hp="1030.35712" hpRegen="3.5" mp="286.92" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="108.28767" magical="72.0991544841329" />
 			<attribute>
@@ -702,8 +690,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -794,7 +780,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3623" sp="1" />
 		<stats>
-			<vitals hp="543.79576" hpRegen="3.5" mp="300.96" mpRegen="1.5" />
+			<vitals hp="1087.59152" hpRegen="3.5" mp="300.96" mpRegen="1.5" />
 			<attack physical="80.54056" magical="54.99876" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="111.61368" magical="74.3136496629463" />
 			<attribute>
@@ -809,8 +795,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="2" /> <!-- Stun -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -903,7 +887,7 @@
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="3681" sp="1" />
 		<stats>
-			<vitals hp="573.42917" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
+			<vitals hp="1146.85834" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
 			<attack physical="86.42002" magical="59.01367" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="115.00598" magical="76.5722740603874" />
 			<attribute>
@@ -919,8 +903,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1015,7 +997,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3848" sp="1" />
 		<stats>
-			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<vitals hp="1208.16838" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="78.8748547991048" />
 			<attribute>
@@ -1032,8 +1014,6 @@
 			<skill id="4001" level="3" /> <!-- NPC Windstrike -->
 			<skill id="4100" level="3" /> <!-- NPC Prominence -->
 			<skill id="4104" level="3" /> <!-- Flame -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -1129,7 +1109,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3899" sp="1" />
 		<stats>
-			<vitals hp="635.76437" hpRegen="4.5" mp="343.8" mpRegen="1.8" />
+			<vitals hp="1271.52874" hpRegen="4.5" mp="343.8" mpRegen="1.8" />
 			<attack physical="99.21986" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="121.98819" magical="81.2211098160515" />
 			<attribute>
@@ -1147,8 +1127,6 @@
 			<skill id="4046" level="3" /> <!-- Sleep -->
 			<skill id="4094" level="3" /> <!-- NPC Cancel Magic -->
 			<skill id="4098" level="3" /> <!-- Silence -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -1344,7 +1322,7 @@
 		<sex>MALE</sex>
 		<acquire exp="4749" sp="1" />
 		<stats>
-			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
+			<vitals hp="1404.40926" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="129.23095" magical="86.043423444366" />
 			<attribute>
@@ -1361,8 +1339,6 @@
 			<skill id="4001" level="3" /> <!-- NPC Windstrike -->
 			<skill id="4035" level="3" /> <!-- Poison -->
 			<skill id="4100" level="3" /> <!-- NPC Prominence -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -1457,7 +1433,7 @@
 		<equipment rhand="291" /> <!-- rhand: Trident -->
 		<acquire exp="3423" sp="1" />
 		<stats>
-			<vitals hp="515.17856" hpRegen="3.5" mp="286.92" mpRegen="1.5" />
+			<vitals hp="1030.35712" hpRegen="3.5" mp="286.92" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="108.28767" magical="72.0991544841329" />
 			<attribute>
@@ -1472,8 +1448,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4067" level="2" /> <!-- NPC Mortal Blow -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1566,7 +1540,7 @@
 		<equipment rhand="2507" /> <!-- rhand: Lizardspear -->
 		<acquire exp="3385" sp="1" />
 		<stats>
-			<vitals hp="543.79576" hpRegen="3.5" mp="300.96" mpRegen="1.5" />
+			<vitals hp="1087.59152" hpRegen="3.5" mp="300.96" mpRegen="1.5" />
 			<attack physical="80.54056" magical="54.99876" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="111.61368" magical="74.3136496629463" />
 			<attribute>
@@ -1580,8 +1554,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -1673,7 +1645,7 @@
 		<equipment rhand="73" /> <!-- rhand: Shamshir -->
 		<acquire exp="3938" sp="1" />
 		<stats>
-			<vitals hp="573.42917" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
+			<vitals hp="1146.85834" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
 			<attack physical="86.42002" magical="59.01367" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="115.00598" magical="76.5722740603874" />
 			<attribute>
@@ -1690,8 +1662,6 @@
 		<skillList>
 			<skill id="4073" level="2" /> <!-- Stun -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1785,7 +1755,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="5163" sp="1" />
 		<stats>
-			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<vitals hp="1208.16838" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="78.8748547991048" />
 			<attribute>
@@ -1802,8 +1772,6 @@
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4247" level="3" /> <!-- NPC Windstrike - Slow -->
 			<skill id="4284" level="5" /> <!-- Resist Bleed Attacks -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -1907,7 +1875,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3938" sp="1" />
 		<stats>
-			<vitals hp="635.76437" hpRegen="4.5" mp="343.8" mpRegen="1.8" />
+			<vitals hp="1271.52874" hpRegen="4.5" mp="343.8" mpRegen="1.8" />
 			<attack physical="99.21986" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="121.98819" magical="81.2211098160515" />
 			<attribute>
@@ -1925,8 +1893,6 @@
 			<skill id="4066" level="3" /> <!-- NPC Twister -->
 			<skill id="4088" level="3" /> <!-- Bleed -->
 			<skill id="4094" level="3" /> <!-- NPC Cancel Magic -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2020,7 +1986,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="4378" sp="1" />
 		<stats>
-			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
+			<vitals hp="1336.94264" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="125.57727" magical="83.6107570481808" />
 			<attribute>
@@ -2038,8 +2004,6 @@
 			<skill id="4001" level="3" /> <!-- NPC Windstrike -->
 			<skill id="4066" level="3" /> <!-- NPC Twister -->
 			<skill id="4088" level="3" /> <!-- Bleed -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2131,7 +2095,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="4507" sp="1" />
 		<stats>
-			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
+			<vitals hp="1404.40926" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="129.23095" magical="86.043423444366" />
 			<attribute>
@@ -2147,8 +2111,6 @@
 		<skillList>
 			<skill id="4151" level="3" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2242,7 +2204,7 @@
 		<sex>MALE</sex>
 		<acquire exp="23241" sp="5" />
 		<stats>
-			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<vitals hp="5956.67778" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="252.49346" magical="168.112997103103" />
 			<attribute>
@@ -2257,8 +2219,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="3" /> <!-- NPC Might -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2328,7 +2288,7 @@
 		<sex>MALE</sex>
 		<acquire exp="25051" sp="6" />
 		<stats>
-			<vitals hp="2037.81082" hpRegen="7.5" mp="1097.0" mpRegen="2.7" />
+			<vitals hp="6113.43246" hpRegen="7.5" mp="1097.0" mpRegen="2.7" />
 			<attack physical="521.12391" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="171.341654516443" />
 			<attribute>
@@ -2345,8 +2305,6 @@
 			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
 			<skill id="4100" level="6" /> <!-- NPC Prominence -->
 			<skill id="4117" level="6" /> <!-- Paralysis -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2416,7 +2374,7 @@
 		<equipment rhand="221" /> <!-- rhand: Assassin Knife -->
 		<acquire exp="26749" sp="6" />
 		<stats>
-			<vitals hp="2089.92274" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
+			<vitals hp="6269.76822" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
 			<attack physical="541.44774" magical="369.73862" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="262.19426" magical="174.571895122369" />
 			<attribute>
@@ -2434,8 +2392,6 @@
 			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2509,7 +2465,7 @@
 		<equipment rhand="2507" /> <!-- rhand: Lizardspear -->
 		<acquire exp="35667" sp="8" />
 		<stats>
-			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
+			<vitals hp="8567.28508" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="267.04468" magical="177.801362329617" />
 			<attribute>
@@ -2524,8 +2480,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4124" level="6" /> <!-- NPC Spear Attack -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2598,7 +2552,7 @@
 		<sex>MALE</sex>
 		<acquire exp="36266" sp="8" />
 		<stats>
-			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="8773.72568" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
 			<attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="181.027644954078" />
 			<attribute>
@@ -2613,8 +2567,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2684,7 +2636,7 @@
 		<equipment rhand="78" /> <!-- rhand: Great Sword -->
 		<acquire exp="36219" sp="8" />
 		<stats>
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<vitals hp="8978.7086" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="184.248304515217" />
 			<attribute>
@@ -2700,8 +2652,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="6" /> <!-- Stun -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2770,7 +2720,7 @@
 		<equipment rhand="77" /> <!-- rhand: Tsurugi -->
 		<acquire exp="51984" sp="12" />
 		<stats>
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="9181.92616" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="187.460838840844" />
 			<attribute>
@@ -2786,8 +2736,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
@@ -2864,7 +2812,7 @@
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
 		<acquire exp="44682" sp="10" />
 		<stats>
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<vitals hp="11728.8349" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="190.662718462344" />
 			<attribute>
@@ -2883,8 +2831,6 @@
 			<skill id="4046" level="6" /> <!-- Sleep -->
 			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
 			<skill id="4098" level="6" /> <!-- Silence -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3114,8 +3060,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3227,8 +3171,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4040" level="4" /> <!-- NPC Bow Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3349,8 +3291,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3465,8 +3405,6 @@
 			<skill id="4065" level="4" /> <!-- NPC Heal -->
 			<skill id="4157" level="4" /> <!-- NPC Blaze - Magic -->
 			<skill id="4160" level="4" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3564,7 +3502,7 @@
 		<equipment rhand="75" lhand="104" /> <!-- rhand: Caliburs lhand: Shield of Victory -->
 		<acquire exp="10597" sp="2" />
 		<stats>
-			<vitals hp="1138.62924" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
+			<vitals hp="2277.25848" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
 			<attack physical="222.23112" magical="151.75505" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="173.43552" magical="115.475328468187" shield="87" shieldRate="20" />
 			<attribute>
@@ -3579,8 +3517,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3786,8 +3722,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4093" level="1" /> <!-- Evasion -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3913,8 +3847,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4093" level="1" /> <!-- Evasion -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -4037,8 +3969,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4093" level="1" /> <!-- Evasion -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -4142,7 +4072,7 @@
 		<sex>MALE</sex>
 		<acquire exp="15315" sp="3" />
 		<stats>
-			<vitals hp="1372.18568" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
+			<vitals hp="2744.37136" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
 			<attack physical="290.44588" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="195.66302" magical="130.274648808072" />
 			<attribute>
@@ -4160,8 +4090,6 @@
 			<skill id="4046" level="4" /> <!-- Sleep -->
 			<skill id="4094" level="4" /> <!-- NPC Cancel Magic -->
 			<skill id="4095" level="1" /> <!-- Damage Shield -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4276,8 +4204,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4372,8 +4298,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4468,8 +4392,6 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4096" level="3" /> <!-- NPC Hawkeye -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4564,8 +4486,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -4665,8 +4585,6 @@
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 			<skill id="4155" level="5" /> <!-- NPC Twister - Magic -->
 			<skill id="4160" level="5" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -4748,7 +4666,7 @@
 		<equipment rhand="221" /> <!-- rhand: Assassin Knife -->
 		<acquire exp="17166" sp="4" />
 		<stats>
-			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<vitals hp="3346.10946" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="148.899508363765" />
 			<attribute>
@@ -4765,8 +4683,6 @@
 			<skill id="4067" level="5" /> <!-- NPC Mortal Blow -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4848,7 +4764,7 @@
 		<sex>MALE</sex>
 		<acquire exp="42205" sp="10" />
 		<stats>
-			<vitals hp="3450" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<vitals hp="6900" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="148.899508363765" />
 			<attribute>
@@ -4863,8 +4779,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4088" level="5" /> <!-- Bleed -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5006,7 +4920,7 @@
 		<sex>MALE</sex>
 		<acquire exp="52509" sp="12" />
 		<stats>
-			<vitals hp="6294" hpRegen="6.5" mp="948.0" mpRegen="2.4" />
+			<vitals hp="12588" hpRegen="6.5" mp="948.0" mpRegen="2.4" />
 			<attack physical="424.23295" magical="289.69611" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="233.18839" magical="155.259456846417" />
 			<attribute>
@@ -5021,8 +4935,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4034" level="5" /> <!-- Decrease Speed -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -5096,7 +5008,7 @@
 		<sex>MALE</sex>
 		<acquire exp="46160" sp="11" />
 		<stats>
-			<vitals hp="5962" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<vitals hp="11924" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="158.459289236126" />
 			<attribute>
@@ -5111,8 +5023,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4035" level="5" /> <!-- Poison -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5185,7 +5095,7 @@
 		<sex>MALE</sex>
 		<acquire exp="53668" sp="12" />
 		<stats>
-			<vitals hp="6459" hpRegen="6.5" mp="1007.0" mpRegen="2.4" />
+			<vitals hp="12918" hpRegen="6.5" mp="1007.0" mpRegen="2.4" />
 			<attack physical="461.94387" magical="315.44778" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="242.81593" magical="161.669585254993" />
 			<attribute>
@@ -5200,8 +5110,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="5" /> <!-- Stun -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5291,8 +5199,6 @@
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4248" level="4" /> <!-- NPC HP Drain - Slow -->
 			<skill id="4284" level="5" /> <!-- Resist Bleed Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5502,8 +5408,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4067" level="4" /> <!-- NPC Mortal Blow -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5623,8 +5527,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4067" level="4" /> <!-- NPC Mortal Blow -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5743,8 +5645,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4047" level="4" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5951,8 +5851,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -6078,8 +5976,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="5" /> <!-- Stun -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -6195,8 +6091,6 @@
 			<skill id="4078" level="5" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -6315,8 +6209,6 @@
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4100" level="6" /> <!-- NPC Prominence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -6400,8 +6292,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4098" level="6" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -6495,8 +6385,6 @@
 			<skill id="4046" level="6" /> <!-- Sleep -->
 			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
 			<skill id="4098" level="6" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -6584,8 +6472,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4046" level="6" /> <!-- Sleep -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -6772,8 +6658,6 @@
 			<skill id="4102" level="1" /> <!-- Surrender To Fire -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -6892,8 +6776,6 @@
 		<skillList>
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4100" level="5" /> <!-- NPC Prominence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -7008,8 +6890,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4029" level="3" /> <!-- NPC Shield -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -7125,8 +7005,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -7241,8 +7119,6 @@
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -7359,8 +7235,6 @@
 		<skillList>
 			<skill id="4073" level="4" /> <!-- Stun -->
 			<skill id="4093" level="1" /> <!-- Evasion -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -7483,8 +7357,6 @@
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 			<skill id="4155" level="4" /> <!-- NPC Twister - Magic -->
 			<skill id="4160" level="4" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -7584,7 +7456,7 @@
 		<equipment rhand="75" /> <!-- rhand: Caliburs -->
 		<acquire exp="13096" sp="3" />
 		<stats>
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="2842.00206" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="133.321011603844" />
 			<attribute>
@@ -7599,8 +7471,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4065" level="5" /> <!-- NPC Heal -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->

@@ -3,7 +3,7 @@
 	<npc id="5001" level="85" type="L2Npc" name="Norhand" title="Steward">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4983" hpRegen="7.5" mp="4983" mpRegen="2.7" />
 			<attack physical="4900" magical="3723" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="908" />
@@ -30,7 +30,7 @@
 	<npc id="5002" level="80" type="L2Npc" name="Santa Girl" title="Happy Holidays">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ANIMAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2894" hpRegen="7.5" mp="2894" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -55,7 +55,7 @@
 	<npc id="5003" level="55" type="L2Npc" name="Snow Man Grouch">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ANIMAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="865" hpRegen="7.5" mp="865" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -80,7 +80,7 @@
 	<npc id="5004" level="55" type="L2Npc" name="Snow Man Grouch">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ANIMAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="865" hpRegen="7.5" mp="865" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -105,7 +105,7 @@
 	<npc id="5005" level="55" type="L2Npc" name="Game Master" title="Customer Support">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4983" hpRegen="7.5" mp="4983" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -127,7 +127,7 @@
 	<npc id="5006" level="70" type="L2Npc" name="Holiday Tree">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2894" hpRegen="7.5" mp="2894" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -149,7 +149,7 @@
 	<npc id="5007" level="80" type="L2Npc" name="Evolution Deliverer" title="Beginning of Flames">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4983" hpRegen="7.5" mp="4983" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -171,7 +171,7 @@
 	<npc id="5008" level="80" type="L2Npc" name="Evolution Guide" title="Root of Flames">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4983" hpRegen="7.5" mp="4983" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -193,7 +193,7 @@
 	<npc id="5009" level="80" type="L2Npc" name="Instant Zone Roadblock D?cor">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4983" hpRegen="7.5" mp="4983" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -215,7 +215,7 @@
 	<npc id="5010" level="70" type="L2Npc" name="Queen of Hearts" title="Valentine Messenger">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ELEMENTAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4228" hpRegen="7.5" mp="4228" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />

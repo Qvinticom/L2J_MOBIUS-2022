@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="33400" level="85" type="L2Npc" name="Powerful Bow/Crossbow Sharpshooters" title="Yul Archer Awakening">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -26,7 +26,7 @@
 	</npc>
 	<npc id="33401" level="85" type="L2Npc" name="Powerful Magic Damage Dealer" title="Feoh Wizard Awakening">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -50,7 +50,7 @@
 	</npc>
 	<npc id="33402" level="85" type="L2Npc" name="Powerful Magic Buffer" title="Iss Enchanter Awakening">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -74,7 +74,7 @@
 	</npc>
 	<npc id="33403" level="85" type="L2Npc" name="Powerful Magic Summoner" title="Wynn Summoner Awakening">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -98,7 +98,7 @@
 	</npc>
 	<npc id="33404" level="85" type="L2Npc" name="Powerful Magic Healer" title="Aeore Healer Awakening">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -122,7 +122,7 @@
 	</npc>
 	<npc id="33405" level="85" type="L2Npc" name="Rotating Dimensional Door">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -146,7 +146,7 @@
 	</npc>
 	<npc id="33406" level="85" type="L2Npc" name="Rieyi">
 		<race>DARK_ELF</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -170,7 +170,7 @@
 	</npc>
 	<npc id="33407" level="85" type="L2Npc" name="Quartermaster" title="Aden Vanguard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -194,7 +194,7 @@
 	</npc>
 	<npc id="33408" level="85" type="L2Npc" name="Backup Soldier" title="Aden Vanguard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -218,7 +218,7 @@
 	</npc>
 	<npc id="33409" level="85" type="L2Npc" name="Backup Soldier" title="Aden Vanguard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -242,7 +242,7 @@
 	</npc>
 	<npc id="33410" level="85" type="L2Npc" name="Summoner Riera" title="Aden Vanguard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -266,7 +266,7 @@
 	</npc>
 	<npc id="33411" level="85" type="L2Npc" name="Guardian Spirit">
 		<race>ELEMENTAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -291,7 +291,7 @@
 	</npc>
 	<npc id="33412" level="85" type="L2Npc" name="Guardian Spirit">
 		<race>ELEMENTAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -315,7 +315,7 @@
 	</npc>
 	<npc id="33413" level="85" type="L2Npc" name="Guardian Spirit">
 		<race>ELEMENTAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -339,7 +339,7 @@
 	</npc>
 	<npc id="33414" level="76" type="L2Npc" name="Van Archer">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
 			<attack physical="1615" magical="995" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="535" magical="434" />
@@ -363,7 +363,7 @@
 	</npc>
 	<npc id="33415" level="76" type="L2Npc" name="Van Infantry">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
 			<attack physical="1615" magical="995" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="535" magical="434" />
@@ -387,7 +387,7 @@
 	</npc>
 	<npc id="33416" level="85" type="L2Npc" name="Van Defense Wall">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -411,7 +411,7 @@
 	</npc>
 	<npc id="33417" level="85" type="CommissionManager" name="Perina" title="Auction House Manager">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -435,7 +435,7 @@
 	</npc>
 	<npc id="33418" level="85" type="CommissionManager" name="Sarnya" title="Auction House Manager">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -459,7 +459,7 @@
 	</npc>
 	<npc id="33419" level="85" type="L2Npc" name="Josephina">
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -483,7 +483,7 @@
 	</npc>
 	<npc id="33420" level="85" type="L2Npc" name="Diania" title="Mysterious Dye Merchant">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -507,7 +507,7 @@
 	</npc>
 	<npc id="33421" level="85" type="L2Npc" name="Commando">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -531,7 +531,7 @@
 	</npc>
 	<npc id="33422" level="85" type="L2Npc" name="Commando">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -555,7 +555,7 @@
 	</npc>
 	<npc id="33423" level="85" type="L2Npc" name="Commando">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -579,7 +579,7 @@
 	</npc>
 	<npc id="33424" level="85" type="L2Npc" name="Commando">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -604,7 +604,7 @@
 	<npc id="33425" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
 		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution  lhand: Round Shield -->
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -629,7 +629,7 @@
 	<npc id="33426" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
 		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution  lhand: Round Shield -->
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -654,7 +654,7 @@
 	<npc id="33427" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
 		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution  lhand: Round Shield -->
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -679,7 +679,7 @@
 	<npc id="33428" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
 		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution  lhand: Round Shield -->
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -704,7 +704,7 @@
 	<npc id="33429" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
 		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution  lhand: Round Shield -->
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -728,7 +728,7 @@
 	</npc>
 	<npc id="33430" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -752,7 +752,7 @@
 	</npc>
 	<npc id="33431" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -776,7 +776,7 @@
 	</npc>
 	<npc id="33432" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -800,7 +800,7 @@
 	</npc>
 	<npc id="33433" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -824,7 +824,7 @@
 	</npc>
 	<npc id="33434" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -848,7 +848,7 @@
 	</npc>
 	<npc id="33435" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -872,7 +872,7 @@
 	</npc>
 	<npc id="33436" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -896,7 +896,7 @@
 	</npc>
 	<npc id="33437" level="85" type="L2Npc" name="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -920,7 +920,7 @@
 	</npc>
 	<npc id="33438" level="85" type="L2Npc" name="Escape Device">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -944,7 +944,7 @@
 	</npc>
 	<npc id="33439" level="97" type="L2Npc" name="Fellow" title="Antharas Expedition">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -965,7 +965,7 @@
 	</npc>
 	<npc id="33440" level="97" type="L2Npc" name="Ateld" title="Antharas Expedition">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -986,7 +986,7 @@
 	</npc>
 	<npc id="33441" level="97" type="L2Npc" name="Paulia" title="Antharas Expedition">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1007,7 +1007,7 @@
 	</npc>
 	<npc id="33442" level="97" type="L2Npc" name="Rash" title="Support Troop Lieutenant">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1028,7 +1028,7 @@
 	</npc>
 	<npc id="33443" level="97" type="L2Npc" name="Kale" title="Kingdom Delegate">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1049,7 +1049,7 @@
 	</npc>
 	<npc id="33444" level="97" type="L2Npc" name="">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1070,7 +1070,7 @@
 	</npc>
 	<npc id="33445" level="97" type="L2Npc" name="">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1091,7 +1091,7 @@
 	</npc>
 	<npc id="33446" level="97" type="L2Npc" name="">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1112,7 +1112,7 @@
 	</npc>
 	<npc id="33447" level="85" type="CommissionManager" name="Gwendiel" title="Auction House Manager">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1136,7 +1136,7 @@
 	</npc>
 	<npc id="33448" level="85" type="L2Npc" name="Atran">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1160,7 +1160,7 @@
 	</npc>
 	<npc id="33449" level="85" type="L2Npc" name="Chesha">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1184,7 +1184,7 @@
 	</npc>
 	<npc id="33450" level="85" type="L2Npc" name="Nagel">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1208,7 +1208,7 @@
 	</npc>
 	<npc id="33451" level="85" type="L2Npc" name="Celin">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1232,7 +1232,7 @@
 	</npc>
 	<npc id="33452" level="85" type="L2Npc" name="Walter">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1256,7 +1256,7 @@
 	</npc>
 	<npc id="33453" level="85" type="L2Npc" name="Dep">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1280,7 +1280,7 @@
 	</npc>
 	<npc id="33454" level="85" type="L2Npc" name="Newbie Helper">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1305,7 +1305,7 @@
 	</npc>
 	<npc id="33455" level="85" type="L2Npc" name="">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1326,7 +1326,7 @@
 	</npc>
 	<npc id="33456" level="85" type="L2Npc" name="">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1347,7 +1347,7 @@
 	</npc>
 	<npc id="33457" level="85" type="L2Npc" name="">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1368,7 +1368,7 @@
 	</npc>
 	<npc id="33458" level="85" type="L2Npc" name="">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1389,7 +1389,7 @@
 	</npc>
 	<npc id="33459" level="85" type="L2Npc" name="">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1410,7 +1410,7 @@
 	</npc>
 	<npc id="33460" level="85" type="L2Npc" name="Shuman" title="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1434,7 +1434,7 @@
 	</npc>
 	<npc id="33461" level="85" type="L2Guard" name="Noah" title="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1458,7 +1458,7 @@
 	</npc>
 	<npc id="33462" level="85" type="L2Npc" name="Jonadan" title="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1482,7 +1482,7 @@
 	</npc>
 	<npc id="33463" level="85" type="L2Npc" name="Adventurer Helper">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1506,7 +1506,7 @@
 	</npc>
 	<npc id="33464" level="85" type="L2Npc" name="Evain">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1530,7 +1530,7 @@
 	</npc>
 	<npc id="33465" level="85" type="L2Npc" name="Dirkman" title="Guard">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1554,7 +1554,7 @@
 	</npc>
 	<npc id="33466" level="85" type="L2Npc" name="Sappharine" title="Mysterious Dye Merchant">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1578,7 +1578,7 @@
 	</npc>
 	<npc id="33467" level="85" type="L2Npc" name="Meraldi" title="Mysterious Dye Merchant">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1602,7 +1602,7 @@
 	</npc>
 	<npc id="33468" level="85" type="L2Npc" name="Altar of Sacrifice Controller">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1626,7 +1626,7 @@
 	</npc>
 	<npc id="33469" level="85" type="L2Npc" name="Altar of Sacrifice Controller">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1650,7 +1650,7 @@
 	</npc>
 	<npc id="33470" level="95" type="L2Npc" name="Controller">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1674,7 +1674,7 @@
 	</npc>
 	<npc id="33471" level="95" type="L2Npc" name="Controller">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1698,7 +1698,7 @@
 	</npc>
 	<npc id="33472" level="95" type="L2Npc" name="Controller">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1722,7 +1722,7 @@
 	</npc>
 	<npc id="33473" level="95" type="L2Npc" name="Controller">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1746,7 +1746,7 @@
 	</npc>
 	<npc id="33474" level="95" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<race>DARK_ELF</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1770,7 +1770,7 @@
 	</npc>
 	<npc id="33475" level="95" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<race>DARK_ELF</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1794,7 +1794,7 @@
 	</npc>
 	<npc id="33476" level="95" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<race>DARK_ELF</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1818,7 +1818,7 @@
 	</npc>
 	<npc id="33477" level="85" type="L2Npc" name="Cellphine" title="Giant's Minion">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1842,7 +1842,7 @@
 	</npc>
 	<npc id="33478" level="85" type="L2Npc" name="Ariel" title="Armor Merchant">
 		<race>ELF</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1866,7 +1866,7 @@
 	</npc>
 	<npc id="33479" level="85" type="L2Npc" name="Minaless" title="Accessory Merchant">
 		<race>DARK_ELF</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1890,7 +1890,7 @@
 	</npc>
 	<npc id="33480" level="85" type="L2Npc" name="Giant's Soldier">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1914,7 +1914,7 @@
 	</npc>
 	<npc id="33481" level="85" type="L2Npc" name="Giant's Soldier">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1938,7 +1938,7 @@
 	</npc>
 	<npc id="33482" level="85" type="L2Npc" name="Giant's Soldier">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1962,7 +1962,7 @@
 	</npc>
 	<npc id="33483" level="85" type="L2Npc" name="Giant's Soldier">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -1986,7 +1986,7 @@
 	</npc>
 	<npc id="33484" level="85" type="L2Npc" name="Giant's Soldier">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2010,7 +2010,7 @@
 	</npc>
 	<npc id="33485" level="85" type="L2Npc" name="Giant's Soldier">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2034,7 +2034,7 @@
 	</npc>
 	<npc id="33486" level="85" type="L2Npc" name="Giant's Soldier">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2058,7 +2058,7 @@
 	</npc>
 	<npc id="33487" level="85" type="L2Npc" name="Giant's Soldier">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2082,7 +2082,7 @@
 	</npc>
 	<npc id="33488" level="85" type="L2Npc" name="Akram" title="Giant's Minion">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2106,7 +2106,7 @@
 	</npc>
 	<npc id="33489" level="85" type="L2Npc" name="Large Verdant Wilds" title="Wisp's Favorite">
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2130,7 +2130,7 @@
 	</npc>
 	<npc id="33490" level="85" type="L2Npc" name="Trandon" title="Subclass/Dual Class Certificate Manager">
 		<race>DARK_ELF</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2154,7 +2154,7 @@
 	</npc>
 	<npc id="33491" level="85" type="L2Npc" name="Raina" title="Subclass/Dual Class Master">
 		<race>ELF</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2178,7 +2178,7 @@
 	</npc>
 	<npc id="33492" level="85" type="L2Npc" name="Ravidoff" title="Giant's Minion">
 		<race>KAMAEL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2202,7 +2202,7 @@
 	</npc>
 	<npc id="33493" level="85" type="L2Merchant" name="Raminya" title="Mysterious Dye Merchant">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2226,7 +2226,7 @@
 	</npc>
 	<npc id="33494" level="85" type="L2Merchant" name="Ephesona" title="Mysterious Dye Merchant">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2250,7 +2250,7 @@
 	</npc>
 	<npc id="33495" level="85" type="L2Merchant" name="Jyamis" title="Mysterious Dye Merchant">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2274,7 +2274,7 @@
 	</npc>
 	<npc id="33496" level="85" type="L2Merchant" name="Diamis" title="Mysterious Dye Merchant">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2298,7 +2298,7 @@
 	</npc>
 	<npc id="33497" level="85" type="L2Merchant" name="Leuna" title="Mysterious Dye Merchant">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2322,7 +2322,7 @@
 	</npc>
 	<npc id="33498" level="85" type="L2Merchant" name="Dominie" title="Mysterious Dye Merchant">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2346,7 +2346,7 @@
 	</npc>
 	<npc id="33499" level="85" type="L2Merchant" name="Roepina" title="Mysterious Dye Merchant">
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
