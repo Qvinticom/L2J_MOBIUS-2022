@@ -257,6 +257,7 @@ import quests.Q10756_AnInterdimensionalDraft.Q10756_AnInterdimensionalDraft;
 import quests.Q10757_QuietingTheStorm.Q10757_QuietingTheStorm;
 import quests.Q10758_TheOathOfTheWind.Q10758_TheOathOfTheWind;
 import quests.Q10760_LettersFromTheQueen_OrcBarracs.Q10760_LettersFromTheQueen_OrcBarracs;
+import quests.Q10761_AnOrcInLove.Q10761_AnOrcInLove;
 
 /**
  * @author NosBit
@@ -504,7 +505,8 @@ public class QuestMasterHandler
 		Q10756_AnInterdimensionalDraft.class,
 		Q10757_QuietingTheStorm.class,
 		Q10758_TheOathOfTheWind.class,
-		Q10760_LettersFromTheQueen_OrcBarracs.class
+		Q10760_LettersFromTheQueen_OrcBarracs.class,
+		Q10761_AnOrcInLove.class
 	};
 	
 	public static void main(String[] args)

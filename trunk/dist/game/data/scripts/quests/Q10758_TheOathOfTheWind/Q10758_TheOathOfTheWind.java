@@ -154,7 +154,7 @@ public class Q10758_TheOathOfTheWind extends Quest
 			qs.set(Integer.toString(WINDIMA_CLONE), kills);
 			
 			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			log.addNpc(WINDIMA_CLONE, qs.getInt(Integer.toString(WINDIMA_CLONE)));
+			log.addNpc(WINDIMA_CLONE, kills);
 			killer.sendPacket(log);
 			
 			if (qs.getInt(Integer.toString(WINDIMA_CLONE)) >= 1)
