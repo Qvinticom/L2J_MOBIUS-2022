@@ -16,6 +16,7 @@
  */
 package quests.Q10330_ToTheRuinsOfYeSagira;
 
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -35,11 +36,9 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 	// Npcs
 	private static final int ATRAN = 33448;
 	private static final int LAKCIS = 32977;
-	
 	// Items
 	private static final ItemHolder LEATHER_SHIRT = new ItemHolder(22, 1);
 	private static final ItemHolder LEATHER_PANTS = new ItemHolder(29, 1);
-	
 	// Level Condition
 	private static final int MIN_LEVEL = 8;
 	private static final int MAX_LEVEL = 20;
@@ -49,9 +48,10 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 		super(10330, Q10330_ToTheRuinsOfYeSagira.class.getSimpleName(), "To the Ruins of Ye Sagira");
 		addStartNpc(ATRAN);
 		addTalkId(ATRAN, LAKCIS);
-		addCondMinLevel(MIN_LEVEL, "33448-05.html");
-		addCondMaxLevel(MAX_LEVEL, "33448-05.html");
-		addCondCompletedQuest(Q10329_BackupSeekers.class.getSimpleName(), "33448-05.html");
+		addCondMinLevel(MIN_LEVEL, "33448-05.htm");
+		addCondMaxLevel(MAX_LEVEL, "33448-05.htm");
+		addCondCompletedQuest(Q10329_BackupSeekers.class.getSimpleName(), "33448-05.htm");
+		addCondNotRace(Race.ERTHEIA, "33448-07.html");
 	}
 	
 	@Override
@@ -72,7 +72,7 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33448-03.html":
+			case "33448-03.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -82,7 +82,7 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 			{
 				if (qs.isStarted())
 				{
-					showOnScreenMsg(player, NpcStringId.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+					showOnScreenMsg(player, NpcStringId.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
 					giveAdena(player, 620, true);
 					giveItems(player, LEATHER_SHIRT);
 					giveItems(player, LEATHER_PANTS);
