@@ -32,10 +32,8 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 	// Npcs
 	private static final int PANTHEON = 32972;
 	private static final int KAKAI = 30565;
-	
-	// Items
+	// Item
 	private static final int EVIL_FRAGMENT = 17577;
-	
 	// Level Condition
 	private static final int MAX_LEVEL = 20;
 	
@@ -44,9 +42,9 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 		super(10328, Q10328_RequestToSealTheEvilFragment.class.getSimpleName(), "Request to Seal the Evil Fragment");
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON, KAKAI);
-		addCondMaxLevel(MAX_LEVEL, "32972-06.html");
+		addCondMaxLevel(MAX_LEVEL, "32972-06.htm");
 		registerQuestItems(EVIL_FRAGMENT);
-		addCondCompletedQuest(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName(), "32972-06.html");
+		addCondCompletedQuest(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName(), "32972-06.htm");
 	}
 	
 	@Override
