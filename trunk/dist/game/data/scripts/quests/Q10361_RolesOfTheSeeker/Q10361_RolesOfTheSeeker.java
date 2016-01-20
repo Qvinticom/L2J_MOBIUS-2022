@@ -31,8 +31,6 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
-import quests.Q10330_ToTheRuinsOfYeSagira.Q10330_ToTheRuinsOfYeSagira;
-
 /**
  * Roles of the Seeker (10361)
  * @author spider
@@ -58,9 +56,8 @@ public class Q10361_RolesOfTheSeeker extends Quest
 		super(10361, Q10361_RolesOfTheSeeker.class.getSimpleName(), "Roles of the Seeker");
 		addStartNpc(LAKCIS);
 		addTalkId(LAKCIS, CHESHA);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "32977-06.htm");
 		addEnterZoneId(YE_SAGIRA_RUINS_PRESENTATION_MOVIE_ZONE);
-		addCondCompletedQuest(Q10330_ToTheRuinsOfYeSagira.class.getSimpleName(), "no_prequest.html");
 	}
 	
 	@Override
@@ -83,7 +80,7 @@ public class Q10361_RolesOfTheSeeker extends Quest
 			case "32977-03.htm":
 			{
 				qs.startQuest();
-				showOnScreenMsg(player, NpcStringId.ENTER_THE_RUINS_OF_YE_SAGIRA_THROUGH_THE_YE_SAGIRA_TELEPORT_DEVICE, ExShowScreenMessage.TOP_CENTER, 5000);
+				showOnScreenMsg(player, NpcStringId.ENTER_THE_RUINS_OF_YE_SAGIRA_THROUGH_THE_YE_SAGIRA_TELEPORT_DEVICE, ExShowScreenMessage.TOP_CENTER, 10000);
 				htmltext = event;
 				break;
 			}
@@ -115,7 +112,7 @@ public class Q10361_RolesOfTheSeeker extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == LAKCIS ? "32977-01.htm" : getNoQuestMsg(player);
+				htmltext = npc.getId() == LAKCIS ? "32977-01.htm" : "33449-05.html";
 				break;
 			}
 			case State.STARTED:
@@ -125,7 +122,8 @@ public class Q10361_RolesOfTheSeeker extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = getAlreadyCompletedMsg(player);
+				htmltext = npc.getId() == LAKCIS ? "32977-05.htm" : "33449-04.html";
+				break;
 			}
 		}
 		return htmltext;
