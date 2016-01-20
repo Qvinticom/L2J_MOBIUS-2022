@@ -796,15 +796,20 @@
 		<!-- Teleports you to the Orc Barracks. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="17984-1" /> <!-- Scroll of Escape: Orc Barracks -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="39488" name="Magic Chain Key 1" type="EtcItem">
 		<!-- Seems like a key to undoing the magic chains binding the spirits. -->
