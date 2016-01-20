@@ -23,8 +23,10 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 import ai.npc.AbstractNpcAI;
 
@@ -32,10 +34,11 @@ import ai.npc.AbstractNpcAI;
  * Turek Orcs AI - flee and return with assistance
  * @author GKR
  */
-
 public final class TurekOrcs extends AbstractNpcAI
 {
-	// NPC's
+	// Monster to spwan
+	private static final int CHERTUBA_ILLUSION = 23422;
+	// NPCs
 	private static final int[] MOBS =
 	{
 		20494, // Turek War Hound
@@ -52,6 +55,7 @@ public final class TurekOrcs extends AbstractNpcAI
 		addAttackId(MOBS);
 		addEventReceivedId(MOBS);
 		addMoveFinishedId(MOBS);
+		addKillId(20497, 20499);
 	}
 	
 	@Override
@@ -106,6 +110,15 @@ public final class TurekOrcs extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	{
+		final L2Npc illusion = addSpawn(CHERTUBA_ILLUSION, npc.getLocation(), false, 300000); // 5 minute despawn time
+		((L2MonsterInstance) illusion).addDamage(killer, 1, null);
+		showOnScreenMsg(killer, NpcStringId.A_POWERFUL_MONSTER_HAS_COME_TO_FACE_YOU, ExShowScreenMessage.TOP_CENTER, 4500);
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
 	public void onMoveFinished(L2Npc npc)
 	{
 		// NPC reaches flee point
@@ -128,6 +141,7 @@ public final class TurekOrcs extends AbstractNpcAI
 			npc.disableCoreAI(false);
 			npc.getVariables().remove("state");
 		}
+		
 	}
 	
 	public static void main(String[] args)
