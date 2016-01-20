@@ -46,11 +46,9 @@ public class Q10329_BackupSeekers extends Quest
 	private static final int KAKAI = 30565;
 	private static final int ATRAN = 33448;
 	private static final int BART = 33204;
-	
 	// Items
 	private static final ItemHolder RING_OF_KNOWLEDGE = new ItemHolder(875, 2);
 	private static final ItemHolder NECKLACE_OF_KNOWLEDGE = new ItemHolder(906, 1);
-	
 	// Misc
 	private static final int MAX_LEVEL = 20;
 	private static final Location BART_SPAWN_1 = new Location(-117955, 255832, -1320);
@@ -85,8 +83,8 @@ public class Q10329_BackupSeekers extends Quest
 		addTalkId(KAKAI, ATRAN);
 		addSpawnId(BART);
 		addMoveFinishedId(BART);
-		addCondMaxLevel(MAX_LEVEL, "30565-05.html");
-		addCondCompletedQuest(Q10328_RequestToSealTheEvilFragment.class.getSimpleName(), "30565-05.html");
+		addCondMaxLevel(MAX_LEVEL, "30565-05.htm");
+		addCondCompletedQuest(Q10328_RequestToSealTheEvilFragment.class.getSimpleName(), "30565-05.htm");
 	}
 	
 	@Override
@@ -106,7 +104,7 @@ public class Q10329_BackupSeekers extends Quest
 				htmltext = event;
 				break;
 			}
-			case "30565-03.html":
+			case "30565-03.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -120,7 +118,7 @@ public class Q10329_BackupSeekers extends Quest
 			{
 				if (qs.isStarted())
 				{
-					showOnScreenMsg(player, NpcStringId.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+					showOnScreenMsg(player, NpcStringId.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
 					giveAdena(player, 25000, true);
 					giveItems(player, RING_OF_KNOWLEDGE);
 					giveItems(player, NECKLACE_OF_KNOWLEDGE);
@@ -268,11 +266,7 @@ public class Q10329_BackupSeekers extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == KAKAI)
-				{
-					htmltext = "30565-01.htm";
-					break;
-				}
+				htmltext = npc.getId() == KAKAI ? "30565-01.htm" : "33448-04.html";
 				break;
 			}
 			case State.STARTED:
