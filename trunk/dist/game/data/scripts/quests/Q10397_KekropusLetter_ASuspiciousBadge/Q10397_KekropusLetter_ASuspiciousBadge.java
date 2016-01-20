@@ -46,7 +46,7 @@ public class Q10397_KekropusLetter_ASuspiciousBadge extends Quest implements IBy
 	private static final int MOUEN = 30196;
 	private static final int ANDY = 33845;
 	// Items
-	private static final ItemHolder SCROLL_OF_ESCAPE_SEA_OF_SPORES = new ItemHolder(37027, 1);
+	private static final ItemHolder SCROLL_OF_ESCAPE_SEA_OF_SPORES = new ItemHolder(39575, 1);
 	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 20);
 	private static final ItemHolder ENCHANT_WEAPON_B = new ItemHolder(947, 2);
 	// Requirements
