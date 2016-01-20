@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10761_AnOrcInLove;
+package quests.Q10762_MarionetteSpirit;
 
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -23,43 +23,40 @@ import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jmobius.gameserver.util.Util;
 
+import quests.Q10761_AnOrcInLove.Q10761_AnOrcInLove;
+
 /**
- * An Orc in Love (10761)
+ * Marionette Spirit (10762)
  * @author Stayway
  */
-public class Q10761_AnOrcInLove extends Quest
+public class Q10762_MarionetteSpirit extends Quest
 {
 	// NPC
 	private static final int VORBOS = 33966;
-	// Monsters
-	private static final int TUREK_WAR_HOUND = 20494;
-	private static final int TUREK_ORC_FOOTMAN = 20499;
-	private static final int TUREK_ORC_SENTINEL = 20500;
-	private static final int TUREK_ORC_SUPPLIER = 20498;
-	private static final int TUREK_ORC_ARCHER = 20496;
-	private static final int TUREK_ORC_SKIRMISHER = 20497;
-	private static final int TUREK_ORC_PRIEST = 20501;
-	private static final int TUREK_ORC_PREFECT = 20495;
-	private static final int TUREK_ORC_ELDER = 20546;
-	// Item
-	private static final ItemHolder GUILD_COIN = new ItemHolder(37045, 20);
+	// Monster
+	private static final int MARIONETTE_SPIRIT = 23418;
+	// Items
+	private static final ItemHolder GUILD_COIN = new ItemHolder(37045, 5);
+	private static final int MAGIC_CHAIN_KEY_1 = 39488;
 	// Rewards
-	private static final int EXP_REWARD = 354546;
-	private static final int SP_REWARD = 85;
+	private static final int EXP_REWARD = 896996;
+	private static final int SP_REWARD = 215;
 	// Other
-	private static final int MIN_LEVEL = 30;
+	private static final int MIN_LEVEL = 34;
 	
-	public Q10761_AnOrcInLove()
+	public Q10762_MarionetteSpirit()
 	{
-		super(10761, Q10761_AnOrcInLove.class.getSimpleName(), "An Orc in Love");
+		super(10762, Q10762_MarionetteSpirit.class.getSimpleName(), "Marionette Spirit");
 		addStartNpc(VORBOS);
 		addTalkId(VORBOS);
-		addKillId(TUREK_WAR_HOUND, TUREK_ORC_FOOTMAN, TUREK_ORC_SENTINEL, TUREK_ORC_SUPPLIER, TUREK_ORC_ARCHER, TUREK_ORC_SKIRMISHER, TUREK_ORC_PRIEST, TUREK_ORC_PREFECT, TUREK_ORC_ELDER);
+		addKillId(MARIONETTE_SPIRIT);
+		registerQuestItems(MAGIC_CHAIN_KEY_1);
+		addCondRace(Race.ERTHEIA, "noErtheia.html");
 		addCondMinLevel(MIN_LEVEL, "no_level.htm");
+		addCondCompletedQuest(Q10761_AnOrcInLove.class.getSimpleName(), "restriction.html");
 	}
 	
 	@Override
@@ -74,27 +71,26 @@ public class Q10761_AnOrcInLove extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33966-02.htm":
-			case "33966-03.htm":
-			case "33966-04.htm":
+			case "33963-02.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33966-05.html": // start the quest
+			case "33966-03.htm": // start the quest
 			{
 				qs.startQuest();
-				qs.set(Integer.toString(TUREK_ORC_ELDER), 0);
+				qs.set(Integer.toString(MARIONETTE_SPIRIT), 0);
 				htmltext = event;
 				break;
 			}
-			case "33966-07.html":
+			
+			case "33966-05.html":
 			{
 				if (qs.isCond(2))
 				{
 					giveItems(player, GUILD_COIN);
 					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					qs.unset(Integer.toString(TUREK_ORC_ELDER));
+					qs.unset(Integer.toString(MARIONETTE_SPIRIT));
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -123,15 +119,16 @@ public class Q10761_AnOrcInLove extends Quest
 				}
 				break;
 			}
+			
 			case State.STARTED:
 			{
 				if (qs.isCond(1))
 				{
-					htmltext = "33966-08.html";
+					htmltext = "33966-06.html";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "33966-06.html";
+					htmltext = "33966-04.html";
 				}
 				break;
 			}
@@ -150,15 +147,16 @@ public class Q10761_AnOrcInLove extends Quest
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		if ((qs != null) && qs.isStarted() && qs.isCond(1) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
-			int kills = qs.getInt(Integer.toString(TUREK_ORC_ELDER));
+			giveItemRandomly(killer, npc, MAGIC_CHAIN_KEY_1, 1, 1, 1.0, true);
+			int kills = qs.getInt(Integer.toString(MARIONETTE_SPIRIT));
 			kills++;
-			qs.set(Integer.toString(TUREK_ORC_ELDER), kills);
+			qs.set(Integer.toString(MARIONETTE_SPIRIT), kills);
 			
 			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			log.addNpcString(NpcStringId.KILL_TUREK_ORCS, kills);
+			log.addNpc(MARIONETTE_SPIRIT, kills);
 			killer.sendPacket(log);
 			
-			if (kills >= 30)
+			if (kills >= 1)
 			{
 				qs.setCond(2);
 			}
