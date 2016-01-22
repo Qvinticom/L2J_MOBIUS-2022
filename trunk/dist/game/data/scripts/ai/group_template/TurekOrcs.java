@@ -36,17 +36,21 @@ import ai.npc.AbstractNpcAI;
  */
 public final class TurekOrcs extends AbstractNpcAI
 {
-	// Monster to spwan
+	// Monster to spawn
 	private static final int CHERTUBA_ILLUSION = 23422;
+	private static final int CHERTUBA_MIRAGE = 23421;
 	// NPCs
 	private static final int[] MOBS =
 	{
 		20494, // Turek War Hound
-		20495, // Turek Orc Warlord
+		20495, // Turek Orc Prefect
+		20496, // Turek Orc Archer
 		20497, // Turek Orc Skirmisher
 		20498, // Turek Orc Supplier
 		20499, // Turek Orc Footman
 		20500, // Turek Orc Sentinel
+		20501, // Turek Orc Priest
+		20546, // Turek Orc Elder
 	};
 	
 	private TurekOrcs()
@@ -55,7 +59,7 @@ public final class TurekOrcs extends AbstractNpcAI
 		addAttackId(MOBS);
 		addEventReceivedId(MOBS);
 		addMoveFinishedId(MOBS);
-		addKillId(20497, 20499);
+		addKillId(20495, 20496, 20497, 20499, 20500, 20501, 20546);
 	}
 	
 	@Override
@@ -112,8 +116,8 @@ public final class TurekOrcs extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final L2Npc illusion = addSpawn(CHERTUBA_ILLUSION, npc.getLocation(), false, 300000); // 5 minute despawn time
-		((L2MonsterInstance) illusion).addDamage(killer, 1, null);
+		final L2Npc newSpawn = addSpawn(getRandomBoolean() ? CHERTUBA_MIRAGE : CHERTUBA_ILLUSION, npc.getLocation(), false, 300000); // 5 minute despawn time
+		((L2MonsterInstance) newSpawn).addDamage(killer, 1, null);
 		showOnScreenMsg(killer, NpcStringId.A_POWERFUL_MONSTER_HAS_COME_TO_FACE_YOU, ExShowScreenMessage.TOP_CENTER, 4500);
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -141,7 +145,6 @@ public final class TurekOrcs extends AbstractNpcAI
 			npc.disableCoreAI(false);
 			npc.getVariables().remove("state");
 		}
-		
 	}
 	
 	public static void main(String[] args)

@@ -626,7 +626,7 @@
 			</corpse>
 		</dropLists>
 	</npc>
-	<npc id="23421" level="25" type="L2Npc" name="Chertuba Mirage">
+	<npc id="23421" level="25" type="L2Monster" name="Chertuba Mirage">
 		<!-- http://l2on.net/en/?c=npc&id=23422 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -641,7 +641,7 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoides -->
 		</skillList>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="51" />
