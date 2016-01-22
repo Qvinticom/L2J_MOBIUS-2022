@@ -1195,40 +1195,48 @@
 		<!-- Teleports you to Cruma Tower. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+        <set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_tradable" val="false" />
+        <set name="item_skill" val="17986-1" /> <!-- Teleports you to Crumar Tower -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+        <cond msgId="113" addName="1">
+             <player flyMounted="false" />
+         </cond>
 	</item>
 	<item id="39595" name="Scroll of Escape: Town of Dion" type="EtcItem">
 		<!-- Teleports you to Town of Dion. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_auctionable" val="false" />
+ 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="material" val="PAPER" />
+ 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="39596" name="Scroll of Escape: Cruma Tower" type="EtcItem">
 		<!-- Teleports you to Cruma Tower Underground Lv. 3. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+        <set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_tradable" val="false" />
+        <set name="item_skill" val="17988-1" /> <!-- Teleports you to Cruma Tower: Underground Level 3. -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+        <cond msgId="113" addName="1">
+             <player flyMounted="false" />
+         </cond>
 	</item>
 	<item id="39597" name="Warp Crystal" type="EtcItem">
 		<!-- Something you'll need to enter the Dimensional Warp. -->

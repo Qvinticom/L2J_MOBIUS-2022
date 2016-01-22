@@ -1035,11 +1035,23 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17986" levels="1" name="Scroll of Escape: Cruma Tower">
-		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
+        <set name="hitTime" val="200" />
+        <set name="isMagic" val="2" /> <!-- Static Skill -->
+        <set name="itemConsumeCount" val="1" />
+        <set name="itemConsumeId" val="39594" />
+        <set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+        <set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
+        <cond msgId="113" addName="1">
+            <player canEscape="true" />
+        </cond>
+        <for>
+            <effect name="Teleport">
+                <param x="17728" y="115007" z="-11733" />
+            </effect>
+        </for>
 	</skill>
 	<skill id="17987" levels="1" name="Scroll of Escape: Town of Dion">
 		<!-- AUTO GENERATED SKILL -->
@@ -1049,11 +1061,23 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17988" levels="1" name="Scroll of Escape: Cruma Tower">
-		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
+        <set name="hitTime" val="200" />
+        <set name="isMagic" val="2" /> <!-- Static Skill -->
+        <set name="itemConsumeCount" val="1" />
+        <set name="itemConsumeId" val="39596" />
+        <set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+        <set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
+        <cond msgId="113" addName="1">
+            <player canEscape="true" />
+        </cond>
+        <for>
+            <effect name="Teleport">
+                <param x="17720" y="115185" z="-6585" />
+            </effect>
+        </for>
 	</skill>
 	<skill id="17989" levels="1" name="Scroll of Escape: Swamp of Screams">
 		<!-- AUTO GENERATED SKILL -->
