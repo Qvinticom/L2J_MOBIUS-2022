@@ -71,7 +71,7 @@ public class Q10762_MarionetteSpirit extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33963-02.htm":
+			case "33966-02.htm":
 			{
 				htmltext = event;
 				break;
@@ -83,7 +83,6 @@ public class Q10762_MarionetteSpirit extends Quest
 				htmltext = event;
 				break;
 			}
-			
 			case "33966-05.html":
 			{
 				if (qs.isCond(2))
@@ -119,7 +118,6 @@ public class Q10762_MarionetteSpirit extends Quest
 				}
 				break;
 			}
-			
 			case State.STARTED:
 			{
 				if (qs.isCond(1))
