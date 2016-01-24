@@ -90,12 +90,6 @@ public class L2NpcActionShift implements IActionShiftHandler
 			html.replace("%cspd%", String.valueOf(((L2Character) target).getMAtkSpd()));
 			html.replace("%atkType%", String.valueOf(((L2Character) target).getTemplate().getBaseAttackType()));
 			html.replace("%atkRng%", String.valueOf(((L2Character) target).getTemplate().getBaseAttackRange()));
-			html.replace("%str%", String.valueOf(((L2Character) target).getSTR()));
-			html.replace("%dex%", String.valueOf(((L2Character) target).getDEX()));
-			html.replace("%con%", String.valueOf(((L2Character) target).getCON()));
-			html.replace("%int%", String.valueOf(((L2Character) target).getINT()));
-			html.replace("%wit%", String.valueOf(((L2Character) target).getWIT()));
-			html.replace("%men%", String.valueOf(((L2Character) target).getMEN()));
 			html.replace("%loc%", String.valueOf(target.getX() + " " + target.getY() + " " + target.getZ()));
 			html.replace("%heading%", String.valueOf(((L2Character) target).getHeading()));
 			html.replace("%collision_radius%", String.valueOf(((L2Character) target).getTemplate().getfCollisionRadius()));
