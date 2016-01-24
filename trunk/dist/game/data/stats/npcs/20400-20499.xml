@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20402" level="34" type="L2Monster" name="Veelan Bugbear Warrior" title="Enraged">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -14,9 +15,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="88" /> <!-- rhand: Morning Star -->
-		<acquire exp="3446" sp="1" />
+		<acquire exp="3446" sp="0" />
 		<stats>
-			<vitals hp="1168" hpRegen="3.5" mp="245.52" mpRegen="1.5" />
+			<vitals hp="737" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="60.19687" magical="41.10666" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="98.70919" magical="65.7216907961494" />
 			<attribute>
@@ -47,23 +48,9 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="181" max="334" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.1298999786376953">
-					<item id="25" min="1" max="1" chance="2.9004" /> <!-- Piece Bone Breastplate -->
-					<item id="1926" min="1" max="1" chance="35.8597" /> <!-- Piece Bone Breastplate Fragment -->
-					<item id="26" min="1" max="1" chance="1.8774" /> <!-- Bronze Breastplate -->
-					<item id="32" min="1" max="1" chance="4.6407" /> <!-- Piece Bone Gaiters -->
-					<item id="1928" min="1" max="1" chance="51.7132" /> <!-- Piece Bone Gaiters Fragment -->
-					<item id="34" min="1" max="1" chance="3.0086" /> <!-- Bronze Gaiters -->
-				</group>
-				<group chance="10.415499687194824">
-					<item id="1866" min="1" max="1" chance="38.5108" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="57.7662" /> <!-- Charcoal -->
-					<item id="2256" min="1" max="1" chance="1.4124" /> <!-- Recipe: Assassin Knife -->
-					<item id="5158" min="1" max="1" chance="2.3106" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-				</group>
+				<item id="291" min="1" max="1" chance="0.075" /> <!-- Trident -->
+				<item id="57" min="14" max="32" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -97,9 +84,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2179" min="1" max="1" chance="19.4917" /> <!-- Recipe: Crafted Leather Gloves -->
-				<item id="1880" min="1" max="1" chance="4.0738" /> <!-- Steel -->
-				<item id="1871" min="1" max="1" chance="40.7376" /> <!-- Charcoal -->
+				<item id="36531" min="1" max="1" chance="7.61" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -108,6 +94,7 @@
 		</collision>
 	</npc>
 	<npc id="20403" level="16" type="L2Monster" name="Hunter Tarantula">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -115,9 +102,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="856" sp="23" />
+		<acquire exp="856" sp="0" />
 		<stats>
-			<vitals hp="264.34345" hpRegen="2.5" mp="157.6" mpRegen="1.2" />
+			<vitals hp="265" hpRegen="2.5" mp="157" mpRegen="1.2" />
 			<attack physical="32.16396" magical="21.96382" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="76.08628" magical="50.6590964478128" />
 			<attribute>
@@ -148,21 +135,12 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="118" max="183" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.4268999099731445">
-					<item id="38" min="1" max="1" chance="5.2405" /> <!-- Low Boots -->
-					<item id="50" min="1" max="1" chance="5.2405" /> <!-- Leather Gloves -->
-					<item id="1925" min="1" max="1" chance="89.519" /> <!-- Leather Gloves Lining -->
-				</group>
-				<group chance="7.946400165557861">
-					<item id="1867" min="1" max="1" chance="47.0979" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="47.0979" /> <!-- Animal Bone -->
-					<item id="2253" min="1" max="1" chance="1.4477" /> <!-- Recipe: Sword Breaker -->
-					<item id="5268" min="1" max="1" chance="1.4129" /> <!-- Recipe: Greater Soulshot (D) Compressed Package (100%) -->
-					<item id="735" min="1" max="1" chance="2.9436" /> <!-- Alacrity Potion -->
-				</group>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="734" min="1" max="1" chance="0.3" /> <!-- Wind Walk Potion -->
+				<item id="735" min="1" max="1" chance="0.3" /> <!-- Haste Potion -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="5268" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -196,9 +174,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1868" min="1" max="1" chance="47.5131" /> <!-- Thread -->
-				<item id="2012" min="1" max="1" chance="0.4949" /> <!-- Sword of Reflection Blade -->
-				<item id="734" min="1" max="1" chance="3.9594" /> <!-- Haste Potion -->
+				<item id="36531" min="1" max="1" chance="4.385" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -324,6 +300,7 @@
 		</collision>
 	</npc>
 	<npc id="20410" level="15" type="L2Monster" name="Scavenger Spider">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -331,9 +308,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="817" sp="22" />
+		<acquire exp="817" sp="0" />
 		<stats>
-			<vitals hp="246.95422" hpRegen="2.5" mp="149.2" mpRegen="1.2" />
+			<vitals hp="247" hpRegen="2.5" mp="149" mpRegen="1.2" />
 			<attack physical="29.61691" magical="20.22451" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="73.55216" magical="48.9718589929237" />
 			<attribute>
@@ -363,19 +340,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="119" max="180" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.22579999268054962">
-					<item id="9" min="1" max="1" chance="9.9075" /> <!-- Cedar Staff -->
-					<item id="2008" min="1" max="1" chance="80.185" /> <!-- Cedar Staff Head -->
-					<item id="154" min="1" max="1" chance="9.9075" /> <!-- Dwarven Mace -->
-				</group>
-				<group chance="12.748000144958496">
-					<item id="1867" min="1" max="1" chance="48.6583" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="48.6583" /> <!-- Animal Bone -->
-					<item id="1793" min="1" max="1" chance="2.6834" /> <!-- Recipe: Sword of Reflection -->
-				</group>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -409,9 +377,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1868" min="1" max="1" chance="47.2491" /> <!-- Thread -->
-				<item id="2009" min="1" max="1" chance="0.8377" /> <!-- Dirk Blade -->
-				<item id="1792" min="1" max="1" chance="1.7371" /> <!-- Recipe: Short Spear -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -420,6 +387,7 @@
 		</collision>
 	</npc>
 	<npc id="20411" level="30" type="L2Monster" name="Scavenger Bat" title="Enraged">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -431,9 +399,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="2667" sp="1" />
+		<acquire exp="2667" sp="0" />
 		<stats>
-			<vitals hp="957" hpRegen="2.5" mp="174.64" mpRegen="1.2" />
+			<vitals hp="605" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="37.82932" magical="25.83252" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="81.34791" magical="54.1623558855199" />
 			<attribute>
@@ -468,20 +436,9 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="121" max="200" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.02850000001490116">
-					<item id="217" min="1" max="1" chance="50" /> <!-- Shining Knife -->
-					<item id="218" min="1" max="1" chance="50" /> <!-- Throwing Knife -->
-				</group>
-				<group chance="16.756999969482422">
-					<item id="1864" min="1" max="1" chance="35.7143" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="17.8571" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="7.1429" /> <!-- Braided Hemp -->
-					<item id="1817" min="1" max="1" chance="3.5714" /> <!-- Recipe: Cord -->
-					<item id="6037" min="1" max="1" chance="35.7143" /> <!-- Waking Scroll -->
-				</group>
+				<item id="434" min="1" max="1" chance="0.3" /> <!-- White Tunic -->
+				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -515,9 +472,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="735" min="1" max="1" chance="2.1105" /> <!-- Alacrity Potion -->
-				<item id="2141" min="1" max="1" chance="5.0651" /> <!-- Recipe: Silver Mold -->
-				<item id="1897" min="1" max="1" chance="6.0299" /> <!-- Necklace of Wisdom Chain -->
+				<item id="36531" min="1" max="1" chance="4.896" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1053,6 +1009,7 @@
 		</collision>
 	</npc>
 	<npc id="20435" level="15" type="L2Monster" name="Opal Beast">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1060,9 +1017,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="674" sp="18" />
+		<acquire exp="674" sp="0" />
 		<stats>
-			<vitals hp="246.95422" hpRegen="2.5" mp="149.2" mpRegen="1.2" />
+			<vitals hp="247" hpRegen="2.5" mp="149" mpRegen="1.2" />
 			<attack physical="29.61691" magical="20.22451" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="73.55216" magical="48.9718589929237" />
 			<attribute>
@@ -1093,14 +1050,16 @@
 		<dropLists>
 			<death>
 				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
-				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="20436" level="23" type="L2Monster" name="Ol Mahum Supplier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1114,9 +1073,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" lhand="19" /> <!-- rhand: Long Sword lhand: Small Shield -->
-		<acquire exp="1581" sp="50" />
+		<acquire exp="1581" sp="0" />
 		<stats>
-			<vitals hp="410.70422" hpRegen="3.5" mp="231.96" mpRegen="1.5" />
+			<vitals hp="411" hpRegen="3.5" mp="231" mpRegen="1.5" />
 			<attack physical="55.84125" magical="38.13234" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="95.64976" magical="63.6846860642986" shield="48" shieldRate="20" />
 			<attribute>
@@ -1147,17 +1106,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="173" max="305" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.023800000548362732">
-					<item id="16" min="1" max="1" chance="100" /> <!-- Great Spear -->
-				</group>
-				<group chance="15.190899848937988">
-					<item id="1870" min="1" max="1" chance="49.0196" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="49.0196" /> <!-- Varnish -->
-					<item id="5158" min="1" max="1" chance="1.9608" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-				</group>
+				<item id="57" min="6" max="15" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36938" min="1" max="1" chance="0.0009" /> <!-- Recipe: Cokes - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1191,9 +1143,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1869" min="1" max="1" chance="37.8144" /> <!-- Iron Ore -->
-				<item id="2016" min="1" max="1" chance="0.4431" /> <!-- Composite Bow Shaft -->
-				<item id="1898" min="1" max="1" chance="3.8844" /> <!-- Blue Diamond Necklace Gem -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1202,6 +1152,7 @@
 		</collision>
 	</npc>
 	<npc id="20437" level="21" type="L2Monster" name="Ol Mahum Recruit">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1215,9 +1166,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="68" lhand="19" /> <!-- rhand: Falchion lhand: Small Shield -->
-		<acquire exp="1375" sp="42" />
+		<acquire exp="1375" sp="0" />
 		<stats>
-			<vitals hp="364.30351" hpRegen="3.5" mp="205.2" mpRegen="1.5" />
+			<vitals hp="365" hpRegen="3.5" mp="205" mpRegen="1.5" />
 			<attack physical="47.91924" magical="32.72263" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="89.73059" magical="59.7436374813816" shield="45" shieldRate="20" />
 			<attribute>
@@ -1248,20 +1199,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="156" max="278" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.0088000297546387">
-					<item id="39" min="1" max="1" chance="7.0524" /> <!-- Boots -->
-					<item id="1930" min="1" max="1" chance="85.8951" /> <!-- Boot Lining -->
-					<item id="51" min="1" max="1" chance="7.0525" /> <!-- Bracer -->
-				</group>
-				<group chance="8.736900329589844">
-					<item id="1871" min="1" max="1" chance="57.7662" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="38.5108" /> <!-- Suede -->
-					<item id="5268" min="1" max="1" chance="2.3106" /> <!-- Recipe: Greater Soulshot (D) Compressed Package (100%) -->
-					<item id="5437" min="1" max="1" chance="1.4124" /> <!-- Recipe: Heavy Sword(100%) -->
-				</group>
+				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36938" min="1" max="1" chance="0.0009" /> <!-- Recipe: Cokes - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1295,9 +1236,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2258" min="1" max="1" chance="0.8355" /> <!-- Recipe: Temptation of Abyss -->
-				<item id="2016" min="1" max="1" chance="0.4004" /> <!-- Composite Bow Shaft -->
-				<item id="1804" min="1" max="1" chance="1.3669" /> <!-- Recipe: Soulshot (D-Grade) -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1306,6 +1245,7 @@
 		</collision>
 	</npc>
 	<npc id="20438" level="26" type="L2Monster" name="Ol Mahum General">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1319,9 +1259,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="67" lhand="102" /> <!-- rhand: Orcish Sword lhand: Round Shield -->
-		<acquire exp="1940" sp="65" />
+		<acquire exp="1940" sp="0" />
 		<stats>
-			<vitals hp="487.5704" hpRegen="3.5" mp="273.0" mpRegen="1.5" />
+			<vitals hp="488" hpRegen="3.5" mp="273" mpRegen="1.5" />
 			<attack physical="69.75926" magical="47.63653" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="105.02818" magical="69.9289432036824" shield="53" shieldRate="20" />
 			<attribute>
@@ -1352,20 +1292,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="196" max="374" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2802000045776367">
-					<item id="291" min="1" max="1" chance="2.8677" /> <!-- Trident -->
-					<item id="2019" min="1" max="1" chance="97.1323" /> <!-- Trident Edge -->
-				</group>
-				<group chance="7.129000186920166">
-					<item id="1875" min="1" max="1" chance="4.7331" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="11.8327" /> <!-- Cokes -->
-					<item id="5549" min="1" max="1" chance="7.0996" /> <!-- Metallic Thread -->
-					<item id="2180" min="1" max="1" chance="5.3381" /> <!-- Recipe: Scale Mail -->
-					<item id="6666" min="1" max="1" chance="70.9965" /> <!-- Deluxe Chest Key - Grade 2 -->
-				</group>
+				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<item id="36940" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1399,9 +1329,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1865" min="1" max="1" chance="45.0915" /> <!-- Varnish -->
-				<item id="1869" min="1" max="1" chance="45.0915" /> <!-- Iron Ore -->
-				<item id="1899" min="1" max="1" chance="7.0456" /> <!-- Necklace of Devotion Chain -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1672,6 +1600,7 @@
 		</collision>
 	</npc>
 	<npc id="20446" level="6" type="L2Monster" name="Utuku Orc">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -1680,9 +1609,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="156" /> <!-- rhand: Hand Axe -->
-		<acquire exp="320" sp="6" />
+		<acquire exp="320" sp="0" />
 		<stats>
-			<vitals hp="93.54158" hpRegen="2" mp="77.2" mpRegen="0.9" />
+			<vitals hp="94" hpRegen="2" mp="77" mpRegen="0.9" />
 			<attack physical="13.52471" magical="9.23562" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="53.53373" magical="35.6433609604933" />
 			<attribute>
@@ -1712,18 +1641,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="41" max="58" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6381000280380249">
-					<item id="22" min="1" max="1" chance="38.4868" /> <!-- Leather Shirt -->
-					<item id="29" min="1" max="1" chance="61.5132" /> <!-- Leather Pants -->
-				</group>
-				<group chance="4.8755998611450195">
-					<item id="1869" min="1" max="1" chance="31.3987" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="62.7974" /> <!-- Stem -->
-					<item id="1791" min="1" max="1" chance="5.8039" /> <!-- Recipe: Brandish -->
-				</group>
+				<item id="57" min="1" max="3" chance="70" /> <!-- Adena -->
+				<item id="36536" min="1" max="1" chance="0.75" /> <!-- Worn Leather Braid -->
+				<item id="36556" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1757,9 +1678,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1870" min="1" max="1" chance="7.7741" /> <!-- Coal -->
-				<item id="2007" min="1" max="1" chance="0.5553" /> <!-- Bow Shaft -->
-				<item id="1869" min="1" max="1" chance="7.7741" /> <!-- Iron Ore -->
+				<item id="36531" min="1" max="1" chance="1.435" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1768,6 +1687,7 @@
 		</collision>
 	</npc>
 	<npc id="20447" level="8" type="L2Monster" name="Utuku Orc Archer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -1776,9 +1696,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="439" sp="10" />
+		<acquire exp="439" sp="0" />
 		<stats>
-			<vitals hp="124.92828" hpRegen="2" mp="92.64" mpRegen="0.9" />
+			<vitals hp="125" hpRegen="2" mp="92" mpRegen="0.9" />
 			<attack physical="16.20165" magical="11.06363" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="57.56203" magical="38.3254529794081" />
 			<attribute>
@@ -1808,18 +1728,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="69" max="94" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3497999906539917">
-					<item id="14" min="1" max="1" chance="22.5806" /> <!-- Bow -->
-					<item id="2007" min="1" max="1" chance="77.4194" /> <!-- Bow Shaft -->
-				</group>
-				<group chance="6.53380012512207">
-					<item id="1873" min="1" max="1" chance="15.4748" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="77.3741" /> <!-- Thread -->
-					<item id="1791" min="1" max="1" chance="7.1511" /> <!-- Recipe: Brandish -->
-				</group>
+				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="3.736" /> <!-- Healing Potion -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1853,9 +1765,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1797" min="1" max="1" chance="25.9314" /> <!-- Recipe: Leather Stockings -->
-				<item id="2138" min="1" max="1" chance="3.7753" /> <!-- Recipe: Coarse Bone Powder (100%) -->
-				<item id="1060" min="1" max="1" chance="28.5245" /> <!-- Lesser Healing Potion -->
+				<item id="36531" min="1" max="1" chance="2.32" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1864,6 +1774,7 @@
 		</collision>
 	</npc>
 	<npc id="20448" level="7" type="L2Monster" name="Utuku Orc Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -1872,9 +1783,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="3" /> <!-- rhand: Broadsword -->
-		<acquire exp="374" sp="8" />
+		<acquire exp="374" sp="0" />
 		<stats>
-			<vitals hp="108.42254" hpRegen="2" mp="84.88" mpRegen="0.9" />
+			<vitals hp="109" hpRegen="2" mp="84" mpRegen="0.9" />
 			<attack physical="14.80956" magical="10.11301" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="55.51894" magical="36.965135694682" />
 			<attribute>
@@ -1904,17 +1815,9 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="51" max="72" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2651999890804291">
-					<item id="3" min="1" max="1" chance="22.5806" /> <!-- Broadsword -->
-					<item id="2005" min="1" max="1" chance="77.4194" /> <!-- Broadsword Blade -->
-				</group>
-				<group chance="4.790999889373779">
-					<item id="1866" min="1" max="1" chance="40" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="60" /> <!-- Charcoal -->
-				</group>
+				<item id="57" min="2" max="4" chance="70" /> <!-- Adena -->
+				<item id="36541" min="1" max="1" chance="0.75" /> <!-- Steel Wire -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1948,9 +1851,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1666" min="1" max="1" chance="3.2439" /> <!-- Recipe: Wooden Arrow -->
-				<item id="2006" min="1" max="1" chance="0.6951" /> <!-- Willow Staff Head -->
-				<item id="1789" min="1" max="1" chance="1.7988" /> <!-- Recipe: Cedar Staff -->
+				<item id="36531" min="1" max="1" chance="1.797" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1959,6 +1860,7 @@
 		</collision>
 	</npc>
 	<npc id="20449" level="15" type="L2Monster" name="Will-O-Wisp">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1967,9 +1869,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="799" sp="22" />
+		<acquire exp="799" sp="0" />
 		<stats>
-			<vitals hp="246.95422" hpRegen="2.5" mp="149.2" mpRegen="1.2" />
+			<vitals hp="247" hpRegen="2.5" mp="149" mpRegen="1.2" />
 			<attack physical="29.61691" magical="20.22451" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="73.55216" magical="48.9718589929237" />
 			<attribute>
@@ -2005,10 +1907,11 @@
 		<dropLists>
 			<death>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36522" min="1" max="1" chance="0.03" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36522" min="1" max="1" chance="0.03" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -2421,6 +2324,7 @@
 		</collision>
 	</npc>
 	<npc id="20466" level="17" type="L2Monster" name="Pincer Spider">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2428,9 +2332,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="927" sp="26" />
+		<acquire exp="927" sp="0" />
 		<stats>
-			<vitals hp="282.57403" hpRegen="2.5" mp="166.08" mpRegen="1.2" />
+			<vitals hp="283" hpRegen="2.5" mp="166" mpRegen="1.2" />
 			<attack physical="34.8979" magical="23.83074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="78.68469" magical="52.3891528929827" />
 			<attribute>
@@ -2466,12 +2370,8 @@
 		<dropLists>
 			<death>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
-				<item id="734" min="1" max="1" chance="1.050" /> <!-- Wind Walk Potion -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
+				<item id="734" min="1" max="1" chance="1.148" /> <!-- Wind Walk Potion -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="11.0">
 					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
 					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
@@ -2500,11 +2400,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="4.700" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.704" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="20468" level="6" type="L2Monster" name="Kaboo Orc">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -2513,9 +2414,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="156" /> <!-- rhand: Hand Axe -->
-		<acquire exp="320" sp="6" />
+		<acquire exp="320" sp="0" />
 		<stats>
-			<vitals hp="93.54158" hpRegen="2" mp="77.2" mpRegen="0.9" />
+			<vitals hp="94" hpRegen="2" mp="77" mpRegen="0.9" />
 			<attack physical="13.52471" magical="9.23562" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="53.53373" magical="35.6433609604933" />
 			<attribute>
@@ -2545,17 +2446,9 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="41" max="58" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.09570000320672989">
-					<item id="99" min="1" max="1" chance="100" /> <!-- Apprentice's Spellbook -->
-				</group>
-				<group chance="10.369600296020508">
-					<item id="1869" min="1" max="1" chance="14.7632" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="29.5265" /> <!-- Stem -->
-					<item id="1795" min="1" max="1" chance="55.7103" /> <!-- Recipe: Leather Shoes -->
-				</group>
+				<item id="57" min="1" max="3" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2589,9 +2482,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1814" min="1" max="1" chance="4.0916" /> <!-- Recipe: Leather -->
-				<item id="1790" min="1" max="1" chance="1.437" /> <!-- Recipe: Dirk -->
-				<item id="2005" min="1" max="1" chance="0.5553" /> <!-- Broadsword Blade -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2600,6 +2491,7 @@
 		</collision>
 	</npc>
 	<npc id="20469" level="8" type="L2Monster" name="Kaboo Orc Archer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -2608,9 +2500,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="439" sp="10" />
+		<acquire exp="439" sp="0" />
 		<stats>
-			<vitals hp="124.92828" hpRegen="2" mp="92.64" mpRegen="0.9" />
+			<vitals hp="125" hpRegen="2" mp="92" mpRegen="0.9" />
 			<attack physical="16.20165" magical="11.06363" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="57.56203" magical="38.3254529794081" />
 			<attribute>
@@ -2640,19 +2532,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="69" max="94" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3497999906539917">
-					<item id="14" min="1" max="1" chance="22.5806" /> <!-- Bow -->
-					<item id="2007" min="1" max="1" chance="77.4194" /> <!-- Bow Shaft -->
-				</group>
-				<group chance="16.75909996032715">
-					<item id="1873" min="1" max="1" chance="4.5248" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="22.6238" /> <!-- Thread -->
-					<item id="1795" min="1" max="1" chance="42.6864" /> <!-- Recipe: Leather Shoes -->
-					<item id="1833" min="1" max="1" chance="30.165" /> <!-- Bandage -->
-				</group>
+				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
+				<item id="1833" min="1" max="1" chance="4.527" /> <!-- Bandage -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2686,9 +2569,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1864" min="1" max="1" chance="25.6721" /> <!-- Stem -->
-				<item id="2007" min="1" max="1" chance="0.9169" /> <!-- Bow Shaft -->
-				<item id="1666" min="1" max="1" chance="4.2787" /> <!-- Recipe: Wooden Arrow -->
+				<item id="36531" min="1" max="1" chance="2.413" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2890,6 +2771,7 @@
 		</collision>
 	</npc>
 	<npc id="20472" level="12" type="L2Monster" name="Kaboo Orc Warrior Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2898,9 +2780,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="654" sp="16" />
+		<acquire exp="654" sp="0" />
 		<stats>
-			<vitals hp="199.62322" hpRegen="2.5" mp="124.48" mpRegen="1.2" />
+			<vitals hp="200" hpRegen="2.5" mp="124" mpRegen="1.2" />
 			<attack physical="22.99606" magical="15.70333" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="66.32989" magical="44.163184477748" />
 			<attribute>
@@ -2934,8 +2816,9 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
-				<item id="36521" min="1" max="1" chance="4.300" /> <!-- Iron Ore -->
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="36521" min="1" max="1" chance="4.346" /> <!-- Iron Ore -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2969,11 +2852,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="3.900" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.013" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="20473" level="11" type="L2Monster" name="Kaboo Orc Warrior Lieutenant">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2982,9 +2866,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="587" sp="15" />
+		<acquire exp="587" sp="0" />
 		<stats>
-			<vitals hp="185.38552" hpRegen="2.5" mp="116.4" mpRegen="1.2" />
+			<vitals hp="186" hpRegen="2.5" mp="116" mpRegen="1.2" />
 			<attack physical="21.0973" magical="14.40672" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="64.04702" magical="42.6432286072855" />
 			<attribute>
@@ -3018,8 +2902,9 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
-				<item id="1831" min="1" max="1" chance="15" /> <!-- Antidote -->
+				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
+				<item id="1831" min="1" max="1" chance="14.46" /> <!-- Antidote -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3053,7 +2938,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="3.800" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.679" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -3817,6 +3702,7 @@
 		</collision>
 	</npc>
 	<npc id="20492" level="21" type="L2Monster" name="Kirunak's Escort">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3830,9 +3716,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="68" /> <!-- rhand: Falchion -->
-		<acquire exp="1146" sp="35" />
+		<acquire exp="1146" sp="0" />
 		<stats>
-			<vitals hp="364.30351" hpRegen="3.5" mp="205.2" mpRegen="1.5" />
+			<vitals hp="365" hpRegen="3.5" mp="205" mpRegen="1.5" />
 			<attack physical="47.91924" magical="32.72263" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="89.73059" magical="59.7436374813816" />
 			<attribute>
@@ -3872,13 +3758,15 @@
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
 				<item id="36516" min="1" max="1" chance="7.538" /> <!-- Worn Leather -->
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="5.400" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="5.356" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="20494" level="31" type="L2Monster" name="Turek War Hound">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3971,6 +3859,7 @@
 		</collision>
 	</npc>
 	<npc id="20495" level="39" type="L2Monster" name="Turek Orc Prefect">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -4065,6 +3954,7 @@
 		</collision>
 	</npc>
 	<npc id="20496" level="36" type="L2Monster" name="Turek Orc Archer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -4156,6 +4046,7 @@
 		</collision>
 	</npc>
 	<npc id="20497" level="37" type="L2Monster" name="Turek Orc Skirmisher">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -4248,6 +4139,7 @@
 		</collision>
 	</npc>
 	<npc id="20498" level="34" type="L2Monster" name="Turek Orc Supplier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -4341,6 +4233,7 @@
 		</collision>
 	</npc>
 	<npc id="20499" level="32" type="L2Monster" name="Turek Orc Footman">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
