@@ -630,6 +630,7 @@
 		<!-- http://l2on.net/en/?c=npc&id=23422 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="78" /> <!-- rhand: Great Sword -->
 		<acquire exp="7276" sp="1" />
 		<stats>
 			<vitals hp="7505" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
@@ -640,6 +641,7 @@
 		</stats>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoides -->
+			<skill id="4412" level="5" /> <!-- Weak P. Def -->
 		</skillList>
 		<status attackable="true" />
 		<collision>
@@ -648,12 +650,43 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="13" max="30" chance="70" /> <!-- Adena -->
-				<item id="36552" min="1" max="1" chance="0.003" /> <!-- Armor Fragment -->
+				<item id="57" min="13" max="43" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.003" /> <!-- Greater Cokes -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36516" min="1" max="1" chance="42.5" /> <!-- Worn Leather -->
 			</corpse>
 		</dropLists>
 	</npc>
