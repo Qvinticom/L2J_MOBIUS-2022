@@ -165,8 +165,8 @@ public class Q10764_FreeSpirit extends Quest
 				}
 				if (getQuestItemsCount(player, LOOSENED_CHAIN) < 10)
 				{
-					final L2Npc spirit = addSpawn(LIBERATED_TREE_SPIRIT, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 5000);
-					Broadcast.toKnownPlayers(spirit, new NpcSay(spirit.getObjectId(), ChatType.NPC_GENERAL, spirit.getId(), NpcStringId.THANK_YOU_THANK_YOU_FOR_HELPING));
+					final L2Npc newSpawn = addSpawn(LIBERATED_TREE_SPIRIT, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 5000);
+					Broadcast.toKnownPlayers(newSpawn, new NpcSay(newSpawn.getObjectId(), ChatType.NPC_GENERAL, newSpawn.getId(), NpcStringId.THANK_YOU_THANK_YOU_FOR_HELPING));
 					giveItems(player, LOOSENED_CHAIN, 1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					npc.deleteMe();
@@ -185,8 +185,8 @@ public class Q10764_FreeSpirit extends Quest
 				}
 				if (getQuestItemsCount(player, LOOSENED_CHAIN) < 10)
 				{
-					addSpawn(LIBERATED_WIND_SPIRIT, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 5000);
-					Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.THANK_YOU_THANK_YOU_FOR_HELPING));
+					final L2Npc newSpawn = addSpawn(LIBERATED_WIND_SPIRIT, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 5000);
+					Broadcast.toKnownPlayers(newSpawn, new NpcSay(newSpawn.getObjectId(), ChatType.NPC_GENERAL, newSpawn.getId(), NpcStringId.THANK_YOU_THANK_YOU_FOR_HELPING));
 					giveItems(player, LOOSENED_CHAIN, 1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					npc.deleteMe();
