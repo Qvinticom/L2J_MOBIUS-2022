@@ -130,10 +130,15 @@ public class CharSelectionInfo extends L2GameServerPacket
 				writeD(charInfoPackage.getPaperdollItemId(slot));
 			}
 			
-			for (int slot : Inventory.PAPERDOLL_ORDER_VISUAL_ID)
-			{
-				writeD(charInfoPackage.getPaperdollItemVisualId(slot));
-			}
+			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_RHAND));
+			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_LHAND));
+			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_GLOVES));
+			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_CHEST));
+			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_LEGS));
+			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_FEET));
+			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_LRHAND));
+			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_HAIR));
+			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_DHAIR));
 			
 			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_CHEST));
 			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_LEGS));

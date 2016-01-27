@@ -128,10 +128,15 @@ public class CharInfo extends L2GameServerPacket
 		
 		writeC(_armorEnchant);
 		
-		for (int slot : Inventory.PAPERDOLL_ORDER_VISUAL_ID)
-		{
-			writeD(_activeChar.getInventory().getPaperdollItemVisualId(slot));
-		}
+		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_RHAND));
+		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_LHAND));
+		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_LRHAND));
+		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_GLOVES));
+		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_CHEST));
+		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_LEGS));
+		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_FEET));
+		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_HAIR));
+		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_DHAIR));
 		
 		writeC(_activeChar.getPvpFlag());
 		writeD(_activeChar.getReputation());

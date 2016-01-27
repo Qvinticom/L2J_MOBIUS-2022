@@ -164,19 +164,6 @@ public abstract class Inventory extends ItemContainer
 		Inventory.PAPERDOLL_LRHAND
 	};
 	
-	public static final int[] PAPERDOLL_ORDER_VISUAL_ID = new int[]
-	{
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_LHAND,
-		Inventory.PAPERDOLL_GLOVES,
-		Inventory.PAPERDOLL_CHEST,
-		Inventory.PAPERDOLL_LEGS,
-		Inventory.PAPERDOLL_FEET,
-		Inventory.PAPERDOLL_LRHAND,
-		Inventory.PAPERDOLL_HAIR,
-		Inventory.PAPERDOLL_DHAIR
-	};
-	
 	// Speed percentage mods
 	public static final double MAX_ARMOR_WEIGHT = 12000;
 	
