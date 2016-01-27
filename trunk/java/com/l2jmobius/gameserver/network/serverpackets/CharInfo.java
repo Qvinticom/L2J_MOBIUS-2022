@@ -31,18 +31,18 @@ public class CharInfo extends L2GameServerPacket
 {
 	private final L2PcInstance _activeChar;
 	private int _objId;
-	private int _x, _y, _z, _heading;
-	private final int _mAtkSpd, _pAtkSpd;
+	private int _x;
+	private int _y;
+	private int _z;
+	private int _heading;
 	
-	private final int _runSpd, _walkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
 	private final int _swimRunSpd;
 	private final int _swimWalkSpd;
 	private final int _flyRunSpd;
 	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
-	private final float _attackSpeedMultiplier;
-	private int _enchantLevel = 0;
-	private int _armorEnchant = 0;
 	
 	private int _vehicleId = 0;
 	
@@ -63,11 +63,6 @@ public class CharInfo extends L2GameServerPacket
 			_y = _activeChar.getY();
 			_z = _activeChar.getZ();
 		}
-		_heading = _activeChar.getHeading();
-		_mAtkSpd = _activeChar.getMAtkSpd();
-		_pAtkSpd = (int) _activeChar.getPAtkSpd();
-		_attackSpeedMultiplier = _activeChar.getAttackSpeedMultiplier();
-		setInvisible(cha.isInvisible());
 		
 		_moveMultiplier = cha.getMovementSpeedMultiplier();
 		_runSpd = (int) Math.round(cha.getRunSpeed() / _moveMultiplier);
@@ -76,8 +71,8 @@ public class CharInfo extends L2GameServerPacket
 		_swimWalkSpd = (int) Math.round(cha.getSwimWalkSpeed() / _moveMultiplier);
 		_flyRunSpd = cha.isFlying() ? _runSpd : 0;
 		_flyWalkSpd = cha.isFlying() ? _walkSpd : 0;
-		_enchantLevel = cha.getInventory().getWeaponEnchant();
-		_armorEnchant = cha.getInventory().getArmorMinEnchant();
+		
+		setInvisible(cha.isInvisible());
 	}
 	
 	public CharInfo(L2Decoy decoy)
@@ -126,7 +121,7 @@ public class CharInfo extends L2GameServerPacket
 			writeD(_activeChar.getInventory().getPaperdoll2ndAugmentationId(slot));
 		}
 		
-		writeC(_armorEnchant);
+		writeC(_activeChar.getInventory().getArmorMinEnchant());
 		
 		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_RHAND));
 		writeD(_activeChar.getInventory().getPaperdollItemVisualId(Inventory.PAPERDOLL_LHAND));
@@ -141,8 +136,8 @@ public class CharInfo extends L2GameServerPacket
 		writeC(_activeChar.getPvpFlag());
 		writeD(_activeChar.getReputation());
 		
-		writeD(_mAtkSpd);
-		writeD(_pAtkSpd);
+		writeD(_activeChar.getMAtkSpd());
+		writeD((int) _activeChar.getPAtkSpd());
 		
 		writeH(_runSpd);
 		writeH(_walkSpd);
@@ -153,7 +148,7 @@ public class CharInfo extends L2GameServerPacket
 		writeH(_flyRunSpd);
 		writeH(_flyWalkSpd);
 		writeF(_moveMultiplier);
-		writeF(_attackSpeedMultiplier);
+		writeF(_activeChar.getAttackSpeedMultiplier());
 		
 		writeF(_activeChar.getCollisionRadius());
 		writeF(_activeChar.getCollisionHeight());
@@ -201,7 +196,7 @@ public class CharInfo extends L2GameServerPacket
 		
 		writeD(_activeChar.getClassId().getId()); // Confirmed
 		writeD(0x00); // TODO: Find me!
-		writeC(_activeChar.isMounted() ? 0 : _enchantLevel); // Confirmed
+		writeC(_activeChar.isMounted() ? 0 : _activeChar.getInventory().getWeaponEnchant()); // Confirmed
 		
 		writeC(_activeChar.getTeam().getId()); // Confirmed
 		
