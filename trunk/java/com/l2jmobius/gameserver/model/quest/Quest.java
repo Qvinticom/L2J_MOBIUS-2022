@@ -1821,32 +1821,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 		return DEFAULT_ALREADY_COMPLETED_MSG;
 	}
 	
-	// TODO: Remove after all Jython scripts are replaced with Java versions.
-	public void addStartNpc(int npcId)
-	{
-		setNpcQuestStartId(npcId);
-	}
-	
-	public void addFirstTalkId(int npcId)
-	{
-		setNpcFirstTalkId(event -> notifyFirstTalk(event.getNpc(), event.getActiveChar()), npcId);
-	}
-	
-	public void addTalkId(int npcId)
-	{
-		setNpcTalkId(npcId);
-	}
-	
-	public void addKillId(int npcId)
-	{
-		setAttackableKillId(kill -> notifyKill(kill.getTarget(), kill.getAttacker(), kill.isSummon()), npcId);
-	}
-	
-	public void addAttackId(int npcId)
-	{
-		setAttackableAttackId(attack -> notifyAttack(attack.getTarget(), attack.getAttacker(), attack.getDamage(), attack.isSummon(), attack.getSkill()), npcId);
-	}
-	
 	/**
 	 * Add the quest to the NPC's startQuest
 	 * @param npcIds the IDs of the NPCs to register
