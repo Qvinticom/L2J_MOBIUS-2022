@@ -30,7 +30,7 @@ import ai.npc.AbstractNpcAI;
  * Dimensional Manager AI.
  * @author Stayway, Mobius
  */
-public final class DimensionalManager extends AbstractNpcAI
+final class DimensionalManager extends AbstractNpcAI
 {
 	// Npc
 	private static final int DIMENSIONAL_MANAGER = 32478;
@@ -40,6 +40,7 @@ public final class DimensionalManager extends AbstractNpcAI
 	private static final int ROSE_SPIRIT = 21887;
 	// Rewards
 	private static final Map<String, SkillHolder> TICKET_REWARDS = new HashMap<>();
+	
 	{
 		// Using SkillHolder to store ticket and reward ids.
 		// buypass - coupon(skillId) - reward(skillLvl)

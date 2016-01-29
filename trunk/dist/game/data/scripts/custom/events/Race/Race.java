@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
 /**
  * @author Gnacik
  */
-public final class Race extends Event
+final class Race extends Event
 {
 	// Event NPC's list
 	private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet();

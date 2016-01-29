@@ -24,7 +24,7 @@ import ai.npc.AbstractNpcAI;
  * Scarecrow AI.
  * @author ivantotov
  */
-public final class Scarecrow extends AbstractNpcAI
+final class Scarecrow extends AbstractNpcAI
 {
 	// NPCs
 	private static final int TRAINING_DUMMY = 19546;

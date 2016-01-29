@@ -24,7 +24,7 @@ import ai.npc.AbstractNpcAI;
  * Golem Trader AI.
  * @author Zoey76
  */
-public final class GolemTrader extends AbstractNpcAI
+final class GolemTrader extends AbstractNpcAI
 {
 	// NPC
 	private static final int GOLEM_TRADER = 13128;

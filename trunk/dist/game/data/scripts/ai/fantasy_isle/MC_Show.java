@@ -38,7 +38,7 @@ import ai.npc.AbstractNpcAI;
  * MC Show AI.
  * @author Kerberos
  */
-public class MC_Show extends AbstractNpcAI
+final class MC_Show extends AbstractNpcAI
 {
 	private static int MC = 32433;
 	// @formatter:off

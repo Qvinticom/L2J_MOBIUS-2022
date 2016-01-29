@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
  * Karonf AI.
  * @author Gladicek
  */
-public final class Karonf extends AbstractNpcAI
+final class Karonf extends AbstractNpcAI
 {
 	// NPC
 	private static final int KARONF = 33242;

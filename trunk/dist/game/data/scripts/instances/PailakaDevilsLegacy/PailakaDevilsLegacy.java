@@ -41,10 +41,10 @@ import quests.Q00129_PailakaDevilsLegacy.Q00129_PailakaDevilsLegacy;
  */
 public final class PailakaDevilsLegacy extends AbstractInstance
 {
-	protected class DIWorld extends InstanceWorld
+	class DIWorld extends InstanceWorld
 	{
-		protected L2Attackable _lematanNpc = null;
-		protected List<L2Attackable> _followerslist = new CopyOnWriteArrayList<>();
+		L2Attackable _lematanNpc = null;
+		final List<L2Attackable> _followerslist = new CopyOnWriteArrayList<>();
 	}
 	
 	// NPCs

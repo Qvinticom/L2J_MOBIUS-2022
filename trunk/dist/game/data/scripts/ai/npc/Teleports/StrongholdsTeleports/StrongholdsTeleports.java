@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Original Jython script by Kerberos.
  * @author Plim
  */
-public final class StrongholdsTeleports extends AbstractNpcAI
+final class StrongholdsTeleports extends AbstractNpcAI
 {
 	// NPCs
 	private final static int[] NPCs =

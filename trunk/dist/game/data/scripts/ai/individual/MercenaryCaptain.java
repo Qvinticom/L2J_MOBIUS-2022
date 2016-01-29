@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
  * Mercenary Captain AI.
  * @author Mobius
  */
-public final class MercenaryCaptain extends AbstractNpcAI
+final class MercenaryCaptain extends AbstractNpcAI
 {
 	// NPC
 	private static final int MERCENARY_CAPTAIN = 33970;

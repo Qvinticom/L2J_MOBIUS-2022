@@ -214,7 +214,7 @@ public class NpcViewMod implements IBypassHandler
 		activeChar.sendPacket(html);
 	}
 	
-	public static String getDropListButtons(L2Npc npc)
+	private static String getDropListButtons(L2Npc npc)
 	{
 		final StringBuilder sb = new StringBuilder();
 		final Map<DropListScope, List<IDropItem>> dropLists = npc.getTemplate().getDropLists();
@@ -235,7 +235,7 @@ public class NpcViewMod implements IBypassHandler
 		return sb.toString();
 	}
 	
-	public static void sendNpcDropList(L2PcInstance activeChar, L2Npc npc, DropListScope dropListScope, int page)
+	private static void sendNpcDropList(L2PcInstance activeChar, L2Npc npc, DropListScope dropListScope, int page)
 	{
 		final List<IDropItem> dropList = npc.getTemplate().getDropList(dropListScope);
 		if ((dropList == null) || dropList.isEmpty())

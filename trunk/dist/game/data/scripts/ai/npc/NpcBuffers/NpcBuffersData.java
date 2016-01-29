@@ -32,7 +32,7 @@ import com.l2jmobius.util.data.xml.IXmlReader;
 /**
  * @author UnAfraid
  */
-public class NpcBuffersData implements IXmlReader
+class NpcBuffersData implements IXmlReader
 {
 	private final Map<Integer, NpcBufferData> _npcBuffers = new HashMap<>();
 	
@@ -90,7 +90,7 @@ public class NpcBuffersData implements IXmlReader
 		}
 	}
 	
-	public NpcBufferData getNpcBuffer(int npcId)
+	NpcBufferData getNpcBuffer(int npcId)
 	{
 		return _npcBuffers.get(npcId);
 	}

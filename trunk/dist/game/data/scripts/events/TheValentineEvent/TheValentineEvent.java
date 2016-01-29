@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.event.LongTimeEvent;
  * The Valentine Event event AI.
  * @author Gnacik
  */
-public final class TheValentineEvent extends LongTimeEvent
+final class TheValentineEvent extends LongTimeEvent
 {
 	// NPC
 	private static final int NPC = 4301;

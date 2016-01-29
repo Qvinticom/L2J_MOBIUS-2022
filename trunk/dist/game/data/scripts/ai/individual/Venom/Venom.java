@@ -41,7 +41,7 @@ import ai.npc.AbstractNpcAI;
  * Venom AI on Rune Castle.
  * @author nonom, MELERIX
  */
-public final class Venom extends AbstractNpcAI
+final class Venom extends AbstractNpcAI
 {
 	private static final int CASTLE = 8; // Rune
 	

@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Sandstorms AI.
  * @author Ectis
  */
-public class Sandstorms extends AbstractNpcAI
+final class Sandstorms extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SANDSTORM = 32350;

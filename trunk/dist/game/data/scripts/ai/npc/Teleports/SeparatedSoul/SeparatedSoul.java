@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
  * Separated Soul teleport AI.
  * @author UnAfraid, improved by Adry_85, Zealar
  */
-public final class SeparatedSoul extends AbstractNpcAI
+final class SeparatedSoul extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] SEPARATED_SOULS =

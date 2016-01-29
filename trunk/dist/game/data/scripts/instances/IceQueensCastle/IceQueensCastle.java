@@ -40,7 +40,7 @@ import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
  */
 public final class IceQueensCastle extends AbstractInstance
 {
-	protected class IQCWorld extends InstanceWorld
+	class IQCWorld extends InstanceWorld
 	{
 		L2PcInstance player = null;
 	}

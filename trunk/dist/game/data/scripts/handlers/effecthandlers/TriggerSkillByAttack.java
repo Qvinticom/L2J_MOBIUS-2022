@@ -56,7 +56,6 @@ public final class TriggerSkillByAttack extends AbstractEffect
 	 * @param set
 	 * @param params
 	 */
-	
 	public TriggerSkillByAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);

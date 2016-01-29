@@ -39,14 +39,14 @@ import instances.AbstractInstance;
  */
 public final class CavernOfThePirateCaptain extends AbstractInstance
 {
-	protected class CavernOfThePirateCaptainWorld extends InstanceWorld
+	class CavernOfThePirateCaptainWorld extends InstanceWorld
 	{
-		protected List<L2PcInstance> playersInside = new ArrayList<>();
-		protected L2Attackable _zaken;
-		protected long storeTime = 0;
-		protected boolean _is83;
-		protected int _zakenRoom;
-		protected int _blueFounded;
+		final List<L2PcInstance> playersInside = new ArrayList<>();
+		L2Attackable _zaken;
+		long storeTime = 0;
+		boolean _is83;
+		int _zakenRoom;
+		int _blueFounded;
 	}
 	
 	// NPCs

@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
  * Rakun AI.
  * @author Mobius
  */
-public final class Rakun extends AbstractNpcAI
+final class Rakun extends AbstractNpcAI
 {
 	// NPC
 	private static final int RAKUN = 33972;

@@ -43,7 +43,7 @@ public final class FaeronTrainingGrounds2 extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 252;
 	
-	protected class FTGWorld extends InstanceWorld
+	class FTGWorld extends InstanceWorld
 	{
 	}
 	

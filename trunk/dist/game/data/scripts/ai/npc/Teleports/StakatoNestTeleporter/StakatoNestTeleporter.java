@@ -28,7 +28,7 @@ import quests.Q00240_ImTheOnlyOneYouCanTrust.Q00240_ImTheOnlyOneYouCanTrust;
  * Stakato Nest Teleport AI.
  * @author Charus
  */
-public final class StakatoNestTeleporter extends AbstractNpcAI
+final class StakatoNestTeleporter extends AbstractNpcAI
 {
 	// Locations
 	private final static Location[] LOCS =

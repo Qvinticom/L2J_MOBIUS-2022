@@ -32,9 +32,9 @@ import instances.AbstractInstance;
  */
 public final class LibraryOfSages extends AbstractInstance
 {
-	protected class LoSWorld extends InstanceWorld
+	class LoSWorld extends InstanceWorld
 	{
-		protected L2Npc elcadia = null;
+		L2Npc elcadia = null;
 	}
 	
 	// NPCs

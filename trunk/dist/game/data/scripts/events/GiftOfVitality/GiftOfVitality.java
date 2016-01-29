@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Gift of Vitality event AI.
  * @author Gnacik, Adry_85
  */
-public final class GiftOfVitality extends LongTimeEvent
+final class GiftOfVitality extends LongTimeEvent
 {
 	// NPC
 	private static final int STEVE_SHYAGEL = 4306;

@@ -51,17 +51,17 @@ import ai.npc.AbstractNpcAI;
  */
 public final class HallOfSuffering extends AbstractNpcAI
 {
-	protected class HSWorld extends InstanceWorld
+	class HSWorld extends InstanceWorld
 	{
-		public Map<L2Npc, Boolean> npcList = new HashMap<>();
-		public L2Npc klodekus = null;
-		public L2Npc klanikus = null;
-		public boolean isBossesAttacked = false;
-		public long startTime = 0;
-		public String ptLeaderName = "";
-		public int rewardItemId = -1;
-		public String rewardHtm = "";
-		public boolean isRewarded = false;
+		final Map<L2Npc, Boolean> npcList = new HashMap<>();
+		L2Npc klodekus = null;
+		L2Npc klanikus = null;
+		boolean isBossesAttacked = false;
+		long startTime = 0;
+		String ptLeaderName = "";
+		int rewardItemId = -1;
+		String rewardHtm = "";
+		boolean isRewarded = false;
 	}
 	
 	// NPCs

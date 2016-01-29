@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.network.NpcStringId;
  * Devastated Castle clan hall siege script.
  * @author BiggBoss
  */
-public final class DevastatedCastle extends ClanHallSiegeEngine
+final class DevastatedCastle extends ClanHallSiegeEngine
 {
 	private static final int GUSTAV = 35410;
 	private static final int MIKHAIL = 35409;

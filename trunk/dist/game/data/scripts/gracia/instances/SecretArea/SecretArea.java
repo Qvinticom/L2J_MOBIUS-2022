@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public final class SecretArea extends Quest
 {
-	protected class SAWorld extends InstanceWorld
+	class SAWorld extends InstanceWorld
 	{
 	}
 	
@@ -53,7 +53,7 @@ public final class SecretArea extends Quest
 		addTalkId(LELRIKIA);
 	}
 	
-	protected void enterInstance(L2PcInstance player)
+	private void enterInstance(L2PcInstance player)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		

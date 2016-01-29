@@ -30,7 +30,7 @@ import ai.npc.AbstractNpcAI;
  * Dragon Vortex AI.
  * @author UnAfraid, improved by Adry_85 & DreamStage
  */
-public final class DragonVortex extends AbstractNpcAI
+final class DragonVortex extends AbstractNpcAI
 {
 	// NPC
 	private static final int VORTEX = 32871;

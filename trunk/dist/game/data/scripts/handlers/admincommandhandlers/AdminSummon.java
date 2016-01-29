@@ -30,7 +30,7 @@ public class AdminSummon implements IAdminCommandHandler
 {
 	private static final Logger _log = Logger.getLogger(AdminSummon.class.getName());
 	
-	public static final String[] ADMIN_COMMANDS =
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_summon"
 	};

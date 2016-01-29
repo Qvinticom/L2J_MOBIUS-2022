@@ -356,7 +356,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	 * @param mob
 	 * @param killer The player that last killed this L2Attackable $ Rewrite 06.12.06 - Yesod $ Rewrite 08.01.10 - Gigiikun
 	 */
-	public static void levelSoulCrystals(L2Attackable mob, L2PcInstance killer)
+	private static void levelSoulCrystals(L2Attackable mob, L2PcInstance killer)
 	{
 		// Only L2PcInstance can absorb a soul
 		if (killer == null)

@@ -53,7 +53,7 @@ public final class SoulEating extends AbstractEffect
 		}
 	}
 	
-	public void onExperienceReceived(L2Playable playable, long exp)
+	private void onExperienceReceived(L2Playable playable, long exp)
 	{
 		// TODO: Verify logic.
 		if (playable.isPlayer() && (exp >= _expNeeded))

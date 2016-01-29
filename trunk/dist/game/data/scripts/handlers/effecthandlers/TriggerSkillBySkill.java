@@ -50,7 +50,6 @@ public final class TriggerSkillBySkill extends AbstractEffect
 	 * @param set
 	 * @param params
 	 */
-	
 	public TriggerSkillBySkill(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);

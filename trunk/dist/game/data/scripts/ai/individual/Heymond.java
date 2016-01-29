@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Heymond AI.
  * @author Gladicek
  */
-public final class Heymond extends AbstractNpcAI
+final class Heymond extends AbstractNpcAI
 {
 	// NPCs
 	private static final int HEYMOND = 33026;

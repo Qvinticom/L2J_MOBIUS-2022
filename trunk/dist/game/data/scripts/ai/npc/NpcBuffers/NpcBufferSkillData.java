@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 /**
  * @author UnAfraid
  */
-public class NpcBufferSkillData
+class NpcBufferSkillData
 {
 	private final SkillHolder _skill;
 	private final int _initialDelay;
@@ -33,7 +33,7 @@ public class NpcBufferSkillData
 	private final AffectScope _affectScope;
 	private final AffectObject _affectObject;
 	
-	public NpcBufferSkillData(StatsSet set)
+	NpcBufferSkillData(StatsSet set)
 	{
 		_skill = new SkillHolder(set.getInt("id"), set.getInt("level"));
 		_initialDelay = set.getInt("skillInitDelay", 0) * 1000;

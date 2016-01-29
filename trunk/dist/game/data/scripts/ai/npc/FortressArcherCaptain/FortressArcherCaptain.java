@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
  * Fortress Archer Captain AI.
  * @author St3eT
  */
-public final class FortressArcherCaptain extends AbstractNpcAI
+final class FortressArcherCaptain extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] ARCHER_CAPTAIN =

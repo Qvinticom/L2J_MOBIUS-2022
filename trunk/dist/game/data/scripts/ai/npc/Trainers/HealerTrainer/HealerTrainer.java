@@ -36,7 +36,7 @@ import ai.npc.AbstractNpcAI;
  * Trainer healers AI.
  * @author Zoey76
  */
-public final class HealerTrainer extends AbstractNpcAI
+final class HealerTrainer extends AbstractNpcAI
 {
 	// NPC
 	// @formatter:off

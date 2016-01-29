@@ -34,7 +34,7 @@ import ai.npc.AbstractNpcAI;
  * Skill Transfer feature.
  * @author Zoey76
  */
-public final class SkillTransfer extends AbstractNpcAI
+final class SkillTransfer extends AbstractNpcAI
 {
 	private static final String HOLY_POMANDER = "HOLY_POMANDER_";
 	private static final ItemHolder[] PORMANDERS =

@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
 /**
  * @author Stayway
  */
-public final class WindVortex extends AbstractNpcAI
+final class WindVortex extends AbstractNpcAI
 {
 	// NPCs
 	private static final int WIND_VORTEX = 23417;

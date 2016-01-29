@@ -31,7 +31,7 @@ import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
  * Alarm AI for quests Art of Persuasion (184) and Nikola's Cooperation (185).
  * @author Zoey76
  */
-public final class Alarm extends AbstractNpcAI
+final class Alarm extends AbstractNpcAI
 {
 	// NPC
 	private static final int ALARM = 32367;

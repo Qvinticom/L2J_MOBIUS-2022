@@ -32,7 +32,7 @@ import ai.npc.AbstractNpcAI;
  * Manages Sin Wardens disappearing and chat.
  * @author GKR
  */
-public final class SinWardens extends AbstractNpcAI
+final class SinWardens extends AbstractNpcAI
 {
 	private static final int[] SIN_WARDEN_MINIONS =
 	{

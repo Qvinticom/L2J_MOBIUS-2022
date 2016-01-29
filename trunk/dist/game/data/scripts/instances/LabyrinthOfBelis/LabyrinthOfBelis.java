@@ -81,12 +81,12 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	private static final int DOOR_8 = 16240008;
 	private static final int DAMAGE_ZONE_ID = 10331;
 	
-	protected class LOBWorld extends InstanceWorld
+	class LOBWorld extends InstanceWorld
 	{
-		protected L2QuestGuardInstance terian = null;
-		protected L2Npc generator = null;
-		protected List<L2Npc> savedSpawns = null;
-		protected boolean assistPlayer = false;
+		L2QuestGuardInstance terian = null;
+		L2Npc generator = null;
+		List<L2Npc> savedSpawns = null;
+		boolean assistPlayer = false;
 	}
 	
 	public LabyrinthOfBelis()

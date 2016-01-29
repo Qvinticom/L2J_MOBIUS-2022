@@ -36,7 +36,7 @@ import ai.npc.AbstractNpcAI;
  * Sin Eater AI.
  * @author St3eT.
  */
-public final class SinEater extends AbstractNpcAI
+final class SinEater extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SIN_EATER = 12564;

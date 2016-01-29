@@ -62,9 +62,9 @@ import com.l2jmobius.gameserver.util.Util;
  * Rainbow Springs Chateau clan hall siege script.
  * @author BiggBoss
  */
-public final class RainbowSpringsChateau extends ClanHallSiegeEngine
+final class RainbowSpringsChateau extends ClanHallSiegeEngine
 {
-	protected static class SetFinalAttackers implements Runnable
+	static class SetFinalAttackers implements Runnable
 	{
 		@Override
 		public void run()
@@ -129,7 +129,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 	}
 	
-	protected static class SiegeStart implements Runnable
+	static class SiegeStart implements Runnable
 	{
 		@Override
 		public void run()
@@ -187,7 +187,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 	}
 	
-	protected static class TeleportBack implements Runnable
+	static class TeleportBack implements Runnable
 	{
 		@Override
 		public void run()

@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
  * Namo AI
  * @author Mobius
  */
-public final class Namo extends AbstractNpcAI
+final class Namo extends AbstractNpcAI
 {
 	// NPC
 	private static final int NAMO = 33973;

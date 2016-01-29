@@ -27,7 +27,7 @@ import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
  * Jinia AI.
  * @author Adry_85
  */
-public final class Jinia extends AbstractNpcAI
+final class Jinia extends AbstractNpcAI
 {
 	// NPC
 	private static final int JINIA = 32781;

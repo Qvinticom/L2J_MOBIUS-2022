@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Luderic AI.
  * @author Gladicek
  */
-public final class Luderic extends AbstractNpcAI
+final class Luderic extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LUDERIC = 33575;

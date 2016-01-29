@@ -30,7 +30,7 @@ import ai.npc.AbstractNpcAI;
  * Original Jython script by BiTi.
  * @author Plim
  */
-public final class PaganTeleporters extends AbstractNpcAI
+final class PaganTeleporters extends AbstractNpcAI
 {
 	// NPCs
 	private static final int TRIOLS_MIRROR_1 = 32039;

@@ -285,7 +285,7 @@ import handlers.voicedcommandhandlers.Wedding;
  * Master handler.
  * @author UnAfraid
  */
-public class MasterHandler
+final class MasterHandler
 {
 	private static final Logger _log = Logger.getLogger(MasterHandler.class.getName());
 	

@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
  * Original Jython script by Kerberos.
  * @author Plim
  */
-public final class Survivor extends AbstractNpcAI
+final class Survivor extends AbstractNpcAI
 {
 	// NPC
 	private static final int SURVIVOR = 32632;

@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Master of Enchanting event AI.
  * @author Gnacik
  */
-public final class MasterOfEnchanting extends LongTimeEvent
+final class MasterOfEnchanting extends LongTimeEvent
 {
 	// NPC
 	private static final int MASTER_YOGI = 32599;

@@ -32,7 +32,7 @@ import ai.npc.AbstractNpcAI;
  * Frightened Ragna Orc AI.
  * @author Gladicek, malyelfik
  */
-public final class FrightenedRagnaOrc extends AbstractNpcAI
+final class FrightenedRagnaOrc extends AbstractNpcAI
 {
 	// NPC ID
 	private static final int MOB_ID = 18807;

@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Support Unit Captain AI.
  * @author St3eT
  */
-public final class SupportUnitCaptain extends AbstractNpcAI
+final class SupportUnitCaptain extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] UNIT_CAPTAIN =

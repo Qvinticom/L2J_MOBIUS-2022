@@ -43,11 +43,11 @@ import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmpero
  */
 public final class DisciplesNecropolisPast extends AbstractInstance
 {
-	protected class DNPWorld extends InstanceWorld
+	class DNPWorld extends InstanceWorld
 	{
-		protected final List<L2Npc> anakimGroup = new ArrayList<>();
-		protected final List<L2Npc> lilithGroup = new ArrayList<>();
-		protected int countKill = 0;
+		final List<L2Npc> anakimGroup = new ArrayList<>();
+		final List<L2Npc> lilithGroup = new ArrayList<>();
+		int countKill = 0;
 	}
 	
 	// NPCs
@@ -132,7 +132,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		addTalkId(PROMISE_OF_MAMMON, SHUNAIMAN, LEON, DISCIPLES_GATEKEEPER);
 	}
 	
-	protected void spawnNPC(DNPWorld world)
+	private void spawnNPC(DNPWorld world)
 	{
 		for (Map.Entry<Integer, Location> entry : LILITH_SPAWN.entrySet())
 		{

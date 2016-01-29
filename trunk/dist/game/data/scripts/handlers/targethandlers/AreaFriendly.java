@@ -149,7 +149,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		return true;
 	}
 	
-	public class CharComparator implements Comparator<L2Character>
+	class CharComparator implements Comparator<L2Character>
 	{
 		@Override
 		public int compare(L2Character char1, L2Character char2)

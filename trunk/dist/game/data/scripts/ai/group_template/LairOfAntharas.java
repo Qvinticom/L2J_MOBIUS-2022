@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
  * Lair of Antharas AI.
  * @author St3eT, UnAfraid
  */
-public final class LairOfAntharas extends AbstractNpcAI
+final class LairOfAntharas extends AbstractNpcAI
 {
 	// NPC
 	final private static int KNORIKS = 22857;

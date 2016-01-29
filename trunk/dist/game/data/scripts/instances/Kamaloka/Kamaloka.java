@@ -97,7 +97,7 @@ public final class Kamaloka extends AbstractInstance
 	 * On retail only newbie guide buffs not removed<br>
 	 * CAUTION: array must be sorted in ascension order!
 	 */
-	protected static final int[] BUFFS_WHITELIST =
+	private static final int[] BUFFS_WHITELIST =
 	{
 		4322, 4323, 4324, 4325, 4326, 4327, 4328, 4329, 4330, 4331, 5632, 5637, 5950
 	};
@@ -1164,14 +1164,14 @@ public final class Kamaloka extends AbstractInstance
 		31340
 	};
 	
-	protected class KamaWorld extends InstanceWorld
+	class KamaWorld extends InstanceWorld
 	{
-		public int index; // 0-18 index of the kama type in arrays
-		public int shaman = 0; // objectId of the shaman
-		public List<L2Spawn> firstRoom; // list of the spawns in the first room (excluding shaman)
-		public List<Integer> secondRoom;// list of objectIds mobs in the second room
-		public int miniBoss = 0; // objectId of the miniboss
-		public L2Npc boss = null; // boss
+		int index; // 0-18 index of the kama type in arrays
+		int shaman = 0; // objectId of the shaman
+		List<L2Spawn> firstRoom; // list of the spawns in the first room (excluding shaman)
+		List<Integer> secondRoom;// list of objectIds mobs in the second room
+		int miniBoss = 0; // objectId of the miniboss
+		L2Npc boss = null; // boss
 	}
 	
 	public Kamaloka()

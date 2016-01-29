@@ -31,7 +31,7 @@ import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
  */
 public final class JiniaGuildHideout3 extends AbstractInstance
 {
-	protected class JGH3World extends InstanceWorld
+	class JGH3World extends InstanceWorld
 	{
 	}
 	

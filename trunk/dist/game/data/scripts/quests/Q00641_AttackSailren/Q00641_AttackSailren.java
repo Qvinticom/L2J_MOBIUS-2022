@@ -34,10 +34,10 @@ public class Q00641_AttackSailren extends Quest
 	// NPC
 	private static final int SHILENS_STONE_STATUE = 32109;
 	// Items
-	public static final int GAZKH_FRAGMENT = 8782;
-	public static final int GAZKH = 8784;
+	private static final int GAZKH_FRAGMENT = 8782;
+	private static final int GAZKH = 8784;
 	
-	public static int[] MOBS =
+	private static int[] MOBS =
 	{
 		22196, // Velociraptor
 		22197, // Velociraptor

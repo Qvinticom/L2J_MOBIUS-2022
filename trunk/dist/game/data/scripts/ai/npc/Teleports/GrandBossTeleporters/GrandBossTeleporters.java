@@ -36,7 +36,7 @@ import ai.npc.AbstractNpcAI;
  * Original python script by Emperorc.
  * @author Plim
  */
-public final class GrandBossTeleporters extends AbstractNpcAI
+final class GrandBossTeleporters extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCs =

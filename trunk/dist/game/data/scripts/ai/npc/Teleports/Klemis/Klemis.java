@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Klemis AI.
  * @author St3eT
  */
-public class Klemis extends AbstractNpcAI
+final class Klemis extends AbstractNpcAI
 {
 	// NPC
 	private static final int KLEMIS = 32734; // Klemis

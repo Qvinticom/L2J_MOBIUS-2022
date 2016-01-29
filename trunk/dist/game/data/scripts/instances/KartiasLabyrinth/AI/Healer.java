@@ -29,7 +29,7 @@ import com.l2jmobius.util.Rnd;
 /**
  * @author Mobius
  */
-public final class Healer implements Runnable
+final class Healer implements Runnable
 {
 	private L2PcInstance _player;
 	private final L2QuestGuardInstance _guard;

@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
  * Pagan Key AI.
  * @author Zoey76. Adapted to PaganKey by Notorionn
  */
-public final class PaganKey extends AbstractNpcAI
+final class PaganKey extends AbstractNpcAI
 {
 	// Items
 	private static final int PAGAN_KEY = 8273;

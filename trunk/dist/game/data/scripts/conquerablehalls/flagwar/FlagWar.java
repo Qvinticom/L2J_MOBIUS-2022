@@ -89,8 +89,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	protected static Location CENTER;
 	
-	protected Map<Integer, ClanData> _data = new HashMap<>(6);
-	protected L2Clan _winner;
+	private final Map<Integer, ClanData> _data = new HashMap<>(6);
+	private L2Clan _winner;
 	private boolean _firstPhase;
 	
 	public FlagWar(String name, int hallId)
@@ -506,11 +506,11 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	 * Runnable class to schedule doors closing and siege start.
 	 * @author Zoey76
 	 */
-	protected class CloseOutterDoorsTask implements Runnable
+	private class CloseOutterDoorsTask implements Runnable
 	{
 		private final Siegable _siegable;
 		
-		protected CloseOutterDoorsTask(Siegable clanHallSiege)
+		CloseOutterDoorsTask(Siegable clanHallSiege)
 		{
 			_siegable = clanHallSiege;
 		}
@@ -620,7 +620,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		return false;
 	}
 	
-	void doSpawns(int clanId, ClanData data)
+	private void doSpawns(int clanId, ClanData data)
 	{
 		try
 		{
@@ -888,8 +888,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		int flag = 0;
 		int npc = 0;
-		List<Integer> players = new ArrayList<>(18);
-		List<L2PcInstance> playersInstance = new ArrayList<>(18);
+		final List<Integer> players = new ArrayList<>(18);
+		final List<L2PcInstance> playersInstance = new ArrayList<>(18);
 		L2Spawn warrior = null;
 		L2Spawn flagInstance = null;
 	}

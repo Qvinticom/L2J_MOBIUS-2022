@@ -43,13 +43,13 @@ import instances.AbstractInstance;
  */
 public final class NornilsGarden extends AbstractInstance
 {
-	protected class NornilsWorld extends InstanceWorld
+	class NornilsWorld extends InstanceWorld
 	{
-		protected L2Npc first_npc = null;
-		protected boolean spawned_1 = false;
-		protected boolean spawned_2 = false;
-		protected boolean spawned_3 = false;
-		protected boolean spawned_4 = false;
+		L2Npc first_npc = null;
+		boolean spawned_1 = false;
+		boolean spawned_2 = false;
+		boolean spawned_3 = false;
+		boolean spawned_4 = false;
 	}
 	
 	// NPCs
@@ -389,7 +389,7 @@ public final class NornilsGarden extends AbstractInstance
 		}
 	}
 	
-	public void openDoor(QuestState st, L2PcInstance player, int doorId)
+	private void openDoor(QuestState st, L2PcInstance player, int doorId)
 	{
 		st.unset("correct");
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());

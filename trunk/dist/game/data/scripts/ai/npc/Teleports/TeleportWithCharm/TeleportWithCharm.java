@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Original Jython script by DraX.
  * @author Plim
  */
-public final class TeleportWithCharm extends AbstractNpcAI
+final class TeleportWithCharm extends AbstractNpcAI
 {
 	// NPCs
 	private final static int WHIRPY = 30540;

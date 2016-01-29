@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author UnAfraid
  */
-public class NpcBufferAI implements Runnable
+class NpcBufferAI implements Runnable
 {
 	private final L2Npc _npc;
 	private final NpcBufferSkillData _skillData;

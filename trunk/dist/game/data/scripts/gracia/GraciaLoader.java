@@ -44,7 +44,7 @@ import gracia.vehicles.SoIController.SoIController;
  * Gracia class-loader.
  * @author Pandragon
  */
-public final class GraciaLoader
+final class GraciaLoader
 {
 	private static final Logger _log = Logger.getLogger(GraciaLoader.class.getName());
 	

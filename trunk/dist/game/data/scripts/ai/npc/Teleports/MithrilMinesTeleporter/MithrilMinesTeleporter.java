@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Mithril Mines teleport AI.
  * @author Charus
  */
-public final class MithrilMinesTeleporter extends AbstractNpcAI
+final class MithrilMinesTeleporter extends AbstractNpcAI
 {
 	// NPC
 	private final static int TELEPORT_CRYSTAL = 32652;

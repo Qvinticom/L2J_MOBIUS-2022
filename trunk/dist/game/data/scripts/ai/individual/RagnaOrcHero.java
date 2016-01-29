@@ -24,7 +24,7 @@ import ai.npc.AbstractNpcAI;
  * Ragna Orc Hero AI.
  * @author Zealar
  */
-public final class RagnaOrcHero extends AbstractNpcAI
+final class RagnaOrcHero extends AbstractNpcAI
 {
 	private static final int RAGNA_ORC_HERO = 22693;
 	

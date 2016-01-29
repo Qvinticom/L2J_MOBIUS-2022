@@ -33,7 +33,7 @@ import ai.npc.AbstractNpcAI;
  * Anais AI.
  * @author nonom
  */
-public final class Anais extends AbstractNpcAI
+final class Anais extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ANAIS = 25701;
@@ -165,10 +165,6 @@ public final class Anais extends AbstractNpcAI
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.quest.Quest#onSpawn(com.l2jmobius.gameserver.model.actor.L2Npc)
-	 */
 	@Override
 	public String onSpawn(L2Npc npc)
 	{

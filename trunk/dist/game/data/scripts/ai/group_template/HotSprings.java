@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
  * Hot Springs AI.
  * @author Pandragon
  */
-public final class HotSprings extends AbstractNpcAI
+final class HotSprings extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BANDERSNATCHLING = 21314;

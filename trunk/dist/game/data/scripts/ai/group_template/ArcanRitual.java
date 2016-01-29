@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 /**
  * @author Mobius
  */
-public class ArcanRitual extends Quest
+final class ArcanRitual extends Quest
 {
 	private static final int BLUE_TRIGGER = 262001;
 	private static final int RED_TRIGGER = 262003;

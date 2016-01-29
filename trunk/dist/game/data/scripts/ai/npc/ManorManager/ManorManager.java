@@ -43,7 +43,7 @@ import ai.npc.AbstractNpcAI;
  * Manor manager AI.
  * @author malyelfik
  */
-public final class ManorManager extends AbstractNpcAI
+final class ManorManager extends AbstractNpcAI
 {
 	private static final int[] NPC =
 	{

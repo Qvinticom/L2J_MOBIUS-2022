@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Original Jython script by Ham Wong.
  * @author Plim
  */
-public final class NoblesseTeleport extends AbstractNpcAI
+final class NoblesseTeleport extends AbstractNpcAI
 {
 	// Item
 	private static final int OLYMPIAD_TOKEN = 13722;

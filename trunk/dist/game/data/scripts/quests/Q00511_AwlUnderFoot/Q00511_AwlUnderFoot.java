@@ -44,16 +44,16 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Q00511_AwlUnderFoot extends Quest
 {
-	protected class FAUWorld extends InstanceWorld
+	class FAUWorld extends InstanceWorld
 	{
 	}
 	
-	public static class FortDungeon
+	private static class FortDungeon
 	{
 		private final int INSTANCEID;
 		private long _reEnterTime = 0;
 		
-		public FortDungeon(int iId)
+		FortDungeon(int iId)
 		{
 			INSTANCEID = iId;
 		}
@@ -125,20 +125,20 @@ public final class Q00511_AwlUnderFoot extends Quest
 	// REWARDS
 	private static final int KNIGHT_EPALUETTE = 9912;
 	// MONSTER TO KILL -- Only last 3 Raids (lvl ordered) give DL_MARK
-	protected static final int[] RAIDS1 =
+	static final int[] RAIDS1 =
 	{
 		25572,
 		25575,
 		25578
 	};
-	protected static final int[] RAIDS2 =
+	static final int[] RAIDS2 =
 	{
 		25579,
 		25582,
 		25585,
 		25588
 	};
-	protected static final int[] RAIDS3 =
+	static final int[] RAIDS3 =
 	{
 		25589,
 		25592,
@@ -259,7 +259,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		return null;
 	}
 	
-	protected String enterInstance(L2PcInstance player, String template, int[] coords, FortDungeon dungeon, String ret)
+	private String enterInstance(L2PcInstance player, String template, int[] coords, FortDungeon dungeon, String ret)
 	{
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);

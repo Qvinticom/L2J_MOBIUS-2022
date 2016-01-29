@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Drill Sergeant AI.
  * @author St3eT
  */
-public final class DrillSergeant extends AbstractNpcAI
+final class DrillSergeant extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SERGANT = 33007; // Drill Sergant

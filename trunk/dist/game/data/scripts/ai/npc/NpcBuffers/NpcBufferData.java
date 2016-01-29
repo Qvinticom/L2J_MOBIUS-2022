@@ -23,12 +23,12 @@ import java.util.List;
  * NPC Buffers data.
  * @author UnAfraid
  */
-public class NpcBufferData
+class NpcBufferData
 {
 	private final int _id;
 	private final List<NpcBufferSkillData> _skills = new ArrayList<>();
 	
-	public NpcBufferData(int id)
+	NpcBufferData(int id)
 	{
 		_id = id;
 	}
@@ -38,7 +38,7 @@ public class NpcBufferData
 		return _id;
 	}
 	
-	public void addSkill(NpcBufferSkillData skill)
+	void addSkill(NpcBufferSkillData skill)
 	{
 		_skills.add(skill);
 	}

@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Guard Soldier AI.
  * @author Gladicek
  */
-public final class TomaJunior extends AbstractNpcAI
+final class TomaJunior extends AbstractNpcAI
 {
 	// NPCs
 	private static final int TOMA_JUNIOR = 33571;

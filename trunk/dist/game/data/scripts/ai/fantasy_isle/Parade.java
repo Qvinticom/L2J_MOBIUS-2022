@@ -32,7 +32,7 @@ import ai.npc.AbstractNpcAI;
  * Fantasy Isle Parade
  * @author JOJO, Pandragon
  */
-public class Parade extends AbstractNpcAI
+final class Parade extends AbstractNpcAI
 {
 	// @formatter:off
 	protected final int[] ACTORS =
@@ -168,7 +168,7 @@ public class Parade extends AbstractNpcAI
 		return (dd * 1000L) / 6L;
 	}
 	
-	protected class Start implements Runnable
+	class Start implements Runnable
 	{
 		@Override
 		public void run()
@@ -180,7 +180,7 @@ public class Parade extends AbstractNpcAI
 		}
 	}
 	
-	protected class Spawn implements Runnable
+	class Spawn implements Runnable
 	{
 		@Override
 		public void run()
@@ -209,7 +209,7 @@ public class Parade extends AbstractNpcAI
 		}
 	}
 	
-	protected class Delete implements Runnable
+	class Delete implements Runnable
 	{
 		@Override
 		public void run()
@@ -239,7 +239,7 @@ public class Parade extends AbstractNpcAI
 		}
 	}
 	
-	protected class Clean implements Runnable
+	class Clean implements Runnable
 	{
 		@Override
 		public void run()

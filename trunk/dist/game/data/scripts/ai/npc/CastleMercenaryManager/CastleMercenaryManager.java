@@ -32,7 +32,7 @@ import ai.npc.AbstractNpcAI;
  * Castle Mercenary Manager AI.
  * @author malyelfik
  */
-public final class CastleMercenaryManager extends AbstractNpcAI
+final class CastleMercenaryManager extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =

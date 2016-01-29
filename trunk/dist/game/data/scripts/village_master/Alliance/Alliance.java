@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 /**
  * @author UnAfraid
  */
-public final class Alliance extends Quest
+final class Alliance extends Quest
 {
 	// @formatter:off
 	private static final int[] NPCS =

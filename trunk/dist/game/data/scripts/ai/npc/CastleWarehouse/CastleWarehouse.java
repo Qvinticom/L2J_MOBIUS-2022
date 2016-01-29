@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
  * Castle Warehouse Keeper AI.
  * @author malyelfik
  */
-public final class CastleWarehouse extends AbstractNpcAI
+final class CastleWarehouse extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =

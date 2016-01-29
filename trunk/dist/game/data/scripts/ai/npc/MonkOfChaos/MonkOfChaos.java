@@ -36,7 +36,7 @@ import ai.npc.AbstractNpcAI;
  * Monk of Chaos AI.
  * @author Sdw
  */
-public final class MonkOfChaos extends AbstractNpcAI
+final class MonkOfChaos extends AbstractNpcAI
 {
 	private static final int MONK_OF_CHAOS = 33880;
 	private static final int MIN_LEVEL = 85;

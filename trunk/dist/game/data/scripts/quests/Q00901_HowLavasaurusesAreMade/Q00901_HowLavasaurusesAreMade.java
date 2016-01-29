@@ -177,7 +177,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 		return htmltext;
 	}
 	
-	public static void giveQuestItems(QuestState st, int itemId)
+	private static void giveQuestItems(QuestState st, int itemId)
 	{
 		if (st.getQuestItemsCount(itemId) < 10)
 		{
@@ -190,7 +190,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 		}
 	}
 	
-	public static boolean gotAllQuestItems(QuestState st)
+	private static boolean gotAllQuestItems(QuestState st)
 	{
 		return (st.getQuestItemsCount(FRAGMENT_STONE) >= 10) && (st.getQuestItemsCount(FRAGMENT_HEAD) >= 10) && (st.getQuestItemsCount(FRAGMENT_BODY) >= 10) && (st.getQuestItemsCount(FRAGMENT_HORN) >= 10);
 	}

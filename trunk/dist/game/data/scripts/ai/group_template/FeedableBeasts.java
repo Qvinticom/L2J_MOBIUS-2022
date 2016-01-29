@@ -40,7 +40,7 @@ import quests.Q00655_AGrandPlanForTamingWildBeasts.Q00655_AGrandPlanForTamingWil
  * Growth-capable mobs: Polymorphing upon successful feeding.
  * @author Fulminus
  */
-public final class FeedableBeasts extends AbstractNpcAI
+final class FeedableBeasts extends AbstractNpcAI
 {
 	private static final int GOLDEN_SPICE = 6643;
 	private static final int CRYSTAL_SPICE = 6644;

@@ -34,7 +34,7 @@ import ai.npc.AbstractNpcAI;
  * Alchemist Manager AI.
  * @author Sdw
  */
-public final class AlchemistManager extends AbstractNpcAI
+final class AlchemistManager extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ALCHEMISTS[] =

@@ -21,9 +21,9 @@ import com.l2jmobius.util.Rnd;
 /**
  * @author Mobius
  */
-public class ChatRandomizer
+class ChatRandomizer
 {
-	public static String randomize(String text)
+	static String randomize(String text)
 	{
 		final StringBuilder textOut = new StringBuilder();
 		for (char c : text.toCharArray())

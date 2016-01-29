@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.util.Util;
  * Freya Celebration event AI.
  * @author Gnacik
  */
-public final class FreyaCelebration extends LongTimeEvent
+final class FreyaCelebration extends LongTimeEvent
 {
 	// NPC
 	private static final int FREYA = 13296;

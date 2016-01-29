@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Rignos AI.
  * @author St3eT
  */
-public class Rignos extends AbstractNpcAI
+final class Rignos extends AbstractNpcAI
 {
 	// NPC
 	private static final int RIGNOS = 32349; // Rignos

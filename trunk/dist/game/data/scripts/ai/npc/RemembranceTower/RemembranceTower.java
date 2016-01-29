@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Remembrance Tower AI.
  * @author St3eT
  */
-public final class RemembranceTower extends AbstractNpcAI
+final class RemembranceTower extends AbstractNpcAI
 {
 	// NPCs
 	private static final int REMEMBRANCE_TOWER = 33989;

@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Anghel Waterfall Portal teleport AI.
  * @author Mobius
  */
-public final class AnghelWaterfallPortal extends AbstractNpcAI
+final class AnghelWaterfallPortal extends AbstractNpcAI
 {
 	private static final int ZONE_ID = 200200;
 	private static final Location TELEPORT_LOC = new Location(207559, 86429, -1000);

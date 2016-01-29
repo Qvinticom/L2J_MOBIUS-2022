@@ -438,7 +438,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		AdminHtml.showAdminHtml(activeChar, filename + "_menu.htm");
 	}
 	
-	public void showConfigPage(L2PcInstance activeChar)
+	private void showConfigPage(L2PcInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		final StringBuilder replyMSG = new StringBuilder("<html><title>L2J :: Config</title><body>");

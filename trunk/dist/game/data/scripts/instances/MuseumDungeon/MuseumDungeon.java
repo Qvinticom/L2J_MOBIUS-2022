@@ -54,12 +54,12 @@ public final class MuseumDungeon extends AbstractInstance
 	private static final Location START_LOC = new Location(-114711, 243911, -7968);
 	private static final Location TOYRON_SPAWN_LOC = new Location(-114707, 245428, -7968);
 	
-	protected class MDWorld extends InstanceWorld
+	class MDWorld extends InstanceWorld
 	{
-		protected L2QuestGuardInstance toyron = null;
-		protected List<L2Npc> deskSpawns = null;
-		protected List<L2Npc> thiefSpawns = null;
-		protected int randomDesk = 0;
+		L2QuestGuardInstance toyron = null;
+		List<L2Npc> deskSpawns = null;
+		List<L2Npc> thiefSpawns = null;
+		int randomDesk = 0;
 	}
 	
 	public MuseumDungeon()

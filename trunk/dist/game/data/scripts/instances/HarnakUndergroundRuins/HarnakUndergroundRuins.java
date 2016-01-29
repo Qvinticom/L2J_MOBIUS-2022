@@ -45,19 +45,19 @@ import instances.AbstractInstance;
  */
 public final class HarnakUndergroundRuins extends AbstractInstance
 {
-	protected class HuRWorld extends InstanceWorld
+	class HuRWorld extends InstanceWorld
 	{
-		protected int wave = 0;
-		protected int currentNpc = 0;
-		protected int waveNpcId = 0;
-		protected int maximalDefenseCounter = 0;
-		protected int timerCount = 0;
-		protected int enabledSeal = 0;
-		protected Set<L2Npc> spawnedNpc = Collections.newSetFromMap(new ConcurrentHashMap<L2Npc, Boolean>());
-		protected boolean openingPlayed = false;
-		protected boolean harnakMessage1 = false;
-		protected boolean harnakMessage2 = false;
-		protected boolean harnakMessage3 = false;
+		int wave = 0;
+		int currentNpc = 0;
+		int waveNpcId = 0;
+		int maximalDefenseCounter = 0;
+		int timerCount = 0;
+		int enabledSeal = 0;
+		final Set<L2Npc> spawnedNpc = Collections.newSetFromMap(new ConcurrentHashMap<L2Npc, Boolean>());
+		boolean openingPlayed = false;
+		boolean harnakMessage1 = false;
+		boolean harnakMessage2 = false;
+		boolean harnakMessage3 = false;
 	}
 	
 	// NPCs

@@ -62,18 +62,18 @@ import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
  */
 public final class IceQueensCastleBattle extends AbstractInstance
 {
-	protected class IQCNBWorld extends InstanceWorld
+	class IQCNBWorld extends InstanceWorld
 	{
-		protected List<L2PcInstance> playersInside = new ArrayList<>();
-		protected List<L2Npc> knightStatues = new ArrayList<>();
-		protected List<L2Attackable> spawnedMobs = new CopyOnWriteArrayList<>();
-		protected L2NpcInstance controller = null;
-		protected L2GrandBossInstance freya = null;
-		protected L2QuestGuardInstance supp_Jinia = null;
-		protected L2QuestGuardInstance supp_Kegor = null;
-		protected boolean isSupportActive = false;
-		protected boolean canSpawnMobs = true;
-		protected boolean isHardCore = false;
+		final List<L2PcInstance> playersInside = new ArrayList<>();
+		final List<L2Npc> knightStatues = new ArrayList<>();
+		final List<L2Attackable> spawnedMobs = new CopyOnWriteArrayList<>();
+		L2NpcInstance controller = null;
+		L2GrandBossInstance freya = null;
+		L2QuestGuardInstance supp_Jinia = null;
+		L2QuestGuardInstance supp_Kegor = null;
+		boolean isSupportActive = false;
+		boolean canSpawnMobs = true;
+		boolean isHardCore = false;
 	}
 	
 	// Npcs

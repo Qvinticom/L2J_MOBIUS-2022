@@ -31,7 +31,7 @@ import ai.npc.AbstractNpcAI;
  * Chambers of Delusion teleport AI.
  * @author GKR
  */
-public final class DelusionTeleport extends AbstractNpcAI
+final class DelusionTeleport extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =

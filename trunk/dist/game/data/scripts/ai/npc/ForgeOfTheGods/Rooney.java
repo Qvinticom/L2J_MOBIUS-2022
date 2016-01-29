@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
  * Rooney AI
  * @author malyelfik
  */
-public final class Rooney extends AbstractNpcAI
+final class Rooney extends AbstractNpcAI
 {
 	// NPC
 	private static final int ROONEY = 32049;

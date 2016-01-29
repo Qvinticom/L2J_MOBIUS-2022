@@ -441,7 +441,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 		return htmltext;
 	}
 	
-	public boolean hasCheckedAllRightBooks(QuestState qs)
+	private boolean hasCheckedAllRightBooks(QuestState qs)
 	{
 		return ((qs.getInt("good1") == 1) && (qs.getInt("good2") == 1) && (qs.getInt("good3") == 1) && (qs.getInt("good4") == 1));
 	}

@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
  * Black Marketeer of Mammon AI.
  * @author St3eT
  */
-public final class BlackMarketeerOfMammon extends AbstractNpcAI
+final class BlackMarketeerOfMammon extends AbstractNpcAI
 {
 	// NPC
 	private static final int BLACK_MARKETEER = 31092;

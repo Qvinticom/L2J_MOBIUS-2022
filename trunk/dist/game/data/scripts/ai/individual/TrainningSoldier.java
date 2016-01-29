@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
  * Trainning Soldier AI.
  * @author St3eT
  */
-public final class TrainningSoldier extends AbstractNpcAI
+final class TrainningSoldier extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SOLDIER = 33201; // Trainning Soldier

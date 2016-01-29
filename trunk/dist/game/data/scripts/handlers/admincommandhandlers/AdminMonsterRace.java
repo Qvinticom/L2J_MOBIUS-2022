@@ -38,8 +38,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	{
 		"admin_mons"
 	};
-	
-	protected static int state = -1;
+	static int state = -1;
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -113,12 +112,12 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		}
 	}
 	
-	class RunRace implements Runnable
+	private class RunRace implements Runnable
 	{
 		private final int[][] codes;
 		private final L2PcInstance activeChar;
 		
-		public RunRace(int[][] pCodes, L2PcInstance pActiveChar)
+		RunRace(int[][] pCodes, L2PcInstance pActiveChar)
 		{
 			codes = pCodes;
 			activeChar = pActiveChar;

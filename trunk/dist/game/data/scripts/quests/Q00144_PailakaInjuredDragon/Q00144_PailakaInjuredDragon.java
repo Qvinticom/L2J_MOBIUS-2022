@@ -54,7 +54,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	private static final int MAX_SUMMON_LEVEL = 80;
 	private static final int EXIT_TIME = 5;
 	private static final int INSTANCE_ID = 45;
-	protected static final int[] TELEPORT =
+	static final int[] TELEPORT =
 	{
 		125757,
 		-40928,
@@ -831,31 +831,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		}
 	}
 	
-	static final class Teleport implements Runnable
-	{
-		private final L2Character _char;
-		private final int _instanceId;
-		
-		public Teleport(L2Character c, int id)
-		{
-			_char = c;
-			_instanceId = id;
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				teleportPlayer((L2PcInstance) _char, TELEPORT, _instanceId);
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-	}
-	
 	private static class PailakaDrop
 	{
 		private final int _itemId;
@@ -913,7 +888,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		return;
 	}
 	
-	protected static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	private static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);

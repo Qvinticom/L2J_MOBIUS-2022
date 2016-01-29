@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Sirra AI.
  * @author St3eT
  */
-public final class Sirra extends AbstractNpcAI
+final class Sirra extends AbstractNpcAI
 {
 	// NPC
 	private static final int SIRRA = 32762;

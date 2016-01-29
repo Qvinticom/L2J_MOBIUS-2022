@@ -81,42 +81,42 @@ import instances.AbstractInstance;
  */
 public final class FinalEmperialTomb extends AbstractInstance
 {
-	protected class FETWorld extends InstanceWorld
+	class FETWorld extends InstanceWorld
 	{
-		protected Lock lock = new ReentrantLock();
-		protected List<L2Npc> npcList = new CopyOnWriteArrayList<>();
-		protected int darkChoirPlayerCount = 0;
-		protected FrintezzaSong OnSong = null;
-		protected ScheduledFuture<?> songTask = null;
-		protected ScheduledFuture<?> songEffectTask = null;
-		protected boolean isVideo = false;
-		protected L2Npc frintezzaDummy = null;
-		protected L2Npc overheadDummy = null;
-		protected L2Npc portraitDummy1 = null;
-		protected L2Npc portraitDummy3 = null;
-		protected L2Npc scarletDummy = null;
-		protected L2GrandBossInstance frintezza = null;
-		protected L2GrandBossInstance activeScarlet = null;
-		protected List<L2MonsterInstance> demons = new CopyOnWriteArrayList<>();
-		protected Map<L2MonsterInstance, Integer> portraits = new ConcurrentHashMap<>();
-		protected int scarlet_x = 0;
-		protected int scarlet_y = 0;
-		protected int scarlet_z = 0;
-		protected int scarlet_h = 0;
-		protected int scarlet_a = 0;
+		final Lock lock = new ReentrantLock();
+		final List<L2Npc> npcList = new CopyOnWriteArrayList<>();
+		int darkChoirPlayerCount = 0;
+		FrintezzaSong OnSong = null;
+		ScheduledFuture<?> songTask = null;
+		ScheduledFuture<?> songEffectTask = null;
+		boolean isVideo = false;
+		L2Npc frintezzaDummy = null;
+		L2Npc overheadDummy = null;
+		L2Npc portraitDummy1 = null;
+		L2Npc portraitDummy3 = null;
+		L2Npc scarletDummy = null;
+		L2GrandBossInstance frintezza = null;
+		L2GrandBossInstance activeScarlet = null;
+		final List<L2MonsterInstance> demons = new CopyOnWriteArrayList<>();
+		final Map<L2MonsterInstance, Integer> portraits = new ConcurrentHashMap<>();
+		int scarlet_x = 0;
+		int scarlet_y = 0;
+		int scarlet_z = 0;
+		int scarlet_h = 0;
+		int scarlet_a = 0;
 	}
 	
-	protected static class FETSpawn
+	static class FETSpawn
 	{
-		public boolean isZone = false;
-		public boolean isNeededNextFlag = false;
-		public int npcId;
-		public int x = 0;
-		public int y = 0;
-		public int z = 0;
-		public int h = 0;
-		public int zone = 0;
-		public int count = 0;
+		boolean isZone = false;
+		boolean isNeededNextFlag = false;
+		int npcId;
+		int x = 0;
+		int y = 0;
+		int z = 0;
+		int h = 0;
+		int zone = 0;
+		int count = 0;
 	}
 	
 	private static class FrintezzaSong
@@ -166,10 +166,9 @@ public final class FinalEmperialTomb extends AbstractInstance
 	// Skills
 	private static final int DEWDROP_OF_DESTRUCTION_SKILL_ID = 2276;
 	private static final int SOUL_BREAKING_ARROW_SKILL_ID = 2234;
-	protected static final SkillHolder INTRO_SKILL = new SkillHolder(5004, 1);
+	static final SkillHolder INTRO_SKILL = new SkillHolder(5004, 1);
 	private static final SkillHolder FIRST_MORPH_SKILL = new SkillHolder(5017, 1);
-	
-	protected static final FrintezzaSong[] FRINTEZZASONGLIST =
+	static final FrintezzaSong[] FRINTEZZASONGLIST =
 	{
 		new FrintezzaSong(new SkillHolder(5007, 1), new SkillHolder(5008, 1), NpcStringId.REQUIEM_OF_HATRED, 5),
 		new FrintezzaSong(new SkillHolder(5007, 2), new SkillHolder(5008, 2), NpcStringId.RONDO_OF_SOLITUDE, 50),
@@ -179,7 +178,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 	};
 	// Locations
 	private static final Location ENTER_TELEPORT = new Location(-88015, -141153, -9168);
-	protected static final Location MOVE_TO_CENTER = new Location(-87904, -141296, -9168, 0);
+	static final Location MOVE_TO_CENTER = new Location(-87904, -141296, -9168, 0);
 	// Misc
 	private static final int TEMPLATE_ID = 136; // this is the client number
 	private static final int MIN_PLAYERS = 36;
@@ -190,7 +189,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 	private final Map<Integer, L2Territory> _spawnZoneList = new HashMap<>();
 	private final Map<Integer, List<FETSpawn>> _spawnList = new HashMap<>();
 	private final List<Integer> _mustKillMobsId = new ArrayList<>();
-	protected static final int[] FIRST_ROOM_DOORS =
+	static final int[] FIRST_ROOM_DOORS =
 	{
 		17130051,
 		17130052,
@@ -201,7 +200,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 		17130057,
 		17130058
 	};
-	protected static final int[] SECOND_ROOM_DOORS =
+	static final int[] SECOND_ROOM_DOORS =
 	{
 		17130061,
 		17130062,
@@ -214,18 +213,18 @@ public final class FinalEmperialTomb extends AbstractInstance
 		17130069,
 		17130070
 	};
-	protected static final int[] FIRST_ROUTE_DOORS =
+	static final int[] FIRST_ROUTE_DOORS =
 	{
 		17130042,
 		17130043
 	};
-	protected static final int[] SECOND_ROUTE_DOORS =
+	static final int[] SECOND_ROUTE_DOORS =
 	{
 		17130045,
 		17130046
 	};
 	// @formatter:off
-	protected static final int[][] PORTRAIT_SPAWNS =
+	static final int[][] PORTRAIT_SPAWNS =
 	{
 		{29048, -89381, -153981, -9168, 3368, -89378, -153968, -9168, 3368},
 		{29048, -86234, -152467, -9168, 37656, -86261, -152492, -9168, 37656},
@@ -560,7 +559,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 		}
 	}
 	
-	protected boolean checkKillProgress(L2Npc mob, FETWorld world)
+	private boolean checkKillProgress(L2Npc mob, FETWorld world)
 	{
 		if (world.npcList.contains(mob))
 		{
@@ -608,7 +607,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 		}
 	}
 	
-	protected boolean controlStatus(FETWorld world)
+	boolean controlStatus(FETWorld world)
 	{
 		if (world.lock.tryLock())
 		{
@@ -724,7 +723,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 		return false;
 	}
 	
-	protected void spawn(FETWorld world, int npcId, int x, int y, int z, int h, boolean addToKillTable)
+	private void spawn(FETWorld world, int npcId, int x, int y, int z, int h, boolean addToKillTable)
 	{
 		final L2Npc npc = addSpawn(npcId, x, y, z, h, false, 0, false, world.getInstanceId());
 		if (addToKillTable)
@@ -1431,7 +1430,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 		}
 	}
 	
-	protected void broadCastPacket(FETWorld world, L2GameServerPacket packet)
+	void broadCastPacket(FETWorld world, L2GameServerPacket packet)
 	{
 		for (int objId : world.getAllowed())
 		{
@@ -1443,7 +1442,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 		}
 	}
 	
-	protected void updateKnownList(FETWorld world, L2Npc npc)
+	void updateKnownList(FETWorld world, L2Npc npc)
 	{
 		final Map<Integer, L2PcInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
 		for (int objId : world.getAllowed())

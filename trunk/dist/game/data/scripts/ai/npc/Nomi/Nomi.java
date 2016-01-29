@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
  * Nomi AI.
  * @author Stayway
  */
-public final class Nomi extends AbstractNpcAI
+final class Nomi extends AbstractNpcAI
 {
 	// NPC
 	private static final int NOMI = 34007;

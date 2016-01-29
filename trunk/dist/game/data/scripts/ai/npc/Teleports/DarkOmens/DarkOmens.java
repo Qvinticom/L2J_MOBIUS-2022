@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Dark Omens teleport AI.
  * @author Stayway
  */
-public final class DarkOmens extends AbstractNpcAI
+final class DarkOmens extends AbstractNpcAI
 {
 	// NPC
 	private static final int ZIGURAT_IN = 31118;

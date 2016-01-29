@@ -59,7 +59,7 @@ import instances.SanctumOftheLordsOfDawn.SanctumOftheLordsOfDawn;
  * Instance class-loader.
  * @author FallenAngel
  */
-public final class InstanceLoader
+final class InstanceLoader
 {
 	private static final Logger _log = Logger.getLogger(InstanceLoader.class.getName());
 	

@@ -74,24 +74,24 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Stage1 extends Quest
 {
-	protected class SOD1World extends InstanceWorld
+	class SOD1World extends InstanceWorld
 	{
-		public Map<L2Npc, Boolean> npcList = new HashMap<>();
-		public int deviceSpawnedMobCount = 0;
-		public Lock lock = new ReentrantLock();
+		final Map<L2Npc, Boolean> npcList = new HashMap<>();
+		int deviceSpawnedMobCount = 0;
+		final Lock lock = new ReentrantLock();
 	}
 	
-	protected static class SODSpawn
+	static class SODSpawn
 	{
-		public boolean isZone = false;
-		public boolean isNeededNextFlag = false;
-		public int npcId;
-		public int x = 0;
-		public int y = 0;
-		public int z = 0;
-		public int h = 0;
-		public int zone = 0;
-		public int count = 0;
+		boolean isZone = false;
+		boolean isNeededNextFlag = false;
+		int npcId;
+		int x = 0;
+		int y = 0;
+		int z = 0;
+		int h = 0;
+		int zone = 0;
+		int count = 0;
 	}
 	
 	private static final int INSTANCEID = 110; // this is the client number
@@ -517,7 +517,7 @@ public final class Stage1 extends Quest
 		return true;
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, Location loc)
+	private int enterInstance(L2PcInstance player, String template, Location loc)
 	{
 		int instanceId = 0;
 		// check for existing instances for this player
@@ -570,7 +570,7 @@ public final class Stage1 extends Quest
 		return instanceId;
 	}
 	
-	protected boolean checkKillProgress(L2Npc mob, SOD1World world)
+	private boolean checkKillProgress(L2Npc mob, SOD1World world)
 	{
 		if (world.npcList.containsKey(mob))
 		{
@@ -625,7 +625,7 @@ public final class Stage1 extends Quest
 		}
 	}
 	
-	protected boolean spawnState(SOD1World world)
+	private boolean spawnState(SOD1World world)
 	{
 		if (world.lock.tryLock())
 		{
@@ -709,7 +709,7 @@ public final class Stage1 extends Quest
 		return false;
 	}
 	
-	protected void spawn(SOD1World world, int npcId, int x, int y, int z, int h, boolean addToKillTable)
+	private void spawn(SOD1World world, int npcId, int x, int y, int z, int h, boolean addToKillTable)
 	{
 		// traps
 		if ((npcId >= 18720) && (npcId <= 18774))
@@ -762,7 +762,7 @@ public final class Stage1 extends Quest
 		}
 	}
 	
-	protected void setInstanceTimeRestrictions(SOD1World world)
+	private void setInstanceTimeRestrictions(SOD1World world)
 	{
 		final Calendar reenter = Calendar.getInstance();
 		reenter.set(Calendar.MINUTE, RESET_MIN);

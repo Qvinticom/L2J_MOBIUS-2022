@@ -39,7 +39,7 @@ import ai.npc.AbstractNpcAI;
  * Primeval Isle AI.
  * @author St3eT
  */
-public final class PrimevalIsle extends AbstractNpcAI
+final class PrimevalIsle extends AbstractNpcAI
 {
 	// NPC
 	private static final int EGG = 18344; // Ancient Egg

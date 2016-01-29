@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
  * Weaver Olf - Pins And Pouch Unseal AI.
  * @author Gigiikun, Bloodshed, Adry_85
  */
-public final class WeaverOlf extends AbstractNpcAI
+final class WeaverOlf extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCs =

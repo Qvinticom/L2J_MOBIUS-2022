@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Castle Blacksmith AI.
  * @author malyelfik
  */
-public final class CastleBlacksmith extends AbstractNpcAI
+final class CastleBlacksmith extends AbstractNpcAI
 {
 	// Blacksmith IDs
 	private static final int[] NPCS =

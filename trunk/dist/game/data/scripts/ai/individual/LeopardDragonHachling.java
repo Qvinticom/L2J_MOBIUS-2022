@@ -36,13 +36,14 @@ import ai.npc.AbstractNpcAI;
  * Leopard Dragon Hachling AI.
  * @author Mobius
  */
-public class LeopardDragonHachling extends AbstractNpcAI
+final class LeopardDragonHachling extends AbstractNpcAI
 {
 	// NPCs
 	private static final int DRAGON_HACHLING = 23434;
 	private static final int LEOPARD_DRAGON = 23435;
 	// Locations
 	private static final List<Location> TRANSFORM_LOCATIONS = new ArrayList<>();
+	
 	{
 		TRANSFORM_LOCATIONS.add(new Location(84199, 120022, -2944));
 		TRANSFORM_LOCATIONS.add(new Location(92138, 113735, -3076));

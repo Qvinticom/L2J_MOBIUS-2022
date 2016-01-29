@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @author Zoey76
  */
-public class CastleVCmd implements IVoicedCommandHandler
+final class CastleVCmd implements IVoicedCommandHandler
 {
 	private static final String[] VOICED_COMMANDS =
 	{

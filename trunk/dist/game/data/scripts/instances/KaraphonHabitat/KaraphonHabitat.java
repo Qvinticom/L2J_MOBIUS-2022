@@ -40,7 +40,7 @@ public class KaraphonHabitat extends AbstractInstance
 	// Instance
 	private static final int TEMPLATE_ID = 253;
 	
-	protected class KHWorld extends InstanceWorld
+	class KHWorld extends InstanceWorld
 	{
 	}
 	

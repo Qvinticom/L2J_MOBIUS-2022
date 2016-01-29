@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Forge of the Gods AI
  * @author nonom, malyelfik
  */
-public final class ForgeOfTheGods extends AbstractNpcAI
+final class ForgeOfTheGods extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] FOG_MOBS =

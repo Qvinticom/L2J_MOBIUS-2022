@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
  * Original Jython script by DrLecter.
  * @author Nyaran, jurchiks
  */
-public final class ShadowWeapons extends Quest
+final class ShadowWeapons extends Quest
 {
 	// @formatter:off
 	private static final int[] NPCS =

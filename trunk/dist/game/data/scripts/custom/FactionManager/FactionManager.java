@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
 /**
  * @author Mobius
  */
-public class FactionManager extends AbstractNpcAI
+final class FactionManager extends AbstractNpcAI
 {
 	// NPC
 	private static final int MANAGER = Config.FACTION_MANAGER_NPCID;

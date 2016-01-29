@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
  * Pagan Temple AI.
  * @author Mobius
  */
-public class PaganTemple extends AbstractNpcAI
+final class PaganTemple extends AbstractNpcAI
 {
 	// Npc
 	private static final int TRIOL_HIGH_PRIEST = 19410;

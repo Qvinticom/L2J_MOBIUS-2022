@@ -32,7 +32,7 @@ import ai.npc.AbstractNpcAI;
  * Black Judge AI.
  * @author St3eT
  */
-public class BlackJudge extends AbstractNpcAI
+final class BlackJudge extends AbstractNpcAI
 {
 	// NPC
 	private static final int BLACK_JUDGE = 30981;

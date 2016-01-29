@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
  * AI for Kamaloka (33) - Crimson Hatu Otis
  * @author Gladicek
  */
-public final class CrimsonHatuOtis extends AbstractNpcAI
+final class CrimsonHatuOtis extends AbstractNpcAI
 {
 	// Npc
 	private static final int CRIMSON_HATU_OTIS = 18558;

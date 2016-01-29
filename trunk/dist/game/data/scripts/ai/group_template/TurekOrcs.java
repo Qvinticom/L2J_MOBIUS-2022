@@ -34,7 +34,7 @@ import ai.npc.AbstractNpcAI;
  * Turek Orcs AI - flee and return with assistance
  * @author GKR
  */
-public final class TurekOrcs extends AbstractNpcAI
+final class TurekOrcs extends AbstractNpcAI
 {
 	// Monster to spawn
 	private static final int CHERTUBA_ILLUSION = 23422;

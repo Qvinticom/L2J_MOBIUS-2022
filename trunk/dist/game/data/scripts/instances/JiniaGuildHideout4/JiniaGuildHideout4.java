@@ -31,7 +31,7 @@ import quests.Q10287_StoryOfThoseLeft.Q10287_StoryOfThoseLeft;
  */
 public final class JiniaGuildHideout4 extends AbstractInstance
 {
-	protected class JGH4World extends InstanceWorld
+	class JGH4World extends InstanceWorld
 	{
 	}
 	

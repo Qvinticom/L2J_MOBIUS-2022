@@ -35,7 +35,7 @@ import ai.npc.AbstractNpcAI;
  * Sel Mahum Training Ground AI for squads and chefs.
  * @author GKR
  */
-public final class SelMahumSquad extends AbstractNpcAI
+final class SelMahumSquad extends AbstractNpcAI
 {
 	// NPC's
 	private static final int CHEF = 18908;

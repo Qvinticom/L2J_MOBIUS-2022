@@ -96,9 +96,8 @@ public class Q10755_LettersFromTheQueen_WindyHill extends Quest implements IBypa
 					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_LEVIAN_GAVE_YOU, ExShowScreenMessage.TOP_CENTER, 4500);
 				}
 				htmltext = event;
-			}
 				break;
-			
+			}
 			case "33963-03.html":
 			{
 				if (qs.isCond(1))

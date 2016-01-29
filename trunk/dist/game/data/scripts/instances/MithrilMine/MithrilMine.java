@@ -38,11 +38,6 @@ import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
  */
 public final class MithrilMine extends AbstractInstance
 {
-	protected class MMWorld extends InstanceWorld
-	{
-		protected int _count = 0;
-	}
-	
 	// NPCs
 	private static final int KEGOR = 18846;
 	private static final int MITHRIL_MILLIPEDE = 22766;
@@ -65,6 +60,11 @@ public final class MithrilMine extends AbstractInstance
 	};
 	// Misc
 	private static final int TEMPLATE_ID = 138;
+	
+	class MMWorld extends InstanceWorld
+	{
+		int _count = 0;
+	}
 	
 	public MithrilMine()
 	{

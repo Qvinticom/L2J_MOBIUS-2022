@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
  * Hermuncus Minion AI.
  * @author ChaosPaladin
  */
-public final class GiantServant extends AbstractNpcAI
+final class GiantServant extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCs =

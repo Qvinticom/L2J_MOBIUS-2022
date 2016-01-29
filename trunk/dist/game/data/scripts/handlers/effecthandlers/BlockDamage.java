@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.model.effects.L2EffectType;
  */
 public final class BlockDamage extends AbstractEffect
 {
-	public enum BlockType
+	private enum BlockType
 	{
 		HP,
 		MP

@@ -83,7 +83,7 @@ public class Wedding implements IVoicedCommandHandler
 		return false;
 	}
 	
-	public boolean divorce(L2PcInstance activeChar)
+	private boolean divorce(L2PcInstance activeChar)
 	{
 		if (activeChar.getPartnerId() == 0)
 		{
@@ -129,7 +129,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public boolean engage(L2PcInstance activeChar)
+	private boolean engage(L2PcInstance activeChar)
 	{
 		if (activeChar.getTarget() == null)
 		{
@@ -243,7 +243,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public boolean goToLove(L2PcInstance activeChar)
+	private boolean goToLove(L2PcInstance activeChar)
 	{
 		if (!activeChar.isMarried())
 		{
@@ -426,7 +426,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	static class EscapeFinalizer implements Runnable
+	private static class EscapeFinalizer implements Runnable
 	{
 		private final L2PcInstance _activeChar;
 		private final Location _partnerLoc;

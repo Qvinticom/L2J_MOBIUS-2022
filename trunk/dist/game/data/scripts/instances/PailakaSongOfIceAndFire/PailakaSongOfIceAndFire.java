@@ -34,7 +34,7 @@ import instances.AbstractInstance;
  */
 public final class PailakaSongOfIceAndFire extends AbstractInstance
 {
-	protected class PSoIWorld extends InstanceWorld
+	class PSoIWorld extends InstanceWorld
 	{
 	}
 	

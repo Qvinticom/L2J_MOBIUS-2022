@@ -73,11 +73,11 @@ import instances.AbstractInstance;
  */
 public final class CrystalCaverns extends AbstractInstance
 {
-	protected static class CrystalGolem
+	static class CrystalGolem
 	{
-		protected L2ItemInstance foodItem = null;
-		protected boolean isAtDestination = false;
-		protected Location oldLoc = null;
+		L2ItemInstance foodItem = null;
+		boolean isAtDestination = false;
+		Location oldLoc = null;
 	}
 	
 	private class CCWorld extends InstanceWorld
@@ -719,7 +719,7 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 	}
 	
-	protected void stopAttack(L2PcInstance player)
+	private void stopAttack(L2PcInstance player)
 	{
 		player.setTarget(null);
 		player.abortAttack();
@@ -748,21 +748,21 @@ public final class CrystalCaverns extends AbstractInstance
 		});
 	}
 	
-	protected void runOracle(CCWorld world)
+	private void runOracle(CCWorld world)
 	{
 		world.setStatus(0);
 		
 		world.oracle.add(addSpawn(ORACLE_GUIDE_1, 143172, 148894, -11975, 0, false, 0, false, world.getInstanceId()));
 	}
 	
-	protected void runEmerald(CCWorld world)
+	private void runEmerald(CCWorld world)
 	{
 		world.setStatus(1);
 		runFirst(world);
 		openDoor(DOOR1, world.getInstanceId());
 	}
 	
-	protected void runCoral(CCWorld world)
+	private void runCoral(CCWorld world)
 	{
 		world.setStatus(1);
 		runHall(world);
@@ -770,7 +770,7 @@ public final class CrystalCaverns extends AbstractInstance
 		openDoor(DOOR5, world.getInstanceId());
 	}
 	
-	protected void runHall(CCWorld world)
+	private void runHall(CCWorld world)
 	{
 		world.setStatus(2);
 		
@@ -781,7 +781,7 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 	}
 	
-	protected void runFirst(CCWorld world)
+	private void runFirst(CCWorld world)
 	{
 		world.setStatus(2);
 		
@@ -794,7 +794,7 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 	}
 	
-	protected void runEmeraldSquare(CCWorld world)
+	private void runEmeraldSquare(CCWorld world)
 	{
 		world.setStatus(3);
 		
@@ -807,7 +807,7 @@ public final class CrystalCaverns extends AbstractInstance
 		world.npcList2.put(0, spawnList);
 	}
 	
-	protected void runEmeraldRooms(CCWorld world, int[][] spawnList, int room)
+	private void runEmeraldRooms(CCWorld world, int[][] spawnList, int room)
 	{
 		final Map<L2Npc, Boolean> spawned = new HashMap<>();
 		for (int[] spawn : spawnList)
@@ -823,7 +823,7 @@ public final class CrystalCaverns extends AbstractInstance
 		world.roomsStatus[room - 1] = 1;
 	}
 	
-	protected void runDarnel(CCWorld world)
+	private void runDarnel(CCWorld world)
 	{
 		world.setStatus(9);
 		
@@ -833,7 +833,7 @@ public final class CrystalCaverns extends AbstractInstance
 		openDoor(24220006, world.getInstanceId());
 	}
 	
-	protected void runSteamRooms(CCWorld world, int[][] spawnList, int status)
+	private void runSteamRooms(CCWorld world, int[][] spawnList, int status)
 	{
 		world.setStatus(status);
 		
@@ -846,7 +846,7 @@ public final class CrystalCaverns extends AbstractInstance
 		world.npcList2.put(0, spawned);
 	}
 	
-	protected void runSteamOracles(CCWorld world, int[][] oracleOrder)
+	private void runSteamOracles(CCWorld world, int[][] oracleOrder)
 	{
 		world.oracles.clear();
 		for (int[] oracle : oracleOrder)
@@ -855,7 +855,7 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 	}
 	
-	protected boolean checkKillProgress(int room, L2Npc mob, CCWorld world)
+	private boolean checkKillProgress(int room, L2Npc mob, CCWorld world)
 	{
 		if (world.npcList2.get(room).containsKey(mob))
 		{

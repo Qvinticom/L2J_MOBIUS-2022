@@ -30,7 +30,7 @@ import ai.npc.AbstractNpcAI;
  * La Vie En Rose AI.
  * @author Sdw
  */
-public final class LaVieEnRose extends AbstractNpcAI
+final class LaVieEnRose extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LA_VIE_EN_ROSE = 33825;

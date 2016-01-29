@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Monument of Heroes AI.
  * @author Adry_85
  */
-public final class MonumentOfHeroes extends AbstractNpcAI
+final class MonumentOfHeroes extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] MONUMENTS =

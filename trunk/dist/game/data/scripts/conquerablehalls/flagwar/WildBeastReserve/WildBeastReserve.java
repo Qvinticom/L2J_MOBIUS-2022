@@ -27,7 +27,7 @@ import conquerablehalls.flagwar.FlagWar;
 /**
  * @author BiggBoss
  */
-public final class WildBeastReserve extends FlagWar
+final class WildBeastReserve extends FlagWar
 {
 	static
 	{

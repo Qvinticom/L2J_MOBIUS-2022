@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Orbis Temple teleport AI.
  * @author Mobius
  */
-public final class OrbisTemple extends AbstractNpcAI
+final class OrbisTemple extends AbstractNpcAI
 {
 	// Zones
 	private static final int ZONE_ID_1 = 200201;

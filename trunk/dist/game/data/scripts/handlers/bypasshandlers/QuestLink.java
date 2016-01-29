@@ -202,7 +202,7 @@ public class QuestLink implements IBypassHandler
 	 * @param npc the L2NpcInstance that chats with the {@code player}
 	 * @param questId the Id of the quest to display the message
 	 */
-	public static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
+	private static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
 	{
 		String content = null;
 		

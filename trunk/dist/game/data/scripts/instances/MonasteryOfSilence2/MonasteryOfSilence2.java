@@ -196,9 +196,9 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 	
 	private final HashMap<Integer, InstanceHolder> instanceWorlds = new HashMap<>();
 	
-	public static class InstanceHolder
+	static class InstanceHolder
 	{
-		List<L2Npc> mobs = new ArrayList<>();
+		final List<L2Npc> mobs = new ArrayList<>();
 	}
 	
 	private class MoSWorld2 extends InstanceWorld
@@ -260,7 +260,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		}
 	}
 	
-	protected void enterInstance(L2Npc npc, L2PcInstance player)
+	private void enterInstance(L2Npc npc, L2PcInstance player)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)

@@ -76,7 +76,7 @@ public class AdminHtml implements IAdminCommandHandler
 	 * @param activeChar activeChar where html is shown
 	 * @param path relative path from directory html/admin/ to html
 	 */
-	public static void showAdminHtml(L2PcInstance activeChar, String path)
+	static void showAdminHtml(L2PcInstance activeChar, String path)
 	{
 		showHtml(activeChar, "html/admin/" + path, false);
 	}
@@ -87,7 +87,7 @@ public class AdminHtml implements IAdminCommandHandler
 	 * @param path relative path from Config.DATAPACK_ROOT to html.
 	 * @param reload {@code true} will reload html and show it {@code false} will show it from cache.
 	 */
-	public static void showHtml(L2PcInstance activeChar, String path, boolean reload)
+	private static void showHtml(L2PcInstance activeChar, String path, boolean reload)
 	{
 		String content = null;
 		if (!reload)

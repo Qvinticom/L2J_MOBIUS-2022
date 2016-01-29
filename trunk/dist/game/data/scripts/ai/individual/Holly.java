@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Holly AI.
  * @author Gladicek
  */
-public final class Holly extends AbstractNpcAI
+final class Holly extends AbstractNpcAI
 {
 	// NPCs
 	private static final int HOLLY = 33219;

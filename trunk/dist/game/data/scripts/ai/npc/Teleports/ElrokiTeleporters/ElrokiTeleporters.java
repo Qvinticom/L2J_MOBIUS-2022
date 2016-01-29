@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Elroki teleport AI.
  * @author Plim
  */
-public final class ElrokiTeleporters extends AbstractNpcAI
+final class ElrokiTeleporters extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ORAHOCHIN = 32111;

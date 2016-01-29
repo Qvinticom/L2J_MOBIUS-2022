@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Gordon AI
  * @author TOFIZ, malyelfik
  */
-public final class Gordon extends AbstractNpcAI
+final class Gordon extends AbstractNpcAI
 {
 	private static final int GORDON = 29095;
 	

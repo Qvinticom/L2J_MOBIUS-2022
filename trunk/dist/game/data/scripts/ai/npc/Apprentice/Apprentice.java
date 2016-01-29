@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
  * Apprentice AI.
  * @author St3eT
  */
-public final class Apprentice extends AbstractNpcAI
+final class Apprentice extends AbstractNpcAI
 {
 	// NPCs
 	private static final int APPRENTICE = 33124;

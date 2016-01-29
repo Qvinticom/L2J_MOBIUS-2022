@@ -48,7 +48,6 @@ public final class TriggerSkillByAvoid extends AbstractEffect
 	 * @param set
 	 * @param params
 	 */
-	
 	public TriggerSkillByAvoid(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);

@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Shannon AI.
  * @author St3eT
  */
-public final class Shannon extends AbstractNpcAI
+final class Shannon extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SHANNON = 32974;

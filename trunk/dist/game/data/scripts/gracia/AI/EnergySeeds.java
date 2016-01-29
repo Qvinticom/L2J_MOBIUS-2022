@@ -52,7 +52,7 @@ public class EnergySeeds extends AbstractNpcAI
 	private static final int RESPAWN = 480000;
 	private static final int RANDOM_RESPAWN_OFFSET = 180000;
 	private static final Map<Integer, ESSpawn> SPAWNS = new HashMap<>();
-	protected static final Map<L2Npc, Integer> _spawnedNpcs = new ConcurrentHashMap<>();
+	static final Map<L2Npc, Integer> _spawnedNpcs = new ConcurrentHashMap<>();
 	
 	private static final int TEMPORARY_TELEPORTER = 32602;
 	// @formatter:off
@@ -100,7 +100,7 @@ public class EnergySeeds extends AbstractNpcAI
 		startAI();
 	}
 	
-	protected boolean isSeedActive(GraciaSeeds seed)
+	boolean isSeedActive(GraciaSeeds seed)
 	{
 		switch (seed)
 		{
@@ -290,7 +290,7 @@ public class EnergySeeds extends AbstractNpcAI
 		return super.onEnterZone(character, zone);
 	}
 	
-	public void startAI()
+	private void startAI()
 	{
 		// spawn all NPCs
 		for (ESSpawn spawn : SPAWNS.values())
@@ -302,7 +302,7 @@ public class EnergySeeds extends AbstractNpcAI
 		}
 	}
 	
-	public void startAI(GraciaSeeds type)
+	private void startAI(GraciaSeeds type)
 	{
 		// spawn all NPCs
 		for (ESSpawn spawn : SPAWNS.values())
@@ -314,7 +314,7 @@ public class EnergySeeds extends AbstractNpcAI
 		}
 	}
 	
-	public void stopAI(GraciaSeeds type)
+	private void stopAI(GraciaSeeds type)
 	{
 		for (L2Npc seed : _spawnedNpcs.keySet())
 		{
@@ -325,7 +325,7 @@ public class EnergySeeds extends AbstractNpcAI
 		}
 	}
 	
-	public void seedCollectEvent(L2PcInstance player, L2Npc seedEnergy, GraciaSeeds seedType)
+	private void seedCollectEvent(L2PcInstance player, L2Npc seedEnergy, GraciaSeeds seedType)
 	{
 		if (player == null)
 		{

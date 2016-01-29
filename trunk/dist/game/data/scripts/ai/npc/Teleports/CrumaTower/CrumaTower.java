@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Cruma Tower teleport AI.
  * @author Stayway
  */
-public final class CrumaTower extends AbstractNpcAI
+final class CrumaTower extends AbstractNpcAI
 {
 	// NPC
 	private static final int CARSUS = 30483;

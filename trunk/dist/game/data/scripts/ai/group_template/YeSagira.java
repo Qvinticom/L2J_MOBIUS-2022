@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * YeSagira AI.
  * @author Stayway, Mobius
  */
-public class YeSagira extends AbstractNpcAI
+final class YeSagira extends AbstractNpcAI
 {
 	// Npcs
 	private static final int GUARD_1 = 19152;

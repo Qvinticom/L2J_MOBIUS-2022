@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
  * Acateo AI.
  * @author Gladicek
  */
-public final class Acateo extends AbstractNpcAI
+final class Acateo extends AbstractNpcAI
 {
 	// NPC
 	private static final int ACATEO = 33905;

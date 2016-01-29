@@ -34,7 +34,7 @@ import quests.Q10735_ASpecialPower.Q10735_ASpecialPower;
  */
 public final class FaeronTrainingGrounds1 extends AbstractInstance
 {
-	// NPC's
+	// NPCs
 	private static final int AYANTHE = 33942;
 	private static final int AYANTHE_2 = 33944;
 	// Locations
@@ -43,7 +43,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 251;
 	
-	protected class FTGWorld extends InstanceWorld
+	class FTGWorld extends InstanceWorld
 	{
 	}
 	

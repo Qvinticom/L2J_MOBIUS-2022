@@ -35,7 +35,7 @@ import ai.npc.AbstractNpcAI;
  * Wedding AI.
  * @author Zoey76
  */
-public final class Wedding extends AbstractNpcAI
+final class Wedding extends AbstractNpcAI
 {
 	// NPC
 	private static final int MANAGER_ID = 50007;

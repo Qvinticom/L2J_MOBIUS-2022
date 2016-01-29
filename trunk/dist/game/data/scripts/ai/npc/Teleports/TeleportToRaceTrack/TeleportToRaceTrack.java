@@ -31,7 +31,7 @@ import ai.npc.AbstractNpcAI;
  * Monster Derby Track teleport AI.
  * @author Plim
  */
-public final class TeleportToRaceTrack extends AbstractNpcAI
+final class TeleportToRaceTrack extends AbstractNpcAI
 {
 	// NPC
 	private static final int RACE_MANAGER = 30995;

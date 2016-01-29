@@ -45,7 +45,7 @@ import ai.npc.AbstractNpcAI;
  * Orfen's AI
  * @author Emperorc
  */
-public final class Orfen extends AbstractNpcAI
+final class Orfen extends AbstractNpcAI
 {
 	private static final Location[] POS =
 	{

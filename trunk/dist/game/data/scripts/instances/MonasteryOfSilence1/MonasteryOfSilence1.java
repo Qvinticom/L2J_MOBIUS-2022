@@ -33,9 +33,9 @@ import instances.AbstractInstance;
  */
 public final class MonasteryOfSilence1 extends AbstractInstance
 {
-	protected static final class MoSWorld extends InstanceWorld
+	static final class MoSWorld extends InstanceWorld
 	{
-		protected L2Npc elcadia = null;
+		L2Npc elcadia = null;
 	}
 	
 	// NPCs
@@ -194,7 +194,7 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 		return super.onTalk(npc, talker);
 	}
 	
-	protected void spawnElcadia(L2PcInstance player, MoSWorld world)
+	private void spawnElcadia(L2PcInstance player, MoSWorld world)
 	{
 		if (world.elcadia != null)
 		{

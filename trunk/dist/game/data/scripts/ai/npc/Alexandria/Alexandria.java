@@ -32,7 +32,7 @@ import ai.npc.AbstractNpcAI;
  * Alexandria (Armor Merchant) AI.
  * @author xban1x
  */
-public final class Alexandria extends AbstractNpcAI
+final class Alexandria extends AbstractNpcAI
 {
 	// NPC
 	private static final int ALEXANDRIA = 30098;
@@ -122,11 +122,11 @@ public final class Alexandria extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static class AdditionalQuestItemHolder extends QuestItemHolder
+	private static class AdditionalQuestItemHolder extends QuestItemHolder
 	{
 		private final int _additionalId;
 		
-		public AdditionalQuestItemHolder(int id, int chance, long count, int additionalId)
+		AdditionalQuestItemHolder(int id, int chance, long count, int additionalId)
 		{
 			super(id, chance, count);
 			_additionalId = additionalId;

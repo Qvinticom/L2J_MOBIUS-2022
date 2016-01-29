@@ -21,7 +21,7 @@ import com.l2jmobius.gameserver.instancemanager.QuestManager;
 /**
  * Start MC Show.
  */
-public class StartMCShow implements Runnable
+class StartMCShow implements Runnable
 {
 	@Override
 	public void run()

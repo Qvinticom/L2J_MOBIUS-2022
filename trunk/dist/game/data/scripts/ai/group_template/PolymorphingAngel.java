@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
 /**
  * Angel spawns...when one of the angels in the keys dies, the other angel will spawn.
  */
-public final class PolymorphingAngel extends AbstractNpcAI
+final class PolymorphingAngel extends AbstractNpcAI
 {
 	private static final Map<Integer, Integer> ANGELSPAWNS = new HashMap<>();
 	static

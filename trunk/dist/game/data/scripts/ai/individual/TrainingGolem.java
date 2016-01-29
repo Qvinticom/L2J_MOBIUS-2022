@@ -24,7 +24,7 @@ import ai.npc.AbstractNpcAI;
  * Training Golem AI.
  * @author Gladicek
  */
-public final class TrainingGolem extends AbstractNpcAI
+final class TrainingGolem extends AbstractNpcAI
 {
 	// NPCs
 	private static final int TRAINING_GOLEM = 27532;

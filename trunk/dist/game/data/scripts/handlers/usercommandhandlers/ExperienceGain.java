@@ -59,7 +59,7 @@ public final class ExperienceGain implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public TerminateReturn onExperienceReceived(L2Playable playable, long exp)
+	private TerminateReturn onExperienceReceived(L2Playable playable, long exp)
 	{
 		if (playable.isPlayer() && (playable.getActingPlayer().isDead()))
 		{

@@ -49,28 +49,28 @@ import instances.AbstractInstance;
  * Chambers of Delusion superclass.
  * @author GKR
  */
-public abstract class Chamber extends AbstractInstance
+abstract class Chamber extends AbstractInstance
 {
-	protected class CDWorld extends InstanceWorld
+	private class CDWorld extends InstanceWorld
 	{
-		protected int currentRoom;
-		protected final L2Party partyInside;
-		protected final ScheduledFuture<?> _banishTask;
-		protected ScheduledFuture<?> _roomChangeTask;
+		int currentRoom;
+		final L2Party partyInside;
+		final ScheduledFuture<?> _banishTask;
+		private ScheduledFuture<?> _roomChangeTask;
 		
-		protected CDWorld(L2Party party)
+		CDWorld(L2Party party)
 		{
 			currentRoom = 0;
 			partyInside = party;
 			_banishTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new BanishTask(), 60000, 60000);
 		}
 		
-		protected L2Party getPartyInside()
+		L2Party getPartyInside()
 		{
 			return partyInside;
 		}
 		
-		protected void scheduleRoomChange(boolean bossRoom)
+		void scheduleRoomChange(boolean bossRoom)
 		{
 			final Instance inst = InstanceManager.getInstance().getInstance(getInstanceId());
 			final long nextInterval = bossRoom ? 60000L : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000L;
@@ -82,17 +82,17 @@ public abstract class Chamber extends AbstractInstance
 			}
 		}
 		
-		protected void stopBanishTask()
+		void stopBanishTask()
 		{
 			_banishTask.cancel(true);
 		}
 		
-		protected void stopRoomChangeTask()
+		void stopRoomChangeTask()
 		{
 			_roomChangeTask.cancel(true);
 		}
 		
-		protected class BanishTask implements Runnable
+		class BanishTask implements Runnable
 		{
 			@Override
 			public void run()
@@ -120,7 +120,7 @@ public abstract class Chamber extends AbstractInstance
 			}
 		}
 		
-		protected class ChangeRoomTask implements Runnable
+		class ChangeRoomTask implements Runnable
 		{
 			@Override
 			public void run()
@@ -285,7 +285,7 @@ public abstract class Chamber extends AbstractInstance
 		}
 	}
 	
-	protected void changeRoom(CDWorld world)
+	void changeRoom(CDWorld world)
 	{
 		final L2Party party = world.getPartyInside();
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
@@ -297,7 +297,7 @@ public abstract class Chamber extends AbstractInstance
 		
 		int newRoom = world.currentRoom;
 		
-		// Do nothing, if there are raid room of Sqare or Tower Chamber
+		// Do nothing, if there are raid room of Square or Tower Chamber
 		if (isBigChamber() && isBossRoom(world))
 		{
 			return;
@@ -384,7 +384,7 @@ public abstract class Chamber extends AbstractInstance
 		changeRoom(world);
 	}
 	
-	protected void earthQuake(CDWorld world)
+	void earthQuake(CDWorld world)
 	{
 		final L2Party party = world.getPartyInside();
 		
@@ -416,7 +416,7 @@ public abstract class Chamber extends AbstractInstance
 		}
 	}
 	
-	protected void exitInstance(L2PcInstance player)
+	void exitInstance(L2PcInstance player)
 	{
 		if ((player == null) || !player.isOnline() || (player.getInstanceId() == 0))
 		{

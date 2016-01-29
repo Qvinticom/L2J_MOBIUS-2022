@@ -51,8 +51,8 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 	// Variables names
 	private static final String MOVIE_VAR = "TI_presentation_movie";
 	// Movies
-	public static final int SCENE_SI_ILLUSION_01_QUE = 101;
-	public static final int SCENE_SI_ILLUSION_02_QUE = 102;
+	private static final int SCENE_SI_ILLUSION_01_QUE = 101;
+	private static final int SCENE_SI_ILLUSION_02_QUE = 102;
 	
 	public Q10320_LetsGoToTheCentralSquare()
 	{

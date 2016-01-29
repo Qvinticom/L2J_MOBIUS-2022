@@ -29,7 +29,7 @@ import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheB
 /**
  * @author Neanrakyr
  */
-public final class Toyron extends AbstractNpcAI
+final class Toyron extends AbstractNpcAI
 {
 	// NPC
 	private static final int TOYRON = 33004;

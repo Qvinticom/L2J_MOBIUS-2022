@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
 /**
  * @author UnAfraid
  */
-public final class NpcBuffers extends AbstractNpcAI
+final class NpcBuffers extends AbstractNpcAI
 {
 	private final NpcBuffersData _npcBuffers = new NpcBuffersData();
 	

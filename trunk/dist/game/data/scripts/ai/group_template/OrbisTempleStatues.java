@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
  * Orbis Temple Statues AI.
  * @author Mobius
  */
-public class OrbisTempleStatues extends AbstractNpcAI
+final class OrbisTempleStatues extends AbstractNpcAI
 {
 	// Npcs
 	private static final int VICTIM_1 = 22911;

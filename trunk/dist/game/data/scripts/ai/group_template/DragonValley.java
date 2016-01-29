@@ -33,7 +33,7 @@ import ai.npc.AbstractNpcAI;
  * Dragon Valley AI.
  * @author St3eT
  */
-public final class DragonValley extends AbstractNpcAI
+final class DragonValley extends AbstractNpcAI
 {
 	// NPC
 	private static final int NECROMANCER_OF_THE_VALLEY = 22858;
@@ -85,6 +85,7 @@ public final class DragonValley extends AbstractNpcAI
 	private static final int MIN_LVL = 80;
 	private static final int CLASS_LVL = 3;
 	private static final EnumMap<ClassId, Double> CLASS_POINTS = new EnumMap<>(ClassId.class);
+	
 	{
 		CLASS_POINTS.put(ClassId.ADVENTURER, 0.2);
 		CLASS_POINTS.put(ClassId.ARCANA_LORD, 1.5);

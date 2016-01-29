@@ -94,7 +94,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		startEffectZonesControl();
 	}
 	
-	public void loadSeedRegionData()
+	private void loadSeedRegionData()
 	{
 		// Bistakon data
 		_regionsData[0] = new SeedRegion(new int[]

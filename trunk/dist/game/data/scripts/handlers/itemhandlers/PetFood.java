@@ -57,7 +57,7 @@ public class PetFood implements IItemHandler
 		return true;
 	}
 	
-	public boolean useFood(L2Playable activeChar, int skillId, int skillLevel, L2ItemInstance item)
+	private boolean useFood(L2Playable activeChar, int skillId, int skillLevel, L2ItemInstance item)
 	{
 		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 		if (skill != null)

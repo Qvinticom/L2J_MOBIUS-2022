@@ -33,7 +33,7 @@ import ai.npc.AbstractNpcAI;
  * Sailren AI.
  * @author St3eT
  */
-public final class Sailren extends AbstractNpcAI
+final class Sailren extends AbstractNpcAI
 {
 	// NPCs
 	private static final int STATUE = 32109; // Shilen's Stone Statue

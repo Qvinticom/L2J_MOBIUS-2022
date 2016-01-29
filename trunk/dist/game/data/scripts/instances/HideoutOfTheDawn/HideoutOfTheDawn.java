@@ -30,7 +30,7 @@ import instances.AbstractInstance;
  */
 public final class HideoutOfTheDawn extends AbstractInstance
 {
-	protected class HotDWorld extends InstanceWorld
+	class HotDWorld extends InstanceWorld
 	{
 	}
 	

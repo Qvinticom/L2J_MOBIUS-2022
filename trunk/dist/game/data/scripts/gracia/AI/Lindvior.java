@@ -108,13 +108,13 @@ public class Lindvior extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	public void scheduleNextLindviorVisit()
+	private void scheduleNextLindviorVisit()
 	{
 		final long delay = (ALT_MODE) ? ALT_MODE_MIN * 60000 : scheduleNextLindviorDate();
 		startQuestTimer("start", delay, null, null);
 	}
 	
-	protected long scheduleNextLindviorDate()
+	private long scheduleNextLindviorDate()
 	{
 		final GregorianCalendar date = new GregorianCalendar();
 		date.set(Calendar.MINUTE, RESET_MIN);

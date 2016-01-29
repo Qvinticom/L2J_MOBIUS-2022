@@ -28,7 +28,7 @@ import ai.npc.AbstractNpcAI;
  * </ul>
  * @author Zealar
  */
-public final class GraveRobbers extends AbstractNpcAI
+final class GraveRobbers extends AbstractNpcAI
 {
 	private static final int GRAVE_ROBBER_SUMMONER = 22678;
 	private static final int GRAVE_ROBBER_MEGICIAN = 22679;

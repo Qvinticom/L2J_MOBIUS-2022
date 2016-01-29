@@ -265,7 +265,7 @@ import quests.Q10764_FreeSpirit.Q10764_FreeSpirit;
 /**
  * @author NosBit
  */
-public class QuestMasterHandler
+final class QuestMasterHandler
 {
 	private static final Logger _log = Logger.getLogger(QuestMasterHandler.class.getName());
 	

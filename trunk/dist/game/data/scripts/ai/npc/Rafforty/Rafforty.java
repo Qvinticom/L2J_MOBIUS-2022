@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
  * Rafforty AI.
  * @author malyelfik, Gladicek
  */
-public final class Rafforty extends AbstractNpcAI
+final class Rafforty extends AbstractNpcAI
 {
 	// NPC
 	private static final int RAFFORTY = 32020;

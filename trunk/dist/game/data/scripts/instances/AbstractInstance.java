@@ -103,7 +103,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		finishInstance(world, Config.INSTANCE_FINISH_TIME);
 	}
 	
-	protected void finishInstance(InstanceWorld world, int duration)
+	private void finishInstance(InstanceWorld world, int duration)
 	{
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 		
@@ -173,7 +173,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		}
 	}
 	
-	protected void handleRemoveBuffs(InstanceWorld world)
+	private void handleRemoveBuffs(InstanceWorld world)
 	{
 		for (int objId : world.getAllowed())
 		{
@@ -214,7 +214,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param world the instance
 	 * @param time the time in milliseconds
 	 */
-	protected void setReenterTime(InstanceWorld world, long time)
+	private void setReenterTime(InstanceWorld world, long time)
 	{
 		for (int objectId : world.getAllowed())
 		{

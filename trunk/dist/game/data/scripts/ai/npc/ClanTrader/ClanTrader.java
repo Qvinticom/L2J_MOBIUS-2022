@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
  * Clan Trader AI.
  * @author St3eT
  */
-public final class ClanTrader extends AbstractNpcAI
+final class ClanTrader extends AbstractNpcAI
 {
 	// Npc
 	private static final int[] CLAN_TRADER =

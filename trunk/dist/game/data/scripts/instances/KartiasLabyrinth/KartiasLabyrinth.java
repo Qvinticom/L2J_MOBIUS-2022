@@ -129,15 +129,15 @@ public final class KartiasLabyrinth extends AbstractInstance
 	private static final String KARTIA_ENTRY_VAR = "Last_Kartia_entry";
 	private static final String KARTIA_PARTY_ENTRY_VAR = "Last_Kartia_party_entry";
 	
-	protected class KartiaWorld extends InstanceWorld
+	class KartiaWorld extends InstanceWorld
 	{
-		protected L2QuestGuardInstance adolph = null;
-		protected L2QuestGuardInstance barton = null;
-		protected L2QuestGuardInstance hayuk = null;
-		protected L2QuestGuardInstance eliyah = null;
-		protected L2QuestGuardInstance elise = null;
-		protected List<L2PcInstance> playersInside = new ArrayList<>();
-		protected List<L2Npc> savedSpawns = new CopyOnWriteArrayList<>();
+		L2QuestGuardInstance adolph = null;
+		L2QuestGuardInstance barton = null;
+		L2QuestGuardInstance hayuk = null;
+		L2QuestGuardInstance eliyah = null;
+		L2QuestGuardInstance elise = null;
+		final List<L2PcInstance> playersInside = new ArrayList<>();
+		final List<L2Npc> savedSpawns = new CopyOnWriteArrayList<>();
 	}
 	
 	public KartiasLabyrinth()

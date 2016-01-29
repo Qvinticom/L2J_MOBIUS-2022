@@ -43,7 +43,7 @@ public class Q10742_AFurryFriend extends Quest
 	// Location
 	private static final Location RICKY_SPAWN = new Location(-78138, 237328, -3548);
 	// Waypoints
-	protected static Location[] WAYPOINTS =
+	private static Location[] WAYPOINTS =
 	{
 		new Location(-78152, 237352, -3569),
 		new Location(-79176, 236792, -3440),

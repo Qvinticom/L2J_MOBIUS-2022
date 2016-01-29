@@ -35,7 +35,7 @@ import quests.Q10296_SevenSignsPowerOfTheSeal.Q10296_SevenSignsPowerOfTheSeal;
  */
 public final class ElcadiasTent extends AbstractInstance
 {
-	protected class ETWorld extends InstanceWorld
+	class ETWorld extends InstanceWorld
 	{
 	}
 	

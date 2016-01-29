@@ -35,7 +35,7 @@ import ai.npc.AbstractNpcAI;
  * Dummy AI for spawns/respawns only for testing.
  * @author Gnacik
  */
-public final class DenOfEvil extends AbstractNpcAI
+final class DenOfEvil extends AbstractNpcAI
 {
 	// private static final int _buffer_id = 32656;
 	protected static final int[] EYE_IDS =

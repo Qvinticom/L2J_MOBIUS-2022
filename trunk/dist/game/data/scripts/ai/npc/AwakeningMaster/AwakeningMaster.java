@@ -45,7 +45,7 @@ import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
  * AwakeningMaster AI.
  * @author Sdw
  */
-public final class AwakeningMaster extends AbstractNpcAI
+final class AwakeningMaster extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SIGEL_MASTER = 33397;
