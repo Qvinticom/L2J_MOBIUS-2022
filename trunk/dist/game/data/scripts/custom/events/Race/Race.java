@@ -142,7 +142,7 @@ final class Race extends Event
 		return true;
 	}
 	
-	protected void StartRace()
+	private void StartRace()
 	{
 		// Abort race if no players signup
 		if (_players.isEmpty())
@@ -381,7 +381,7 @@ final class Race extends Event
 		activeChar.sendPacket(html);
 	}
 	
-	protected void timeUp()
+	private void timeUp()
 	{
 		Broadcast.toAllOnlinePlayers("Time up, nobody wins!");
 		eventStop();

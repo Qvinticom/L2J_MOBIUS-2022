@@ -36,7 +36,7 @@ class NpcBuffersData implements IXmlReader
 {
 	private final Map<Integer, NpcBufferData> _npcBuffers = new HashMap<>();
 	
-	protected NpcBuffersData()
+	NpcBuffersData()
 	{
 		load();
 	}

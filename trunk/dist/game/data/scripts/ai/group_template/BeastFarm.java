@@ -60,7 +60,7 @@ final class BeastFarm extends AbstractNpcAI
 		18872
 	};
 	private static final int TAME_CHANCE = 20;
-	protected static final int[] SPECIAL_SPICE_CHANCES =
+	static final int[] SPECIAL_SPICE_CHANCES =
 	{
 		33,
 		75

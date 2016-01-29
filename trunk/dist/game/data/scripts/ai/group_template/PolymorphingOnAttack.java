@@ -56,7 +56,7 @@ final class PolymorphingOnAttack extends AbstractNpcAI
 		MOBSPAWNS.put(21537, Arrays.asList(21538, 100, 30, -1)); // Fang of Splendor
 	}
 	
-	protected static final NpcStringId[][] MOBTEXTS =
+	private static final NpcStringId[][] MOBTEXTS =
 	{
 		new NpcStringId[]
 		{

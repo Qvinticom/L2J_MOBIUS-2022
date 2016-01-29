@@ -722,10 +722,10 @@ public class EnergySeeds extends AbstractNpcAI
 	
 	private class ESSpawn
 	{
-		protected final int _spawnId;
-		protected final GraciaSeeds _seedId;
-		protected final int[] _npcIds;
-		protected final Location _loc;
+		final GraciaSeeds _seedId;
+		private final int _spawnId;
+		private final int[] _npcIds;
+		private final Location _loc;
 		
 		public ESSpawn(int spawnId, GraciaSeeds seedId, Location loc, int[] npcIds)
 		{

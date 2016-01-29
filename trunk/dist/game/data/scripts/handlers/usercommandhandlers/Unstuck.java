@@ -120,7 +120,7 @@ public class Unstuck implements IUserCommandHandler
 	{
 		private final L2PcInstance _activeChar;
 		
-		protected EscapeFinalizer(L2PcInstance activeChar)
+		EscapeFinalizer(L2PcInstance activeChar)
 		{
 			_activeChar = activeChar;
 		}

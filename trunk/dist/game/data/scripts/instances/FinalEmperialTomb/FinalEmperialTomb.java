@@ -783,7 +783,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 	{
 		private final L2Npc _npc;
 		
-		protected SoulBreakingArrow(L2Npc npc)
+		SoulBreakingArrow(L2Npc npc)
 		{
 			_npc = npc;
 		}

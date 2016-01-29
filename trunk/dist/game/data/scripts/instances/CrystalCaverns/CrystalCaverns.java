@@ -113,14 +113,14 @@ public final class CrystalCaverns extends AbstractInstance
 		public List<L2Npc> guards = new ArrayList<>();
 		public List<L2Npc> oracle = new ArrayList<>();
 		// baylor variables
-		protected final List<L2PcInstance> _raiders = new ArrayList<>();
-		protected int _raidStatus = 0;
-		protected long _dragonClawStart = 0;
-		protected int _dragonClawNeed = 0;
-		protected final List<L2Npc> _animationMobs = new ArrayList<>();
-		protected L2Npc _camera = null;
-		protected L2Npc _baylor = null;
-		protected L2Npc _alarm = null;
+		final List<L2PcInstance> _raiders = new ArrayList<>();
+		int _raidStatus = 0;
+		long _dragonClawStart = 0;
+		int _dragonClawNeed = 0;
+		final List<L2Npc> _animationMobs = new ArrayList<>();
+		L2Npc _camera = null;
+		L2Npc _baylor = null;
+		L2Npc _alarm = null;
 		
 		public CCWorld(Long time)
 		{
@@ -872,7 +872,7 @@ public final class CrystalCaverns extends AbstractInstance
 	}
 	
 	/*
-	 * protected void runBaylorRoom(CCWorld world) { world.status = 30; addSpawn(29101,152758,143479,-12706,52961,false,0,false,world.getInstanceId(),0);//up power addSpawn(29101,151951,142078,-12706,65203,false,0,false,world.getInstanceId(),0);//up power
+	 * private void runBaylorRoom(CCWorld world) { world.status = 30; addSpawn(29101,152758,143479,-12706,52961,false,0,false,world.getInstanceId(),0);//up power addSpawn(29101,151951,142078,-12706,65203,false,0,false,world.getInstanceId(),0);//up power
 	 * addSpawn(29101,154396,140667,-12706,22197,false,0,false,world.getInstanceId(),0);//up power addSpawn(29102,152162,141249,-12706,5511,false,0,false,world.getInstanceId(),0);//down power addSpawn(29102,153571,140458,-12706,16699,false,0,false,world.getInstanceId(),0);//down power
 	 * addSpawn(29102,154976,141265,-12706,26908,false,0,false,world.getInstanceId(),0);//down power addSpawn(29102,155203,142071,-12706,31560,false,0,false,world.getInstanceId(),0);//down power addSpawn(29102,154380,143468,-12708,43943,false,0,false,world.getInstanceId(),0);//down power
 	 * addSpawn(32271,153573,142069,-9722,11175,false,0,false,world.getInstanceId()); world.Baylor = addSpawn(BAYLOR,153557,142089,-12735,11175,false,0,false,world.getInstanceId(),0); }

@@ -85,7 +85,7 @@ final class MentorGuide extends AbstractNpcAI implements IXmlReader
 		new SkillHolder(9233, 1), // Mentor's Guidance
 	};
 	
-	protected static final SkillHolder[] MENTOR_BUFFS =
+	private static final SkillHolder[] MENTOR_BUFFS =
 	{
 		new SkillHolder(9256, 1), // Mentee's Appreciation;
 	};

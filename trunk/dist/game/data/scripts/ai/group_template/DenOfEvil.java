@@ -38,7 +38,7 @@ import ai.npc.AbstractNpcAI;
 final class DenOfEvil extends AbstractNpcAI
 {
 	// private static final int _buffer_id = 32656;
-	protected static final int[] EYE_IDS =
+	static final int[] EYE_IDS =
 	{
 		18812,
 		18813,

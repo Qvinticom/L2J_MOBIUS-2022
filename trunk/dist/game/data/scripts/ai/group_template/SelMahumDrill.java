@@ -105,22 +105,22 @@ final class SelMahumDrill extends AbstractNpcAI
 			_repeatInterval = repeatInterval;
 		}
 		
-		protected int getSocialActionId()
+		int getSocialActionId()
 		{
 			return _socialActionId;
 		}
 		
-		protected int getAltSocialActionId()
+		int getAltSocialActionId()
 		{
 			return _altSocialActionId;
 		}
 		
-		protected int getRepeatCount()
+		int getRepeatCount()
 		{
 			return _repeatCount;
 		}
 		
-		protected int getRepeatInterval()
+		int getRepeatInterval()
 		{
 			return _repeatInterval;
 		}
