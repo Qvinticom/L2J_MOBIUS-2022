@@ -80,7 +80,7 @@ public final class L2TeleporterInstance extends L2Npc
 			case "showNoblesSelect":
 			{
 				final NpcHtmlMessage msg = new NpcHtmlMessage(getObjectId());
-				msg.setFile(player.getHtmlPrefix(), "html/teleporter/" + (player.isNoble() ? "nobles_select" : "not_nobles") + ".htm");
+				msg.setFile(player.getHtmlPrefix(), "html/teleporter/" + (player.isNoble() ? "nobles_select" : "nobles_not") + ".htm");
 				msg.replace("%objectId%", getObjectId());
 				player.sendPacket(msg);
 				break;
@@ -544,7 +544,7 @@ public final class L2TeleporterInstance extends L2Npc
 			}
 			else if (list.getIsForNoble() && !player.isNoble())
 			{
-				final String filename = "html/teleporter/nobleteleporter-no.htm";
+				final String filename = "html/teleporter/nobles_not.htm";
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(player.getHtmlPrefix(), filename);
 				html.replace("%objectId%", String.valueOf(getObjectId()));
