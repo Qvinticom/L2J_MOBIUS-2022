@@ -2587,7 +2587,7 @@ public final class Config
 			FACTION_SYSTEM_ENABLED = Boolean.valueOf(CustomSettings.getBoolean("EnableFactionSystem", false));
 			tempString = CustomSettings.getString("StartingLocation", "85332,16199,-1252").split(",");
 			FACTION_STARTING_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
-			FACTION_MANAGER_NPCID = CustomSettings.getInt("FactionManagerNpcId", 109);
+			FACTION_MANAGER_NPCID = CustomSettings.getInt("FactionManagerNpcId", 500);
 			tempString = CustomSettings.getString("ManagerSpawnLocation", "85712,15974,-1260,26808").split(",");
 			FACTION_MANAGER_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]), tempString[3] != null ? Integer.parseInt(tempString[3]) : 0);
 			tempString = CustomSettings.getString("GoodBaseLocation", "45306,48878,-3058").split(",");

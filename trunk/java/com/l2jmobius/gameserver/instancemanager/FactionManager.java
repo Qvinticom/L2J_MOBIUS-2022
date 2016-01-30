@@ -53,7 +53,7 @@ public class FactionManager
 			while (rs.next())
 			{
 				final int id = rs.getInt(1);
-				_playerFactions.put(id, rs.getInt(4));
+				_playerFactions.put(id, rs.getInt(2));
 			}
 		}
 		catch (SQLException e)
