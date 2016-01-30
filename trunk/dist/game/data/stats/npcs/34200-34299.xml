@@ -166,12 +166,11 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="34210" level="104" type="L2Npc" name="Red">
-		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="34210" level="100" type="L2Npc" name="Red">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -183,12 +182,11 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="34211" level="104" type="L2Npc" name="Green">
-		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="34211" level="100" type="L2Npc" name="Green">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -200,12 +198,11 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="34212" level="104" type="L2Npc" name="Black">
-		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="34212" level="100" type="L2Npc" name="Black">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -217,12 +214,11 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="34213" level="104" type="L2Npc" name="Pink">
-		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="34213" level="100" type="L2Npc" name="Pink">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -234,12 +230,11 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="34214" level="104" type="L2Npc" name="Blue">
-		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="34214" level="100" type="L2Npc" name="Blue">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -251,35 +246,33 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="34215" level="104" type="L2Npc" name="">
-		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="34215" level="100" type="L2Npc" name="">
+		<race>BEAST</race>
+		<sex>MALE</sex>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="34216" level="104" type="L2Npc" name="">
-		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="34216" level="100" type="L2Npc" name="">
+		<race>ETC</race>
+		<sex>MALE</sex>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
