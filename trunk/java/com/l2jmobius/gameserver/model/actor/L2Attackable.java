@@ -499,6 +499,17 @@ public class L2Attackable extends L2Npc
 							long exp = expSp[0];
 							int sp = expSp[1];
 							
+							if (((levelDiff >= 10) && (levelDiff <= 14)) || ((levelDiff <= -10) && (levelDiff >= -14))) // 30% on 10 - 14 level diff
+							{
+								exp *= 0.3;
+								sp *= 0.3;
+							}
+							if ((levelDiff > 14) || (levelDiff < -14)) // 0% over 14 lvl
+							{
+								exp = 0;
+								sp = 0;
+							}
+							
 							if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
 							{
 								exp *= Config.L2JMOD_CHAMPION_REWARDS_EXP_SP;
