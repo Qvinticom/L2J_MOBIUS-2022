@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21200" level="91" type="L2Monster" name="Nephilim Bishop">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -18,9 +19,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="18777" sp="1630" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="6311436" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="946718" hpRegen="10.5" mp="20598" mpRegen="3.6" />
 			<attack physical="481.34551" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="164.888215781956" />
 			<attribute>
@@ -69,39 +70,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="12" max="24" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="452" max="904" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6360" min="8" max="16" chance="100" /> <!-- Blue Seal Stone -->
-				</group>
-				<group chance="2.028599977493286">
-					<item id="357" min="1" max="1" chance="0.135" /> <!-- Zubei's Breastplate -->
-					<item id="4056" min="1" max="1" chance="19.5049" /> <!-- Zubei's Breastplate Part -->
-					<item id="2376" min="1" max="1" chance="0.135" /> <!-- Avadon Breastplate -->
-					<item id="4064" min="1" max="1" chance="19.5049" /> <!-- Avadon Breastplate Part -->
-					<item id="383" min="1" max="1" chance="0.216" /> <!-- Zubei's Gaiters -->
-					<item id="4057" min="1" max="1" chance="30.144" /> <!-- Zubei's Gaiter Material -->
-					<item id="2379" min="1" max="1" chance="0.216" /> <!-- Avadon Gaiters -->
-					<item id="4065" min="1" max="1" chance="30.1442" /> <!-- Avadon Gaiters Material -->
-				</group>
-				<group chance="42.55509948730469">
-					<item id="1872" min="1" max="3" chance="26.0845" /> <!-- Animal Bone -->
-					<item id="1867" min="2" max="6" chance="19.5634" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="7.8253" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="3.9127" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="0.5103" /> <!-- Mold Hardener -->
-					<item id="4155" min="1" max="1" chance="0.1823" /> <!-- Recipe: Blue Wolf Breastplate (100%) -->
-					<item id="1343" min="20" max="60" chance="41.9215" /> <!-- Silver Arrow -->
-				</group>
+				<item id="57" min="7358" max="17163" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.381" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="4613" min="1" max="1" chance="0.8164" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
-				<item id="4129" min="1" max="1" chance="6.4055" /> <!-- Recipe: Earrings of Black Ore (100%) -->
-				<item id="4049" min="1" max="1" chance="31.0449" /> <!-- Adamantite Earring Gemstone -->
+				<item id="36558" min="1" max="1" chance="8.155" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.324" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -110,6 +85,7 @@
 		</collision>
 	</npc>
 	<npc id="21201" level="92" type="L2Monster" name="Nephilim Centurion">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -125,9 +101,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="25957" sp="2344" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="6320944" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
+			<vitals hp="948144" hpRegen="10.5" mp="20960" mpRegen="3.6" />
 			<attack physical="541.44774" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="262.19426" magical="174.571895122369" />
 			<attribute>
@@ -175,36 +151,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="574" max="1144" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.3301000595092773">
-					<item id="2398" min="1" max="1" chance="0.1309" /> <!-- Blue Wolf Tunic -->
-					<item id="4084" min="1" max="1" chance="21.1296" /> <!-- Blue Wolf Tunic Fabric -->
-					<item id="2399" min="1" max="1" chance="0.1309" /> <!-- Tunic of Doom -->
-					<item id="4085" min="1" max="1" chance="21.1296" /> <!-- Tunic of Doom Pattern -->
-					<item id="2403" min="1" max="1" chance="0.2096" /> <!-- Blue Wolf Stockings -->
-					<item id="4086" min="1" max="1" chance="28.5298" /> <!-- Blue Wolf Stockings Pattern -->
-					<item id="2404" min="1" max="1" chance="0.2096" /> <!-- Stockings of Doom -->
-					<item id="4087" min="1" max="1" chance="28.53" /> <!-- Stockings of Doom Pattern -->
-				</group>
-				<group chance="39.62350082397461">
-					<item id="1871" min="1" max="3" chance="40.8413" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="3" chance="18.1517" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="3.2673" /> <!-- Adamantite Nugget -->
-					<item id="4041" min="1" max="1" chance="0.7103" /> <!-- Mold Hardener -->
-					<item id="4040" min="1" max="1" chance="1.6337" /> <!-- Mold Lubricant -->
-					<item id="1830" min="1" max="1" chance="32.673" /> <!-- Scroll of Escape: Castle -->
-					<item id="6036" min="1" max="1" chance="2.7227" /> <!-- Greater Magic Haste Potion -->
-				</group>
+				<item id="57" min="7508" max="17513" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="2.592" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="4052" min="1" max="1" chance="27.1551" /> <!-- Earring of Black Ore Piece -->
-				<item id="5230" min="1" max="1" chance="1.0227" /> <!-- Recipe: Mithril Arrow (100%) -->
-				<item id="4053" min="1" max="1" chance="32.8759" /> <!-- Ring of Black Ore Gemstone -->
+				<item id="36558" min="1" max="1" chance="8.294" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.384" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -213,6 +166,7 @@
 		</collision>
 	</npc>
 	<npc id="21202" level="91" type="L2Monster" name="Nephilim Scout">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -226,9 +180,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="27475" sp="2586" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="6311436" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<vitals hp="946718" hpRegen="10.5" mp="20598" mpRegen="3.6" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="184.248304515217" />
 			<attribute>
@@ -273,33 +227,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="27" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="578" max="1160" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="3.961199998855591">
-					<item id="864" min="1" max="1" chance="0.2845" /> <!-- Earring of Black Ore -->
-					<item id="4052" min="1" max="1" chance="35.806" /> <!-- Earring of Black Ore Piece -->
-					<item id="926" min="1" max="1" chance="0.2134" /> <!-- Necklace of Black Ore -->
-					<item id="4054" min="1" max="1" chance="19.92" /> <!-- Necklace of Black Ore Beads -->
-					<item id="895" min="1" max="1" chance="0.4267" /> <!-- Ring of Black Ore -->
-					<item id="4053" min="1" max="1" chance="43.3494" /> <!-- Ring of Black Ore Gemstone -->
-				</group>
-				<group chance="32.89759826660156">
-					<item id="1872" min="4" max="12" chance="20.297" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="3" chance="54.1253" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="16.2376" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="8.1188" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="1.059" /> <!-- Mold Hardener -->
-					<item id="5230" min="1" max="1" chance="0.1623" /> <!-- Recipe: Mithril Arrow (100%) -->
-				</group>
+				<item id="57" min="4828" max="11270" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="5230" min="1" max="1" chance="1.0851" /> <!-- Recipe: Mithril Arrow (100%) -->
-				<item id="4054" min="1" max="1" chance="16.0289" /> <!-- Necklace of Black Ore Beads -->
-				<item id="4041" min="1" max="1" chance="7.0764" /> <!-- Mold Hardener -->
+				<item id="36558" min="1" max="1" chance="5.009" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.5" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -308,6 +242,7 @@
 		</collision>
 	</npc>
 	<npc id="21203" level="92" type="L2Monster" name="Nephilim Archbishop">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -325,9 +260,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="24833" sp="2430" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="6320944" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<vitals hp="948144" hpRegen="10.5" mp="20960" mpRegen="3.6" />
 			<attack physical="667.50361" magical="455.81844" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" />
 			<attribute>
@@ -376,36 +311,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="12" max="24" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="557" max="1114" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.802500009536743">
-					<item id="5291" min="1" max="1" chance="0.2373" /> <!-- Sealed Dark Crystal Boots -->
-					<item id="5496" min="1" max="1" chance="24.7627" /> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="5296" min="1" max="1" chance="0.2373" /> <!-- Sealed Tallum Boots -->
-					<item id="5497" min="1" max="1" chance="24.7627" /> <!-- Sealed Tallum Boots Lining -->
-					<item id="5290" min="1" max="1" chance="0.2373" /> <!-- Sealed Dark Crystal Gloves -->
-					<item id="5508" min="1" max="1" chance="24.7627" /> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="5295" min="1" max="1" chance="0.2373" /> <!-- Sealed Tallum Gloves -->
-					<item id="5509" min="1" max="1" chance="24.7627" /> <!-- Sealed Tallum Gloves Design -->
-				</group>
-				<group chance="41.83890151977539">
-					<item id="1873" min="1" max="1" chance="32.3351" /> <!-- Silver Nugget -->
-					<item id="1868" min="4" max="12" chance="20.2094" /> <!-- Thread -->
-					<item id="1876" min="1" max="1" chance="16.1675" /> <!-- Mithril Ore -->
-					<item id="1895" min="1" max="1" chance="23.0965" /> <!-- Metallic Fiber -->
-					<item id="4042" min="1" max="1" chance="1.3473" /> <!-- Enria -->
-					<item id="5156" min="1" max="1" chance="0.1078" /> <!-- Recipe: Soulshot (A) Compressed Package (100%) -->
-					<item id="1344" min="150" max="450" chance="6.7364" /> <!-- Mithril Arrow -->
-				</group>
+				<item id="57" min="7508" max="17513" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="2.551" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="1876" min="1" max="3" chance="80.1503" /> <!-- Mithril Ore -->
-				<item id="5478" min="1" max="1" chance="6.7398" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-				<item id="4042" min="1" max="1" chance="13.3584" /> <!-- Enria -->
+				<item id="36558" min="1" max="1" chance="8.237" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.412" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -414,6 +326,7 @@
 		</collision>
 	</npc>
 	<npc id="21204" level="93" type="L2Monster" name="Nephilim Praetorian">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -429,9 +342,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="33903" sp="3444" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="6494648" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="974199" hpRegen="10.5" mp="21324" mpRegen="3.6" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" />
 			<attribute>
@@ -479,32 +392,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="687" max="1380" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.6494998931884766">
-					<item id="5292" min="1" max="1" chance="0.408" /> <!-- Sealed Dark Crystal Shield -->
-					<item id="5494" min="1" max="1" chance="40.0555" /> <!-- Sealed Dark Crystal Shield Fragment -->
-					<item id="5289" min="1" max="1" chance="0.2855" /> <!-- Sealed Dark Crystal Helmet -->
-					<item id="5525" min="1" max="1" chance="29.4828" /> <!-- Sealed Dark Crystal Helmet Design -->
-					<item id="5294" min="1" max="1" chance="0.2855" /> <!-- Sealed Tallum Helmet -->
-					<item id="5526" min="1" max="1" chance="29.4827" /> <!-- Sealed Tallum Helm Design -->
-				</group>
-				<group chance="6.779099941253662">
-					<item id="1894" min="1" max="1" chance="31.389" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="29.8196" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.779" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="29.8196" /> <!-- Thons -->
-					<item id="3956" min="1" max="1" chance="1.1928" /> <!-- Recipe: Blessed Spiritshot A -->
-				</group>
+				<item id="57" min="7815" max="18213" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.418" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="1807" min="1" max="1" chance="1.095" /> <!-- Recipe: Soulshot (A-Grade) -->
-				<item id="5479" min="1" max="1" chance="4.8593" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				<item id="3035" min="1" max="1" chance="1.095" /> <!-- Recipe: Spiritshot A -->
+				<item id="36558" min="1" max="1" chance="8.675" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.584" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -513,6 +407,7 @@
 		</collision>
 	</npc>
 	<npc id="21205" level="92" type="L2Monster" name="Nephilim Royal Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -526,9 +421,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="35479" sp="3742" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="6320944" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="948144" hpRegen="10.5" mp="20960" mpRegen="3.6" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="212.557735094503" />
 			<attribute>
@@ -573,32 +468,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="27" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="700" max="1400" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="1.47160005569458">
-					<item id="5297" min="1" max="1" chance="0.2697" /> <!-- Sealed Dark Crystal Leather Armor -->
-					<item id="5478" min="1" max="1" chance="30.2857" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="5301" min="1" max="1" chance="0.1659" /> <!-- Sealed Tallum Leather Armor -->
-					<item id="5479" min="1" max="1" chance="21.3111" /> <!-- Sealed Tallum Leather Armor Pattern -->
-					<item id="5298" min="1" max="1" chance="0.4313" /> <!-- Sealed Dark Crystal Leggings -->
-					<item id="5482" min="1" max="1" chance="47.5363" /> <!-- Sealed Dark Crystal Leggings Design -->
-				</group>
-				<group chance="22.6781005859375">
-					<item id="1895" min="1" max="1" chance="80.1336" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.6093" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6745" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.3489" /> <!-- Asofe -->
-					<item id="730" min="1" max="1" chance="0.2337" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
+				<item id="57" min="7508" max="17513" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="2.614" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="5480" min="1" max="1" chance="3.8649" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="729" min="1" max="1" chance="0.0957" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="1895" min="1" max="5" chance="82.03" /> <!-- Metallic Fiber -->
+				<item id="36558" min="1" max="1" chance="8.234" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.412" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -607,6 +483,7 @@
 		</collision>
 	</npc>
 	<npc id="21206" level="93" type="L2Monster" name="Nephilim Cardinal">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -619,9 +496,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="31733" sp="3473" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="6494648" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="974199" hpRegen="10.5" mp="21324" mpRegen="3.6" />
 			<attack physical="855.81387" magical="584.40994" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="221.515820894982" />
 			<attribute>
@@ -670,37 +547,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="12" max="24" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="666" max="1336" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="1.0858999490737915">
-					<item id="5287" min="1" max="1" chance="0.2669" /> <!-- Sealed Dark Crystal breastplate -->
-					<item id="5520" min="1" max="1" chance="30.6553" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
-					<item id="5293" min="1" max="1" chance="0.1643" /> <!-- Sealed Tallum Plate Armor -->
-					<item id="5521" min="1" max="1" chance="21.6316" /> <!-- Sealed Tallum Plate Armor Pattern -->
-					<item id="5288" min="1" max="1" chance="0.4271" /> <!-- Sealed Dark Crystal Gaiters -->
-					<item id="5524" min="1" max="1" chance="46.8548" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
-				</group>
-				<group chance="42.05440139770508">
-					<item id="1873" min="1" max="1" chance="29.4574" /> <!-- Silver Nugget -->
-					<item id="1868" min="3" max="9" chance="24.5478" /> <!-- Thread -->
-					<item id="1876" min="1" max="1" chance="14.7287" /> <!-- Mithril Ore -->
-					<item id="1895" min="1" max="1" chance="21.041" /> <!-- Metallic Fiber -->
-					<item id="4042" min="1" max="1" chance="1.2274" /> <!-- Enria -->
-					<item id="5282" min="1" max="1" chance="0.0327" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-					<item id="6671" min="1" max="1" chance="8.1826" /> <!-- Deluxe Chest Key - Grade 7 -->
-					<item id="8732" min="1" max="1" chance="0.6137" /> <!-- Life Stone - Level 76 -->
-					<item id="8742" min="1" max="1" chance="0.1534" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8752" min="1" max="1" chance="0.0153" /> <!-- High-Grade Life Stone - Level 76 -->
-				</group>
+				<item id="57" min="5130" max="11954" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="1875" min="1" max="1" chance="55.9187" /> <!-- Stone of Purity -->
-				<item id="5481" min="1" max="1" chance="3.7638" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="5487" min="1" max="1" chance="3.7771" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="36558" min="1" max="1" chance="5.385" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.547" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -709,6 +562,7 @@
 		</collision>
 	</npc>
 	<npc id="21207" level="94" type="L2Monster" name="Nephilim Commander">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -719,9 +573,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="41856" sp="4698" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="17348020" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<vitals hp="2602208" hpRegen="10.5" mp="21690" mpRegen="3.6" />
 			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="348.2025" magical="231.837152158566" evasion="2" />
 			<attribute>
@@ -769,33 +623,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="805" max="1610" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.510200023651123">
-					<item id="5315" min="1" max="1" chance="0.3567" /> <!-- Sealed Shield of Nightmare -->
-					<item id="5495" min="1" max="1" chance="38.5067" /> <!-- Sealed Shield of Nightmare Fragment -->
-					<item id="5312" min="1" max="1" chance="0.2496" /> <!-- Sealed Helm of Nightmare -->
-					<item id="5527" min="1" max="1" chance="30.3187" /> <!-- Sealed Helm of Nightmare Design -->
-					<item id="5317" min="1" max="1" chance="0.2496" /> <!-- Sealed Majestic Circlet -->
-					<item id="5528" min="1" max="1" chance="30.3187" /> <!-- Sealed Majestic Circlet Design -->
-				</group>
-				<group chance="26.484899520874023">
-					<item id="1871" min="4" max="12" chance="30.046" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="3" chance="53.4151" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="9.6147" /> <!-- Adamantite Nugget -->
-					<item id="4041" min="1" max="1" chance="2.0902" /> <!-- Mold Hardener -->
-					<item id="4040" min="1" max="1" chance="4.8074" /> <!-- Mold Lubricant -->
-					<item id="729" min="1" max="1" chance="0.0266" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				</group>
+				<item id="57" min="7969" max="18606" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="2.72" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="5488" min="1" max="1" chance="4.6584" /> <!-- Sealed Majestic Robe Fabric -->
-				<item id="730" min="1" max="1" chance="0.8621" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="5480" min="1" max="1" chance="4.642" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="36558" min="1" max="1" chance="8.865" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.616" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4535,6 +4369,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21298" level="71" type="L2Monster" name="Eye of Restrainer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4550,7 +4385,7 @@
 		<sex>MALE</sex>
 		<acquire exp="55162" sp="13" />
 		<stats>
-			<vitals hp="4985.454" hpRegen="8.5" mp="1377.8" mpRegen="3" />
+			<vitals hp="4986" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
 			<attribute>
@@ -4589,21 +4424,19 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="62" max="144" chance="70" /> <!-- Adena -->
 				<item id="5290" min="1" max="1" chance="0.003" /> <!-- Sealed Dark Crystal Gloves -->
 				<item id="5291" min="1" max="1" chance="0.003" /> <!-- Sealed Dark Crystal Boots -->
 				<item id="5295" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Gloves -->
 				<item id="5296" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Boots -->
-				<item id="5509" min="1" max="1" chance="0.3" /> <!-- Sealed Tallum Glove Design -->
-				<item id="5508" min="1" max="1" chance="0.3" /> <!-- Sealed Dark Crystal Glove Design -->
-				<item id="5497" min="1" max="1" chance="0.3" /> <!-- Sealed Tallum Boot Lining -->
-				<item id="5496" min="1" max="1" chance="0.3" /> <!-- Sealed Dark Crystal Boot Lining -->
-				<item id="8730" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 67 -->
-				<item id="5380" min="1" max="1" chance="0.0055" /> <!-- Recipe: Sealed Boots of Nightmare(60%) -->
-				<item id="8740" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 67 -->
+				<item id="57" min="62" max="144" chance="70" /> <!-- Adena -->
+				<item id="5496" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="5497" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5508" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5509" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Glove Design -->
+				<item id="5380" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Boots of Nightmare(60%) -->
 				<item id="5167" min="1" max="1" chance="0.0009" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
-				<item id="8750" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 67 -->
-				<item id="8760" min="1" max="1" chance="0.0009" /> <!-- Top-grade Life Stone - Lv. 67 -->
+				<item id="45929" min="1" max="3" chance="0.0009" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.0009" /> <!-- Mid-grade Spirit Stone -->
 			</death>
 			<corpse>
 				<item id="5478" min="1" max="1" chance="0.3" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
@@ -4612,6 +4445,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21299" level="74" type="L2Monster" name="Valley Buffalo Slave">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -4630,7 +4464,7 @@
 		<sex>MALE</sex>
 		<acquire exp="93104" sp="22" />
 		<stats>
-			<vitals hp="25032" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="5266" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" />
 			<attribute>
@@ -4669,13 +4503,14 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="105" max="244" chance="70" /> <!-- Adena -->
+				<item id="57" min="449" max="1048" chance="70" /> <!-- Adena -->
 				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 	</npc>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21100" level="19" type="L2Monster" name="Langk Lizardman Sentinel">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -9,9 +10,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<acquire exp="1037" sp="1" />
+		<acquire exp="1037" sp="0" />
 		<stats>
-			<vitals hp="321.63954" hpRegen="2.5" mp="183.28" mpRegen="1.2" />
+			<vitals hp="322" hpRegen="2.5" mp="183" mpRegen="1.2" />
 			<attack physical="40.96915" magical="27.97662" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="84.07638" magical="55.9790056860875" />
 			<attribute>
@@ -42,21 +43,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="125" max="213" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3107000589370728">
-					<item id="845" min="1" max="1" chance="8.7774" /> <!-- Cat's Eye Earring -->
-					<item id="908" min="1" max="1" chance="6.5831" /> <!-- Necklace of Wisdom -->
-					<item id="1897" min="1" max="1" chance="71.4734" /> <!-- Necklace of Wisdom Chain -->
-					<item id="877" min="1" max="1" chance="13.1661" /> <!-- Ring of Wisdom -->
-				</group>
-				<group chance="12.984000205993652">
-					<item id="1869" min="1" max="1" chance="30.303" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="60.6061" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="3.0303" /> <!-- Steel -->
-					<item id="1817" min="1" max="1" chance="6.0606" /> <!-- Recipe: Cord -->
-				</group>
+				<item id="57" min="4" max="11" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
+				<item id="36864" min="1" max="1" chance="0.0009" /> <!-- Recipe: Iron Ore - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -90,9 +80,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1897" min="1" max="1" chance="6.3429" /> <!-- Necklace of Wisdom Chain -->
-				<item id="1800" min="1" max="1" chance="8.3774" /> <!-- Recipe: Piece Bone Breastplate -->
-				<item id="1924" min="1" max="1" chance="8.5936" /> <!-- Leather Helmet Design -->
+				<item id="36521" min="1" max="1" chance="5.779" /> <!-- Iron Ore -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -101,6 +89,7 @@
 		</collision>
 	</npc>
 	<npc id="21101" level="24" type="L2Monster" name="Langk Lizardman Shaman">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -116,9 +105,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6" /> <!-- rhand: Apprentice's Wand -->
-		<acquire exp="1683" sp="1" />
+		<acquire exp="1683" sp="0" />
 		<stats>
-			<vitals hp="435.34437" hpRegen="3.5" mp="245.52" mpRegen="1.5" />
+			<vitals hp="436" hpRegen="3.5" mp="245" mpRegen="1.5" />
 			<attack physical="60.19687" magical="41.10666" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="98.70919" magical="65.7216907961494" />
 			<attribute>
@@ -152,21 +141,11 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="177" max="327" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.3478000164031982">
-					<item id="39" min="1" max="1" chance="7.0524" /> <!-- Boots -->
-					<item id="1930" min="1" max="1" chance="85.8951" /> <!-- Boot Lining -->
-					<item id="51" min="1" max="1" chance="7.0525" /> <!-- Bracer -->
-				</group>
-				<group chance="14.738800048828125">
-					<item id="1870" min="1" max="1" chance="32.0171" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="32.0171" /> <!-- Varnish -->
-					<item id="5163" min="1" max="1" chance="1.2807" /> <!-- Recipe: Blessed Spiritshot (D) Compressed Package (100%) -->
-					<item id="6666" min="1" max="1" chance="32.0171" /> <!-- Deluxe Chest Key - Grade 2 -->
-					<item id="6035" min="1" max="1" chance="2.668" /> <!-- Magic Haste Potion -->
-				</group>
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="6035" min="1" max="1" chance="0.3" /> <!-- Magic Haste Potion -->
+				<item id="36527" min="1" max="1" chance="0.3" /> <!-- Synthetic Fiber -->
+				<item id="36872" min="1" max="1" chance="0.0009" /> <!-- Recipe: Fiber - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -200,9 +179,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1870" min="1" max="1" chance="39.9388" /> <!-- Coal -->
-				<item id="1865" min="1" max="1" chance="39.9388" /> <!-- Varnish -->
-				<item id="1898" min="1" max="1" chance="4.1026" /> <!-- Blue Diamond Necklace Gem -->
+				<item id="36526" min="1" max="1" chance="23.47" /> <!-- Fiber -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -211,6 +188,7 @@
 		</collision>
 	</npc>
 	<npc id="21102" level="30" type="L2Monster" name="Watchman of the Plains">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -224,9 +202,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="2403" sp="1" />
+		<acquire exp="2403" sp="0" />
 		<stats>
-			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<vitals hp="605" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="78.8748547991048" />
 			<attribute>
@@ -260,27 +238,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="228" max="457" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.8130999803543091">
-					<item id="433" min="1" max="1" chance="1.1833" /> <!-- Elven Tunic -->
-					<item id="434" min="1" max="1" chance="1.1833" /> <!-- White Tunic -->
-					<item id="1936" min="1" max="1" chance="37.2337" /> <!-- White Tunic Pattern -->
-					<item id="435" min="1" max="1" chance="1.1833" /> <!-- Mystic's Tunic -->
-					<item id="466" min="1" max="1" chance="1.8958" /> <!-- Elven Stockings -->
-					<item id="467" min="1" max="1" chance="1.8958" /> <!-- Dark Stockings -->
-					<item id="1933" min="1" max="1" chance="53.5289" /> <!-- Dark Stockings Fabric -->
-					<item id="468" min="1" max="1" chance="1.8959" /> <!-- Mystic's Stockings -->
-				</group>
-				<group chance="6.0279998779296875">
-					<item id="1874" min="1" max="1" chance="5.4553" /> <!-- Oriharukon Ore -->
-					<item id="1878" min="1" max="1" chance="32.7319" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="50.3567" /> <!-- Cord -->
-					<item id="1889" min="1" max="1" chance="5.4553" /> <!-- Compound Braid -->
-					<item id="5220" min="1" max="1" chance="3.2732" /> <!-- Metal Hardener -->
-					<item id="956" min="1" max="1" chance="2.7276" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-				</group>
+				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
+				<item id="36537" min="1" max="1" chance="0.075" /> <!-- Leather Braid -->
+				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -314,9 +275,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2153" min="1" max="1" chance="8.423" /> <!-- Recipe: Tiger's Eye Earring -->
-				<item id="1900" min="1" max="1" chance="5.9256" /> <!-- Enchanted Necklace Chain -->
-				<item id="2183" min="1" max="1" chance="3.5631" /> <!-- Recipe: Mithril Banded Mail -->
+				<item id="36531" min="1" max="1" chance="9.91" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -325,6 +284,7 @@
 		</collision>
 	</npc>
 	<npc id="21103" level="31" type="L2Monster" name="Roughly Hewn Rock Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -338,9 +298,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="2515" sp="1" />
+		<acquire exp="2515" sp="0" />
 		<stats>
-			<vitals hp="635.76437" hpRegen="4.5" mp="343.8" mpRegen="1.8" />
+			<vitals hp="636" hpRegen="4.5" mp="343" mpRegen="1.8" />
 			<attack physical="99.21986" magical="67.7543" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="121.98819" magical="81.2211098160515" />
 			<attribute>
@@ -375,24 +335,12 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="239" max="476" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.131600022315979">
-					<item id="348" min="1" max="1" chance="1.3287" /> <!-- Scale Mail -->
-					<item id="1935" min="1" max="1" chance="38.0434" /> <!-- Scale Mail Fragment -->
-					<item id="377" min="1" max="1" chance="2.1247" /> <!-- Scale Gaiters -->
-					<item id="1937" min="1" max="1" chance="58.5032" /> <!-- Scale Gaiters Fragment -->
-				</group>
-				<group chance="5.428999900817871">
-					<item id="1875" min="1" max="1" chance="5.4073" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="13.5181" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="6.7591" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="1.0815" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="8.1109" /> <!-- Metallic Thread -->
-					<item id="2185" min="1" max="1" chance="15.9663" /> <!-- Recipe: Iron Boots -->
-					<item id="1061" min="1" max="1" chance="49.1568" /> <!-- Greater Healing Potion -->
-				</group>
+				<item id="57" min="10" max="22" chance="70" /> <!-- Adena -->
+				<item id="1061" min="1" max="1" chance="2.194" /> <!-- Major Healing Potion -->
+				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
+				<item id="36542" min="1" max="1" chance="0.03" /> <!-- Silver Wire -->
+				<item id="36552" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -426,9 +374,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1933" min="1" max="1" chance="6.6361" /> <!-- Dark Stockings Fabric -->
-				<item id="1879" min="1" max="1" chance="9.4011" /> <!-- Cokes -->
-				<item id="955" min="1" max="1" chance="0.2256" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="36531" min="1" max="1" chance="10.53" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -814,6 +760,7 @@
 		</collision>
 	</npc>
 	<npc id="21110" level="69" type="L2Monster" name="Swamp Predator">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="82" />
 			<param name="MoveAroundSocial1" value="82" />
@@ -829,7 +776,7 @@
 		<sex>MALE</sex>
 		<acquire exp="18603" sp="4" />
 		<stats>
-			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<vitals hp="2396" hpRegen="7.5" mp="1314" mpRegen="2.7" />
 			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" />
 			<attribute>
@@ -871,6 +818,7 @@
 				<item id="3035" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (A-grade) -->
 				<item id="36903" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Downgrade -->
 				<item id="36915" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -911,6 +859,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21111" level="70" type="L2Monster" name="Lava Wyrm">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -926,7 +875,7 @@
 		<sex>MALE</sex>
 		<acquire exp="19432" sp="4" />
 		<stats>
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2445" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="197.024195544734" />
 			<attribute>
@@ -964,6 +913,7 @@
 				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
 				<item id="36904" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Upgrade -->
 				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1004,6 +954,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21112" level="71" type="L2Monster" name="Hames Orc Foot Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -1021,7 +972,7 @@
 		<equipment rhand="233" lhand="110" /> <!-- rhand: Dark Screamer lhand: Doom Shield -->
 		<acquire exp="23556" sp="5" />
 		<stats>
-			<vitals hp="2492.727" hpRegen="8.5" mp="1377.8" mpRegen="3" />
+			<vitals hp="2493" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" shield="150" shieldRate="20" />
 			<attribute>
@@ -1062,6 +1013,7 @@
 				<item id="5281" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (A-grade) -->
 				<item id="36905" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Combination -->
 				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1102,6 +1054,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21113" level="72" type="L2Monster" name="Hames Orc Sniper">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -1117,7 +1070,7 @@
 		<equipment rhand="287" /> <!-- rhand: Bow of Peril -->
 		<acquire exp="26246" sp="6" />
 		<stats>
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="2541" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="305.35947" magical="203.311781207645" />
 			<attribute>
@@ -1159,6 +1112,7 @@
 				<item id="5166" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot Compressed Package (A-grade) -->
 				<item id="36915" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Downgrade -->
 				<item id="36924" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1192,13 +1146,14 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="21115" level="74" type="L2Monster" name="Hames Orc Shaman">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -1217,7 +1172,7 @@
 		<equipment rhand="186" /> <!-- rhand: Staff of Magic -->
 		<acquire exp="21716" sp="5" />
 		<stats>
-			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
+			<vitals hp="2633" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="209.50409325236" />
 			<attribute>
@@ -1261,6 +1216,7 @@
 				<item id="36858" min="1" max="1" chance="0.003" /> <!-- Recipe: Leather - Upgrade -->
 				<item id="36932" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem - Upgrade -->
 				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1301,6 +1257,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21116" level="75" type="L2Monster" name="Hames Orc Prefect">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -1320,7 +1277,7 @@
 		<equipment rhand="75" lhand="103" /> <!-- rhand: Caliburs lhand: Tower Shield -->
 		<acquire exp="34289" sp="8" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="2677" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="212.557735094503" shield="160" shieldRate="20" />
 			<attribute>
@@ -1365,6 +1322,7 @@
 				<item id="36924" min="1" max="1" chance="0.003" /> <!-- Recipe: Armor Fragment - Upgrade -->
 				<item id="36865" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Downgrade -->
 				<item id="36939" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1398,7 +1356,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
@@ -2119,6 +2077,7 @@
 		</collision>
 	</npc>
 	<npc id="21124" level="18" type="L2Monster" name="Red Eye Barbed Bat">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2126,9 +2085,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="960" sp="28" />
+		<acquire exp="960" sp="0" />
 		<stats>
-			<vitals hp="301.66622" hpRegen="2.5" mp="174.64" mpRegen="1.2" />
+			<vitals hp="302" hpRegen="2.5" mp="174" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="81.34791" magical="54.1623558855199" />
 			<attribute>
@@ -2167,6 +2126,7 @@
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
 				<item id="735" min="1" max="1" chance="0.3" /> <!-- Haste Potion -->
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2200,7 +2160,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="4.750" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.736" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -2298,6 +2258,7 @@
 		</collision>
 	</npc>
 	<npc id="21126" level="20" type="L2Monster" name="Kerope Werewolf">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="72" />
@@ -2305,9 +2266,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1068" sp="32" />
+		<acquire exp="1068" sp="0" />
 		<stats>
-			<vitals hp="342.5127" hpRegen="2.5" mp="192.0" mpRegen="1.2" />
+			<vitals hp="343" hpRegen="2.5" mp="192" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="86.87049" magical="57.8393570613084" />
 			<attribute>
@@ -2344,6 +2305,7 @@
 			<death>
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
 				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2377,11 +2339,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="5" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="5.061" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="21127" level="21" type="L2Monster" name="Northern Goblin">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -2395,9 +2358,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="152" /> <!-- rhand: Heavy Chisel -->
-		<acquire exp="1375" sp="42" />
+		<acquire exp="1375" sp="0" />
 		<stats>
-			<vitals hp="364.30351" hpRegen="3.5" mp="205.2" mpRegen="1.5" />
+			<vitals hp="365" hpRegen="3.5" mp="205" mpRegen="1.5" />
 			<attack physical="47.91924" magical="32.72263" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="89.73059" magical="59.7436374813816" />
 			<attribute>
@@ -2433,9 +2396,10 @@
 		<dropLists>
 			<death>
 				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
-				<item id="6035" min="1" max="1" chance="0.3" /> <!-- Magic Haste Potion-->
+				<item id="6035" min="1" max="1" chance="0.3" /> <!-- Magic Haste Potion -->
 				<item id="1804" min="1" max="1" chance="0.075" /> <!-- Recipe: Soulshot (D-grade) -->
 				<item id="36562" min="1" max="1" chance="0.003" /> <!-- Greater Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2469,11 +2433,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="5.800" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="6.321" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="21128" level="22" type="L2Monster" name="Spine Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -2487,9 +2452,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="1478" sp="47" />
+		<acquire exp="1478" sp="0" />
 		<stats>
-			<vitals hp="387.02878" hpRegen="3.5" mp="218.52" mpRegen="1.5" />
+			<vitals hp="388" hpRegen="3.5" mp="218" mpRegen="1.5" />
 			<attack physical="51.75278" magical="35.34044" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="92.65694" magical="61.6920289224665" />
 			<attribute>
@@ -2530,6 +2495,7 @@
 			<death>
 				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
 				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2563,11 +2529,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="6.700" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="6.719" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="21129" level="23" type="L2Monster" name="Kerope Werewolf Chief">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="72" />
@@ -2580,9 +2547,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1612" sp="52" />
+		<acquire exp="1612" sp="0" />
 		<stats>
-			<vitals hp="410.70422" hpRegen="3.5" mp="231.96" mpRegen="1.5" />
+			<vitals hp="411" hpRegen="3.5" mp="231" mpRegen="1.5" />
 			<attack physical="55.84125" magical="38.13234" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="95.64976" magical="63.6846860642986" />
 			<attribute>
@@ -2617,10 +2584,11 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
-				<item id="6035" min="1" max="1" chance="0.3" /> <!-- Magic Haste Potion-->
+				<item id="57" min="7" max="15" chance="70" /> <!-- Adena -->
+				<item id="6035" min="1" max="1" chance="0.3" /> <!-- Magic Haste Potion -->
 				<item id="3032" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot (D-grade) -->
-				<item id="36562" min="1" max="1" chance="0.0055" /> <!-- Greater Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2654,11 +2622,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="7.200" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="7.228" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="21130" level="24" type="L2Monster" name="Northern Goblin Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -2672,9 +2641,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="66" lhand="102" /> <!-- rhand: Gladius lhand: Round Shield -->
-		<acquire exp="1717" sp="56" />
+		<acquire exp="1717" sp="0" />
 		<stats>
-			<vitals hp="435.34437" hpRegen="3.5" mp="245.52" mpRegen="1.5" />
+			<vitals hp="436" hpRegen="3.5" mp="245" mpRegen="1.5" />
 			<attack physical="60.19687" magical="41.10666" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="98.70919" magical="65.7216907961494" shield="49" shieldRate="20" />
 			<attribute>
@@ -2712,13 +2681,8 @@
 				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
 				<item id="734" min="1" max="1" chance="0.75" /> <!-- Wind Walk Potion -->
 				<item id="5273" min="1" max="1" chance="0.075" /> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
-				<item id="36562" min="1" max="1" chance="0.0055" /> <!-- Greater Cokes -->
-				<group chance="11.271200180053711">
-					<item id="1871" min="1" max="1" chance="53.3808" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="35.5872" /> <!-- Suede -->
-					<item id="5273" min="1" max="1" chance="2.1352" /> <!-- Recipe: Greater Spiritshot (D) Compressed Package(100%) -->
-					<item id="734" min="1" max="1" chance="8.8968" /> <!-- Haste Potion -->
-				</group>
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2752,11 +2716,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="7.500" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="7.55" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="21131" level="25" type="L2Monster" name="Reinforced Spine Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -2770,9 +2735,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="1786" sp="60" />
+		<acquire exp="1786" sp="0" />
 		<stats>
-			<vitals hp="460.96247" hpRegen="3.5" mp="259.2" mpRegen="1.5" />
+			<vitals hp="461" hpRegen="3.5" mp="259" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="101.83533" magical="67.8031159084826" />
 			<attribute>
@@ -2813,6 +2778,7 @@
 			<death>
 				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
 				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2846,11 +2812,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="7.400" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="7.76" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="21178" level="85" type="L2Monster" name="Lilim Marauder">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2865,9 +2832,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="229" lhand="229" /> <!-- rhand: Kris lhand: Kris -->
-		<acquire exp="18789" sp="1561" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="5791644" hpRegen="6.5" mp="948.0" mpRegen="2.4" />
+			<vitals hp="868747" hpRegen="9.5" mp="18468" mpRegen="3.3" />
 			<attack physical="424.23295" magical="289.69611" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="233.18839" magical="155.259456846417" shield="102" />
 			<attribute>
@@ -2913,38 +2880,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="13" max="26" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="391" max="782" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6360" min="73" max="146" chance="100" /> <!-- Blue Seal Stone -->
-				</group>
-				<group chance="2.172499895095825">
-					<item id="2384" min="1" max="1" chance="0.2141" /> <!-- Zubei's Leather Shirt -->
-					<item id="4066" min="1" max="1" chance="30.2172" /> <!-- Zubei's Leather Shirt Fabric -->
-					<item id="2390" min="1" max="1" chance="0.1317" /> <!-- Avadon Leather Armor -->
-					<item id="4068" min="1" max="1" chance="23.2143" /> <!-- Avadon Leather Armor Lining -->
-					<item id="2388" min="1" max="1" chance="0.3426" /> <!-- Zubei's Leather Gaiters -->
-					<item id="4067" min="1" max="1" chance="45.8801" /> <!-- Zubei's Leather Gaiter Texture -->
-				</group>
-				<group chance="46.26860046386719">
-					<item id="1872" min="1" max="3" chance="30.0828" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="60.1655" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="6.0166" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="3.0083" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="0.3924" /> <!-- Mold Hardener -->
-					<item id="948" min="1" max="1" chance="0.1128" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-					<item id="4162" min="1" max="1" chance="0.1872" /> <!-- Recipe: Tunic of Doom (100%) -->
-					<item id="5003" min="1" max="1" chance="0.0344" /> <!-- Recipe: Art of Battle Axe (60%) -->
-				</group>
+				<item id="57" min="6034" max="14063" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="1.494" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.075" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="4129" min="1" max="1" chance="6.1196" /> <!-- Recipe: Earrings of Black Ore (100%) -->
-				<item id="4610" min="1" max="1" chance="1.2566" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
-					<item id="947" min="1" max="1" chance="0.2262" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="36558" min="1" max="1" chance="11.36" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="3.159" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2953,6 +2895,7 @@
 		</collision>
 	</npc>
 	<npc id="21179" level="86" type="L2Monster" name="Lilim Priest">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2970,9 +2913,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17291" sp="1501" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="3864956" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="579744" hpRegen="9.5" mp="28227" mpRegen="3.3" />
 			<attack physical="481.34551" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="164.888215781956" />
 			<attribute>
@@ -3021,39 +2964,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="11" max="22" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="415" max="830" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6360" min="7" max="15" chance="100" /> <!-- Blue Seal Stone -->
-				</group>
-				<group chance="1.8631000518798828">
-					<item id="357" min="1" max="1" chance="0.135" /> <!-- Zubei's Breastplate -->
-					<item id="4056" min="1" max="1" chance="19.5049" /> <!-- Zubei's Breastplate Part -->
-					<item id="2376" min="1" max="1" chance="0.135" /> <!-- Avadon Breastplate -->
-					<item id="4064" min="1" max="1" chance="19.5049" /> <!-- Avadon Breastplate Part -->
-					<item id="383" min="1" max="1" chance="0.216" /> <!-- Zubei's Gaiters -->
-					<item id="4057" min="1" max="1" chance="30.144" /> <!-- Zubei's Gaiter Material -->
-					<item id="2379" min="1" max="1" chance="0.216" /> <!-- Avadon Gaiters -->
-					<item id="4065" min="1" max="1" chance="30.1442" /> <!-- Avadon Gaiters Material -->
-				</group>
-				<group chance="39.08449935913086">
-					<item id="1872" min="1" max="3" chance="26.0845" /> <!-- Animal Bone -->
-					<item id="1867" min="2" max="6" chance="19.5634" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="7.8253" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="3.9127" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="0.5103" /> <!-- Mold Hardener -->
-					<item id="4155" min="1" max="1" chance="0.1823" /> <!-- Recipe: Blue Wolf Breastplate (100%) -->
-					<item id="1343" min="20" max="60" chance="41.9215" /> <!-- Silver Arrow -->
-				</group>
+				<item id="57" min="3431" max="7996" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="4613" min="1" max="1" chance="0.7498" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
-					<item id="947" min="1" max="1" chance="0.2174" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="1872" min="1" max="15" chance="90.6001" /> <!-- Animal Bone -->
+				<item id="36558" min="1" max="1" chance="3.552" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.103" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3146,6 +3063,7 @@
 		</collision>
 	</npc>
 	<npc id="21181" level="86" type="L2Monster" name="Lilim Assassin">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -3208,34 +3126,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="27" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="578" max="1160" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="3.961199998855591">
-					<item id="864" min="1" max="1" chance="0.2845" /> <!-- Earring of Black Ore -->
-					<item id="4052" min="1" max="1" chance="35.806" /> <!-- Earring of Black Ore Piece -->
-					<item id="926" min="1" max="1" chance="0.2134" /> <!-- Necklace of Black Ore -->
-					<item id="4054" min="1" max="1" chance="19.92" /> <!-- Necklace of Black Ore Beads -->
-					<item id="895" min="1" max="1" chance="0.4267" /> <!-- Ring of Black Ore -->
-					<item id="4053" min="1" max="1" chance="43.3494" /> <!-- Ring of Black Ore Gemstone -->
-				</group>
-				<group chance="45.41379928588867">
-					<item id="1872" min="1" max="3" chance="50.4106" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="3" chance="33.6071" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="10.0821" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="5.0411" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="0.6575" /> <!-- Mold Hardener -->
-					<item id="5230" min="1" max="1" chance="0.1008" /> <!-- Recipe: Mithril Arrow (100%) -->
-					<item id="5276" min="1" max="1" chance="0.1008" /> <!-- Recipe: Greater Spiritshot (A) Compressed Package(100%) -->
-				</group>
+				<item id="57" min="6174" max="14406" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="2.15" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="5230" min="1" max="1" chance="1.0851" /> <!-- Recipe: Mithril Arrow (100%) -->
-				<item id="4054" min="1" max="1" chance="16.0289" /> <!-- Necklace of Black Ore Beads -->
-				<item id="4041" min="1" max="1" chance="7.0764" /> <!-- Mold Hardener -->
+				<item id="36558" min="1" max="1" chance="6.764" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.987" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3244,6 +3141,7 @@
 		</collision>
 	</npc>
 	<npc id="21182" level="87" type="L2Monster" name="Lilim Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3261,9 +3159,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="22868" sp="2237" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="3973380" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<vitals hp="596009" hpRegen="9.5" mp="28755" mpRegen="3.3" />
 			<attack physical="667.50361" magical="455.81844" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" />
 			<attribute>
@@ -3312,36 +3210,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="11" max="22" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="512" max="1023" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.573899984359741">
-					<item id="5291" min="1" max="1" chance="0.2373" /> <!-- Sealed Dark Crystal Boots -->
-					<item id="5496" min="1" max="1" chance="24.7627" /> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="5296" min="1" max="1" chance="0.2373" /> <!-- Sealed Tallum Boots -->
-					<item id="5497" min="1" max="1" chance="24.7627" /> <!-- Sealed Tallum Boots Lining -->
-					<item id="5290" min="1" max="1" chance="0.2373" /> <!-- Sealed Dark Crystal Gloves -->
-					<item id="5508" min="1" max="1" chance="24.7627" /> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="5295" min="1" max="1" chance="0.2373" /> <!-- Sealed Tallum Gloves -->
-					<item id="5509" min="1" max="1" chance="24.7627" /> <!-- Sealed Tallum Gloves Design -->
-				</group>
-				<group chance="48.78129959106445">
-					<item id="1873" min="1" max="1" chance="25.4715" /> <!-- Silver Nugget -->
-					<item id="1868" min="4" max="12" chance="15.9197" /> <!-- Thread -->
-					<item id="1876" min="1" max="1" chance="12.7358" /> <!-- Mithril Ore -->
-					<item id="1895" min="1" max="1" chance="18.1939" /> <!-- Metallic Fiber -->
-					<item id="4042" min="1" max="1" chance="1.0613" /> <!-- Enria -->
-					<item id="5156" min="1" max="1" chance="0.0849" /> <!-- Recipe: Soulshot (A) Compressed Package (100%) -->
-					<item id="1344" min="30" max="90" chance="26.5329" /> <!-- Mithril Arrow -->
-				</group>
+				<item id="57" min="3578" max="8340" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="1876" min="1" max="3" chance="73.6136" /> <!-- Mithril Ore -->
-				<item id="5478" min="1" max="1" chance="6.1902" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-				<item id="5478" min="1" max="1" chance="6.1902" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="36558" min="1" max="1" chance="3.803" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.118" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3350,6 +3225,7 @@
 		</collision>
 	</npc>
 	<npc id="21183" level="88" type="L2Monster" name="Lilim Knight Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3366,9 +3242,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5800" lhand="5799" /> <!-- rhand: Nephilim Lord lhand: Nephilim Lord -->
-		<acquire exp="33903" sp="3444" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="5967048" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="895060" hpRegen="9.5" mp="19524" mpRegen="3.3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" shield="153" shieldRate="20" />
 			<attribute>
@@ -3417,32 +3293,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="687" max="1380" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.6494998931884766">
-					<item id="5292" min="1" max="1" chance="0.408" /> <!-- Sealed Dark Crystal Shield -->
-					<item id="5494" min="1" max="1" chance="40.0555" /> <!-- Sealed Dark Crystal Shield Fragment -->
-					<item id="5289" min="1" max="1" chance="0.2855" /> <!-- Sealed Dark Crystal Helmet -->
-					<item id="5525" min="1" max="1" chance="29.4828" /> <!-- Sealed Dark Crystal Helmet Design -->
-					<item id="5294" min="1" max="1" chance="0.2855" /> <!-- Sealed Tallum Helmet -->
-					<item id="5526" min="1" max="1" chance="29.4827" /> <!-- Sealed Tallum Helm Design -->
-				</group>
-				<group chance="6.779099941253662">
-					<item id="1894" min="1" max="1" chance="31.389" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="29.8196" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="7.779" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="29.8196" /> <!-- Thons -->
-					<item id="5156" min="1" max="1" chance="1.1928" /> <!-- Recipe: Soulshot (A) Compressed Package (100%) -->
-				</group>
+				<item id="57" min="6580" max="15369" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.146" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="1807" min="1" max="1" chance="1.095" /> <!-- Recipe: Soulshot (A-Grade) -->
-				<item id="5479" min="1" max="1" chance="4.8593" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				<item id="3035" min="1" max="1" chance="1.095" /> <!-- Recipe: Spiritshot A -->
+				<item id="36558" min="1" max="1" chance="7.244" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.152" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3451,6 +3308,7 @@
 		</collision>
 	</npc>
 	<npc id="21184" level="87" type="L2Monster" name="Lilim Slayer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -3465,9 +3323,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="236" lhand="236" /> <!-- rhand: Soul Separator lhand: Soul Separator -->
-		<acquire exp="35479" sp="3742" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="5960072" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<vitals hp="894014" hpRegen="9.5" mp="19170" mpRegen="3.3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="212.557735094503" shield="140" />
 			<attribute>
@@ -3513,38 +3371,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="27" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="700" max="1400" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="1.47160005569458">
-					<item id="5304" min="1" max="1" chance="0.2697" /> <!-- Sealed Tallum Tunic -->
-					<item id="5485" min="1" max="1" chance="30.2857" /> <!-- Sealed Tallum Tunic Texture -->
-					<item id="5308" min="1" max="1" chance="0.1659" /> <!-- Sealed Dark Crystal Robe -->
-					<item id="5486" min="1" max="1" chance="21.3111" /> <!-- Sealed Dark Crystal Robe Fabric -->
-					<item id="5305" min="1" max="1" chance="0.4313" /> <!-- Sealed Tallum Stockings -->
-					<item id="5489" min="1" max="1" chance="47.5363" /> <!-- Sealed Tallum Stockings Fabric -->
-				</group>
-				<group chance="40.510398864746094">
-					<item id="1867" min="1" max="3" chance="47.5783" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="3" chance="31.7188" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="15.8594" /> <!-- Leather -->
-					<item id="1894" min="1" max="1" chance="2.5041" /> <!-- Crafted Leather -->
-					<item id="4042" min="1" max="1" chance="1.1895" /> <!-- Enria -->
-					<item id="729" min="1" max="1" chance="0.0079" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="4987" min="1" max="1" chance="0.2961" /> <!-- Recipe: Tunic of Doom (60%) -->
-					<item id="8731" min="1" max="1" chance="0.6608" /> <!-- Life Stone - Level 70 -->
-					<item id="8741" min="1" max="1" chance="0.1652" /> <!-- Mid-Grade Life Stone - Level 70 -->
-					<item id="8751" min="1" max="1" chance="0.0165" /> <!-- High-Grade Life Stone - Level 70 -->
-					<item id="8761" min="1" max="1" chance="0.0034" /> <!-- Top-Grade Life Stone - Level 70 -->
-				</group>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="2.236" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="5480" min="1" max="1" chance="3.8649" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="729" min="1" max="1" chance="0.0957" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="1895" min="1" max="5" chance="82.03" /> <!-- Metallic Fiber -->
+				<item id="36558" min="1" max="1" chance="7.158" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.073" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3553,6 +3386,7 @@
 		</collision>
 	</npc>
 	<npc id="21185" level="88" type="L2Monster" name="Lilim Great Magus">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3565,9 +3399,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="29222" sp="3198" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="3978032" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="596707" hpRegen="9.5" mp="29286" mpRegen="3.3" />
 			<attack physical="855.81387" magical="584.40994" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="221.515820894982" />
 			<attribute>
@@ -3616,37 +3450,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="11" max="22" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="612" max="1227" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="1.3162000179290771">
-					<item id="5304" min="1" max="1" chance="0.2697" /> <!-- Sealed Tallum Tunic -->
-					<item id="5485" min="1" max="1" chance="30.2857" /> <!-- Sealed Tallum Tunic Texture -->
-					<item id="5308" min="1" max="1" chance="0.1659" /> <!-- Sealed Dark Crystal Robe -->
-					<item id="5486" min="1" max="1" chance="21.3111" /> <!-- Sealed Dark Crystal Robe Fabric -->
-					<item id="5305" min="1" max="1" chance="0.4313" /> <!-- Sealed Tallum Stockings -->
-					<item id="5489" min="1" max="1" chance="47.5363" /> <!-- Sealed Tallum Stockings Fabric -->
-				</group>
-				<group chance="38.62459945678711">
-					<item id="1873" min="1" max="1" chance="29.4574" /> <!-- Silver Nugget -->
-					<item id="1868" min="3" max="9" chance="24.5478" /> <!-- Thread -->
-					<item id="1876" min="1" max="1" chance="14.7287" /> <!-- Mithril Ore -->
-					<item id="1895" min="1" max="1" chance="21.041" /> <!-- Metallic Fiber -->
-					<item id="4042" min="1" max="1" chance="1.2274" /> <!-- Enria -->
-					<item id="5282" min="1" max="1" chance="0.0327" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-					<item id="6671" min="1" max="1" chance="8.1826" /> <!-- Deluxe Chest Key - Grade 7 -->
-					<item id="8732" min="1" max="1" chance="0.6137" /> <!-- Life Stone - Level 76 -->
-					<item id="8742" min="1" max="1" chance="0.1534" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8752" min="1" max="1" chance="0.0153" /> <!-- High-Grade Life Stone - Level 76 -->
-				</group>
+				<item id="57" min="5569" max="13008" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.018" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="1875" min="1" max="1" chance="51.3582" /> <!-- Stone of Purity -->
-				<item id="5481" min="1" max="1" chance="3.4568" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="5487" min="1" max="1" chance="3.4691" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="36558" min="1" max="1" chance="6.193" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.866" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3655,6 +3465,7 @@
 		</collision>
 	</npc>
 	<npc id="21186" level="89" type="L2Monster" name="Lilim Royal Knight">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3666,9 +3477,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5800" lhand="5799" /> <!-- rhand: Nephilim Lord lhand: Nephilim Lord -->
-		<acquire exp="41856" sp="4698" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="16355440" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<vitals hp="2453317" hpRegen="9.5" mp="19880" mpRegen="3.3" />
 			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="348.2025" magical="231.837152158566" evasion="2" shield="171" shieldRate="20" />
 			<attribute>
@@ -3717,33 +3528,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="805" max="1610" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.510200023651123">
-					<item id="5315" min="1" max="1" chance="0.3567" /> <!-- Sealed Shield of Nightmare -->
-					<item id="5495" min="1" max="1" chance="38.5067" /> <!-- Sealed Shield of Nightmare Fragment -->
-					<item id="5312" min="1" max="1" chance="0.2496" /> <!-- Sealed Helm of Nightmare -->
-					<item id="5527" min="1" max="1" chance="30.3187" /> <!-- Sealed Helm of Nightmare Design -->
-					<item id="5317" min="1" max="1" chance="0.2496" /> <!-- Sealed Majestic Circlet -->
-					<item id="5528" min="1" max="1" chance="30.3187" /> <!-- Sealed Majestic Circlet Design -->
-				</group>
-				<group chance="26.484899520874023">
-					<item id="1871" min="4" max="12" chance="30.046" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="3" chance="53.4151" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="9.6147" /> <!-- Adamantite Nugget -->
-					<item id="4041" min="1" max="1" chance="2.0902" /> <!-- Mold Hardener -->
-					<item id="4040" min="1" max="1" chance="4.8074" /> <!-- Mold Lubricant -->
-					<item id="729" min="1" max="1" chance="0.0266" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				</group>
+				<item id="57" min="4516" max="10527" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="5488" min="1" max="1" chance="4.6584" /> <!-- Sealed Majestic Robe Fabric -->
-				<item id="730" min="1" max="1" chance="0.8621" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="5480" min="1" max="1" chance="4.642" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="36558" min="1" max="1" chance="4.753" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.431" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3752,6 +3543,7 @@
 		</collision>
 	</npc>
 	<npc id="21199" level="90" type="L2Monster" name="Nephilim Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -3765,9 +3557,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="18789" sp="1561" />
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="6141504" hpRegen="6.5" mp="948.0" mpRegen="2.4" />
+			<vitals hp="921227" hpRegen="9.5" mp="20238" mpRegen="3.3" />
 			<attack physical="424.23295" magical="289.69611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="233.18839" magical="155.259456846417" />
 			<attribute>
@@ -3812,38 +3604,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="13" max="26" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="391" max="782" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6360" min="73" max="146" chance="100" /> <!-- Blue Seal Stone -->
-				</group>
-				<group chance="2.172499895095825">
-					<item id="2384" min="1" max="1" chance="0.2141" /> <!-- Zubei's Leather Shirt -->
-					<item id="4066" min="1" max="1" chance="30.2172" /> <!-- Zubei's Leather Shirt Fabric -->
-					<item id="2390" min="1" max="1" chance="0.1317" /> <!-- Avadon Leather Armor -->
-					<item id="4068" min="1" max="1" chance="23.2143" /> <!-- Avadon Leather Armor Lining -->
-					<item id="2388" min="1" max="1" chance="0.3426" /> <!-- Zubei's Leather Gaiters -->
-					<item id="4067" min="1" max="1" chance="45.8801" /> <!-- Zubei's Leather Gaiter Texture -->
-				</group>
-				<group chance="46.32040023803711">
-					<item id="1872" min="1" max="3" chance="30.0492" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="60.0985" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="6.0098" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="3.0049" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="0.3919" /> <!-- Mold Hardener -->
-					<item id="948" min="1" max="1" chance="0.1127" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-					<item id="4163" min="1" max="1" chance="0.2985" /> <!-- Recipe: Blue Wolf Stockings (100%) -->
-					<item id="8311" min="1" max="1" chance="0.0345" /> <!-- Recipe: Kaim Vanul's Bones (100%) -->
-				</group>
+				<item id="57" min="7034" max="16408" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="2.487" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="4129" min="1" max="1" chance="6.1196" /> <!-- Recipe: Earrings of Black Ore (100%) -->
-				<item id="4611" min="1" max="1" chance="1.2566" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
-					<item id="947" min="1" max="1" chance="0.2262" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="36558" min="1" max="1" chance="7.815" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.229" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
