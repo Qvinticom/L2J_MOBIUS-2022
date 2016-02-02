@@ -332,326 +332,510 @@
 		<set name="isMagic" val="3" />
 	</skill>
 	<skill id="18052" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can equip 1 Talisman. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18053" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can equip 2 Talismans. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18054" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can equip 3 Talismans. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18055" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can equip 4 Talismans. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18056" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can equip 5 Talismans. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18057" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can equip 6 Talismans. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot">
+				<param slots="6" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18058" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18059" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 2. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18060" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 3. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18061" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 4. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18062" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 5. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18063" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="DEX" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18064" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 2. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="DEX" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18065" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 3. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="DEX" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18066" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 4. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="DEX" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18067" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 5. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="DEX" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18068" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON + 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CON" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18069" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON + 2. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CON" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18070" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON + 3. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CON" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18071" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON + 4. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CON" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18072" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON + 5. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CON" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18073" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18074" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 2. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18075" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 3. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18076" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 4. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18077" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 5. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18078" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MEN + 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="MEN" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18079" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MEN + 2. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="MEN" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18080" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MEN + 3. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="MEN" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18081" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MEN + 4. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="MEN" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18082" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MEN + 5. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="MEN" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18083" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="WIT" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18084" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 2. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="WIT" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18085" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 3. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="WIT" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18086" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 4. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="WIT" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18087" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 5. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="WIT" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18088" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- LUC + 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="LUC" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18089" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- LUC + 2. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="LUC" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18090" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="LUC" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18091" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- LUC + 4. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="LUC" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18092" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- LUC + 5. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="LUC" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18093" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CHA + 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CHA" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18094" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CHA + 2. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CHA" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18095" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CHA" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18096" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CHA + 4. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CHA" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18097" levels="1" name="Dimensional Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CHA + 5. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CHA" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18098" levels="1" name="Scroll: 1,000 SP">
 		<!-- AUTO GENERATED SKILL -->
