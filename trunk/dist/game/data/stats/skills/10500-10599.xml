@@ -269,6 +269,8 @@
 		<table name="#ench9Reuse"> 4900 4800 4700 4600 4500 4400 4300 4200 4100 4000 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="blowChance" val="25" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="abnormalTime" val="10" />
 		<set name="baseCritRate" val="20" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -276,6 +278,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<set name="overHit" val="true" />
+		<set name="baseCritRate" val="5" /> <!-- Guessing -->
 		<set name="hitTime" val="1030" />
 		<set name="coolTime" val="700" />
 		<set name="castRange" val="40" />

@@ -443,8 +443,8 @@
 			<using kind="FIST,DUALFIST" />
 		</cond>
 		<for>
-			<effect name="TargetCancel">
-				<param chance="85" />
+			<effect name="RemoveTarget">
+				<param chance="80" />
 			</effect>
 			<effect name="Buff">
 				<add stat="pAtk" val="#pAtks" />
