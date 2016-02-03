@@ -230,7 +230,6 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 			}
 			player.broadcastUserInfo();
 			qs.exitQuest(false, true);
-			return htmltext;
 		}
 		return htmltext;
 	}
