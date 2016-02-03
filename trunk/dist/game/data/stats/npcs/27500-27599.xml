@@ -656,10 +656,9 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="27528" level="40" type="L2Npc" name="Skeleton Warrior" title="Quest Monster">
+	<npc id="27528" level="40" type="L2Monster" name="Skeleton Warrior" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
 		<stats>
 			<vitals hp="1532" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
@@ -667,13 +666,13 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27529" level="40" type="L2Npc" name="Skeleton Archer" title="Quest Monster">
+	<npc id="27529" level="40" type="L2Monster" name="Skeleton Archer" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -684,7 +683,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="22" />
