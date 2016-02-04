@@ -218,12 +218,12 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 			player.setClassId(classId);
 			giveAdena(player, 110000, true);
 			addExpAndSp(player, 2700000, 648);
-			if (classId == 182)
+			if (classId == 184)
 			{
 				htmltext = "33943-ccf.html";
 				giveItems(player, NAVARIS_SUPPORT_BOX_F, 1);
 			}
-			else if (classId == 183)
+			else if (classId == 185)
 			{
 				htmltext = "33942-ccm.html";
 				giveItems(player, NAVARIS_SUPPORT_BOX_M, 1);
