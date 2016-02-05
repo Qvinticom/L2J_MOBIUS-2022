@@ -35,6 +35,7 @@
 		</collision>
 	</npc>
 	<npc id="25501" level="30" type="L2RaidBoss" name="Grave Robber Leader Akata" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25502" count="3" respawnTime="360" weightPoint="1" /> <!-- Akata's Thug -->
@@ -48,7 +49,7 @@
 		<equipment rhand="8528" /> <!-- rhand: For Monsters Only (Doom Hammer) -->
 		<acquire exp="2417862" sp="580" raidPoints="416" />
 		<stats>
-			<vitals hp="84373" hpRegen="21.714038575401" mp="329.4" mpRegen="1.5" />
+			<vitals hp="84373" hpRegen="21.714038575401" mp="329" mpRegen="1.5" />
 			<attack physical="111.218777383212" magical="7.21487767094488" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="355.39281" magical="173.38" evasion="-18" />
 			<attribute>
@@ -82,14 +83,15 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="395" min="1" max="1" chance="3.750" /> <!-- Manticore Skin Shirt -->
-				<item id="417" min="1" max="1" chance="1.900" /> <!-- Manticore Skin Gaiters -->
-				<item id="224" min="1" max="1" chance="1.350" /> <!-- Maingauche -->
-				<item id="1660" min="1" max="1" chance="9.100" /> <!-- Cursed Maingauche -->
-				<item id="4553" min="1" max="1" chance="13.50" /> <!-- Greater Dye of STR <Str+1 Con-1> -->
-					<item id="4554" min="1" max="1" chance="13.50" /> <!-- Greater Dye of STR <Str+1 Dex-1> -->
-					<item id="4555" min="1" max="1" chance="13.50" /> <!-- Greater Dye of CON <Con+1 Str-1> -->
-					<item id="6575" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
+				<item id="1660" min="1" max="1" chance="9.141" /> <!-- Cursed Maingauche -->
+				<item id="395" min="1" max="1" chance="3.775" /> <!-- Manticore Skin Shirt -->
+				<item id="417" min="1" max="1" chance="1.849" /> <!-- Manticore Skin Gaiters -->
+				<item id="224" min="1" max="1" chance="1.314" /> <!-- Maingauche -->
+				<item id="4555" min="1" max="1" chance="13.79" /> <!-- Greater CON Dye (Con   1 Str - 1) -->
+				<item id="4553" min="1" max="1" chance="13.73" /> <!-- Greater STR Dye (STR   1 CON - 1) -->
+				<item id="4554" min="1" max="1" chance="12.72" /> <!-- Greater STR Dye (STR   1 DEX - 1) -->
+				<item id="6575" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.005024" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>
@@ -291,6 +293,7 @@
 		</collision>
 	</npc>
 	<npc id="25506" level="37" type="L2RaidBoss" name="Rayito the Looter" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25507" count="1" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
@@ -304,7 +307,7 @@
 		<equipment rhand="67" lhand="633" /> <!-- rhand: Orcish Sword lhand: Zubei's Shield -->
 		<acquire exp="5476117" sp="1314" raidPoints="564" />
 		<stats>
-			<vitals hp="77592.6570606263" hpRegen="29.4232868171158" mp="432.72" mpRegen="1.8" />
+			<vitals hp="121936" hpRegen="29.4232868171158" mp="432" mpRegen="1.8" />
 			<attack physical="190.062213768403" magical="15.0683165832128" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="433.43274" magical="211.44" evasion="-18" />
 			<attribute>
@@ -334,19 +337,11 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<death>
-				<group chance="66.24530029296875">
-					<item id="397" min="1" max="1" chance="21.4917" /> <!-- Mithril Shirt -->
-					<item id="2387" min="1" max="1" chance="34.3442" /> <!-- Reinforced Mithril Gaiters -->
-					<item id="1961" min="53" max="157" chance="9.53" /> <!-- Mithril Shirt Fabric -->
-					<item id="2935" min="24" max="72" chance="34.6341" /> <!-- Reinforced Mithril Gaiters Fragment -->
-				</group>
-				<group chance="25.390199661254883">
-					<item id="281" min="1" max="1" chance="27.7681" /> <!-- Crystallized Ice Bow -->
-					<item id="2074" min="12" max="36" chance="72.2319" /> <!-- Crystallized Ice Bow Shaft -->
-				</group>
-				<group chance="46.03379821777344">
-					<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
-				</group>
+				<item id="281" min="1" max="1" chance="8.932" /> <!-- Crystallized Ice Bow -->
+				<item id="397" min="1" max="1" chance="3.592" /> <!-- Reinforced Mithril Shirt -->
+				<item id="2387" min="1" max="1" chance="1.751" /> <!-- Reinforced Mithril Gaiters -->
+				<item id="6574" min="1" max="1" chance="9.013" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<item id="39629" min="1" max="1" chance="0.00498" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -674,7 +669,8 @@
 			<height normal="51.8" />
 		</collision>
 	</npc>
-	<npc id="25514" level="80" type="L2RaidBoss" name="Queen Shyeed" title="Raid Boss">
+	<npc id="25514" level="84" type="L2RaidBoss" name="Queen Shyeed" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25516" count="1" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
@@ -685,9 +681,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3775960" sp="906" raidPoints="1896" />
+		<acquire exp="4292368" sp="1030" raidPoints="1896" />
 		<stats>
-			<vitals hp="300327.053710865" hpRegen="92.3387631310317" mp="1674.8" mpRegen="3" />
+			<vitals hp="744115" hpRegen="92.3387631310317" mp="1812" mpRegen="3" />
 			<attack physical="1445.33274686674" magical="280.52213944732" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1024.125" magical="499.6" evasion="-18" />
 			<attribute>
@@ -717,24 +713,18 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="49.989498138427734">
-					<item id="6678" min="1" max="1" chance="3.1222" /> <!-- Sealed Imperial Crusader Shield -->
-					<item id="6679" min="1" max="1" chance="2.1855" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="2.1855" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="2.1855" /> <!-- Sealed Major Arcana Circlet -->
-					<item id="6705" min="23" max="67" chance="16.2317" /> <!-- Sealed Imperial Crusader Shield Part -->
-					<item id="6706" min="60" max="180" chance="7.0802" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-					<item id="6710" min="11" max="31" chance="40.4585" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-					<item id="6714" min="16" max="48" chance="26.5509" /> <!-- Sealed Major Arcana Circlet Pattern -->
-				</group>
-				<group chance="57.32780075073242">
-					<item id="6367" min="1" max="1" chance="1.2817" /> <!-- Angel Slayer -->
-					<item id="6691" min="3" max="9" chance="98.7183" /> <!-- Angel Slayer Blade -->
-				</group>
-				<group chance="55.43439865112305">
-					<item id="6578" min="1" max="1" chance="8.1633" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="3936" min="1" max="1" chance="91.8367" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
+				<item id="9525" min="1" max="1" chance="1.225" /> <!-- Sealed Dynasty Stockings -->
+				<item id="9514" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Breastplate -->
+				<item id="9515" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Gaiters -->
+				<item id="9524" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Tunic -->
+				<item id="9531" min="6" max="18" chance="12.14" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="960" min="1" max="1" chance="9.916" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9530" min="10" max="30" chance="6.907" /> <!-- Sealed Dynasty Breastplate Piece -->
+				<item id="9541" min="16" max="48" chance="4.053" /> <!-- Sealed Dynasty Stockings Piece -->
+				<item id="9540" min="22" max="66" chance="2.044" /> <!-- Sealed Dynasty Tunic Piece -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008836" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -822,6 +812,7 @@
 		</collision>
 	</npc>
 	<npc id="25523" level="73" type="L2RaidBoss" name="Plague Golem" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="7" /> <!-- BOSS Cancel Magic -->
@@ -833,7 +824,7 @@
 		<sex>MALE</sex>
 		<acquire exp="252824108" sp="60677" raidPoints="3056" />
 		<stats>
-			<vitals hp="776489.863367776" hpRegen="302.659981219819" mp="1442.4" mpRegen="3" />
+			<vitals hp="1848823" hpRegen="302.659981219819" mp="1442" mpRegen="3" />
 			<attack physical="4680.09940116917" magical="3338.16498534774" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="930.08877" magical="453.74" evasion="-18" />
 			<attribute>
@@ -865,27 +856,16 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<death>
-				<item id="8619" min="1" max="1" chance="56" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9817" min="3" max="7" chance="83" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="4" chance="83" /> <!-- Destruction Tombstone -->
-				<group chance="71.31670379638672">
-					<item id="6678" min="1" max="1" chance="3.1222" /> <!-- Sealed Imperial Crusader Shield -->
-					<item id="6679" min="1" max="1" chance="2.1855" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="2.1855" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="2.1855" /> <!-- Sealed Major Arcana Circlet -->
-					<item id="6705" min="23" max="67" chance="16.2317" /> <!-- Sealed Imperial Crusader Shield Part -->
-					<item id="6706" min="60" max="180" chance="7.0802" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-					<item id="6710" min="11" max="31" chance="40.4585" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-					<item id="6714" min="16" max="48" chance="26.5509" /> <!-- Sealed Major Arcana Circlet Pattern -->
-				</group>
-				<group chance="21.232099533081055">
-					<item id="6367" min="1" max="1" chance="4.9371" /> <!-- Angel Slayer -->
-					<item id="6691" min="12" max="36" chance="95.0629" /> <!-- Angel Slayer Blade -->
-				</group>
-				<group chance="22.595699310302734">
-					<item id="6578" min="1" max="1" chance="28.5714" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="6570" min="1" max="1" chance="71.4286" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-				</group>
+				<item id="6683" min="1" max="1" chance="8.934" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6678" min="1" max="1" chance="6.36" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6679" min="1" max="1" chance="3.028" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6367" min="1" max="1" chance="0.75" /> <!-- Angel Slayer -->
+				<item id="8176" min="1" max="4" chance="86.63" /> <!-- Destruction Tombstone -->
+				<item id="9817" min="3" max="7" chance="80.72" /> <!-- Nonliving Nucleus -->
+				<item id="8619" min="1" max="1" chance="54.75" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="6570" min="1" max="1" chance="3.18" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="6578" min="1" max="1" chance="1.258" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008004" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -894,6 +874,7 @@
 		</collision>
 	</npc>
 	<npc id="25524" level="76" type="L2RaidBoss" name="Flamestone Giant" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25525" count="2" respawnTime="360" weightPoint="1" /> <!-- Flame Spirit -->
@@ -906,7 +887,7 @@
 		<sex>MALE</sex>
 		<acquire exp="739701575" sp="177528" raidPoints="3228" />
 		<stats>
-			<vitals hp="956893.766608773" hpRegen="124.302529182249" mp="1540.8" mpRegen="3" />
+			<vitals hp="956893" hpRegen="124.302529182249" mp="1540" mpRegen="3" />
 			<attack physical="2501.79548333906" magical="888.048862829437" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="971.35365" magical="473.86" evasion="-18" />
 			<attribute>
@@ -940,19 +921,20 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="5311" min="1" max="1" chance="2.500" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5316" min="1" max="1" chance="2.675" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="5522" min="36" max="108" chance="4.400" /> <!-- Sealed Armor of Nightmare Pattern -->
-				<item id="5523" min="12" max="36" chance="16.50" /> <!-- Sealed Majestic Plate Armor Pattern -->
-				<item id="81" min="1" max="1" chance="1.150" /> <!-- Dragon Slayer -->
-				<item id="151" min="1" max="1" chance="1.050" /> <!-- Sword of Miracles -->
-				<item id="2500" min="1" max="1" chance="1.150" /> <!-- Dark Legion's Edge -->
-				<item id="5529" min="2" max="6" chance="38" /> <!-- Dragon Slayer Edge -->
-				<item id="5546" min="3" max="9" chance="30" /> <!-- Sword of Miracles Edge -->
-				<item id="5545" min="3" max="9" chance="27.50" /> <!-- Dark Legion's Edge Blade -->
-				<item id="959" min="1" max="1" chance="1" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="10.25" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="5311" min="1" max="1" chance="2.666" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="2.562" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="2500" min="1" max="1" chance="1.176" /> <!-- Dark Legion's Edge -->
+				<item id="151" min="1" max="1" chance="1.163" /> <!-- Sword of Miracles -->
+				<item id="81" min="1" max="1" chance="1.079" /> <!-- Dragon Slayer -->
+				<item id="5529" min="2" max="6" chance="35.33" /> <!-- Dragon Slayer Edge -->
+				<item id="5546" min="3" max="9" chance="30.72" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="3" max="9" chance="26.95" /> <!-- Dark Legion's Edge Blade -->
+				<item id="5523" min="12" max="36" chance="17.06" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="960" min="1" max="1" chance="9.89" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="5522" min="36" max="108" chance="5.509" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="959" min="1" max="1" chance="1.02" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.007923" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>
@@ -1031,6 +1013,7 @@
 		</collision>
 	</npc>
 	<npc id="25527" level="80" type="L2RaidBoss" name="Uruka" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="10" /> <!-- BOSS Cancel Magic -->
@@ -1042,7 +1025,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1670060147" sp="400814" raidPoints="2100" />
 		<stats>
-			<vitals hp="675862.82488359" hpRegen="259.751563024682" mp="203.52" mpRegen="3.18" />
+			<vitals hp="1609230" hpRegen="259.751563024682" mp="203" mpRegen="3.18" />
 			<attack physical="3068.49967024509" magical="1381.13520659718" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="1162.672236" magical="567.1848" evasion="-12" />
 			<attribute>
@@ -1078,21 +1061,19 @@
 		</collision>
 		<dropLists>
 			<death>
-				<group chance="49.456298828125">
-					<item id="6724" min="1" max="1" chance="5" /> <!-- Sealed Tateossian Earring -->
-					<item id="6725" min="1" max="1" chance="7.408" /> <!-- Sealed Tateossian Ring -->
-					<item id="6726" min="1" max="1" chance="3.700" /> <!-- Sealed Tateossian Necklace -->
-				</group>
-				<group chance="68.7123031616211">
-					<item id="6365" min="1" max="1" chance="0.3713" /> <!-- Basalt Battlehammer -->
-					<item id="6366" min="1" max="1" chance="0.3713" /> <!-- Imperial Staff -->
-					<item id="6369" min="1" max="1" chance="0.3713" /> <!-- Dragon Hunter Axe -->
-					<item id="6579" min="1" max="1" chance="0.3713" /> <!-- Arcana Mace -->
-				</group>
+				<item id="6725" min="1" max="1" chance="7.435" /> <!-- Sealed Tateossian Ring -->
+				<item id="6724" min="1" max="1" chance="4.912" /> <!-- Sealed Tateossian Earring -->
+				<item id="6726" min="1" max="1" chance="3.742" /> <!-- Sealed Tateossian Necklace -->
+				<item id="6365" min="1" max="1" chance="0.3" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.3" /> <!-- Imperial Staff -->
+				<item id="6369" min="1" max="1" chance="0.3" /> <!-- Dragon Hunter Axe -->
+				<item id="6579" min="1" max="1" chance="0.3" /> <!-- Arcana Mace -->
+				<item id="39629" min="1" max="1" chance="0.008656" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>
 	<npc id="25528" level="22" type="L2RaidBoss" name="Tiberias" title="Prime Inspector">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveArounding" value="0" />
 			<param name="Party_Type" value="2" />
@@ -1115,7 +1096,7 @@
 		<sex>MALE</sex>
 		<acquire exp="45113" sp="10" raidPoints="47" />
 		<stats>
-			<vitals hp="31106.7890880982" hpRegen="16.3719942568938" mp="218.52" mpRegen="1.5" />
+			<vitals hp="48884" hpRegen="16.3719942568938" mp="218" mpRegen="1.5" />
 			<attack physical="87.8963925138357" magical="38.964731121782" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="185.31388" magical="135.60464" />
 			<attribute>
@@ -1151,25 +1132,20 @@
 		</ai>
 		<dropLists>
 			<death>
+				<item id="348" min="1" max="1" chance="13.74" /> <!-- Scale Mail -->
+				<item id="128" min="1" max="1" chance="2.862" /> <!-- Knight's Sword -->
+				<item id="69" min="1" max="1" chance="2.748" /> <!-- Bastard Sword -->
+				<item id="126" min="1" max="1" chance="2.746" /> <!-- Artisan's Sword -->
+				<item id="125" min="1" max="1" chance="2.734" /> <!-- Spinebone Sword -->
+				<item id="377" min="1" max="1" chance="2.457" /> <!-- Scale Gaiters -->
 				<item id="9712" min="1" max="1" chance="100" /> <!-- Gate Key: Massive Cavern -->
-				<group chance="57.91130065917969">
-					<item id="348" min="1" max="1" chance="18.4329" /> <!-- Scale Mail -->
-					<item id="377" min="1" max="1" chance="29.4753" /> <!-- Scale Gaiters -->
-					<item id="1935" min="8" max="22" chance="35.1838" /> <!-- Scale Mail Fragment -->
-					<item id="1937" min="24" max="72" chance="16.908" /> <!-- Scale Gaiters Fragment -->
-				</group>
-				<group chance="52.0452995300293">
-					<item id="69" min="1" max="1" chance="5.0914" /> <!-- Bastard Sword -->
-					<item id="125" min="1" max="1" chance="5.0914" /> <!-- Spinebone Sword -->
-					<item id="126" min="1" max="1" chance="5.0914" /> <!-- Artisan's Sword -->
-					<item id="128" min="1" max="1" chance="5.0914" /> <!-- Knight's Sword -->
-					<item id="2021" min="1" max="3" chance="79.6344" /> <!-- Spinebone Sword Blade -->
-				</group>
-				<group chance="55.15909957885742">
-					<item id="6575" min="1" max="1" chance="2.8571" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
-					<item id="6576" min="1" max="1" chance="25.7143" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
-					<item id="956" min="3" max="9" chance="71.4286" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-				</group>
+				<item id="956" min="1" max="1" chance="47.53" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="2021" min="3" max="9" chance="14.21" /> <!-- Spinebone Sword Blade -->
+				<item id="1937" min="28" max="84" chance="10.57" /> <!-- Scale Gaiter Fragment -->
+				<item id="1935" min="60" max="180" chance="3.271" /> <!-- Scale Mail Fragment -->
+				<item id="6576" min="1" max="1" chance="2.742" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="6575" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.004093" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -2314,6 +2290,7 @@
 		</collision>
 	</npc>
 	<npc id="25549" level="95" type="L2RaidBoss" name="Tesla the Deceiver" title="Forsaken Prisoner">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25550" count="3" respawnTime="360" weightPoint="1" /> <!-- Tesla's Apprentice -->
@@ -2332,7 +2309,7 @@
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
 		<acquire exp="138831575" sp="33319" raidPoints="303.8" />
 		<stats>
-			<vitals hp="2555826" hpRegen="85.6354519750785" mp="1507.8" mpRegen="3" />
+			<vitals hp="2555827" hpRegen="85.6354519750785" mp="44116" mpRegen="3" />
 			<attack physical="5343.97938761949" magical="876.212888951461" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="957.73869" magical="467.22" evasion="-18" />
 			<attribute>
@@ -2358,23 +2335,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="46.56589889526367">
-					<item id="5287" min="1" max="1" chance="1.5917" /> <!-- Sealed Dark Crystal breastplate -->
-					<item id="5288" min="1" max="1" chance="2.547" /> <!-- Sealed Dark Crystal Gaiters -->
-					<item id="5520" min="2" max="4" chance="60.9353" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
-					<item id="5524" min="4" max="12" chance="34.926" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
-				</group>
-				<group chance="10.951600074768066">
-					<item id="9626" min="1" max="1" chance="75" /> <!-- Giant's Codex - Discipline -->
-					<item id="6578" min="1" max="1" chance="25" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="190" max="380" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="29" />
@@ -2465,6 +2425,7 @@
 		</collision>
 	</npc>
 	<npc id="25552" level="95" type="L2RaidBoss" name="Soul Hunter Chakundel" title="Forsaken Prisoner">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -2481,7 +2442,7 @@
 		<sex>MALE</sex>
 		<acquire exp="138831575" sp="33319" raidPoints="309.4" />
 		<stats>
-			<vitals hp="4520999.84" hpRegen="172.748301603872" mp="1540.8" mpRegen="3" />
+			<vitals hp="3399250" hpRegen="172.748301603872" mp="44116" mpRegen="3" />
 			<attack physical="5484.05623364423" magical="896.946049858317" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="971.35365" magical="473.86" evasion="-18" />
 			<attribute>
@@ -2512,25 +2473,6 @@
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>1.331</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="57.17169952392578">
-					<item id="6364" min="1" max="1" chance="0.1071" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.1071" /> <!-- Heaven's Divider -->
-					<item id="6688" min="1" max="1" chance="49.4997" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="1" max="1" chance="50.2861" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="17.71649932861328">
-					<item id="9626" min="1" max="1" chance="22.9885" /> <!-- Giant's Codex - Discipline -->
-					<item id="959" min="1" max="1" chance="6.8966" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="68.9655" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.1494" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="188" max="377" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32.5" />
@@ -2767,6 +2709,7 @@
 		</collision>
 	</npc>
 	<npc id="25557" level="97" type="L2RaidBoss" name="Ranger Karankawa" title="Forsaken Prisoner">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25558" count="3" respawnTime="360" weightPoint="1" /> <!-- Karankawa's Root -->
@@ -2784,7 +2727,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="217112675" sp="52107" raidPoints="326.2" />
 		<stats>
-			<vitals hp="2784206" hpRegen="88.699884116806" mp="1641.0" mpRegen="3" />
+			<vitals hp="2784208" hpRegen="88.699884116806" mp="45600" mpRegen="3" />
 			<attack physical="7315.33207580496" magical="960.307523556492" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1011.21024" magical="493.3" evasion="-18" />
 			<attribute>
@@ -2811,20 +2754,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="60.875099182128906">
-					<item id="6694" min="1" max="1" chance="99.7879" /> <!-- Saint Spear Blade -->
-					<item id="6370" min="1" max="1" chance="0.2121" /> <!-- Saint Spear -->
-				</group>
-				<group chance="8.587800025939941">
-					<item id="9627" min="1" max="1" chance="100" /> <!-- Giant's Codex - Mastery -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="200" max="400" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="60" />
 			<height normal="47" />
@@ -2917,6 +2846,7 @@
 		</collision>
 	</npc>
 	<npc id="25560" level="97" type="L2RaidBoss" name="Sargon the Mad" title="Forsaken Prisoner">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25561" count="2" respawnTime="360" weightPoint="1" /> <!-- Sargon's Attendant -->
@@ -2935,7 +2865,7 @@
 		<equipment rhand="135" /> <!-- rhand: Samurai Longsword -->
 		<acquire exp="217112675" sp="52107" raidPoints="326.2" />
 		<stats>
-			<vitals hp="2784206" hpRegen="88.699884116806" mp="1641.0" mpRegen="3" />
+			<vitals hp="2784208" hpRegen="88.699884116806" mp="45600" mpRegen="3" />
 			<attack physical="7315.33207580496" magical="960.307523556492" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1011.21024" magical="493.3" evasion="-18" />
 			<attribute>
@@ -2963,20 +2893,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="70.75">
-					<item id="6684" min="1" max="1" chance="0.5156" /> <!-- Sealed Major Arcana Robe -->
-					<item id="6711" min="1" max="3" chance="99.4844" /> <!-- Sealed Major Arcana Robe Part -->
-				</group>
-				<group chance="8.839099884033203">
-					<item id="9627" min="1" max="1" chance="100" /> <!-- Giant's Codex - Mastery -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="200" max="400" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="19" />
 			<height normal="43.5" />
@@ -3213,6 +3129,7 @@
 		</collision>
 	</npc>
 	<npc id="25566" level="99" type="L2RaidBoss" name="Nagen the Tomboy" title="Forsaken Prisoner">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25567" count="3" respawnTime="360" weightPoint="1" /> <!-- Nagen's Cohort -->
@@ -3234,7 +3151,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="376926858" sp="603082" raidPoints="343.7" />
 		<stats>
-			<vitals hp="2911644" hpRegen="91.3173083724193" mp="1743.0" mpRegen="3" />
+			<vitals hp="2911646" hpRegen="91.3173083724193" mp="47100" mpRegen="3" />
 			<attack physical="7648.58739581511" magical="1012.26341239337" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1049.32431" magical="511.9" evasion="-18" />
 			<attribute>
@@ -3266,21 +3183,7 @@
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="6.557300090789795">
-					<item id="9445" min="1" max="1" chance="0.4745" /> <!-- Dynasty Bow -->
-					<item id="9619" min="1" max="1" chance="99.5255" /> <!-- Dynasty Bow Piece -->
-				</group>
-				<group chance="2.86929988861084">
-					<item id="9588" min="1" max="1" chance="31.9959" /> <!-- Striped Mithril Shirt -->
-					<item id="9582" min="1" max="1" chance="45.1498" /> <!-- Mithril Shirt -->
-					<item id="9592" min="1" max="1" chance="22.8543" /> <!-- Mithril Bracelet -->
-				</group>
-				<group chance="9.068499565124512">
-					<item id="9627" min="1" max="1" chance="100" /> <!-- Giant's Codex - Mastery -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="209" max="421" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
+				<item id="36311" min="7" max="14" chance="100" /> <!-- Battleground Scroll: Damage Reflect Resistance -->
 			</death>
 		</dropLists>
 		<collision>
@@ -3377,6 +3280,7 @@
 		</collision>
 	</npc>
 	<npc id="25569" level="99" type="L2RaidBoss" name="Jax the Destroyer" title="Forsaken Prisoner">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25570" count="3" respawnTime="360" weightPoint="1" /> <!-- Jax's Vanguard -->
@@ -3396,7 +3300,7 @@
 		<equipment rhand="6719" /> <!-- rhand: Monster Only(Ketra Orc Chieftain) -->
 		<acquire exp="376926858" sp="603082" raidPoints="343.7" />
 		<stats>
-			<vitals hp="2911644" hpRegen="91.3173083724193" mp="1743.0" mpRegen="3" />
+			<vitals hp="2911646" hpRegen="91.3173083724193" mp="47100" mpRegen="3" />
 			<attack physical="7648.58739581511" magical="1012.26341239337" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1049.32431" magical="511.9" evasion="-18" />
 			<attribute>
@@ -3426,25 +3330,7 @@
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="6.695199966430664">
-					<item id="9442" min="1" max="1" chance="0.1592" /> <!-- Dynasty Sword -->
-					<item id="9443" min="1" max="1" chance="0.1592" /> <!-- Dynasty Blade -->
-					<item id="9444" min="1" max="1" chance="0.1592" /> <!-- Dynasty Phantom -->
-					<item id="9616" min="1" max="1" chance="33.1741" /> <!-- Dynasty Sword Piece -->
-					<item id="9617" min="1" max="1" chance="33.1741" /> <!-- Dynasty Blade Piece -->
-					<item id="9618" min="1" max="1" chance="33.1742" /> <!-- Dynasty Phantom Piece -->
-				</group>
-				<group chance="2.9488000869750977">
-					<item id="9588" min="1" max="1" chance="31.9959" /> <!-- Striped Mithril Shirt -->
-					<item id="9582" min="1" max="1" chance="45.1498" /> <!-- Mithril Shirt -->
-					<item id="9592" min="1" max="1" chance="22.8543" /> <!-- Mithril Bracelet -->
-				</group>
-				<group chance="9.319700241088867">
-					<item id="9627" min="1" max="1" chance="100" /> <!-- Giant's Codex - Mastery -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="209" max="421" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
+				<item id="36309" min="100" max="150" chance="100" /> <!-- Healing Potion (Battleground) -->
 			</death>
 		</dropLists>
 		<collision>
@@ -3535,6 +3421,7 @@
 		</collision>
 	</npc>
 	<npc id="25572" level="93" type="L2RaidBoss" name="Hager the Outlaw" title="Forsaken Inmate">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25573" count="2" respawnTime="360" weightPoint="1" /> <!-- Hager's Henchman -->
@@ -3553,7 +3440,7 @@
 		<equipment rhand="201" /> <!-- rhand: Club of Nature -->
 		<acquire exp="133047567" sp="31931" raidPoints="287" />
 		<stats>
-			<vitals hp="2415847" hpRegen="83.4559083071402" mp="1410.0" mpRegen="3" />
+			<vitals hp="2415848" hpRegen="83.4559083071402" mp="42648" mpRegen="3" />
 			<attack physical="4529.55926055348" magical="815.689881194743" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="916.07841" magical="446.9" evasion="-18" />
 			<attribute>
@@ -3579,22 +3466,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="MAGE" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="41.7598991394043">
-					<item id="6364" min="1" max="1" chance="0.1071" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.1071" /> <!-- Heaven's Divider -->
-					<item id="6688" min="1" max="1" chance="49.4997" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="1" max="1" chance="50.2861" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="17.849199295043945">
-					<item id="9625" min="1" max="1" chance="100" /> <!-- Giant's Codex - Oblivion -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="180" max="362" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="54" />
@@ -3832,6 +3703,7 @@
 		</collision>
 	</npc>
 	<npc id="25578" level="93" type="L2RaidBoss" name="Jakard" title="Forsaken Inmate">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3848,7 +3720,7 @@
 		<sex>MALE</sex>
 		<acquire exp="133047567" sp="31931" raidPoints="292.6" />
 		<stats>
-			<vitals hp="4273392.41" hpRegen="168.371230492651" mp="1442.4" mpRegen="3" />
+			<vitals hp="3213078" hpRegen="168.371230492651" mp="42648" mpRegen="3" />
 			<attack physical="4658.99941432244" magical="838.41114470542" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="930.08877" magical="453.74" evasion="-18" />
 			<attribute>
@@ -3878,27 +3750,13 @@
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>1.331</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="50.391998291015625">
-					<item id="6684" min="1" max="1" chance="0.5156" /> <!-- Sealed Major Arcana Robe -->
-					<item id="6711" min="1" max="3" chance="99.4844" /> <!-- Sealed Major Arcana Robe Part -->
-				</group>
-				<group chance="48.79169845581055">
-					<item id="9625" min="1" max="1" chance="19.3548" /> <!-- Giant's Codex - Oblivion -->
-					<item id="730" min="1" max="1" chance="80.6452" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="184" max="368" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="37" />
 			<height normal="98" />
 		</collision>
 	</npc>
 	<npc id="25579" level="94" type="L2RaidBoss" name="Helsing" title="Forsaken Inmate">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25580" count="4" respawnTime="360" weightPoint="1" /> <!-- Helsing's Guard -->
@@ -3918,7 +3776,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="203890700" sp="48933" raidPoints="298.2" />
 		<stats>
-			<vitals hp="2471066" hpRegen="84.9099171635164" mp="1475.0" mpRegen="3" />
+			<vitals hp="2471068" hpRegen="84.9099171635164" mp="43380" mpRegen="3" />
 			<attack physical="5200.74380271268" magical="857.537066914178" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="943.97961" magical="460.5" evasion="-18" />
 			<attribute>
@@ -3946,33 +3804,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="79.4198989868164">
-					<item id="6703" min="1" max="3" chance="30.8788" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-					<item id="6704" min="2" max="4" chance="20.5858" /> <!-- Sealed Imperial Crusader Boots Design -->
-					<item id="6708" min="2" max="6" chance="15.4394" /> <!-- Sealed Draconic Leather Gloves Fabric -->
-					<item id="6709" min="3" max="7" chance="12.3515" /> <!-- Sealed Draconic Leather Boots Design -->
-					<item id="6712" min="3" max="9" chance="10.2929" /> <!-- Sealed Major Arcana Gloves fabric -->
-					<item id="6713" min="4" max="10" chance="8.8225" /> <!-- Sealed Major Arcana Boots Design -->
-					<item id="6676" min="1" max="1" chance="0.2715" /> <!-- Sealed Imperial Crusader Gauntlet -->
-					<item id="6677" min="1" max="1" chance="0.2715" /> <!-- Sealed Imperial Crusader Boots -->
-					<item id="6681" min="1" max="1" chance="0.2715" /> <!-- Sealed Draconic Leather Glove -->
-					<item id="6682" min="1" max="1" chance="0.2715" /> <!-- Sealed Draconic Leather Boots -->
-					<item id="6685" min="1" max="1" chance="0.2715" /> <!-- Sealed Major Arcana Glove -->
-					<item id="6686" min="1" max="1" chance="0.2716" /> <!-- Sealed Major Arcana Boots -->
-				</group>
-				<group chance="10.503000259399414">
-					<item id="9625" min="1" max="1" chance="45.9184" /> <!-- Giant's Codex - Oblivion -->
-					<item id="6570" min="1" max="1" chance="25.5102" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-					<item id="729" min="1" max="1" chance="25.5102" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="6569" min="1" max="1" chance="3.0612" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="186" max="378" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="31" />
@@ -4059,6 +3890,7 @@
 		</collision>
 	</npc>
 	<npc id="25582" level="95" type="L2RaidBoss" name="Gillien" title="Forsaken Inmate">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25583" count="2" respawnTime="360" weightPoint="1" /> <!-- Gillien's Daughter -->
@@ -4077,7 +3909,7 @@
 		<equipment rhand="6723" /> <!-- rhand: Monster Only(Vampire Warrior) -->
 		<acquire exp="208251875" sp="49980" raidPoints="303.8" />
 		<stats>
-			<vitals hp="2555826" hpRegen="85.6354519750785" mp="1507.8" mpRegen="3" />
+			<vitals hp="2555827" hpRegen="85.6354519750785" mp="44116" mpRegen="3" />
 			<attack physical="5343.97938761949" magical="876.212888951461" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="957.73869" magical="467.22" evasion="-18" />
 			<attribute>
@@ -4102,22 +3934,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="2.7980000972747803">
-					<item id="6724" min="1" max="1" chance="30.7709" /> <!-- Sealed Tateossian Earring -->
-					<item id="6725" min="1" max="1" chance="46.1563" /> <!-- Sealed Tateossian Ring -->
-					<item id="6726" min="1" max="1" chance="23.0728" /> <!-- Sealed Tateossian Necklace -->
-				</group>
-				<group chance="50.91210174560547">
-					<item id="9625" min="1" max="1" chance="19.3548" /> <!-- Giant's Codex - Oblivion -->
-					<item id="730" min="1" max="1" chance="80.6452" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="190" max="380" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="9" grown="10" />
 			<height normal="31.5" grown="38" />
@@ -4206,6 +4022,7 @@
 		</collision>
 	</npc>
 	<npc id="25585" level="96" type="L2RaidBoss" name="Medici" title="Forsaken Inmate">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25586" count="3" respawnTime="360" weightPoint="1" /> <!-- Medici's Sister -->
@@ -4223,7 +4040,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="212659200" sp="51038" raidPoints="309.4" />
 		<stats>
-			<vitals hp="2615109" hpRegen="86.3741508019361" mp="1540.8" mpRegen="3" />
+			<vitals hp="2615112" hpRegen="86.3741508019361" mp="44856" mpRegen="3" />
 			<attack physical="5484.05623364423" magical="896.946049858317" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="971.35365" magical="473.86" evasion="-18" />
 			<attribute>
@@ -4249,33 +4066,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="58.874000549316406">
-					<item id="6703" min="8" max="24" chance="5.2888" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-					<item id="6704" min="2" max="4" chance="28.2071" /> <!-- Sealed Imperial Crusader Boots Design -->
-					<item id="6708" min="2" max="6" chance="21.1553" /> <!-- Sealed Draconic Leather Gloves Fabric -->
-					<item id="6709" min="3" max="7" chance="16.9242" /> <!-- Sealed Draconic Leather Boots Design -->
-					<item id="6712" min="3" max="9" chance="14.1035" /> <!-- Sealed Major Arcana Gloves fabric -->
-					<item id="6713" min="4" max="10" chance="12.0887" /> <!-- Sealed Major Arcana Boots Design -->
-					<item id="6676" min="1" max="1" chance="0.372" /> <!-- Sealed Imperial Crusader Gauntlet -->
-					<item id="6677" min="1" max="1" chance="0.372" /> <!-- Sealed Imperial Crusader Boots -->
-					<item id="6681" min="1" max="1" chance="0.372" /> <!-- Sealed Draconic Leather Glove -->
-					<item id="6682" min="1" max="1" chance="0.372" /> <!-- Sealed Draconic Leather Boots -->
-					<item id="6685" min="1" max="1" chance="0.372" /> <!-- Sealed Major Arcana Glove -->
-					<item id="6686" min="1" max="1" chance="0.3724" /> <!-- Sealed Major Arcana Boots -->
-				</group>
-				<group chance="10.668299674987793">
-					<item id="9625" min="1" max="1" chance="45.9184" /> <!-- Giant's Codex - Oblivion -->
-					<item id="6570" min="1" max="1" chance="25.5102" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-					<item id="729" min="1" max="1" chance="25.5102" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="6569" min="1" max="1" chance="3.0612" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="188" max="377" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="53" />
@@ -4365,6 +4155,7 @@
 		</collision>
 	</npc>
 	<npc id="25588" level="96" type="L2RaidBoss" name="Immortal Muus" title="Forsaken Inmate">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4382,7 +4173,7 @@
 		<equipment rhand="2500" /> <!-- rhand: Dark Legion's Edge -->
 		<acquire exp="212659200" sp="51038" raidPoints="315" />
 		<stats>
-			<vitals hp="4625866.35" hpRegen="174.258963997156" mp="1574.0" mpRegen="3" />
+			<vitals hp="3478099" hpRegen="174.258963997156" mp="44856" mpRegen="3" />
 			<attack physical="6058.739109831" magical="925.853792810094" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="984.81219" magical="480.42" evasion="-18" />
 			<attribute>
@@ -4412,25 +4203,6 @@
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>1.331</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="47.887901306152344">
-					<item id="6679" min="1" max="1" chance="0.6224" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="0.6224" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="0.6224" /> <!-- Sealed Major Arcana Circlet -->
-					<item id="6706" min="5" max="15" chance="24.1971" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-					<item id="6710" min="9" max="27" chance="13.4428" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-					<item id="6714" min="2" max="6" chance="60.4929" /> <!-- Sealed Major Arcana Circlet Pattern -->
-				</group>
-				<group chance="51.66680145263672">
-					<item id="9625" min="1" max="1" chance="19.3548" /> <!-- Giant's Codex - Oblivion -->
-					<item id="730" min="1" max="1" chance="80.6452" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="191" max="389" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="30" grown="40" />
 			<height normal="46.5" grown="48.4" />
@@ -4637,6 +4409,7 @@
 		</dropLists>
 	</npc>
 	<npc id="25593" level="99" type="L2RaidBoss" name="Gerg the Hunter" title="Forsaken Inmate">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25594" count="3" respawnTime="360" weightPoint="1" /> <!-- Gerg's Follower -->
@@ -4653,9 +4426,9 @@
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<acquire exp="376926858" sp="603082" raidPoints="331.8" />
+		<acquire exp="376926858" sp="603082" raidPoints="7" />
 		<stats>
-			<vitals hp="2911644" hpRegen="89.5179966399562" mp="1674.8" mpRegen="3" />
+			<vitals hp="2911646" hpRegen="89.5179966399562" mp="47100" mpRegen="3" />
 			<attack physical="7476.5080117304" magical="974.826217605108" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1024.125" magical="499.6" evasion="-18" />
 			<attribute>
@@ -4682,19 +4455,7 @@
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="12.830599784851074">
-					<item id="9445" min="1" max="1" chance="0.4745" /> <!-- Dynasty Bow -->
-					<item id="9619" min="1" max="1" chance="99.5255" /> <!-- Dynasty Bow Piece -->
-				</group>
-				<group chance="15.434200286865234">
-					<item id="9626" min="1" max="1" chance="22.9934" /> <!-- Giant's Codex - Discipline -->
-					<item id="9587" min="1" max="1" chance="39.1934" /> <!-- Striped Scale Shirt -->
-					<item id="9591" min="1" max="1" chance="30.1487" /> <!-- Steel Bracelet -->
-					<item id="6578" min="1" max="1" chance="7.6645" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="202" max="408" chance="100" /> <!-- Knight's Epaulette -->
-				</group>
+				<item id="36309" min="100" max="150" chance="100" /> <!-- Healing Potion (Battleground) -->
 			</death>
 		</dropLists>
 		<collision>
