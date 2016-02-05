@@ -1398,6 +1398,7 @@
 		</collision>
 	</npc>
 	<npc id="25623" level="80" type="L2RaidBoss" name="Valdstone" title="Master Rider">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
 			<param name="Skill03_Target" value="3" />
@@ -1431,7 +1432,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3539612" sp="849" raidPoints="930" />
 		<stats>
-			<vitals hp="309907.557189244" hpRegen="33.2475941841315" mp="1674.8" mpRegen="3" />
+			<vitals hp="737891" hpRegen="33.2475941841315" mp="1674" mpRegen="3" />
 			<attack physical="594.243196720861" magical="115.335636902663" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="921.7125" magical="449.64" evasion="-18" />
 			<attribute>
@@ -1473,6 +1474,7 @@
 		</collision>
 	</npc>
 	<npc id="25624" level="80" type="L2RaidBoss" name="Rok" title="King of Birds">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
 			<param name="Skill03_AttackSplash" value="1" />
@@ -1494,7 +1496,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="3658389" sp="878" raidPoints="938" />
 		<stats>
-			<vitals hp="319298.066079636" hpRegen="34.2550295355049" mp="1777.4" mpRegen="3" />
+			<vitals hp="760251" hpRegen="34.2550295355049" mp="1777" mpRegen="3" />
 			<attack physical="623.117691655907" magical="125.474229315868" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="972.386110863905" magical="474.365822485207" evasion="-18" />
 			<attribute>
@@ -1535,6 +1537,7 @@
 		</collision>
 	</npc>
 	<npc id="25625" level="80" type="L2RaidBoss" name="Enira" title="Banshee Queen">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Skill01_Target" value="3" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -1576,7 +1579,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="3745533" sp="898" raidPoints="971" />
 		<stats>
-			<vitals hp="325715.957207836" hpRegen="34.9435556291686" mp="1846.8" mpRegen="3" />
+			<vitals hp="775530" hpRegen="34.9435556291686" mp="1846" mpRegen="3" />
 			<attack physical="643.033547458868" magical="132.116420113434" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1005.7282140355" magical="490.630579881657" evasion="-18" />
 			<attribute>
@@ -1962,6 +1965,7 @@
 		</collision>
 	</npc>
 	<npc id="25633" level="76" type="L2Monster" name="Elite Rider" title="Valdstone's Escort">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Skill03_Target" value="4" />
 			<param name="Skill03_Type" value="3" />
@@ -1972,7 +1976,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="58591.5471939677" hpRegen="7.90115198640846" mp="1540.8" mpRegen="3" />
+			<vitals hp="60818" hpRegen="7.90115198640846" mp="1540" mpRegen="3" />
 			<attack physical="439.902770141518" magical="105.292634546515" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="437.1091425" magical="426.474" evasion="-18" />
 			<attribute>
@@ -2168,6 +2172,7 @@
 		</collision>
 	</npc>
 	<npc id="25636" level="81" type="L2Monster" name="Ravenous Soul Devourer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="tide" value="3" />
 			<param name="type" value="spc_wagon_boss" />
@@ -2177,7 +2182,7 @@
 		<sex>MALE</sex>
 		<acquire exp="4650677" sp="1116" />
 		<stats>
-			<vitals hp="440657.534754126" hpRegen="188.168628266824" mp="1846.8" mpRegen="3" />
+			<vitals hp="440658" hpRegen="188.168628266824" mp="1846" mpRegen="3" />
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
@@ -2213,17 +2218,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="10">
-					<item id="14109" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="16.6667" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="16.6665" /> <!-- Sealed Vesper Shoes -->
-				</group>
-				<group chance="100">
-					<item id="14052" min="110" max="150" chance="100" /> <!-- Noble Enhancement Stone -->
-				</group>
+				<item id="14110" min="1" max="1" chance="1.116" /> <!-- Sealed Vesper Boots -->
+				<item id="14117" min="1" max="1" chance="1.077" /> <!-- Sealed Vesper Shoes -->
+				<item id="14114" min="1" max="1" chance="1.069" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14109" min="1" max="1" chance="1.05" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14116" min="1" max="1" chance="1.046" /> <!-- Sealed Vesper Gloves -->
+				<item id="14113" min="1" max="1" chance="1.024" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14052" min="60" max="180" chance="10.86" /> <!-- Vesper Noble Enhancement Stone -->
+				<item id="39629" min="1" max="1" chance="0.008932" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -2232,6 +2234,7 @@
 		</collision>
 	</npc>
 	<npc id="25637" level="81" type="L2Monster" name="Karpencharr" title="Prophet of Lies">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5898" level="2" /> <!-- Blast of Anchor -->
@@ -2243,7 +2246,7 @@
 		<sex>MALE</sex>
 		<acquire exp="4650677" sp="1116" />
 		<stats>
-			<vitals hp="440657.534754126" hpRegen="188.168628266824" mp="1846.8" mpRegen="3" />
+			<vitals hp="440658" hpRegen="188.168628266824" mp="1846" mpRegen="3" />
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
@@ -2279,21 +2282,16 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="49.62519836425781">
-					<item id="6674" min="1" max="1" chance="1.2495" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="1.9993" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6701" min="8" max="22" chance="28.3427" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-					<item id="6702" min="4" max="12" chance="68.4085" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				</group>
-				<group chance="43.38169860839844">
-					<item id="6367" min="1" max="1" chance="1.2817" /> <!-- Angel Slayer -->
-					<item id="6691" min="3" max="9" chance="98.7183" /> <!-- Angel Slayer Blade -->
-				</group>
-				<group chance="22.943599700927734">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="6675" min="1" max="1" chance="1.52" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6674" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6367" min="1" max="1" chance="0.3" /> <!-- Angel Slayer -->
+				<item id="6691" min="3" max="9" chance="8.154" /> <!-- Angel Slayer Blade -->
+				<item id="960" min="1" max="1" chance="7.148" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6702" min="28" max="84" chance="4.716" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6701" min="60" max="180" chance="1.398" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.0092375" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -2302,6 +2300,7 @@
 		</collision>
 	</npc>
 	<npc id="25638" level="81" type="L2Monster" name="Romerohiv" title="Betrayer of Oblivion">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5896" level="2" /> <!-- Soulless -->
@@ -2313,7 +2312,7 @@
 		<sex>MALE</sex>
 		<acquire exp="4650677" sp="1116" />
 		<stats>
-			<vitals hp="440657.534754126" hpRegen="188.168628266824" mp="1846.8" mpRegen="3" />
+			<vitals hp="440658" hpRegen="188.168628266824" mp="1846" mpRegen="3" />
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
@@ -2349,25 +2348,20 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="61.93410110473633">
-					<item id="6678" min="1" max="1" chance="1.907" /> <!-- Sealed Imperial Crusader Shield -->
-					<item id="6679" min="1" max="1" chance="1.3349" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="1.3349" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="1.3349" /> <!-- Sealed Major Arcana Circlet -->
-					<item id="6705" min="23" max="67" chance="9.9142" /> <!-- Sealed Imperial Crusader Shield Part -->
-					<item id="6706" min="6" max="18" chance="43.2454" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-					<item id="6710" min="11" max="31" chance="24.7117" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-					<item id="6714" min="16" max="48" chance="16.217" /> <!-- Sealed Major Arcana Circlet Pattern -->
-				</group>
-				<group chance="42.574501037597656">
-					<item id="6371" min="1" max="1" chance="1.306" /> <!-- Demon Splinter -->
-					<item id="6695" min="3" max="9" chance="98.694" /> <!-- Demon Splinter Blade -->
-				</group>
-				<group chance="22.943599700927734">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="6678" min="1" max="1" chance="2.25" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6679" min="1" max="1" chance="1.62" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="1.575" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6687" min="1" max="1" chance="1.565" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6371" min="1" max="1" chance="0.3" /> <!-- Demon Splinter -->
+				<item id="6705" min="6" max="18" chance="31.78" /> <!-- Sealed Imperial Crusader Shield Part -->
+				<item id="6695" min="1" max="1" chance="28.26" /> <!-- Demon Splinter Blade -->
+				<item id="6706" min="10" max="30" chance="12.77" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
+				<item id="6710" min="16" max="48" chance="8.149" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+				<item id="960" min="1" max="1" chance="7.057" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6714" min="22" max="66" chance="5.801" /> <!-- Sealed Major Arcana Circlet Pattern -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008902" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -2376,6 +2370,7 @@
 		</collision>
 	</npc>
 	<npc id="25639" level="81" type="L2Monster" name="Hitchkarshiek" title="Wise Retainer of Suffering">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5881" level="2" /> <!-- Vicious Mutilation -->
@@ -2388,7 +2383,7 @@
 		<equipment rhand="13985" lhand="13986" /> <!-- rhand: Exclusive to Monsters (Death Slayer_r) lhand: Exclusive to Monsters (Death Slayer_l) -->
 		<acquire exp="4650677" sp="1116" />
 		<stats>
-			<vitals hp="440657.534754126" hpRegen="188.168628266824" mp="1846.8" mpRegen="3" />
+			<vitals hp="440658" hpRegen="188.168628266824" mp="1846" mpRegen="3" />
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
@@ -2424,23 +2419,18 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="49.62519836425781">
-					<item id="6674" min="1" max="1" chance="1.2495" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="1.9993" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6701" min="8" max="22" chance="28.3427" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-					<item id="6702" min="4" max="12" chance="68.4085" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				</group>
-				<group chance="59.697601318359375">
-					<item id="6364" min="1" max="1" chance="0.4657" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.4657" /> <!-- Heaven's Divider -->
-					<item id="6688" min="2" max="4" chance="71.739" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="4" max="12" chance="27.3296" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="22.943599700927734">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="6675" min="1" max="1" chance="1.155" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6674" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6364" min="1" max="1" chance="0.3" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.3" /> <!-- Heaven's Divider -->
+				<item id="960" min="1" max="1" chance="7.065" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6688" min="3" max="9" chance="6.096" /> <!-- Forgotten Blade Edge -->
+				<item id="6696" min="3" max="9" chance="5.225" /> <!-- Heaven's Divider Edge -->
+				<item id="6702" min="32" max="96" chance="3.042" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6701" min="67" max="201" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.0091735" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -2449,6 +2439,7 @@
 		</collision>
 	</npc>
 	<npc id="25640" level="81" type="L2Monster" name="Freedkyilla" title="Hand of Night">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5880" level="2" /> <!-- Vicious Mutilation -->
@@ -2460,7 +2451,7 @@
 		<equipment rhand="13984" /> <!-- rhand: Exclusive to Monsters (Death Slayer_1hs) -->
 		<acquire exp="4650677" sp="1116" />
 		<stats>
-			<vitals hp="440657.534754126" hpRegen="188.168628266824" mp="1846.8" mpRegen="3" />
+			<vitals hp="440658" hpRegen="188.168628266824" mp="1846" mpRegen="3" />
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
@@ -2496,19 +2487,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66.46209716796875">
-					<item id="6680" min="1" max="1" chance="1.531" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6707" min="3" max="9" chance="98.469" /> <!-- Sealed Draconic Leather Armor Part -->
-				</group>
-				<group chance="43.87459945678711">
-					<item id="7575" min="1" max="1" chance="1.2673" /> <!-- Draconic Bow -->
-					<item id="7579" min="3" max="9" chance="98.7327" /> <!-- Draconic Bow Shaft -->
-				</group>
-				<group chance="22.943599700927734">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="6680" min="1" max="1" chance="1.232" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="7575" min="1" max="1" chance="0.3" /> <!-- Draconic Bow -->
+				<item id="960" min="1" max="1" chance="7.094" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6707" min="15" max="45" chance="6.719" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="7579" min="12" max="36" chance="3.085" /> <!-- Draconic Bow Shaft -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008616" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
