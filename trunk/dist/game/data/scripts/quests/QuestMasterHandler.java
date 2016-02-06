@@ -168,6 +168,7 @@ import quests.Q00699_GuardianOfTheSkies.Q00699_GuardianOfTheSkies;
 import quests.Q00700_CursedLife.Q00700_CursedLife;
 import quests.Q00701_ProofOfExistence.Q00701_ProofOfExistence;
 import quests.Q00702_ATrapForRevenge.Q00702_ATrapForRevenge;
+import quests.Q00757_TriolsMovement.Q00757_TriolsMovement;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
@@ -223,6 +224,8 @@ import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
 import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
 import quests.Q10366_RuinsStatusUpdate.Q10366_RuinsStatusUpdate;
 import quests.Q10368_RebellionOfMonsters.Q10368_RebellionOfMonsters;
+import quests.Q10388_ConspiracyBehindDoor.Q10388_ConspiracyBehindDoor;
+import quests.Q10389_TheVoiceOfAuthority.Q10389_TheVoiceOfAuthority;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
 import quests.Q10393_KekropusLetter_AClueCompleted.Q10393_KekropusLetter_AClueCompleted;
 import quests.Q10397_KekropusLetter_ASuspiciousBadge.Q10397_KekropusLetter_ASuspiciousBadge;
@@ -421,6 +424,7 @@ final class QuestMasterHandler
 		Q00700_CursedLife.class,
 		Q00701_ProofOfExistence.class,
 		Q00702_ATrapForRevenge.class,
+		Q00757_TriolsMovement.class,
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
 		Q00903_TheCallOfAntharas.class,
@@ -476,6 +480,8 @@ final class QuestMasterHandler
 		Q10365_SeekerEscort.class,
 		Q10366_RuinsStatusUpdate.class,
 		Q10368_RebellionOfMonsters.class,
+		Q10388_ConspiracyBehindDoor.class,
+		Q10389_TheVoiceOfAuthority.class,
 		Q10390_KekropusLetter.class,
 		Q10393_KekropusLetter_AClueCompleted.class,
 		Q10397_KekropusLetter_ASuspiciousBadge.class,

@@ -49506,3 +49506,8 @@ INSERT INTO `spawnlist` VALUES
 ('19_20', 1, 27529, -4381, 116105, -3344, 0, 0, 0, 45, 0, 0, 0),
 ('19_20', 1, 27529, -4364, 116856, -3336, 0, 0, 63120, 45, 0, 0, 0),
 ('19_20', 1, 27529, -4272, 116160, -3344, 0, 0, 0, 45, 0, 0, 0);
+
+-- Hymn of the Soul
+INSERT INTO `spawnlist` VALUES ('Gludio Area', 1, 34095, -13920, 123009, -3112, 0, 0, 48000, 60, 0, 0, 0); -- Refugee Neti
+INSERT INTO `spawnlist` VALUES ('Oren Area', 1, 34051, 83203, 55347, -1520, 0, 0, 48000, 60, 0, 0, 0); -- Shadai's Disciple Kaysia
+INSERT INTO `spawnlist` VALUES ('Pagan Temple', 1, 33803, -16392, -40120, -10750, 16346, 0, 48000, 60, 0, 0, 0); -- Radzen 
