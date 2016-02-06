@@ -92,47 +92,161 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Creates 250 Enhanced Orichalcum Arrows with increased Atk. Spd. Consumes 1 Crystal (R-grade). --> 
+		<!-- Creates 250 Enhanced Orichalcum Arrows with increased Atk. Spd. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19213" levels="1" name="Polishing Arrows: Atk. Spd.">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="3" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
+		<set name="magicLvl" val="-1" />
+		<set name="mpInitialConsume" val="117" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="reuseDelay" val="60" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="45578" itemCount="250" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Creates 250 Enhanced Orichalcum Bolts with increased Atk. Spd. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19214" levels="1" name="Polishing Bolts: Atk. Spd.">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="3" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
+		<set name="magicLvl" val="-1" />
+		<set name="mpInitialConsume" val="117" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="reuseDelay" val="60" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="45581" itemCount="250" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Creates 250 Enhanced Orichalcum Arrows with increased P. Atk. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19215" levels="1" name="Polishing Arrows: P. Atk.">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="3" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
+		<set name="magicLvl" val="-1" />
+		<set name="mpInitialConsume" val="117" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="reuseDelay" val="60" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="45579" itemCount="250" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Creates 250 Enhanced Orichalcum Bolts with increased P. Atk. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19216" levels="1" name="Polishing Bolts: P. Atk.">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="3" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
+		<set name="magicLvl" val="-1" />
+		<set name="mpInitialConsume" val="117" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="reuseDelay" val="60" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="45582" itemCount="250" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Creates 250 Enhanced Orichalcum Arrows with Additional Hit. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19217" levels="1" name="Polishing Arrows: Added Blow">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="3" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
+		<set name="magicLvl" val="-1" />
+		<set name="mpInitialConsume" val="128" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="reuseDelay" val="60" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="45580" itemCount="250" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Creates 250 Enhanced Orichalcum Bolts with Additional Hit. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19218" levels="1" name="Polishing Bolts: Added Blow">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="3" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
+		<set name="magicLvl" val="-1" />
+		<set name="mpInitialConsume" val="128" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="reuseDelay" val="60" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="45583" itemCount="250" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Recovers HP and removes bad abnormal statuses. --> 
 	<skill id="19219" levels="1" name="Blessing of Tree">

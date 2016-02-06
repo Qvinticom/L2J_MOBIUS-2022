@@ -97,31 +97,156 @@
 	</skill>
 	<!-- For $s1, increases P. Atk. by $s2, P. Def/M. Def. by $s3, and increases Max HP/CP by $s4. Consumes $s5 Soulstones. --> 
 	<skill id="10952" levels="1" name="Survival Instinct">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<!-- lineage2free fixed -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#magicLvl"> 101 </table>
+		<table name="#pAtk"> 1.40 </table>
+		<table name="#pDef"> 1.20 </table>
+		<table name="#mDef"> 1.20 </table>
+		<table name="#maxHp"> 1.20 </table>
+		<table name="#maxCp"> 1.20 </table>
+		<table name="#regHp"> 1.20 </table>
+		<table name="#regCp"> 1.20 </table>
+		<table name="#abnormalLvls"> 1 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="YUL_STANCE" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="1785" /> <!-- Soul Ore -->
+		<set name="hitTime" val="60" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="abnormalTime" val="60" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="pDef" val="#pDef">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="mDef" val="#mDef">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="maxHp" val="#maxHp">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="maxCp" val="#maxCp">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="regHp" val="#regHp">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="regCp" val="#regCp">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<!-- For $s1, increases Atk. Spd. by $s2, Skill Power by $s3, P. Skill Critical Rate by $s4, and Skill Critical Damage by $s5. Consumes $s6 Soulstones. --> 
 	<skill id="10953" levels="1" name="Hunting Instinct">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<!-- lineage2free fixed -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#magicLvl"> 101 </table>
+		<table name="#physicalSkillPower"> 1.20 </table>
+		<table name="#pAtkSpd"> 1.20 </table>
+		<table name="#skillCritical"> 1.20 </table>
+		<table name="#skillCriticalProbability"> 1.40 </table>
+		<table name="#abnormalLvls"> 1 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="YUL_STANCE" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="1785" /> <!-- Soul Ore -->
+		<set name="hitTime" val="60" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="abnormalTime" val="60" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#pAtkSpd">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="physicalSkillPower" val="#physicalSkillPower">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="skillCritical" val="#skillCritical">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="skillCriticalProbability" val="#skillCriticalProbability">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<!-- For $s1, increases Skill Power by $s2, P. Skill Critical Rate by $s3, and Skill Critical Damage by $s4. Consumes $s5 Soulstones. --> 
 	<skill id="10954" levels="1" name="Counter Instinct">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<!-- lineage2free fixed -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#magicLvl"> 101 </table>
+		<table name="#physicalSkillPower"> 1.40 </table>
+		<table name="#skillCritical"> 1.40 </table>
+		<table name="#skillCriticalProbability"> 1.20 </table>
+		<table name="#abnormalLvls"> 1 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="YUL_STANCE" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="1785" /> <!-- Soul Ore -->
+		<set name="hitTime" val="60" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="abnormalTime" val="60" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="#physicalSkillPower">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="skillCritical" val="#skillCritical">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="skillCriticalProbability" val="#skillCriticalProbability">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<!-- For $s1, increases PvP Damage by $s2, and Skill Power by $s3. Consumes $s4 Soulstones. --> 
+	<!-- lineage2free fixed -->
 	<skill id="10955" levels="1" name="Bloody Instinct">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#magicLvl"> 101 </table>
+		<table name="#physicalSkillPower"> 1.20 </table>
+		<table name="#pvpDmg"> 1.20 </table>
+		<table name="#abnormalLvls"> 1 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="YUL_STANCE" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="1785" /> <!-- Soul Ore -->
+		<set name="hitTime" val="60" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="600000" />
+		<set name="abnormalTime" val="60" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="#physicalSkillPower">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+				<mul stat="pvpPhysDmg" val="#pvpDmg">
+					<using kind="CROSSBOW, BOW" />
+				</mul>
+
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases the number of buffs an individual can receive by 1. --> 
 	<skill id="10956" levels="1" name="Divine Expansion">

@@ -466,36 +466,63 @@
 	<skill id="13662" levels="1" name="Orichalcum Arrow - Atk. Spd.">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="100" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.05" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Atk. Spd. by 5%%. --> 
 	<skill id="13663" levels="1" name="Orichalcum Bolt - Atk. Spd.">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="100" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.05" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases P. Atk. by 5%%. --> 
 	<skill id="13664" levels="1" name="Orichalcum Arrow - P. Atk.">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="100" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.05" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases P. Atk. by 5%%. --> 
 	<skill id="13665" levels="1" name="Orichalcum Bolt - P. Atk.">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="100" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.05" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Ignores 30%% of target's P. Def. at a set rate, and inflicts additional damage. --> 
 	<skill id="13666" levels="1" name="Orichalcum Arrow - Additional Hit">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<!-- Ignores 30%% of target's P. Def. at a set rate, and inflicts additional damage. --> 
 	<skill id="13667" levels="1" name="Orichalcum Arrow - Additional Hit">
@@ -508,8 +535,11 @@
 	<skill id="13668" levels="1" name="Orichalcum Bolt - Additional Hit">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<!-- Ignores 30%% of target's P. Def. at a set rate, and inflicts additional damage. --> 
 	<skill id="13669" levels="1" name="Orichalcum Bolt - Additional Hit">
