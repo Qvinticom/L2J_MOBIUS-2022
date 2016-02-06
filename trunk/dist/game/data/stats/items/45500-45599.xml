@@ -1011,74 +1011,117 @@
 	<item id="45578" name="Enhanced Orichalcum Arrow" additionalName="Atk. Spd." type="EtcItem">
 		<!-- Enhanced Orichalcum arrow with + 5% Atk. Spd. Used as arrows for R-grade bows. -->
 		<set name="icon" val="icon.etc_oricalcum_quiver_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="immediate_effect" val="1" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="13662-1" />
+		<set name="for_npc" val="true" />
+
 	</item>
 	<item id="45579" name="Enhanced Orichalcum Arrow" additionalName="P. Atk." type="EtcItem">
 		<!-- Enhanced Orichalcum arrow with + 5% P. Atk. Used as arrows for R-grade bows. -->
 		<set name="icon" val="icon.etc_oricalcum_quiver_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="immediate_effect" val="1" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="13664-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="45580" name="Enhanced Orichalcum Arrow" additionalName="Additional Hit" type="EtcItem">
 		<!-- Enhanced Orichalcum arrow with Additional Hit. Used as arrows for R-grade bows. -->
 		<set name="icon" val="icon.etc_oricalcum_quiver_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="immediate_effect" val="1" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="13666-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="45581" name="Enhanced Orichalcum Bolt" additionalName="Atk. Spd." type="EtcItem">
 		<!-- Enhanced Orichalcum bolt with + 5% Atk. Spd. Used as bolts for R-grade Crossbows. -->
-		<set name="icon" val="icon.etc_oricalcum_bolt_i00" />
+		<set name="icon" val="icon.etc_oricalcum_quiver_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="immediate_effect" val="1" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="13663-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="45582" name="Enhanced Orichalcum Bolt" additionalName="P. Atk." type="EtcItem">
 		<!-- Enhanced Orichalcum bolt with + 5% P. Atk. Used as bolts for R-grade Crossbows. -->
-		<set name="icon" val="icon.etc_oricalcum_bolt_i00" />
+		<set name="icon" val="icon.etc_oricalcum_quiver_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="immediate_effect" val="1" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="13665-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="45583" name="Enhanced Orichalcum Bolt" additionalName="Additional Hit" type="EtcItem">
 		<!-- Enhanced Orichalcum bolt with Additional Hit. Used as bolts for R-grade Crossbows. -->
-		<set name="icon" val="icon.etc_oricalcum_bolt_i00" />
+		<set name="icon" val="icon.etc_oricalcum_quiver_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="BOLT" />
+		<set name="immediate_effect" val="1" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="13668-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="45584" name="Mark of Battle" type="EtcItem">
 		<!-- Proof received for performing well in the Olympiad and the Ceremony of Chaos. Can exchange for a special gift from the Olympiad Manager and the Mysterious Butler in each village. -->
