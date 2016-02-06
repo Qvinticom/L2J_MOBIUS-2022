@@ -590,229 +590,515 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- P. Atk. + $s1 --> 
-	<skill id="13856" levels="1" name="Might">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13856" levels="15" name="Might">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Atk. Spd. + $s1 --> 
-	<skill id="13857" levels="1" name="Fury">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13857" levels="15" name="Fury">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 1.21 1.22 1.23 1.24 1.25 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- P. Critical Rate + $s1 --> 
-	<skill id="13858" levels="1" name="Focus">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13858" levels="15" name="Focus">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 58 64 70 76 82 88 94 100 106 112 118 124 130 136 136 142 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<add stat="critRate" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- P. Critical Damage + $s1 --> 
-	<skill id="13859" levels="1" name="Death">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13859" levels="15" name="Death">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.3 1.4 1.5 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table> 
+		<for>
+			<effect name="Buff">
+				<mul stat="critDmgAdd" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- P. Skill Critical Rate + $s1 --> 
-	<skill id="13860" levels="1" name="Hunter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13860" levels="15" name="Hunter">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table> 
+		<for>
+			<effect name="Buff">
+				<mul stat="skillCriticalProbability" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- P. Skill Critical Damage + $s1 --> 
-	<skill id="13861" levels="1" name="Fire">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13861" levels="15" name="Fire">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="skillCritical" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Max HP + $s1 --> 
-	<skill id="13862" levels="1" name="Body">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13862" levels="15" name="Body">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- M. Atk. + $s1 --> 
-	<skill id="13863" levels="1" name="Empower">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13863" levels="15" name="Empower">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Casting Spd. + $s1 --> 
-	<skill id="13864" levels="1" name="Acumen">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13864" levels="15" name="Acumen">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 1.21 1.22 1.23 1.24 1.25 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- M. Critical Rate + $s1 --> 
-	<skill id="13865" levels="1" name="Wild">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13865" levels="15" name="Wild">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table> 
+		<for>
+			<effect name="Buff">
+				<mul stat="mCritRate" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- M. Critical Damage + $s1 --> 
-	<skill id="13866" levels="1" name="Mystic">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13866" levels="15" name="Mystic">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.3 1.4 1.5 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="mCritPowerAdd" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Max MP + $s1 --> 
-	<skill id="13867" levels="1" name="Soul">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13867" levels="15" name="Soul">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.40 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#stat" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Atk. Spd. + $s1, P. Critical Rate + $s2 --> 
-	<skill id="13868" levels="1" name="Speed Focus">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13868" levels="15" name="Speed Focus">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#stat1"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#stat" />
+				<add stat="critRate" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Atk. Spd. + $s1, P. Critical Damage + $s2 --> 
-	<skill id="13869" levels="1" name="Speed Death">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13869" levels="15" name="Speed Death">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#stat1"> 1.1 1.2 1.2 1.3 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#stat" />
+				<mul stat="critDmgAdd" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Atk. Spd. + $s1, P. Skill Critical Rate + $s2 --> 
-	<skill id="13870" levels="1" name="Speed Hunter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13870" levels="15" name="Speed Hunter">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#stat1"> 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#stat" />
+				<mul stat="skillCriticalProbability" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Atk. Spd. + $s1, P. Skill Critical Damage + $s2 --> 
-	<skill id="13871" levels="1" name="Speed Fire">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13871" levels="15" name="Speed Fire">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#stat1"> 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#stat" />
+				<mul stat="skillCritical" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Atk. Spd. + $s1, Max HP + $s2 --> 
-	<skill id="13872" levels="1" name="Speed Body">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13872" levels="15" name="Speed Body">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#stat" />
+				<mul stat="maxHp" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- P. Critical Rate + $s1 , P. Critical Damage + $s2 --> 
-	<skill id="13873" levels="1" name="Critical Death">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13873" levels="15" name="Critical Death">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
+		<table name="#stat1"> 1.1 1.2 1.2 1.3 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<add stat="critRate" val="#stat" />
+				<mul stat="critDmgAdd" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- P. Critical Rate + $s1, P. Skill Critical Rate + $s2 --> 
-	<skill id="13874" levels="1" name="Critical Hunter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13874" levels="15" name="Critical Hunter">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
+		<table name="#stat1"> 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<add stat="critRate" val="#stat" />
+				<mul stat="skillCriticalProbability" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- P. Critical Rate + $s1, P. Skill Critical Damage + $s2 --> 
-	<skill id="13875" levels="1" name="Critical Fire">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13875" levels="15" name="Critical Fire">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
+		<table name="#stat1"> 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<add stat="critRate" val="#stat" />
+				<mul stat="skillCritical" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- P. Critical Rate + $s1, Max HP + $s2 --> 
-	<skill id="13876" levels="1" name="Critical Body">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13876" levels="15" name="Critical Body">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
+		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<add stat="critRate" val="#stat" />
+				<mul stat="maxHp" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Casting Spd. + $s1, M. Critical Rate + $s2 --> 
-	<skill id="13877" levels="1" name="Acumen Wild">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13877" levels="15" name="Acumen Wild">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17  </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="#stat" />
+				<mul stat="mCritRate" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Casting Spd. + $s1, M. Critical Damage + $s2 --> 
-	<skill id="13878" levels="1" name="Acumen Mystic">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13878" levels="15" name="Acumen Mystic">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#stat1"> 1.1 1.2 1.2 1.3 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table> 
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="#stat" />
+				<mul stat="mCritPowerAdd" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Casting Spd. + $s1, Max MP + $s2 --> 
-	<skill id="13879" levels="1" name="Acumen Soul">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13879" levels="15" name="Acumen Soul">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#stat1"> 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 1.20 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="#stat" />
+				<mul stat="maxMp" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- M. Critical Rate + $s1, M. Critical Damage + $s2 --> 
-	<skill id="13880" levels="1" name="Wid. Mystic">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13880" levels="15" name="Wid. Mystic">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.10 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 </table>
+		<table name="#stat1"> 1.1 1.2 1.2 1.3 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="mCritRate" val="#stat" />
+				<mul stat="mCritPowerAdd" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- M. Critical Rate + $s1, Max MP + $s2 --> 
-	<skill id="13881" levels="1" name="Wid. Soul">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13881" levels="15" name="Wid. Soul">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.10 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 </table>
+		<table name="#stat1"> 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 1.20 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="mCritRate" val="#stat" />
+				<mul stat="maxMp" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Max HP + $s1, Casting Spd. + $s2 --> 
-	<skill id="13882" levels="1" name="HP Acumen">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13882" levels="15" name="HP Acumen">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="#stat" />
+				<mul stat="maxHp" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Max HP + $s1, M. Critical Rate + $s2 --> 
-	<skill id="13883" levels="1" name="HP Wild">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13883" levels="15" name="HP Wild">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.10 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 </table>
+		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="mCritRate" val="#stat" />
+				<mul stat="maxHp" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Max HP + $s1, M. Critical Damage + $s2 --> 
-	<skill id="13884" levels="1" name="HP Mystic">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13884" levels="15" name="HP Mystic">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.1 1.2 1.3 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 </table>
+		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="mCritPowerAdd" val="#stat" />
+				<mul stat="maxHp" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Max HP + $s1, Max MP + $s2 --> 
-	<skill id="13885" levels="1" name="HP Soul">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13885" levels="15" name="HP Soul">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 </table>
+		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#stat" />
+				<mul stat="maxHp" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Max MP + $s1, Atk. Spd. + $s2 --> 
-	<skill id="13886" levels="1" name="MP Fury">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13886" levels="15" name="MP Fury">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#stat"> 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 </table>
+		<table name="#stat1"> 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 1.12 </table>
+		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#stat" />
+				<mul stat="pAtkSpd" val="#stat1" />
+				<mul stat="pvpPhysDmg" val="#pvp" />
+				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Max MP + $s1, P. Critical Rate + $s2 --> 
 	<skill id="13887" levels="1" name="MP Focus">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
+ 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+ 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Max MP + $s1, P. Critical Damage + $s2 --> 
 	<skill id="13888" levels="1" name="MP Death">
