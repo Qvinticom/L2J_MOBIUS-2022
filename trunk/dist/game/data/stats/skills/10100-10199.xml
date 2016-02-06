@@ -179,10 +179,35 @@
 	</skill>
 	<!-- Increases M. Def. by $s1, $s2 Attribute Resistance by $s3, and Debuff Resistance by $s4. Increases party members' M. Def. by $s5, $s6 Attribute Resistance by $s7, and Debuff Resistance by $s8. Only one Knight's Aura can be active at any time. --> 
 	<skill id="10106" levels="1" name="Sentinel's Aura">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="icon" val="icon.skill10106" />
+		<set name="magicLvl" val="85" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
+		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.25" />
+				<add stat="waterRes" val="50" />
+				<add stat="fireRes" val="50" />
+				<add stat="windRes" val="50" />
+				<add stat="earthRes" val="50" />
+				<add stat="darkRes" val="50" />	
+				<add stat="holyRes" val="50" />				
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="25" />
+				<param HOLD="25" />
+				<param SLEEP="25" />
+				<param PARALYZE="25" />
+			</effect>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="10110" skillLevel="1" />
+				<param targetType="PARTY" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases P. Atk. by $s1, Atk. Spd. by $s2, and Speed by $s3. Increases party members' P. Atk. By $s4, Atk. Spd. by $s5, M. Atk. by $s6, Casting Spd. by $s7 and Speed by $s8. Only one Knight's Aura can be active at any time. --> 
 	<skill id="10107" levels="1" name="Templar's Aura">
@@ -207,10 +232,33 @@
 	</skill>
 	<!-- M. Def. + $s1, $s2 Attribute Resistance + $s3, Debuff Resistance + $s4. --> 
 	<skill id="10110" levels="1" name="Sentinel's Aura">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="icon" val="icon.skill10110" />
+		<set name="hitTime" val="500" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
+		<set name="isTriggeredSkill" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.2" />
+				<add stat="waterRes" val="40" />
+				<add stat="fireRes" val="40" />
+				<add stat="windRes" val="40" />
+				<add stat="earthRes" val="40" />
+				<add stat="darkRes" val="40" />	
+				<add stat="holyRes" val="40" />				
+			</effect>
+			<effect name="DefenceTrait">
+				<param SHOCK="20" />
+				<param HOLD="20" />
+				<param SLEEP="20" />
+				<param PARALYZE="20" />
+			</effect>
+		</for>
 	</skill>
 	<!-- P. Atk. + $s1, Atk. Spd. + $s2, M. Atk. + $s3, Casting Spd. + $s4, Speed + $s5. --> 
 	<skill id="10111" levels="1" name="Templar's Aura">

@@ -64,10 +64,28 @@
 	</skill>
 	<!-- Front Critical Rate - 10%%, Side Critical Rate + 10%%, Critical Damage + 10%%, Rear Critical Rate + 20%%, Critical Damage + 20%%. --> 
 	<skill id="10705" levels="1" name="Shadow Walking">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="icon" val="icon.skill10705" />
+		<set name="magicLvl" val="40" />
+		<set name="mpConsume" val="64" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="critDmgPos" val="0.9">
+					<player front="true" />
+				</mul>
+				<mul stat="critDmgPos" val="1.1">
+					<and>
+						<player front="false" />
+						<player behind="false" />
+					</and>
+				</mul>
+				<mul stat="critDmgPos" val="1.2">
+					<player behind="true" />
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10747" levels="1" name="Rogue - Individual Passive">
 		<!-- AUTO GENERATED SKILL -->

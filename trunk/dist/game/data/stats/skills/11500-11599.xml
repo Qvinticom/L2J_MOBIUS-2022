@@ -1361,10 +1361,16 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="power" val="50" />
 		<set name="targetType" val="ONE" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<for>
+			<effect name="DispelByCategory">
+				<param slot="buff" rate="25" max="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11537" levels="10" name="Transform" enchantGroup1="10" enchantGroup2="10">
 	<!-- Source: https://l2wiki.com/Transform_-_Iss_Hierophant -->

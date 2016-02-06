@@ -717,10 +717,50 @@
 	</skill>
 	<!-- Increases P. Atk. By $s2 for $s1 when a spear is equipped. Range of normal attacks increases by $s3 and has a $s4 chance to Stun when striking. Consumes $s5 Soulstones. --> 
 	<skill id="10333" levels="1" name="Winged Spear">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#ench1abnormalTime"> 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#ench2defCritDamage"> 0.99 0.985 0.98 0.975 0.97 0.965 0.96 0.955 0.95 0.945 0.94 0.935 0.93 0.925 0.92 0.915 0.91 0.905 0.90 0.895</table>
+		<table name="#ench3mDef"> 1.01 1.02 1.03 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 </table>
+		<set name="icon" val="icon.skill10333" />
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="74" />
+		<set name="mpConsume" val="64" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->	
+		<set name="reuseDelay" val="300000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.3">
+					<using kind="POLE" />
+				</mul>
+				<add stat="pAtkRange" val="80" />
+			</effect>
+		</for>
+		<cond msgId="113" addName="1">
+			<using kind="POLE" />
+		</cond>
+		<enchant1 name="abnormalTime" val="#ench1abnormalTime" />
+		<enchant2for>
+			<effect name="Buff">
+				<mul stat="defCritDamage" val="#ench2defCritDamage" />
+			</effect>
+		</enchant2for>
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="#ench3mDef" />
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="107" />
+				<param isCritical="false" />
+				<param minDamage="50" chance="1" />
+				<param skillId="10339" skillLevel="1" /> <!-- Punch Drunk -->
+				<param targetType="ONE" />
+				<param allowWeapons="POLE" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases P. Atk. by $s2 for $s1 when a two-handed sword/two-handed blunt weapon is equipped. Attack $s3 enemies at the same time with a regular attack. Consumes $s4 Soulstones. --> 
 	<skill id="10334" levels="1" name="Furious Slasher">
@@ -730,11 +770,53 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Increases P. Atk. by $s2 and P. Critical Damage by $s3 for $s1 when a fist weapon is equipped. Has $s4 chance to decrease Fist Weapon Resistance by $s5 when striking. Consumes $s6 Soulstones. --> 
-	<skill id="10335" levels="1" name="Furious Fist">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+	<skill id="10335" levels="1" name="Furious Fist" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+		<table name="#ench1abnormalTime"> 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#ench2defCritDamage"> 0.99 0.985 0.98 0.975 0.97 0.965 0.96 0.955 0.95 0.945 0.94 0.935 0.93 0.925 0.92 0.915 0.91 0.905 0.90 0.895</table>
+		<table name="#ench3mDef"> 1.01 1.02 1.03 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 </table>
+		<set name="icon" val="icon.skill10335" />
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="74" />
+		<set name="mpConsume" val="64" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->	
+		<set name="reuseDelay" val="300000" />
+		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.3">
+					<using kind="DUALFIST" />
+				</mul>
+				<mul stat="critDmgAdd" val="1.1">
+					<using kind="DUALFIST" />
+				</mul>
+			</effect>
+		</for>
+		<cond msgId="113" addName="1">
+			<using kind="DUALFIST" />
+		</cond>
+		<enchant1 name="abnormalTime" val="#ench1abnormalTime" />
+		<enchant2for>
+			<effect name="Buff">
+				<mul stat="defCritDamage" val="#ench2defCritDamage" />
+			</effect>
+		</enchant2for>
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="#ench3mDef" />
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="107" />
+				<param isCritical="false" />
+				<param minDamage="50" chance="10" />
+				<param skillId="10338" skillLevel="1" /> <!-- Punch Drunk -->
+				<param targetType="ONE" />
+				<param allowWeapons="DUALFIST" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases power when using the Rush Impact. --> 
 	<skill id="10336" levels="1" name="Infinity Rush">
@@ -752,17 +834,39 @@
 	</skill>
 	<!-- Decreases target's resistance to Fist Weapons by 30%%. --> 
 	<skill id="10338" levels="1" name="Punch Drunk">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="icon" val="icon.skill10338" />
+		<set name="abnormalTime" val="10" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="100" />
+		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
+		<set name="staticReuse" val="true" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="DefenceTrait">
+				<param DUALFIST="30" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Stuns target for 3 seconds. --> 
 	<skill id="10339" levels="1" name="Winged Spear - Stun">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="icon" val="icon.skill10339" />
+		<set name="abnormalTime" val="3" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="50" />
+		<set name="isDebuff" val="true" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<!-- Attacks enemies in front with $s1 Power added to P. Atk. If the target is stunned, attacks with $s2 power. Can be used while a sword or blunt weapon is equipped. Consumes $s3 Soulstone. --> 
 	<skill id="10340" levels="3" name="Blade Slasher">
