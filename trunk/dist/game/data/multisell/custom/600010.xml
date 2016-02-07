@@ -4,33 +4,53 @@
 		<npc>-1</npc> <!-- CB -->
 	</npcs>
 	<item>
-		<ingredient id="57" count="250000" />
-		<production id="886" count="2" />
-		<production id="854" count="2" />
-		<production id="119" count="1" />
+		<!-- Adena -->
+		<ingredient count="250000" id="57" />
+		<!-- Ring of Seal -->
+		<production count="2" id="886" />
+		<!-- Earring of Seal -->
+		<production count="2" id="854" />
+		<!-- Necklace of Seal -->
+		<production count="1" id="119" />
 	</item>
 	<item>
-		<ingredient id="57" count="500000" />
-		<production id="873" count="2" />
-		<production id="904" count="2" />
-		<production id="935" count="1" />
+		<!-- Adena -->
+		<ingredient count="500000" id="57" />
+		<!-- Earring of Aid -->
+		<production count="2" id="873" />
+		<!-- Ring of Aid -->
+		<production count="2" id="904" />
+		<!-- Necklace of Aid -->
+		<production count="1" id="935" />
 	</item>
 	<item>
-		<ingredient id="57" count="2500000" />
-		<production id="11584" count="1" />
-		<production id="11585" count="2" />
-		<production id="11586" count="2" />
+		<!-- Adena -->
+		<ingredient count="2500000" id="57" />
+		<!-- Phoenix Necklace -->
+		<production count="1" id="11584" />
+		<!-- Phoenix Ring -->
+		<production count="2" id="11585" />
+		<!-- Phoenix Earring -->
+		<production count="2" id="11586" />
 	</item>
 	<item>
-		<ingredient id="57" count="10000000" />
-		<production id="11596" count="1" />
-		<production id="11597" count="2" />
-		<production id="11598" count="2" />
+		<!-- Adena -->
+		<ingredient count="10000000" id="57" />
+		<!-- Tateossian Necklace -->
+		<production count="1" id="11596" />
+		<!-- Tateossian Ring -->
+		<production count="2" id="11597" />
+		<!-- Tateossian Earring -->
+		<production count="2" id="11598" />
 	</item>
 	<item>
-		<ingredient id="57" count="25000000" />
-		<production id="15717" count="2" />
-		<production id="15718" count="2" />
-		<production id="15719" count="1" />
+		<!-- Adena -->
+		<ingredient count="25000000" id="57" />
+		<!-- Elegia Ring -->
+		<production count="2" id="15717" />
+		<!-- Elegia Earring -->
+		<production count="2" id="15718" />
+		<!-- Elegia Necklace -->
+		<production count="1" id="15719" />
 	</item>
 </list>

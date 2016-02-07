@@ -1,158 +1,264 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
 	<npcs>
 		<npc>-1</npc> <!-- CB -->
 	</npcs>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="15575" count="1" />
-		<production id="15572" count="1" />
-		<production id="15578" count="1" />
-		<production id="15581" count="1" />
-		<production id="15584" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Elegia Breastplate -->
+		<production count="1" id="15575" />
+		<!-- Elegia Helmet -->
+		<production count="1" id="15572" />
+		<!-- Elegia Gaiters -->
+		<production count="1" id="15578" />
+		<!-- Elegia Gauntlets -->
+		<production count="1" id="15581" />
+		<!-- Elegia Boots -->
+		<production count="1" id="15584" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="15576" count="1" />
-		<production id="15573" count="1" />
-		<production id="15579" count="1" />
-		<production id="15582" count="1" />
-		<production id="15585" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Elegia Leather Breastplate -->
+		<production count="1" id="15576" />
+		<!-- Elegia Leather Helmet -->
+		<production count="1" id="15573" />
+		<!-- Elegia Leather Leggings -->
+		<production count="1" id="15579" />
+		<!-- Elegia Leather Gloves -->
+		<production count="1" id="15582" />
+		<!-- Elegia Leather Boots -->
+		<production count="1" id="15585" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="15577" count="1" />
-		<production id="15574" count="1" />
-		<production id="15580" count="1" />
-		<production id="15583" count="1" />
-		<production id="15586" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Elegia Tunic -->
+		<production count="1" id="15577" />
+		<!-- Elegia Circlet -->
+		<production count="1" id="15574" />
+		<!-- Elegia Stockings -->
+		<production count="1" id="15580" />
+		<!-- Elegia Gloves -->
+		<production count="1" id="15583" />
+		<!-- Elegia Shoes -->
+		<production count="1" id="15586" />
 	</item>
 	<item>
-		<ingredient id="57" count="15000000" />
-		<production id="15587" count="1" />
+		<!-- Adena -->
+		<ingredient count="15000000" id="57" />
+		<!-- Elegia Shield -->
+		<production count="1" id="15587" />
 	</item>
 	<item>
-		<ingredient id="57" count="15000000" />
-		<production id="15588" count="1" />
+		<!-- Adena -->
+		<ingredient count="15000000" id="57" />
+		<!-- Elegia Sigil -->
+		<production count="1" id="15588" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="15592" count="1" />
-		<production id="15589" count="1" />
-		<production id="15595" count="1" />
-		<production id="15598" count="1" />
-		<production id="15601" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Vorpal Breastplate -->
+		<production count="1" id="15592" />
+		<!-- Vorpal Helmet -->
+		<production count="1" id="15589" />
+		<!-- Vorpal Gaiters -->
+		<production count="1" id="15595" />
+		<!-- Vorpal Gauntlets -->
+		<production count="1" id="15598" />
+		<!-- Vorpal Boots -->
+		<production count="1" id="15601" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="15594" count="1" />
-		<production id="15591" count="1" />
-		<production id="15597" count="1" />
-		<production id="15600" count="1" />
-		<production id="15603" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Vorpal Tunic -->
+		<production count="1" id="15594" />
+		<!-- Vorpal Circlet -->
+		<production count="1" id="15591" />
+		<!-- Vorpal Stockings -->
+		<production count="1" id="15597" />
+		<!-- Vorpal Gloves -->
+		<production count="1" id="15600" />
+		<!-- Vorpal Shoes -->
+		<production count="1" id="15603" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="15593" count="1" />
-		<production id="15590" count="1" />
-		<production id="15596" count="1" />
-		<production id="15599" count="1" />
-		<production id="15602" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Vorpal Leather Breastplate -->
+		<production count="1" id="15593" />
+		<!-- Vorpal Leather Helmet -->
+		<production count="1" id="15590" />
+		<!-- Vorpal Leather Leggings -->
+		<production count="1" id="15596" />
+		<!-- Vorpal Leather Gloves -->
+		<production count="1" id="15599" />
+		<!-- Vorpal Leather Boots -->
+		<production count="1" id="15602" />
 	</item>
 	<item>
-		<ingredient id="57" count="15000000" />
-		<production id="15604" count="1" />
+		<!-- Adena -->
+		<ingredient count="15000000" id="57" />
+		<!-- Vorpal Shield -->
+		<production count="1" id="15604" />
 	</item>
 	<item>
-		<ingredient id="57" count="15000000" />
-		<production id="15605" count="1" />
+		<!-- Adena -->
+		<ingredient count="15000000" id="57" />
+		<!-- Vorpal Sigil -->
+		<production count="1" id="15605" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="15609" count="1" />
-		<production id="15606" count="1" />
-		<production id="15612" count="1" />
-		<production id="15615" count="1" />
-		<production id="15618" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Moirai Breastplate -->
+		<production count="1" id="15609" />
+		<!-- Moirai Helmet -->
+		<production count="1" id="15606" />
+		<!-- Moirai Gaiters -->
+		<production count="1" id="15612" />
+		<!-- Moirai Gauntlets -->
+		<production count="1" id="15615" />
+		<!-- Moirai Boots -->
+		<production count="1" id="15618" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="15610" count="1" />
-		<production id="15607" count="1" />
-		<production id="15613" count="1" />
-		<production id="15616" count="1" />
-		<production id="15619" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Moirai Leather Breastplate -->
+		<production count="1" id="15610" />
+		<!-- Moirai Leather Helmet -->
+		<production count="1" id="15607" />
+		<!-- Moirai Leather Leggings -->
+		<production count="1" id="15613" />
+		<!-- Moirai Leather Gloves -->
+		<production count="1" id="15616" />
+		<!-- Moirai Leather Boots -->
+		<production count="1" id="15619" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="15611" count="1" />
-		<production id="15608" count="1" />
-		<production id="15614" count="1" />
-		<production id="15617" count="1" />
-		<production id="15620" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Moirai Tunic -->
+		<production count="1" id="15611" />
+		<!-- Moirai Circlet -->
+		<production count="1" id="15608" />
+		<!-- Moirai Stockings -->
+		<production count="1" id="15614" />
+		<!-- Moirai Gloves -->
+		<production count="1" id="15617" />
+		<!-- Moirai Shoes -->
+		<production count="1" id="15620" />
 	</item>
 	<item>
-		<ingredient id="57" count="15000000" />
-		<production id="15621" count="1" />
+		<!-- Adena -->
+		<ingredient count="15000000" id="57" />
+		<!-- Moirai Shield -->
+		<production count="1" id="15621" />
 	</item>
 	<item>
-		<ingredient id="57" count="15000000" />
-		<production id="15622" count="1" />
+		<!-- Adena -->
+		<ingredient count="15000000" id="57" />
+		<!-- Moirai Sigil -->
+		<production count="1" id="15622" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="13432" count="1" />
-		<production id="13438" count="1" />
-		<production id="13439" count="1" />
-		<production id="13440" count="1" />
-		<production id="13137" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Vesper Breastplate -->
+		<production count="1" id="13432" />
+		<!-- Vesper Gaiters -->
+		<production count="1" id="13438" />
+		<!-- Vesper Gauntlets -->
+		<production count="1" id="13439" />
+		<!-- Vesper Boots -->
+		<production count="1" id="13440" />
+		<!-- Vesper Helmet -->
+		<production count="1" id="13137" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="13433" count="1" />
-		<production id="13441" count="1" />
-		<production id="13442" count="1" />
-		<production id="13443" count="1" />
-		<production id="13138" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Vesper Leather Breastplate -->
+		<production count="1" id="13433" />
+		<!-- Vesper Leather Leggings -->
+		<production count="1" id="13441" />
+		<!-- Vesper Leather Gloves -->
+		<production count="1" id="13442" />
+		<!-- Vesper Leather Boots -->
+		<production count="1" id="13443" />
+		<!-- Vesper Leather Helmet -->
+		<production count="1" id="13138" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="13434" count="1" />
-		<production id="13444" count="1" />
-		<production id="13445" count="1" />
-		<production id="13446" count="1" />
-		<production id="13139" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Vesper Tunic -->
+		<production count="1" id="13434" />
+		<!-- Vesper Stockings -->
+		<production count="1" id="13444" />
+		<!-- Vesper Gloves -->
+		<production count="1" id="13445" />
+		<!-- Vesper Shoes -->
+		<production count="1" id="13446" />
+		<!-- Vesper Circlet -->
+		<production count="1" id="13139" />
 	</item>
 	<item>
-		<ingredient id="57" count="15000000" />
-		<production id="13471" count="1" />
+		<!-- Adena -->
+		<ingredient count="15000000" id="57" />
+		<!-- Vesper Shield -->
+		<production count="1" id="13471" />
 	</item>
 	<item>
-		<ingredient id="57" count="15000000" />
-		<production id="12813" count="1" />
+		<!-- Adena -->
+		<ingredient count="15000000" id="57" />
+		<!-- Vesper Sigil -->
+		<production count="1" id="12813" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="13435" count="1" />
-		<production id="13448" count="1" />
-		<production id="13449" count="1" />
-		<production id="13450" count="1" />
-		<production id="13140" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Vesper Noble Breastplate -->
+		<production count="1" id="13435" />
+		<!-- Vesper Noble Gaiters -->
+		<production count="1" id="13448" />
+		<!-- Vesper Noble Gauntlets -->
+		<production count="1" id="13449" />
+		<!-- Vesper Noble Boots -->
+		<production count="1" id="13450" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="13140" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="13436" count="1" />
-		<production id="13451" count="1" />
-		<production id="13452" count="1" />
-		<production id="13453" count="1" />
-		<production id="13141" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Vesper Noble Leather Breastplate -->
+		<production count="1" id="13436" />
+		<!-- Vesper Noble Leather Leggings -->
+		<production count="1" id="13451" />
+		<!-- Vesper Noble Leather Gloves -->
+		<production count="1" id="13452" />
+		<!-- Vesper Noble Leather Boots -->
+		<production count="1" id="13453" />
+		<!-- Vesper Noble Leather Helmet -->
+		<production count="1" id="13141" />
 	</item>
 	<item>
-		<ingredient id="57" count="100000000" />
-		<production id="13437" count="1" />
-		<production id="13454" count="1" />
-		<production id="13455" count="1" />
-		<production id="13456" count="1" />
-		<production id="13142" count="1" />
+		<!-- Adena -->
+		<ingredient count="100000000" id="57" />
+		<!-- Vesper Noble Tunic -->
+		<production count="1" id="13437" />
+		<!-- Vesper Noble Stockings -->
+		<production count="1" id="13454" />
+		<!-- Vesper Noble Gloves -->
+		<production count="1" id="13455" />
+		<!-- Vesper Noble Shoes -->
+		<production count="1" id="13456" />
+		<!-- Vesper Noble Circlet -->
+		<production count="1" id="13142" />
 	</item>
 </list>
