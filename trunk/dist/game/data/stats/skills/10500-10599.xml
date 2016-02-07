@@ -2043,27 +2043,27 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<add stat="critDmg" val="304" />
+				<add stat="critDmgAdd" val="304" />
 				<mul stat="blowRate" val="1.1" />
-				<mul stat="critDmg" val="0.7">
+				<mul stat="critDmgPos" val="0.7">
 					<player front="true" />
 				</mul>
-				<mul stat="critRate" val="1.2">
+				<mul stat="critRatePos" val="1.2">
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="critDmg" val="1.2">
+				<mul stat="critDmgPos" val="1.2">
 					<and>
 						<player front="false" />
 						<player behind="false" />
 					</and>
 				</mul>
-				<mul stat="critRate" val="1.4">
+				<mul stat="critRatePos" val="1.4">
 					<player behind="true" />
 				</mul>
-				<mul stat="critDmg" val="1.4">
+				<mul stat="critDmgPos" val="1.4">
 					<player behind="true" />
 				</mul>
 			</effect>
