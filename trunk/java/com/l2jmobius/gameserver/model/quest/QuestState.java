@@ -824,7 +824,7 @@ public final class QuestState
 	 * @param exp
 	 * @param sp
 	 */
-	public void addExpAndSp(int exp, int sp)
+	public void addExpAndSp(long exp, int sp)
 	{
 		AbstractScript.addExpAndSp(_player, exp, sp);
 		PcCafePointsManager.getInstance().givePcCafePoint(getPlayer(), (long) (exp * Config.RATE_QUEST_REWARD_XP));
