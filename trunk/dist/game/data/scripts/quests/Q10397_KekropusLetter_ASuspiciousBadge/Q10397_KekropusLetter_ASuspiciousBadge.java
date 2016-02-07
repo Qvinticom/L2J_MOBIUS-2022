@@ -16,6 +16,7 @@
  */
 package quests.Q10397_KekropusLetter_ASuspiciousBadge;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.enums.Race;
@@ -153,6 +154,10 @@ public class Q10397_KekropusLetter_ASuspiciousBadge extends Quest implements IBy
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
 		final L2PcInstance player = event.getActiveChar();
 		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
 		{

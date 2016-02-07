@@ -124,25 +124,21 @@ public class Q10746_SeeTheWorld extends Quest
 			}
 			case LEVIAN:
 			{
-				switch (qs.getCond())
+				if (qs.isCond(2))
 				{
-					case 2:
+					giveAdena(player, 43000, true);
+					addExpAndSp(player, 53422, 5);
+					if (player.isMageClass())
 					{
-						giveAdena(player, 43000, true);
-						addExpAndSp(player, 53422, 5);
-						if (player.isMageClass())
-						{
-							giveItems(player, EMISSARY_SUPPORT_BOX_MAGE);
-						}
-						else
-						{
-							giveItems(player, EMISSARY_SUPPORT_BOX_WARRIOR);
-						}
-						showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
-						qs.exitQuest(false, true);
-						htmltext = "30037-01.html";
-						break;
+						giveItems(player, EMISSARY_SUPPORT_BOX_MAGE);
 					}
+					else
+					{
+						giveItems(player, EMISSARY_SUPPORT_BOX_WARRIOR);
+					}
+					showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+					qs.exitQuest(false, true);
+					htmltext = "30037-01.html";
 				}
 				break;
 			}

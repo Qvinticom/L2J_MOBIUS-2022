@@ -16,6 +16,7 @@
  */
 package quests.Q10415_KekropusLetter_WithWisdom;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.enums.Race;
@@ -157,6 +158,10 @@ public class Q10415_KekropusLetter_WithWisdom extends Quest implements IBypassHa
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
 		final L2PcInstance player = event.getActiveChar();
 		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
 		{

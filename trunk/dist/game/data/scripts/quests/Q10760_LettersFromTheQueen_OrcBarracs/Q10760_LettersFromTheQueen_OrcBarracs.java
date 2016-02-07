@@ -16,6 +16,7 @@
  */
 package quests.Q10760_LettersFromTheQueen_OrcBarracs;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.enums.Race;
@@ -193,6 +194,10 @@ public class Q10760_LettersFromTheQueen_OrcBarracs extends Quest implements IByp
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
 		final L2PcInstance player = event.getActiveChar();
 		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() == Race.ERTHEIA))
 		{

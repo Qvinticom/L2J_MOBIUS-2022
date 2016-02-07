@@ -16,6 +16,7 @@
  */
 package quests.Q10769_LettersFromTheQueen_CrumaTower;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.enums.Race;
@@ -46,7 +47,7 @@ public class Q10769_LettersFromTheQueen_CrumaTower extends Quest implements IByp
 	// NPCs
 	private static final int SYLVAIN = 30070;
 	private static final int LORAIN = 30673;
-	// ITEMs
+	// Items
 	private static final ItemHolder SCROLL_OF_ESCAPE_CRUMA_TOWER = new ItemHolder(39594, 1);
 	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 11);
 	private static final ItemHolder EAC = new ItemHolder(952, 1);
@@ -200,6 +201,10 @@ public class Q10769_LettersFromTheQueen_CrumaTower extends Quest implements IByp
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
 		final L2PcInstance player = event.getActiveChar();
 		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() == Race.ERTHEIA))
 		{

@@ -16,6 +16,7 @@
  */
 package quests.Q10751_WindsOfFateEncounters;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.enums.Race;
@@ -363,10 +364,37 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 		return htmltext;
 	}
 	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	{
+		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
+		if ((qs != null) && qs.isStarted() && qs.isCond(6) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		{
+			int kills = qs.getInt(Integer.toString(SKELETON_ARCHER));
+			kills++;
+			qs.set(Integer.toString(SKELETON_ARCHER), kills);
+			
+			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+			log.addNpcString(NpcStringId.KILL_SKELETONS, kills);
+			killer.sendPacket(log);
+			
+			if (kills >= 5)
+			{
+				addSpawn(TELESHA, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 50000);
+				showOnScreenMsg(killer, NpcStringId.CHECK_ON_TELESHA, ExShowScreenMessage.TOP_CENTER, 4500);
+			}
+		}
+		return super.onKill(npc, killer, isSummon);
+	}
+	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
 		final L2PcInstance player = event.getActiveChar();
 		if ((player.getLevel() >= MIN_LEVEL) && (player.getRace() == Race.ERTHEIA))
 		{
@@ -421,29 +449,5 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 	public String[] getBypassList()
 	{
 		return TP_COMMANDS;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
-	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && qs.isCond(6) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
-		{
-			int kills = qs.getInt(Integer.toString(SKELETON_ARCHER));
-			kills++;
-			qs.set(Integer.toString(SKELETON_ARCHER), kills);
-			
-			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			log.addNpcString(NpcStringId.KILL_SKELETONS, kills);
-			killer.sendPacket(log);
-			
-			if (kills >= 5)
-			{
-				addSpawn(TELESHA, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 50000);
-				showOnScreenMsg(killer, NpcStringId.CHECK_ON_TELESHA, ExShowScreenMessage.TOP_CENTER, 4500);
-			}
-		}
-		
-		return super.onKill(npc, killer, isSummon);
 	}
 }
