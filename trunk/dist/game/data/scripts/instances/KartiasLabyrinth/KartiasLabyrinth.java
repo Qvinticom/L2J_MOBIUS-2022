@@ -84,7 +84,6 @@ public final class KartiasLabyrinth extends AbstractInstance
 		BOSSES.add(25883);
 		BOSSES.add(25884);
 	}
-	
 	private static final List<Integer> MONSTERS = new ArrayList<>();
 	static
 	{
@@ -107,7 +106,6 @@ public final class KartiasLabyrinth extends AbstractInstance
 		MONSTERS.add(19236);
 		MONSTERS.add(19237);
 	}
-	
 	// Locations
 	private static final Location START_LOC = new Location(-107481, -10435, -12064);
 	private static final Location VANGUARD_SPAWN_LOC = new Location(-109032, -10440, -11949, 32800);
@@ -232,9 +230,11 @@ public final class KartiasLabyrinth extends AbstractInstance
 						}
 					}
 					final KartiaWorld world = new KartiaWorld();
+					enterInstance(player, world, "KartiasLabyrinthIncarnationOfGreedZellakaParty.xml", PARTY_85_TEMPLATE_ID);
 					for (L2PcInstance member : player.getParty().getMembers())
 					{
-						enterInstance(member, world, "KartiasLabyrinthIncarnationOfGreedZellakaParty.xml", PARTY_85_TEMPLATE_ID);
+						world.addAllowed(member.getObjectId());
+						member.teleToLocation(player, true);
 					}
 					htmltext = "33647-5.htm";
 				}
@@ -256,9 +256,11 @@ public final class KartiasLabyrinth extends AbstractInstance
 						}
 					}
 					final KartiaWorld world = new KartiaWorld();
+					enterInstance(player, world, "KartiasLabyrinthIncarnationOfJealousyPellineParty.xml", PARTY_90_TEMPLATE_ID);
 					for (L2PcInstance member : player.getParty().getMembers())
 					{
-						enterInstance(member, world, "KartiasLabyrinthIncarnationOfJealousyPellineParty.xml", PARTY_90_TEMPLATE_ID);
+						world.addAllowed(member.getObjectId());
+						member.teleToLocation(player, true);
 					}
 					htmltext = "33647-5.htm";
 				}
@@ -280,9 +282,11 @@ public final class KartiasLabyrinth extends AbstractInstance
 						}
 					}
 					final KartiaWorld world = new KartiaWorld();
+					enterInstance(player, world, "KartiasLabyrinthIncarnationOfGluttonyKaliosParty.xml", PARTY_95_TEMPLATE_ID);
 					for (L2PcInstance member : player.getParty().getMembers())
 					{
-						enterInstance(member, world, "KartiasLabyrinthIncarnationOfGluttonyKaliosParty.xml", PARTY_95_TEMPLATE_ID);
+						world.addAllowed(member.getObjectId());
+						member.teleToLocation(player, true);
 					}
 					htmltext = "33647-5.htm";
 				}
