@@ -62,7 +62,7 @@ final class GiantsCave extends AbstractNpcAI
 			{
 				if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
 				{
-					addAttackPlayerDesire((L2Npc) characters, player);
+					addAttackDesire((L2Npc) characters, player);
 				}
 			}
 		}

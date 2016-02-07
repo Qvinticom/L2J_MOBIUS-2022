@@ -21,7 +21,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
@@ -338,9 +337,7 @@ public class EnergySeeds extends AbstractNpcAI
 				if (getRandom(100) < 50)
 				{
 					final L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[0][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[0].length)]);
-					mob.setRunning();
-					mob.addDamageHate(player, 0, 999);
-					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+					addAttackDesire(mob, player);
 				}
 				break;
 			}
@@ -349,9 +346,7 @@ public class EnergySeeds extends AbstractNpcAI
 				if (getRandom(100) < 50)
 				{
 					final L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[1][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[1].length)]);
-					mob.setRunning();
-					mob.addDamageHate(player, 0, 999);
-					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+					addAttackDesire(mob, player);
 				}
 				break;
 			}
@@ -360,9 +355,7 @@ public class EnergySeeds extends AbstractNpcAI
 				if (getRandom(100) < 50)
 				{
 					final L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[2][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[2].length)]);
-					mob.setRunning();
-					mob.addDamageHate(player, 0, 999);
-					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+					addAttackDesire(mob, player);
 				}
 				break;
 			}

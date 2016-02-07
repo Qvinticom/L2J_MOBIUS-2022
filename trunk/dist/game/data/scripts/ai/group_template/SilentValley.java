@@ -126,14 +126,14 @@ final class SilentValley extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(BLAZE.getSkill());
-				addAttackPlayerDesire(npc, player);
+				addAttackDesire(npc, player);
 				break;
 			}
 			default:
 			{
 				if (isSummon)
 				{
-					addAttackPlayerDesire(npc, player);
+					addAttackDesire(npc, player);
 				}
 			}
 		}
@@ -164,11 +164,11 @@ final class SilentValley extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(BLAZE.getSkill());
-				addAttackPlayerDesire(npc, player);
+				addAttackDesire(npc, player);
 			}
 			else if (creature.isAffectedBySkill(BETRAYAL.getSkillId()))
 			{
-				addAttackPlayerDesire(npc, player);
+				addAttackDesire(npc, player);
 			}
 		}
 		return super.onSeeCreature(npc, creature, isSummon);

@@ -16,7 +16,6 @@
  */
 package gracia.AI.NPC.ZealotOfShilen;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -61,9 +60,7 @@ public final class ZealotOfShilen extends AbstractNpcAI
 			{
 				if (character.isMonster() && !character.isDead() && !((L2Attackable) character).isDecayed())
 				{
-					npc.setRunning();
-					((L2Attackable) npc).addDamageHate(character, 0, 999);
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character, null);
+					addAttackDesire(npc, character);
 				}
 			}
 		}

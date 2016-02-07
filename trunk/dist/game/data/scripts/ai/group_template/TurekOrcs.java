@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -106,9 +105,7 @@ final class TurekOrcs extends AbstractNpcAI
 		if (eventName.equals("WARNING") && !receiver.isDead() && (receiver.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK) && (reference != null) && (reference.getActingPlayer() != null) && !reference.getActingPlayer().isDead())
 		{
 			receiver.getVariables().set("state", 3);
-			receiver.setIsRunning(true);
-			((L2Attackable) receiver).addDamageHate(reference.getActingPlayer(), 0, 99999);
-			receiver.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, reference.getActingPlayer());
+			addAttackDesire(receiver, reference.getActingPlayer());
 		}
 		return super.onEventReceived(eventName, sender, receiver, reference);
 	}
@@ -117,7 +114,7 @@ final class TurekOrcs extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final L2Npc newSpawn = addSpawn(getRandomBoolean() ? CHERTUBA_MIRAGE : CHERTUBA_ILLUSION, npc.getLocation(), false, 300000); // 5 minute despawn time
-		((L2MonsterInstance) newSpawn).addDamage(killer, 1, null);
+		addAttackDesire(newSpawn, killer);
 		showOnScreenMsg(killer, NpcStringId.A_POWERFUL_MONSTER_HAS_COME_TO_FACE_YOU, ExShowScreenMessage.TOP_CENTER, 4500);
 		return super.onKill(npc, killer, isSummon);
 	}

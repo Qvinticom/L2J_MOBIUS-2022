@@ -161,9 +161,7 @@ public class Q00450_GraveRobberRescue extends Quest
 				htmltext = null;
 				
 				final L2Attackable monster = (L2Attackable) addSpawn(WARRIOR_MON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 600000);
-				monster.setRunning();
-				monster.addDamageHate(player, 0, 999);
-				monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+				addAttackDesire(monster, player);
 				showOnScreenMsg(player, NpcStringId.THE_GRAVE_ROBBER_WARRIOR_HAS_BEEN_FILLED_WITH_DARK_ENERGY_AND_IS_ATTACKING_YOU, 5, 5000);
 			}
 		}

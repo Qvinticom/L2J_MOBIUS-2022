@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -297,9 +296,7 @@ final class BeastFarm extends AbstractNpcAI
 			
 			// register the player in the feedinfo for the mob that just spawned
 			FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
-			nextNpc.setRunning();
-			nextNpc.addDamageHate(player, 0, 99999);
-			nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+			addAttackDesire(nextNpc, player);
 			
 			player.setTarget(nextNpc);
 		}
@@ -363,9 +360,7 @@ final class BeastFarm extends AbstractNpcAI
 				if (growthLevel == 0)
 				{
 					FEED_INFO.remove(objectId);
-					npc.setRunning();
-					((L2Attackable) npc).addDamageHate(caster, 0, 1);
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
+					addAttackDesire(npc, caster);
 				}
 				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}

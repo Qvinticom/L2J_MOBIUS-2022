@@ -84,9 +84,7 @@ public final class IceQueensCastle extends AbstractInstance
 				{
 					if ((character.getId() == ARCHERY_KNIGHT) && !character.isDead() && !((L2Attackable) character).isDecayed())
 					{
-						npc.setIsRunning(true);
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character);
-						((L2Attackable) npc).addDamageHate(character, 0, 999999);
+						addAttackDesire(npc, character, 99999);
 					}
 				}
 				startQuestTimer("ATTACK_KNIGHT", 3000, npc, null);
@@ -145,9 +143,7 @@ public final class IceQueensCastle extends AbstractInstance
 			{
 				if ((character.getId() == ARCHERY_KNIGHT) && !character.isDead() && !((L2Attackable) character).isDecayed())
 				{
-					npc.setIsRunning(true);
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character);
-					((L2Attackable) npc).addDamageHate(character, 0, 999999);
+					addAttackDesire(npc, character, 99999);
 					npc.setScriptValue(1);
 					startQuestTimer("ATTACK_KNIGHT", 5000, npc, null);
 				}

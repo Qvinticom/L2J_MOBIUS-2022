@@ -16,10 +16,8 @@
  */
 package ai.group_template;
 
-import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -91,9 +89,7 @@ final class WarriorFishingBlock extends AbstractNpcAI
 				{
 					final L2PcInstance target = obj.getActingPlayer();
 					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)], target.getName());
-					((L2Attackable) npc).addDamageHate(target, 0, 2000);
-					npc.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, target);
-					npc.addAttackerToAttackByList(target);
+					addAttackDesire(npc, target);
 					
 					startQuestTimer("DESPAWN", DESPAWN_TIME * 1000, npc, target);
 				}

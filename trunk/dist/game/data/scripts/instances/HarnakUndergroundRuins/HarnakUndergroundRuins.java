@@ -286,7 +286,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 						world.waveNpcId = npcId;
 						for (L2Npc spawnedNpc : spawnedNpcs)
 						{
-							addAttackPlayerDesire(spawnedNpc, player);
+							addAttackDesire(spawnedNpc, player);
 						}
 						world.wave++;
 					}
@@ -303,7 +303,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					world.spawnedNpc.addAll(spawnedNpcs);
 					for (L2Npc spawnedNpc : spawnedNpcs)
 					{
-						addAttackPlayerDesire(spawnedNpc, player);
+						addAttackDesire(spawnedNpc, player);
 					}
 					world.wave++;
 				}
@@ -320,7 +320,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					world.spawnedNpc.addAll(spawnedNpcs);
 					for (L2Npc spawnedNpc : spawnedNpcs)
 					{
-						addAttackPlayerDesire(spawnedNpc, player);
+						addAttackDesire(spawnedNpc, player);
 					}
 					final List<L2Npc> powersources = spawnGroup("power_source", world.getInstanceId());
 					for (L2Npc powersource : powersources)
@@ -395,7 +395,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					List<L2Npc> spawnedNpcs = spawnGroup("third_room_" + world.waveNpcId, world.getInstanceId());
 					for (L2Npc spawnedNpc : spawnedNpcs)
 					{
-						addAttackPlayerDesire(spawnedNpc, player);
+						addAttackDesire(spawnedNpc, player);
 					}
 					spawnedNpcs = spawnGroup("seal", world.getInstanceId());
 					for (L2Npc spawnedNpc : spawnedNpcs)
@@ -712,7 +712,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 						{
 							for (L2Npc livingNpc : world.spawnedNpc)
 							{
-								addAttackPlayerDesire(livingNpc, player);
+								addAttackDesire(livingNpc, player);
 							}
 						}
 						break;

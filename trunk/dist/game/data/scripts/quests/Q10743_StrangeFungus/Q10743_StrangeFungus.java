@@ -147,7 +147,7 @@ public class Q10743_StrangeFungus extends Quest
 					final int killCount = qs.getInt(KILL_VAR) + 1;
 					if (killCount >= 3)
 					{
-						addAttackPlayerDesire(addSpawn(EVOLVED_GROWLER, npc.getLocation()), killer);
+						addAttackDesire(addSpawn(EVOLVED_GROWLER, npc.getLocation()), killer);
 						qs.set(KILL_VAR, 0);
 					}
 					else

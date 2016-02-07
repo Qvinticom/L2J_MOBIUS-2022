@@ -16,7 +16,6 @@
  */
 package quests.Q00193_SevenSignsDyingMessage;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -164,9 +163,7 @@ public final class Q00193_SevenSignsDyingMessage extends Quest
 					startQuestTimer("heal", 30000 - getRandom(20000), npc, player);
 					final L2MonsterInstance monster = (L2MonsterInstance) addSpawn(SHILENS_EVIL_THOUGHTS, 82425, 47232, -3216, 0, false, 0, false);
 					monster.broadcastPacket(new NpcSay(monster.getObjectId(), ChatType.NPC_GENERAL, monster.getId(), NpcStringId.YOU_ARE_NOT_THE_OWNER_OF_THAT_ITEM));
-					monster.setRunning();
-					monster.addDamageHate(player, 0, 999);
-					monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+					addAttackDesire(monster, player);
 					startQuestTimer("despawn", 300000, monster, null);
 				}
 				break;

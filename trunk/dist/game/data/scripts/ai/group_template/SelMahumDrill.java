@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.util.Util;
@@ -209,7 +208,7 @@ final class SelMahumDrill extends AbstractNpcAI
 		{
 			if (!ch.isInCombat() && ch.isMonster() && (((L2Npc) ch).getSpawn().getName() == npc.getSpawn().getName()))
 			{
-				((L2MonsterInstance) ch).addDamageHate(attacker, 0, 1000);
+				addAttackDesire((L2Npc) ch, attacker);
 			}
 		}
 		if ((getRandom(10) < 1) && (Util.contains(MAHUM_SOLDIERS, npc.getId())))

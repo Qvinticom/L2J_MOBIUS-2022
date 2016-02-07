@@ -132,8 +132,7 @@ final class PrimevalIsle extends AbstractNpcAI
 		}
 		if (npc.isInCombat())
 		{
-			final L2Attackable mob = (L2Attackable) npc;
-			final L2Character target = mob.getMostHated();
+			final L2Character target = ((L2Attackable) npc).getMostHated();
 			if (((npc.getCurrentHp() / npc.getMaxHp()) * 100) < 60)
 			{
 				if (skill.getId() == SELFBUFF1.getSkillId())
@@ -142,9 +141,7 @@ final class PrimevalIsle extends AbstractNpcAI
 					if ((target != null))
 					{
 						npc.setTarget(target);
-						mob.setIsRunning(true);
-						mob.addDamageHate(target, 0, 555);
-						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+						addAttackDesire(npc, player);
 					}
 				}
 			}
@@ -156,9 +153,7 @@ final class PrimevalIsle extends AbstractNpcAI
 					if ((target != null))
 					{
 						npc.setTarget(target);
-						mob.setIsRunning(true);
-						mob.addDamageHate(target, 0, 555);
-						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+						addAttackDesire(npc, player);
 					}
 				}
 				else if (skill.getId() == SELFBUFF2.getSkillId())
@@ -167,9 +162,7 @@ final class PrimevalIsle extends AbstractNpcAI
 					if ((target != null))
 					{
 						npc.setTarget(target);
-						mob.setIsRunning(true);
-						mob.addDamageHate(target, 0, 555);
-						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+						addAttackDesire(npc, player);
 					}
 				}
 			}
@@ -215,7 +208,7 @@ final class PrimevalIsle extends AbstractNpcAI
 					{
 						npc.setTarget(player);
 						npc.doCast(LONGRANGEDMAGIC1.getSkill());
-						addAttackPlayerDesire(npc, player);
+						addAttackDesire(npc, player);
 					}
 				}
 				break;
@@ -330,7 +323,7 @@ final class PrimevalIsle extends AbstractNpcAI
 					if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
 					{
 						final L2Attackable monster = (L2Attackable) characters;
-						addAttackPlayerDesire(monster, playable);
+						addAttackDesire(monster, playable);
 					}
 				}
 			}

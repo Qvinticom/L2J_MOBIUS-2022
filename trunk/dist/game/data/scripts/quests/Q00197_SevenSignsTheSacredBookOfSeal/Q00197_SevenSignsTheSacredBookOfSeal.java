@@ -16,7 +16,6 @@
  */
 package quests.Q00197_SevenSignsTheSacredBookOfSeal;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -171,9 +170,7 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP).addStringParameter(player.getName()));
 					final L2MonsterInstance monster = (L2MonsterInstance) addSpawn(SHILENS_EVIL_THOUGHTS, 152520, -57502, -3408, 0, false, 0, false);
 					monster.broadcastPacket(new NpcSay(monster.getObjectId(), ChatType.NPC_GENERAL, monster.getId(), NpcStringId.YOU_ARE_NOT_THE_OWNER_OF_THAT_ITEM));
-					monster.setRunning();
-					monster.addDamageHate(player, 0, 999);
-					monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+					addAttackDesire(monster, player);
 					startQuestTimer("despawn", 300000, monster, null);
 				}
 				break;

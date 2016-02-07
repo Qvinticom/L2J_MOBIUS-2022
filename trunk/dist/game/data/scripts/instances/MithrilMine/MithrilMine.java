@@ -100,9 +100,7 @@ public final class MithrilMine extends AbstractInstance
 					{
 						final L2Attackable spawnedMob = (L2Attackable) addSpawn(MITHRIL_MILLIPEDE, loc, false, 0, false, world.getInstanceId());
 						spawnedMob.setScriptValue(1);
-						spawnedMob.setIsRunning(true);
-						spawnedMob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc);
-						spawnedMob.addDamageHate(npc, 0, 999999);
+						addAttackDesire(spawnedMob, npc, 99999);
 					}
 				}
 				break;

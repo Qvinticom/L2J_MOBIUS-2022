@@ -97,7 +97,7 @@ final class LairOfAntharas extends AbstractNpcAI
 					final L2Npc newKnight = addSpawn(DRAGON_KNIGHT2, npc, false, 0, true);
 					npc.deleteMe();
 					broadcastNpcSay(newKnight, ChatType.NPC_SHOUT, NpcStringId.THOSE_WHO_SET_FOOT_IN_THIS_PLACE_SHALL_NOT_LEAVE_ALIVE);
-					addAttackPlayerDesire(newKnight, killer);
+					addAttackDesire(newKnight, killer);
 				}
 				break;
 			}
@@ -108,7 +108,7 @@ final class LairOfAntharas extends AbstractNpcAI
 					final L2Npc eliteKnight = addSpawn(ELITE_DRAGON_KNIGHT, npc, false, 0, true);
 					npc.deleteMe();
 					broadcastNpcSay(eliteKnight, ChatType.NPC_SHOUT, NpcStringId.IF_YOU_WISH_TO_SEE_HELL_I_WILL_GRANT_YOU_YOUR_WISH);
-					addAttackPlayerDesire(eliteKnight, killer);
+					addAttackDesire(eliteKnight, killer);
 				}
 				break;
 			}

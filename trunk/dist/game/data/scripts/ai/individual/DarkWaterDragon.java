@@ -20,7 +20,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -233,9 +232,7 @@ final class DarkWaterDragon extends AbstractNpcAI
 	public void spawnShade(L2Character attacker, int npcId, int x, int y, int z)
 	{
 		final L2Npc shade = addSpawn(npcId, x, y, z, 0, false, 0);
-		shade.setRunning();
-		((L2Attackable) shade).addDamageHate(attacker, 0, 999);
-		shade.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
+		addAttackDesire(shade, attacker);
 	}
 	
 	public static void main(String[] args)

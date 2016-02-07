@@ -189,7 +189,7 @@ public class Q10742_AFurryFriend extends Quest
 		{
 			if (getRandomBoolean())
 			{
-				addAttackPlayerDesire(addSpawn(KIKU, player.getLocation(), true, 120000), player);
+				addAttackDesire(addSpawn(KIKU, player.getLocation(), true, 120000), player);
 				showOnScreenMsg(player, NpcStringId.RICKY_IS_NOT_HERE_NTRY_SEARCHING_ANOTHER_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 4500);
 				htmltext = "33995-02.html";
 			}

@@ -706,9 +706,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 									for (int i = 0; i < 3; i++)
 									{
 										final L2Attackable breath = (L2Attackable) addSpawn(BREATH, npc.getLocation(), true, 0, false, world.getInstanceId());
-										breath.setIsRunning(true);
-										breath.addDamageHate(mob.getMostHated(), 0, 999);
-										breath.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, mob.getMostHated());
+										addAttackDesire(breath, mob.getMostHated());
 										startQuestTimer("BLIZZARD", 20000, breath, null);
 										world.spawnedMobs.add(breath);
 									}
@@ -1098,9 +1096,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 							final L2Attackable breath = (L2Attackable) addSpawn(BREATH, npc.getLocation(), false, 0, false, world.getInstanceId());
 							if (player != null)
 							{
-								breath.setIsRunning(true);
-								breath.addDamageHate(player, 0, 999);
-								breath.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+								addAttackDesire(breath, player);
 							}
 							else
 							{
@@ -1344,9 +1340,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 		final L2PcInstance target = (!players.isEmpty()) ? players.get(0) : null;
 		if (target != null)
 		{
-			mob.addDamageHate(target, 0, 999);
-			mob.setIsRunning(true);
-			mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+			addAttackDesire(mob, target);
 		}
 		else
 		{

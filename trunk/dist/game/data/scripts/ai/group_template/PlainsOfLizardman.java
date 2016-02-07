@@ -106,7 +106,7 @@ final class PlainsOfLizardman extends AbstractNpcAI
 					final L2Npc monster = (L2Npc) target;
 					npc.setTarget(monster);
 					npc.doCast(STUN_EFFECT.getSkill());
-					addAttackPlayerDesire(monster, player);
+					addAttackDesire(monster, player);
 				}
 			}
 			npc.doDie(player);
@@ -174,7 +174,7 @@ final class PlainsOfLizardman extends AbstractNpcAI
 		// Tanta Guard
 		if (getRandom(1000) == 0)
 		{
-			addAttackPlayerDesire(addSpawn(TANTA_GUARD, npc), killer);
+			addAttackDesire(addSpawn(TANTA_GUARD, npc), killer);
 		}
 		
 		// Invisible buff npc

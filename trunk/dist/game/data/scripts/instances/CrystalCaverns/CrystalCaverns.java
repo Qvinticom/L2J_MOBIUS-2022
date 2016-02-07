@@ -34,7 +34,6 @@ import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -1101,9 +1100,7 @@ public final class CrystalCaverns extends AbstractInstance
 					for (int i = 0; i < 10; i++)
 					{
 						final L2Npc copy = addSpawn(TEARS_COPY, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, attacker.getInstanceId());
-						copy.setRunning();
-						((L2Attackable) copy).addDamageHate(target, 0, 99999);
-						copy.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+						addAttackDesire(copy, target);
 						copy.setCurrentHp(nowHp);
 						world.copys.add(copy);
 					}

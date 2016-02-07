@@ -129,7 +129,7 @@ final class StakatoNest extends AbstractNpcAI
 					for (int i = 0; i < 3; i++)
 					{
 						final L2Npc spawned = addSpawn(STAKATO_CAPTAIN, monster, true);
-						addAttackPlayerDesire(spawned, killer);
+						addAttackDesire(spawned, killer);
 					}
 				}
 				break;
@@ -152,7 +152,7 @@ final class StakatoNest extends AbstractNpcAI
 					for (int i = 0; i < 3; i++)
 					{
 						final L2Npc spawned = addSpawn(STAKATO_GUARD, monster, true);
-						addAttackPlayerDesire(spawned, killer);
+						addAttackDesire(spawned, killer);
 					}
 				}
 				break;
@@ -193,7 +193,7 @@ final class StakatoNest extends AbstractNpcAI
 		{
 			npc.doDie(caster);
 			final L2Npc spawned = addSpawn(STAKATO_CHIEF, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);
-			addAttackPlayerDesire(spawned, caster);
+			addAttackDesire(spawned, caster);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
@@ -225,7 +225,7 @@ final class StakatoNest extends AbstractNpcAI
 			npc.getSpawn().decreaseCount(npc);
 			npc.deleteMe();
 			final L2Npc spawned = addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
-			addAttackPlayerDesire(spawned, player);
+			addAttackDesire(spawned, player);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

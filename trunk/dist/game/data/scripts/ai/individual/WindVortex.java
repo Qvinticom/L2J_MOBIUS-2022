@@ -17,7 +17,6 @@
 package ai.individual;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -44,7 +43,7 @@ final class WindVortex extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final L2Npc newSpawn = addSpawn(getRandomBoolean() ? IMMENSE_WINDIMA : GIANT_WINDIMA, npc.getLocation(), false, 300000); // 5 minute despawn time
-		((L2MonsterInstance) newSpawn).addDamage(killer, 1, null);
+		addAttackDesire(newSpawn, killer);
 		showOnScreenMsg(killer, NpcStringId.A_POWERFUL_MONSTER_HAS_COME_TO_FACE_YOU, ExShowScreenMessage.TOP_CENTER, 4500);
 		return super.onKill(npc, killer, isSummon);
 	}

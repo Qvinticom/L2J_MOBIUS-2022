@@ -81,7 +81,7 @@ final class PlainsOfDion extends AbstractNpcAI
 				if (obj.isMonster() && Util.contains(DELU_LIZARDMEN, obj.getId()) && !obj.isAttackingNow() && !obj.isDead() && GeoData.getInstance().canSeeTarget(npc, obj))
 				{
 					final L2Npc monster = (L2Npc) obj;
-					addAttackPlayerDesire(monster, player);
+					addAttackDesire(monster, player);
 					broadcastNpcSay(monster, ChatType.NPC_GENERAL, MONSTERS_ASSIST_MSG[getRandom(3)]);
 				}
 			}

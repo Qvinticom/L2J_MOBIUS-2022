@@ -182,15 +182,15 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 				{
 					giveItems(player, BLITZ_WYRM_EGG, 3);
 					qs.setMemoState(qs.getMemoState() + 100);
-					addAttackPlayerDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
-					addAttackPlayerDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
 					startQuestTimer("DESPAWN", 10000, npc, player);
 					htmltext = event;
 				}
 				else if (qs.isMemoState(2100) || qs.isMemoState(2111) || qs.isMemoState(2110) || qs.isMemoState(2101))
 				{
-					addAttackPlayerDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
-					addAttackPlayerDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
 					startQuestTimer("DESPAWN", 10000, npc, player);
 					htmltext = "30761-03.html";
 				}
@@ -203,15 +203,15 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 					giveItems(player, BLITZ_WYRM_EGG, 3);
 					giveItems(player, MIST_DRAKES_EGG, 4);
 					qs.setMemoState(qs.getMemoState() + 10);
-					addAttackPlayerDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
-					addAttackPlayerDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
 					startQuestTimer("DESPAWN", 10000, npc, player);
 					htmltext = event;
 				}
 				else if (qs.isMemoState(2100) || qs.isMemoState(2111) || qs.isMemoState(2011) || qs.isMemoState(2110))
 				{
-					addAttackPlayerDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
-					addAttackPlayerDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
 					startQuestTimer("DESPAWN", 10000, npc, player);
 					htmltext = "30762-03.html";
 				}

@@ -174,7 +174,7 @@ final class DragonValley extends AbstractNpcAI
 				{
 					final L2Playable playable = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
 					final L2Npc minion = addSpawn(DRAKOS_ASSASSIN, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), true, 0, true);
-					addAttackPlayerDesire(minion, playable);
+					addAttackDesire(minion, playable);
 				}
 			}
 		}
@@ -283,12 +283,12 @@ final class DragonValley extends AbstractNpcAI
 			final L2Playable attacker = isSummon ? player.getServitors().values().stream().findFirst().orElse(player.getPet()) : player;
 			final L2Npc ghost1 = addSpawn(EXPLODING_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
 			ghost1.getVariables().set("playable", attacker);
-			addAttackPlayerDesire(ghost1, attacker);
+			addAttackDesire(ghost1, attacker);
 			val++;
 			if ((val < 2) && (getRandomBoolean()))
 			{
 				final L2Npc ghost2 = addSpawn(WRATHFUL_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 20, npc.getHeading(), false, 0, false);
-				addAttackPlayerDesire(ghost2, attacker);
+				addAttackDesire(ghost2, attacker);
 				val++;
 			}
 			npc.setScriptValue(val);

@@ -20,7 +20,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -476,9 +475,7 @@ final class FeedableBeasts extends AbstractNpcAI
 			
 			// register the player in the feedinfo for the mob that just spawned
 			FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
-			nextNpc.setRunning();
-			nextNpc.addDamageHate(player, 0, 99999);
-			nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+			addAttackDesire(nextNpc, player);
 		}
 	}
 	
@@ -501,9 +498,7 @@ final class FeedableBeasts extends AbstractNpcAI
 				
 				// register the player in the feedinfo for the mob that just spawned
 				FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
-				nextNpc.setRunning();
-				nextNpc.addDamageHate(player, 0, 99999);
-				nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+				addAttackDesire(nextNpc, player);
 			}
 		}
 		return super.onAdvEvent(event, npc, player);

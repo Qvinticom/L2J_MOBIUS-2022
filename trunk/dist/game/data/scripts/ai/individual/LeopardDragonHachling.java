@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -69,7 +68,7 @@ final class LeopardDragonHachling extends AbstractNpcAI
 				{
 					final L2Npc leopard = addSpawn(LEOPARD_DRAGON, npc.getLocation(), true, 300000); // 5 minute despawn time
 					leopard.broadcastPacket(new NpcSay(leopard.getObjectId(), ChatType.NPC_GENERAL, LEOPARD_DRAGON, NpcStringId.I_M_GOING_TO_TRANSFORM_WITH_THE_POWER_OF_THE_VORTEX_YOU_JUST_WATCH));
-					((L2MonsterInstance) leopard).addDamage(player, 1, null);
+					addAttackDesire(leopard, player);
 				}
 				cancelQuestTimer("MOVE_TO_TRANSFORM", npc, player);
 				npc.deleteMe();

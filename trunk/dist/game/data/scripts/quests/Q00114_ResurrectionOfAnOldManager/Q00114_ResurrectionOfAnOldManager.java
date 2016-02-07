@@ -16,7 +16,6 @@
  */
 package quests.Q00114_ResurrectionOfAnOldManager;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -193,9 +192,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				{
 					golem = (L2Attackable) addSpawn(GUARDIAN, 96977, -110625, -3280, 0, false, 0);
 					golem.broadcastPacket(new NpcSay(golem.getObjectId(), ChatType.NPC_GENERAL, golem.getId(), NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE).addStringParameter(player.getName()));
-					golem.setRunning();
-					golem.addDamageHate(player, 0, 999);
-					golem.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+					addAttackDesire(golem, player);
 					st.set("spawned", "1");
 					startQuestTimer("golem_despawn", 300000, null, player);
 				}

@@ -19,7 +19,6 @@ package ai.group_template;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
 
 import ai.npc.AbstractNpcAI;
 
@@ -52,7 +51,7 @@ final class YeSagira extends AbstractNpcAI
 				}
 				if (nearby.isMonster())
 				{
-					((L2QuestGuardInstance) npc).addDamage(nearby, 1, null);
+					addAttackDesire(npc, nearby);
 					break;
 				}
 			}

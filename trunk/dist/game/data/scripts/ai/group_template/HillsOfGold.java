@@ -18,7 +18,6 @@ package ai.group_template;
 
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 import ai.npc.AbstractNpcAI;
@@ -70,7 +69,7 @@ final class HillsOfGold extends AbstractNpcAI
 				}
 				if (nearby.isMonster() && ((nearby.getId() == GOLEM_OF_REPAIRS) || (nearby.getId() == EXCAVATOR_GOLEM) || (nearby.getId() == DRILL_GOLEM)))
 				{
-					((L2MonsterInstance) npc).addDamage(nearby, 1, null);
+					addAttackDesire(npc, nearby);
 					break;
 				}
 			}
@@ -83,13 +82,13 @@ final class HillsOfGold extends AbstractNpcAI
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		final L2Npc mob1 = addSpawn(SPICULA_ELITE_GUARD, npc.getX(), npc.getY(), npc.getZ(), attacker.getHeading() + 32500, true, npc.getSpawn().getRespawnDelay());
-		((L2MonsterInstance) mob1).addDamage(attacker, 1, null);
+		addAttackDesire(mob1, attacker);
 		final L2Npc mob2 = addSpawn(SPICULA_ELITE_GUARD, npc.getX(), npc.getY(), npc.getZ(), attacker.getHeading() + 32500, true, npc.getSpawn().getRespawnDelay());
-		((L2MonsterInstance) mob2).addDamage(attacker, 1, null);
+		addAttackDesire(mob2, attacker);
 		final L2Npc mob3 = addSpawn(SPICULA_ELITE_GUARD, npc.getX(), npc.getY(), npc.getZ(), attacker.getHeading() + 32500, true, npc.getSpawn().getRespawnDelay());
-		((L2MonsterInstance) mob3).addDamage(attacker, 1, null);
+		addAttackDesire(mob3, attacker);
 		final L2Npc mob4 = addSpawn(SPICULA_ELITE_GUARD, npc.getX(), npc.getY(), npc.getZ(), attacker.getHeading() + 32500, true, npc.getSpawn().getRespawnDelay());
-		((L2MonsterInstance) mob4).addDamage(attacker, 1, null);
+		addAttackDesire(mob4, attacker);
 		npc.deleteMe();
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

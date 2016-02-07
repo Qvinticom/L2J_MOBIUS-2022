@@ -21,7 +21,6 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -100,9 +99,7 @@ final class Anais extends AbstractNpcAI
 					b.setDisplayEffect(1);
 					b.setIsRunning(false);
 					final L2Npc ward = addSpawn(GRAIL_WARD, new Location(b.getX(), b.getY(), b.getZ()), true, 0);
-					((L2Attackable) ward).addDamageHate(_nextTarget, 0, 999);
-					ward.setIsRunning(true);
-					ward.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _nextTarget, null);
+					addAttackDesire(ward, _nextTarget);
 					startQuestTimer("GUARD_ATTACK", 1000, ward, _nextTarget, true);
 					startQuestTimer("SUICIDE", 20000, ward, null);
 					ward.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _nextTarget);

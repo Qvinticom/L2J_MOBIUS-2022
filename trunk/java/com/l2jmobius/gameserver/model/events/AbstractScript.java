@@ -3181,13 +3181,13 @@ public abstract class AbstractScript implements INamable
 	}
 	
 	/**
-	 * Monster is running and attacking the playable.
+	 * Monster is running and attacking the character.
 	 * @param npc the NPC that performs the attack
-	 * @param playable the player
+	 * @param target the target of the attack
 	 */
-	protected void addAttackPlayerDesire(L2Npc npc, L2Playable playable)
+	protected void addAttackDesire(L2Npc npc, L2Character target)
 	{
-		addAttackPlayerDesire(npc, playable, 999);
+		addAttackDesire(npc, target, 999);
 	}
 	
 	/**
@@ -3196,7 +3196,7 @@ public abstract class AbstractScript implements INamable
 	 * @param target the target of the attack
 	 * @param desire the desire to perform the attack
 	 */
-	protected void addAttackPlayerDesire(L2Npc npc, L2Playable target, int desire)
+	protected void addAttackDesire(L2Npc npc, L2Character target, int desire)
 	{
 		if (npc instanceof L2Attackable)
 		{

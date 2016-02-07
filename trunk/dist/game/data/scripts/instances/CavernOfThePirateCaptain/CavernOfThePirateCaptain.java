@@ -476,7 +476,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		if ((player != null) && (npcId != ZAKEN_60) && (npcId != ZAKEN_83))
 		{
 			final L2Attackable mob = (L2Attackable) addSpawn(npcId, ROOM_DATA[roomId - 1][0] + getRandom(350), ROOM_DATA[roomId - 1][1] + getRandom(350), ROOM_DATA[roomId - 1][2], 0, false, 0, false, world.getInstanceId());
-			addAttackPlayerDesire(mob, player);
+			addAttackDesire(mob, player);
 			return mob;
 		}
 		return (L2Attackable) addSpawn(npcId, ROOM_DATA[roomId - 1][0], ROOM_DATA[roomId - 1][1], ROOM_DATA[roomId - 1][2], 0, false, 0, false, world.getInstanceId());
