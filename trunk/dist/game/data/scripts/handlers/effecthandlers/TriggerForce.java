@@ -52,6 +52,7 @@ public final class TriggerForce extends AbstractEffect
 	private static final int PARTY_SOLIDARITY = 1955;
 	private static final int RAGE_AURA = 10029;
 	private static final int CHALLENGE_AURA = 10031;
+	private static final int SENTINEL_AURA = 10110;
 	private static final int IRON_AURA = 10033;
 	private static final int RESISTANCE_AURA = 10035;
 	private static final int RECOVERY_AURA = 10037;
@@ -168,7 +169,7 @@ public final class TriggerForce extends AbstractEffect
 					{
 						_skill.getSkill().applyEffects(effector, member);
 					}
-					else if ((_skill.getSkillId() != CHALLENGE_AURA) && (_skill.getSkillId() != IRON_AURA) && (_skill.getSkillId() != RESISTANCE_AURA) && (_skill.getSkillId() != RECOVERY_AURA) && (_skill.getSkillId() != SPIRIT_AURA))
+					else if ((_skill.getSkillId() != SENTINEL_AURA) && (_skill.getSkillId() != CHALLENGE_AURA) && (_skill.getSkillId() != IRON_AURA) && (_skill.getSkillId() != RESISTANCE_AURA) && (_skill.getSkillId() != RECOVERY_AURA) && (_skill.getSkillId() != SPIRIT_AURA))
 					{
 						_skill.getSkill().applyEffects(effector, effector);
 					}
@@ -274,6 +275,11 @@ public final class TriggerForce extends AbstractEffect
 			effector.getEffectList().remove(true, effector.getEffectList().getBuffInfoBySkillId(skillId + 1));
 		}
 		
+		if ((effector.getEffectList().getBuffInfoBySkillId(skillId) == null) && (effector.getEffectList().getBuffInfoBySkillId(skillId + 4) != null))
+		{
+			effector.getEffectList().remove(true, effector.getEffectList().getBuffInfoBySkillId(skillId + 4));
+		}
+		
 		if (effector.getParty() != null)
 		{
 			for (L2PcInstance member : _affectedMembers)
@@ -281,6 +287,10 @@ public final class TriggerForce extends AbstractEffect
 				if (member.getEffectList().getBuffInfoBySkillId(skillId + 1) != null)
 				{
 					member.getEffectList().remove(true, member.getEffectList().getBuffInfoBySkillId(skillId + 1));
+				}
+				if (member.getEffectList().getBuffInfoBySkillId(skillId + 4) != null)
+				{
+					member.getEffectList().remove(true, member.getEffectList().getBuffInfoBySkillId(skillId + 4));
 				}
 			}
 		}
