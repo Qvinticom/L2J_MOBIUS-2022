@@ -45,21 +45,6 @@ import instances.AbstractInstance;
  */
 public final class HarnakUndergroundRuins extends AbstractInstance
 {
-	class HuRWorld extends InstanceWorld
-	{
-		int wave = 0;
-		int currentNpc = 0;
-		int waveNpcId = 0;
-		int maximalDefenseCounter = 0;
-		int timerCount = 0;
-		int enabledSeal = 0;
-		final Set<L2Npc> spawnedNpc = Collections.newSetFromMap(new ConcurrentHashMap<L2Npc, Boolean>());
-		boolean openingPlayed = false;
-		boolean harnakMessage1 = false;
-		boolean harnakMessage2 = false;
-		boolean harnakMessage3 = false;
-	}
-	
 	// NPCs
 	private static final int HADEL = 33344;
 	private static final int KRAKIA_BATHUS = 27437;
@@ -97,6 +82,21 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	private static final int FAILED_ENDING = 48;
 	private static final int DOOR_ONE = 16240100;
 	private static final int DOOR_TWO = 16240102;
+	
+	class HuRWorld extends InstanceWorld
+	{
+		int wave = 0;
+		int currentNpc = 0;
+		int waveNpcId = 0;
+		int maximalDefenseCounter = 0;
+		int timerCount = 0;
+		int enabledSeal = 0;
+		final Set<L2Npc> spawnedNpc = Collections.newSetFromMap(new ConcurrentHashMap<L2Npc, Boolean>());
+		boolean openingPlayed = false;
+		boolean harnakMessage1 = false;
+		boolean harnakMessage2 = false;
+		boolean harnakMessage3 = false;
+	}
 	
 	public HarnakUndergroundRuins()
 	{
@@ -714,8 +714,6 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 							{
 								addAttackPlayerDesire(livingNpc, player);
 							}
-							
-							world.setStatus(0);
 						}
 						break;
 					}
