@@ -158,8 +158,7 @@ public class MultiSellChoose extends L2GameClientPacket
 				}
 				
 				final ArrayList<Ingredient> ingredientsList = new ArrayList<>(entry.getIngredients().size());
-				// Generate a list of distinct ingredients and counts in order to check if the correct item-counts
-				// are possessed by the player
+				// Generate a list of distinct ingredients and counts in order to check if the correct item-counts are possessed by the player
 				boolean newIng;
 				for (Ingredient e : entry.getIngredients())
 				{
@@ -193,7 +192,7 @@ public class MultiSellChoose extends L2GameClientPacket
 					}
 				}
 				
-				// now check if the player has sufficient items in the inventory to cover the ingredients' expences
+				// now check if the player has sufficient items in the inventory to cover the ingredient expenses
 				for (Ingredient e : ingredientsList)
 				{
 					if ((e.getItemCount() * _amount) > Integer.MAX_VALUE)
@@ -268,7 +267,7 @@ public class MultiSellChoose extends L2GameClientPacket
 							}
 							else
 							{
-								// for non-stackable items, one of two scenaria are possible:
+								// for non-stackable items, one of two scenarios are possible:
 								// a) list maintains enchantment: get the instances that exactly match the requested enchantment level
 								// b) list does not maintain enchantment: get the instances with the LOWEST enchantment level
 								
@@ -343,7 +342,7 @@ public class MultiSellChoose extends L2GameClientPacket
 										{
 											for (L2ItemInstance item : inventoryContents)
 											{
-												if (item.getEnchantLevel() < itemToTake.getEnchantLevel())
+												if ((item.getEnchantLevel() < itemToTake.getEnchantLevel()) && (item.getEnchantLevel() >= e.getEnchantLevel()))
 												{
 													itemToTake = item;
 													// nothing will have enchantment less than 0. If a zero-enchanted
