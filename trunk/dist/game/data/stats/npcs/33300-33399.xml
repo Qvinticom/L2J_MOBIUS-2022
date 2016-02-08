@@ -75,7 +75,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="33303" level="85" type="L2Npc" name="First Warp Device of Harnak">
+	<npc id="33303" level="85" type="L2Teleporter" name="First Warp Device of Harnak">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -100,7 +100,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="33304" level="85" type="L2Npc" name="Second Warp Device of Harnak">
+	<npc id="33304" level="85" type="L2Teleporter" name="Second Warp Device of Harnak">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -125,7 +125,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="33305" level="85" type="L2Npc" name="Harnak's Soul Circle">
+	<npc id="33305" level="85" type="L2Teleporter" name="Harnak's Soul Circle">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -150,7 +150,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="33306" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33306" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -176,7 +176,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33307" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33307" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -201,7 +201,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33308" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33308" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -226,7 +226,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33309" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33309" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -251,7 +251,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33310" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33310" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -276,7 +276,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33311" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33311" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -301,7 +301,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33312" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33312" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -326,7 +326,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33313" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33313" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -351,33 +351,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33314" level="85" type="L2Npc" name="Altar of Souls">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>CONSTRUCT</race>
-		<stats>
-			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
-			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
-			</attribute>
-			<speed>
-				<walk ground="1" />
-				<run ground="50" />
-			</speed>
-			<hitTime>500</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="2" />
-			<skill id="14121" level="1" />
-		</skillList>
-		<collision>
-			<radius normal="20" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="33315" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33314" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -403,7 +377,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33316" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33315" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -429,7 +403,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33317" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33316" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -455,7 +429,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33318" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33317" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -481,7 +455,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33319" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33318" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -507,7 +481,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33320" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33319" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -533,7 +507,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33321" level="85" type="L2Npc" name="Altar of Souls">
+	<npc id="33320" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -559,7 +533,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33322" level="85" type="L2Npc" name="Prison of Souls">
+	<npc id="33321" level="85" type="L2Teleporter" name="Altar of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -585,7 +559,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33323" level="85" type="L2Npc" name="Prison of Souls">
+	<npc id="33322" level="85" type="L2Teleporter" name="Prison of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -611,7 +585,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33324" level="85" type="L2Npc" name="Prison of Souls">
+	<npc id="33323" level="85" type="L2Teleporter" name="Prison of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -637,7 +611,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33325" level="85" type="L2Npc" name="Prison of Souls">
+	<npc id="33324" level="85" type="L2Teleporter" name="Prison of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -663,7 +637,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33326" level="85" type="L2Npc" name="Prison of Souls">
+	<npc id="33325" level="85" type="L2Teleporter" name="Prison of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -689,7 +663,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33327" level="85" type="L2Npc" name="Prison of Souls">
+	<npc id="33326" level="85" type="L2Teleporter" name="Prison of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -715,7 +689,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33328" level="85" type="L2Npc" name="Prison of Souls">
+	<npc id="33327" level="85" type="L2Teleporter" name="Prison of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
@@ -741,7 +715,33 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33329" level="85" type="L2Npc" name="Prison of Souls">
+	<npc id="33328" level="85" type="L2Teleporter" name="Prison of Souls">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats>
+			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="50" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="14121" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="33329" level="85" type="L2Teleporter" name="Prison of Souls">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
