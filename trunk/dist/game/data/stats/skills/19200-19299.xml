@@ -312,8 +312,8 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Increases Dagger/Dual Dagger Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ores. --> 
-	<skill id="19228" levels="1" name="Song of Thief" enchantGroup1="20">
-		<table name="#ench1abnormalTime"> 31 32 33 34 35 36 37 38 39 40 40.5 41 41.5 42 42.5 43 43.5 44 44.5 45</table>
+	<skill id="19228" levels="1" name="Song of Thief" enchantGroup1="10"> <!-- enchantGroup1="10" -->
+		<table name="#ench1abnormalTime"> 31 32 33 34 35 36 37 38 39 40 </table> <!-- 40.5 41 41.5 42 42.5 43 43.5 44 44.5 45 -->
 		<set name="icon" val="icon.skill19228" />
 		<set name="magicLvl" val="89" />
 		<set name="targetType" val="PARTY" />
