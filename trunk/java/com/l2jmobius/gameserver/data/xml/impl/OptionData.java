@@ -95,12 +95,12 @@ public class OptionData implements IXmlReader
 								}
 								case "active_skill":
 								{
-									op.setActiveSkill(new SkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level")));
+									op.addActiveSkill(new SkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level")));
 									break;
 								}
 								case "passive_skill":
 								{
-									op.setPassiveSkill(new SkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level")));
+									op.addPassiveSkill(new SkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level")));
 									break;
 								}
 								case "attack_skill":

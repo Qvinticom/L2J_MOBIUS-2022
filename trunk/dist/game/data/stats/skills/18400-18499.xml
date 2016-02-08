@@ -314,27 +314,113 @@
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
+		<table name="#mDef"> 0 9 10 11 12 13 14 15 16 17 18 </table>
+		<table name="#pDef"> 0 29 30 31 34 37 40 43 46 49 52 </table>
+		<table name="#def"> 0 0 0 0 1.05 1.06 1.08 1.10 1.12 1.15 </table>
+		<table name="#STR"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#DEX"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#CON"> 0 0 0 1 2 2 3 3 4 4 </table>
+		<table name="#INT"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#WIT"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#MEN"> 0 0 0 1 2 2 3 3 4 4 </table>
+		<table name="#runSpd"> 0 0 0 7 7 7 7 7 7 7</table>
+		<table name="#maxHp"> 0 0 0 510 520 531 536 541 547 552 </table>
+		<table name="#maxMp"> 0 0 0 510 520 531 536 541 547 552 </table>
+		<table name="#element"> 0 0 0 6 12 18 24 30 36 42 </table>
+		<table name="#absorbDam" > 0 0 0 0 0 1.08 1.12 1.16 1.20 1.25 </table>
+		<table name="#reflect" > 0 0 0 0 0 0 1.07 1.09 1.12 1.15 </table>
+		<for>
+			<effect name="Buff">
+			    <add stat="mDef" val="#mDef" />
+			    <add stat="pDef" val="#pDef" />
+				<add stat="STR" val="#STR" />
+				<add stat="DEX" val="#DEX" />
+				<add stat="CON" val="#CON" />
+				<add stat="INT" val="#INT" />
+				<add stat="WIT" val="#WIT" />
+				<add stat="MEN" val="#MEN" />
+				<mul stat="pDef" val="#def" />
+				<add stat="runSpd" val="#runSpd" />
+				<add stat="maxHp" val="#maxHp" />
+				<add stat="maxMp" val="#maxMp" />
+				<add stat="darkRes" val="#element" />
+				<add stat="holyRes" val="#element" />
+				<add stat="windRes" val="#element" />
+				<add stat="earthRes" val="#element" />
+				<add stat="waterRes" val="#element" />
+				<add stat="fireRes" val="#element" />
+				<mul stat="pvpPhysDef" val="#absorbDam" />
+				<mul stat="pvpPhysSkillsDef" val="#absorbDam" />
+				<mul stat="reflectSkillPhysic" val="#reflect" />
+			</effect>
+		</for>
 	</skill>
 	<!-- M. Def. + $s1. --> 
 	<skill id="18445" levels="1" name="Magical Reflect Shirt Enchant Effect">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
+		<table name="#mDef"> 0 9 10 11 12 13 14 15 16 17 18 </table>
+		<table name="#pDef"> 0 29 30 31 34 37 40 43 46 49 52 </table>
+		<table name="#def"> 0 0 0 0 1.05 1.06 1.08 1.10 1.12 1.15 </table>
+		<table name="#STR"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#DEX"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#CON"> 0 0 0 1 2 2 3 3 4 4 </table>
+		<table name="#INT"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#WIT"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#MEN"> 0 0 0 1 2 2 3 3 4 4 </table>
+		<table name="#runSpd"> 0 0 0 7 7 7 7 7 7 7</table>
+		<table name="#maxHp"> 0 0 0 510 520 531 536 541 547 552 </table>
+		<table name="#maxMp"> 0 0 0 510 520 531 536 541 547 552 </table>
+		<table name="#element"> 0 0 0 6 12 18 24 30 36 42 </table>
+		<table name="#absorbDam" > 0 0 0 0 0 1.08 1.12 1.16 1.20 1.25 </table>
+		<table name="#reflect" > 0 0 0 0 0 0 1.07 1.09 1.12 1.15 </table>
+		<for>
+			<effect name="Buff">
+			    <add stat="mDef" val="#mDef" />
+			    <add stat="pDef" val="#pDef" />
+				<add stat="STR" val="#STR" />
+				<add stat="DEX" val="#DEX" />
+				<add stat="CON" val="#CON" />
+				<add stat="INT" val="#INT" />
+				<add stat="WIT" val="#WIT" />
+				<add stat="MEN" val="#MEN" />
+				<mul stat="pDef" val="#def" />
+				<add stat="runSpd" val="#runSpd" />
+				<add stat="maxHp" val="#maxHp" />
+				<add stat="maxMp" val="#maxMp" />
+				<add stat="darkRes" val="#element" />
+				<add stat="holyRes" val="#element" />
+				<add stat="windRes" val="#element" />
+				<add stat="earthRes" val="#element" />
+				<add stat="waterRes" val="#element" />
+				<add stat="fireRes" val="#element" />
+				<mul stat="pvpMagicalDef" val="#absorbDam" />
+				<mul stat="reflectSkillMagic" val="#reflect" />
+			</effect>
+		</for>
 	</skill>
-	<!-- M. Def. + 8. --> 
 	<skill id="18446" levels="1" name="Reflect Shirt Basic Effect">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			    <add stat="mDef" val="8" />
+				<add stat="pDef" val="28" />
+			</effect>
+		</for>
 	</skill>
-	<!-- M. Def. + $s1. --> 
 	<skill id="18447" levels="1" name="Reflect Shirt Basic Effect">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			    <add stat="mDef" val="8" />
+				<add stat="pDef" val="28" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Summon Piero. --> 
 	<skill id="18448" levels="1" name="Summon Piero">

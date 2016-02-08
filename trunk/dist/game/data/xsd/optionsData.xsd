@@ -74,7 +74,7 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="active_skill" minOccurs="0">
+							<xs:element name="active_skill" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="id" use="required">
 										<xs:simpleType>
@@ -94,7 +94,7 @@
 									</xs:attribute>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="passive_skill" minOccurs="0">
+							<xs:element name="passive_skill" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="id" use="required">
 										<xs:simpleType>
@@ -114,35 +114,7 @@
 									</xs:attribute>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="attack_skill" minOccurs="0">
-								<xs:complexType>
-									<xs:attribute name="id" use="required">
-										<xs:simpleType>
-											<xs:restriction base="xs:positiveInteger">
-												<xs:minInclusive value="1" />
-												<xs:maxInclusive value="65535" />
-											</xs:restriction>
-										</xs:simpleType>
-									</xs:attribute>
-									<xs:attribute name="level" use="required">
-										<xs:simpleType>
-											<xs:restriction base="xs:positiveInteger">
-												<xs:minInclusive value="1" />
-												<xs:maxInclusive value="99" />
-											</xs:restriction>
-										</xs:simpleType>
-									</xs:attribute>
-									<xs:attribute name="chance" use="required">
-										<xs:simpleType>
-											<xs:restriction base="xs:decimal">
-												<xs:minInclusive value="1.0" />
-												<xs:maxInclusive value="100.0" />
-											</xs:restriction>
-										</xs:simpleType>
-									</xs:attribute>
-								</xs:complexType>
-							</xs:element>
-							<xs:element name="critical_skill" minOccurs="0">
+							<xs:element name="attack_skill" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="id" use="required">
 										<xs:simpleType>
@@ -170,7 +142,35 @@
 									</xs:attribute>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="magic_skill" minOccurs="0">
+							<xs:element name="critical_skill" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="id" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="65535" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="level" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:positiveInteger">
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="99" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="chance" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:decimal">
+												<xs:minInclusive value="1.0" />
+												<xs:maxInclusive value="100.0" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="magic_skill" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="id" use="required">
 										<xs:simpleType>

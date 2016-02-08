@@ -37,8 +37,8 @@ public class Options
 	private final int _id;
 	private final List<FuncTemplate> _funcs = new ArrayList<>();
 	
-	private SkillHolder _activeSkill = null;
-	private SkillHolder _passiveSkill = null;
+	private final List<SkillHolder> _activeSkills = new ArrayList<>();
+	private final List<SkillHolder> _passiveSkills = new ArrayList<>();
 	
 	private final List<OptionsSkillHolder> _activationSkills = new ArrayList<>();
 	
@@ -87,32 +87,32 @@ public class Options
 	
 	public boolean hasActiveSkill()
 	{
-		return _activeSkill != null;
+		return !_activeSkills.isEmpty();
 	}
 	
-	public SkillHolder getActiveSkill()
+	public List<SkillHolder> getActiveSkill()
 	{
-		return _activeSkill;
+		return _activeSkills;
 	}
 	
-	public void setActiveSkill(SkillHolder holder)
+	public void addActiveSkill(SkillHolder holder)
 	{
-		_activeSkill = holder;
+		_activeSkills.add(holder);
 	}
 	
 	public boolean hasPassiveSkill()
 	{
-		return _passiveSkill != null;
+		return !_passiveSkills.isEmpty();
 	}
 	
-	public SkillHolder getPassiveSkill()
+	public List<SkillHolder> getPassiveSkill()
 	{
-		return _passiveSkill;
+		return _passiveSkills;
 	}
 	
-	public void setPassiveSkill(SkillHolder holder)
+	public void addPassiveSkill(SkillHolder holder)
 	{
-		_passiveSkill = holder;
+		_passiveSkills.add(holder);
 	}
 	
 	public boolean hasActivationSkills()
@@ -164,13 +164,19 @@ public class Options
 		}
 		if (hasActiveSkill())
 		{
-			addSkill(player, getActiveSkill().getSkill());
-			player.sendDebugMessage("Adding active skill: " + getActiveSkill());
+			for (SkillHolder holder : _activeSkills)
+			{
+				addSkill(player, holder.getSkill());
+				player.sendDebugMessage("Adding active skill: " + holder);
+			}
 		}
 		if (hasPassiveSkill())
 		{
-			addSkill(player, getPassiveSkill().getSkill());
-			player.sendDebugMessage("Adding passive skill: " + getPassiveSkill());
+			for (SkillHolder holder : _passiveSkills)
+			{
+				addSkill(player, holder.getSkill());
+				player.sendDebugMessage("Adding passive skill: " + holder);
+			}
 		}
 		if (hasActivationSkills())
 		{
@@ -193,13 +199,20 @@ public class Options
 		}
 		if (hasActiveSkill())
 		{
-			player.removeSkill(getActiveSkill().getSkill(), false, false);
-			player.sendDebugMessage("Removing active skill: " + getActiveSkill());
+			for (SkillHolder holder : _activeSkills)
+			{
+				player.removeSkill(holder.getSkill(), false, false);
+				player.sendDebugMessage("Removing active skill: " + holder);
+			}
 		}
 		if (hasPassiveSkill())
 		{
-			player.removeSkill(getPassiveSkill().getSkill(), false, true);
-			player.sendDebugMessage("Removing passive skill: " + getPassiveSkill());
+			for (SkillHolder holder : _passiveSkills)
+			{
+				player.removeSkill(holder.getSkill(), false, true);
+				player.sendDebugMessage("Removing passive skill: " + holder);
+			}
+			
 		}
 		if (hasActivationSkills())
 		{

@@ -196,6 +196,38 @@
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DefenceTrait">
+				<param TURN_STONE="50" />
+			</effect>
+			<effect name="AttackTrait">
+				<param TURN_STONE="50" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param KNOCKDOWN="40" />
+			</effect>
+			<effect name="AttackTrait">
+				<param KNOCKDOWN="40" />
+			</effect>
+			<effect name="AttackTrait">
+				<param SLEEP="50" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param SLEEP="50" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="critDmg" val="0.10" />
+				<mul stat="mCritPower" val="0.10" />
+				<!--<mul stat="mAbnormalReflect" val="0.10" />
+				<mul stat="pAbnormalReflect" val="0.10" />-->
+				<add stat="windRes" val="30" />
+				<add stat="darkRes" val="20" />
+				<mul stat="reflectSkillMagic" val="0.10" />
+				<add stat="runSpd" val="5" />
+				<add stat="DEX" val="3" />
+				<add stat="WIT" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13525" levels="1" name="Blessed Lindvior's Earring">
 		<!-- AUTO GENERATED SKILL -->
@@ -477,6 +509,12 @@
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="reuseDelay" val="7200000" />
+		<set name="abnormalTime" val="5" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="KNOCKDOWN,10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13543" levels="1" name="NC Messenger's Hat">
 		<!-- AUTO GENERATED SKILL -->
@@ -605,27 +643,93 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13561" levels="1" name="Basic Effect: Shiny Elemental Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 8. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+			    <add stat="mDef" val="8" />
+				<add stat="pDef" val="28" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13562" levels="10" name="Enchant Effect: Shiny Elemental Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 9. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#mDef"> 9 10 11 12 13 14 15 16 17 18 </table>
+		<table name="#pDef"> 29 30 31 34 37 40 43 46 49 52 </table>
+		<table name="#reflectDamageRes"> 0 0 0 0 0 5 5 5 5 5 </table>
+		<table name="#STR"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#DEX"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#CON"> 0 0 0 1 2 2 3 3 4 4 </table>
+		<table name="#INT"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#WIT"> 0 0 0 1 2 3 3 4 4 4 </table>
+		<table name="#MEN"> 0 0 0 1 2 2 3 3 4 4 </table>
+		<table name="#runSpd"> 0 0 0 7 7 7 7 7 7 7</table>
+		<table name="#maxHp"> 0 0 0 510 520 531 536 541 547 552 </table>
+		<table name="#maxMp"> 0 0 0 510 520 531 536 541 547 552 </table>
+		<table name="#mpConsume" > 0 0 0 0 1.03 1.03 1.03 1.03 1.03 1.03 </table>
+		<table name="#element"> 0 0 0 6 12 18 24 30 36 36 </table>
+		<table name="#absorbDam" > 0 0 0 0 0 0 0 1.05 1.05 1.05 </table>
+		<table name="#reuse" > 0 0 0 0 0 0 0 1.03 1.03 1.03 </table>
+		<table name="#receivedDamageModifier" > 0 0 0 0 0 0 0 0 1.03 1.03 </table>
+		<for>
+			<effect name="Buff">
+			    <add stat="mDef" val="#mDef" />
+			    <add stat="pDef" val="#pDef" />
+				<add stat="STR" val="#STR" />
+				<add stat="DEX" val="#DEX" />
+				<add stat="CON" val="#CON" />
+				<add stat="INT" val="#INT" />
+				<add stat="WIT" val="#WIT" />
+				<add stat="MEN" val="#MEN" />
+				<add stat="runSpd" val="#runSpd" />
+				<add stat="maxHp" val="#maxHp" />
+				<add stat="maxMp" val="#maxMp" />
+				<add stat="darkRes" val="#element" />
+				<add stat="holyRes" val="#element" />
+				<add stat="windRes" val="#element" />
+				<add stat="earthRes" val="#element" />
+				<add stat="waterRes" val="#element" />
+				<add stat="fireRes" val="#element" />
+				<add stat="reflectDamageRes" val="#reflectDamageRes" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsume" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsume" />
+				<mul stat="absorbDam" val="#absorbDam" />
+				<mul stat="atkReuse" val="#reuse" />
+				<mul stat="pReuse" val="#reuse" />
+				<mul stat="mReuse" val="#reuse" />
+				<mul stat="dReuse" val="#reuse" />
+				<mul stat="receivedDamageModifier" val="#receivedDamageModifier" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13563" levels="5" name="Einhasad's Wrath">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk + 10%, M. Atk. + 20%, Atk. Spd. + 10%, Casting Spd. + 10%. Decreases P. Def. and M. Def. by 10%. Cooldown is 30 minutes. -->
 		<table name="#reuseDelays"> 1800000 1740000 1680000 1620000 1500000 </table>
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="60" />
+		<set name="abnormalType" val="ULTIMATE_BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="#reuseDelays" />
+		<set name="isMagic" val="1" />
+		<set name="hitTime" val="100" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.20" />
+				<mul stat="pAtk" val="1.10" />
+				<mul stat="mAtkSpd" val="1.10" />
+				<mul stat="pAtkSpd" val="1.10" />
+			</effect>
+			<effect name="Debuff" >
+				<mul stat="mDef" val="1.10" />
+				<mul stat="pDef" val="1.10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13564" levels="4" name="Einhasad's Protection">
 		<!-- AUTO GENERATED SKILL -->
@@ -635,6 +739,23 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="#reuseDelays" />
+		<set name="isMagic" val="1" />
+		<set name="hitTime" val="200" />
+		<set name="abnormalTime" val="5" />
+		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
+		<for>
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13565" levels="3" name="Einhasad's Silence">
 		<!-- AUTO GENERATED SKILL -->
@@ -644,6 +765,10 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="#reuseDelays" />
+		<for>
+			<effect name="DispelAll"/>
+			<effect abnormalLvl="1" abnormalTime="5" abnormalType="TARGET_LOCK" name="RemoveTarget" self="1" val="0"/>
+		</for>
 	</skill>
 	<skill id="13566" levels="2" name="Einhasad's Salvation">
 		<!-- AUTO GENERATED SKILL -->
@@ -653,6 +778,19 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="#reuseDelays" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="1" />
+		<for>
+			<effect name="ResurrectionSpecial">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13567" levels="1" name="Einhasad's Blessing">
 		<!-- AUTO GENERATED SKILL -->
@@ -661,6 +799,23 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="hitTime" val="200" />
+		<set name="coolTime" val="200" />
+		<for>
+			<effect name="ManaHealPercent">
+				<param power="100" />
+			</effect>
+			<effect name="CpHealPercent">
+				<param power="100" />
+			</effect>
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="25" max="10" />
+			</effect>
+		</for>
+		
 	</skill>
 	<skill id="13568" levels="1" name="Talisman Energy">
 		<!-- AUTO GENERATED SKILL -->

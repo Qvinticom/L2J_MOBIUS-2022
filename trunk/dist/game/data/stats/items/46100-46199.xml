@@ -1100,6 +1100,34 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="LEATHER" />
 	</item>
+	<item id="46193" name="Physical Reflect Shirt" type="Armor">
+		<!-- Sparkly magic shirt containing Einhasad's energy.. It can be enchanted up to +10 using Enchant Scroll: Elemental Shirt. When enchanted to +4 or more, passive and stats are increased. When enchanted to +6 or more, various use skills are bestowed . -->
+		<set name="icon" val="icon.ainhasard_shirt" />
+		<set name="bodypart" val="shirt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="4" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="130" />
+	</item>
+	<item id="46194" name="Magical Reflect Shirt" type="Armor">
+		<!-- Sparkly magic shirt containing Einhasad's energy.. It can be enchanted up to +10 using Enchant Scroll: Elemental Shirt. When enchanted to +4 or more, passive and stats are increased. When enchanted to +6 or more, various use skills are bestowed . -->
+		<set name="icon" val="icon.ainhasard_shirt" />
+		<set name="bodypart" val="shirt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="4" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="130" />
+	</item>
 	<item id="46198" name="Gold Medal" type="EtcItem">
 		<!-- A shiny gold medal. Sell it at the shop for a lot of money. -->
 		<set name="icon" val="icon.etc_event_medal_i00" />
