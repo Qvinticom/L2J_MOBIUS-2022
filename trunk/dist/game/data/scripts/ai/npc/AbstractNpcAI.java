@@ -17,7 +17,6 @@
 package ai.npc;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -25,7 +24,6 @@ import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -115,18 +113,6 @@ public abstract class AbstractNpcAI extends Quest
 	}
 	
 	/**
-	 * Broadcasts NpcSay packet to all known players with custom string in specific radius.
-	 * @param npc
-	 * @param type
-	 * @param text
-	 * @param radius
-	 */
-	protected void broadcastNpcSay(L2Npc npc, ChatType type, String text, int radius)
-	{
-		Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), text), radius);
-	}
-	
-	/**
 	 * Broadcasts NpcSay packet to all known players with npc string id in specific radius.
 	 * @param npc
 	 * @param type
@@ -136,27 +122,6 @@ public abstract class AbstractNpcAI extends Quest
 	protected void broadcastNpcSay(L2Npc npc, ChatType type, NpcStringId stringId, int radius)
 	{
 		Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId), radius);
-	}
-	
-	/**
-	 * Broadcasts SocialAction packet to self and known players.
-	 * @param character
-	 * @param actionId
-	 */
-	protected void broadcastSocialAction(L2Character character, int actionId)
-	{
-		Broadcast.toSelfAndKnownPlayers(character, new SocialAction(character.getObjectId(), actionId));
-	}
-	
-	/**
-	 * Broadcasts SocialAction packet to self and known players in specific radius.
-	 * @param character
-	 * @param actionId
-	 * @param radius
-	 */
-	protected void broadcastSocialAction(L2Character character, int actionId, int radius)
-	{
-		Broadcast.toSelfAndKnownPlayersInRadius(character, new SocialAction(character.getObjectId(), actionId), radius);
 	}
 	
 	public void spawnMinions(final L2Npc npc, final String spawnName)
