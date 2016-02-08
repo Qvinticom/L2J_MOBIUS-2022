@@ -57,6 +57,14 @@
 													<xs:simpleType>
 														<xs:restriction base="xs:token">
 															<xs:enumeration value="mpConsume" />
+															<xs:enumeration value="pAtkSpd" />
+															<xs:enumeration value="critDmgAdd" />
+															<xs:enumeration value="maxHp" />
+															<xs:enumeration value="maxMp" />
+															<xs:enumeration value="pvePhysDmg" />
+															<xs:enumeration value="mAtkSpd" />
+															<xs:enumeration value="mCritRate" />
+															<xs:enumeration value="mAtk" />
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>

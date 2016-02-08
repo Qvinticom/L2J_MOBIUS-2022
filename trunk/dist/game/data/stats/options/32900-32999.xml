@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/optionsData.xsd">
+	<option id="32945" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.05" />
+		</for>
+	</option>
+	<option id="32946" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.07" />
+		</for>
+	</option>	
+	<option id="32947" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.10" />
+		</for>
+	</option>	
+	<option id="32948" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.12" />
+		</for>
+	</option>	
+	<option id="32949" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+		</for>
+	</option>
+	<option id="32950" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.03" />
+		</for>
+	</option>	
+	<option id="32951" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.06" />
+		</for>
+	</option>	
+	<option id="32952" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+		</for>
+	</option>
+	<option id="32953" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.05" />
+			<mul stat="maxMp" val="1.05" />
+		</for>
+	</option>
+	<option id="32954" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.10" />
+			<mul stat="maxMp" val="1.10" />
+		</for>
+	</option>
+	<option id="32955" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+		</for>
+	</option>
+	<option id="32956" name="weapon_shadow">
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+			<add stat="pAtk" val="7" />
+			<mul stat="pvePhysDmg" val="1.10" />
+		</for>
+	</option>
+	<!-- Magic Stat -->
+	<option id="32957" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.05" />
+		</for>
+	</option>
+	<option id="32958" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.07" />
+		</for>
+	</option>	
+	<option id="32959" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.10" />
+		</for>
+	</option>	
+	<option id="32960" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.12" />
+		</for>
+	</option>	
+	<option id="32961" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+		</for>
+	</option>
+	<option id="32962" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<mul stat="mCritRate" val="30" />
+		</for>
+	</option>	
+	<option id="32963" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<mul stat="mCritRate" val="60" />
+		</for>
+	</option>	
+	<option id="32964" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<add stat="mCritRate" val="100" />
+		</for>
+	</option>
+	<option id="32965" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<add stat="mCritRate" val="100" />
+			<mul stat="maxHp" val="1.05" />
+			<mul stat="maxMp" val="1.05" />
+		</for>
+	</option>
+	<option id="32966" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<add stat="mCritRate" val="100" />
+			<mul stat="maxHp" val="1.10" />
+			<mul stat="maxMp" val="1.10" />
+		</for>
+	</option>
+	<option id="32967" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<add stat="mCritRate" val="100" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+		</for>
+	</option>
+	<option id="32968" name="weapon_shadow">
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<add stat="mCritRate" val="100" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+			<add stat="mAtk" val="7" />
+			<mul stat="pvePhysDmg" val="1.10" />
+		</for>
+	</option>
+	
+</list>

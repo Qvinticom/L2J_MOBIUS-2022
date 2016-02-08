@@ -16,9 +16,11 @@
 	</skill>
 	<!-- none --> 
 	<skill id="18502" levels="1" name="Scroll: Enchant Shadow Weapon">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
