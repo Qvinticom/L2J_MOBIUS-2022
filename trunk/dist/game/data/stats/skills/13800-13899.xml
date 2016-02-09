@@ -591,535 +591,435 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13856" levels="15" name="Might">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13856" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#pAtk"> 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtk" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13857" levels="15" name="Fury">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13857" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 1.21 1.22 1.23 1.24 1.25 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#pAtkSpd"> 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 1.21 1.22 1.23 1.24 1.25 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13858" levels="15" name="Focus">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13858" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 58 64 70 76 82 88 94 100 106 112 118 124 130 136 136 142 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critRate"> 58 64 70 76 82 88 94 100 106 112 118 124 130 136 136 142 </table>
 		<for>
 			<effect name="Buff">
-				<add stat="critRate" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<add stat="critRate" val="#critRate" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13859" levels="15" name="Death">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13859" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.3 1.4 1.5 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table> 
+		<table name="#critDmgAdd"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="critDmgAdd" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="critDmgAdd" val="#critDmgAdd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13860" levels="15" name="Hunter">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13860" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table> 
+		<table name="#skillCriticalProbability"> 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="skillCriticalProbability" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="skillCriticalProbability" val="#skillCriticalProbability" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13861" levels="15" name="Fire">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13861" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#skillCritical"> 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="skillCritical" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="skillCritical" val="#skillCritical" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13862" levels="15" name="Body">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13862" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#maxHp"> 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="maxHp" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13863" levels="15" name="Empower">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13863" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mAtk"> 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mAtk" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13864" levels="15" name="Acumen">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13864" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 1.21 1.22 1.23 1.24 1.25 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mAtkSpd"> 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 1.21 1.22 1.23 1.24 1.25 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mAtkSpd" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13865" levels="15" name="Wild">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13865" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table> 
+		<table name="#mCritRate"> 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mCritRate" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13866" levels="15" name="Mystic">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13866" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.3 1.4 1.5 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mCritPowerAdd"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mCritPowerAdd" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mCritPowerAdd" val="#mCritPowerAdd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13867" levels="15" name="Soul">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13867" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.40 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#maxMp"> 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.40 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="maxMp" val="#stat" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13868" levels="15" name="Speed Focus">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13868" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
-		<table name="#stat1"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#pAtkSpd"> 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#critRate"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#stat" />
-				<add stat="critRate" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<add stat="critRate" val="#critRate" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13869" levels="15" name="Speed Death">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13869" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
-		<table name="#stat1"> 1.1 1.2 1.2 1.3 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#pAtkSpd"> 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#critDmgAdd"> 1.01 1.02 1.02 1.03 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#stat" />
-				<mul stat="critDmgAdd" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="critDmgAdd" val="#critDmgAdd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13870" levels="15" name="Speed Hunter">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13870" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
-		<table name="#stat1"> 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#pAtkSpd"> 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#skillCriticalProbability"> 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#stat" />
-				<mul stat="skillCriticalProbability" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="skillCriticalProbability" val="#skillCriticalProbability" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13871" levels="15" name="Speed Fire">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13871" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
-		<table name="#stat1"> 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#pAtkSpd"> 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#skillCritical"> 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#stat" />
-				<mul stat="skillCritical" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="skillCritical" val="#skillCritical" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13872" levels="15" name="Speed Body">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13872" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
-		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#pAtkSpd"> 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#maxHp"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#stat" />
-				<mul stat="maxHp" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13873" levels="15" name="Critical Death">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13873" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
-		<table name="#stat1"> 1.1 1.2 1.2 1.3 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critRate"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
+		<table name="#critDmgAdd"> 1.01 1.02 1.02 1.03 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 </table>
 		<for>
 			<effect name="Buff">
-				<add stat="critRate" val="#stat" />
-				<mul stat="critDmgAdd" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<add stat="critRate" val="#critRate" />
+				<mul stat="critDmgAdd" val="#critDmgAdd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13874" levels="15" name="Critical Hunter">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13874" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
-		<table name="#stat1"> 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critRate"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
+		<table name="#skillCriticalProbability"> 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 </table>
 		<for>
 			<effect name="Buff">
-				<add stat="critRate" val="#stat" />
-				<mul stat="skillCriticalProbability" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<add stat="critRate" val="#critRate" />
+				<mul stat="skillCriticalProbability" val="#skillCriticalProbability" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13875" levels="15" name="Critical Fire">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13875" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
-		<table name="#stat1"> 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critRate"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
+		<table name="#skillCritical"> 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 </table>
 		<for>
 			<effect name="Buff">
-				<add stat="critRate" val="#stat" />
-				<mul stat="skillCritical" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<add stat="critRate" val="#critRate" />
+				<mul stat="skillCritical" val="#skillCritical" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13876" levels="15" name="Critical Body">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13876" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
-		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critRate"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
+		<table name="#maxHp"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
 		<for>
 			<effect name="Buff">
-				<add stat="critRate" val="#stat" />
-				<mul stat="maxHp" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<add stat="critRate" val="#critRate" />
+				<mul stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13877" levels="15" name="Acumen Wild">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13877" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
-		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17  </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mAtkSpd"> 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#mCritRate"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17  </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mAtkSpd" val="#stat" />
-				<mul stat="mCritRate" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13878" levels="15" name="Acumen Mystic">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13878" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
-		<table name="#stat1"> 1.1 1.2 1.2 1.3 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table> 
+		<table name="#mAtkSpd"> 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#mCritPowerAdd"> 1.01 1.02 1.02 1.03 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mAtkSpd" val="#stat" />
-				<mul stat="mCritPowerAdd" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="mCritPowerAdd" val="#mCritPowerAdd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13879" levels="15" name="Acumen Soul">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13879" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
-		<table name="#stat1"> 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 1.20 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mAtkSpd"> 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#maxMp"> 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 1.20 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mAtkSpd" val="#stat" />
-				<mul stat="maxMp" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13880" levels="15" name="Wid. Mystic">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13880" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.10 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 </table>
-		<table name="#stat1"> 1.1 1.2 1.2 1.3 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mCritRate"> 1.10 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 </table>
+		<table name="#mCritPowerAdd"> 1.01 1.02 1.02 1.03 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mCritRate" val="#stat" />
-				<mul stat="mCritPowerAdd" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mCritRate" val="#mCritRate" />
+				<mul stat="mCritPowerAdd" val="#mCritPowerAdd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13881" levels="15" name="Wid. Soul">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13881" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.10 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 </table>
-		<table name="#stat1"> 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 1.20 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mCritRate"> 1.10 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 </table>
+		<table name="#maxMp"> 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 1.20 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mCritRate" val="#stat" />
-				<mul stat="maxMp" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mCritRate" val="#mCritRate" />
+				<mul stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13882" levels="15" name="HP Acumen">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13882" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 </table>
-		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mAtkSpd"> 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 1.11 1.11 1.12 </table>
+		<table name="#maxHp"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mAtkSpd" val="#stat" />
-				<mul stat="maxHp" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13883" levels="15" name="HP Wild">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13883" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.10 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 </table>
-		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mCritRate"> 1.10 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 </table>
+		<table name="#maxHp"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mCritRate" val="#stat" />
-				<mul stat="maxHp" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mCritRate" val="#mCritRate" />
+				<mul stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13884" levels="15" name="HP Mystic">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13884" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.1 1.2 1.3 1.3 1.4 1.4 1.5 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 </table>
-		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mCritPowerAdd"> 1.01 1.02 1.03 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 </table>
+		<table name="#maxHp"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="mCritPowerAdd" val="#stat" />
-				<mul stat="maxHp" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="mCritPowerAdd" val="#mCritPowerAdd" />
+				<mul stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13885" levels="15" name="HP Soul">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13885" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 </table>
-		<table name="#stat1"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#maxMp"> 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 </table>
+		<table name="#maxHp"> 1.10 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="maxMp" val="#stat" />
-				<mul stat="maxHp" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13886" levels="15" name="MP Fury">
-		<set name="icon" val="icon.skill0000" />
+		<set name="icon" val="icon.skill13886" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<table name="#stat"> 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 </table>
-		<table name="#stat1"> 1.5 1.6 1.6 1.7 1.7 1.8 1.8 1.9 1.9 1.10 1.10 1.11 1.11 1.12 1.12 </table>
-		<table name="#pvp"> 0 0 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#maxMp"> 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 </table>
+		<table name="#pAtkSpd"> 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 1.11 1.11 1.12 1.12 </table>
 		<for>
 			<effect name="Buff">
-				<mul stat="maxMp" val="#stat" />
-				<mul stat="pAtkSpd" val="#stat1" />
-				<mul stat="pvpPhysDmg" val="#pvp" />
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
 	</skill>
-	<!-- Max MP + $s1, P. Critical Rate + $s2 --> 
-	<skill id="13887" levels="1" name="MP Focus">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
- 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
- 		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Max MP + $s1, P. Critical Damage + $s2 --> 
-	<skill id="13888" levels="1" name="MP Death">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+	<skill id="13887" levels="15" name="MP Focus">
+ 		<set name="icon" val="icon.skill13887" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#maxMp"> 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 </table>
+		<table name="#critRate"> 26 29 32 34 37 40 42 45 48 50 53 56 59 61 64 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="critRate" val="#critRate" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Max MP + $s1, P. Skill Critical Rate + $s2 --> 
-	<skill id="13889" levels="1" name="MP Hunter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+	<skill id="13888" levels="15" name="MP Death">
+		<set name="icon" val="icon.skill13888" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#maxMp"> 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 </table>
+		<table name="#critDmgAdd"> 1.01 1.02 1.02 1.03 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="critDmgAdd" val="#critDmgAdd" />
+			</effect>
+		</for>
 	</skill>
-	<!-- Max MP + $s1, P. Skill Critical Damage + $s2 --> 
-	<skill id="13890" levels="1" name="MP Fire">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+	<skill id="13889" levels="15" name="MP Hunter">
+		<set name="icon" val="icon.skill13889" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<table name="#maxMp"> 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 </table>
+		<table name="#skillCriticalProbability"> 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="skillCriticalProbability" val="#skillCriticalProbability" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="13890" levels="15" name="MP Fire">
+		<set name="icon" val="icon.skill13890" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<table name="#maxMp"> 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.20 </table>
+		<table name="#skillCritical"> 1.03 1.04 1.04 1.05 1.05 1.06 1.06 1.07 1.07 1.08 1.08 1.09 1.09 1.10 1.10 </table>
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="skillCritical" val="#skillCritical" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Chance to decrease Speed and increase PvP Damage during a critical attack. --> 
 	<skill id="13891" levels="1" name="Critical Slow">
