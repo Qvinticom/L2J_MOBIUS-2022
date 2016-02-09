@@ -699,7 +699,6 @@
 				<mul stat="physicalMpConsumeRate" val="#mpConsume" />
 				<mul stat="magicalMpConsumeRate" val="#mpConsume" />
 				<mul stat="absorbDam" val="#absorbDam" />
-				<mul stat="atkReuse" val="#reuse" />
 				<mul stat="pReuse" val="#reuse" />
 				<mul stat="mReuse" val="#reuse" />
 				<mul stat="dReuse" val="#reuse" />
@@ -767,7 +766,6 @@
 		<set name="reuseDelay" val="#reuseDelays" />
 		<for>
 			<effect name="DispelAll"/>
-			<effect abnormalLvl="1" abnormalTime="5" abnormalType="TARGET_LOCK" name="RemoveTarget" self="1" val="0"/>
 		</for>
 	</skill>
 	<skill id="13566" levels="2" name="Einhasad's Salvation">
