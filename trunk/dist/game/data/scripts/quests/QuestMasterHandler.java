@@ -168,6 +168,9 @@ import quests.Q00699_GuardianOfTheSkies.Q00699_GuardianOfTheSkies;
 import quests.Q00700_CursedLife.Q00700_CursedLife;
 import quests.Q00701_ProofOfExistence.Q00701_ProofOfExistence;
 import quests.Q00702_ATrapForRevenge.Q00702_ATrapForRevenge;
+import quests.Q00754_AssistingTheRebelForces.Q00754_AssistingTheRebelForces;
+import quests.Q00755_InNeedOfPetras.Q00755_InNeedOfPetras;
+import quests.Q00756_TopQualityPetra.Q00756_TopQualityPetra;
 import quests.Q00757_TriolsMovement.Q00757_TriolsMovement;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
@@ -224,6 +227,10 @@ import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
 import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
 import quests.Q10366_RuinsStatusUpdate.Q10366_RuinsStatusUpdate;
 import quests.Q10368_RebellionOfMonsters.Q10368_RebellionOfMonsters;
+import quests.Q10381_ToTheSeedOfHellfire.Q10381_ToTheSeedOfHellfire;
+import quests.Q10382_DayOfLiberation.Q10382_DayOfLiberation;
+import quests.Q10383_FergasonsOffer.Q10383_FergasonsOffer;
+import quests.Q10384_AnAudienceWithTauti.Q10384_AnAudienceWithTauti;
 import quests.Q10388_ConspiracyBehindDoor.Q10388_ConspiracyBehindDoor;
 import quests.Q10389_TheVoiceOfAuthority.Q10389_TheVoiceOfAuthority;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
@@ -267,6 +274,7 @@ import quests.Q10763_TerrifyingChertuba.Q10763_TerrifyingChertuba;
 import quests.Q10764_FreeSpirit.Q10764_FreeSpirit;
 import quests.Q10769_LettersFromTheQueen_CrumaTower.Q10769_LettersFromTheQueen_CrumaTower;
 import quests.Q10782_LettersFromTheQueen_ForsakenPlains.Q10782_LettersFromTheQueen_ForsakenPlains;
+
 
 /**
  * @author NosBit
@@ -426,6 +434,9 @@ final class QuestMasterHandler
 		Q00700_CursedLife.class,
 		Q00701_ProofOfExistence.class,
 		Q00702_ATrapForRevenge.class,
+		Q00754_AssistingTheRebelForces.class,
+		Q00755_InNeedOfPetras.class,
+		Q00756_TopQualityPetra.class,
 		Q00757_TriolsMovement.class,
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
@@ -482,6 +493,10 @@ final class QuestMasterHandler
 		Q10365_SeekerEscort.class,
 		Q10366_RuinsStatusUpdate.class,
 		Q10368_RebellionOfMonsters.class,
+		Q10381_ToTheSeedOfHellfire.class,
+		Q10382_DayOfLiberation.class,
+		Q10383_FergasonsOffer.class,
+		Q10384_AnAudienceWithTauti.class,
 		Q10388_ConspiracyBehindDoor.class,
 		Q10389_TheVoiceOfAuthority.class,
 		Q10390_KekropusLetter.class,
