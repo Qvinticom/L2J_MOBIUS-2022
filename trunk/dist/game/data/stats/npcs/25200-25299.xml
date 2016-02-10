@@ -80,6 +80,7 @@
 		</collision>
 	</npc>
 	<npc id="25202" level="74" type="L2RaidBoss" name="Krokian Padisha Sobekk" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25203" count="2" respawnTime="360" weightPoint="1" /> <!-- Parhit Padisha Sobekk -->
@@ -93,7 +94,7 @@
 		<equipment rhand="5130" /> <!-- rhand: Nos Sword -->
 		<acquire exp="5199406" sp="1247" raidPoints="3112" />
 		<stats>
-			<vitals hp="392895.926408634" hpRegen="122.142751323234" mp="1475.0" mpRegen="3" />
+			<vitals hp="935485" hpRegen="122.142751323234" mp="1475" mpRegen="3" />
 			<attack physical="2396.99018807273" magical="851.89721101842" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="943.97961" magical="460.5" evasion="-18" />
 			<attribute>
@@ -123,28 +124,23 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="8619" min="1" max="1" chance="56" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9816" min="3" max="7" chance="82" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="4" chance="82" /> <!-- Destruction Tombstone -->
-				<group chance="5.374000072479248">
-					<item id="5326" min="1" max="1" chance="33.8402" /> <!-- Sealed Robe of Nightmare -->
-					<item id="5329" min="1" max="1" chance="33.8402" /> <!-- Sealed Majestic Robe -->
-					<item id="81" min="1" max="1" chance="10.7732" /> <!-- Dragon Slayer -->
-					<item id="151" min="1" max="1" chance="10.7732" /> <!-- Sword of Miracles -->
-					<item id="2500" min="1" max="1" chance="10.7732" /> <!-- Dark Legion's Edge -->
-				</group>
-				<group chance="62.09000015258789">
-					<item id="5487" min="7" max="21" chance="46.6549" /> <!-- Sealed Robe of Nightmare Fabric -->
-					<item id="5488" min="12" max="36" chance="27.2153" /> <!-- Sealed Majestic Robe Fabric -->
-					<item id="5529" min="25" max="75" chance="7.9588" /> <!-- Dragon Slayer Edge -->
-					<item id="5546" min="18" max="54" chance="12.1416" /> <!-- Sword of Miracles Edge -->
-					<item id="5545" min="33" max="99" chance="6.0294" /> <!-- Dark Legion's Edge Blade -->
-				</group>
-				<group chance="43.455501556396484">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="5329" min="1" max="1" chance="2.63" /> <!-- Sealed Majestic Robe -->
+				<item id="5326" min="1" max="1" chance="2.528" /> <!-- Sealed Robe of Nightmare -->
+				<item id="81" min="1" max="1" chance="0.75" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="1" chance="0.75" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="1" chance="0.75" /> <!-- Dark Legion's Edge -->
+				<item id="8176" min="1" max="4" chance="84.69" /> <!-- Destruction Tombstone -->
+				<item id="9816" min="3" max="7" chance="81.55" /> <!-- Earth Egg -->
+				<item id="8619" min="1" max="1" chance="56.35" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="5529" min="2" max="6" chance="27.71" /> <!-- Dragon Slayer Edge -->
+				<item id="5546" min="3" max="9" chance="23.36" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="3" max="9" chance="20.03" /> <!-- Dark Legion's Edge Blade -->
+				<item id="5488" min="12" max="36" chance="15.32" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="960" min="1" max="1" chance="7.718" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="5487" min="36" max="108" chance="5.322" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008023" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -229,6 +225,7 @@
 		</collision>
 	</npc>
 	<npc id="25205" level="76" type="L2RaidBoss" name="Ocean Flame Ashakiel" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25206" count="1" respawnTime="360" weightPoint="1" /> <!-- Ashakiel's Blade -->
@@ -245,7 +242,7 @@
 		<equipment rhand="98" /> <!-- rhand: Halberd -->
 		<acquire exp="5267107" sp="1264" raidPoints="3228" />
 		<stats>
-			<vitals hp="401886.766608773" hpRegen="124.302529182249" mp="1540.8" mpRegen="3" />
+			<vitals hp="956893" hpRegen="124.302529182249" mp="1540" mpRegen="3" />
 			<attack physical="2501.79548333906" magical="888.048862829437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="971.35365" magical="473.86" evasion="-18" />
 			<attribute>
@@ -277,24 +274,14 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="15.331999778747559">
-					<item id="6678" min="1" max="1" chance="31.4624" /> <!-- Sealed Imperial Crusader Shield -->
-					<item id="6679" min="1" max="1" chance="22.023" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="22.023" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="22.023" /> <!-- Sealed Major Arcana Circlet -->
-					<item id="6371" min="1" max="1" chance="2.4686" /> <!-- Demon Splinter -->
-				</group>
-				<group chance="55.892398834228516">
-					<item id="6705" min="315" max="945" chance="4.8073" /> <!-- Sealed Imperial Crusader Shield Part -->
-					<item id="6706" min="66" max="198" chance="26.6885" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-					<item id="6710" min="126" max="378" chance="13.9797" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-					<item id="6714" min="208" max="624" chance="8.4685" /> <!-- Sealed Major Arcana Circlet Pattern -->
-					<item id="6695" min="5" max="15" chance="46.056" /> <!-- Demon Splinter Blade -->
-				</group>
-				<group chance="57.91120147705078">
-					<item id="6578" min="1" max="1" chance="15.0943" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="3936" min="1" max="3" chance="84.9057" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
+				<item id="6687" min="1" max="1" chance="8.06" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6678" min="1" max="1" chance="2.324" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6679" min="1" max="1" chance="1.309" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="1.128" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6371" min="1" max="1" chance="0.75" /> <!-- Demon Splinter -->
+				<item id="6695" min="12" max="36" chance="6.276" /> <!-- Demon Splinter Blade -->
+				<item id="6578" min="1" max="1" chance="3.39" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.007951" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -377,6 +364,7 @@
 		</collision>
 	</npc>
 	<npc id="25208" level="40" type="L2RaidBoss" name="Water Couatl Ateka" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25209" count="3" respawnTime="360" weightPoint="1" /> <!-- Ateka's Shaman -->
@@ -389,7 +377,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3818045" sp="916" raidPoints="632" />
 		<stats>
-			<vitals hp="91937.3861400206" hpRegen="34.0387779378852" mp="478.8" mpRegen="1.8" />
+			<vitals hp="144477" hpRegen="34.0387779378852" mp="478" mpRegen="1.8" />
 			<attack physical="236.34363334721" magical="18.6629186045602" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="469.65105" magical="229.12" evasion="-18" />
 			<attribute>
@@ -419,25 +407,15 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="9816" min="1" max="2" chance="85" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="1" chance="65" /> <!-- Destruction Tombstone -->
-				<group chance="62.982601165771484">
-					<item id="354" min="1" max="1" chance="18.9125" /> <!-- Chain Mail Shirt -->
-					<item id="381" min="1" max="1" chance="30.2569" /> <!-- Chain Gaiters -->
-					<item id="1959" min="12" max="36" chance="41.2424" /> <!-- Chain Mail Shirt Material -->
-					<item id="1960" min="105" max="315" chance="9.5882" /> <!-- Chain Gaiters Part -->
-				</group>
-				<group chance="77.37539672851562">
-					<item id="439" min="1" max="1" chance="30.8367" /> <!-- Karmian Tunic -->
-					<item id="471" min="1" max="1" chance="49.2777" /> <!-- Karmian Stockings -->
-					<item id="1962" min="53" max="157" chance="13.6739" /> <!-- Karmian Tunic Pattern -->
-					<item id="1954" min="192" max="576" chance="6.2117" /> <!-- Karmian Stocking Design -->
-				</group>
-				<group chance="73.21640014648438">
-					<item id="951" min="1" max="1" chance="74.5033" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="952" min="12" max="36" chance="22.7649" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="6573" min="1" max="1" chance="2.7318" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
-				</group>
+				<item id="471" min="1" max="1" chance="7.226" /> <!-- Karmian Stockings -->
+				<item id="354" min="1" max="1" chance="5.712" /> <!-- Chain Mail Shirt -->
+				<item id="381" min="1" max="1" chance="2.534" /> <!-- Chain Gaiters -->
+				<item id="439" min="1" max="1" chance="1.479" /> <!-- Karmian Tunic -->
+				<item id="9816" min="1" max="2" chance="88.09" /> <!-- Earth Egg -->
+				<item id="8176" min="1" max="1" chance="64.05" /> <!-- Destruction Tombstone -->
+				<item id="951" min="1" max="1" chance="16.65" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="6573" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+				<item id="39629" min="1" max="1" chance="0.005988" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -524,6 +502,7 @@
 		</collision>
 	</npc>
 	<npc id="25211" level="36" type="L2RaidBoss" name="Sebek" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25212" count="3" respawnTime="360" weightPoint="1" /> <!-- Sebek's Priest -->
@@ -537,7 +516,7 @@
 		<equipment rhand="5130" /> <!-- rhand: Nos Sword -->
 		<acquire exp="5476117" sp="1314" raidPoints="540" />
 		<stats>
-			<vitals hp="73380.9239757113" hpRegen="28.0640450927111" mp="417.6" mpRegen="1.8" />
+			<vitals hp="115317" hpRegen="28.0640450927111" mp="417" mpRegen="1.8" />
 			<attack physical="176.455636850148" magical="14.03993239503" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="421.71834" magical="205.74" evasion="-18" />
 			<attribute>
@@ -571,11 +550,12 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="851" min="1" max="1" chance="7.200" /> <!-- Omen Beast's Eye Earring -->
-				<item id="882" min="1" max="1" chance="3.400" /> <!-- Mithril Ring -->
-				<item id="914" min="1" max="1" chance="2.400" /> <!-- Necklace of Darkness -->
+				<item id="851" min="1" max="1" chance="7.166" /> <!-- Onyx Beast's Eye Earring -->
+				<item id="882" min="1" max="1" chance="3.407" /> <!-- Mithril Ring -->
+				<item id="914" min="1" max="1" chance="2.442" /> <!-- Dark Necklace -->
 				<item id="262" min="1" max="1" chance="0.75" /> <!-- Scallop Jamadhr -->
-				<item id="6573" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+				<item id="6573" min="1" max="1" chance="1.038" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+				<item id="39629" min="1" max="1" chance="0.005071" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>
@@ -654,6 +634,7 @@
 		</collision>
 	</npc>
 	<npc id="25214" level="40" type="L2RaidBoss" name="Fafurion's Servant Sika" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25215" count="3" respawnTime="360" weightPoint="1" /> <!-- Sika's Wizard -->
@@ -667,7 +648,7 @@
 		<equipment rhand="5132" /> <!-- rhand: Giant Trident -->
 		<acquire exp="3818045" sp="916" raidPoints="632" />
 		<stats>
-			<vitals hp="91937.3861400206" hpRegen="34.0387779378852" mp="478.8" mpRegen="1.8" />
+			<vitals hp="144477" hpRegen="34.0387779378852" mp="478" mpRegen="1.8" />
 			<attack physical="236.34363334721" magical="18.6629186045602" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="469.65105" magical="229.12" evasion="-18" />
 			<attribute>
@@ -697,25 +678,15 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="9817" min="1" max="2" chance="85" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="1" chance="64" /> <!-- Destruction Tombstone -->
-				<group chance="74.01309967041016">
-					<item id="439" min="1" max="1" chance="21.4917" /> <!-- Karmian Tunic -->
-					<item id="471" min="1" max="1" chance="34.3442" /> <!-- Karmian Stockings -->
-					<item id="1962" min="53" max="157" chance="9.53" /> <!-- Karmian Tunic Pattern -->
-					<item id="1954" min="24" max="72" chance="34.6341" /> <!-- Karmian Stocking Design -->
-				</group>
-				<group chance="42.5973014831543">
-					<item id="96" min="1" max="1" chance="6.164" /> <!-- Scythe -->
-					<item id="298" min="1" max="1" chance="6.164" /> <!-- Orcish Glaive -->
-					<item id="302" min="1" max="1" chance="6.164" /> <!-- Body Slasher -->
-					<item id="2062" min="5" max="15" chance="42.6141" /> <!-- Scythe Edge -->
-					<item id="2075" min="9" max="27" chance="23.6745" /> <!-- Orcish Glaive Blade -->
-					<item id="2076" min="14" max="42" chance="15.2194" /> <!-- Body Slasher Blade -->
-				</group>
-				<group chance="51.43159866333008">
-					<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
-				</group>
+				<item id="298" min="1" max="1" chance="5.986" /> <!-- Orcish Glaive -->
+				<item id="302" min="1" max="1" chance="5.952" /> <!-- Body Slasher -->
+				<item id="439" min="1" max="1" chance="2.361" /> <!-- Karmian Tunic -->
+				<item id="471" min="1" max="1" chance="1.224" /> <!-- Karmian Stockings -->
+				<item id="96" min="1" max="1" chance="0.75" /> <!-- Scythe -->
+				<item id="9817" min="1" max="2" chance="81.7" /> <!-- Nonliving Nucleus -->
+				<item id="8176" min="1" max="1" chance="63.98" /> <!-- Destruction Tombstone -->
+				<item id="6574" min="1" max="1" chance="10.07" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<item id="39629" min="1" max="1" chance="0.006032" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -1250,6 +1221,7 @@
 		</collision>
 	</npc>
 	<npc id="25226" level="62" type="L2RaidBoss" name="Roaring Lord Kastor" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25227" count="2" respawnTime="360" weightPoint="1" /> <!-- Kastor's Seer -->
@@ -1263,7 +1235,7 @@
 		<equipment rhand="186" /> <!-- rhand: Staff of Magic -->
 		<acquire exp="37302283" sp="8952" raidPoints="2408" />
 		<stats>
-			<vitals hp="322915.008583856" hpRegen="105.482285672223" mp="1097.0" mpRegen="2.7" />
+			<vitals hp="768863" hpRegen="105.482285672223" mp="1097" mpRegen="2.7" />
 			<attack physical="1606.18889487921" magical="538.721403316746" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="772.02801" magical="376.62" evasion="-18" />
 			<attribute>
@@ -1293,27 +1265,16 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="9816" min="3" max="7" chance="79" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="4" chance="79" /> <!-- Destruction Tombstone -->
-				<group chance="65.00499725341797">
-					<item id="6323" min="1" max="1" chance="10.8781" /> <!-- Sealed Phoenix Necklace -->
-					<item id="6324" min="1" max="1" chance="14.5042" /> <!-- Sealed Phoenix Earring -->
-					<item id="6325" min="1" max="1" chance="21.7562" /> <!-- Sealed Phoenix Ring -->
-					<item id="6343" min="140" max="420" chance="5.5655" /> <!-- Sealed Phoenix Necklace Beads -->
-					<item id="6341" min="81" max="243" chance="12.4436" /> <!-- Sealed Phoenix Earring Gemstone -->
-					<item id="6345" min="40" max="120" chance="34.8524" /> <!-- Sealed Phoenix Ring Gemstone -->
-				</group>
-				<group chance="72.53790283203125">
-					<item id="80" min="1" max="1" chance="2.0848" /> <!-- Tallum Blade -->
-					<item id="150" min="1" max="1" chance="2.0848" /> <!-- Elemental Sword -->
-					<item id="5548" min="4" max="12" chance="62.4981" /> <!-- Tallum Blade Edge -->
-					<item id="5547" min="8" max="22" chance="33.3323" /> <!-- Elemental Sword Edge -->
-				</group>
-				<group chance="88.23390197753906">
-					<item id="729" min="1" max="1" chance="11.6009" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="730" min="1" max="1" chance="87.007" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-					<item id="6569" min="1" max="1" chance="1.3921" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				</group>
+				<item id="6323" min="1" max="1" chance="6.079" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6325" min="1" max="1" chance="4.782" /> <!-- Sealed Phoenix Ring -->
+				<item id="150" min="1" max="1" chance="2.334" /> <!-- Elemental Sword -->
+				<item id="80" min="1" max="1" chance="2.235" /> <!-- Tallum Blade -->
+				<item id="6324" min="1" max="1" chance="1.843" /> <!-- Sealed Phoenix Earring -->
+				<item id="9816" min="3" max="7" chance="80.19" /> <!-- Earth Egg -->
+				<item id="8176" min="1" max="4" chance="79.92" /> <!-- Destruction Tombstone -->
+				<item id="729" min="1" max="1" chance="3.058" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.007914" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -1399,6 +1360,7 @@
 		</collision>
 	</npc>
 	<npc id="25230" level="57" type="L2RaidBoss" name="Timak Priest Ragoth" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25231" count="1" respawnTime="360" weightPoint="1" /> <!-- Ragoth's Guard -->
@@ -1414,7 +1376,7 @@
 		<equipment rhand="201" /> <!-- rhand: Club of Nature -->
 		<acquire exp="23959324" sp="5750" raidPoints="1136" />
 		<stats>
-			<vitals hp="202794.195340915" hpRegen="67.9269027462167" mp="948.0" mpRegen="2.4" />
+			<vitals hp="318685" hpRegen="67.9269027462167" mp="948" mpRegen="2.4" />
 			<attack physical="678.000856094307" magical="107.086250616967" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="699.56517" magical="341.28" evasion="-18" />
 			<attribute>
@@ -1446,24 +1408,19 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="9816" min="1" max="4" chance="80" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="2" chance="67" /> <!-- Destruction Tombstone -->
-				<group chance="40.3406982421875">
-					<item id="358" min="1" max="1" chance="4.7956" /> <!-- Blue Wolf Breastplate -->
-					<item id="2380" min="1" max="1" chance="7.6719" /> <!-- Blue Wolf Gaiters -->
-					<item id="2381" min="1" max="1" chance="2.9511" /> <!-- Doom Plate Armor -->
-					<item id="4078" min="9" max="27" chance="48.1595" /> <!-- Blue Wolf Breastplate Part -->
-					<item id="4080" min="28" max="84" chance="21.7988" /> <!-- Blue Wolf Gaiters Material -->
-					<item id="4081" min="20" max="60" chance="14.6231" /> <!-- Doom Plate Armor Temper -->
-				</group>
-				<group chance="21.71739959716797">
-					<item id="97" min="1" max="1" chance="9.8314" /> <!-- Lance -->
-					<item id="4115" min="12" max="36" chance="90.1686" /> <!-- Lance Blade -->
-				</group>
-				<group chance="47.714500427246094">
-					<item id="6572" min="1" max="1" chance="39.0244" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
-					<item id="948" min="3" max="9" chance="60.9756" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-				</group>
+				<item id="2380" min="1" max="1" chance="6.589" /> <!-- Blue Wolf Gaiters -->
+				<item id="358" min="1" max="1" chance="4.1" /> <!-- Blue Wolf Breastplate -->
+				<item id="2381" min="1" max="1" chance="2.476" /> <!-- Doom Plate Armor -->
+				<item id="97" min="1" max="1" chance="1.084" /> <!-- Lance -->
+				<item id="9816" min="1" max="4" chance="81.45" /> <!-- Earth Egg -->
+				<item id="8176" min="1" max="2" chance="66.58" /> <!-- Destruction Tombstone -->
+				<item id="4078" min="9" max="27" chance="38.17" /> <!-- Blue Wolf Breastplate Part -->
+				<item id="948" min="1" max="1" chance="34.65" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="4115" min="3" max="9" chance="23.72" /> <!-- Lance Blade -->
+				<item id="4080" min="32" max="96" chance="16.83" /> <!-- Blue Wolf Gaiter Material -->
+				<item id="4081" min="22" max="66" chance="9.38" /> <!-- Doom Plate Armor Temper -->
+				<item id="6572" min="1" max="1" chance="3.622" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+				<item id="39629" min="1" max="1" chance="0.006985" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -1545,6 +1502,7 @@
 		</collision>
 	</npc>
 	<npc id="25233" level="69" type="L2RaidBoss" name="Spirit of Andras, the Betrayer" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="6" /> <!-- BOSS Cancel Magic -->
@@ -1557,7 +1515,7 @@
 		<equipment rhand="2500" /> <!-- rhand: Dark Legion's Edge -->
 		<acquire exp="2969652" sp="712" raidPoints="1544" />
 		<stats>
-			<vitals hp="528013.331878827" hpRegen="208.900753341411" mp="1314.0" mpRegen="2.7" />
+			<vitals hp="1257201" hpRegen="208.900753341411" mp="1314" mpRegen="2.7" />
 			<attack physical="2246.91708261089" magical="804.539610755299" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="873.45189" magical="426.1" evasion="-18" />
 			<attribute>
@@ -1593,25 +1551,20 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9814" min="2" max="4" chance="82" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="2" chance="82" /> <!-- Destruction Tombstone -->
-				<group chance="78.44629669189453">
-					<item id="6326" min="1" max="1" chance="3.7914" /> <!-- Sealed Majestic Necklace -->
-					<item id="6327" min="1" max="1" chance="5.0569" /> <!-- Sealed Majestic Earring -->
-					<item id="6328" min="1" max="1" chance="7.5829" /> <!-- Sealed Majestic Ring -->
-					<item id="6344" min="20" max="60" chance="13.8813" /> <!-- Sealed Majestic Necklace Beads -->
-					<item id="6342" min="9" max="27" chance="47.6668" /> <!-- Sealed Majestic Earring Gemstone -->
-					<item id="6346" min="28" max="84" chance="22.0207" /> <!-- Sealed Majestic Ring Gemstone -->
-				</group>
-				<group chance="62.426300048828125">
-					<item id="236" min="1" max="1" chance="2.0653" /> <!-- Soul Separator -->
-					<item id="5537" min="3" max="9" chance="97.9347" /> <!-- Soul Separator Head -->
-				</group>
-				<group chance="5.0071001052856445">
-					<item id="6578" min="1" max="1" chance="76.9231" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="6569" min="1" max="1" chance="23.0769" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				</group>
+				<item id="6328" min="1" max="1" chance="13.18" /> <!-- Sealed Majestic Ring -->
+				<item id="6327" min="1" max="1" chance="8.52" /> <!-- Sealed Majestic Earring -->
+				<item id="6326" min="1" max="1" chance="6.42" /> <!-- Sealed Majestic Necklace -->
+				<item id="236" min="1" max="1" chance="0.75" /> <!-- Soul Separator -->
+				<item id="9814" min="2" max="4" chance="80.74" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="2" chance="79.22" /> <!-- Destruction Tombstone -->
+				<item id="6342" min="9" max="27" chance="68.43" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="8619" min="1" max="1" chance="52.57" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="6344" min="14" max="42" chance="30.93" /> <!-- Sealed Majestic Necklace Beads -->
+				<item id="6346" min="40" max="120" chance="23.67" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="5537" min="4" max="12" chance="11.44" /> <!-- Soul Separator Head -->
+				<item id="6578" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.007801" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -1694,6 +1647,7 @@
 		</collision>
 	</npc>
 	<npc id="25235" level="72" type="L2RaidBoss" name="Vanor Chief Kandra" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25236" count="2" respawnTime="360" weightPoint="1" /> <!-- Kandra's Healer -->
@@ -1707,7 +1661,7 @@
 		<equipment rhand="135" /> <!-- rhand: Samurai Longsword -->
 		<acquire exp="244058947" sp="58574" raidPoints="3000" />
 		<stats>
-			<vitals hp="383459.920989612" hpRegen="119.969286557872" mp="1410.0" mpRegen="3" />
+			<vitals hp="913018" hpRegen="119.969286557872" mp="1410" mpRegen="3" />
 			<attack physical="2280.56634336123" magical="813.637215287937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="916.07841" magical="446.9" evasion="-18" />
 			<attribute>
@@ -1737,28 +1691,17 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="8619" min="1" max="1" chance="54" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9814" min="3" max="7" chance="82" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="4" chance="82" /> <!-- Destruction Tombstone -->
-				<group chance="63.48460006713867">
-					<item id="5313" min="1" max="1" chance="8.645" /> <!-- Sealed Gauntlets of Nightmare -->
-					<item id="5314" min="1" max="1" chance="8.645" /> <!-- Sealed Boots of Nightmare -->
-					<item id="5318" min="1" max="1" chance="8.645" /> <!-- Sealed Majestic Gauntlets -->
-					<item id="5319" min="1" max="1" chance="8.645" /> <!-- Sealed Majestic Boots -->
-					<item id="5514" min="60" max="180" chance="8.2433" /> <!-- Sealed Gauntlets of Nightmare Design -->
-					<item id="5502" min="116" max="346" chance="4.2822" /> <!-- Sealed Boots of Nightmare Lining -->
-					<item id="5515" min="16" max="48" chance="30.9123" /> <!-- Sealed Majestic Gauntlets Design -->
-					<item id="5503" min="23" max="67" chance="21.9822" /> <!-- Sealed Majestic Boots Lining -->
-				</group>
-				<group chance="27.671499252319336">
-					<item id="289" min="1" max="1" chance="7.7743" /> <!-- Soul Bow -->
-					<item id="5534" min="12" max="36" chance="92.2257" /> <!-- Soul Bow Stave -->
-				</group>
-				<group chance="43.058799743652344">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="5318" min="1" max="1" chance="6.243" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="5.071" /> <!-- Sealed Majestic Boots -->
+				<item id="5313" min="1" max="1" chance="2.039" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="289" min="1" max="1" chance="1.581" /> <!-- Soul Bow -->
+				<item id="5314" min="1" max="1" chance="1.252" /> <!-- Sealed Boots of Nightmare -->
+				<item id="9814" min="3" max="7" chance="85.77" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="4" chance="82.06" /> <!-- Destruction Tombstone -->
+				<item id="8619" min="1" max="1" chance="52.85" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="729" min="1" max="1" chance="3.21" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008184" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -1976,6 +1919,7 @@
 		</collision>
 	</npc>
 	<npc id="25241" level="55" type="L2RaidBoss" name="Harit Hero Tamash" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25242" count="3" respawnTime="360" weightPoint="1" /> <!-- Tamash's Advisor -->
@@ -1989,7 +1933,7 @@
 		<equipment rhand="298" /> <!-- rhand: Orcish Glaive -->
 		<acquire exp="22247944" sp="5339" raidPoints="1988" />
 		<stats>
-			<vitals hp="262379.847926583" hpRegen="88.6953584956072" mp="889.8" mpRegen="2.4" />
+			<vitals hp="412320" hpRegen="88.6953584956072" mp="889" mpRegen="2.4" />
 			<attack physical="1142.75903411993" magical="324.540533096856" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="670.9086" magical="327.3" evasion="-18" />
 			<attribute>
@@ -2023,18 +1967,19 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="9815" min="2" max="6" chance="82.50" /> <!-- Dragon Heart -->
-				<item id="8176" min="1" max="3" chance="78.50" /> <!-- Destruction Tombstone -->
-				<item id="357" min="1" max="1" chance="3.400" /> <!-- Zubei's Breastplate -->
-				<item id="383" min="1" max="1" chance="1.880" /> <!-- Zubei's Gaiters -->
-				<item id="2376" min="1" max="1" chance="2.700" /> <!-- Avadon Breastplate -->
-				<item id="2379" min="1" max="1" chance="1.100" /> <!-- Avadon Gaiters -->
-				<item id="229" min="1" max="1" chance="3.300" /> <!-- Kris -->
-				<item id="243" min="1" max="1" chance="3.300" /> <!-- Twilight Knife -->
-				<item id="4619" min="5" max="15" chance="7.700" /> <!-- Greater Dye of INT <Int+4 Men-4> -->
-					<item id="4620" min="2" max="4" chance="15.50" /> <!-- Greater Dye of INT <Int+4 Wit-4> -->
-					<item id="4621" min="2" max="6" chance="15.25" /> <!-- Greater Dye of MEN <Men+4 Int-4> -->
-					<item id="947" min="1" max="1" chance="4.500" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="357" min="1" max="1" chance="3.401" /> <!-- Zubei's Breastplate -->
+				<item id="229" min="1" max="1" chance="3.339" /> <!-- Kris -->
+				<item id="243" min="1" max="1" chance="3.316" /> <!-- Twilight Knife -->
+				<item id="2376" min="1" max="1" chance="2.816" /> <!-- Avadon Breastplate -->
+				<item id="383" min="1" max="1" chance="1.848" /> <!-- Zubei's Gaiters -->
+				<item id="2379" min="1" max="1" chance="1.049" /> <!-- Avadon Gaiters -->
+				<item id="8176" min="1" max="3" chance="81.59" /> <!-- Destruction Tombstone -->
+				<item id="9815" min="2" max="6" chance="77.67" /> <!-- Dragon Heart -->
+				<item id="4620" min="1" max="1" chance="15.39" /> <!-- Greater INT Dye (Int   4 Wit - 4) -->
+				<item id="4621" min="1" max="1" chance="15.05" /> <!-- Greater MEN Dye (Men   4 Int - 4) -->
+				<item id="4619" min="1" max="3" chance="7.626" /> <!-- Greater INT Dye (Int   4 Men - 4) -->
+				<item id="947" min="1" max="1" chance="4.463" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="39629" min="1" max="1" chance="0.006833" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>
@@ -2119,6 +2064,7 @@
 		</collision>
 	</npc>
 	<npc id="25244" level="75" type="L2RaidBoss" name="Last Lesser Giant Olkuth" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="8" /> <!-- BOSS Cancel Magic -->
@@ -2131,7 +2077,7 @@
 		<equipment rhand="78" /> <!-- rhand: Great Sword -->
 		<acquire exp="712305220" sp="170953" raidPoints="3172" />
 		<stats>
-			<vitals hp="794874.502880181" hpRegen="308.04072385958" mp="1507.8" mpRegen="3" />
+			<vitals hp="1892597" hpRegen="308.04072385958" mp="1507" mpRegen="3" />
 			<attack physical="4902.4469608376" magical="3475.50410725631" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="957.73869" magical="467.22" evasion="-18" />
 			<attribute>
@@ -2164,19 +2110,14 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="33.0807991027832">
-					<item id="6680" min="1" max="1" chance="5.855" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6707" min="12" max="36" chance="94.145" /> <!-- Sealed Draconic Leather Armor Part -->
-				</group>
-				<group chance="21.4375">
-					<item id="6367" min="1" max="1" chance="4.9371" /> <!-- Angel Slayer -->
-					<item id="6691" min="12" max="36" chance="95.0629" /> <!-- Angel Slayer Blade -->
-				</group>
-				<group chance="43.673301696777344">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="6680" min="1" max="1" chance="2.824" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6367" min="1" max="1" chance="0.941" /> <!-- Angel Slayer -->
+				<item id="960" min="1" max="1" chance="7.669" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6691" min="12" max="36" chance="6.918" /> <!-- Angel Slayer Blade -->
+				<item id="6707" min="105" max="315" chance="2.123" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008168" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -2185,6 +2126,7 @@
 		</collision>
 	</npc>
 	<npc id="25245" level="78" type="L2RaidBoss" name="Last Lesser Giant Glaki" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25246" count="1" respawnTime="360" weightPoint="1" /> <!-- Glaki's Henchman -->
@@ -2200,7 +2142,7 @@
 		<equipment rhand="179" /> <!-- rhand: Mace of Prayer -->
 		<acquire exp="794494284" sp="190678" raidPoints="3344" />
 		<stats>
-			<vitals hp="410600.548543185" hpRegen="126.536105676163" mp="1607.4" mpRegen="3" />
+			<vitals hp="977641" hpRegen="126.536105676163" mp="1607" mpRegen="3" />
 			<attack physical="2592.71886885803" magical="929.620860138406" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="998.10183" magical="486.92" evasion="-18" />
 			<attribute>
@@ -2232,19 +2174,14 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="44.33980178833008">
-					<item id="6680" min="1" max="1" chance="5.855" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6707" min="12" max="36" chance="94.145" /> <!-- Sealed Draconic Leather Armor Part -->
-				</group>
-				<group chance="29.049699783325195">
-					<item id="7575" min="1" max="1" chance="4.8834" /> <!-- Draconic Bow -->
-					<item id="7579" min="12" max="36" chance="95.1166" /> <!-- Draconic Bow Shaft -->
-				</group>
-				<group chance="58.53739929199219">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="6680" min="1" max="1" chance="3.023" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="7575" min="1" max="1" chance="1.165" /> <!-- Draconic Bow -->
+				<item id="960" min="1" max="1" chance="18.08" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="7579" min="12" max="36" chance="7.799" /> <!-- Draconic Bow Shaft -->
+				<item id="6707" min="105" max="315" chance="2.416" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="959" min="1" max="1" chance="1.876" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008119" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -2402,6 +2339,7 @@
 		</collision>
 	</npc>
 	<npc id="25252" level="70" type="L2RaidBoss" name="Palibati Queen Themis" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25253" count="3" respawnTime="360" weightPoint="1" /> <!-- Handmaiden of Themis -->
@@ -2417,7 +2355,7 @@
 		<equipment rhand="234" /> <!-- rhand: Demon's Dagger -->
 		<acquire exp="226669890" sp="54400" raidPoints="2884" />
 		<stats>
-			<vitals hp="373386.071242416" hpRegen="117.68436242886" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="889034" hpRegen="117.68436242886" mp="1345" mpRegen="2.7" />
 			<attack physical="2154.88111713047" magical="717.403871261232" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="887.74791" magical="433.08" evasion="-18" />
 			<attribute>
@@ -2449,24 +2387,19 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9816" min="3" max="7" chance="82" /> <!-- Earth Egg -->
-				<item id="8176" min="1" max="4" chance="82" /> <!-- Destruction Tombstone -->
-				<group chance="67.97100067138672">
-					<item id="5326" min="1" max="1" chance="3.2792" /> <!-- Sealed Robe of Nightmare -->
-					<item id="5329" min="1" max="1" chance="3.2792" /> <!-- Sealed Majestic Robe -->
-					<item id="5487" min="4" max="12" chance="60.9401" /> <!-- Sealed Robe of Nightmare Fabric -->
-					<item id="5488" min="8" max="22" chance="32.5015" /> <!-- Sealed Majestic Robe Fabric -->
-				</group>
-				<group chance="27.359699249267578">
-					<item id="270" min="1" max="1" chance="7.7806" /> <!-- Dragon Grinder -->
-					<item id="5538" min="12" max="36" chance="92.2194" /> <!-- Dragon Grinder Edge -->
-				</group>
-				<group chance="42.60810089111328">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="5329" min="1" max="1" chance="4.248" /> <!-- Sealed Majestic Robe -->
+				<item id="5326" min="1" max="1" chance="4.238" /> <!-- Sealed Robe of Nightmare -->
+				<item id="270" min="1" max="1" chance="1.376" /> <!-- Dragon Grinder -->
+				<item id="8176" min="1" max="4" chance="81.8" /> <!-- Destruction Tombstone -->
+				<item id="9816" min="3" max="7" chance="80.53" /> <!-- Earth Egg -->
+				<item id="8619" min="1" max="1" chance="52.38" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="5487" min="28" max="84" chance="11.02" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="960" min="1" max="1" chance="7.452" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="5538" min="20" max="60" chance="5.657" /> <!-- Dragon Grinder Edge -->
+				<item id="5488" min="81" max="243" chance="3.939" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.007969" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -2558,6 +2491,7 @@
 		</collision>
 	</npc>
 	<npc id="25255" level="65" type="L2RaidBoss" name="Gargoyle Lord Tiphon" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="6" /> <!-- BOSS Cancel Magic -->
@@ -2569,7 +2503,7 @@
 		<sex>MALE</sex>
 		<acquire exp="106892354" sp="25654" raidPoints="2592" />
 		<stats>
-			<vitals hp="1638609" hpRegen="277.057601433902" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="1638609" hpRegen="277.057601433902" mp="1188" mpRegen="2.7" />
 			<attack physical="3631.01519545517" magical="2425.23781026179" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="815.67099" magical="397.92" evasion="-18" />
 			<attribute>
@@ -2606,22 +2540,24 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="9817" min="3" max="7" chance="78.62" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="4" chance="78.62" /> <!-- Destruction Tombstone -->
-				<item id="5297" min="1" max="1" chance="7.650" /> <!-- Sealed Dark Crystal Leather Armor -->
-				<item id="5298" min="1" max="1" chance="12.75" /> <!-- Sealed Dark Crystal Leggings -->
-				<item id="5301" min="1" max="1" chance="4.700" /> <!-- Sealed Tallum Leather Armor -->
-				<item id="5478" min="9" max="27" chance="48.50" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-				<item id="5482" min="32" max="96" chance="22.15" /> <!-- Sealed Dark Crystal Leggings Design -->
-				<item id="5479" min="22" max="66" chance="13" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				<item id="269" min="1" max="1" chance="1.400" /> <!-- Blood Tornado -->
-				<item id="5539" min="3" max="9" chance="35.25" /> <!-- Blood Tornado Edge -->
-				<item id="6570" min="1" max="1" chance="3.100" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+				<item id="5298" min="1" max="1" chance="12.41" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5297" min="1" max="1" chance="7.628" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5301" min="1" max="1" chance="4.744" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="269" min="1" max="1" chance="1.496" /> <!-- Blood Tornado -->
+				<item id="8176" min="1" max="4" chance="79.08" /> <!-- Destruction Tombstone -->
+				<item id="9817" min="3" max="7" chance="78.52" /> <!-- Nonliving Nucleus -->
+				<item id="5478" min="9" max="27" chance="47.51" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5539" min="3" max="9" chance="34.56" /> <!-- Blood Tornado Edge -->
+				<item id="5482" min="32" max="96" chance="21.11" /> <!-- Sealed Dark Crystal Legging Design -->
+				<item id="5479" min="22" max="66" chance="12.83" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="6570" min="1" max="1" chance="3.073" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.007952" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>
 	<npc id="25256" level="60" type="L2RaidBoss" name="Taik High Prefect Arak" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25257" count="3" respawnTime="360" weightPoint="1" /> <!-- Arak's Archer -->
@@ -2635,7 +2571,7 @@
 		<equipment rhand="71" /> <!-- rhand: Flamberge -->
 		<acquire exp="34637834" sp="8313" raidPoints="1240" />
 		<stats>
-			<vitals hp="221100.02497493" hpRegen="72.9643823396131" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="347452" hpRegen="72.9643823396131" mp="1036" mpRegen="2.4" />
 			<attack physical="785.177450040489" magical="133.511957686818" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="742.95024" magical="362.44" evasion="-18" />
 			<attribute>
@@ -2665,28 +2601,17 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="9814" min="1" max="4" chance="85" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="2" chance="72" /> <!-- Destruction Tombstone -->
-				<group chance="43.81269836425781">
-					<item id="358" min="1" max="1" chance="4.7956" /> <!-- Blue Wolf Breastplate -->
-					<item id="2380" min="1" max="1" chance="7.6719" /> <!-- Blue Wolf Gaiters -->
-					<item id="2381" min="1" max="1" chance="2.9511" /> <!-- Doom Plate Armor -->
-					<item id="4078" min="9" max="27" chance="48.1595" /> <!-- Blue Wolf Breastplate Part -->
-					<item id="4080" min="28" max="84" chance="21.7988" /> <!-- Blue Wolf Gaiters Material -->
-					<item id="4081" min="20" max="60" chance="14.6231" /> <!-- Doom Plate Armor Temper -->
-				</group>
-				<group chance="53.51210021972656">
-					<item id="6323" min="1" max="1" chance="10.8781" /> <!-- Sealed Phoenix Necklace -->
-					<item id="6324" min="1" max="1" chance="14.5042" /> <!-- Sealed Phoenix Earring -->
-					<item id="6325" min="1" max="1" chance="21.7562" /> <!-- Sealed Phoenix Ring -->
-					<item id="6343" min="140" max="420" chance="5.5655" /> <!-- Sealed Phoenix Necklace Beads -->
-					<item id="6341" min="81" max="243" chance="12.4436" /> <!-- Sealed Phoenix Earring Gemstone -->
-					<item id="6345" min="40" max="120" chance="34.8524" /> <!-- Sealed Phoenix Ring Gemstone -->
-				</group>
-				<group chance="22.389699935913086">
-					<item id="6572" min="1" max="1" chance="90.3226" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
-					<item id="6571" min="1" max="1" chance="9.6774" /> <!-- Blessed Scroll: Enchant Weapon (B-Grade) -->
-				</group>
+				<item id="6324" min="1" max="1" chance="4.926" /> <!-- Sealed Phoenix Earring -->
+				<item id="2381" min="1" max="1" chance="3.613" /> <!-- Doom Plate Armor -->
+				<item id="6323" min="1" max="1" chance="2.816" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6325" min="1" max="1" chance="2.21" /> <!-- Sealed Phoenix Ring -->
+				<item id="2380" min="1" max="1" chance="1.564" /> <!-- Blue Wolf Gaiters -->
+				<item id="358" min="1" max="1" chance="0.75" /> <!-- Blue Wolf Breastplate -->
+				<item id="9814" min="1" max="4" chance="85.59" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="2" chance="71.4" /> <!-- Destruction Tombstone -->
+				<item id="6572" min="1" max="1" chance="4.007" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+				<item id="6571" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008066" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -2833,6 +2758,7 @@
 		</collision>
 	</npc>
 	<npc id="25260" level="45" type="L2RaidBoss" name="Iron Giant Totem" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25261" count="3" respawnTime="360" weightPoint="1" /> <!-- Totem Guard Archer -->
@@ -2845,7 +2771,7 @@
 		<sex>MALE</sex>
 		<acquire exp="5918766" sp="1420" raidPoints="1436" />
 		<stats>
-			<vitals hp="165119.995135799" hpRegen="58.9487067730341" mp="610.8" mpRegen="2.1" />
+			<vitals hp="259481" hpRegen="58.9487067730341" mp="610" mpRegen="2.1" />
 			<attack physical="623.771485537243" magical="123.828802739855" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="533.36238" magical="260.2" evasion="-18" />
 			<attribute>
@@ -2877,38 +2803,24 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="9817" min="2" max="4" chance="76" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="2" chance="76" /> <!-- Destruction Tombstone -->
-				<group chance="71.14769744873047">
-					<item id="103" min="7" max="19" chance="2.2406" /> <!-- Tower Shield -->
-					<item id="107" min="7" max="21" chance="2.0805" /> <!-- Composite Shield -->
-					<item id="517" min="1" max="1" chance="20.3954" /> <!-- Composite Helmet -->
-					<item id="1149" min="1" max="1" chance="20.3954" /> <!-- Shining Circlet -->
-					<item id="1978" min="60" max="180" chance="15.4273" /> <!-- Tower Shield Fragment -->
-					<item id="4055" min="116" max="346" chance="8.0142" /> <!-- Composite Shield Fragment -->
-					<item id="2957" min="192" max="576" chance="3.2986" /> <!-- Composite Helmet Design -->
-					<item id="1983" min="23" max="67" chance="28.148" /> <!-- Shining Circlet Pattern -->
-				</group>
-				<group chance="78.46119689941406">
-					<item id="75" min="1" max="1" chance="1.5851" /> <!-- Caliburs -->
-					<item id="76" min="1" max="1" chance="1.5851" /> <!-- Sword of Delusion -->
-					<item id="77" min="1" max="1" chance="1.5851" /> <!-- Tsurugi -->
-					<item id="84" min="1" max="1" chance="1.5851" /> <!-- Homunkulus's Sword -->
-					<item id="134" min="1" max="1" chance="1.5851" /> <!-- Sword of Nightmare -->
-					<item id="145" min="1" max="1" chance="1.5851" /> <!-- Sword of Whispering Death -->
-					<item id="2089" min="8" max="24" chance="8.9196" /> <!-- Caliburs Edge -->
-					<item id="2090" min="14" max="40" chance="5.2857" /> <!-- Delusional Blade -->
-					<item id="2091" min="20" max="60" chance="3.5679" /> <!-- Tsurugi Blade -->
-					<item id="2092" min="3" max="7" chance="28.5428" /> <!-- Homunkulus's Sword Blade -->
-					<item id="2095" min="3" max="9" chance="23.7857" /> <!-- Sword of Nightmare Blade -->
-					<item id="2096" min="4" max="10" chance="20.3877" /> <!-- Sword of Whispering Death Blade -->
-				</group>
-				<group chance="73.71920013427734">
-					<item id="4601" min="6" max="18" chance="10.0365" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
-					<item id="4602" min="2" max="4" chance="40.146" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
-					<item id="4603" min="2" max="6" chance="30.1095" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-					<item id="951" min="3" max="7" chance="19.708" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				</group>
+				<item id="103" min="1" max="1" chance="3.88" /> <!-- Tower Shield -->
+				<item id="76" min="1" max="1" chance="2.844" /> <!-- Sword of Delusion -->
+				<item id="75" min="1" max="1" chance="2.814" /> <!-- Caliburs -->
+				<item id="145" min="1" max="1" chance="2.803" /> <!-- Sword of Whispering Death -->
+				<item id="77" min="1" max="1" chance="2.801" /> <!-- Tsurugi -->
+				<item id="134" min="1" max="1" chance="2.777" /> <!-- Sword of Nightmare -->
+				<item id="84" min="1" max="1" chance="2.772" /> <!-- Homunkulus' Sword -->
+				<item id="107" min="1" max="1" chance="2.252" /> <!-- Compound Shield -->
+				<item id="517" min="1" max="1" chance="0.993" /> <!-- Compound Helmet -->
+				<item id="1149" min="1" max="1" chance="0.75" /> <!-- Shining Circlet -->
+				<item id="8176" min="1" max="2" chance="76.57" /> <!-- Destruction Tombstone -->
+				<item id="9817" min="2" max="4" chance="75.73" /> <!-- Nonliving Nucleus -->
+				<item id="4603" min="1" max="1" chance="17.36" /> <!-- Greater CON Dye (Con   3 Str - 3) -->
+				<item id="951" min="1" max="1" chance="13.65" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="4601" min="1" max="3" chance="8.713" /> <!-- Greater STR Dye (STR   3 CON - 3) -->
+				<item id="4602" min="1" max="3" chance="5.782" /> <!-- Greater STR Dye (STR   3 DEX - 3) -->
+				<item id="39629" min="1" max="1" chance="0.005923" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 		<collision>
@@ -3270,6 +3182,7 @@
 		</collision>
 	</npc>
 	<npc id="25272" level="28" type="L2RaidBoss" name="Partisan Commander Talakin" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="2" /> <!-- BOSS Cancel Magic -->
@@ -3282,7 +3195,7 @@
 		<equipment rhand="77" /> <!-- rhand: Tsurugi -->
 		<acquire exp="2615583" sp="627" raidPoints="376" />
 		<stats>
-			<vitals hp="97967.945523373" hpRegen="50.5321359969236" mp="300.96" mpRegen="1.5" />
+			<vitals hp="153953" hpRegen="50.5321359969236" mp="300" mpRegen="1.5" />
 			<attack physical="189.606914466364" magical="24.2395745441976" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="334.84104" magical="163.34" evasion="-18" />
 			<attribute>
@@ -3315,23 +3228,15 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="46.107601165771484">
-					<item id="63" min="3" max="9" chance="17.012" /> <!-- Gauntlets -->
-					<item id="553" min="4" max="10" chance="14.5817" /> <!-- Iron Boots -->
-					<item id="2422" min="4" max="12" chance="12.759" /> <!-- Reinforced Leather Boots -->
-					<item id="2423" min="5" max="13" chance="11.3413" /> <!-- Boots of Knowledge -->
-					<item id="2446" min="5" max="15" chance="10.2072" /> <!-- Reinforced Leather Gloves -->
-					<item id="2447" min="6" max="16" chance="9.2792" /> <!-- Gloves of Knowledge -->
-					<item id="1940" min="60" max="180" chance="24.8196" /> <!-- Iron Boots Design -->
-				</group>
-				<group chance="34.90250015258789">
-					<item id="157" min="1" max="1" chance="24.8191" /> <!-- Spiked Club -->
-					<item id="186" min="1" max="1" chance="24.8191" /> <!-- Staff of Magic -->
-					<item id="2027" min="12" max="36" chance="50.3618" /> <!-- Spiked Club Head -->
-				</group>
-				<group chance="86.96749877929688">
-					<item id="956" min="12" max="36" chance="100" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-				</group>
+				<item id="63" min="1" max="1" chance="7.889" /> <!-- Gauntlets -->
+				<item id="2447" min="1" max="1" chance="7.861" /> <!-- Gloves of Knowledge -->
+				<item id="2423" min="1" max="1" chance="7.844" /> <!-- Boots of Knowledge -->
+				<item id="553" min="1" max="1" chance="7.828" /> <!-- Iron Boots -->
+				<item id="2422" min="1" max="1" chance="7.809" /> <!-- Reinforced Leather Boots -->
+				<item id="2446" min="1" max="1" chance="7.771" /> <!-- Reinforced Leather Gloves -->
+				<item id="157" min="1" max="1" chance="0.3" /> <!-- Spiked Club -->
+				<item id="186" min="1" max="1" chance="0.3" /> <!-- Staff of Magic -->
+				<item id="39629" min="1" max="1" chance="0.003817" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -4345,6 +4250,7 @@
 		</collision>
 	</npc>
 	<npc id="25293" level="78" type="L2RaidBoss" name="Hestia, Guardian Deity of the Hot Springs" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25294" count="1" respawnTime="360" weightPoint="1" /> <!-- Fighter of Hestia -->
@@ -4359,7 +4265,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="794494284" sp="190678" raidPoints="3344" />
 		<stats>
-			<vitals hp="410600.548543185" hpRegen="126.536105676163" mp="1607.4" mpRegen="3" />
+			<vitals hp="977641" hpRegen="126.536105676163" mp="1607" mpRegen="3" />
 			<attack physical="2592.71886885803" magical="929.620860138406" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="998.10183" magical="486.92" evasion="-18" />
 			<attribute>
@@ -4391,21 +4297,12 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="44.33980178833008">
-					<item id="6684" min="1" max="1" chance="5.855" /> <!-- Sealed Major Arcana Robe -->
-					<item id="6711" min="12" max="36" chance="94.145" /> <!-- Sealed Major Arcana Robe Part -->
-				</group>
-				<group chance="35.512001037597656">
-					<item id="6674" min="1" max="1" chance="6.6823" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="10.6919" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6701" min="53" max="157" chance="21.6531" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-					<item id="6702" min="24" max="72" chance="60.9727" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				</group>
-				<group chance="58.53739929199219">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="6675" min="1" max="1" chance="7.993" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6674" min="1" max="1" chance="4.985" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6684" min="1" max="1" chance="4.183" /> <!-- Sealed Major Arcana Robe -->
+				<item id="959" min="1" max="1" chance="2.682" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008159" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -4486,6 +4383,7 @@
 		</collision>
 	</npc>
 	<npc id="25296" level="74" type="L2RaidBoss" name="Icicle Emperor Bumbalump" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25297" count="3" respawnTime="360" weightPoint="1" /> <!-- Icicle Giant -->
@@ -4498,7 +4396,7 @@
 		<sex>MALE</sex>
 		<acquire exp="5199406" sp="1247" raidPoints="3112" />
 		<stats>
-			<vitals hp="392895.926408634" hpRegen="122.142751323234" mp="1475.0" mpRegen="3" />
+			<vitals hp="935485" hpRegen="122.142751323234" mp="1475" mpRegen="3" />
 			<attack physical="2396.99018807273" magical="851.89721101842" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="943.97961" magical="460.5" evasion="-18" />
 			<attribute>
@@ -4528,27 +4426,16 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="8619" min="1" max="1" chance="56" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9817" min="3" max="7" chance="83" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="4" chance="83" /> <!-- Destruction Tombstone -->
-				<group chance="76.12699890136719">
-					<item id="6326" min="1" max="1" chance="6.579" /> <!-- Sealed Majestic Necklace -->
-					<item id="6327" min="1" max="1" chance="8.7749" /> <!-- Sealed Majestic Earring -->
-					<item id="6328" min="1" max="1" chance="13.158" /> <!-- Sealed Majestic Ring -->
-					<item id="6344" min="20" max="60" chance="24.0871" /> <!-- Sealed Majestic Necklace Beads -->
-					<item id="6342" min="81" max="243" chance="9.1903" /> <!-- Sealed Majestic Earring Gemstone -->
-					<item id="6346" min="28" max="84" chance="38.2107" /> <!-- Sealed Majestic Ring Gemstone -->
-				</group>
-				<group chance="61.33700180053711">
-					<item id="164" min="1" max="1" chance="1.7698" /> <!-- Elysian -->
-					<item id="213" min="1" max="1" chance="1.7698" /> <!-- Branch of the Mother Tree -->
-					<item id="5533" min="4" max="12" chance="62.9305" /> <!-- Elysian Head -->
-					<item id="5544" min="8" max="22" chance="33.5299" /> <!-- Branch of the Mother Tree Head -->
-				</group>
-				<group chance="67.29060363769531">
-					<item id="6578" min="1" max="1" chance="9.6386" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="730" min="1" max="3" chance="90.3614" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
+				<item id="6327" min="1" max="1" chance="7.581" /> <!-- Sealed Majestic Earring -->
+				<item id="6326" min="1" max="1" chance="4.21" /> <!-- Sealed Majestic Necklace -->
+				<item id="6328" min="1" max="1" chance="3.476" /> <!-- Sealed Majestic Ring -->
+				<item id="164" min="1" max="1" chance="1.608" /> <!-- Elysian -->
+				<item id="213" min="1" max="1" chance="1.605" /> <!-- Branch of the Mother Tree -->
+				<item id="8176" min="1" max="4" chance="85.37" /> <!-- Destruction Tombstone -->
+				<item id="9817" min="3" max="7" chance="83.83" /> <!-- Nonliving Nucleus -->
+				<item id="8619" min="1" max="1" chance="57.06" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="6578" min="1" max="1" chance="2.514" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.007965" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
