@@ -49699,3 +49699,14 @@ INSERT INTO `spawnlist` VALUES
 ('Harnak Underground', 1, 22942, -111645, 180192, -13800, 0, 0, 61962, 60, 0, 0, 0),
 ('Harnak Underground', 1, 22939, -111852, 180740, -13800, 0, 0, 59692, 60, 0, 0, 0),
 ('Harnak Underground', 1, 33323, -111797, 180482, -13784, 0, 0, 0, 60, 0, 0, 0);
+
+-- Parnassus
+INSERT INTO `spawnlist` VALUES 
+('Parnassus', 1, 33044, 149369, 174231, -896, 0, 0, 48000, 60, 0, 0, 0), --Fioren 
+('Parnassus', 1, 33523, 148296, 172792, -976, 0, 0, 48000, 60, 0, 0, 0), -- Crystal Prison Entrance
+('Parnassus', 1, 33522, 150463, 172791, -952, 0, 0, 48000, 60, 0, 0, 0), -- Entrance Portal to Crystal Caverns
+('Parnassus', 1, 33569, 149806, 173646, -952, 0, 0, 48000, 60, 0, 0, 0), -- Hermuncus Minion GK
+('Parnassus', 1, 32359, 148328, 173880, -980, 0, 0, 48000, 60, 0, 0, 0); -- Lahm Blacksmith of Power
+
+-- Isle of The Souls Harbor
+INSERT INTO `spawnlist` VALUES ('Stronghold III', 1, 33796, -85919, 37167, -2048, 0, 0, 48000, 60, 0, 0, 0); -- Verda

@@ -69,6 +69,8 @@ import quests.Q00143_FallenAngelRequestOfDusk.Q00143_FallenAngelRequestOfDusk;
 import quests.Q00144_PailakaInjuredDragon.Q00144_PailakaInjuredDragon;
 import quests.Q00146_TheZeroHour.Q00146_TheZeroHour;
 import quests.Q00177_SplitDestiny.Q00177_SplitDestiny;
+import quests.Q00180_InfernalFlamesBurningInCrystalPrison.Q00180_InfernalFlamesBurningInCrystalPrison;
+import quests.Q00181_DevilsStrikeBackAdventOfBalok.Q00181_DevilsStrikeBackAdventOfBalok;
 import quests.Q00183_RelicExploration.Q00183_RelicExploration;
 import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
 import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
@@ -125,6 +127,9 @@ import quests.Q00457_LostAndFound.Q00457_LostAndFound;
 import quests.Q00458_PerfectForm.Q00458_PerfectForm;
 import quests.Q00463_IMustBeaGenius.Q00463_IMustBeaGenius;
 import quests.Q00464_Oath.Q00464_Oath;
+import quests.Q00471_BreakingThroughTheEmeraldSquare.Q00471_BreakingThroughTheEmeraldSquare;
+import quests.Q00472_ChallengeSteamCorridor.Q00472_ChallengeSteamCorridor;
+import quests.Q00473_InTheCoralGarden.Q00473_InTheCoralGarden;
 import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
 import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
 import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGluttonyKaliosGroup;
@@ -231,6 +236,7 @@ import quests.Q10381_ToTheSeedOfHellfire.Q10381_ToTheSeedOfHellfire;
 import quests.Q10382_DayOfLiberation.Q10382_DayOfLiberation;
 import quests.Q10383_FergasonsOffer.Q10383_FergasonsOffer;
 import quests.Q10384_AnAudienceWithTauti.Q10384_AnAudienceWithTauti;
+import quests.Q10386_MysteriousJourney.Q10386_MysteriousJourney;
 import quests.Q10388_ConspiracyBehindDoor.Q10388_ConspiracyBehindDoor;
 import quests.Q10389_TheVoiceOfAuthority.Q10389_TheVoiceOfAuthority;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
@@ -242,6 +248,7 @@ import quests.Q10408_KekropusLetter_TheSwampOfScream.Q10408_KekropusLetter_TheSw
 import quests.Q10411_KekropusLetter_TheForestOfTheDead.Q10411_KekropusLetter_TheForestOfTheDead;
 import quests.Q10414_KekropusLetter_WithCourage.Q10414_KekropusLetter_WithCourage;
 import quests.Q10415_KekropusLetter_WithWisdom.Q10415_KekropusLetter_WithWisdom;
+import quests.Q10453_StoppingTheWindDragon.Q10453_StoppingTheWindDragon;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
@@ -335,6 +342,8 @@ final class QuestMasterHandler
 		Q00144_PailakaInjuredDragon.class,
 		Q00146_TheZeroHour.class,
 		Q00177_SplitDestiny.class,
+		Q00180_InfernalFlamesBurningInCrystalPrison.class,
+		Q00181_DevilsStrikeBackAdventOfBalok.class,
 		Q00183_RelicExploration.class,
 		Q00184_ArtOfPersuasion.class,
 		Q00185_NikolasCooperation.class,
@@ -391,6 +400,9 @@ final class QuestMasterHandler
 		Q00458_PerfectForm.class,
 		Q00463_IMustBeaGenius.class,
 		Q00464_Oath.class,
+		Q00471_BreakingThroughTheEmeraldSquare.class,
+		Q00472_ChallengeSteamCorridor.class,
+		Q00473_InTheCoralGarden.class,
 		Q00494_IncarnationOfGreedZellakaGroup.class,
 		Q00495_IncarnationOfJealousyPellineGroup.class,
 		Q00496_IncarnationOfGluttonyKaliosGroup.class,
@@ -497,6 +509,7 @@ final class QuestMasterHandler
 		Q10382_DayOfLiberation.class,
 		Q10383_FergasonsOffer.class,
 		Q10384_AnAudienceWithTauti.class,
+		Q10386_MysteriousJourney.class,
 		Q10388_ConspiracyBehindDoor.class,
 		Q10389_TheVoiceOfAuthority.class,
 		Q10390_KekropusLetter.class,
@@ -508,6 +521,7 @@ final class QuestMasterHandler
 		Q10411_KekropusLetter_TheForestOfTheDead.class,
 		Q10414_KekropusLetter_WithCourage.class,
 		Q10415_KekropusLetter_WithWisdom.class,
+		Q10453_StoppingTheWindDragon.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
