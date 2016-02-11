@@ -274,7 +274,7 @@ import quests.Q10763_TerrifyingChertuba.Q10763_TerrifyingChertuba;
 import quests.Q10764_FreeSpirit.Q10764_FreeSpirit;
 import quests.Q10769_LettersFromTheQueen_CrumaTower.Q10769_LettersFromTheQueen_CrumaTower;
 import quests.Q10782_LettersFromTheQueen_ForsakenPlains.Q10782_LettersFromTheQueen_ForsakenPlains;
-
+import quests.Q10785_LettersFromTheQueen_FieldsOfMassacre.Q10785_LettersFromTheQueen_FieldsOfMassacre;
 
 /**
  * @author NosBit
@@ -539,7 +539,8 @@ final class QuestMasterHandler
 		Q10763_TerrifyingChertuba.class,
 		Q10764_FreeSpirit.class,
 		Q10769_LettersFromTheQueen_CrumaTower.class,
-		Q10782_LettersFromTheQueen_ForsakenPlains.class
+		Q10782_LettersFromTheQueen_ForsakenPlains.class,
+		Q10785_LettersFromTheQueen_FieldsOfMassacre.class
 	};
 	
 	public static void main(String[] args)
