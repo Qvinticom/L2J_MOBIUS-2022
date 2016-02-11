@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import quests.Q10383_FergasonsOffer.Q10383_FergasonsOffer;
 
 /**
- * @hlwrave
+ * @author hlwrave
  */
 public class Q10384_AnAudienceWithTauti extends Quest
 {
@@ -47,8 +47,8 @@ public class Q10384_AnAudienceWithTauti extends Quest
 		addTalkId(FERGASON, AKU);
 		addKillId(TAUTI);
 		registerQuestItems(TAUTIS_FRAGMENT);
-		addCondMinLevel(MIN_LEVEL, "maestro_ferguson_q10384_05.htm");
-		addCondCompletedQuest(Q10383_FergasonsOffer.class.getSimpleName(), "maestro_ferguson_q10384_06.htm");
+		addCondMinLevel(MIN_LEVEL, "maestro_ferguson_q10384_05.html");
+		addCondCompletedQuest(Q10383_FergasonsOffer.class.getSimpleName(), "maestro_ferguson_q10384_06.html");
 		
 	}
 	
@@ -65,17 +65,17 @@ public class Q10384_AnAudienceWithTauti extends Quest
 		
 		switch (event)
 		{
-			case "maestro_ferguson_q10384_04.htm":
+			case "maestro_ferguson_q10384_04.html":
 			{
 				qs.startQuest();
 				break;
 			}
-			case "sofa_aku_q10384_02.htm":
+			case "sofa_aku_q10384_02.html":
 			{
 				qs.setCond(2);
 				break;
 			}
-			case "maestro_ferguson_q10384_11.htm":
+			case "maestro_ferguson_q10384_11.html":
 			{
 				qs.addExpAndSp(951127800, 435041400);
 				qs.giveItems(57, 3256740);
@@ -105,17 +105,17 @@ public class Q10384_AnAudienceWithTauti extends Quest
 				{
 					if (qs.isCond(1) || qs.isCond(2))
 					{
-						htmltext = "maestro_ferguson_q10384_08.htm";
+						htmltext = "maestro_ferguson_q10384_08.html";
 					}
 					else if (qs.isCond(3) && qs.hasQuestItems(TAUTIS_FRAGMENT))
 					{
-						htmltext = "maestro_ferguson_q10384_09.htm";
+						htmltext = "maestro_ferguson_q10384_09.html";
 					}
 					
 				}
 				else if (qs.isCompleted())
 				{
-					htmltext = "maestro_ferguson_q10384_07.htm";
+					htmltext = "maestro_ferguson_q10384_07.html";
 				}
 				break;
 			}
@@ -123,7 +123,7 @@ public class Q10384_AnAudienceWithTauti extends Quest
 			{
 				if (qs.isStarted())
 				{
-					htmltext = "sofa_aku_q10384_01.htm";
+					htmltext = "sofa_aku_q10384_01.html";
 				}
 				break;
 			}

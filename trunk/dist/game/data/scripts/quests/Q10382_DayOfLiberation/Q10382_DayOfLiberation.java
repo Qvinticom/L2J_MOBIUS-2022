@@ -21,13 +21,12 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-//import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jmobius.gameserver.util.Util;
 
 import quests.Q10381_ToTheSeedOfHellfire.Q10381_ToTheSeedOfHellfire;
 
 /**
- * @hlwrave
+ * @author hlwrave
  */
 public class Q10382_DayOfLiberation extends Quest
 {
@@ -45,8 +44,8 @@ public class Q10382_DayOfLiberation extends Quest
 		addStartNpc(SIZRAK);
 		addTalkId(SIZRAK);
 		addKillId(TAUTI);
-		addCondMinLevel(MIN_LEVEL, "sofa_sizraku_q10382_04.htm");
-		addCondCompletedQuest(Q10381_ToTheSeedOfHellfire.class.getSimpleName(), "sofa_sizraku_q10382_05.htm");
+		addCondMinLevel(MIN_LEVEL, "sofa_sizraku_q10382_04.html");
+		addCondCompletedQuest(Q10381_ToTheSeedOfHellfire.class.getSimpleName(), "sofa_sizraku_q10382_05.html");
 	}
 	
 	@Override
@@ -61,14 +60,13 @@ public class Q10382_DayOfLiberation extends Quest
 		
 		switch (event)
 		{
-			case "sofa_sizraku_q10382_03.htm":
+			case "sofa_sizraku_q10382_03.html":
 			{
-				qs.setCond(1);
 				qs.startQuest();
 				qs.set(Integer.toString(TAUTI), 0);
 				break;
 			}
-			case "sofa_sizraku_q10382_10.htm":
+			case "sofa_sizraku_q10382_10.html":
 			{
 				qs.addExpAndSp(951127800, 435041400);
 				qs.giveItems(57, 3256740);
@@ -98,16 +96,16 @@ public class Q10382_DayOfLiberation extends Quest
 				{
 					if (qs.isCond(1))
 					{
-						htmltext = "sofa_sizraku_q10382_07.htm";
+						htmltext = "sofa_sizraku_q10382_07.html";
 					}
 					else if (qs.isCond(2))
 					{
-						htmltext = "sofa_sizraku_q10382_08.htm";
+						htmltext = "sofa_sizraku_q10382_08.html";
 					}
 				}
 				else if (qs.isCompleted())
 				{
-					htmltext = "sofa_sizraku_q10382_06.htm";
+					htmltext = "sofa_sizraku_q10382_06.html";
 				}
 				break;
 			}

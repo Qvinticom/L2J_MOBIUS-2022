@@ -75,13 +75,13 @@ public class Q00757_TriolsMovement extends Quest
 		
 		switch (event)
 		{
-			case "accepted.htm":
+			case "accepted.html":
 			{
 				qs.setCond(1);
 				qs.startQuest();
 				break;
 			}
-			case "endquest.htm":
+			case "endquest.html":
 			{
 				if (qs.isCond(2))
 				{
@@ -91,7 +91,7 @@ public class Q00757_TriolsMovement extends Quest
 					qs.giveItems(36232, 1);
 					qs.addExpAndSp(301518549, 7236360);
 					qs.exitQuest(QuestType.DAILY, true);
-					htmltext = "endquest.htm";
+					htmltext = "endquest.html";
 				}
 				break;
 			}
@@ -124,7 +124,7 @@ public class Q00757_TriolsMovement extends Quest
 				}
 				else
 				{
-					htmltext = "no_level.htm";
+					htmltext = "no_level.html";
 				}
 				break;
 			}
@@ -132,11 +132,11 @@ public class Q00757_TriolsMovement extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					htmltext = "notcollected.htm";
+					htmltext = "notcollected.htmll";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "collected.htm";
+					htmltext = "collected.html";
 				}
 				break;
 			}

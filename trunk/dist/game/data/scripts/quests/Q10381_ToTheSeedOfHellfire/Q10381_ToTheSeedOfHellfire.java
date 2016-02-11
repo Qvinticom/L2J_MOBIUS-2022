@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 /**
- * @hlwrave
+ * @author hlwrave
  */
 public class Q10381_ToTheSeedOfHellfire extends Quest
 {
@@ -42,7 +42,7 @@ public class Q10381_ToTheSeedOfHellfire extends Quest
 		addStartNpc(KEUCEREUS);
 		addTalkId(KEUCEREUS, KBALDIR, SIZRAK);
 		registerQuestItems(KBALDIRS_LETTER);
-		addCondMinLevel(MIN_LEVEL, "kserth_q10381_04.htm");
+		addCondMinLevel(MIN_LEVEL, "kserth_q10381_04.html");
 	}
 	
 	@Override
@@ -57,18 +57,18 @@ public class Q10381_ToTheSeedOfHellfire extends Quest
 		
 		switch (event)
 		{
-			case "kserth_q10381_03.htm":
+			case "kserth_q10381_03.html":
 			{
 				qs.startQuest();
 				break;
 			}
-			case "kbarldire_q10381_03.htm":
+			case "kbarldire_q10381_03.html":
 			{
 				qs.setCond(2);
 				qs.giveItems(KBALDIRS_LETTER, 1);
 				break;
 			}
-			case "sofa_sizraku_q10381_03.htm":
+			case "sofa_sizraku_q10381_03.html":
 			{
 				qs.takeItems(KBALDIRS_LETTER, -1);
 				qs.addExpAndSp(951127800, 435041400);
@@ -96,12 +96,12 @@ public class Q10381_ToTheSeedOfHellfire extends Quest
 				}
 				else if (qs.isStarted())
 				{
-					htmltext = "kserth_q10381_06.htm";
+					htmltext = "kserth_q10381_06.html";
 					
 				}
 				else if (qs.isCompleted())
 				{
-					htmltext = "kserth_q10381_05.htm";
+					htmltext = "kserth_q10381_05.html";
 				}
 				break;
 			}
@@ -109,11 +109,11 @@ public class Q10381_ToTheSeedOfHellfire extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					htmltext = "kbarldire_q10381_01.htm";
+					htmltext = "kbarldire_q10381_01.html";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "kbarldire_q10381_04.htm";
+					htmltext = "kbarldire_q10381_04.html";
 				}
 				break;
 			}
@@ -121,7 +121,7 @@ public class Q10381_ToTheSeedOfHellfire extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					htmltext = "sofa_sizraku_q10381_01.htm";
+					htmltext = "sofa_sizraku_q10381_01.html";
 				}
 				break;
 			}

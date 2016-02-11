@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 /**
- * @hlwrave
+ * @author hlwrave
  */
 public class Q00755_InNeedOfPetras extends Quest
 {
@@ -63,7 +63,7 @@ public class Q00755_InNeedOfPetras extends Quest
 		addTalkId(AKU);
 		addKillId(MONSTERS);
 		registerQuestItems(PETRA);
-		addCondMinLevel(MIN_LEVEL, "sofa_aku_q0755_05.htm");
+		addCondMinLevel(MIN_LEVEL, "sofa_aku_q0755_05.html");
 	}
 	
 	@Override
@@ -77,7 +77,7 @@ public class Q00755_InNeedOfPetras extends Quest
 			return getNoQuestMsg(player);
 		}
 		
-		if (event.equals("sofa_aku_q0755_04.htm"))
+		if (event.equals("sofa_aku_q0755_04.html"))
 		{
 			qs.startQuest();
 		}
@@ -98,7 +98,7 @@ public class Q00755_InNeedOfPetras extends Quest
 		{
 			if (qs.isCond(1))
 			{
-				htmltext = "sofa_aku_q0755_07.htm";
+				htmltext = "sofa_aku_q0755_07.html";
 			}
 			else if (qs.isCond(2))
 			{
@@ -107,12 +107,12 @@ public class Q00755_InNeedOfPetras extends Quest
 				qs.giveItems(AKUS_SUPPLY_BOX, 1);
 				qs.giveItems(ENERGY_OF_DESTRUCTION, 1);
 				qs.exitQuest(QuestType.DAILY, true);
-				htmltext = "sofa_aku_q0755_08.htm";
+				htmltext = "sofa_aku_q0755_08.html";
 			}
 		}
 		else if (qs.isCompleted())
 		{
-			htmltext = "sofa_aku_q0755_06.htm";
+			htmltext = "sofa_aku_q0755_06.html";
 		}
 		
 		return htmltext;

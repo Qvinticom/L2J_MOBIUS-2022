@@ -55,24 +55,23 @@ public class Q10388_ConspiracyBehindDoor extends Quest
 		
 		switch (event)
 		{
-			case "go.htm":
+			case "go.html":
 			{
-				qs.setCond(1);
 				qs.startQuest();
 				break;
 			}
-			case "toCond2.htm":
+			case "toCond2.html":
 			{
 				qs.setCond(2);
 				break;
 			}
-			case "toCond3.htm":
+			case "toCond3.html":
 			{
 				qs.setCond(3);
 				qs.giveItems(VISITORS_BADGE, 1);
 				break;
 			}
-			case "final.htm":
+			case "final.html":
 			{
 				qs.addExpAndSp(29638350, 2963835);
 				qs.exitQuest(false, true);
@@ -110,7 +109,7 @@ public class Q10388_ConspiracyBehindDoor extends Quest
 					}
 					else
 					{
-						htmltext = "nolvl.htm";
+						htmltext = "nolvl.html";
 					}
 				}
 				break;
@@ -123,7 +122,7 @@ public class Q10388_ConspiracyBehindDoor extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							htmltext = "cond1.htm";
+							htmltext = "cond1.html";
 						}
 						break;
 					}
@@ -131,7 +130,7 @@ public class Q10388_ConspiracyBehindDoor extends Quest
 					{
 						if (qs.isCond(2))
 						{
-							htmltext = "cond2.htm";
+							htmltext = "cond2.html";
 						}
 						break;
 					}
@@ -139,7 +138,7 @@ public class Q10388_ConspiracyBehindDoor extends Quest
 					{
 						if (qs.isCond(3))
 						{
-							htmltext = "cond3.htm";
+							htmltext = "cond3.html";
 						}
 						break;
 					}

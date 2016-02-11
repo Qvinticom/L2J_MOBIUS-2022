@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import quests.Q10381_ToTheSeedOfHellfire.Q10381_ToTheSeedOfHellfire;
 
 /**
- * @hlwrave
+ * @author hlwrave
  */
 public class Q10383_FergasonsOffer extends Quest
 {
@@ -56,8 +56,8 @@ public class Q10383_FergasonsOffer extends Quest
 		addTalkId(SIZRAK, AKU, FERGASON);
 		addKillId(MONSTERS);
 		registerQuestItems(UNSTABLE_PETRA);
-		addCondMinLevel(MIN_LEVEL, "sofa_sizraku_q10383_04.htm");
-		addCondCompletedQuest(Q10381_ToTheSeedOfHellfire.class.getSimpleName(), "sofa_sizraku_q10383_07.htm");
+		addCondMinLevel(MIN_LEVEL, "sofa_sizraku_q10383_04.html");
+		addCondCompletedQuest(Q10381_ToTheSeedOfHellfire.class.getSimpleName(), "sofa_sizraku_q10383_07.html");
 	}
 	
 	@Override
@@ -73,17 +73,17 @@ public class Q10383_FergasonsOffer extends Quest
 		
 		switch (event)
 		{
-			case "sofa_sizraku_q10383_03.htm":
+			case "sofa_sizraku_q10383_03.html":
 			{
 				qs.startQuest();
 				break;
 			}
-			case "maestro_ferguson_q10383_04.htm":
+			case "maestro_ferguson_q10383_04.html":
 			{
 				qs.setCond(2);
 				break;
 			}
-			case "sofa_aku_q10383_03.htm":
+			case "sofa_aku_q10383_03.html":
 			{
 				qs.takeItems(UNSTABLE_PETRA, -1L);
 				qs.addExpAndSp(951127800, 435041400);
@@ -111,11 +111,11 @@ public class Q10383_FergasonsOffer extends Quest
 				}
 				else if (qs.isStarted())
 				{
-					htmltext = "sofa_sizraku_q10383_06.htm";
+					htmltext = "sofa_sizraku_q10383_06.html";
 				}
 				else if (qs.isCompleted())
 				{
-					htmltext = "sofa_sizraku_q10383_05.htm";
+					htmltext = "sofa_sizraku_q10383_05.html";
 				}
 				break;
 			}
@@ -123,11 +123,11 @@ public class Q10383_FergasonsOffer extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					htmltext = "maestro_ferguson_q10383_01.htm";
+					htmltext = "maestro_ferguson_q10383_01.html";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "maestro_ferguson_q10383_05.htm";
+					htmltext = "maestro_ferguson_q10383_05.html";
 				}
 				
 				break;
@@ -136,11 +136,11 @@ public class Q10383_FergasonsOffer extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					htmltext = "sofa_aku_q10383_01.htm";
+					htmltext = "sofa_aku_q10383_01.html";
 				}
 				else if (qs.isCond(3))
 				{
-					htmltext = "sofa_aku_q10383_02.htm";
+					htmltext = "sofa_aku_q10383_02.html";
 				}
 				
 				break;

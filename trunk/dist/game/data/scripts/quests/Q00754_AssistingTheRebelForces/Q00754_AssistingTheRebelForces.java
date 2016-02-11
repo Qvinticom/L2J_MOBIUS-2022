@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * @hlwrave
+ * @author hlwrave
  */
 public class Q00754_AssistingTheRebelForces extends Quest
 {
@@ -51,7 +51,7 @@ public class Q00754_AssistingTheRebelForces extends Quest
 		addStartNpc(SIZRAK);
 		addTalkId(SIZRAK, COMMUNICATION);
 		addKillId(KUNDA_GUARDIAN, KUNDA_BERSERKER, KUNDA_EXECUTOR);
-		addCondMinLevel(MIN_LEVEL, "sofa_sizraku_q0754_05.htm");
+		addCondMinLevel(MIN_LEVEL, "sofa_sizraku_q0754_05.html");
 	}
 	
 	@Override
@@ -71,7 +71,7 @@ public class Q00754_AssistingTheRebelForces extends Quest
 			qs.set(Integer.toString(KUNDA_GUARDIAN), 0);
 			qs.set(Integer.toString(KUNDA_BERSERKER), 0);
 			qs.set(Integer.toString(KUNDA_EXECUTOR), 0);
-			htmltext = "sofa_sizraku_q0754_04.htm";
+			htmltext = "sofa_sizraku_q0754_04.html";
 		}
 		return htmltext;
 	}
@@ -92,12 +92,12 @@ public class Q00754_AssistingTheRebelForces extends Quest
 				}
 				else if (qs.isCond(0))
 				{
-					htmltext = "sofa_sizraku_q0754_03.htm";
+					htmltext = "sofa_sizraku_q0754_03.html";
 					
 				}
 				else if (qs.isCond(1))
 				{
-					htmltext = "sofa_sizraku_q0754_07.htm";
+					htmltext = "sofa_sizraku_q0754_07.html";
 				}
 				else if (qs.isCond(2))
 				{
@@ -105,11 +105,11 @@ public class Q00754_AssistingTheRebelForces extends Quest
 					qs.giveItems(REBEL_SUPPLY_BOX, 1);
 					qs.giveItems(MARK_OF_RESISTANCE, 1);
 					qs.exitQuest(QuestType.DAILY, true);
-					htmltext = "sofa_sizraku_q0754_08.htm";
+					htmltext = "sofa_sizraku_q0754_08.html";
 				}
 				else if (qs.isCompleted())
 				{
-					htmltext = "sofa_sizraku_q0754_06.htm";
+					htmltext = "sofa_sizraku_q0754_06.html";
 				}
 				break;
 			}
@@ -121,7 +121,7 @@ public class Q00754_AssistingTheRebelForces extends Quest
 					qs.giveItems(REBEL_SUPPLY_BOX, 1);
 					qs.giveItems(MARK_OF_RESISTANCE, 1);
 					qs.exitQuest(QuestType.DAILY, true);
-					htmltext = "sofa_sizraku_q0754_08.htm";
+					htmltext = "sofa_sizraku_q0754_08.html";
 				}
 				break;
 			}

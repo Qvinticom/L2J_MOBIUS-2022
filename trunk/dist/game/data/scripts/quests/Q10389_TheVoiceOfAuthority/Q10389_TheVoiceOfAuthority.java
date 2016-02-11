@@ -49,7 +49,7 @@ public class Q10389_TheVoiceOfAuthority extends Quest
 	public Q10389_TheVoiceOfAuthority()
 	{
 		super(10389, Q10389_TheVoiceOfAuthority.class.getSimpleName(), "The Voice Of Authority");
-		addCondCompletedQuest(Q10388_ConspiracyBehindDoor.class.getSimpleName(), "no_quest.htm");
+		addCondCompletedQuest(Q10388_ConspiracyBehindDoor.class.getSimpleName(), "no_quest.html");
 		addStartNpc(RADZEN);
 		addTalkId(RADZEN);
 		addKillId(MOB_1, MOB_2, MOB_3, MOB_4, MOB_5, MOB_6, MOB_7, MOB_8, MOB_9, MOB_10);
@@ -68,9 +68,8 @@ public class Q10389_TheVoiceOfAuthority extends Quest
 		
 		switch (event)
 		{
-			case "accepted.htm":
+			case "accepted.html":
 			{
-				qs.setCond(1);
 				qs.startQuest();
 				qs.set(Integer.toString(MOB_1), 0);
 				qs.set(Integer.toString(MOB_2), 0);
@@ -84,13 +83,13 @@ public class Q10389_TheVoiceOfAuthority extends Quest
 				qs.set(Integer.toString(MOB_10), 0);
 				break;
 			}
-			case "endquest.htm":
+			case "endquest.html":
 			{
 				qs.giveItems(57, 1302720);
 				qs.giveItems(8067, 1);
 				qs.addExpAndSp(592767000, 142264);
 				qs.exitQuest(false, true);
-				htmltext = "endquest.htm";
+				htmltext = "endquest.html";
 				break;
 			}
 		}
@@ -122,7 +121,7 @@ public class Q10389_TheVoiceOfAuthority extends Quest
 				}
 				else
 				{
-					htmltext = "no_level.htm";
+					htmltext = "no_level.html";
 				}
 				break;
 			}
@@ -130,11 +129,11 @@ public class Q10389_TheVoiceOfAuthority extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					htmltext = "notcollected.htm";
+					htmltext = "notcollected.html";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "collected.htm";
+					htmltext = "collected.html";
 				}
 				break;
 			}

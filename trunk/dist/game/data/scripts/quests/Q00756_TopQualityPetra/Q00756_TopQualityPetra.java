@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * @hlwrave
+ * @author hlwrave
  */
 public class Q00756_TopQualityPetra extends Quest
 {
@@ -44,7 +44,7 @@ public class Q00756_TopQualityPetra extends Quest
 		addTalkId(AKU);
 		addItemTalkId(ZAHAK_PETRA);
 		registerQuestItems(TOP_QUALITY_PETRA);
-		addCondMinLevel(MIN_LEVEL, "sofa_aku_q0755_05.htm");
+		addCondMinLevel(MIN_LEVEL, "sofa_aku_q0755_05.html");
 	}
 	
 	@Override
@@ -55,13 +55,13 @@ public class Q00756_TopQualityPetra extends Quest
 		
 		switch (event)
 		{
-			case "petra_of_zahaq_q0756_03.htm":
+			case "petra_of_zahaq_q0756_03.html":
 			{
 				qs.startQuest();
 				qs.takeItems(ZAHAK_PETRA, 1);
 				qs.giveItems(TOP_QUALITY_PETRA, 1);
 			}
-			case "sofa_aku_q0756_02.htm":
+			case "sofa_aku_q0756_02.html":
 			{
 				qs.takeItems(TOP_QUALITY_PETRA, -1);
 				qs.addExpAndSp(570676680, 26102484);
@@ -104,7 +104,7 @@ public class Q00756_TopQualityPetra extends Quest
 				qs.startQuest();
 				qs.takeItems(ZAHAK_PETRA, 1);
 				qs.giveItems(TOP_QUALITY_PETRA, 1);
-				htmltext = "petra_of_zahaq_q0756_03.htm";
+				htmltext = "petra_of_zahaq_q0756_03.html";
 			}
 			else
 			{
@@ -122,11 +122,11 @@ public class Q00756_TopQualityPetra extends Quest
 		
 		if (qs.isCond(1) && qs.hasQuestItems(TOP_QUALITY_PETRA))
 		{
-			htmltext = "sofa_aku_q0756_01.htm";
+			htmltext = "sofa_aku_q0756_01.html";
 		}
 		else
 		{
-			htmltext = "sofa_aku_q0756_03.htm";
+			htmltext = "sofa_aku_q0756_03.html";
 		}
 		return htmltext;
 	}
