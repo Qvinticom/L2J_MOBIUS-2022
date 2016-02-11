@@ -67,7 +67,6 @@ public class Q00757_TriolsMovement extends Quest
 	{
 		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
@@ -77,7 +76,6 @@ public class Q00757_TriolsMovement extends Quest
 		{
 			case "accepted.html":
 			{
-				qs.setCond(1);
 				qs.startQuest();
 				break;
 			}

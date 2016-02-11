@@ -59,7 +59,6 @@ public class Q00754_AssistingTheRebelForces extends Quest
 	{
 		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
@@ -173,7 +172,7 @@ public class Q00754_AssistingTheRebelForces extends Quest
 			log.addNpc(KUNDA_GUARDIAN, qs.getInt(Integer.toString(KUNDA_GUARDIAN)));
 			log.addNpc(KUNDA_BERSERKER, qs.getInt(Integer.toString(KUNDA_BERSERKER)));
 			log.addNpc(KUNDA_EXECUTOR, qs.getInt(Integer.toString(KUNDA_EXECUTOR)));
-			killer.sendPacket(log);
+			qs.getPlayer().sendPacket(log);
 			
 			if ((qs.getInt(Integer.toString(KUNDA_GUARDIAN)) >= KUNDA_GUARDIAN_KILL) && (qs.getInt(Integer.toString(KUNDA_BERSERKER)) >= KUNDA_BERSERKER_KILL) && (qs.getInt(Integer.toString(KUNDA_EXECUTOR)) >= KUNDA_EXECUTOR_KILL))
 			{

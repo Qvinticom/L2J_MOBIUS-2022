@@ -71,7 +71,6 @@ public class Q00755_InNeedOfPetras extends Quest
 	{
 		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
