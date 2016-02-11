@@ -655,24 +655,6 @@ public final class QuestState
 		((L2PcInstance) character).addNotifyQuestOfDeath(this);
 	}
 	
-	// TODO: More radar functions need to be added when the radar class is complete.
-	// BEGIN STUFF THAT WILL PROBABLY BE CHANGED
-	public void addRadar(int x, int y, int z)
-	{
-		_player.getRadar().addMarker(x, y, z);
-	}
-	
-	public void removeRadar(int x, int y, int z)
-	{
-		_player.getRadar().removeMarker(x, y, z);
-	}
-	
-	public void clearRadar()
-	{
-		_player.getRadar().removeAllMarkers();
-	}
-	// END STUFF THAT WILL PROBABLY BE CHANGED
-	
 	/**
 	 * @return {@code true} if quest is to be exited on clean up by QuestStateManager, {@code false} otherwise
 	 */
