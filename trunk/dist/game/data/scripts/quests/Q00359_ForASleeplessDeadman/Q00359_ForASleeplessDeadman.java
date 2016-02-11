@@ -73,8 +73,8 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -91,15 +91,15 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 			}
 			case "30857-05.htm":
 			{
-				st.setMemoState(1);
-				st.startQuest();
+				qs.setMemoState(1);
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "30857-10.html":
 			{
 				rewardItems(player, REWARDS[getRandom(REWARDS.length)], 4);
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -110,10 +110,10 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, 1, 3, npc);
-		if ((st != null) && st.giveItemRandomly(npc, REMAINS_OF_ADEN_RESIDENTS, 1, REMAINS_COUNT, MOBS.get(npc.getId()), true))
+		final QuestState qs = getRandomPartyMemberState(player, 1, 3, npc);
+		if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, REMAINS_OF_ADEN_RESIDENTS, 1, REMAINS_COUNT, MOBS.get(npc.getId()), true))
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -121,15 +121,15 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30857-01.htm" : "30857-06.html");
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			if (st.isMemoState(1))
+			if (qs.isMemoState(1))
 			{
 				if (getQuestItemsCount(player, REMAINS_OF_ADEN_RESIDENTS) < REMAINS_COUNT)
 				{
@@ -138,12 +138,12 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 				else
 				{
 					takeItems(player, REMAINS_OF_ADEN_RESIDENTS, -1);
-					st.setMemoState(2);
-					st.setCond(3, true);
+					qs.setMemoState(2);
+					qs.setCond(3, true);
 					htmltext = "30857-08.html";
 				}
 			}
-			else if (st.isMemoState(2))
+			else if (qs.isMemoState(2))
 			{
 				htmltext = "30857-09.html";
 			}

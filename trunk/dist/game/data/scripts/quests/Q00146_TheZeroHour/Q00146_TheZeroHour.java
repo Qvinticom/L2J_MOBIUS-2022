@@ -49,15 +49,15 @@ public class Q00146_TheZeroHour extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		if (event.equalsIgnoreCase("31554-03.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		return event;
 	}
@@ -68,11 +68,11 @@ public class Q00146_TheZeroHour extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = getQuestState(partyMember, false);
-			if (!st.hasQuestItems(FANG))
+			final QuestState qs = getQuestState(partyMember, false);
+			if (!hasQuestItems(partyMember, FANG))
 			{
-				st.giveItems(FANG, 1);
-				st.setCond(2, true);
+				giveItems(partyMember, FANG, 1);
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -82,15 +82,16 @@ public class Q00146_TheZeroHour extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 81)
 				{
 					htmltext = "31554-02.htm";
@@ -108,22 +109,27 @@ public class Q00146_TheZeroHour extends Quest
 					}
 				}
 				break;
+			}
 			case State.STARTED:
-				if (st.isCond(1))
+			{
+				if (qs.isCond(1))
 				{
 					htmltext = "31554-06.html";
 				}
 				else
 				{
-					st.giveItems(KAHMANS_SUPPLY_BOX, 1);
-					st.addExpAndSp(154616, 12500);
-					st.exitQuest(false, true);
+					giveItems(player, KAHMANS_SUPPLY_BOX, 1);
+					addExpAndSp(player, 154616, 12500);
+					qs.exitQuest(false, true);
 					htmltext = "31554-05.html";
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = "31554-01b.htm";
 				break;
+			}
 		}
 		return htmltext;
 	}

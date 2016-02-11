@@ -54,8 +54,8 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -64,11 +64,11 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		{
 			if (event.equalsIgnoreCase("32020-03.htm"))
 			{
-				st.startQuest();
+				qs.startQuest();
 			}
 			else if (event.equalsIgnoreCase("32020-07.htm"))
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 		else if ((npc.getId() == KIER) && event.equalsIgnoreCase("spawn"))
@@ -92,9 +92,9 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		}
 		else if ((npc.getId() == JINIA) && event.equalsIgnoreCase("32760-04.html"))
 		{
-			st.giveAdena(190000, true);
-			st.addExpAndSp(627000, 50300);
-			st.exitQuest(false, true);
+			giveAdena(player, 190000, true);
+			addExpAndSp(player, 627000, 50300);
+			qs.exitQuest(false, true);
 			npc.setRunning();
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_END);
 			npc.decayMe();
@@ -110,8 +110,8 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			return "32760-10.html";
 		}
 		
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(2))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(2))
 		{
 			return "32760-01.html";
 		}
@@ -122,8 +122,8 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -131,39 +131,51 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		switch (npc.getId())
 		{
 			case RAFFORTY:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						final QuestState _prev = player.getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
 						htmltext = ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82)) ? "32020-01.htm" : "32020-00.htm";
 						break;
+					}
 					case State.STARTED:
-						if (st.isCond(1))
+					{
+						if (qs.isCond(1))
 						{
 							htmltext = "32020-04.htm";
 						}
-						else if (st.isCond(2))
+						else if (qs.isCond(2))
 						{
 							htmltext = "32020-08.htm";
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "32020-09.htm";
 						break;
+					}
 				}
 				break;
+			}
 			case KIER:
-				if (st.isCond(2))
+			{
+				if (qs.isCond(2))
 				{
 					htmltext = "32022-01.html";
 				}
 				break;
+			}
 			case JINIA:
-				if (st.isCond(2))
+			{
+				if (qs.isCond(2))
 				{
 					htmltext = "32760-02.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

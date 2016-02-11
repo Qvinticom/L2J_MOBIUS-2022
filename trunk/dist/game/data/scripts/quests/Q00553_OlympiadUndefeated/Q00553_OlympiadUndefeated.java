@@ -52,8 +52,8 @@ public class Q00553_OlympiadUndefeated extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -61,20 +61,20 @@ public class Q00553_OlympiadUndefeated extends Quest
 		
 		if (event.equalsIgnoreCase("31688-03.html"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		else if (event.equalsIgnoreCase("31688-04.html"))
 		{
-			final long count = st.getQuestItemsCount(WIN_CONF_2) + st.getQuestItemsCount(WIN_CONF_5);
+			final long count = getQuestItemsCount(player, WIN_CONF_2) + getQuestItemsCount(player, WIN_CONF_5);
 			
 			if (count > 0)
 			{
-				st.giveItems(OLY_CHEST, count);
+				giveItems(player, OLY_CHEST, count);
 				if (count == 2)
 				{
-					st.giveItems(MEDAL_OF_GLORY, 3);
+					giveItems(player, MEDAL_OF_GLORY, 3);
 				}
-				st.exitQuest(QuestType.DAILY, true);
+				qs.exitQuest(QuestType.DAILY, true);
 			}
 			else
 			{
@@ -95,32 +95,38 @@ public class Q00553_OlympiadUndefeated extends Quest
 				return;
 			}
 			
-			final QuestState st = getQuestState(player, false);
-			if ((st != null) && st.isStarted() && (st.isCond(1)))
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isStarted() && (qs.isCond(1)))
 			{
-				final int matches = st.getInt("undefeatable") + 1;
-				st.set("undefeatable", String.valueOf(matches));
+				final int matches = qs.getInt("undefeatable") + 1;
+				qs.set("undefeatable", String.valueOf(matches));
 				switch (matches)
 				{
 					case 2:
-						if (!st.hasQuestItems(WIN_CONF_2))
+					{
+						if (!hasQuestItems(player, WIN_CONF_2))
 						{
-							st.giveItems(WIN_CONF_2, 1);
+							giveItems(player, WIN_CONF_2, 1);
 						}
 						break;
+					}
 					case 5:
-						if (!st.hasQuestItems(WIN_CONF_5))
+					{
+						if (!hasQuestItems(player, WIN_CONF_5))
 						{
-							st.giveItems(WIN_CONF_5, 1);
+							giveItems(player, WIN_CONF_5, 1);
 						}
 						break;
+					}
 					case 10:
-						if (!st.hasQuestItems(WIN_CONF_10))
+					{
+						if (!hasQuestItems(player, WIN_CONF_10))
 						{
-							st.giveItems(WIN_CONF_10, 1);
-							st.setCond(2);
+							giveItems(player, WIN_CONF_10, 1);
+							qs.setCond(2);
 						}
 						break;
+					}
 				}
 			}
 		}
@@ -133,13 +139,13 @@ public class Q00553_OlympiadUndefeated extends Quest
 				return;
 			}
 			
-			final QuestState st = getQuestState(player, false);
-			if ((st != null) && st.isStarted() && (st.isCond(1)))
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isStarted() && (qs.isCond(1)))
 			{
-				st.unset("undefeatable");
-				st.takeItems(WIN_CONF_2, -1);
-				st.takeItems(WIN_CONF_5, -1);
-				st.takeItems(WIN_CONF_10, -1);
+				qs.unset("undefeatable");
+				takeItems(player, WIN_CONF_2, -1);
+				takeItems(player, WIN_CONF_5, -1);
+				takeItems(player, WIN_CONF_10, -1);
 			}
 		}
 	}
@@ -148,8 +154,8 @@ public class Q00553_OlympiadUndefeated extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -158,15 +164,15 @@ public class Q00553_OlympiadUndefeated extends Quest
 		{
 			htmltext = "31688-00.htm";
 		}
-		else if (st.isCreated())
+		else if (qs.isCreated())
 		{
 			htmltext = "31688-01.htm";
 		}
-		else if (st.isCompleted())
+		else if (qs.isCompleted())
 		{
-			if (st.isNowAvailable())
+			if (qs.isNowAvailable())
 			{
-				st.setState(State.CREATED);
+				qs.setState(State.CREATED);
 				htmltext = (player.getLevel() < 75) || !player.isNoble() ? "31688-00.htm" : "31688-01.htm";
 			}
 			else
@@ -176,12 +182,12 @@ public class Q00553_OlympiadUndefeated extends Quest
 		}
 		else
 		{
-			final long count = st.getQuestItemsCount(WIN_CONF_2) + st.getQuestItemsCount(WIN_CONF_5) + st.getQuestItemsCount(WIN_CONF_10);
-			if ((count == 3) && st.isCond(2))
+			final long count = getQuestItemsCount(player, WIN_CONF_2) + getQuestItemsCount(player, WIN_CONF_5) + getQuestItemsCount(player, WIN_CONF_10);
+			if ((count == 3) && qs.isCond(2))
 			{
-				st.giveItems(OLY_CHEST, 4);
-				st.giveItems(MEDAL_OF_GLORY, 5);
-				st.exitQuest(QuestType.DAILY, true);
+				giveItems(player, OLY_CHEST, 4);
+				giveItems(player, MEDAL_OF_GLORY, 5);
+				qs.exitQuest(QuestType.DAILY, true);
 				htmltext = "31688-04.html";
 			}
 			else

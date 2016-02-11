@@ -45,8 +45,8 @@ public class Q00652_AnAgedExAdventurer extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -54,13 +54,13 @@ public class Q00652_AnAgedExAdventurer extends Quest
 		String htmltext = null;
 		if (event.equals("32012-04.htm"))
 		{
-			if (st.getQuestItemsCount(SOULSHOT_C) < 100)
+			if (getQuestItemsCount(player, SOULSHOT_C) < 100)
 			{
 				return "32012-05.htm";
 			}
 			
-			st.startQuest();
-			st.takeItems(SOULSHOT_C, 100);
+			qs.startQuest();
+			takeItems(player, SOULSHOT_C, 100);
 			npc.deleteMe();
 			htmltext = event;
 		}
@@ -75,8 +75,8 @@ public class Q00652_AnAgedExAdventurer extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -84,7 +84,8 @@ public class Q00652_AnAgedExAdventurer extends Quest
 		switch (npc.getId())
 		{
 			case TANTAN:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
 						htmltext = (player.getLevel() >= 46) ? "32012-01.htm" : "32012-01a.htm";
@@ -94,23 +95,26 @@ public class Q00652_AnAgedExAdventurer extends Quest
 						break;
 				}
 				break;
+			}
 			case SARA:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
 					if (getRandom(10) <= 4)
 					{
-						st.giveItems(ENCHANT_ARMOR_D, 1);
-						st.giveAdena(5026, true);
+						giveItems(player, ENCHANT_ARMOR_D, 1);
+						giveAdena(player, 5026, true);
 						htmltext = "30180-01.html";
 					}
 					else
 					{
-						st.giveAdena(10000, true);
+						giveAdena(player, 10000, true);
 						htmltext = "30180-02.html";
 					}
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

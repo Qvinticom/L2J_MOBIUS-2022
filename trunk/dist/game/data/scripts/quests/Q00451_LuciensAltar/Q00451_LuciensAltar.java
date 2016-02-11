@@ -41,7 +41,6 @@ public class Q00451_LuciensAltar extends Quest
 		32709,
 		32710
 	};
-	
 	// Items
 	private static final int REPLENISHED_BEAD = 14877;
 	private static final int DISCHARGED_BEAD = 14878;
@@ -60,9 +59,9 @@ public class Q00451_LuciensAltar extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -74,8 +73,8 @@ public class Q00451_LuciensAltar extends Quest
 		}
 		else if (event.equals("30537-05.htm"))
 		{
-			st.startQuest();
-			st.giveItems(REPLENISHED_BEAD, 5);
+			qs.startQuest();
+			giveItems(player, REPLENISHED_BEAD, 5);
 			htmltext = event;
 		}
 		return htmltext;
@@ -85,9 +84,9 @@ public class Q00451_LuciensAltar extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -95,22 +94,28 @@ public class Q00451_LuciensAltar extends Quest
 		final int npcId = npc.getId();
 		if (npcId == DAICHIR)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.COMPLETED:
-					if (!st.isNowAvailable())
+				{
+					if (!qs.isNowAvailable())
 					{
 						htmltext = "30537-03.html";
 						break;
 					}
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
+					// fallthrou
+				}
 				case State.CREATED:
+				{
 					htmltext = (player.getLevel() >= MIN_LEVEL) ? "30537-01.htm" : "30537-02.htm";
 					break;
+				}
 				case State.STARTED:
-					if (st.isCond(1))
+				{
+					if (qs.isCond(1))
 					{
-						if (st.isSet("32706") || st.isSet("32707") || st.isSet("32708") || st.isSet("32709") || st.isSet("32710"))
+						if (qs.isSet("32706") || qs.isSet("32707") || qs.isSet("32708") || qs.isSet("32709") || qs.isSet("32710"))
 						{
 							htmltext = "30537-10.html";
 						}
@@ -121,25 +126,26 @@ public class Q00451_LuciensAltar extends Quest
 					}
 					else
 					{
-						st.giveAdena(255380, true); // Tauti reward: 13 773 960 exp, 16 232 820 sp, 742 800 Adena
-						st.exitQuest(QuestType.DAILY, true);
+						giveAdena(player, 255380, true); // Tauti reward: 13 773 960 exp, 16 232 820 sp, 742 800 Adena
+						qs.exitQuest(QuestType.DAILY, true);
 						htmltext = "30537-08.html";
 					}
 					break;
+				}
 			}
 		}
-		else if (st.isCond(1) && st.hasQuestItems(REPLENISHED_BEAD))
+		else if (qs.isCond(1) && hasQuestItems(player, REPLENISHED_BEAD))
 		{
-			if (st.getInt(String.valueOf(npcId)) == 0)
+			if (qs.getInt(String.valueOf(npcId)) == 0)
 			{
-				st.set(String.valueOf(npcId), "1");
-				st.takeItems(REPLENISHED_BEAD, 1);
-				st.giveItems(DISCHARGED_BEAD, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				qs.set(String.valueOf(npcId), "1");
+				takeItems(player, REPLENISHED_BEAD, 1);
+				giveItems(player, DISCHARGED_BEAD, 1);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				
-				if (st.getQuestItemsCount(DISCHARGED_BEAD) >= 5)
+				if (getQuestItemsCount(player, DISCHARGED_BEAD) >= 5)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				
 				htmltext = "recharge.html";

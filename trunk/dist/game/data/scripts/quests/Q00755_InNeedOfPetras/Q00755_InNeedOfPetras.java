@@ -102,10 +102,10 @@ public class Q00755_InNeedOfPetras extends Quest
 			}
 			else if (qs.isCond(2))
 			{
-				qs.takeItems(PETRA, -1L);
-				qs.addExpAndSp(570676680, 26102484);
-				qs.giveItems(AKUS_SUPPLY_BOX, 1);
-				qs.giveItems(ENERGY_OF_DESTRUCTION, 1);
+				takeItems(player, PETRA, -1L);
+				addExpAndSp(player, 570676680, 26102484);
+				giveItems(player, AKUS_SUPPLY_BOX, 1);
+				giveItems(player, ENERGY_OF_DESTRUCTION, 1);
 				qs.exitQuest(QuestType.DAILY, true);
 				htmltext = "sofa_aku_q0755_08.html";
 			}

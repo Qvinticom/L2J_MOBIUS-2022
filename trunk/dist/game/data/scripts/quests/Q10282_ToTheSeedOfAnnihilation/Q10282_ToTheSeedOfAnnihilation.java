@@ -47,8 +47,8 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -56,13 +56,17 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 		switch (event)
 		{
 			case "32733-07.htm":
-				st.startQuest();
-				st.giveItems(SOA_ORDERS, 1);
+			{
+				qs.startQuest();
+				giveItems(player, SOA_ORDERS, 1);
 				break;
+			}
 			case "32734-02.htm":
-				st.addExpAndSp(1148480, 99110);
-				st.exitQuest(false);
+			{
+				addExpAndSp(player, 1148480, 99110);
+				qs.exitQuest(false);
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -71,16 +75,17 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
 		final int npcId = npc.getId();
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
+			{
 				if (npcId == KBALDIR)
 				{
 					htmltext = "32733-09.htm";
@@ -90,11 +95,15 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 					htmltext = "32734-03.htm";
 				}
 				break;
+			}
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 84) ? "32733-00.htm" : "32733-01.htm";
 				break;
+			}
 			case State.STARTED:
-				if (st.isCond(1))
+			{
+				if (qs.isCond(1))
 				{
 					if (npcId == KBALDIR)
 					{
@@ -106,6 +115,7 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -51,7 +51,6 @@ public class Q00647_InfluxOfMachines extends Quest
 		MOBS.put(22811, 849); // Great Chaos Golem
 		MOBS.put(22812, 463); // Boom Golem
 	}
-	
 	// Item
 	private static final int BROKEN_GOLEM_FRAGMENT = 15521;
 	private static final int[] RECIPES =
@@ -83,8 +82,8 @@ public class Q00647_InfluxOfMachines extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -93,14 +92,17 @@ public class Q00647_InfluxOfMachines extends Quest
 		switch (event)
 		{
 			case "32069-03.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				htmltext = event;
 				break;
+			}
 			case "32069-06.html":
-				if (st.isCond(2) && (st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT))
+			{
+				if (qs.isCond(2) && (getQuestItemsCount(player, BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT))
 				{
-					st.giveItems(RECIPES[getRandom(RECIPES.length)], 1);
-					st.exitQuest(true, true);
+					giveItems(player, RECIPES[getRandom(RECIPES.length)], 1);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				else
@@ -108,6 +110,7 @@ public class Q00647_InfluxOfMachines extends Quest
 					htmltext = "32069-07.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -118,17 +121,17 @@ public class Q00647_InfluxOfMachines extends Quest
 		final L2PcInstance member = getRandomPartyMember(player, 1);
 		if (member != null)
 		{
-			final QuestState st = getQuestState(member, false);
-			if (st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
+			final QuestState qs = getQuestState(member, false);
+			if (qs.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
 			{
-				st.giveItems(BROKEN_GOLEM_FRAGMENT, 1);
-				if (st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT)
+				giveItems(member, BROKEN_GOLEM_FRAGMENT, 1);
+				if (getQuestItemsCount(member, BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(member, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -139,27 +142,31 @@ public class Q00647_InfluxOfMachines extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "32069-01.htm" : "32069-02.htm";
 				break;
+			}
 			case State.STARTED:
-				if (st.isCond(1))
+			{
+				if (qs.isCond(1))
 				{
 					htmltext = "32069-04.html";
 				}
-				else if (st.isCond(2) && (st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT))
+				else if (qs.isCond(2) && (getQuestItemsCount(player, BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT))
 				{
 					htmltext = "32069-05.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

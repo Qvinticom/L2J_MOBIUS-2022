@@ -123,7 +123,7 @@ public final class Q00386_StolenDignity extends Quest
 				}
 				return "30843-04.html";
 			}
-			if (qs.getQuestItemsCount(Q_STOLEN_INF_ORE) < 100)
+			if (getQuestItemsCount(player, Q_STOLEN_INF_ORE) < 100)
 			{
 				return "30843-06.html";
 			}
@@ -140,11 +140,11 @@ public final class Q00386_StolenDignity extends Quest
 		{
 			if (event.equals("QUEST_ACCEPTED"))
 			{
-				qs.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 				qs.setMemoState(336);
 				qs.startQuest();
 				qs.showQuestionMark(336);
-				qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				return "30843-05.htm";
 			}
 			if (event.contains(".html"))
@@ -155,21 +155,27 @@ public final class Q00386_StolenDignity extends Quest
 			switch (ask)
 			{
 				case 3:
+				{
 					return "30843-09a.html";
+				}
 				case 5:
+				{
 					return "30843-03.html";
+				}
 				case 6:
 				{
 					qs.exitQuest(true);
 					return "30843-08.html";
 				}
 				case 9:
+				{
 					return "30843-09.htm";
+				}
 				case 8:
 				{
-					if (qs.getQuestItemsCount(Q_STOLEN_INF_ORE) >= 100)
+					if (getQuestItemsCount(player, Q_STOLEN_INF_ORE) >= 100)
 					{
-						qs.takeItems(Q_STOLEN_INF_ORE, 100);
+						takeItems(player, Q_STOLEN_INF_ORE, 100);
 						createBingoBoard(qs);
 						return "30843-12.html";
 					}
@@ -372,167 +378,167 @@ public final class Q00386_StolenDignity extends Quest
 		{
 			case 0:
 			{
-				qs.giveItems(DRAGON_SLAYER_EDGE, count);
+				giveItems(player, DRAGON_SLAYER_EDGE, count);
 				break;
 			}
 			case 1:
 			{
-				qs.giveItems(METEOR_SHOWER_HEAD, count);
+				giveItems(player, METEOR_SHOWER_HEAD, count);
 				break;
 			}
 			case 2:
 			{
-				qs.giveItems(ELYSIAN_HEAD, count);
+				giveItems(player, ELYSIAN_HEAD, count);
 				break;
 			}
 			case 3:
 			{
-				qs.giveItems(SOUL_BOW_SHAFT, count);
+				giveItems(player, SOUL_BOW_SHAFT, count);
 				break;
 			}
 			case 4:
 			{
-				qs.giveItems(CARNIUM_BOW_SHAFT, count);
+				giveItems(player, CARNIUM_BOW_SHAFT, count);
 				break;
 			}
 			case 5:
 			{
-				qs.giveItems(BLOODY_ORCHID_HEAD, count);
+				giveItems(player, BLOODY_ORCHID_HEAD, count);
 				break;
 			}
 			case 6:
 			{
-				qs.giveItems(SOUL_SEPARATOR_HEAD, count);
+				giveItems(player, SOUL_SEPARATOR_HEAD, count);
 				break;
 			}
 			case 7:
 			{
-				qs.giveItems(DRAGON_GRINDER_EDGE, count);
+				giveItems(player, DRAGON_GRINDER_EDGE, count);
 				break;
 			}
 			case 8:
 			{
-				qs.giveItems(BLOOD_TORNADO_EDGE, count);
+				giveItems(player, BLOOD_TORNADO_EDGE, count);
 				break;
 			}
 			case 9:
 			{
-				qs.giveItems(TALLUM_GLAIVE_EDGE, count);
+				giveItems(player, TALLUM_GLAIVE_EDGE, count);
 				break;
 			}
 			case 10:
 			{
-				qs.giveItems(HALBARD_EDGE, count);
+				giveItems(player, HALBARD_EDGE, count);
 				break;
 			}
 			case 11:
 			{
-				qs.giveItems(DASPARIONS_STAFF_HEAD, count);
+				giveItems(player, DASPARIONS_STAFF_HEAD, count);
 				break;
 			}
 			case 12:
 			{
-				qs.giveItems(WORLDTREES_BRANCH_HEAD, count);
+				giveItems(player, WORLDTREES_BRANCH_HEAD, count);
 				break;
 			}
 			case 13:
 			{
-				qs.giveItems(DARK_LEGIONS_EDGE_EDGE, count);
+				giveItems(player, DARK_LEGIONS_EDGE_EDGE, count);
 				break;
 			}
 			case 14:
 			{
-				qs.giveItems(SWORD_OF_MIRACLE_EDGE, count);
+				giveItems(player, SWORD_OF_MIRACLE_EDGE, count);
 				break;
 			}
 			case 15:
 			{
-				qs.giveItems(ELEMENTAL_SWORD_EDGE, count);
+				giveItems(player, ELEMENTAL_SWORD_EDGE, count);
 				break;
 			}
 			case 16:
 			{
-				qs.giveItems(TALLUM_BLADE_EDGE, count);
+				giveItems(player, TALLUM_BLADE_EDGE, count);
 				break;
 			}
 			case 17:
 			{
-				qs.giveItems(INFERNO_MASTER_BLADE, count);
+				giveItems(player, INFERNO_MASTER_BLADE, count);
 				break;
 			}
 			case 18:
 			{
-				qs.giveItems(EYE_OF_SOUL_PIECE, count);
+				giveItems(player, EYE_OF_SOUL_PIECE, count);
 				break;
 			}
 			case 19:
 			{
-				qs.giveItems(DRAGON_FLAME_HEAD_PIECE, count);
+				giveItems(player, DRAGON_FLAME_HEAD_PIECE, count);
 				break;
 			}
 			case 20:
 			{
-				qs.giveItems(DOOM_CRUSHER_HEAD, count);
+				giveItems(player, DOOM_CRUSHER_HEAD, count);
 				break;
 			}
 			case 21:
 			{
-				qs.giveItems(HAMMER_OF_DESTROYER_PIECE, count);
+				giveItems(player, HAMMER_OF_DESTROYER_PIECE, count);
 				break;
 			}
 			case 22:
 			{
-				qs.giveItems(SIRR_BLADE_BLADE, count);
+				giveItems(player, SIRR_BLADE_BLADE, count);
 				break;
 			}
 			case 23:
 			{
-				qs.giveItems(SWORD_OF_IPOS_BLADE, count);
+				giveItems(player, SWORD_OF_IPOS_BLADE, count);
 				break;
 			}
 			case 24:
 			{
-				qs.giveItems(BARAKIEL_AXE_PIECE, count);
+				giveItems(player, BARAKIEL_AXE_PIECE, count);
 				break;
 			}
 			case 25:
 			{
-				qs.giveItems(TUNING_FORK_OF_BEHEMOTH_PIECE, count);
+				giveItems(player, TUNING_FORK_OF_BEHEMOTH_PIECE, count);
 				break;
 			}
 			case 26:
 			{
-				qs.giveItems(NAGA_STORM_PIECE, count);
+				giveItems(player, NAGA_STORM_PIECE, count);
 				break;
 			}
 			case 27:
 			{
-				qs.giveItems(TIPHON_SPEAR_EDGE, count);
+				giveItems(player, TIPHON_SPEAR_EDGE, count);
 				break;
 			}
 			case 28:
 			{
-				qs.giveItems(SHYID_BOW_SHAFT, count);
+				giveItems(player, SHYID_BOW_SHAFT, count);
 				break;
 			}
 			case 29:
 			{
-				qs.giveItems(SOBEKK_HURRICANE_EDGE, count);
+				giveItems(player, SOBEKK_HURRICANE_EDGE, count);
 				break;
 			}
 			case 30:
 			{
-				qs.giveItems(TONGUE_OF_THEMIS_PIECE, count);
+				giveItems(player, TONGUE_OF_THEMIS_PIECE, count);
 				break;
 			}
 			case 31:
 			{
-				qs.giveItems(HAND_OF_CABRIO_HEAD, count);
+				giveItems(player, HAND_OF_CABRIO_HEAD, count);
 				break;
 			}
 			case 32:
 			{
-				qs.giveItems(CRYSTAL_OF_DEAMON_PIECE, count);
+				giveItems(player, CRYSTAL_OF_DEAMON_PIECE, count);
 				break;
 			}
 		}

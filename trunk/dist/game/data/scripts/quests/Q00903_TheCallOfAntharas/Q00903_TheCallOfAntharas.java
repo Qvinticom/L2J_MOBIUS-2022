@@ -54,45 +54,16 @@ public class Q00903_TheCallOfAntharas extends Quest
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
-	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
-		{
-			switch (npc.getId())
-			{
-				case BEHEMOTH_DRAGON:
-				{
-					st.giveItems(BEHEMOTH_DRAGON_LEATHER, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					break;
-				}
-				case TARASK_DRAGON:
-				{
-					st.giveItems(TARASK_DRAGONS_LEATHER_FRAGMENT, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					break;
-				}
-			}
-			
-			if (st.hasQuestItems(BEHEMOTH_DRAGON_LEATHER) && st.hasQuestItems(TARASK_DRAGONS_LEATHER_FRAGMENT))
-			{
-				st.setCond(2, true);
-			}
-		}
-	}
-	
-	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
 		
 		String htmltext = null;
-		if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
+		if ((player.getLevel() >= MIN_LEVEL) && hasQuestItems(player, PORTAL_STONE))
 		{
 			switch (event)
 			{
@@ -103,13 +74,42 @@ public class Q00903_TheCallOfAntharas extends Quest
 				}
 				case "30755-06.html":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && Util.checkIfInRange(1500, npc, player, false))
+		{
+			switch (npc.getId())
+			{
+				case BEHEMOTH_DRAGON:
+				{
+					giveItems(player, BEHEMOTH_DRAGON_LEATHER, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					break;
+				}
+				case TARASK_DRAGON:
+				{
+					giveItems(player, TARASK_DRAGONS_LEATHER_FRAGMENT, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					break;
+				}
+			}
+			
+			if (hasQuestItems(player, BEHEMOTH_DRAGON_LEATHER) && hasQuestItems(player, TARASK_DRAGONS_LEATHER_FRAGMENT))
+			{
+				qs.setCond(2, true);
+			}
+		}
 	}
 	
 	@Override
@@ -122,14 +122,14 @@ public class Q00903_TheCallOfAntharas extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -137,7 +137,7 @@ public class Q00903_TheCallOfAntharas extends Quest
 				{
 					htmltext = "30755-03.html";
 				}
-				else if (!st.hasQuestItems(PORTAL_STONE))
+				else if (!hasQuestItems(player, PORTAL_STONE))
 				{
 					htmltext = "30755-04.html";
 				}
@@ -149,7 +149,7 @@ public class Q00903_TheCallOfAntharas extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -158,9 +158,9 @@ public class Q00903_TheCallOfAntharas extends Quest
 					}
 					case 2:
 					{
-						st.giveItems(SCROLL_ANTHARAS_CALL, 1);
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						st.exitQuest(QuestType.DAILY, true);
+						giveItems(player, SCROLL_ANTHARAS_CALL, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						qs.exitQuest(QuestType.DAILY, true);
 						htmltext = "30755-08.html";
 						break;
 					}
@@ -169,18 +169,18 @@ public class Q00903_TheCallOfAntharas extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if (!st.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					htmltext = "30755-02.html";
 				}
 				else
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					if (player.getLevel() < MIN_LEVEL)
 					{
 						htmltext = "30755-03.html";
 					}
-					else if (!st.hasQuestItems(PORTAL_STONE))
+					else if (!hasQuestItems(player, PORTAL_STONE))
 					{
 						htmltext = "30755-04.html";
 					}

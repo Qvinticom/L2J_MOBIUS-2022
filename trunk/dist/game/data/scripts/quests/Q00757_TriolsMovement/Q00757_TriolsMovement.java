@@ -85,11 +85,11 @@ public class Q00757_TriolsMovement extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					qs.takeItems(SPIRIT, -100);
-					qs.takeItems(TOTEM, -100);
-					qs.giveItems(57, 745929);
-					qs.giveItems(36232, 1);
-					qs.addExpAndSp(301518549, 7236360);
+					takeItems(player, SPIRIT, -100);
+					takeItems(player, TOTEM, -100);
+					giveAdena(player, 745929, true);
+					giveItems(player, 36232, 1);
+					addExpAndSp(player, 301518549, 7236360);
 					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = "endquest.html";
 				}

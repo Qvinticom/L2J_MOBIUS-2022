@@ -59,7 +59,6 @@ public class Q00627_HeartInSearchOfPower extends Quest
 		MONSTERS.put(21540, 875); // Wailing of Splendor
 		MONSTERS.put(21658, 791); // Punishment of Splendor
 	}
-	
 	// Misc
 	private static final int MIN_LEVEL_REQUIRED = 60;
 	private static final int BEAD_OF_OBEDIENCE_COUNT_REQUIRED = 300;
@@ -81,8 +80,8 @@ public class Q00627_HeartInSearchOfPower extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -90,68 +89,90 @@ public class Q00627_HeartInSearchOfPower extends Quest
 		switch (event)
 		{
 			case "31518-02.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "31518-06.html":
-				if (st.getQuestItemsCount(BEAD_OF_OBEDIENCE) < BEAD_OF_OBEDIENCE_COUNT_REQUIRED)
+			{
+				if (getQuestItemsCount(player, BEAD_OF_OBEDIENCE) < BEAD_OF_OBEDIENCE_COUNT_REQUIRED)
 				{
 					return "31518-05.html";
 				}
-				st.giveItems(SEAL_OF_LIGHT, 1);
-				st.takeItems(BEAD_OF_OBEDIENCE, -1);
-				st.setCond(3);
+				giveItems(player, SEAL_OF_LIGHT, 1);
+				takeItems(player, BEAD_OF_OBEDIENCE, -1);
+				qs.setCond(3);
 				break;
+			}
 			case "Adena":
 			case "Asofes":
 			case "Thons":
 			case "Enrias":
 			case "Mold_Hardener":
-				if (!st.hasQuestItems(GEM_OF_SAINTS))
+			{
+				if (!hasQuestItems(player, GEM_OF_SAINTS))
 				{
 					return "31518-11.html";
 				}
 				switch (event)
 				{
 					case "Adena":
-						st.giveAdena(100000, true);
+					{
+						giveAdena(player, 100000, true);
 						break;
+					}
 					case "Asofes":
-						st.rewardItems(ASOFE, 13);
-						st.giveAdena(6400, true);
+					{
+						rewardItems(player, ASOFE, 13);
+						giveAdena(player, 6400, true);
 						break;
+					}
 					case "Thons":
-						st.rewardItems(THONS, 13);
-						st.giveAdena(6400, true);
+					{
+						rewardItems(player, THONS, 13);
+						giveAdena(player, 6400, true);
 						break;
+					}
 					case "Enrias":
-						st.rewardItems(ENRIA, 6);
-						st.giveAdena(13600, true);
+					{
+						rewardItems(player, ENRIA, 6);
+						giveAdena(player, 13600, true);
 						break;
+					}
 					case "Mold_Hardener":
-						st.rewardItems(MOLD_HARDENER, 3);
-						st.giveAdena(17200, true);
+					{
+						rewardItems(player, MOLD_HARDENER, 3);
+						giveAdena(player, 17200, true);
 						break;
+					}
 				}
 				htmltext = "31518-10.html";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 				break;
+			}
 			case "31519-02.html":
-				if (st.hasQuestItems(SEAL_OF_LIGHT) && st.isCond(3))
+			{
+				if (hasQuestItems(player, SEAL_OF_LIGHT) && qs.isCond(3))
 				{
-					st.giveItems(GEM_OF_SAINTS, 1);
-					st.takeItems(SEAL_OF_LIGHT, -1);
-					st.setCond(4);
+					giveItems(player, GEM_OF_SAINTS, 1);
+					takeItems(player, SEAL_OF_LIGHT, -1);
+					qs.setCond(4);
 				}
 				else
 				{
 					htmltext = getNoQuestMsg(player);
 				}
 				break;
+			}
 			case "31518-09.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -162,18 +183,18 @@ public class Q00627_HeartInSearchOfPower extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = getQuestState(partyMember, false);
+			final QuestState qs = getQuestState(partyMember, false);
 			final float chance = (MONSTERS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				st.giveItems(BEAD_OF_OBEDIENCE, 1);
-				if (st.getQuestItemsCount(BEAD_OF_OBEDIENCE) < BEAD_OF_OBEDIENCE_COUNT_REQUIRED)
+				giveItems(partyMember, BEAD_OF_OBEDIENCE, 1);
+				if (getQuestItemsCount(partyMember, BEAD_OF_OBEDIENCE) < BEAD_OF_OBEDIENCE_COUNT_REQUIRED)
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
 		}
@@ -184,52 +205,72 @@ public class Q00627_HeartInSearchOfPower extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				if (npc.getId() == MYSTERIOUS_NECROMANCER)
 				{
 					htmltext = (player.getLevel() >= MIN_LEVEL_REQUIRED) ? "31518-01.htm" : "31518-00.htm";
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				switch (npc.getId())
 				{
 					case MYSTERIOUS_NECROMANCER:
-						switch (st.getCond())
+					{
+						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "31518-03.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "31518-04.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "31518-07.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "31518-08.html";
 								break;
+							}
 						}
 						break;
+					}
 					case ENFEUX:
-						switch (st.getCond())
+					{
+						switch (qs.getCond())
 						{
 							case 3:
+							{
 								htmltext = "31519-01.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "31519-03.html";
 								break;
+							}
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

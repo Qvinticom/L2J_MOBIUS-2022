@@ -77,9 +77,9 @@ public class Q10384_AnAudienceWithTauti extends Quest
 			}
 			case "maestro_ferguson_q10384_11.html":
 			{
-				qs.addExpAndSp(951127800, 435041400);
-				qs.giveItems(57, 3256740);
-				qs.giveItems(BOTTLE_OF_TAUTIS_SOUL, 1);
+				addExpAndSp(player, 951127800, 435041400);
+				giveAdena(player, 3256740, true);
+				giveItems(player, BOTTLE_OF_TAUTIS_SOUL, 1);
 				qs.exitQuest(QuestType.ONE_TIME, true);
 				break;
 			}
@@ -107,7 +107,7 @@ public class Q10384_AnAudienceWithTauti extends Quest
 					{
 						htmltext = "maestro_ferguson_q10384_08.html";
 					}
-					else if (qs.isCond(3) && qs.hasQuestItems(TAUTIS_FRAGMENT))
+					else if (qs.isCond(3) && hasQuestItems(player, TAUTIS_FRAGMENT))
 					{
 						htmltext = "maestro_ferguson_q10384_09.html";
 					}
@@ -138,7 +138,7 @@ public class Q10384_AnAudienceWithTauti extends Quest
 		if ((qs != null) && qs.isCond(2))
 		{
 			qs.setCond(3);
-			qs.giveItems(TAUTIS_FRAGMENT, 1);
+			giveItems(killer, TAUTIS_FRAGMENT, 1);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

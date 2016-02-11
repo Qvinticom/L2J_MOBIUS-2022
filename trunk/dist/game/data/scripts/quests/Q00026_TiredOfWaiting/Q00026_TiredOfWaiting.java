@@ -55,8 +55,8 @@ public final class Q00026_TiredOfWaiting extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -74,33 +74,41 @@ public final class Q00026_TiredOfWaiting extends Quest
 			case "31045-07.html":
 			case "31045-08.html":
 			case "31045-09.html":
+			{
 				htmltext = event;
 				break;
+			}
 			case "30655-04.html":
-				if (st.isCreated())
+			{
+				if (qs.isCreated())
 				{
-					st.giveItems(DELIVERY_BOX, 1);
-					st.startQuest();
+					giveItems(player, DELIVERY_BOX, 1);
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
+			}
 			case "31045-04.html":
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					st.takeItems(DELIVERY_BOX, -1);
+					takeItems(player, DELIVERY_BOX, -1);
 					htmltext = event;
 				}
 				break;
+			}
 			case "31045-10.html":
 			case "31045-11.html":
 			case "31045-12.html":
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					st.giveItems(REWARDS.get(event), 1);
-					st.exitQuest(false, true);
+					giveItems(player, REWARDS.get(event), 1);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -109,8 +117,8 @@ public final class Q00026_TiredOfWaiting extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -118,11 +126,12 @@ public final class Q00026_TiredOfWaiting extends Quest
 		switch (npc.getId())
 		{
 			case ISAEL_SILVERSHADOW:
-				if (st.isCreated())
+			{
+				if (qs.isCreated())
 				{
 					htmltext = ((player.getLevel() >= 80) ? "30655-01.htm" : "30655-00.html");
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
 					htmltext = "30655-07.html";
 				}
@@ -131,12 +140,15 @@ public final class Q00026_TiredOfWaiting extends Quest
 					htmltext = "30655-08.html";
 				}
 				break;
+			}
 			case KITZKA:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					htmltext = (st.hasQuestItems(DELIVERY_BOX) ? "31045-01.html" : "31045-09.html");
+					htmltext = (hasQuestItems(player, DELIVERY_BOX) ? "31045-01.html" : "31045-09.html");
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -60,8 +60,8 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -74,29 +74,43 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 			case "32049-09.html":
 			case "32049-10.html":
 			case "32049-11.html":
+			{
 				break;
+			}
 			case "32049-04.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "32049-12.html":
-				st.giveItems(TOTEM_OF_BODY, 1);
-				st.exitQuest(QuestType.DAILY, true);
+			{
+				giveItems(player, TOTEM_OF_BODY, 1);
+				qs.exitQuest(QuestType.DAILY, true);
 				break;
+			}
 			case "32049-13.html":
-				st.giveItems(TOTEM_OF_SPIRIT, 1);
-				st.exitQuest(QuestType.DAILY, true);
+			{
+				giveItems(player, TOTEM_OF_SPIRIT, 1);
+				qs.exitQuest(QuestType.DAILY, true);
 				break;
+			}
 			case "32049-14.html":
-				st.giveItems(TOTEM_OF_FORTITUDE, 1);
-				st.exitQuest(QuestType.DAILY, true);
+			{
+				giveItems(player, TOTEM_OF_FORTITUDE, 1);
+				qs.exitQuest(QuestType.DAILY, true);
 				break;
+			}
 			case "32049-15.html":
-				st.giveItems(TOTEM_OF_COURAGE, 1);
-				st.exitQuest(QuestType.DAILY, true);
+			{
+				giveItems(player, TOTEM_OF_COURAGE, 1);
+				qs.exitQuest(QuestType.DAILY, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -104,23 +118,31 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
 		{
 			switch (npc.getId())
 			{
 				case LAVASAURUS_NEWBORN:
-					giveQuestItems(st, FRAGMENT_STONE);
+				{
+					giveQuestItems(qs, FRAGMENT_STONE);
 					break;
+				}
 				case LAVASAURUS_FLEDGIING:
-					giveQuestItems(st, FRAGMENT_HEAD);
+				{
+					giveQuestItems(qs, FRAGMENT_HEAD);
 					break;
+				}
 				case LAVASAURUS_ADULT:
-					giveQuestItems(st, FRAGMENT_BODY);
+				{
+					giveQuestItems(qs, FRAGMENT_BODY);
 					break;
+				}
 				case LAVASAURUS_ELDERLY:
-					giveQuestItems(st, FRAGMENT_HORN);
+				{
+					giveQuestItems(qs, FRAGMENT_HORN);
 					break;
+				}
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -130,30 +152,33 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
-				htmltext = (st.getPlayer().getLevel() >= 76) ? "32049-01.htm" : "32049-02.htm";
+			{
+				htmltext = (player.getLevel() >= 76) ? "32049-01.htm" : "32049-02.htm";
 				break;
+			}
 			case State.STARTED:
-				if (st.isCond(1))
+			{
+				if (qs.isCond(1))
 				{
 					htmltext = "32049-05.html";
 				}
-				else if (st.isCond(2))
+				else if (qs.isCond(2))
 				{
-					if (gotAllQuestItems(st))
+					if (gotAllQuestItems(player))
 					{
-						st.takeItems(FRAGMENT_STONE, -1);
-						st.takeItems(FRAGMENT_HEAD, -1);
-						st.takeItems(FRAGMENT_BODY, -1);
-						st.takeItems(FRAGMENT_HORN, -1);
+						takeItems(player, FRAGMENT_STONE, -1);
+						takeItems(player, FRAGMENT_HEAD, -1);
+						takeItems(player, FRAGMENT_BODY, -1);
+						takeItems(player, FRAGMENT_HORN, -1);
 						htmltext = "32049-06.html";
 					}
 					else
@@ -162,36 +187,40 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 					}
 				}
 				break;
+			}
 			case State.COMPLETED:
-				if (st.isNowAvailable())
+			{
+				if (qs.isNowAvailable())
 				{
-					st.setState(State.CREATED);
-					htmltext = (st.getPlayer().getLevel() >= 76) ? "32049-01.htm" : "32049-02.html";
+					qs.setState(State.CREATED);
+					htmltext = (qs.getPlayer().getLevel() >= 76) ? "32049-01.htm" : "32049-02.html";
 				}
 				else
 				{
 					htmltext = "32049-16.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
 	
-	private static void giveQuestItems(QuestState st, int itemId)
+	private static void giveQuestItems(QuestState qs, int itemId)
 	{
-		if (st.getQuestItemsCount(itemId) < 10)
+		final L2PcInstance player = qs.getPlayer();
+		if (getQuestItemsCount(player, itemId) < 10)
 		{
-			st.giveItems(itemId, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			giveItems(player, itemId, 1);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-		else if (gotAllQuestItems(st))
+		else if (gotAllQuestItems(player))
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 	}
 	
-	private static boolean gotAllQuestItems(QuestState st)
+	private static boolean gotAllQuestItems(L2PcInstance player)
 	{
-		return (st.getQuestItemsCount(FRAGMENT_STONE) >= 10) && (st.getQuestItemsCount(FRAGMENT_HEAD) >= 10) && (st.getQuestItemsCount(FRAGMENT_BODY) >= 10) && (st.getQuestItemsCount(FRAGMENT_HORN) >= 10);
+		return (getQuestItemsCount(player, FRAGMENT_STONE) >= 10) && (getQuestItemsCount(player, FRAGMENT_HEAD) >= 10) && (getQuestItemsCount(player, FRAGMENT_BODY) >= 10) && (getQuestItemsCount(player, FRAGMENT_HORN) >= 10);
 	}
 }

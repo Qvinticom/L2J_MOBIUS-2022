@@ -105,8 +105,8 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -130,7 +130,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = "32106-03.html";
 				}
 				else
@@ -141,36 +141,36 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			}
 			case "32106-09.html":
 			{
-				st.giveAdena(1374 * st.getQuestItemsCount(BONES_OF_A_PLAINS_DINOSAUR), true);
-				st.takeItems(BONES_OF_A_PLAINS_DINOSAUR, -1);
+				giveAdena(player, 1374 * getQuestItemsCount(player, BONES_OF_A_PLAINS_DINOSAUR), true);
+				takeItems(player, BONES_OF_A_PLAINS_DINOSAUR, -1);
 				htmltext = event;
 				break;
 			}
 			case "exit":
 			{
-				if (!st.hasQuestItems(BONES_OF_A_PLAINS_DINOSAUR))
+				if (!hasQuestItems(player, BONES_OF_A_PLAINS_DINOSAUR))
 				{
 					htmltext = "32106-11.html";
 				}
 				else
 				{
-					st.giveAdena(1374 * st.getQuestItemsCount(BONES_OF_A_PLAINS_DINOSAUR), true);
+					giveAdena(player, 1374 * getQuestItemsCount(player, BONES_OF_A_PLAINS_DINOSAUR), true);
 					htmltext = "32106-12.html";
 				}
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				break;
 			}
 			case "exchange":
 			{
-				if (st.getQuestItemsCount(BONES_OF_A_PLAINS_DINOSAUR) < 300)
+				if (getQuestItemsCount(player, BONES_OF_A_PLAINS_DINOSAUR) < 300)
 				{
 					htmltext = "32117-04.html";
 				}
 				else
 				{
-					st.rewardItems(PIECE[getRandom(PIECE.length)], 5);
-					st.takeItems(BONES_OF_A_PLAINS_DINOSAUR, 300);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					rewardItems(player, PIECE[getRandom(PIECE.length)], 5);
+					takeItems(player, BONES_OF_A_PLAINS_DINOSAUR, 300);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = "32117-05.html";
 				}
 				break;
@@ -188,7 +188,6 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		final QuestState st = getQuestState(partyMember, false);
 		final int npcId = npc.getId();
 		
 		if (Util.contains(MOBS1, npcId))
@@ -196,13 +195,13 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			final float chance = (CHANCE_MOBS1 * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				st.rewardItems(BONES_OF_A_PLAINS_DINOSAUR, 2);
+				rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 2);
 			}
 			else
 			{
-				st.rewardItems(BONES_OF_A_PLAINS_DINOSAUR, 1);
+				rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 1);
 			}
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		
 		if (Util.contains(MOBS2, npcId))
@@ -210,8 +209,8 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			final float chance = (CHANCE_MOBS2 * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				st.rewardItems(BONES_OF_A_PLAINS_DINOSAUR, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 1);
+				playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		
@@ -220,8 +219,8 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			final float chance = (CHANCE_DEINO * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				st.rewardItems(BONES_OF_A_PLAINS_DINOSAUR, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 1);
+				playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -230,14 +229,14 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -248,7 +247,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			{
 				if (npc.getId() == SINGSING)
 				{
-					htmltext = (st.hasQuestItems(BONES_OF_A_PLAINS_DINOSAUR)) ? "32106-08.html" : "32106-14.html";
+					htmltext = (hasQuestItems(player, BONES_OF_A_PLAINS_DINOSAUR)) ? "32106-08.html" : "32106-14.html";
 				}
 				else if (npc.getId() == KARAKAWEI)
 				{

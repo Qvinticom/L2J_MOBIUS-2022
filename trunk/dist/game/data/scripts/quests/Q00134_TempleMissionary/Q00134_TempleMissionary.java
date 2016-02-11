@@ -74,8 +74,8 @@ public class Q00134_TempleMissionary extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -86,33 +86,47 @@ public class Q00134_TempleMissionary extends Quest
 			case "30067-05.html":
 			case "30067-09.html":
 			case "31418-07.html":
+			{
 				break;
+			}
 			case "30067-03.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "30067-06.html":
-				st.setCond(2, true);
+			{
+				qs.setCond(2, true);
 				break;
+			}
 			case "31418-03.html":
-				st.setCond(3, true);
+			{
+				qs.setCond(3, true);
 				break;
+			}
 			case "31418-08.html":
-				st.setCond(5, true);
-				st.giveItems(ROUKES_REPOT, 1);
-				st.unset("talk");
+			{
+				qs.setCond(5, true);
+				giveItems(player, ROUKES_REPOT, 1);
+				qs.unset("talk");
 				break;
+			}
 			case "30067-10.html":
-				st.giveItems(BADGE_TEMPLE_MISSIONARY, 1);
-				st.giveAdena(15100, true);
+			{
+				giveItems(player, BADGE_TEMPLE_MISSIONARY, 1);
+				giveAdena(player, 15100, true);
 				if (player.getLevel() < MAX_REWARD_LEVEL)
 				{
-					st.addExpAndSp(30000, 2000);
+					addExpAndSp(player, 30000, 2000);
 				}
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -125,24 +139,24 @@ public class Q00134_TempleMissionary extends Quest
 		{
 			return super.onKill(npc, player, isSummon);
 		}
-		final QuestState st = getQuestState(member, false);
+		final QuestState qs = getQuestState(member, false);
 		if (npc.getId() == CRUMA_MARSHLANDS_TRAITOR)
 		{
-			st.giveItems(GIANTS_TECHNOLOGY_REPORT, 1);
-			if (st.getQuestItemsCount(GIANTS_TECHNOLOGY_REPORT) >= REPORT_COUNT)
+			giveItems(player, GIANTS_TECHNOLOGY_REPORT, 1);
+			if (getQuestItemsCount(player, GIANTS_TECHNOLOGY_REPORT) >= REPORT_COUNT)
 			{
-				st.setCond(4, true);
+				qs.setCond(4, true);
 			}
 			else
 			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		else
 		{
-			if (st.hasQuestItems(GIANTS_EXPERIMENTAL_TOOL))
+			if (hasQuestItems(player, GIANTS_EXPERIMENTAL_TOOL))
 			{
-				st.takeItems(GIANTS_EXPERIMENTAL_TOOL, 1);
+				takeItems(player, GIANTS_EXPERIMENTAL_TOOL, 1);
 				if (getRandom(100) != 0)
 				{
 					addSpawn(CRUMA_MARSHLANDS_TRAITOR, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 60000);
@@ -150,8 +164,8 @@ public class Q00134_TempleMissionary extends Quest
 			}
 			else if (getRandom(100) < MOBS.get(npc.getId()))
 			{
-				st.giveItems(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				giveItems(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, 1);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -161,8 +175,8 @@ public class Q00134_TempleMissionary extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -170,85 +184,111 @@ public class Q00134_TempleMissionary extends Quest
 		switch (npc.getId())
 		{
 			case GLYVKA:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30067-01.htm" : "30067-02.htm";
 						break;
+					}
 					case State.STARTED:
-						switch (st.getCond())
+					{
+						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "30067-04.html";
 								break;
+							}
 							case 2:
 							case 3:
 							case 4:
+							{
 								htmltext = "30067-07.html";
 								break;
+							}
 							case 5:
-								if (st.isSet("talk"))
+							{
+								if (qs.isSet("talk"))
 								{
 									htmltext = "30067-09.html";
 								}
 								else
 								{
-									st.takeItems(ROUKES_REPOT, -1);
-									st.set("talk", "1");
+									takeItems(player, ROUKES_REPOT, -1);
+									qs.set("talk", "1");
 									htmltext = "30067-08.html";
 								}
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
-				}
-				break;
-			case ROUKE:
-				if (st.isStarted())
-				{
-					switch (st.getCond())
-					{
-						case 1:
-							htmltext = "31418-01.html";
-							break;
-						case 2:
-							htmltext = "31418-02.html";
-							break;
-						case 3:
-							if ((st.getQuestItemsCount(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) < FRAGMENT_COUNT) && (st.getQuestItemsCount(GIANTS_TECHNOLOGY_REPORT) < REPORT_COUNT))
-							{
-								htmltext = "31418-04.html";
-							}
-							else if (st.getQuestItemsCount(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) >= FRAGMENT_COUNT)
-							{
-								final int count = (int) (st.getQuestItemsCount(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) / 10);
-								st.takeItems(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, count * 10);
-								st.giveItems(GIANTS_EXPERIMENTAL_TOOL, count);
-								htmltext = "31418-05.html";
-							}
-							break;
-						case 4:
-							if (st.isSet("talk"))
-							{
-								htmltext = "31418-07.html";
-							}
-							else if (st.getQuestItemsCount(GIANTS_TECHNOLOGY_REPORT) >= REPORT_COUNT)
-							{
-								st.takeItems(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, -1);
-								st.takeItems(GIANTS_EXPERIMENTAL_TOOL, -1);
-								st.takeItems(GIANTS_TECHNOLOGY_REPORT, -1);
-								st.set("talk", "1");
-								htmltext = "31418-06.html";
-							}
-							break;
-						case 5:
-							htmltext = "31418-09.html";
-							break;
 					}
 				}
 				break;
+			}
+			case ROUKE:
+			{
+				if (qs.isStarted())
+				{
+					switch (qs.getCond())
+					{
+						case 1:
+						{
+							htmltext = "31418-01.html";
+							break;
+						}
+						case 2:
+						{
+							htmltext = "31418-02.html";
+							break;
+						}
+						case 3:
+						{
+							if ((getQuestItemsCount(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) < FRAGMENT_COUNT) && (getQuestItemsCount(player, GIANTS_TECHNOLOGY_REPORT) < REPORT_COUNT))
+							{
+								htmltext = "31418-04.html";
+							}
+							else if (getQuestItemsCount(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) >= FRAGMENT_COUNT)
+							{
+								final int count = (int) (getQuestItemsCount(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) / 10);
+								takeItems(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, count * 10);
+								giveItems(player, GIANTS_EXPERIMENTAL_TOOL, count);
+								htmltext = "31418-05.html";
+							}
+							break;
+						}
+						case 4:
+						{
+							if (qs.isSet("talk"))
+							{
+								htmltext = "31418-07.html";
+							}
+							else if (getQuestItemsCount(player, GIANTS_TECHNOLOGY_REPORT) >= REPORT_COUNT)
+							{
+								takeItems(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, -1);
+								takeItems(player, GIANTS_EXPERIMENTAL_TOOL, -1);
+								takeItems(player, GIANTS_TECHNOLOGY_REPORT, -1);
+								qs.set("talk", "1");
+								htmltext = "31418-06.html";
+							}
+							break;
+						}
+						case 5:
+						{
+							htmltext = "31418-09.html";
+							break;
+						}
+					}
+				}
+				break;
+			}
 		}
 		return htmltext;
 	}

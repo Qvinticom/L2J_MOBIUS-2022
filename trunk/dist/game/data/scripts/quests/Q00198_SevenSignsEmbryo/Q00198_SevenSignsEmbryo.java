@@ -74,8 +74,8 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			return super.onAdvEvent(event, npc, player);
 		}
 		
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -85,7 +85,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 		{
 			case "32593-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -93,7 +93,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			case "32597-03.html":
 			case "32597-04.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = event;
 				}
@@ -102,7 +102,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			case "fight":
 			{
 				htmltext = "32597-05.html";
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					isBusy = true;
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP).addStringParameter(player.getName()));
@@ -134,7 +134,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			case "32597-09.html":
 			case "32597-10.html":
 			{
-				if (st.isCond(2) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
+				if (qs.isCond(2) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
 				{
 					htmltext = event;
 				}
@@ -142,10 +142,10 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			}
 			case "32597-11.html":
 			{
-				if (st.isCond(2) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
+				if (qs.isCond(2) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
 				{
-					st.takeItems(SCULPTURE_OF_DOUBT, -1);
-					st.setCond(3, true);
+					takeItems(player, SCULPTURE_OF_DOUBT, -1);
+					qs.setCond(3, true);
 					htmltext = event;
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.WE_WILL_BE_WITH_YOU_ALWAYS));
 				}
@@ -175,11 +175,11 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			return null;
 		}
 		
-		final QuestState st = getQuestState(partyMember, false);
+		final QuestState qs = getQuestState(partyMember, false);
 		if (npc.isInsideRadius(partyMember, 1500, true, false))
 		{
-			st.giveItems(SCULPTURE_OF_DOUBT, 1);
-			st.setCond(2, true);
+			giveItems(partyMember, SCULPTURE_OF_DOUBT, 1);
+			qs.setCond(2, true);
 		}
 		
 		isBusy = false;
@@ -194,9 +194,9 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -207,8 +207,8 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			{
 				if (npc.getId() == WOOD)
 				{
-					st = player.getQuestState(Q00197_SevenSignsTheSacredBookOfSeal.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32593-01.htm" : "32593-03.html";
+					qs = player.getQuestState(Q00197_SevenSignsTheSacredBookOfSeal.class.getSimpleName());
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "32593-01.htm" : "32593-03.html";
 				}
 				break;
 			}
@@ -216,18 +216,18 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			{
 				if (npc.getId() == WOOD)
 				{
-					if ((st.getCond() > 0) && (st.getCond() < 3))
+					if ((qs.getCond() > 0) && (qs.getCond() < 3))
 					{
 						htmltext = "32593-04.html";
 					}
-					else if (st.isCond(3))
+					else if (qs.isCond(3))
 					{
 						if (player.getLevel() >= MIN_LEVEL)
 						{
-							st.addExpAndSp(315108090, 34906059);
-							st.giveItems(DAWNS_BRACELET, 1);
-							st.giveItems(Inventory.ANCIENT_ADENA_ID, 1500000);
-							st.exitQuest(false, true);
+							addExpAndSp(player, 315108090, 34906059);
+							giveItems(player, DAWNS_BRACELET, 1);
+							giveItems(player, Inventory.ANCIENT_ADENA_ID, 1500000);
+							qs.exitQuest(false, true);
 							htmltext = "32593-05.html";
 						}
 						else
@@ -238,7 +238,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 				}
 				else if (npc.getId() == FRANZ)
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -247,7 +247,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 						}
 						case 2:
 						{
-							if (st.hasQuestItems(SCULPTURE_OF_DOUBT))
+							if (hasQuestItems(player, SCULPTURE_OF_DOUBT))
 							{
 								htmltext = "32597-07.html";
 							}

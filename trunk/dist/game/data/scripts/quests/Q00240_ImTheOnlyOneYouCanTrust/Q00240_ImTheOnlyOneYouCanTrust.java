@@ -67,15 +67,15 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		if (event.equalsIgnoreCase("32640-3.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		return event;
 	}
@@ -89,15 +89,15 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		final QuestState st = getQuestState(partyMember, false);
-		st.giveItems(STAKATO_FANG, 1);
-		if (st.getQuestItemsCount(STAKATO_FANG) >= 25)
+		final QuestState qs = getQuestState(partyMember, false);
+		giveItems(partyMember, STAKATO_FANG, 1);
+		if (getQuestItemsCount(partyMember, STAKATO_FANG) >= 25)
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 		else
 		{
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -106,38 +106,48 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= 81) ? "32640-1.htm" : "32640-0.htm";
 				break;
+			}
 			case State.STARTED:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 1:
-						htmltext = (!st.hasQuestItems(STAKATO_FANG)) ? "32640-8.html" : "32640-9.html";
+					{
+						htmltext = (!hasQuestItems(player, STAKATO_FANG)) ? "32640-8.html" : "32640-9.html";
 						break;
+					}
 					case 2:
-						if (st.getQuestItemsCount(STAKATO_FANG) >= 25)
+					{
+						if (getQuestItemsCount(player, STAKATO_FANG) >= 25)
 						{
-							st.giveAdena(147200, true);
-							st.takeItems(STAKATO_FANG, -1);
-							st.addExpAndSp(589542, 36800);
-							st.exitQuest(false, true);
+							giveAdena(player, 147200, true);
+							takeItems(player, STAKATO_FANG, -1);
+							addExpAndSp(player, 589542, 36800);
+							qs.exitQuest(false, true);
 							htmltext = "32640-10.html";
 						}
 						break;
+					}
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = "32640-11.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

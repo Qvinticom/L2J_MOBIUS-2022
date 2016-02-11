@@ -52,8 +52,8 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -64,22 +64,22 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 		{
 			if (event.equals("32773-3.htm"))
 			{
-				st.startQuest();
+				qs.startQuest();
 			}
 		}
 		else
 		{
-			if (st.isCond(1))
+			if (qs.isCond(1))
 			{
 				if (getRandom(10) < 5)
 				{
-					st.giveItems(TAG_ID, 1);
+					giveItems(player, TAG_ID, 1);
 				}
 				else
 				{
 					htmltext = "corpse-3.html";
 				}
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				npc.deleteMe();
 			}
 			else
@@ -94,37 +94,37 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
 		if (npc.getId() == JAKAN)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 					htmltext = (player.getLevel() < 84) ? "32773-0.html" : "32773-1.htm";
 					break;
 				case State.STARTED:
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "32773-4.html";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						htmltext = "32773-5.html";
-						st.takeItems(TAG_ID, -1);
-						st.giveAdena(95200, true);
-						st.addExpAndSp(435024, 50366);
-						st.exitQuest(QuestType.DAILY, true);
+						takeItems(player, TAG_ID, -1);
+						giveAdena(player, 95200, true);
+						addExpAndSp(player, 435024, 50366);
+						qs.exitQuest(QuestType.DAILY, true);
 					}
 					break;
 				case State.COMPLETED:
-					if (st.isNowAvailable())
+					if (qs.isNowAvailable())
 					{
-						st.setState(State.CREATED);
+						qs.setState(State.CREATED);
 						htmltext = (player.getLevel() < 84) ? "32773-0.html" : "32773-1.htm";
 					}
 					else
@@ -136,7 +136,7 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 		}
 		else
 		{
-			if (st.isCond(1))
+			if (qs.isCond(1))
 			{
 				htmltext = "corpse-1.html";
 			}

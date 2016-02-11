@@ -81,9 +81,9 @@ public class Q10785_LettersFromTheQueen_FieldsOfMassacre extends Quest implement
 			case "30857-03.htm": // start the quest
 			{
 				qs.startQuest();
-				if (qs.getQuestItemsCount(SCROLL_OF_ESCAPE_FIELDS_OF_MASSACRE.getId()) < 1)
+				if (getQuestItemsCount(player, SCROLL_OF_ESCAPE_FIELDS_OF_MASSACRE.getId()) < 1)
 				{
-					qs.giveItems(SCROLL_OF_ESCAPE_FIELDS_OF_MASSACRE);
+					giveItems(player, SCROLL_OF_ESCAPE_FIELDS_OF_MASSACRE);
 					player.sendPacket(new ExShowScreenMessage("Try using the teleport scroll Orven gave you to go to Fields of Massacre.", 10000));
 					qs.setCond(2, true);
 					htmltext = event;
@@ -95,9 +95,9 @@ public class Q10785_LettersFromTheQueen_FieldsOfMassacre extends Quest implement
 				if (qs.isCond(2))
 				{
 					player.sendPacket(new ExShowScreenMessage("Grow stronger here until you receive the next letter from Queen Navari at Lv. 65!", 5000));
-					qs.giveItems(STEEL_DOOR_GUILD);
-					qs.giveItems(EWA);
-					qs.addExpAndSp(EXP_REWARD, SP_REWARD);
+					giveItems(player, STEEL_DOOR_GUILD);
+					giveItems(player, EWA);
+					addExpAndSp(player, EXP_REWARD, SP_REWARD);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_FINISH);
 					qs.exitQuest(false, true);
 					htmltext = event;

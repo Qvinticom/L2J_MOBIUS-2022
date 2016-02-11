@@ -67,9 +67,9 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -77,19 +77,25 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		String htmltext = event;
 		switch (event)
 		{
-			// Yumi
 			case "32041-04.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "32041-08.html":
-				st.set("talk", "1");
+			{
+				qs.set("talk", "1");
 				break;
+			}
 			case "32041-09.html":
-				st.setCond(2, true);
-				st.unset("talk");
+			{
+				qs.setCond(2, true);
+				qs.unset("talk");
 				break;
+			}
 			case "32041-12.html":
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 3:
 						htmltext = "32041-12.html";
@@ -102,101 +108,137 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 						break;
 				}
 				break;
+			}
 			case "32041-15.html":
-				st.set("talk", "1");
+			{
+				qs.set("talk", "1");
 				break;
+			}
 			case "32041-23.html":
-				st.set("talk", "2");
+			{
+				qs.set("talk", "2");
 				break;
+			}
 			case "32041-26.html":
-				st.setCond(6, true);
-				st.unset("talk");
+			{
+				qs.setCond(6, true);
+				qs.unset("talk");
 				break;
+			}
 			case "32041-31.html":
-				st.giveItems(DETCTOR, 1);
-				st.setCond(17, true);
+			{
+				giveItems(player, DETCTOR, 1);
+				qs.setCond(17, true);
 				break;
+			}
 			case "32041-34.html":
-				st.set("talk", "1");
-				st.takeItems(DETCTOR2, 1);
+			{
+				qs.set("talk", "1");
+				takeItems(player, DETCTOR2, 1);
 				break;
+			}
 			case "32041-38.html":
-				if (st.getInt("choice") == 2)
+			{
+				if (qs.getInt("choice") == 2)
 				{
 					htmltext = "32041-37.html";
 				}
 				break;
+			}
 			case "32041-39.html":
-				st.unset("talk");
-				st.setCond(20, true);
+			{
+				qs.unset("talk");
+				qs.setCond(20, true);
 				break;
+			}
 			case "32041-40.html":
-				st.setCond(21, true);
-				st.unset("talk");
-				st.giveItems(LETTER, 1);
+			{
+				qs.setCond(21, true);
+				qs.unset("talk");
+				giveItems(player, LETTER, 1);
 				break;
-			// Suspicious-Looking Pile of Stones
+			}
 			case "32046-03.html":
-				st.setCond(19, true);
+			{
+				qs.setCond(19, true);
 				break;
+			}
 			case "32046-07.html":
-				st.addExpAndSp(1846611, 144270);
-				st.exitQuest(false, true);
+			{
+				addExpAndSp(player, 1846611, 144270);
+				qs.exitQuest(false, true);
 				break;
-			// Wendy
+			}
 			case "32047-02.html":
-				if (st.getInt("talk") == 0)
+			{
+				if (qs.getInt("talk") == 0)
 				{
-					st.set("talk", "1");
+					qs.set("talk", "1");
 				}
 				break;
+			}
 			case "32047-03.html":
-				if (st.getInt("talk1") == 0)
+			{
+				if (qs.getInt("talk1") == 0)
 				{
-					st.set("talk1", "1");
+					qs.set("talk1", "1");
 				}
 				break;
+			}
 			case "32047-05.html":
-				if ((st.getInt("talk") == 0) || (st.getInt("talk1") == 0))
+			{
+				if ((qs.getInt("talk") == 0) || (qs.getInt("talk1") == 0))
 				{
 					htmltext = "32047-04.html";
 				}
 				break;
+			}
 			case "32047-06.html":
-				st.set("choice", "1");
-				st.setCond(3, true);
-				st.unset("talk1");
-				st.unset("talk");
+			{
+				qs.set("choice", "1");
+				qs.setCond(3, true);
+				qs.unset("talk1");
+				qs.unset("talk");
 				break;
+			}
 			case "32047-07.html":
-				st.set("choice", "2");
-				st.setCond(4, true);
-				st.unset("talk1");
-				st.unset("talk");
+			{
+				qs.set("choice", "2");
+				qs.setCond(4, true);
+				qs.unset("talk1");
+				qs.unset("talk");
 				break;
+			}
 			case "32047-09.html":
-				st.set("choice", "3");
-				st.setCond(5, true);
-				st.unset("talk1");
-				st.unset("talk");
+			{
+				qs.set("choice", "3");
+				qs.setCond(5, true);
+				qs.unset("talk1");
+				qs.unset("talk");
 				break;
+			}
 			case "32047-14ab.html":
-				st.set("choice", "3");
-				st.setCond(7, true);
+			{
+				qs.set("choice", "3");
+				qs.setCond(7, true);
 				break;
+			}
 			case "32047-14b.html":
-				st.setCond(10, true);
+			{
+				qs.setCond(10, true);
 				break;
+			}
 			case "32047-15b.html":
+			{
 				if ((golem == null) || ((golem != null) && golem.isDead()))
 				{
 					golem = (L2Attackable) addSpawn(GUARDIAN, 96977, -110625, -3280, 0, false, 0);
 					golem.broadcastPacket(new NpcSay(golem.getObjectId(), ChatType.NPC_GENERAL, golem.getId(), NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE).addStringParameter(player.getName()));
 					addAttackDesire(golem, player);
-					st.set("spawned", "1");
+					qs.set("spawned", "1");
 					startQuestTimer("golem_despawn", 300000, null, player);
 				}
-				else if (st.getInt("spawned") == 1)
+				else if (qs.getInt("spawned") == 1)
 				{
 					htmltext = "32047-17b.html";
 				}
@@ -205,69 +247,92 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 					htmltext = "32047-16b.html";
 				}
 				break;
+			}
 			case "32047-20a.html":
-				st.setCond(8, true);
+			{
+				qs.setCond(8, true);
 				break;
+			}
 			case "32047-20b.html":
-				st.setCond(12, true);
+			{
+				qs.setCond(12, true);
 				break;
+			}
 			case "32047-20c.html":
-				st.setCond(13, true);
+			{
+				qs.setCond(13, true);
 				break;
+			}
 			case "32047-21a.html":
-				st.setCond(9, true);
+			{
+				qs.setCond(9, true);
 				break;
+			}
 			case "32047-23a.html":
-				st.setCond(23, true);
+			{
+				qs.setCond(23, true);
 				break;
+			}
 			case "32047-23c.html":
-				st.takeItems(STARSTONE, 1);
-				st.setCond(15, true);
+			{
+				takeItems(player, STARSTONE, 1);
+				qs.setCond(15, true);
 				break;
+			}
 			case "32047-29c.html":
+			{
 				if (player.getAdena() >= 3000)
 				{
-					st.giveItems(STARSTONE2, 1);
-					st.takeItems(Inventory.ADENA_ID, 3000);
-					st.unset("talk");
-					st.setCond(26, true);
+					giveItems(player, STARSTONE2, 1);
+					takeItems(player, Inventory.ADENA_ID, 3000);
+					qs.unset("talk");
+					qs.setCond(26, true);
 				}
 				else
 				{
 					htmltext = "32047-29ca.html";
 				}
 				break;
+			}
 			case "32047-30c.html":
-				st.set("talk", "1");
+			{
+				qs.set("talk", "1");
 				break;
-			// Box
+			}
 			case "32050-01r.html":
-				st.set("talk", "1");
+			{
+				qs.set("talk", "1");
 				break;
+			}
 			case "32050-03.html":
-				st.giveItems(STARSTONE, 1);
-				st.setCond(14, true);
-				st.unset("talk");
+			{
+				giveItems(player, STARSTONE, 1);
+				qs.setCond(14, true);
+				qs.unset("talk");
 				break;
+			}
 			case "32050-05.html":
-				st.setCond(24, true);
-				st.giveItems(STARSTONE2, 1);
+			{
+				qs.setCond(24, true);
+				giveItems(player, STARSTONE2, 1);
 				break;
-			// Newyear
+			}
 			case "31961-02.html":
-				st.takeItems(LETTER, 1);
-				st.giveItems(STARSTONE2, 1);
-				st.setCond(22, true);
+			{
+				takeItems(player, LETTER, 1);
+				giveItems(player, STARSTONE2, 1);
+				qs.setCond(22, true);
 				break;
-			// Quest timer
+			}
 			case "golem_despawn":
-				st.unset("spawned");
+			{
+				qs.unset("spawned");
 				golem.broadcastPacket(new NpcSay(golem.getObjectId(), ChatType.NPC_GENERAL, golem.getId(), NpcStringId.S1_YOUR_ENEMY_WAS_DRIVEN_OUT_I_WILL_NOW_WITHDRAW_AND_AWAIT_YOUR_NEXT_COMMAND).addStringParameter(player.getName()));
 				golem.deleteMe();
 				golem = null;
 				htmltext = null;
 				break;
-			// HTMLs
+			}
 			case "32041-05.html":
 			case "32041-06.html":
 			case "32041-07.html":
@@ -309,10 +374,14 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			case "32047-21b.html":
 			case "32047-27c.html":
 			case "32047-28c.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -320,13 +389,13 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if ((st != null) && st.isCond(10) && (st.getInt("spawned") == 1))
+		if ((qs != null) && qs.isCond(10) && (qs.getInt("spawned") == 1))
 		{
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW));
-			st.setCond(11, true);
-			st.unset("spawned");
+			qs.setCond(11, true);
+			qs.unset("spawned");
 			cancelQuestTimers("golem_despawn");
 		}
 		return super.onKill(npc, player, isSummon);
@@ -337,12 +406,12 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	{
 		if (creature.isPlayer())
 		{
-			final QuestState st = getQuestState(creature.getActingPlayer(), false);
-			if ((st != null) && st.isCond(17))
+			final QuestState qs = getQuestState(creature.getActingPlayer(), false);
+			if ((qs != null) && qs.isCond(17))
 			{
-				st.takeItems(DETCTOR, 1);
-				st.giveItems(DETCTOR2, 1);
-				st.setCond(18, true);
+				takeItems((L2PcInstance) creature, DETCTOR, 1);
+				giveItems((L2PcInstance) creature, DETCTOR2, 1);
+				qs.setCond(18, true);
 				showOnScreenMsg(creature.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
 			}
 		}
@@ -353,21 +422,23 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
-		final int talk = st.getInt("talk");
+		final int talk = qs.getInt("talk");
 		
 		switch (npc.getId())
 		{
 			case YUMI:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						final QuestState prev = player.getQuestState(Q00121_PavelTheGiant.class.getSimpleName());
 						if ((prev != null) && prev.isCompleted())
 						{
@@ -378,31 +449,45 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 							htmltext = "32041-01.htm";
 						}
 						break;
+					}
 					case State.STARTED:
-						switch (st.getCond())
+					{
+						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = (talk == 1) ? "32041-08.html" : "32041-04.htm";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "32041-10.html";
 								break;
+							}
 							case 3:
 							case 4:
 							case 5:
+							{
 								switch (talk)
 								{
 									case 0:
+									{
 										htmltext = "32041-11.html";
 										break;
+									}
 									case 1:
+									{
 										htmltext = "32041-16.html";
 										break;
+									}
 									case 2:
+									{
 										htmltext = "32041-24.html";
 										break;
+									}
 								}
 								break;
+							}
 							case 6:
 							case 7:
 							case 8:
@@ -411,102 +496,156 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 							case 13:
 							case 14:
 							case 15:
+							{
 								htmltext = "32041-27.html";
 								break;
+							}
 							case 9:
 							case 12:
 							case 16:
+							{
 								htmltext = "32041-28.html";
 								break;
+							}
 							case 17:
 							case 18:
+							{
 								htmltext = "32041-32.html";
 								break;
+							}
 							case 19:
+							{
 								htmltext = (talk == 1) ? "32041-34z.html" : "32041-33.html";
 								break;
+							}
 							case 20:
+							{
 								htmltext = "32041-39z.html";
 								break;
+							}
 							case 21:
+							{
 								htmltext = "32041-40z.html";
 								break;
+							}
 							case 22:
 							case 25:
 							case 26:
-								st.setCond(27, true);
+							{
+								qs.setCond(27, true);
 								htmltext = "32041-41.html";
 								break;
+							}
 							case 27:
+							{
 								htmltext = "32041-42.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case WENDY:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 2:
-							htmltext = ((talk == 1) && (st.getInt("talk1") == 1)) ? "32047-05.html" : "32047-01.html";
+						{
+							htmltext = ((talk == 1) && (qs.getInt("talk1") == 1)) ? "32047-05.html" : "32047-01.html";
 							break;
+						}
 						case 3:
+						{
 							htmltext = "32047-06b.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "32047-08.html";
 							break;
+						}
 						case 5:
+						{
 							htmltext = "32047-10.html";
 							break;
+						}
 						case 6:
-							switch (st.getInt("choice"))
+						{
+							switch (qs.getInt("choice"))
 							{
 								case 1:
+								{
 									htmltext = "32047-11a.html";
 									break;
+								}
 								case 2:
+								{
 									htmltext = "32047-11b.html";
 									break;
+								}
 								case 3:
+								{
 									htmltext = "32047-11c.html";
 									break;
+								}
 							}
 							break;
+						}
 						case 7:
+						{
 							htmltext = "32047-11c.html";
 							break;
+						}
 						case 8:
+						{
 							htmltext = "32047-17a.html";
 							break;
+						}
 						case 9:
 						case 12:
 						case 16:
+						{
 							htmltext = "32047-25c.html";
 							break;
+						}
 						case 10:
+						{
 							htmltext = "32047-18b.html";
 							break;
+						}
 						case 11:
+						{
 							htmltext = "32047-19b.html";
 							break;
+						}
 						case 13:
+						{
 							htmltext = "32047-21c.html";
 							break;
+						}
 						case 14:
+						{
 							htmltext = "32047-22c.html";
 							break;
+						}
 						case 15:
-							st.setCond(16, true);
+						{
+							qs.setCond(16, true);
 							htmltext = "32047-24c.html";
 							break;
+						}
 						case 20:
-							if (st.getInt("choice") == 1)
+						{
+							if (qs.getInt("choice") == 1)
 							{
 								htmltext = "32047-22a.html";
 							}
@@ -515,73 +654,107 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 								htmltext = (talk == 1) ? "32047-31c.html" : "32047-26c.html";
 							}
 							break;
+						}
 						case 23:
+						{
 							htmltext = "32047-23z.html";
 							break;
+						}
 						case 24:
-							st.setCond(25, true);
+						{
+							qs.setCond(25, true);
 							htmltext = "32047-24a.html";
 							break;
+						}
 						case 25:
+						{
 							htmltext = "32047-24a.html";
 							break;
+						}
 						case 26:
+						{
 							htmltext = "32047-32c.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case NEWYEAR:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 21:
+						{
 							htmltext = "31961-01.html";
 							break;
+						}
 						case 22:
+						{
 							htmltext = "31961-03.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case BOX:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 13:
+						{
 							htmltext = (talk == 1) ? "32050-02.html" : "32050-01.html";
 							break;
+						}
 						case 14:
+						{
 							htmltext = "32050-04.html";
 							break;
+						}
 						case 23:
+						{
 							htmltext = "32050-04b.html";
 							break;
+						}
 						case 24:
+						{
 							htmltext = "32050-05z.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case STONES:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 18:
+						{
 							htmltext = "32046-02.html";
 							break;
+						}
 						case 19:
+						{
 							htmltext = "32046-03.html";
 							break;
+						}
 						case 27:
+						{
 							htmltext = "32046-04.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

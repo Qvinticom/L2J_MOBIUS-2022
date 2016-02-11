@@ -70,20 +70,20 @@ public final class Q00902_ReclaimOurEra extends Quest
 	
 	private void giveItem(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && (st.isStarted()) && (!st.isCond(5)) && Util.checkIfInRange(1500, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && (qs.isStarted()) && (!qs.isCond(5)) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			st.giveItems(MONSTER_DROPS.get(npc.getId()), 1);
-			st.setCond(5, true);
+			giveItems(player, MONSTER_DROPS.get(npc.getId()), 1);
+			qs.setCond(5, true);
 		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -92,7 +92,7 @@ public final class Q00902_ReclaimOurEra extends Quest
 		{
 			case "31340-04.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
 					htmltext = event;
 				}
@@ -100,43 +100,43 @@ public final class Q00902_ReclaimOurEra extends Quest
 			}
 			case "31340-05.html":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
 			}
 			case "31340-06.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31340-07.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31340-08.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31340-10.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = event;
 				}
@@ -166,23 +166,23 @@ public final class Q00902_ReclaimOurEra extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
-				if (!st.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					htmltext = "31340-02.htm";
 					break;
 				}
-				st.setState(State.CREATED);
+				qs.setState(State.CREATED);
 			}
 			case State.CREATED:
 			{
@@ -191,7 +191,7 @@ public final class Q00902_ReclaimOurEra extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -215,22 +215,22 @@ public final class Q00902_ReclaimOurEra extends Quest
 					}
 					case 5:
 					{
-						if (st.hasQuestItems(SHATTERED_BONES))
+						if (hasQuestItems(player, SHATTERED_BONES))
 						{
-							st.giveItems(PROOF_OF_CHALLENGE, 1);
-							st.giveAdena(134038, true);
+							giveItems(player, PROOF_OF_CHALLENGE, 1);
+							giveAdena(player, 134038, true);
 						}
-						else if (st.hasQuestItems(CANNIBALISTIC_STAKATO_LDR_CLAW))
+						else if (hasQuestItems(player, CANNIBALISTIC_STAKATO_LDR_CLAW))
 						{
-							st.giveItems(PROOF_OF_CHALLENGE, 3);
-							st.giveAdena(210119, true);
+							giveItems(player, PROOF_OF_CHALLENGE, 3);
+							giveAdena(player, 210119, true);
 						}
-						else if (st.hasQuestItems(ANAIS_SCROLL))
+						else if (hasQuestItems(player, ANAIS_SCROLL))
 						{
-							st.giveItems(PROOF_OF_CHALLENGE, 3);
-							st.giveAdena(348155, true);
+							giveItems(player, PROOF_OF_CHALLENGE, 3);
+							giveAdena(player, 348155, true);
 						}
-						st.exitQuest(QuestType.DAILY, true);
+						qs.exitQuest(QuestType.DAILY, true);
 						htmltext = "31340-14.html";
 						break;
 					}

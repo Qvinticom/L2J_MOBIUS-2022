@@ -64,25 +64,25 @@ public final class Q00624_TheFinestIngredientsPart1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st != null)
+		if (qs != null)
 		{
 			switch (event)
 			{
 				case "31521-02.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
 				case "31521-05.html":
 				{
-					if (st.isCond(2) && (getQuestItemsCount(player, getRegisteredItemIds()) == 150))
+					if (qs.isCond(2) && (getQuestItemsCount(player, getRegisteredItemIds()) == 150))
 					{
-						st.giveItems(ICE_CRYSTAL, 1);
-						st.giveItems(SOY_SAUCE_JAR, 1);
-						st.exitQuest(true, true);
+						giveItems(player, ICE_CRYSTAL, 1);
+						giveItems(player, SOY_SAUCE_JAR, 1);
+						qs.exitQuest(true, true);
 						htmltext = "31521-05.html";
 					}
 					else
@@ -128,11 +128,11 @@ public final class Q00624_TheFinestIngredientsPart1 extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		if (qs != null)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -141,7 +141,7 @@ public final class Q00624_TheFinestIngredientsPart1 extends Quest
 				}
 				case State.STARTED:
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{

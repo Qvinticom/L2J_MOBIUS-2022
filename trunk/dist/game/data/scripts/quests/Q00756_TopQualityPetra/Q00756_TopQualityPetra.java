@@ -58,14 +58,14 @@ public class Q00756_TopQualityPetra extends Quest
 			case "petra_of_zahaq_q0756_03.html":
 			{
 				qs.startQuest();
-				qs.takeItems(ZAHAK_PETRA, 1);
-				qs.giveItems(TOP_QUALITY_PETRA, 1);
+				takeItems(player, ZAHAK_PETRA, 1);
+				giveItems(player, TOP_QUALITY_PETRA, 1);
 			}
 			case "sofa_aku_q0756_02.html":
 			{
-				qs.takeItems(TOP_QUALITY_PETRA, -1);
-				qs.addExpAndSp(570676680, 26102484);
-				qs.giveItems(AKU_MARK, 1);
+				takeItems(player, TOP_QUALITY_PETRA, -1);
+				addExpAndSp(player, 570676680, 26102484);
+				giveItems(player, AKU_MARK, 1);
 				qs.exitQuest(QuestType.DAILY, true);
 			}
 		}
@@ -102,8 +102,8 @@ public class Q00756_TopQualityPetra extends Quest
 			if (player.getLevel() >= MIN_LEVEL)
 			{
 				qs.startQuest();
-				qs.takeItems(ZAHAK_PETRA, 1);
-				qs.giveItems(TOP_QUALITY_PETRA, 1);
+				takeItems(player, ZAHAK_PETRA, 1);
+				giveItems(player, TOP_QUALITY_PETRA, 1);
 				htmltext = "petra_of_zahaq_q0756_03.html";
 			}
 			else
@@ -120,7 +120,7 @@ public class Q00756_TopQualityPetra extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (qs.isCond(1) && qs.hasQuestItems(TOP_QUALITY_PETRA))
+		if (qs.isCond(1) && hasQuestItems(player, TOP_QUALITY_PETRA))
 		{
 			htmltext = "sofa_aku_q0756_01.html";
 		}

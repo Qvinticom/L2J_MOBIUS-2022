@@ -188,7 +188,7 @@ public class Q10364_ObligationsOfTheSeeker extends Quest
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
-			if (qs.getQuestItemsCount(DIRTY_PIECE_OF_PAPER) < DPP_REQUIRED)
+			if (getQuestItemsCount(qs.getPlayer(), DIRTY_PIECE_OF_PAPER) < DPP_REQUIRED)
 			{
 				giveItems(qs.getPlayer(), DIRTY_PIECE_OF_PAPER, 1);
 			}

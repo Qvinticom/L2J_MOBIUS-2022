@@ -85,8 +85,8 @@ final class Pantheon extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(Q10320_LetsGoToTheCentralSquare.class.getSimpleName());
-		if (st == null)
+		final QuestState qs = player.getQuestState(Q10320_LetsGoToTheCentralSquare.class.getSimpleName());
+		if (qs == null)
 		{
 			showOnScreenMsg(player, NpcStringId.BEGIN_TUTORIAL_QUESTS, ExShowScreenMessage.TOP_CENTER, 4500);
 		}

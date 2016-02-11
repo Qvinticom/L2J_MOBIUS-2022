@@ -81,9 +81,9 @@ public class Q10782_LettersFromTheQueen_ForsakenPlains extends Quest implements 
 			case "30857-03.htm": // start the quest
 			{
 				qs.startQuest();
-				if (qs.getQuestItemsCount(SCROLL_OF_ESCAPE_FORSAKEN_PLAINS.getId()) < 1)
+				if (getQuestItemsCount(player, SCROLL_OF_ESCAPE_FORSAKEN_PLAINS.getId()) < 1)
 				{
-					qs.giveItems(SCROLL_OF_ESCAPE_FORSAKEN_PLAINS);
+					giveItems(player, SCROLL_OF_ESCAPE_FORSAKEN_PLAINS);
 					player.sendPacket(new ExShowScreenMessage("Try using the teleport scroll Orven gave you to go to Forsaken Plains.", 10000));
 					qs.setCond(2, true);
 				}
@@ -95,9 +95,9 @@ public class Q10782_LettersFromTheQueen_ForsakenPlains extends Quest implements 
 				if (qs.isCond(2))
 				{
 					player.sendPacket(new ExShowScreenMessage("Grow stronger here until you receive the next letter from Queen Navari at Lv. 61!", 5000));
-					qs.giveItems(STEEL_DOOR_GUILD);
-					qs.giveItems(EAB);
-					qs.addExpAndSp(EXP_REWARD, SP_REWARD);
+					giveItems(player, STEEL_DOOR_GUILD);
+					giveItems(player, EAB);
+					addExpAndSp(player, EXP_REWARD, SP_REWARD);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_FINISH);
 					qs.exitQuest(false, true);
 				}

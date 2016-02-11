@@ -36,7 +36,7 @@ public class Q00641_AttackSailren extends Quest
 	// Items
 	private static final int GAZKH_FRAGMENT = 8782;
 	private static final int GAZKH = 8784;
-	
+	// Monsters
 	private static int[] MOBS =
 	{
 		22196, // Velociraptor
@@ -59,8 +59,8 @@ public class Q00641_AttackSailren extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -68,15 +68,19 @@ public class Q00641_AttackSailren extends Quest
 		switch (event)
 		{
 			case "32109-1.html":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "32109-2a.html":
-				if (st.getQuestItemsCount(GAZKH_FRAGMENT) >= 30)
+			{
+				if (getQuestItemsCount(player, GAZKH_FRAGMENT) >= 30)
 				{
-					st.giveItems(GAZKH, 1);
-					st.exitQuest(true, true);
+					giveItems(player, GAZKH, 1);
+					qs.exitQuest(true, true);
 				}
 				break;
+			}
 		}
 		return event;
 	}
@@ -87,17 +91,17 @@ public class Q00641_AttackSailren extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = getQuestState(partyMember, false);
-			if (st != null)
+			final QuestState qs = getQuestState(partyMember, false);
+			if (qs != null)
 			{
-				st.giveItems(GAZKH_FRAGMENT, 1);
-				if (st.getQuestItemsCount(GAZKH_FRAGMENT) < 30)
+				giveItems(partyMember, GAZKH_FRAGMENT, 1);
+				if (getQuestItemsCount(partyMember, GAZKH_FRAGMENT) < 30)
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
 		}
@@ -108,28 +112,32 @@ public class Q00641_AttackSailren extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = getQuestState(player, true);
-		if (st == null)
+		QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 77)
 				{
 					htmltext = "32109-0.htm";
 				}
 				else
 				{
-					st = player.getQuestState(Q00126_TheNameOfEvil2.class.getSimpleName());
-					htmltext = ((st != null) && st.isCompleted()) ? "32109-0a.htm" : "32109-0b.htm";
+					qs = player.getQuestState(Q00126_TheNameOfEvil2.class.getSimpleName());
+					htmltext = ((qs != null) && qs.isCompleted()) ? "32109-0a.htm" : "32109-0b.htm";
 				}
 				break;
+			}
 			case State.STARTED:
-				htmltext = (st.isCond(1)) ? "32109-1a.html" : "32109-2.html";
+			{
+				htmltext = (qs.isCond(1)) ? "32109-1a.html" : "32109-2.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

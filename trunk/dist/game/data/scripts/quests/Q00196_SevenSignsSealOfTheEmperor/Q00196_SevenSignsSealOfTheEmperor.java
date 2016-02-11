@@ -69,8 +69,8 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			return super.onAdvEvent(event, npc, player);
 		}
 		
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -87,13 +87,13 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			}
 			case "30969-05.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "ssq_mammon":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					if (!isBusy)
 					{
@@ -113,7 +113,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			}
 			case "30969-13.html":
 			{
-				if (st.isCond(5))
+				if (qs.isCond(5))
 				{
 					htmltext = event;
 				}
@@ -121,9 +121,9 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			}
 			case "30969-14.html":
 			{
-				if (st.isCond(5))
+				if (qs.isCond(5))
 				{
-					st.setCond(6, true);
+					qs.setCond(6, true);
 					htmltext = event;
 				}
 				break;
@@ -132,7 +132,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			case "32584-03.html":
 			case "32584-04.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = event;
 				}
@@ -140,9 +140,9 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			}
 			case "32584-05.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = event;
 					cancelQuestTimers("DESPAWN");
 					npc.deleteMe();
@@ -155,7 +155,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			case "32586-04.html":
 			case "32586-06.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					htmltext = event;
 				}
@@ -163,11 +163,11 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			}
 			case "32586-07.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					giveItems(player, ELMOREDEN_HOLY_WATER, 1);
 					giveItems(player, SACRED_SWORD_OF_EINHASAD, 1);
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					player.sendPacket(SystemMessageId.BY_USING_THE_SKILL_OF_EINHASAD_S_HOLY_SWORD_DEFEAT_THE_EVIL_LILIMS);
 					player.sendPacket(SystemMessageId.BY_USING_THE_HOLY_WATER_OF_EINHASAD_OPEN_THE_DOOR_POSSESSED_BY_THE_CURSE_OF_FLAMES);
 					htmltext = event;
@@ -178,7 +178,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			case "32586-12.html":
 			case "32586-13.html":
 			{
-				if (st.isCond(4) && (getQuestItemsCount(player, SEAL_OF_BINDING) >= 4))
+				if (qs.isCond(4) && (getQuestItemsCount(player, SEAL_OF_BINDING) >= 4))
 				{
 					htmltext = event;
 				}
@@ -186,22 +186,22 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			}
 			case "32586-14.html":
 			{
-				if (st.isCond(4) && (getQuestItemsCount(player, SEAL_OF_BINDING) >= 4))
+				if (qs.isCond(4) && (getQuestItemsCount(player, SEAL_OF_BINDING) >= 4))
 				{
 					takeItems(player, -1, ELMOREDEN_HOLY_WATER, COURT_MAGICIANS_MAGIC_STAFF, SEAL_OF_BINDING, SACRED_SWORD_OF_EINHASAD);
-					st.setCond(5, true);
+					qs.setCond(5, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "finish":
 			{
-				if (st.isCond(6))
+				if (qs.isCond(6))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 52518015, 5817677);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 						htmltext = "32593-02.html";
 					}
 					else
@@ -213,7 +213,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			}
 			case "32598-02.html":
 			{
-				if (st.isCond(3) || st.isCond(4))
+				if (qs.isCond(3) || qs.isCond(4))
 				{
 					giveItems(player, COURT_MAGICIANS_MAGIC_STAFF, 1);
 					htmltext = event;
@@ -233,9 +233,9 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -246,8 +246,8 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			{
 				if (npc.getId() == IASON_HEINE)
 				{
-					st = player.getQuestState(Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "30969-01.htm" : "30969-08.html";
+					qs = player.getQuestState(Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName());
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "30969-01.htm" : "30969-08.html";
 				}
 				break;
 			}
@@ -257,7 +257,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 				{
 					case IASON_HEINE:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -266,7 +266,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 							}
 							case 2:
 							{
-								st.setCond(3, true);
+								qs.setCond(3, true);
 								npc.setScriptValue(0);
 								htmltext = "30969-10.html";
 								break;
@@ -292,7 +292,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 					}
 					case MERCHANT_OF_MAMMON:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							if (npc.isScriptValue(0))
 							{
@@ -304,7 +304,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 					}
 					case SHUNAIMAN:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 3:
 							{
@@ -348,7 +348,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 					}
 					case WOOD:
 					{
-						if (st.isCond(6))
+						if (qs.isCond(6))
 						{
 							htmltext = "32593-01.html";
 						}
@@ -356,7 +356,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 					}
 					case COURT_MAGICIAN:
 					{
-						if (st.isCond(3) || st.isCond(4))
+						if (qs.isCond(3) || qs.isCond(4))
 						{
 							htmltext = (!hasQuestItems(player, COURT_MAGICIANS_MAGIC_STAFF)) ? "32598-01.html" : "32598-03.html";
 							player.sendPacket(SystemMessageId.BY_USING_THE_COURT_WIZARD_S_MAGIC_STAFF_OPEN_THE_DOOR_ON_WHICH_THE_MAGICIAN_S_BARRIER_IS_PLACED);

@@ -195,11 +195,11 @@ public final class Q00371_ShrieksOfGhosts extends Quest
 		
 		if (random < info.getFirstChance())
 		{
-			qs.giveItemRandomly(npc, ANCIENT_ASH_URN, 1, 0, 1.0, true);
+			giveItemRandomly(qs.getPlayer(), npc, ANCIENT_ASH_URN, 1, 0, 1.0, true);
 		}
 		else if (random < info.getSecondChance())
 		{
-			qs.giveItemRandomly(npc, ANCIENT_PORCELAIN, 1, 0, 1.0, true);
+			giveItemRandomly(qs.getPlayer(), npc, ANCIENT_PORCELAIN, 1, 0, 1.0, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

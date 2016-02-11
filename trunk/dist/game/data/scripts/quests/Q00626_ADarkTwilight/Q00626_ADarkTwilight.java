@@ -78,8 +78,8 @@ public class Q00626_ADarkTwilight extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -87,31 +87,41 @@ public class Q00626_ADarkTwilight extends Quest
 		switch (event)
 		{
 			case "31517-05.html":
+			{
 				break;
+			}
 			case "31517-02.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "Exp":
-				if (st.getQuestItemsCount(BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
+			{
+				if (getQuestItemsCount(player, BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
 				{
 					return "31517-06.html";
 				}
-				st.addExpAndSp(XP_COUNT, SP_COUNT);
-				st.exitQuest(true, true);
+				addExpAndSp(player, XP_COUNT, SP_COUNT);
+				qs.exitQuest(true, true);
 				htmltext = "31517-07.html";
 				break;
+			}
 			case "Adena":
-				if (st.getQuestItemsCount(BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
+			{
+				if (getQuestItemsCount(player, BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
 				{
 					return "31517-06.html";
 				}
-				st.giveAdena(ADENA_COUNT, true);
-				st.exitQuest(true, true);
+				giveAdena(player, ADENA_COUNT, true);
+				qs.exitQuest(true, true);
 				htmltext = "31517-07.html";
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -122,18 +132,18 @@ public class Q00626_ADarkTwilight extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = getQuestState(partyMember, false);
+			final QuestState qs = getQuestState(partyMember, false);
 			final float chance = (MONSTERS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				st.giveItems(BLOOD_OF_SAINT, 1);
-				if (st.getQuestItemsCount(BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
+				giveItems(partyMember, BLOOD_OF_SAINT, 1);
+				if (getQuestItemsCount(partyMember, BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
 		}
@@ -144,27 +154,35 @@ public class Q00626_ADarkTwilight extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL_REQUIRED) ? "31517-01.htm" : "31517-00.htm";
 				break;
+			}
 			case State.STARTED:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 1:
+					{
 						htmltext = "31517-03.html";
 						break;
+					}
 					case 2:
+					{
 						htmltext = "31517-04.html";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

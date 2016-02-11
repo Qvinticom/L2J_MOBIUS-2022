@@ -70,8 +70,8 @@ public class Q00509_AClansFame extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -79,27 +79,39 @@ public class Q00509_AClansFame extends Quest
 		switch (event)
 		{
 			case "31331-0.html":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "31331-1.html":
-				st.set("raid", "1");
+			{
+				qs.set("raid", "1");
 				player.sendPacket(new RadarControl(0, 2, 186304, -43744, -3193));
 				break;
+			}
 			case "31331-2.html":
-				st.set("raid", "2");
+			{
+				qs.set("raid", "2");
 				player.sendPacket(new RadarControl(0, 2, 134672, -115600, -1216));
 				break;
+			}
 			case "31331-3.html":
-				st.set("raid", "3");
+			{
+				qs.set("raid", "3");
 				player.sendPacket(new RadarControl(0, 2, 170000, -60000, -3500));
 				break;
+			}
 			case "31331-4.html":
-				st.set("raid", "4");
+			{
+				qs.set("raid", "4");
 				player.sendPacket(new RadarControl(0, 2, 93296, -75104, -1824));
 				break;
+			}
 			case "31331-5.html":
-				st.exitQuest(true, true);
+			{
+				qs.exitQuest(true, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -112,29 +124,29 @@ public class Q00509_AClansFame extends Quest
 			return null;
 		}
 		
-		QuestState st = null;
+		QuestState qs = null;
 		if (player.isClanLeader())
 		{
-			st = player.getQuestState(getName());
+			qs = player.getQuestState(getName());
 		}
 		else
 		{
 			final L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
 			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
 			{
-				st = pleader.getQuestState(getName());
+				qs = pleader.getQuestState(getName());
 			}
 		}
 		
-		if ((st != null) && st.isStarted())
+		if ((qs != null) && qs.isStarted())
 		{
-			final int raid = st.getInt("raid");
+			final int raid = qs.getInt("raid");
 			if (REWARD_POINTS.containsKey(raid))
 			{
-				if ((npc.getId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
+				if ((npc.getId() == REWARD_POINTS.get(raid).get(0)) && !hasQuestItems(player, REWARD_POINTS.get(raid).get(1)))
 				{
-					st.rewardItems(REWARD_POINTS.get(raid).get(1), 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					rewardItems(player, REWARD_POINTS.get(raid).get(1), 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -145,34 +157,37 @@ public class Q00509_AClansFame extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
 		final L2Clan clan = player.getClan();
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = ((clan == null) || !player.isClanLeader() || (clan.getLevel() < 6)) ? "31331-0a.htm" : "31331-0b.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				if ((clan == null) || !player.isClanLeader())
 				{
-					st.exitQuest(true);
+					qs.exitQuest(true);
 					return "31331-6.html";
 				}
 				
-				final int raid = st.getInt("raid");
+				final int raid = qs.getInt("raid");
 				
 				if (REWARD_POINTS.containsKey(raid))
 				{
-					if (st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
+					if (hasQuestItems(player, REWARD_POINTS.get(raid).get(1)))
 					{
 						htmltext = "31331-" + raid + "b.html";
-						st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_1);
-						st.takeItems(REWARD_POINTS.get(raid).get(1), -1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_FANFARE_1);
+						takeItems(player, REWARD_POINTS.get(raid).get(1), -1);
 						final int rep = REWARD_POINTS.get(raid).get(2);
 						clan.addReputationScore(rep, true);
 						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINT_S_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION).addInt(rep));
@@ -188,8 +203,11 @@ public class Q00509_AClansFame extends Quest
 					htmltext = "31331-0.html";
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return htmltext;
 	}

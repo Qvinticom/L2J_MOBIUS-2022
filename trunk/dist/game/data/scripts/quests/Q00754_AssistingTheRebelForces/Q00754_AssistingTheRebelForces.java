@@ -101,9 +101,9 @@ public class Q00754_AssistingTheRebelForces extends Quest
 				}
 				else if (qs.isCond(2))
 				{
-					qs.addExpAndSp(570676680, 261024840);
-					qs.giveItems(REBEL_SUPPLY_BOX, 1);
-					qs.giveItems(MARK_OF_RESISTANCE, 1);
+					addExpAndSp(player, 570676680, 261024840);
+					giveItems(player, REBEL_SUPPLY_BOX, 1);
+					giveItems(player, MARK_OF_RESISTANCE, 1);
 					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = "sofa_sizraku_q0754_08.html";
 				}
@@ -118,8 +118,8 @@ public class Q00754_AssistingTheRebelForces extends Quest
 				if (qs.isCond(2))
 				{
 					qs.getPlayer().addExpAndSp(570676680, 261024840);
-					qs.giveItems(REBEL_SUPPLY_BOX, 1);
-					qs.giveItems(MARK_OF_RESISTANCE, 1);
+					giveItems(player, REBEL_SUPPLY_BOX, 1);
+					giveItems(player, MARK_OF_RESISTANCE, 1);
 					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = "sofa_sizraku_q0754_08.html";
 				}

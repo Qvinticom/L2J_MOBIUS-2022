@@ -55,8 +55,8 @@ public class Q00036_MakeASewingKit extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -65,32 +65,40 @@ public class Q00036_MakeASewingKit extends Quest
 		switch (event)
 		{
 			case "30847-03.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "30847-06.html":
-				if (st.getQuestItemsCount(ENCHANTED_IRON) < IRON_COUNT)
+			{
+				if (getQuestItemsCount(player, ENCHANTED_IRON) < IRON_COUNT)
 				{
 					return getNoQuestMsg(player);
 				}
-				st.takeItems(ENCHANTED_IRON, -1);
-				st.setCond(3, true);
+				takeItems(player, ENCHANTED_IRON, -1);
+				qs.setCond(3, true);
 				break;
+			}
 			case "30847-09.html":
-				if ((st.getQuestItemsCount(ARTISANS_FRAME) >= COUNT) && (st.getQuestItemsCount(ORIHARUKON) >= COUNT))
+			{
+				if ((getQuestItemsCount(player, ARTISANS_FRAME) >= COUNT) && (getQuestItemsCount(player, ORIHARUKON) >= COUNT))
 				{
-					st.takeItems(ARTISANS_FRAME, 10);
-					st.takeItems(ORIHARUKON, 10);
-					st.giveItems(SEWING_KIT, 1);
-					st.exitQuest(false, true);
+					takeItems(player, ARTISANS_FRAME, 10);
+					takeItems(player, ORIHARUKON, 10);
+					giveItems(player, SEWING_KIT, 1);
+					qs.exitQuest(false, true);
 				}
 				else
 				{
 					htmltext = "30847-10.html";
 				}
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -101,17 +109,17 @@ public class Q00036_MakeASewingKit extends Quest
 		final L2PcInstance member = getRandomPartyMember(player, 1);
 		if (member != null)
 		{
-			final QuestState st = getQuestState(member, false);
+			final QuestState qs = getQuestState(member, false);
 			if (getRandomBoolean())
 			{
-				st.giveItems(ENCHANTED_IRON, 1);
-				if (st.getQuestItemsCount(ENCHANTED_IRON) >= IRON_COUNT)
+				giveItems(player, ENCHANTED_IRON, 1);
+				if (getQuestItemsCount(player, ENCHANTED_IRON) >= IRON_COUNT)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -122,34 +130,46 @@ public class Q00036_MakeASewingKit extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30847-01.htm" : "30847-02.html";
 				break;
+			}
 			case State.STARTED:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 1:
+					{
 						htmltext = "30847-04.html";
 						break;
+					}
 					case 2:
+					{
 						htmltext = "30847-05.html";
 						break;
+					}
 					case 3:
-						htmltext = ((st.getQuestItemsCount(ARTISANS_FRAME) >= COUNT) && (st.getQuestItemsCount(ORIHARUKON) >= COUNT)) ? "30847-07.html" : "30847-08.html";
+					{
+						htmltext = ((getQuestItemsCount(player, ARTISANS_FRAME) >= COUNT) && (getQuestItemsCount(player, ORIHARUKON) >= COUNT)) ? "30847-07.html" : "30847-08.html";
 						break;
+					}
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

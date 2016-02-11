@@ -91,7 +91,7 @@ public class Q10755_LettersFromTheQueen_WindyHill extends Quest implements IBypa
 			{
 				qs.startQuest();
 				
-				if (qs.getQuestItemsCount(SCROLL_OF_ESCAPE_WINDY_HILL.getId()) < 1)
+				if (getQuestItemsCount(player, SCROLL_OF_ESCAPE_WINDY_HILL.getId()) < 1)
 				{
 					giveItems(player, SCROLL_OF_ESCAPE_WINDY_HILL);
 					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_LEVIAN_GAVE_YOU, ExShowScreenMessage.TOP_CENTER, 4500);

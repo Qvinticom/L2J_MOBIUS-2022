@@ -52,24 +52,24 @@ public final class Q00904_DragonTrophyAntharas extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
 		
 		String htmltext = null;
-		if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
+		if ((player.getLevel() >= MIN_LEVEL) && hasQuestItems(player, PORTAL_STONE))
 		{
 			switch (event)
 			{
@@ -81,7 +81,7 @@ public final class Q00904_DragonTrophyAntharas extends Quest
 				}
 				case "30755-07.html":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
@@ -100,9 +100,9 @@ public final class Q00904_DragonTrophyAntharas extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -110,7 +110,7 @@ public final class Q00904_DragonTrophyAntharas extends Quest
 				{
 					htmltext = "30755-02.html";
 				}
-				else if (!st.hasQuestItems(PORTAL_STONE))
+				else if (!hasQuestItems(player, PORTAL_STONE))
 				{
 					htmltext = "30755-04.html";
 				}
@@ -122,7 +122,7 @@ public final class Q00904_DragonTrophyAntharas extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -131,9 +131,9 @@ public final class Q00904_DragonTrophyAntharas extends Quest
 					}
 					case 2:
 					{
-						st.giveItems(MEDAL_OF_GLORY, 30);
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						st.exitQuest(QuestType.DAILY, true);
+						giveItems(player, MEDAL_OF_GLORY, 30);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						qs.exitQuest(QuestType.DAILY, true);
 						htmltext = "30755-09.html";
 						break;
 					}
@@ -142,18 +142,18 @@ public final class Q00904_DragonTrophyAntharas extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if (!st.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					htmltext = "30755-03.html";
 				}
 				else
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					if (player.getLevel() < MIN_LEVEL)
 					{
 						htmltext = "30755-02.html";
 					}
-					else if (!st.hasQuestItems(PORTAL_STONE))
+					else if (!hasQuestItems(player, PORTAL_STONE))
 					{
 						htmltext = "30755-04.html";
 					}

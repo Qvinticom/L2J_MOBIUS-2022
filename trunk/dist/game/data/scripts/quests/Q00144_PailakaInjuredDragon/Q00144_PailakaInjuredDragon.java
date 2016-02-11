@@ -25,8 +25,8 @@ import java.util.Map;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillData;
-import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -54,13 +54,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	private static final int MAX_SUMMON_LEVEL = 80;
 	private static final int EXIT_TIME = 5;
 	private static final int INSTANCE_ID = 45;
-	static final int[] TELEPORT =
-	{
-		125757,
-		-40928,
-		-3736
-	};
-	
+	static final Location TELEPORT = new Location(125757, -40928, -3736);
 	// @formatter:off
 	// NO EXIT ZONES
 	private static final Map<Integer, int[]> NOEXIT_ZONES = new HashMap<>();
@@ -75,13 +69,11 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		NOEXIT_ZONES.put(200007, new int[]{118341, -55951, -2280});
 		NOEXIT_ZONES.put(200008, new int[]{110127, -41562, -2332});
 	}
-	
 	// Npcs
 	private static final int KETRA_ORC_SHAMAN = 32499;
 	private static final int KETRA_ORC_SUPPORTER = 32502;
 	private static final int KETRA_ORC_SUPPORTER2 = 32512;
 	private static final int KETRA_ORC_INTELIGENCE_OFFICER = 32509;
-	
 	// Wall Mobs
 	private static final int VARKA_SILENOS_RECRUIT = 18635;
 	private static final int VARKA_SILENOS_FOOTMAN = 18636;
@@ -94,7 +86,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	private static final int VARKA_SILENOS_HEAD_GUARD = 18655;
 	private static final int PROPHET_GUARD = 18657;
 	private static final int VARKAS_PROPHET = 18659;
-	
 	// Extra Wall Silenos
 	private static final int VARKA_SILENOS_MEDIUM = 18644;
 	private static final int VARKA_SILENOS_PRIEST = 18641;
@@ -104,32 +95,25 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	private static final int DISCIPLE_OF_PROPHET = 18658;
 	private static final int VARKA_HEAD_MAGUS = 18656;
 	private static final int VARKA_SILENOS_GREAT_SEER = 18652;
-	
 	// Normal Mobs
 	private static final int ANTYLOPE_1 = 18637;
 	private static final int ANTYLOPE_2 = 18643;
 	private static final int ANTYLOPE_3 = 18651;
 	private static final int FLAVA = 18647;
-	
 	// Boss
 	private static final int LATANA = 18660;
-	
 	// Items
 	private static final int SPEAR = 13052;
 	private static final int ENCHSPEAR = 13053;
 	private static final int LASTSPEAR = 13054;
 	private static final int STAGE1 = 13056;
 	private static final int STAGE2 = 13057;
-	
 	private static final int SHIELD_POTION = 13032;
 	private static final int HEAL_POTION = 13033;
-	
 	// Rewards
 	private static final int PSHIRT = 13296;
 	private static final int SCROLL_OF_ESCAPE = 736;
-	
 	private static int buff_counter = 5;
-	
 	// Arrays
 	private static final int[] NPCS =
 	{
@@ -138,7 +122,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		KETRA_ORC_INTELIGENCE_OFFICER,
 		KETRA_ORC_SUPPORTER2
 	};
-	
 	private static final int[] WALL_MONSTERS =
 	{
 		// 1st Row Mobs
@@ -154,7 +137,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		VARKA_SILENOS_HEAD_GUARD,
 		PROPHET_GUARD,
 		VARKAS_PROPHET,
-		
 		// 2nd Row Mobs
 		DISCIPLE_OF_PROPHET,
 		VARKA_HEAD_MAGUS,
@@ -165,7 +147,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		VARKA_SILENOS_MEDIUM,
 		VARKA_SILENOS_PRIEST
 	};
-	
 	private static final int[] OTHER_MONSTERS =
 	{
 		ANTYLOPE_1,
@@ -173,7 +154,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		ANTYLOPE_3,
 		FLAVA
 	};
-	
 	private static final int[] ITEMS =
 	{
 		SPEAR,
@@ -184,7 +164,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		SHIELD_POTION,
 		HEAL_POTION
 	};
-	
 	private static final int[][] BUFFS =
 	{
 		{4357,2}, // Haste Lv2
@@ -200,20 +179,17 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		{4354,4}, // Vampiric Rage Lv4
 		{4347,6}  // Blessed Body Lv6
 	};
-	
 	private static final ArrayList<PailakaDrop> DROPLIST = new ArrayList<>();
 	static
 	{
 		DROPLIST.add(new PailakaDrop(HEAL_POTION, 80));
 		DROPLIST.add(new PailakaDrop(SHIELD_POTION, 30));
 	}
-	
 	private static final int[][] HP_HERBS_DROPLIST =
 	{
 		// itemId, count, chance
 		{ 8601, 1, 40 }, { 8600, 1, 70 }
 	};
-	
 	private static final int[][] MP_HERBS_DROPLIST =
 	{
 		// itemId, count, chance
@@ -275,65 +251,59 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		{
 			if (cond == 0)
 			{
-				qs.set("cond", "1");
-				qs.setState(State.STARTED);
-				qs.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
+				qs.startQuest();
 			}
 		}
 		else if (event.equals("32499-04.html"))
 		{
-			if (cond == 1)
+			if (qs.isCond(1))
 			{
-				qs.set("cond", "2");
-				qs.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
+				qs.setCond(2, true);
 			}
 		}
 		else if (event.equals("32502-04.html"))
 		{
-			if ((cond == 2) && !qs.hasQuestItems(SPEAR))
+			if (qs.isCond(2) && !hasQuestItems(player, SPEAR))
 			{
-				qs.set("cond", "3");
-				qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				qs.giveItems(SPEAR, 1);
+				qs.setCond(3, true);
+				giveItems(player, SPEAR, 1);
 			}
 		}
 		else if (event.equals("32509-02.html"))
 		{
-			if ((cond == 3) && qs.hasQuestItems(SPEAR))
+			if (qs.isCond(3) && hasQuestItems(player, SPEAR))
 			{
-				if (!qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1))
+				if (!hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1))
 				{
 					return "32509-07.html";
 				}
-				if (qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1))
+				if (hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1))
 				{
 					return "32509-01.html";
 				}
-				if (qs.hasQuestItems(SPEAR) && qs.hasQuestItems(STAGE1))
+				if (hasQuestItems(player, SPEAR) && hasQuestItems(player, STAGE1))
 				{
-					qs.takeItems(SPEAR, -1);
-					qs.takeItems(STAGE1, -1);
-					qs.giveItems(ENCHSPEAR, 1);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					takeItems(player, SPEAR, -1);
+					takeItems(player, STAGE1, -1);
+					giveItems(player, ENCHSPEAR, 1);
 					return "32509-02.html";
 				}
 			}
-			if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR))
+			if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR))
 			{
-				if (!qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2))
+				if (!hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2))
 				{
 					return "32509-07.html";
 				}
-				if (qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2))
+				if (hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2))
 				{
 					return "32509-01.html";
 				}
-				if (qs.hasQuestItems(ENCHSPEAR) && qs.hasQuestItems(STAGE2))
+				if (hasQuestItems(player, ENCHSPEAR) && hasQuestItems(player, STAGE2))
 				{
-					qs.takeItems(ENCHSPEAR, -1);
-					qs.takeItems(STAGE2, -1);
-					qs.giveItems(LASTSPEAR, 1);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					takeItems(player, ENCHSPEAR, -1);
+					takeItems(player, STAGE2, -1);
+					giveItems(player, LASTSPEAR, 1);
 					
 					// Spawns Latana.
 					addSpawn(LATANA, 105732, -41787, -1782, 35742, false, 0, false, npc.getInstanceId());
@@ -341,13 +311,13 @@ public class Q00144_PailakaInjuredDragon extends Quest
 					return "32509-03.html";
 				}
 			}
-			if ((cond == 3) && qs.hasQuestItems(LASTSPEAR))
+			if (qs.isCond(3) && hasQuestItems(player, LASTSPEAR))
 			{
-				if (qs.hasQuestItems(LASTSPEAR))
+				if (hasQuestItems(player, LASTSPEAR))
 				{
 					return "32509-03a.html";
 				}
-				if (!qs.hasQuestItems(LASTSPEAR))
+				if (!hasQuestItems(player, LASTSPEAR))
 				{
 					return "32509-07.html";
 				}
@@ -363,10 +333,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		}
 		else if (event.equals("32512-02.html"))
 		{
-			qs.unset("cond");
-			qs.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
-			qs.exitQuest(false);
-			
 			final Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
 			inst.setDuration(EXIT_TIME * 60000);
 			inst.setEmptyDestroyTime(0);
@@ -374,10 +340,12 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			if (inst.containsPlayer(player.getObjectId()))
 			{
 				player.setVitalityPoints(20000, true);
-				qs.addExpAndSp(28000000, 2850000);
-				qs.giveItems(SCROLL_OF_ESCAPE, 1);
-				qs.giveItems(PSHIRT, 1);
+				addExpAndSp(player, 28000000, 2850000);
+				giveItems(player, SCROLL_OF_ESCAPE, 1);
+				giveItems(player, PSHIRT, 1);
 			}
+			
+			qs.exitQuest(false, true);
 		}
 		else if (event.startsWith("buff"))
 		{
@@ -428,9 +396,11 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		switch (npc.getId())
 		{
 			case KETRA_ORC_SHAMAN:
+			{
 				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						if (player.getLevel() < MIN_LEVEL)
 						{
 							return "32499-no.html";
@@ -440,7 +410,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 							return "32499-over.html";
 						}
 						return "32499-00.htm";
+					}
 					case State.STARTED:
+					{
 						if (player.getLevel() < MIN_LEVEL)
 						{
 							return "32499-no.html";
@@ -457,20 +429,32 @@ public class Q00144_PailakaInjuredDragon extends Quest
 						{
 							return "32499-09.html";
 						}
+					}
 					case State.COMPLETED:
+					{
 						return "32499-completed.html";
+					}
 					default:
+					{
 						return "32499-no.html";
+					}
 				}
+				// break;
+			}
 			case KETRA_ORC_SUPPORTER:
+			{
 				if (cond > 2)
 				{
 					return "32502-04.html";
 				}
 				return "32502-00.html";
+			}
 			case KETRA_ORC_INTELIGENCE_OFFICER:
+			{
 				return "32509-00.html";
+			}
 			case KETRA_ORC_SUPPORTER2:
+			{
 				if (qs.getState() == State.COMPLETED)
 				{
 					return "32512-03.html";
@@ -479,6 +463,8 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				{
 					return "32512-01.html";
 				}
+				break;
+			}
 		}
 		
 		return getNoQuestMsg(player);
@@ -495,16 +481,14 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		
 		// There are lots of mobs walls, and item get is random, it could happen that you dont get the item until the last wall, and there's 4 different silenos groups. 1 enchant comes only from group 2 and the 2nd comes from group 4. Chances, lets say 20% of getting the enchant when killing the
 		// right mob When you kill a mob wall, another mage type appears behind. If all mobs from the front are killed then the ones that are behind are despawned. Also this mobs should be damaged, like with 30% of max HP, because they should be easy to kill.
-		final int cond = qs.getCond();
 		switch (npc.getId())
 		{
 			case VARKA_SILENOS_FOOTMAN:
 			case VARKA_SILENOS_RECRUIT:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
-					qs.giveItems(STAGE1, 1);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, STAGE1, 1);
 				}
 				
 				// Spawns Mage Type silenos behind the one that was killed.
@@ -515,10 +499,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			case VARKA_SILENOS_WARRIOR:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
-					qs.giveItems(STAGE1, 1);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, STAGE1, 1);
 				}
 				
 				// Spawns Mage Type silenos behind the one that was killed.
@@ -529,10 +512,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			case VARKA_ELITE_GUARD:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
-					qs.giveItems(STAGE1, 1);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, STAGE1, 1);
 				}
 				
 				// Spawns Mage Type silenos behind the one that was killed.
@@ -544,10 +526,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKAS_COMMANDER:
 			case VARKA_SILENOS_OFFICER:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(SPEAR) && !qs.hasQuestItems(STAGE1) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
-					qs.giveItems(STAGE1, 1);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, STAGE1, 1);
 				}
 				
 				// Spawns Mage Type silenos behind the one that was killed.
@@ -559,10 +540,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKA_SILENOS_GREAT_MAGUS:
 			case VARKA_SILENOS_GENERAL:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
-					qs.giveItems(STAGE2, 1);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, STAGE2, 1);
 				}
 				
 				// Spawns Mage Type silenos behind the one that was killed.
@@ -573,10 +553,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			case VARKAS_PROPHET:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
-					qs.giveItems(STAGE2, 1);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, STAGE2, 1);
 				}
 				
 				// Spawns Mage Type silenos behind the one that was killed.
@@ -587,10 +566,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			case VARKA_SILENOS_HEAD_GUARD:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
-					qs.giveItems(STAGE2, 1);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, STAGE2, 1);
 				}
 				
 				// Spawns Mage Type silenos behind the one that was killed.
@@ -601,10 +579,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			case PROPHET_GUARD:
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if ((cond == 3) && qs.hasQuestItems(ENCHSPEAR) && !qs.hasQuestItems(STAGE2) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
-					qs.giveItems(STAGE2, 1);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, STAGE2, 1);
 				}
 				
 				// Spawns Mage Type silenos behind the one that was killed.
@@ -614,8 +591,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				checkIfLastInWall(npc);
 				break;
 			case LATANA:
-				qs.set("cond", "4");
-				qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+				qs.setCond(4, true);
 				
 				// Spawns Ketra Orc Supporter.
 				addSpawn(KETRA_ORC_SUPPORTER2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, false, npc.getInstanceId());

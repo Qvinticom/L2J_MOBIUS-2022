@@ -85,9 +85,9 @@ public class Q10389_TheVoiceOfAuthority extends Quest
 			}
 			case "endquest.html":
 			{
-				qs.giveItems(57, 1302720);
-				qs.giveItems(8067, 1);
-				qs.addExpAndSp(592767000, 142264);
+				giveAdena(player, 1302720, true);
+				giveItems(player, 8067, 1);
+				addExpAndSp(player, 592767000, 142264);
 				qs.exitQuest(false, true);
 				htmltext = "endquest.html";
 				break;

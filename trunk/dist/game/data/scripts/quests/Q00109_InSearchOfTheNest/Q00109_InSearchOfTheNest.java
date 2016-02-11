@@ -46,8 +46,8 @@ public class Q00109_InSearchOfTheNest extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -55,21 +55,29 @@ public class Q00109_InSearchOfTheNest extends Quest
 		switch (event)
 		{
 			case "31553-0.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "32015-2.html":
-				st.giveItems(SCOUTS_NOTE, 1);
-				st.setCond(2, true);
+			{
+				giveItems(player, SCOUTS_NOTE, 1);
+				qs.setCond(2, true);
 				break;
+			}
 			case "31553-3.html":
-				st.takeItems(SCOUTS_NOTE, -1);
-				st.setCond(3, true);
+			{
+				takeItems(player, SCOUTS_NOTE, -1);
+				qs.setCond(3, true);
 				break;
+			}
 			case "31554-2.html":
-				st.giveAdena(161500, true);
-				st.addExpAndSp(701500, 50000);
-				st.exitQuest(false, true);
+			{
+				giveAdena(player, 161500, true);
+				addExpAndSp(player, 701500, 50000);
+				qs.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -78,8 +86,8 @@ public class Q00109_InSearchOfTheNest extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -87,49 +95,67 @@ public class Q00109_InSearchOfTheNest extends Quest
 		switch (npc.getId())
 		{
 			case PIERCE:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() < 81) ? "31553-0a.htm" : "31553-0b.htm";
 						break;
+					}
 					case State.STARTED:
-						switch (st.getInt("cond"))
+					{
+						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "31553-1.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "31553-2.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "31553-3a.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case SCOUTS_CORPSE:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "32015-1.html";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						htmltext = "32015-3.html";
 					}
 				}
 				break;
+			}
 			case KAHMAN:
-				if (st.isStarted() && st.isCond(3))
+			{
+				if (qs.isStarted() && qs.isCond(3))
 				{
 					htmltext = "31554-1.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -49,8 +49,8 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -59,34 +59,42 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 		switch (event)
 		{
 			case "32792-04.html":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "32784-03.html":
-				st.set("cond", "4");
-				st.playSound("ItemSound.quest_middle");
+			{
+				qs.setCond(4);
 				break;
+			}
 			case "see":
-				st.set("cond", "5");
-				st.playSound("ItemSound.quest_middle");
+			{
+				qs.setCond(5);
 				htmltext = "30832-03.html";
 				break;
+			}
 			case "presentation":
+			{
 				player.showQuestMovie(28);
 				break;
+			}
 			case "reward":
+			{
 				if (player.isSubClassActive())
 				{
 					htmltext = "32597-04.html";
 				}
 				else if (player.getLevel() >= MIN_LEVEL)
 				{
-					st.addExpAndSp(125000000, 12500000);
-					st.giveItems(CertificateOfDawn, 1);
+					addExpAndSp(player, 125000000, 12500000);
+					giveItems(player, CertificateOfDawn, 1);
 					htmltext = "32597-03.html";
-					st.unset("boss");
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					qs.unset("boss");
+					qs.exitQuest(false, true);
 				}
+				break;
+			}
 		}
 		return htmltext;
 	}
@@ -95,8 +103,8 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -104,9 +112,11 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 		switch (npc.getId())
 		{
 			case ErissEvilThoughts:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						final QuestState SolinasTomb = player.getQuestState("Q10295_SevenSignsSolinasTomb");
 						if ((player.getLevel() >= 81) && SolinasTomb.isCompleted())
 						{
@@ -115,82 +125,113 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 						else
 						{
 							htmltext = "32792-12.html";
-							st.exitQuest(true);
-						}
-					case State.STARTED:
-						switch (st.getCond())
-						{
-							case 1:
-								st.set("cond", "2");
-								st.playSound("ItemSound.quest_middle");
-								htmltext = "32792-05.html";
-								break;
-							case 2:
-								htmltext = "32792-06.html";
+							qs.exitQuest(true);
 						}
 						break;
+					}
+					case State.STARTED:
+					{
+						switch (qs.getCond())
+						{
+							case 1:
+							{
+								qs.setCond(2, true);
+								htmltext = "32792-05.html";
+								break;
+							}
+							case 2:
+							{
+								htmltext = "32792-06.html";
+								break;
+							}
+						}
+						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "32792-02.html";
+					}
 				}
 				break;
+			}
 			case Elcadia:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 3:
+						{
 							htmltext = "32784-01.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "32784-04.html";
+							break;
+						}
 					}
 				}
 				break;
+			}
 			case Hardin:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 4:
+						{
 							htmltext = "30832-01.html";
 							break;
+						}
 						case 5:
+						{
 							htmltext = "30832-03.html";
+							break;
+						}
 					}
 				}
 				break;
+			}
 			case Wood:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					if (st.getCond() == 5)
+					if (qs.isCond(5))
 					{
 						htmltext = "32593-01.html";
 					}
 				}
 				break;
+			}
 			case Franz:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					if (st.getCond() == 5)
+					if (qs.isCond(5))
 					{
 						htmltext = "32597-01.html";
 					}
 				}
 				break;
+			}
 			case Elcadia_Support:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					if ((st.getCond() == 2) && (st.getInt("boss") == 1))
+					if ((qs.isCond(2)) && (qs.getInt("boss") == 1))
 					{
-						st.set("cond", "3");
-						st.playSound("ItemSound.quest_middle");
+						qs.setCond(3, true);
 						htmltext = "32785-01.html";
 					}
-					else if (st.getCond() == 3)
+					else if (qs.isCond(3))
 					{
 						htmltext = "32785-01.html";
 					}
 				}
+				break;
+			}
 		}
 		return htmltext;
 	}
@@ -198,16 +239,16 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState qs = player.getQuestState(getName());
+		if (qs == null)
 		{
 			return null;
 		}
 		
 		player.showQuestMovie(30);
-		if (st.getInt("boss") != 1)
+		if (qs.getInt("boss") != 1)
 		{
-			st.set("boss", "1");
+			qs.set("boss", "1");
 		}
 		
 		return null;

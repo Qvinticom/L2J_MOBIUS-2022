@@ -120,9 +120,9 @@ public class Q10756_AnInterdimensionalDraft extends Quest
 						}
 						case 2:
 						{
-							if (qs.isCond(2) && (qs.getQuestItemsCount(UNWORLDLY_WIND) >= 30))
+							if (qs.isCond(2) && (getQuestItemsCount(player, UNWORLDLY_WIND) >= 30))
 							{
-								qs.takeItems(UNWORLDLY_WIND, 30);
+								takeItems(player, UNWORLDLY_WIND, 30);
 								giveItems(player, STEEL_DOOR_GUILD_COIN);
 								addExpAndSp(player, 174222, 41);
 								qs.exitQuest(false, true);

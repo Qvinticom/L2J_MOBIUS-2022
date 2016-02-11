@@ -48,8 +48,8 @@ public class Q00124_MeetingTheElroki extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -57,39 +57,51 @@ public class Q00124_MeetingTheElroki extends Quest
 		switch (event)
 		{
 			case "32113-03.html":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "32113-04.html":
-				if (st.isCond(1))
+			{
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				break;
+			}
 			case "32114-04.html":
-				if (st.isCond(2))
+			{
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 				}
 				break;
+			}
 			case "32115-06.html":
-				if (st.isCond(3))
+			{
+				if (qs.isCond(3))
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 				}
 				break;
+			}
 			case "32117-05.html":
-				if (st.isCond(4))
+			{
+				if (qs.isCond(4))
 				{
-					st.setCond(5, true);
+					qs.setCond(5, true);
 				}
 				break;
+			}
 			case "32118-04.html":
-				if (st.isCond(5))
+			{
+				if (qs.isCond(5))
 				{
-					st.giveItems(MANTARASA_EGG, 1);
-					st.setCond(6, true);
+					giveItems(player, MANTARASA_EGG, 1);
+					qs.setCond(6, true);
 				}
 				break;
+			}
 		}
 		return event;
 	}
@@ -98,8 +110,8 @@ public class Q00124_MeetingTheElroki extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -107,122 +119,174 @@ public class Q00124_MeetingTheElroki extends Quest
 		switch (npc.getId())
 		{
 			case MARQUEZ:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() < 75) ? "32113-01a.htm" : "32113-01.htm";
 						break;
+					}
 					case State.STARTED:
-						switch (st.getInt("cond"))
+					{
+						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "32113-05.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "32113-06.html";
 								break;
+							}
 							case 3:
 							case 4:
 							case 5:
+							{
 								htmltext = "32113-07.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case MUSHIKA:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (qs.getCond())
 					{
 						case 1:
+						{
 							htmltext = "32114-01.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = "32114-02.html";
 							break;
+						}
 						default:
+						{
 							htmltext = "32114-03.html";
 							break;
+						}
 					}
 					break;
 				}
 				break;
+			}
 			case ASAMAH:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						case 2:
+						{
 							htmltext = "32115-01.html";
 							break;
+						}
 						case 3:
+						{
 							htmltext = "32115-02.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "32115-07.html";
 							break;
+						}
 						case 5:
+						{
 							htmltext = "32115-08.html";
 							break;
+						}
 						case 6:
-							if (st.hasQuestItems(MANTARASA_EGG))
+						{
+							if (hasQuestItems(player, MANTARASA_EGG))
 							{
 								htmltext = "32115-09.html";
-								st.giveAdena(100013, true);
-								st.addExpAndSp(301922, 30294);
-								st.exitQuest(false, true);
+								giveAdena(player, 100013, true);
+								addExpAndSp(player, 301922, 30294);
+								qs.exitQuest(false, true);
 							}
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case KARAKAWEI:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						case 2:
 						case 3:
+						{
 							htmltext = "32117-01.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "32117-02.html";
 							break;
+						}
 						case 5:
+						{
 							htmltext = "32117-07.html";
 							break;
+						}
 						case 6:
+						{
 							htmltext = "32117-06.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case MANTARASA:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						case 2:
 						case 3:
 						case 4:
+						{
 							htmltext = "32118-01.html";
 							break;
+						}
 						case 5:
+						{
 							htmltext = "32118-03.html";
 							break;
+						}
 						case 6:
+						{
 							htmltext = "32118-02.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

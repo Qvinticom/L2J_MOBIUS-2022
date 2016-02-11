@@ -76,8 +76,8 @@ public final class Nottingale extends AbstractNpcAI
 					}
 					else
 					{
-						final QuestState st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-						if ((st != null) && st.isCompleted())
+						final QuestState qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+						if ((qs != null) && qs.isCompleted())
 						{
 							htmltext = event;
 						}
@@ -90,8 +90,8 @@ public final class Nottingale extends AbstractNpcAI
 				}
 				else
 				{
-					final QuestState st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-					if ((st != null) && st.isCompleted())
+					final QuestState qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+					if ((qs != null) && qs.isCompleted())
 					{
 						htmltext = event;
 					}

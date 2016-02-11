@@ -61,8 +61,8 @@ public class Q00139_ShadowFoxPart1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -71,40 +71,52 @@ public class Q00139_ShadowFoxPart1 extends Quest
 		switch (event)
 		{
 			case "30896-02.htm":
+			{
 				if (player.getLevel() < MIN_LEVEL)
 				{
 					htmltext = "30896-03.htm";
 				}
 				break;
+			}
 			case "30896-04.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "30896-11.html":
-				st.set("talk", "1");
+			{
+				qs.set("talk", "1");
 				break;
+			}
 			case "30896-13.html":
-				st.setCond(2, true);
-				st.unset("talk");
+			{
+				qs.setCond(2, true);
+				qs.unset("talk");
 				break;
+			}
 			case "30896-17.html":
+			{
 				if (getRandom(20) < 3)
 				{
-					st.takeItems(FRAGMENT, 10);
-					st.takeItems(CHEST, 1);
+					takeItems(player, FRAGMENT, 10);
+					takeItems(player, CHEST, 1);
 					return "30896-16.html";
 				}
-				st.takeItems(FRAGMENT, -1);
-				st.takeItems(CHEST, -1);
-				st.set("talk", "1");
+				takeItems(player, FRAGMENT, -1);
+				takeItems(player, CHEST, -1);
+				qs.set("talk", "1");
 				break;
+			}
 			case "30896-19.html":
-				st.giveAdena(14050, true);
+			{
+				giveAdena(player, 14050, true);
 				if (player.getLevel() <= MAX_REWARD_LEVEL)
 				{
-					st.addExpAndSp(30000, 2000);
+					addExpAndSp(player, 30000, 2000);
 				}
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				break;
+			}
 			case "30896-06.html":
 			case "30896-07.html":
 			case "30896-08.html":
@@ -112,10 +124,14 @@ public class Q00139_ShadowFoxPart1 extends Quest
 			case "30896-10.html":
 			case "30896-12.html":
 			case "30896-18.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -132,8 +148,8 @@ public class Q00139_ShadowFoxPart1 extends Quest
 		if (!st.isSet("talk") && (getRandom(100) < DROP_CHANCE))
 		{
 			final int itemId = (getRandom(11) == 0) ? CHEST : FRAGMENT;
-			st.giveItems(itemId, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			giveItems(player, itemId, 1);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -142,32 +158,42 @@ public class Q00139_ShadowFoxPart1 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
-				final QuestState qs = player.getQuestState(Q00138_TempleChampionPart2.class.getSimpleName());
-				htmltext = ((qs != null) && qs.isCompleted()) ? "30896-01.htm" : "30896-00.html";
+			{
+				final QuestState qst = player.getQuestState(Q00138_TempleChampionPart2.class.getSimpleName());
+				htmltext = ((qst != null) && qst.isCompleted()) ? "30896-01.htm" : "30896-00.html";
 				break;
+			}
 			case State.STARTED:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 1:
-						htmltext = (st.isSet("talk")) ? "30896-11.html" : "30896-05.html";
+					{
+						htmltext = (qs.isSet("talk")) ? "30896-11.html" : "30896-05.html";
 						break;
+					}
 					case 2:
-						htmltext = (st.isSet("talk")) ? "30896-18.html" : ((st.getQuestItemsCount(FRAGMENT) >= 10) && (st.getQuestItemsCount(CHEST) >= 1)) ? "30896-15.html" : "30896-14.html";
+					{
+						htmltext = (qs.isSet("talk")) ? "30896-18.html" : ((getQuestItemsCount(player, FRAGMENT) >= 10) && (getQuestItemsCount(player, CHEST) >= 1)) ? "30896-15.html" : "30896-14.html";
 						break;
+					}
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

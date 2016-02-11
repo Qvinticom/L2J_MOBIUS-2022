@@ -67,8 +67,8 @@ public class Q00618_IntoTheFlame extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -76,34 +76,41 @@ public class Q00618_IntoTheFlame extends Quest
 		switch (event)
 		{
 			case "31540-03.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				htmltext = event;
 				break;
+			}
 			case "31540-05.html":
-				if (!st.hasQuestItems(VACUALITE))
+			{
+				if (!hasQuestItems(player, VACUALITE))
 				{
 					htmltext = "31540-03.htm";
 				}
 				else
 				{
-					st.giveItems(VACUALITE_FLOATING_STONE, 1);
-					st.exitQuest(true, true);
+					giveItems(player, VACUALITE_FLOATING_STONE, 1);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
+			}
 			case "31271-02.html":
-				if (st.isCond(1))
+			{
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
+			}
 			case "31271-05.html":
-				if ((st.getQuestItemsCount(VACUALITE_ORE) == REQUIRED_COUNT) && st.isCond(3))
+			{
+				if ((getQuestItemsCount(player, VACUALITE_ORE) == REQUIRED_COUNT) && qs.isCond(3))
 				{
-					st.takeItems(VACUALITE_ORE, -1);
-					st.giveItems(VACUALITE, 1);
-					st.setCond(4, true);
+					takeItems(player, VACUALITE_ORE, -1);
+					giveItems(player, VACUALITE, 1);
+					qs.setCond(4, true);
 					htmltext = event;
 				}
 				else
@@ -111,6 +118,7 @@ public class Q00618_IntoTheFlame extends Quest
 					htmltext = "31271-03.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -122,16 +130,16 @@ public class Q00618_IntoTheFlame extends Quest
 		if (member != null)
 		{
 			final QuestState qs = getQuestState(member, false);
-			if ((qs.getQuestItemsCount(VACUALITE_ORE) < REQUIRED_COUNT) && (getRandom(1000) < MONSTERS.get(npc.getId())))
+			if ((getQuestItemsCount(player, VACUALITE_ORE) < REQUIRED_COUNT) && (getRandom(1000) < MONSTERS.get(npc.getId())))
 			{
-				qs.giveItems(VACUALITE_ORE, 1);
-				if (qs.getQuestItemsCount(VACUALITE_ORE) >= REQUIRED_COUNT)
+				giveItems(member, VACUALITE_ORE, 1);
+				if (getQuestItemsCount(member, VACUALITE_ORE) >= REQUIRED_COUNT)
 				{
 					qs.setCond(3, true);
 				}
 				else
 				{
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(member, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -142,8 +150,8 @@ public class Q00618_IntoTheFlame extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -151,32 +159,40 @@ public class Q00618_IntoTheFlame extends Quest
 		{
 			case KLEIN:
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
 					htmltext = (player.getLevel() < MIN_LEVEL) ? "31540-01.html" : "31540-02.htm";
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
-					htmltext = st.isCond(4) ? "31540-04.html" : "31540-03.htm";
+					htmltext = qs.isCond(4) ? "31540-04.html" : "31540-03.htm";
 				}
 				break;
 			}
 			case HILDA:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
+					{
 						htmltext = "31271-01.html";
 						break;
+					}
 					case 2:
+					{
 						htmltext = "31271-03.html";
 						break;
+					}
 					case 3:
+					{
 						htmltext = "31271-04.html";
 						break;
+					}
 					case 4:
+					{
 						htmltext = "31271-06.html";
 						break;
+					}
 				}
 				break;
 			}

@@ -55,8 +55,8 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -65,42 +65,56 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 		switch (event)
 		{
 			case "30838-03.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "30838-06.html":
-				st.setCond(3, true);
+			{
+				qs.setCond(3, true);
 				break;
+			}
 			case "30838-09.html":
-				if ((st.getQuestItemsCount(LEATHER) >= LEATHER_COUNT) && (st.getQuestItemsCount(THREAD) >= THREAD_COUNT) && (player.getAdena() >= ADENA_COUNT2))
+			{
+				if ((getQuestItemsCount(player, LEATHER) >= LEATHER_COUNT) && (getQuestItemsCount(player, THREAD) >= THREAD_COUNT) && (player.getAdena() >= ADENA_COUNT2))
 				{
-					st.takeItems(LEATHER, LEATHER_COUNT);
-					st.takeItems(THREAD, LEATHER_COUNT);
-					st.takeItems(Inventory.ADENA_ID, ADENA_COUNT2);
-					st.setCond(4, true);
+					takeItems(player, LEATHER, LEATHER_COUNT);
+					takeItems(player, THREAD, LEATHER_COUNT);
+					takeItems(player, Inventory.ADENA_ID, ADENA_COUNT2);
+					qs.setCond(4, true);
 				}
 				else
 				{
 					htmltext = "30838-10.html";
 				}
 				break;
+			}
 			case "30838-13.html":
-				st.giveItems(DRESS_SHOES_BOX, 1);
-				st.exitQuest(false, true);
+			{
+				giveItems(player, DRESS_SHOES_BOX, 1);
+				qs.exitQuest(false, true);
 				break;
+			}
 			case "31520-02.html":
-				st.setCond(2, true);
+			{
+				qs.setCond(2, true);
 				break;
+			}
 			case "30164-02.html":
+			{
 				if (player.getAdena() < ADENA_COUNT3)
 				{
 					return "30164-03.html";
 				}
-				st.takeItems(Inventory.ADENA_ID, ADENA_COUNT3);
-				st.setCond(5, true);
+				takeItems(player, Inventory.ADENA_ID, ADENA_COUNT3);
+				qs.setCond(5, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -109,8 +123,8 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -118,62 +132,84 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 		switch (npc.getId())
 		{
 			case WOODLEY:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30838-01.htm" : "30838-02.html";
 						break;
+					}
 					case State.STARTED:
-						switch (st.getCond())
+					{
+						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "30838-04.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "30838-05.html";
 								break;
+							}
 							case 3:
-								htmltext = ((st.getQuestItemsCount(LEATHER) >= LEATHER_COUNT) && (st.getQuestItemsCount(THREAD) >= THREAD_COUNT) && (player.getAdena() >= ADENA_COUNT)) ? "30838-07.html" : "30838-08.html";
+							{
+								htmltext = ((getQuestItemsCount(player, LEATHER) >= LEATHER_COUNT) && (getQuestItemsCount(player, THREAD) >= THREAD_COUNT) && (player.getAdena() >= ADENA_COUNT)) ? "30838-07.html" : "30838-08.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "30838-11.html";
 								break;
+							}
 							case 5:
+							{
 								htmltext = "30838-12.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case LEIKAR:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "31520-01.html";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						htmltext = "31520-03.html";
 					}
 				}
 				break;
+			}
 			case IAN:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					if (st.isCond(4))
+					if (qs.isCond(4))
 					{
 						htmltext = "30164-01.html";
 					}
-					else if (st.isCond(5))
+					else if (qs.isCond(5))
 					{
 						htmltext = "30164-04.html";
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -57,8 +57,8 @@ public class Q00431_WeddingMarch extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -66,17 +66,17 @@ public class Q00431_WeddingMarch extends Quest
 		String htmltext = null;
 		if (event.equalsIgnoreCase("31042-02.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			htmltext = event;
 		}
 		else if (event.equalsIgnoreCase("31042-06.html"))
 		{
-			if (st.getQuestItemsCount(SILVER_CRYSTAL) < CRYSTAL_COUNT)
+			if (getQuestItemsCount(player, SILVER_CRYSTAL) < CRYSTAL_COUNT)
 			{
 				return "31042-05.html";
 			}
-			st.giveItems(WEDDING_ECHO_CRYSTAL, 25);
-			st.exitQuest(true, true);
+			giveItems(player, WEDDING_ECHO_CRYSTAL, 25);
+			qs.exitQuest(true, true);
 			htmltext = event;
 		}
 		return htmltext;
@@ -88,17 +88,17 @@ public class Q00431_WeddingMarch extends Quest
 		final L2PcInstance member = getRandomPartyMember(player, 1);
 		if (member != null)
 		{
-			final QuestState st = getQuestState(member, false);
+			final QuestState qs = getQuestState(member, false);
 			if (getRandomBoolean())
 			{
-				st.giveItems(SILVER_CRYSTAL, 1);
-				if (st.getQuestItemsCount(SILVER_CRYSTAL) >= CRYSTAL_COUNT)
+				giveItems(member, SILVER_CRYSTAL, 1);
+				if (getQuestItemsCount(member, SILVER_CRYSTAL) >= CRYSTAL_COUNT)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(member, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -109,21 +109,25 @@ public class Q00431_WeddingMarch extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "31042-01.htm" : "31042-00.htm";
 				break;
+			}
 			case State.STARTED:
-				htmltext = (st.isCond(1)) ? "31042-03.html" : "31042-04.html";
+			{
+				htmltext = (qs.isCond(1)) ? "31042-03.html" : "31042-04.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

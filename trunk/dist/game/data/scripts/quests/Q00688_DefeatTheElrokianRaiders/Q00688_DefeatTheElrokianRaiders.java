@@ -51,8 +51,8 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -68,23 +68,23 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 			}
 			case "32105-03.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "32105-06.html":
 			{
-				if (st.hasQuestItems(DINOSAUR_FANG_NECKLACE))
+				if (hasQuestItems(player, DINOSAUR_FANG_NECKLACE))
 				{
-					st.giveAdena(3000 * st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE), true);
-					st.takeItems(DINOSAUR_FANG_NECKLACE, -1);
+					giveAdena(player, 3000 * getQuestItemsCount(player, DINOSAUR_FANG_NECKLACE), true);
+					takeItems(player, DINOSAUR_FANG_NECKLACE, -1);
 					htmltext = event;
 				}
 				break;
 			}
 			case "donation":
 			{
-				if (st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE) < 100)
+				if (getQuestItemsCount(player, DINOSAUR_FANG_NECKLACE) < 100)
 				{
 					htmltext = "32105-07.html";
 				}
@@ -92,25 +92,25 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 				{
 					if (getRandom(1000) < 500)
 					{
-						st.giveAdena(450000, true);
+						giveAdena(player, 450000, true);
 						htmltext = "32105-08.html";
 					}
 					else
 					{
-						st.giveAdena(150000, true);
+						giveAdena(player, 150000, true);
 						htmltext = "32105-09.html";
 					}
-					st.takeItems(DINOSAUR_FANG_NECKLACE, 100);
+					takeItems(player, DINOSAUR_FANG_NECKLACE, 100);
 				}
 				break;
 			}
 			case "32105-11.html":
 			{
-				if (st.hasQuestItems(DINOSAUR_FANG_NECKLACE))
+				if (hasQuestItems(player, DINOSAUR_FANG_NECKLACE))
 				{
-					st.giveAdena(3000 * st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE), true);
+					giveAdena(player, 3000 * getQuestItemsCount(player, DINOSAUR_FANG_NECKLACE), true);
 				}
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -127,13 +127,11 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		final QuestState st = getQuestState(partyMember, false);
-		
 		final float chance = (DROP_RATE * Config.RATE_QUEST_DROP);
 		if (getRandom(1000) < chance)
 		{
-			st.rewardItems(DINOSAUR_FANG_NECKLACE, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			rewardItems(partyMember, DINOSAUR_FANG_NECKLACE, 1);
+			playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -141,14 +139,14 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -157,7 +155,7 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = (st.hasQuestItems(DINOSAUR_FANG_NECKLACE)) ? "32105-05.html" : "32105-12.html";
+				htmltext = (hasQuestItems(player, DINOSAUR_FANG_NECKLACE)) ? "32105-05.html" : "32105-12.html";
 				break;
 			}
 		}

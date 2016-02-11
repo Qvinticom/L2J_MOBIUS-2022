@@ -54,12 +54,12 @@ final class Tunatun extends AbstractNpcAI
 				return "31537-01.html";
 			}
 			
-			final QuestState st = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
-			if ((st == null) && (player.getLevel() < MIN_LEVEL))
+			final QuestState qs = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
+			if ((qs == null) && (player.getLevel() < MIN_LEVEL))
 			{
 				return "31537-02.html";
 			}
-			else if ((st != null) || (player.getLevel() >= MIN_LEVEL))
+			else if ((qs != null) || (player.getLevel() >= MIN_LEVEL))
 			{
 				giveItems(player, BEAST_HANDLERS_WHIP, 1);
 				return "31537-03.html";

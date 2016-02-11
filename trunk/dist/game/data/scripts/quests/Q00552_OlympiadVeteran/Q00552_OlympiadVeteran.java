@@ -51,8 +51,8 @@ public class Q00552_OlympiadVeteran extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -60,16 +60,16 @@ public class Q00552_OlympiadVeteran extends Quest
 		
 		if (event.equalsIgnoreCase("31688-03.html"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		else if (event.equalsIgnoreCase("31688-04.html"))
 		{
-			final long count = st.getQuestItemsCount(TEAM_EVENT_CERTIFICATE) + st.getQuestItemsCount(CLASS_FREE_BATTLE_CERTIFICATE) + st.getQuestItemsCount(CLASS_BATTLE_CERTIFICATE);
+			final long count = getQuestItemsCount(player, TEAM_EVENT_CERTIFICATE) + getQuestItemsCount(player, CLASS_FREE_BATTLE_CERTIFICATE) + getQuestItemsCount(player, CLASS_BATTLE_CERTIFICATE);
 			
 			if (count > 0)
 			{
-				st.giveItems(OLY_CHEST, count);
-				st.exitQuest(QuestType.DAILY, true);
+				giveItems(player, OLY_CHEST, count);
+				qs.exitQuest(QuestType.DAILY, true);
 			}
 			else
 			{
@@ -90,39 +90,39 @@ public class Q00552_OlympiadVeteran extends Quest
 				return;
 			}
 			
-			final QuestState st = getQuestState(player, false);
-			if ((st != null) && st.isStarted())
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isStarted())
 			{
 				int matches;
 				switch (type)
 				{
 					case CLASSED:
 					{
-						matches = st.getInt("classed") + 1;
-						st.set("classed", String.valueOf(matches));
-						if ((matches == 5) && !st.hasQuestItems(CLASS_BATTLE_CERTIFICATE))
+						matches = qs.getInt("classed") + 1;
+						qs.set("classed", String.valueOf(matches));
+						if ((matches == 5) && !hasQuestItems(player, CLASS_BATTLE_CERTIFICATE))
 						{
-							st.giveItems(CLASS_BATTLE_CERTIFICATE, 1);
+							giveItems(player, CLASS_BATTLE_CERTIFICATE, 1);
 						}
 						break;
 					}
 					case NON_CLASSED:
 					{
-						matches = st.getInt("nonclassed") + 1;
-						st.set("nonclassed", String.valueOf(matches));
-						if ((matches == 5) && !st.hasQuestItems(CLASS_FREE_BATTLE_CERTIFICATE))
+						matches = qs.getInt("nonclassed") + 1;
+						qs.set("nonclassed", String.valueOf(matches));
+						if ((matches == 5) && !hasQuestItems(player, CLASS_FREE_BATTLE_CERTIFICATE))
 						{
-							st.giveItems(CLASS_FREE_BATTLE_CERTIFICATE, 1);
+							giveItems(player, CLASS_FREE_BATTLE_CERTIFICATE, 1);
 						}
 						break;
 					}
 					case TEAMS:
 					{
-						matches = st.getInt("teams") + 1;
-						st.set("teams", String.valueOf(matches));
-						if ((matches == 5) && !st.hasQuestItems(TEAM_EVENT_CERTIFICATE))
+						matches = qs.getInt("teams") + 1;
+						qs.set("teams", String.valueOf(matches));
+						if ((matches == 5) && !hasQuestItems(player, TEAM_EVENT_CERTIFICATE))
 						{
-							st.giveItems(TEAM_EVENT_CERTIFICATE, 1);
+							giveItems(player, TEAM_EVENT_CERTIFICATE, 1);
 						}
 						break;
 					}
@@ -137,39 +137,39 @@ public class Q00552_OlympiadVeteran extends Quest
 			{
 				return;
 			}
-			final QuestState st = getQuestState(player, false);
-			if ((st != null) && st.isStarted())
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isStarted())
 			{
 				int matches;
 				switch (type)
 				{
 					case CLASSED:
 					{
-						matches = st.getInt("classed") + 1;
-						st.set("classed", String.valueOf(matches));
+						matches = qs.getInt("classed") + 1;
+						qs.set("classed", String.valueOf(matches));
 						if (matches == 5)
 						{
-							st.giveItems(CLASS_BATTLE_CERTIFICATE, 1);
+							giveItems(player, CLASS_BATTLE_CERTIFICATE, 1);
 						}
 						break;
 					}
 					case NON_CLASSED:
 					{
-						matches = st.getInt("nonclassed") + 1;
-						st.set("nonclassed", String.valueOf(matches));
+						matches = qs.getInt("nonclassed") + 1;
+						qs.set("nonclassed", String.valueOf(matches));
 						if (matches == 5)
 						{
-							st.giveItems(CLASS_FREE_BATTLE_CERTIFICATE, 1);
+							giveItems(player, CLASS_FREE_BATTLE_CERTIFICATE, 1);
 						}
 						break;
 					}
 					case TEAMS:
 					{
-						matches = st.getInt("teams") + 1;
-						st.set("teams", String.valueOf(matches));
+						matches = qs.getInt("teams") + 1;
+						qs.set("teams", String.valueOf(matches));
 						if (matches == 5)
 						{
-							st.giveItems(TEAM_EVENT_CERTIFICATE, 1);
+							giveItems(player, TEAM_EVENT_CERTIFICATE, 1);
 						}
 						break;
 					}
@@ -182,8 +182,8 @@ public class Q00552_OlympiadVeteran extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -192,15 +192,15 @@ public class Q00552_OlympiadVeteran extends Quest
 		{
 			htmltext = "31688-00.htm";
 		}
-		else if (st.isCreated())
+		else if (qs.isCreated())
 		{
 			htmltext = "31688-01.htm";
 		}
-		else if (st.isCompleted())
+		else if (qs.isCompleted())
 		{
-			if (st.isNowAvailable())
+			if (qs.isNowAvailable())
 			{
-				st.setState(State.CREATED);
+				qs.setState(State.CREATED);
 				htmltext = (player.getLevel() < 75) || !player.isNoble() ? "31688-00.htm" : "31688-01.htm";
 			}
 			else
@@ -208,15 +208,15 @@ public class Q00552_OlympiadVeteran extends Quest
 				htmltext = "31688-05.html";
 			}
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			final long count = st.getQuestItemsCount(TEAM_EVENT_CERTIFICATE) + st.getQuestItemsCount(CLASS_FREE_BATTLE_CERTIFICATE) + st.getQuestItemsCount(CLASS_BATTLE_CERTIFICATE);
+			final long count = getQuestItemsCount(player, TEAM_EVENT_CERTIFICATE) + getQuestItemsCount(player, CLASS_FREE_BATTLE_CERTIFICATE) + getQuestItemsCount(player, CLASS_BATTLE_CERTIFICATE);
 			
 			if (count == 3)
 			{
 				htmltext = "31688-04.html";
-				st.giveItems(OLY_CHEST, 4);
-				st.exitQuest(QuestType.DAILY, true);
+				giveItems(player, OLY_CHEST, 4);
+				qs.exitQuest(QuestType.DAILY, true);
 			}
 			else
 			{

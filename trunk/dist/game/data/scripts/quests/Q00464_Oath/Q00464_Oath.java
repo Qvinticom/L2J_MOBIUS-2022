@@ -89,8 +89,8 @@ public class Q00464_Oath extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -99,62 +99,86 @@ public class Q00464_Oath extends Quest
 		switch (event)
 		{
 			case "32596-04.html":
-				if (!st.hasQuestItems(BOOK))
+			{
+				if (!hasQuestItems(player, BOOK))
 				{
 					return getNoQuestMsg(player);
 				}
 				
 				final int cond = getRandom(2, 9);
-				st.set("npc", String.valueOf(NPC[cond - 1][0]));
-				st.setCond(cond, true);
-				st.takeItems(BOOK, 1);
-				st.giveItems(BOOK2, 1);
+				qs.set("npc", String.valueOf(NPC[cond - 1][0]));
+				qs.setCond(cond, true);
+				takeItems(player, BOOK, 1);
+				giveItems(player, BOOK2, 1);
 				switch (cond)
 				{
 					case 2:
+					{
 						htmltext = "32596-04.html";
 						break;
+					}
 					case 3:
+					{
 						htmltext = "32596-04a.html";
 						break;
+					}
 					case 4:
+					{
 						htmltext = "32596-04b.html";
 						break;
+					}
 					case 5:
+					{
 						htmltext = "32596-04c.html";
 						break;
+					}
 					case 6:
+					{
 						htmltext = "32596-04d.html";
 						break;
+					}
 					case 7:
+					{
 						htmltext = "32596-04e.html";
 						break;
+					}
 					case 8:
+					{
 						htmltext = "32596-04f.html";
 						break;
+					}
 					case 9:
+					{
 						htmltext = "32596-04g.html";
 						break;
+					}
 				}
 				break;
+			}
 			case "end_quest":
-				if (!st.hasQuestItems(BOOK2))
+			{
+				if (!hasQuestItems(player, BOOK2))
 				{
 					return getNoQuestMsg(player);
 				}
 				
-				final int i = st.getCond() - 1;
-				st.addExpAndSp(NPC[i][1], NPC[i][2]);
-				st.giveAdena(NPC[i][3], true);
-				st.exitQuest(QuestType.DAILY, true);
+				final int i = qs.getCond() - 1;
+				addExpAndSp(player, NPC[i][1], NPC[i][2]);
+				giveAdena(player, NPC[i][3], true);
+				qs.exitQuest(QuestType.DAILY, true);
 				htmltext = npc.getId() + "-02.html";
 				break;
+			}
 			case "32596-02.html":
 			case "32596-03.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -163,21 +187,26 @@ public class Q00464_Oath extends Quest
 	public String onItemTalk(L2ItemInstance item, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		boolean startQuest = false;
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				startQuest = true;
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = "strongbox-02.html";
 				break;
+			}
 			case State.COMPLETED:
-				if (st.isNowAvailable())
+			{
+				if (qs.isNowAvailable())
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					startQuest = true;
 				}
 				else
@@ -185,15 +214,16 @@ public class Q00464_Oath extends Quest
 					htmltext = "strongbox-03.html";
 				}
 				break;
+			}
 		}
 		
 		if (startQuest)
 		{
 			if (player.getLevel() >= MIN_LEVEL)
 			{
-				st.startQuest();
-				st.takeItems(STRONGBOX, 1);
-				st.giveItems(BOOK, 1);
+				qs.startQuest();
+				takeItems(player, STRONGBOX, 1);
+				giveItems(player, BOOK, 1);
 				htmltext = "strongbox-01.htm";
 			}
 			else
@@ -219,46 +249,64 @@ public class Q00464_Oath extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		if ((st != null) && st.isStarted())
+		if ((qs != null) && qs.isStarted())
 		{
 			final int npcId = npc.getId();
 			
 			if (npcId == NPC[0][0])
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
+					{
 						htmltext = "32596-01.html";
 						break;
+					}
 					case 2:
+					{
 						htmltext = "32596-05.html";
 						break;
+					}
 					case 3:
+					{
 						htmltext = "32596-05a.html";
 						break;
+					}
 					case 4:
+					{
 						htmltext = "32596-05b.html";
 						break;
+					}
 					case 5:
+					{
 						htmltext = "32596-05c.html";
 						break;
+					}
 					case 6:
+					{
 						htmltext = "32596-05d.html";
 						break;
+					}
 					case 7:
+					{
 						htmltext = "32596-05e.html";
 						break;
+					}
 					case 8:
+					{
 						htmltext = "32596-05f.html";
 						break;
+					}
 					case 9:
+					{
 						htmltext = "32596-05g.html";
 						break;
+					}
 				}
 			}
-			else if ((st.getCond() > 1) && (st.getInt("npc") == npcId))
+			else if ((qs.getCond() > 1) && (qs.getInt("npc") == npcId))
 			{
 				htmltext = npcId + "-01.html";
 			}

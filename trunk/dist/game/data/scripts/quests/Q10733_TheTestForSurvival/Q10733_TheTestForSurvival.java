@@ -31,7 +31,7 @@ import quests.Q10732_AForeignLand.Q10732_AForeignLand;
  */
 public class Q10733_TheTestForSurvival extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int GERETH = 33932;
 	private static final int DIA = 34005;
 	private static final int KATALIN = 33943;
@@ -68,7 +68,7 @@ public class Q10733_TheTestForSurvival extends Quest
 			{
 				qs.startQuest();
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_027_Quest_01.htm", TutorialShowHtml.LARGE_WINDOW));
-				qs.giveItems(GERETH_RECOMMENDATION, 1);
+				giveItems(player, GERETH_RECOMMENDATION, 1);
 				htmltext = event;
 				break;
 			}
@@ -134,7 +134,7 @@ public class Q10733_TheTestForSurvival extends Quest
 			}
 			case DIA:
 			{
-				if (qs.isStarted() && qs.hasQuestItems(GERETH_RECOMMENDATION))
+				if (qs.isStarted() && hasQuestItems(player, GERETH_RECOMMENDATION))
 				{
 					if (player.getClassId() == ClassId.ERTHEIA_FIGHTER)
 					{
@@ -149,7 +149,7 @@ public class Q10733_TheTestForSurvival extends Quest
 			}
 			case KATALIN:
 			{
-				if (qs.isCond(2) && qs.hasQuestItems(GERETH_RECOMMENDATION))
+				if (qs.isCond(2) && hasQuestItems(player, GERETH_RECOMMENDATION))
 				{
 					htmltext = "33943-01.html";
 				}
@@ -157,7 +157,7 @@ public class Q10733_TheTestForSurvival extends Quest
 			}
 			case AYANTHE:
 			{
-				if (qs.isCond(3) && qs.hasQuestItems(GERETH_RECOMMENDATION))
+				if (qs.isCond(3) && hasQuestItems(player, GERETH_RECOMMENDATION))
 				{
 					htmltext = "33942-01.html";
 				}

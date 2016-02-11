@@ -48,32 +48,32 @@ public class Q00019_GoToThePastureland extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		if (event.equalsIgnoreCase("31302-02.htm"))
 		{
-			st.startQuest();
-			st.giveItems(VEAL, 1);
+			qs.startQuest();
+			giveItems(player, VEAL, 1);
 		}
 		else if (event.equalsIgnoreCase("31537-02.html"))
 		{
-			if (st.hasQuestItems(YOUNG_WILD_BEAST_MEAT))
+			if (hasQuestItems(player, YOUNG_WILD_BEAST_MEAT))
 			{
-				st.giveAdena(50000, true);
-				st.addExpAndSp(136766, 12688);
-				st.exitQuest(false, true);
+				giveAdena(player, 50000, true);
+				addExpAndSp(player, 136766, 12688);
+				qs.exitQuest(false, true);
 				htmltext = "31537-02.html";
 			}
-			else if (st.hasQuestItems(VEAL))
+			else if (hasQuestItems(player, VEAL))
 			{
-				st.giveAdena(147200, true);
-				st.addExpAndSp(385040, 75250);
-				st.exitQuest(false, true);
+				giveAdena(player, 147200, true);
+				addExpAndSp(player, 385040, 75250);
+				qs.exitQuest(false, true);
 				htmltext = "31537-02.html";
 			}
 			else
@@ -88,17 +88,18 @@ public class Q00019_GoToThePastureland extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
 		if (npc.getId() == VLADIMIR)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					if (player.getLevel() >= 82)
 					{
 						htmltext = "31302-01.htm";
@@ -108,15 +109,20 @@ public class Q00019_GoToThePastureland extends Quest
 						htmltext = "31302-03.html";
 					}
 					break;
+				}
 				case State.STARTED:
+				{
 					htmltext = "31302-04.html";
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
-		else if ((npc.getId() == TUNATUN) && (st.isCond(1)))
+		else if ((npc.getId() == TUNATUN) && (qs.isCond(1)))
 		{
 			htmltext = "31537-01.html";
 		}

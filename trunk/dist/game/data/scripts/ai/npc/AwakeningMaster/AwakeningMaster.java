@@ -78,8 +78,8 @@ public final class AwakeningMaster extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -88,8 +88,8 @@ public final class AwakeningMaster extends AbstractNpcAI
 		{
 			case "awakening":
 			{
-				final QuestState st2 = player.getQuestState(Q10338_SeizeYourDestiny.class.getSimpleName());
-				if (st.hasQuestItems(SCROLL_OF_AFTERLIFE) && (player.getLevel() > 84) && (!player.isSubClassActive() || player.isDualClassActive()) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (st2 != null) && st2.isCompleted())
+				final QuestState qs2 = player.getQuestState(Q10338_SeizeYourDestiny.class.getSimpleName());
+				if (hasQuestItems(player, SCROLL_OF_AFTERLIFE) && (player.getLevel() > 84) && (!player.isSubClassActive() || player.isDualClassActive()) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (qs2 != null) && qs2.isCompleted())
 				{
 					switch (npc.getId())
 					{

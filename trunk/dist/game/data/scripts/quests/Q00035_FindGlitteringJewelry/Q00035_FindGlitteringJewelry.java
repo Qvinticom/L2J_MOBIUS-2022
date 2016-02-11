@@ -59,8 +59,8 @@ public class Q00035_FindGlitteringJewelry extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -69,36 +69,46 @@ public class Q00035_FindGlitteringJewelry extends Quest
 		switch (event)
 		{
 			case "30091-03.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "30879-02.html":
-				st.setCond(2, true);
+			{
+				qs.setCond(2, true);
 				break;
+			}
 			case "30091-07.html":
-				if (st.getQuestItemsCount(ROUGH_JEWEL) < JEWEL_COUNT)
+			{
+				if (getQuestItemsCount(player, ROUGH_JEWEL) < JEWEL_COUNT)
 				{
 					return "30091-08.html";
 				}
-				st.takeItems(ROUGH_JEWEL, -1);
-				st.setCond(4, true);
+				takeItems(player, ROUGH_JEWEL, -1);
+				qs.setCond(4, true);
 				break;
+			}
 			case "30091-11.html":
-				if ((st.getQuestItemsCount(ORIHARUKON) >= ORIHARUKON_COUNT) && (st.getQuestItemsCount(SILVER_NUGGET) >= NUGGET_COUNT) && (st.getQuestItemsCount(THONS) >= THONS_COUNT))
+			{
+				if ((getQuestItemsCount(player, ORIHARUKON) >= ORIHARUKON_COUNT) && (getQuestItemsCount(player, SILVER_NUGGET) >= NUGGET_COUNT) && (getQuestItemsCount(player, THONS) >= THONS_COUNT))
 				{
-					st.takeItems(ORIHARUKON, ORIHARUKON_COUNT);
-					st.takeItems(SILVER_NUGGET, NUGGET_COUNT);
-					st.takeItems(THONS, THONS_COUNT);
-					st.giveItems(JEWEL_BOX, 1);
-					st.exitQuest(false, true);
+					takeItems(player, ORIHARUKON, ORIHARUKON_COUNT);
+					takeItems(player, SILVER_NUGGET, NUGGET_COUNT);
+					takeItems(player, THONS, THONS_COUNT);
+					giveItems(player, JEWEL_BOX, 1);
+					qs.exitQuest(false, true);
 				}
 				else
 				{
 					htmltext = "30091-12.html";
 				}
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -109,17 +119,17 @@ public class Q00035_FindGlitteringJewelry extends Quest
 		final L2PcInstance member = getRandomPartyMember(player, 2);
 		if (member != null)
 		{
-			final QuestState st = getQuestState(member, false);
+			final QuestState qs = getQuestState(member, false);
 			if (getRandomBoolean())
 			{
-				st.giveItems(ROUGH_JEWEL, 1);
-				if (st.getQuestItemsCount(ROUGH_JEWEL) >= JEWEL_COUNT)
+				giveItems(player, ROUGH_JEWEL, 1);
+				if (getQuestItemsCount(player, ROUGH_JEWEL) >= JEWEL_COUNT)
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 				}
 				else
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -130,8 +140,8 @@ public class Q00035_FindGlitteringJewelry extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -139,43 +149,59 @@ public class Q00035_FindGlitteringJewelry extends Quest
 		switch (npc.getId())
 		{
 			case ELLIE:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30091-01.htm" : "30091-02.html";
 						break;
+					}
 					case State.STARTED:
-						switch (st.getCond())
+					{
+						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "30091-04.html";
 								break;
+							}
 							case 3:
-								htmltext = (st.getQuestItemsCount(ROUGH_JEWEL) >= JEWEL_COUNT) ? "30091-06.html" : "30091-05.html";
+							{
+								htmltext = (getQuestItemsCount(player, ROUGH_JEWEL) >= JEWEL_COUNT) ? "30091-06.html" : "30091-05.html";
 								break;
+							}
 							case 4:
-								htmltext = ((st.getQuestItemsCount(ORIHARUKON) >= ORIHARUKON_COUNT) && (st.getQuestItemsCount(SILVER_NUGGET) >= NUGGET_COUNT) && (st.getQuestItemsCount(THONS) >= THONS_COUNT)) ? "30091-09.html" : "30091-10.html";
+							{
+								htmltext = ((getQuestItemsCount(player, ORIHARUKON) >= ORIHARUKON_COUNT) && (getQuestItemsCount(player, SILVER_NUGGET) >= NUGGET_COUNT) && (getQuestItemsCount(player, THONS) >= THONS_COUNT)) ? "30091-09.html" : "30091-10.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case FELTON:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "30879-01.html";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						htmltext = "30879-03.html";
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

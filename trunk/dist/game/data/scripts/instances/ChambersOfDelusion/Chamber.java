@@ -621,11 +621,11 @@ abstract class Chamber extends AbstractInstance
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final int npcId = npc.getId();
-		QuestState st = getQuestState(player, false);
+		QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
-			st = newQuestState(player);
+			qs = newQuestState(player);
 		}
 		
 		if (npcId == ENTRANCE_GATEKEEPER)

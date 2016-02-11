@@ -61,8 +61,8 @@ public class Q00239_WontYouJoinUs extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -71,19 +71,25 @@ public class Q00239_WontYouJoinUs extends Quest
 		switch (event)
 		{
 			case "32643-02.htm":
+			{
 				htmltext = event;
 				break;
+			}
 			case "32643-03.html":
-				st.startQuest();
+			{
+				qs.startQuest();
 				htmltext = event;
 				break;
+			}
 			case "32643-07.html":
-				if (st.isCond(2))
+			{
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -96,18 +102,18 @@ public class Q00239_WontYouJoinUs extends Quest
 			final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
 			if (partyMember != null)
 			{
-				final QuestState st = getQuestState(partyMember, false);
-				if (st.getQuestItemsCount(DESTROYED_MACHINE_PIECE) < DESTROYED_MACHINE_PIECE_NEEDED)
+				final QuestState qs = getQuestState(partyMember, false);
+				if (getQuestItemsCount(partyMember, DESTROYED_MACHINE_PIECE) < DESTROYED_MACHINE_PIECE_NEEDED)
 				{
-					st.giveItems(DESTROYED_MACHINE_PIECE, 1);
+					giveItems(partyMember, DESTROYED_MACHINE_PIECE, 1);
 				}
-				if (st.getQuestItemsCount(DESTROYED_MACHINE_PIECE) == DESTROYED_MACHINE_PIECE_NEEDED)
+				if (getQuestItemsCount(partyMember, DESTROYED_MACHINE_PIECE) == DESTROYED_MACHINE_PIECE_NEEDED)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -116,18 +122,18 @@ public class Q00239_WontYouJoinUs extends Quest
 			final L2PcInstance partyMember = getRandomPartyMember(killer, 3);
 			if ((partyMember != null) && (getRandom(100) < CHANCE_FOR_FRAGMENT))
 			{
-				final QuestState st = getQuestState(partyMember, false);
-				if (st.getQuestItemsCount(ENCHANTED_GOLEM_FRAGMENT) < ENCHANTED_GOLEM_FRAGMENT_NEEDED)
+				final QuestState qs = getQuestState(partyMember, false);
+				if (getQuestItemsCount(partyMember, ENCHANTED_GOLEM_FRAGMENT) < ENCHANTED_GOLEM_FRAGMENT_NEEDED)
 				{
-					st.giveItems(ENCHANTED_GOLEM_FRAGMENT, 1);
+					giveItems(partyMember, ENCHANTED_GOLEM_FRAGMENT, 1);
 				}
-				if (st.getQuestItemsCount(ENCHANTED_GOLEM_FRAGMENT) == ENCHANTED_GOLEM_FRAGMENT_NEEDED)
+				if (getQuestItemsCount(partyMember, ENCHANTED_GOLEM_FRAGMENT) == ENCHANTED_GOLEM_FRAGMENT_NEEDED)
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 				}
 				else
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -135,28 +141,31 @@ public class Q00239_WontYouJoinUs extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(talker);
-		final QuestState st = getQuestState(talker, true);
-		if (st == null)
+		String htmltext = getNoQuestMsg(player);
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = "32643-11.html";
 				break;
+			}
 			case State.CREATED:
-				final QuestState q237 = st.getPlayer().getQuestState(Q00237_WindsOfChange.class.getSimpleName());
-				final QuestState q238 = st.getPlayer().getQuestState(Q00238_SuccessFailureOfBusiness.class.getSimpleName());
+			{
+				final QuestState q237 = qs.getPlayer().getQuestState(Q00237_WindsOfChange.class.getSimpleName());
+				final QuestState q238 = qs.getPlayer().getQuestState(Q00238_SuccessFailureOfBusiness.class.getSimpleName());
 				if ((q238 != null) && q238.isCompleted())
 				{
 					htmltext = "32643-12.html";
 				}
-				else if ((q237 != null) && q237.isCompleted() && (talker.getLevel() >= MIN_LEVEL) && st.hasQuestItems(SUPPORT_CERTIFICATE))
+				else if ((q237 != null) && q237.isCompleted() && (player.getLevel() >= MIN_LEVEL) && hasQuestItems(player, SUPPORT_CERTIFICATE))
 				{
 					htmltext = "32643-01.htm";
 				}
@@ -165,34 +174,45 @@ public class Q00239_WontYouJoinUs extends Quest
 					htmltext = "32643-00.html";
 				}
 				break;
+			}
 			case State.STARTED:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 1:
-						htmltext = (st.hasQuestItems(DESTROYED_MACHINE_PIECE)) ? "32643-05.html" : "32643-04.html";
+					{
+						htmltext = (hasQuestItems(player, DESTROYED_MACHINE_PIECE)) ? "32643-05.html" : "32643-04.html";
 						break;
+					}
 					case 2:
-						if (st.getQuestItemsCount(DESTROYED_MACHINE_PIECE) == DESTROYED_MACHINE_PIECE_NEEDED)
+					{
+						if (getQuestItemsCount(player, DESTROYED_MACHINE_PIECE) == DESTROYED_MACHINE_PIECE_NEEDED)
 						{
 							htmltext = "32643-06.html";
-							st.takeItems(DESTROYED_MACHINE_PIECE, -1);
+							takeItems(player, DESTROYED_MACHINE_PIECE, -1);
 						}
 						break;
+					}
 					case 3:
-						htmltext = (st.hasQuestItems(ENCHANTED_GOLEM_FRAGMENT)) ? "32643-08.html" : "32643-09.html";
+					{
+						htmltext = (hasQuestItems(player, ENCHANTED_GOLEM_FRAGMENT)) ? "32643-08.html" : "32643-09.html";
 						break;
+					}
 					case 4:
-						if (st.getQuestItemsCount(ENCHANTED_GOLEM_FRAGMENT) == ENCHANTED_GOLEM_FRAGMENT_NEEDED)
+					{
+						if (getQuestItemsCount(player, ENCHANTED_GOLEM_FRAGMENT) == ENCHANTED_GOLEM_FRAGMENT_NEEDED)
 						{
 							htmltext = "32643-10.html";
-							st.giveAdena(283346, true);
-							st.takeItems(SUPPORT_CERTIFICATE, 1);
-							st.addExpAndSp(1319736, 103553);
-							st.exitQuest(false, true);
+							giveAdena(player, 283346, true);
+							takeItems(player, SUPPORT_CERTIFICATE, 1);
+							addExpAndSp(player, 1319736, 103553);
+							qs.exitQuest(false, true);
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

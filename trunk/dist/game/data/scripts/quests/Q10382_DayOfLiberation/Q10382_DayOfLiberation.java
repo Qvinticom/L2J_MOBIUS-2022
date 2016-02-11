@@ -68,9 +68,9 @@ public class Q10382_DayOfLiberation extends Quest
 			}
 			case "sofa_sizraku_q10382_10.html":
 			{
-				qs.addExpAndSp(951127800, 435041400);
-				qs.giveItems(57, 3256740);
-				qs.giveItems(TAUTIS_BRACELET, 1);
+				addExpAndSp(player, 951127800, 435041400);
+				giveAdena(player, 3256740, true);
+				giveItems(player, TAUTIS_BRACELET, 1);
 				qs.exitQuest(QuestType.ONE_TIME, true);
 				break;
 			}

@@ -54,21 +54,21 @@ public class Q10505_JewelOfValakas extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			takeItems(player, EMPTY_CRYSTAL, -1);
 			giveItems(player, FILLED_CRYSTAL_VALAKAS_ENERGY, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -86,7 +86,7 @@ public class Q10505_JewelOfValakas extends Quest
 				}
 				case "31540-07.html":
 				{
-					st.startQuest();
+					qs.startQuest();
 					giveItems(player, EMPTY_CRYSTAL, 1);
 					htmltext = event;
 					break;
@@ -106,9 +106,9 @@ public class Q10505_JewelOfValakas extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -128,7 +128,7 @@ public class Q10505_JewelOfValakas extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -147,7 +147,7 @@ public class Q10505_JewelOfValakas extends Quest
 					{
 						giveItems(player, JEWEL_OF_VALAKAS, 1);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 						htmltext = "31540-10.html";
 						break;
 					}

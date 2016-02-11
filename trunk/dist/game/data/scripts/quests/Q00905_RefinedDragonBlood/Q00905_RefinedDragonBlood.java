@@ -66,7 +66,6 @@ public final class Q00905_RefinedDragonBlood extends Quest
 		MONSTERS.put(22852, UNREFINED_BLUE_DRAGON_BLOOD); // Dragon Guard
 		MONSTERS.put(22853, UNREFINED_BLUE_DRAGON_BLOOD); // Dragon Mage
 	}
-	
 	// Misc
 	private static final int MIN_LEVEL = 83;
 	private static final int DRAGON_BLOOD_COUNT = 10;
@@ -83,21 +82,21 @@ public final class Q00905_RefinedDragonBlood extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			final int itemId = MONSTERS.get(npc.getId());
-			if (st.getQuestItemsCount(itemId) < DRAGON_BLOOD_COUNT)
+			if (getQuestItemsCount(player, itemId) < DRAGON_BLOOD_COUNT)
 			{
-				st.giveItems(itemId, 1);
+				giveItems(player, itemId, 1);
 				
-				if ((st.getQuestItemsCount(UNREFINED_RED_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT) && (st.getQuestItemsCount(UNREFINED_BLUE_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT))
+				if ((getQuestItemsCount(player, UNREFINED_RED_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT) && (getQuestItemsCount(player, UNREFINED_BLUE_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -106,8 +105,8 @@ public final class Q00905_RefinedDragonBlood extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -126,23 +125,23 @@ public final class Q00905_RefinedDragonBlood extends Quest
 				}
 				case "32864-05.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
 				case "32864-11.html":
 				{
-					st.giveItems(REFINED_RED_DRAGON_BLOOD, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					st.exitQuest(QuestType.DAILY, true);
+					giveItems(player, REFINED_RED_DRAGON_BLOOD, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = event;
 					break;
 				}
 				case "32864-12.html":
 				{
-					st.giveItems(REFINED_BLUE_DRAGON_BLOOD, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					st.exitQuest(QuestType.DAILY, true);
+					giveItems(player, REFINED_BLUE_DRAGON_BLOOD, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = event;
 					break;
 				}
@@ -161,14 +160,14 @@ public final class Q00905_RefinedDragonBlood extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -177,7 +176,7 @@ public final class Q00905_RefinedDragonBlood extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -186,10 +185,10 @@ public final class Q00905_RefinedDragonBlood extends Quest
 					}
 					case 2:
 					{
-						if (!st.isSet("wait"))
+						if (!qs.isSet("wait"))
 						{
 							htmltext = "32864-07.html";
-							st.set("wait", 1);
+							qs.set("wait", 1);
 						}
 						else
 						{
@@ -202,13 +201,13 @@ public final class Q00905_RefinedDragonBlood extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if (!st.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					htmltext = "32864-03.html";
 				}
 				else
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					htmltext = (player.getLevel() < MIN_LEVEL) ? "32864-02.html" : "32864-01.htm";
 				}
 				break;

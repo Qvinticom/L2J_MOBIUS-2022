@@ -57,8 +57,8 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -67,22 +67,31 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 		switch (event)
 		{
 			case "32711-04.html":
+			{
 				if (player.getLevel() >= 79)
 				{
-					st.startQuest();
-					htmltext = (st.hasQuestItems(CET_1_SHEET, CET_2_SHEET, CET_3_SHEET)) ? "32711-04a.html" : "32711-04.html";
+					qs.startQuest();
+					htmltext = (hasQuestItems(player, CET_1_SHEET, CET_2_SHEET, CET_3_SHEET)) ? "32711-04a.html" : "32711-04.html";
 				}
 				break;
+			}
 			case "32711-05a.html":
+			{
 				player.sendPacket(new RadarControl(0, 2, 186214, 61591, -4152));
 				break;
+			}
 			case "32711-05b.html":
+			{
 				player.sendPacket(new RadarControl(0, 2, 187554, 60800, -4984));
 				break;
+			}
 			case "32711-05c.html":
+			{
 				player.sendPacket(new RadarControl(0, 2, 193432, 53922, -4368));
 				break;
+			}
 			case "spawn":
+			{
 				if (!hasQuestItems(player, CET_1_SHEET, CET_2_SHEET, CET_3_SHEET))
 				{
 					return getNoQuestMsg(player);
@@ -97,19 +106,24 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				{
 					return "32711-09a.html";
 				}
-				st.takeItems(CET_1_SHEET, 1);
-				st.takeItems(CET_2_SHEET, 1);
-				st.takeItems(CET_3_SHEET, 1);
+				takeItems(player, CET_1_SHEET, 1);
+				takeItems(player, CET_2_SHEET, 1);
+				takeItems(player, CET_3_SHEET, 1);
 				hekaton = addSpawn(HEKATON_PRIME, 191777, 56197, -7624, 0, false, 0);
 				htmltext = "32711-09.html";
 				break;
+			}
 			case "32711-03.htm":
 			case "32711-05.html":
 			case "32711-06.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -122,26 +136,25 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 		{
 			return super.onKill(npc, player, isSummon);
 		}
-		final QuestState st = getQuestState(partyMember, false);
 		
 		switch (npc.getId())
 		{
 			case GORGOLOS:
 			{
-				st.giveItems(CET_1_SHEET, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				giveItems(partyMember, CET_1_SHEET, 1);
+				playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				break;
 			}
 			case LAST_TITAN_UTENUS:
 			{
-				st.giveItems(CET_2_SHEET, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				giveItems(partyMember, CET_2_SHEET, 1);
+				playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				break;
 			}
 			case GIANT_MARPANAK:
 			{
-				st.giveItems(CET_3_SHEET, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				giveItems(partyMember, CET_3_SHEET, 1);
+				playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				break;
 			}
 			case HEKATON_PRIME:
@@ -150,11 +163,11 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				{
 					for (L2PcInstance pl : player.getParty().getMembers())
 					{
-						final QuestState qs = getQuestState(pl, false);
+						final QuestState qst = getQuestState(pl, false);
 						
-						if ((qs != null) && qs.isCond(1))
+						if ((qst != null) && qst.isCond(1))
 						{
-							qs.setCond(2, true);
+							qst.setCond(2, true);
 						}
 					}
 					saveGlobalQuestVar("Respawn", Long.toString(System.currentTimeMillis() + RESPAWN_DELAY));
@@ -169,13 +182,13 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -188,14 +201,14 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				{
 					htmltext = "32711-09.html";
 				}
-				else if (st.isCond(1))
+				else if (qs.isCond(1))
 				{
 					htmltext = (!hasQuestItems(player, CET_1_SHEET, CET_2_SHEET, CET_3_SHEET)) ? "32711-07.html" : "32711-08.html";
 				}
-				else if (st.isCond(2))
+				else if (qs.isCond(2))
 				{
-					st.giveItems(SUPPORT_ITEMS, 1);
-					st.exitQuest(true, true);
+					giveItems(player, SUPPORT_ITEMS, 1);
+					qs.exitQuest(true, true);
 					htmltext = "32711-10.html";
 				}
 				break;

@@ -173,12 +173,12 @@ public final class Q00336_CoinsOfMagic extends Quest
 			case COLLOB:
 			case HEAD_BLACKSMITH_FERRIS:
 			{
-				if (qs.hasQuestItems(Q_CC_MEMBERSHIP_1))
+				if (hasQuestItems(player, Q_CC_MEMBERSHIP_1))
 				{
 					resetParams(qs);
 					return npc.getId() + "-01.html";
 				}
-				if (qs.hasQuestItems(Q_CC_MEMBERSHIP_2) || qs.hasQuestItems(Q_CC_MEMBERSHIP_3))
+				if (hasQuestItems(player, Q_CC_MEMBERSHIP_2) || hasQuestItems(player, Q_CC_MEMBERSHIP_3))
 				{
 					return npc.getId() + "-54.html";
 				}
@@ -188,12 +188,12 @@ public final class Q00336_CoinsOfMagic extends Quest
 			case STAN:
 			case BLACKSMITH_DUNING:
 			{
-				if (qs.hasQuestItems(Q_CC_MEMBERSHIP_1) || qs.hasQuestItems(Q_CC_MEMBERSHIP_2))
+				if (hasQuestItems(player, Q_CC_MEMBERSHIP_1) || hasQuestItems(player, Q_CC_MEMBERSHIP_2))
 				{
 					resetParams(qs);
 					return npc.getId() + "-01.html";
 				}
-				if (qs.hasQuestItems(Q_CC_MEMBERSHIP_3))
+				if (hasQuestItems(player, Q_CC_MEMBERSHIP_3))
 				{
 					return npc.getId() + "-54.html";
 				}
@@ -203,7 +203,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 			case MAGISTER_PAGE:
 			case RESEARCHER_LORAIN:
 			{
-				if (qs.hasQuestItems(Q_CC_MEMBERSHIP_1) || qs.hasQuestItems(Q_CC_MEMBERSHIP_2) || qs.hasQuestItems(Q_CC_MEMBERSHIP_3))
+				if (hasQuestItems(player, Q_CC_MEMBERSHIP_1) || hasQuestItems(player, Q_CC_MEMBERSHIP_2) || hasQuestItems(player, Q_CC_MEMBERSHIP_3))
 				{
 					resetParams(qs);
 					return npc.getId() + "-01.html";
@@ -212,7 +212,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 			}
 			case UNION_PRESIDENT_BERNARD:
 			{
-				if ((qs.getMemoState() == 1) && qs.hasQuestItems(Q_COIN_DIAGRAM))
+				if ((qs.getMemoState() == 1) && hasQuestItems(player, Q_COIN_DIAGRAM))
 				{
 					return "30702-01.html";
 				}
@@ -237,30 +237,30 @@ public final class Q00336_CoinsOfMagic extends Quest
 				}
 				if (qs.isStarted())
 				{
-					if (!qs.hasQuestItems(Q_KALDIS_GOLD_DRAGON) && ((qs.getMemoState() == 1) || (qs.getMemoState() == 2)))
+					if (!hasQuestItems(player, Q_KALDIS_GOLD_DRAGON) && ((qs.getMemoState() == 1) || (qs.getMemoState() == 2)))
 					{
 						return "30232-06.html";
 					}
-					if (qs.hasQuestItems(Q_KALDIS_GOLD_DRAGON) && ((qs.getMemoState() == 1) || (qs.getMemoState() == 2)))
+					if (hasQuestItems(player, Q_KALDIS_GOLD_DRAGON) && ((qs.getMemoState() == 1) || (qs.getMemoState() == 2)))
 					{
-						qs.giveItems(Q_CC_MEMBERSHIP_3, 1);
-						qs.takeItems(Q_COIN_DIAGRAM, -1);
-						qs.takeItems(Q_KALDIS_GOLD_DRAGON, 1);
+						giveItems(player, Q_CC_MEMBERSHIP_3, 1);
+						takeItems(player, Q_COIN_DIAGRAM, -1);
+						takeItems(player, Q_KALDIS_GOLD_DRAGON, 1);
 						qs.setMemoState(3);
 						qs.setCond(4);
 						qs.showQuestionMark(336);
-						qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						return "30232-07.html";
 					}
-					if (qs.hasQuestItems(Q_CC_MEMBERSHIP_3) && (qs.getMemoState() == 3))
+					if (hasQuestItems(player, Q_CC_MEMBERSHIP_3) && (qs.getMemoState() == 3))
 					{
 						return "30232-10.html";
 					}
-					if (qs.hasQuestItems(Q_CC_MEMBERSHIP_2) && (qs.getMemoState() == 3))
+					if (hasQuestItems(player, Q_CC_MEMBERSHIP_2) && (qs.getMemoState() == 3))
 					{
 						return "30232-11.html";
 					}
-					if (qs.hasQuestItems(Q_CC_MEMBERSHIP_1) && (qs.getMemoState() == 3))
+					if (hasQuestItems(player, Q_CC_MEMBERSHIP_1) && (qs.getMemoState() == 3))
 					{
 						return "30232-12.html";
 					}
@@ -283,15 +283,15 @@ public final class Q00336_CoinsOfMagic extends Quest
 		
 		if (event.equals("QUEST_ACCEPTED"))
 		{
-			qs.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
-			if (!qs.hasQuestItems(Q_COIN_DIAGRAM))
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			if (!hasQuestItems(player, Q_COIN_DIAGRAM))
 			{
-				qs.giveItems(Q_COIN_DIAGRAM, 1);
+				giveItems(player, Q_COIN_DIAGRAM, 1);
 			}
 			qs.setMemoState(1);
 			qs.startQuest();
 			qs.showQuestionMark(336);
-			qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 			return "30232-05.htm";
 		}
 		if (event.contains(".htm"))
@@ -794,7 +794,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 						qs.setMemoState(2);
 						qs.setCond(2);
 						qs.showQuestionMark(336);
-						qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						return "30702-03.html";
 					}
 					case 3:
@@ -802,14 +802,14 @@ public final class Q00336_CoinsOfMagic extends Quest
 						qs.setMemoState(2);
 						qs.setCond(2);
 						qs.showQuestionMark(336);
-						qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						return "30702-04.html";
 					}
 					case 4:
 					{
 						qs.setCond(7);
 						qs.showQuestionMark(336);
-						qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						return "30702-06.html";
 					}
 				}
@@ -837,51 +837,51 @@ public final class Q00336_CoinsOfMagic extends Quest
 					}
 					case 5:
 					{
-						if (qs.hasQuestItems(Q_CC_MEMBERSHIP_3))
+						if (hasQuestItems(player, Q_CC_MEMBERSHIP_3))
 						{
-							if (qs.hasQuestItems(Q_BLOOD_DREVANUL, Q_BLOOD_WEREWOLF, Q_GOLD_KNIGHT, Q_GOLD_DRAKE, Q_SILVER_FAIRY, Q_SILVER_GOLEM))
+							if (hasQuestItems(player, Q_BLOOD_DREVANUL, Q_BLOOD_WEREWOLF, Q_GOLD_KNIGHT, Q_GOLD_DRAKE, Q_SILVER_FAIRY, Q_SILVER_GOLEM))
 							{
 								qs.setCond(9);
 								qs.showQuestionMark(336);
-								qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
-								qs.takeItems(Q_CC_MEMBERSHIP_3, -1);
-								qs.takeItems(Q_BLOOD_DREVANUL, 1);
-								qs.takeItems(Q_BLOOD_WEREWOLF, 1);
-								qs.takeItems(Q_GOLD_KNIGHT, 1);
-								qs.takeItems(Q_GOLD_DRAKE, 1);
-								qs.takeItems(Q_SILVER_FAIRY, 1);
-								qs.takeItems(Q_SILVER_GOLEM, 1);
-								qs.giveItems(Q_CC_MEMBERSHIP_2, 1);
+								playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								takeItems(player, Q_CC_MEMBERSHIP_3, -1);
+								takeItems(player, Q_BLOOD_DREVANUL, 1);
+								takeItems(player, Q_BLOOD_WEREWOLF, 1);
+								takeItems(player, Q_GOLD_KNIGHT, 1);
+								takeItems(player, Q_GOLD_DRAKE, 1);
+								takeItems(player, Q_SILVER_FAIRY, 1);
+								takeItems(player, Q_SILVER_GOLEM, 1);
+								giveItems(player, Q_CC_MEMBERSHIP_2, 1);
 								return "30232-16.html";
 							}
 							qs.setCond(8);
 							qs.showQuestionMark(336);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-13.html";
 						}
-						if (qs.hasQuestItems(Q_CC_MEMBERSHIP_2))
+						if (hasQuestItems(player, Q_CC_MEMBERSHIP_2))
 						{
-							if (qs.hasQuestItems(Q_BLOOD_BASILISK, Q_BLOOD_SUCCUBUS, Q_GOLD_GIANT, Q_GOLD_WYRM, Q_SILVER_UNDINE, Q_SILVER_DRYAD))
+							if (hasQuestItems(player, Q_BLOOD_BASILISK, Q_BLOOD_SUCCUBUS, Q_GOLD_GIANT, Q_GOLD_WYRM, Q_SILVER_UNDINE, Q_SILVER_DRYAD))
 							{
 								qs.setCond(11);
 								qs.showQuestionMark(336);
-								qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
-								qs.takeItems(Q_CC_MEMBERSHIP_2, -1);
-								qs.takeItems(Q_BLOOD_BASILISK, 1);
-								qs.takeItems(Q_BLOOD_SUCCUBUS, 1);
-								qs.takeItems(Q_GOLD_GIANT, 1);
-								qs.takeItems(Q_GOLD_WYRM, 1);
-								qs.takeItems(Q_SILVER_UNDINE, 1);
-								qs.takeItems(Q_SILVER_DRYAD, 1);
-								qs.giveItems(Q_CC_MEMBERSHIP_1, 1);
+								playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								takeItems(player, Q_CC_MEMBERSHIP_2, -1);
+								takeItems(player, Q_BLOOD_BASILISK, 1);
+								takeItems(player, Q_BLOOD_SUCCUBUS, 1);
+								takeItems(player, Q_GOLD_GIANT, 1);
+								takeItems(player, Q_GOLD_WYRM, 1);
+								takeItems(player, Q_SILVER_UNDINE, 1);
+								takeItems(player, Q_SILVER_DRYAD, 1);
+								giveItems(player, Q_CC_MEMBERSHIP_1, 1);
 								return "30232-17.html";
 							}
 							qs.setCond(10);
 							qs.showQuestionMark(336);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-14.html";
 						}
-						if (qs.hasQuestItems(Q_CC_MEMBERSHIP_1))
+						if (hasQuestItems(player, Q_CC_MEMBERSHIP_1))
 						{
 							return "30232-15.html";
 						}
@@ -907,180 +907,180 @@ public final class Q00336_CoinsOfMagic extends Quest
 					{
 						qs.setCond(6);
 						qs.showQuestionMark(336);
-						qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						return "30232-22.html";
 					}
 					case 11:
 					{
 						qs.setCond(5);
 						qs.showQuestionMark(336);
-						qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						return "30232-23.html";
 					}
 					case 20:
 					{
-						if (qs.hasQuestItems(Q_BERETHS_BLOOD_DRAGON) && qs.hasQuestItems(Q_SILVER_DRAGON) && (qs.getQuestItemsCount(Q_GOLD_WYRM) >= 13))
+						if (hasQuestItems(player, Q_BERETHS_BLOOD_DRAGON) && hasQuestItems(player, Q_SILVER_DRAGON) && (getQuestItemsCount(player, Q_GOLD_WYRM) >= 13))
 						{
-							qs.takeItems(Q_BERETHS_BLOOD_DRAGON, 1);
-							qs.takeItems(Q_SILVER_DRAGON, 1);
-							qs.takeItems(Q_GOLD_WYRM, 13);
-							qs.giveItems(DEMON_STAFF, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_BERETHS_BLOOD_DRAGON, 1);
+							takeItems(player, Q_SILVER_DRAGON, 1);
+							takeItems(player, Q_GOLD_WYRM, 13);
+							giveItems(player, DEMON_STAFF, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24a.html";
 						}
 						return "30232-24.html";
 					}
 					case 21:
 					{
-						if (qs.hasQuestItems(Q_BERETHS_GOLD_DRAGON) && qs.hasQuestItems(Q_BLOOD_DRAGON) && qs.hasQuestItems(Q_SILVER_DRYAD) && qs.hasQuestItems(Q_GOLD_GIANT))
+						if (hasQuestItems(player, Q_BERETHS_GOLD_DRAGON) && hasQuestItems(player, Q_BLOOD_DRAGON) && hasQuestItems(player, Q_SILVER_DRYAD) && hasQuestItems(player, Q_GOLD_GIANT))
 						{
-							qs.takeItems(Q_BERETHS_GOLD_DRAGON, 1);
-							qs.takeItems(Q_BLOOD_DRAGON, 1);
-							qs.takeItems(Q_SILVER_DRYAD, 1);
-							qs.takeItems(Q_GOLD_GIANT, 1);
-							qs.giveItems(DARK_SCREAMER, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_BERETHS_GOLD_DRAGON, 1);
+							takeItems(player, Q_BLOOD_DRAGON, 1);
+							takeItems(player, Q_SILVER_DRYAD, 1);
+							takeItems(player, Q_GOLD_GIANT, 1);
+							giveItems(player, DARK_SCREAMER, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24b.html";
 						}
 						return "30232-24.html";
 					}
 					case 22:
 					{
-						if (qs.hasQuestItems(Q_BERETHS_SILVER_DRAGON) && qs.hasQuestItems(Q_GOLD_DRAGON) && qs.hasQuestItems(Q_BLOOD_SUCCUBUS) && (qs.getQuestItemsCount(Q_BLOOD_BASILISK) >= 2))
+						if (hasQuestItems(player, Q_BERETHS_SILVER_DRAGON) && hasQuestItems(player, Q_GOLD_DRAGON) && hasQuestItems(player, Q_BLOOD_SUCCUBUS) && (getQuestItemsCount(player, Q_BLOOD_BASILISK) >= 2))
 						{
-							qs.takeItems(Q_BERETHS_SILVER_DRAGON, 1);
-							qs.takeItems(Q_GOLD_DRAGON, 1);
-							qs.takeItems(Q_BLOOD_SUCCUBUS, 1);
-							qs.takeItems(Q_BLOOD_BASILISK, 2);
-							qs.giveItems(WIDOW_MAKER, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_BERETHS_SILVER_DRAGON, 1);
+							takeItems(player, Q_GOLD_DRAGON, 1);
+							takeItems(player, Q_BLOOD_SUCCUBUS, 1);
+							takeItems(player, Q_BLOOD_BASILISK, 2);
+							giveItems(player, WIDOW_MAKER, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24c.html";
 						}
 						return "30232-24.html";
 					}
 					case 23:
 					{
-						if (qs.hasQuestItems(Q_GOLD_DRAGON) && qs.hasQuestItems(Q_SILVER_DRAGON) && qs.hasQuestItems(Q_BLOOD_DRAGON) && qs.hasQuestItems(Q_SILVER_UNDINE))
+						if (hasQuestItems(player, Q_GOLD_DRAGON) && hasQuestItems(player, Q_SILVER_DRAGON) && hasQuestItems(player, Q_BLOOD_DRAGON) && hasQuestItems(player, Q_SILVER_UNDINE))
 						{
-							qs.takeItems(Q_GOLD_DRAGON, 1);
-							qs.takeItems(Q_SILVER_DRAGON, 1);
-							qs.takeItems(Q_BLOOD_DRAGON, 1);
-							qs.takeItems(Q_SILVER_UNDINE, 1);
-							qs.giveItems(SWORD_OF_LIMIT, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_GOLD_DRAGON, 1);
+							takeItems(player, Q_SILVER_DRAGON, 1);
+							takeItems(player, Q_BLOOD_DRAGON, 1);
+							takeItems(player, Q_SILVER_UNDINE, 1);
+							giveItems(player, SWORD_OF_LIMIT, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24d.html";
 						}
 						return "30232-24.html";
 					}
 					case 24:
 					{
-						if (qs.hasQuestItems(Q_MANAKS_GOLD_GIANT))
+						if (hasQuestItems(player, Q_MANAKS_GOLD_GIANT))
 						{
-							qs.takeItems(Q_MANAKS_GOLD_GIANT, 1);
-							qs.giveItems(DEMONS_BOOTS, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_MANAKS_GOLD_GIANT, 1);
+							giveItems(player, DEMONS_BOOTS, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24e.html";
 						}
 						return "30232-24.html";
 					}
 					case 25:
 					{
-						if (qs.hasQuestItems(Q_MANAKS_SILVER_DRYAD) && qs.hasQuestItems(Q_SILVER_DRYAD))
+						if (hasQuestItems(player, Q_MANAKS_SILVER_DRYAD) && hasQuestItems(player, Q_SILVER_DRYAD))
 						{
-							qs.takeItems(Q_MANAKS_SILVER_DRYAD, 1);
-							qs.takeItems(Q_SILVER_DRYAD, 1);
-							qs.giveItems(DEMONS_HOSE, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_MANAKS_SILVER_DRYAD, 1);
+							takeItems(player, Q_SILVER_DRYAD, 1);
+							giveItems(player, DEMONS_HOSE, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24f.html";
 						}
 						return "30232-24.html";
 					}
 					case 26:
 					{
-						if (qs.hasQuestItems(Q_MANAKS_GOLD_GIANT))
+						if (hasQuestItems(player, Q_MANAKS_GOLD_GIANT))
 						{
-							qs.takeItems(Q_MANAKS_GOLD_GIANT, 1);
-							qs.giveItems(DEMONS_GLOVES, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_MANAKS_GOLD_GIANT, 1);
+							giveItems(player, DEMONS_GLOVES, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24g.html";
 						}
 						return "30232-24.html";
 					}
 					case 27:
 					{
-						if (qs.hasQuestItems(Q_MANAKS_BLOOD_WEREWOLF) && qs.hasQuestItems(Q_GOLD_GIANT) && qs.hasQuestItems(Q_GOLD_WYRM))
+						if (hasQuestItems(player, Q_MANAKS_BLOOD_WEREWOLF) && hasQuestItems(player, Q_GOLD_GIANT) && hasQuestItems(player, Q_GOLD_WYRM))
 						{
-							qs.takeItems(Q_MANAKS_BLOOD_WEREWOLF, 1);
-							qs.takeItems(Q_GOLD_GIANT, 1);
-							qs.takeItems(Q_GOLD_WYRM, 1);
-							qs.giveItems(FULL_PLATE_HELMET, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_MANAKS_BLOOD_WEREWOLF, 1);
+							takeItems(player, Q_GOLD_GIANT, 1);
+							takeItems(player, Q_GOLD_WYRM, 1);
+							giveItems(player, FULL_PLATE_HELMET, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24h.html";
 						}
 						return "30232-24.html";
 					}
 					case 28:
 					{
-						if ((qs.getQuestItemsCount(Q_NIAS_BLOOD_MEDUSA) >= 2) && (qs.getQuestItemsCount(Q_GOLD_DRAKE) >= 2) && (qs.getQuestItemsCount(Q_BLOOD_DREVANUL) >= 2) && (qs.getQuestItemsCount(Q_GOLD_KNIGHT) >= 3))
+						if ((getQuestItemsCount(player, Q_NIAS_BLOOD_MEDUSA) >= 2) && (getQuestItemsCount(player, Q_GOLD_DRAKE) >= 2) && (getQuestItemsCount(player, Q_BLOOD_DREVANUL) >= 2) && (getQuestItemsCount(player, Q_GOLD_KNIGHT) >= 3))
 						{
-							qs.takeItems(Q_NIAS_BLOOD_MEDUSA, 2);
-							qs.takeItems(Q_GOLD_DRAKE, 2);
-							qs.takeItems(Q_BLOOD_DREVANUL, 2);
-							qs.takeItems(Q_GOLD_KNIGHT, 3);
-							qs.giveItems(MOONSTONE_EARING, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_NIAS_BLOOD_MEDUSA, 2);
+							takeItems(player, Q_GOLD_DRAKE, 2);
+							takeItems(player, Q_BLOOD_DREVANUL, 2);
+							takeItems(player, Q_GOLD_KNIGHT, 3);
+							giveItems(player, MOONSTONE_EARING, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24i.html";
 						}
 						return "30232-24.html";
 					}
 					case 29:
 					{
-						if ((qs.getQuestItemsCount(Q_NIAS_BLOOD_MEDUSA) >= 7) && (qs.getQuestItemsCount(Q_GOLD_KNIGHT) >= 5) && (qs.getQuestItemsCount(Q_BLOOD_DREVANUL) >= 5) && (qs.getQuestItemsCount(Q_SILVER_GOLEM) >= 5))
+						if ((getQuestItemsCount(player, Q_NIAS_BLOOD_MEDUSA) >= 7) && (getQuestItemsCount(player, Q_GOLD_KNIGHT) >= 5) && (getQuestItemsCount(player, Q_BLOOD_DREVANUL) >= 5) && (getQuestItemsCount(player, Q_SILVER_GOLEM) >= 5))
 						{
-							qs.takeItems(Q_NIAS_BLOOD_MEDUSA, 7);
-							qs.takeItems(Q_GOLD_KNIGHT, 5);
-							qs.takeItems(Q_BLOOD_DREVANUL, 5);
-							qs.takeItems(Q_SILVER_GOLEM, 5);
-							qs.giveItems(NASSENS_EARING, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_NIAS_BLOOD_MEDUSA, 7);
+							takeItems(player, Q_GOLD_KNIGHT, 5);
+							takeItems(player, Q_BLOOD_DREVANUL, 5);
+							takeItems(player, Q_SILVER_GOLEM, 5);
+							giveItems(player, NASSENS_EARING, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24j.html";
 						}
 						return "30232-24.html";
 					}
 					case 30:
 					{
-						if ((qs.getQuestItemsCount(Q_NIAS_GOLD_WYVERN) >= 5) && (qs.getQuestItemsCount(Q_SILVER_GOLEM) >= 4) && (qs.getQuestItemsCount(Q_GOLD_DRAKE) >= 4) && (qs.getQuestItemsCount(Q_BLOOD_DREVANUL) >= 4))
+						if ((getQuestItemsCount(player, Q_NIAS_GOLD_WYVERN) >= 5) && (getQuestItemsCount(player, Q_SILVER_GOLEM) >= 4) && (getQuestItemsCount(player, Q_GOLD_DRAKE) >= 4) && (getQuestItemsCount(player, Q_BLOOD_DREVANUL) >= 4))
 						{
-							qs.takeItems(Q_NIAS_GOLD_WYVERN, 5);
-							qs.takeItems(Q_SILVER_GOLEM, 4);
-							qs.takeItems(Q_GOLD_DRAKE, 4);
-							qs.takeItems(Q_BLOOD_DREVANUL, 4);
-							qs.giveItems(RING_OF_BINDING, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_NIAS_GOLD_WYVERN, 5);
+							takeItems(player, Q_SILVER_GOLEM, 4);
+							takeItems(player, Q_GOLD_DRAKE, 4);
+							takeItems(player, Q_BLOOD_DREVANUL, 4);
+							giveItems(player, RING_OF_BINDING, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24k.html";
 						}
 						return "30232-24.html";
 					}
 					case 31:
 					{
-						if ((qs.getQuestItemsCount(Q_NIAS_SILVER_FAIRY) >= 5) && (qs.getQuestItemsCount(Q_SILVER_FAIRY) >= 3) && (qs.getQuestItemsCount(Q_GOLD_KNIGHT) >= 3) && (qs.getQuestItemsCount(Q_BLOOD_DREVANUL) >= 3))
+						if ((getQuestItemsCount(player, Q_NIAS_SILVER_FAIRY) >= 5) && (getQuestItemsCount(player, Q_SILVER_FAIRY) >= 3) && (getQuestItemsCount(player, Q_GOLD_KNIGHT) >= 3) && (getQuestItemsCount(player, Q_BLOOD_DREVANUL) >= 3))
 						{
-							qs.takeItems(Q_NIAS_SILVER_FAIRY, 5);
-							qs.takeItems(Q_SILVER_FAIRY, 3);
-							qs.takeItems(Q_GOLD_KNIGHT, 3);
-							qs.takeItems(Q_BLOOD_DREVANUL, 3);
-							qs.giveItems(NECKLACE_OF_PROTECTION, 1);
-							qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							takeItems(player, Q_NIAS_SILVER_FAIRY, 5);
+							takeItems(player, Q_SILVER_FAIRY, 3);
+							takeItems(player, Q_GOLD_KNIGHT, 3);
+							takeItems(player, Q_BLOOD_DREVANUL, 3);
+							giveItems(player, NECKLACE_OF_PROTECTION, 1);
+							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							return "30232-24l.html";
 						}
 						return "30232-24.html";
 					}
 					case 100:
 					{
-						qs.takeItems(Q_CC_MEMBERSHIP_1, -1);
-						qs.takeItems(Q_CC_MEMBERSHIP_2, -1);
-						qs.takeItems(Q_CC_MEMBERSHIP_3, -1);
-						qs.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
+						takeItems(player, Q_CC_MEMBERSHIP_1, -1);
+						takeItems(player, Q_CC_MEMBERSHIP_2, -1);
+						takeItems(player, Q_CC_MEMBERSHIP_3, -1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_FINISH);
 						qs.exitQuest(true);
 						return "30232-18a.html";
 					}
@@ -1373,17 +1373,18 @@ public final class Q00336_CoinsOfMagic extends Quest
 	 */
 	private String shortFirstSteps(QuestState qs, int npcId, int weightPoint, int base, int ITEM_1_1, int ITEM_1_2, int ITEM_1_MUL, int ITEM_2, int ITEM_3, int ITEM_4)
 	{
+		final L2PcInstance player = qs.getPlayer();
 		switch (qs.getInt(PARAM_2))
 		{
 			case 42:
 			{
-				if ((qs.getQuestItemsCount(ITEM_1_1) >= (base * ITEM_1_MUL)) && ((ITEM_1_2 == 0) || (qs.getQuestItemsCount(ITEM_1_2) >= base)))
+				if ((getQuestItemsCount(player, ITEM_1_1) >= (base * ITEM_1_MUL)) && ((ITEM_1_2 == 0) || (getQuestItemsCount(player, ITEM_1_2) >= base)))
 				{
 					qs.set(FLAG, 1);
-					qs.takeItems(ITEM_1_1, base * ITEM_1_MUL);
+					takeItems(player, ITEM_1_1, base * ITEM_1_MUL);
 					if (ITEM_1_2 > 0)
 					{
-						qs.takeItems(ITEM_1_2, base);
+						takeItems(player, ITEM_1_2, base);
 					}
 					qs.set(WEIGHT_POINT, weightPoint);
 					int param1 = getRandom(3) + 1;
@@ -1396,10 +1397,10 @@ public final class Q00336_CoinsOfMagic extends Quest
 			}
 			case 31:
 			{
-				if (qs.getQuestItemsCount(ITEM_2) >= base)
+				if (getQuestItemsCount(player, ITEM_2) >= base)
 				{
 					qs.set(FLAG, 1);
-					qs.takeItems(ITEM_2, base);
+					takeItems(player, ITEM_2, base);
 					qs.set(WEIGHT_POINT, weightPoint);
 					int param1 = getRandom(3) + 1;
 					param1 += (getRandom(3) + 1) * 4;
@@ -1411,10 +1412,10 @@ public final class Q00336_CoinsOfMagic extends Quest
 			}
 			case 21:
 			{
-				if (qs.getQuestItemsCount(ITEM_3) >= base)
+				if (getQuestItemsCount(player, ITEM_3) >= base)
 				{
 					qs.set(FLAG, 1);
-					qs.takeItems(ITEM_3, base);
+					takeItems(player, ITEM_3, base);
 					qs.set(WEIGHT_POINT, weightPoint);
 					int param1 = getRandom(3) + 1;
 					param1 += (getRandom(3) + 1) * 4;
@@ -1426,10 +1427,10 @@ public final class Q00336_CoinsOfMagic extends Quest
 			}
 			case 11:
 			{
-				if (qs.getQuestItemsCount(ITEM_4) >= base)
+				if (getQuestItemsCount(player, ITEM_4) >= base)
 				{
 					qs.set(FLAG, 1);
-					qs.takeItems(ITEM_4, base);
+					takeItems(player, ITEM_4, base);
 					qs.set(WEIGHT_POINT, weightPoint);
 					int param1 = getRandom(3) + 1;
 					param1 += (getRandom(3) + 1) * 4;
@@ -1460,48 +1461,49 @@ public final class Q00336_CoinsOfMagic extends Quest
 	 */
 	private String shortSecondStepOneItem(QuestState qs, int npcId, int mul, int ITEM_1, int ITEM_1_MUL, int REWARD_1, int ITEM_2, int REWARD_2, int ITEM_3, int REWARD_3, int ITEM_4, int REWARD_4)
 	{
+		final L2PcInstance player = qs.getPlayer();
 		switch (qs.getInt(PARAM_2))
 		{
 			case 42:
 			{
-				if ((qs.getQuestItemsCount(ITEM_1) >= (10 * mul * ITEM_1_MUL)))
+				if ((getQuestItemsCount(player, ITEM_1) >= (10 * mul * ITEM_1_MUL)))
 				{
-					qs.takeItems(ITEM_1, 10 * mul * ITEM_1_MUL);
-					qs.giveItems(REWARD_1, 1 * mul);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					takeItems(player, ITEM_1, 10 * mul * ITEM_1_MUL);
+					giveItems(player, REWARD_1, 1 * mul);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
 				break;
 			}
 			case 31:
 			{
-				if (qs.getQuestItemsCount(ITEM_2) >= (5 * mul))
+				if (getQuestItemsCount(player, ITEM_2) >= (5 * mul))
 				{
-					qs.takeItems(ITEM_2, 5 * mul);
-					qs.giveItems(REWARD_2, 1 * mul);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					takeItems(player, ITEM_2, 5 * mul);
+					giveItems(player, REWARD_2, 1 * mul);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
 				break;
 			}
 			case 21:
 			{
-				if (qs.getQuestItemsCount(ITEM_3) >= (5 * mul))
+				if (getQuestItemsCount(player, ITEM_3) >= (5 * mul))
 				{
-					qs.takeItems(ITEM_3, 5 * mul);
-					qs.giveItems(REWARD_3, 1 * mul);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					takeItems(player, ITEM_3, 5 * mul);
+					giveItems(player, REWARD_3, 1 * mul);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
 				break;
 			}
 			case 11:
 			{
-				if (qs.getQuestItemsCount(ITEM_4) >= (5 * mul))
+				if (getQuestItemsCount(player, ITEM_4) >= (5 * mul))
 				{
-					qs.takeItems(ITEM_4, 5 * mul);
-					qs.giveItems(REWARD_4, 1 * mul);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					takeItems(player, ITEM_4, 5 * mul);
+					giveItems(player, REWARD_4, 1 * mul);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
 				break;
@@ -1530,52 +1532,53 @@ public final class Q00336_CoinsOfMagic extends Quest
 	 */
 	private String shortSecondStepTwoItems(QuestState qs, int npcId, int mul, int ITEM_1_1, int ITEM_1_2, int REWARD_1, int ITEM_2_1, int ITEM_2_2, int REWARD_2, int ITEM_3_1, int ITEM_3_2, int REWARD_3, int ITEM_4_1, int ITEM_4_2, int REWARD_4)
 	{
+		final L2PcInstance player = qs.getPlayer();
 		switch (qs.getInt(PARAM_2))
 		{
 			case 42:
 			{
-				if ((qs.getQuestItemsCount(ITEM_1_1) >= (10 * mul)) && (qs.getQuestItemsCount(ITEM_1_2) >= (10 * mul)))
+				if ((getQuestItemsCount(player, ITEM_1_1) >= (10 * mul)) && (getQuestItemsCount(player, ITEM_1_2) >= (10 * mul)))
 				{
-					qs.takeItems(ITEM_1_1, 10 * mul);
-					qs.takeItems(ITEM_1_2, 10 * mul);
-					qs.giveItems(REWARD_1, 1 * mul);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					takeItems(player, ITEM_1_1, 10 * mul);
+					takeItems(player, ITEM_1_2, 10 * mul);
+					giveItems(player, REWARD_1, 1 * mul);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
 				break;
 			}
 			case 31:
 			{
-				if ((qs.getQuestItemsCount(ITEM_2_1) >= (5 * mul)) && (qs.getQuestItemsCount(ITEM_2_2) >= (5 * mul)))
+				if ((getQuestItemsCount(player, ITEM_2_1) >= (5 * mul)) && (getQuestItemsCount(player, ITEM_2_2) >= (5 * mul)))
 				{
-					qs.takeItems(ITEM_2_1, 5 * mul);
-					qs.takeItems(ITEM_2_2, 5 * mul);
-					qs.giveItems(REWARD_2, 1 * mul);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					takeItems(player, ITEM_2_1, 5 * mul);
+					takeItems(player, ITEM_2_2, 5 * mul);
+					giveItems(player, REWARD_2, 1 * mul);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
 				break;
 			}
 			case 21:
 			{
-				if ((qs.getQuestItemsCount(ITEM_3_1) >= (5 * mul)) && (qs.getQuestItemsCount(ITEM_3_2) >= (5 * mul)))
+				if ((getQuestItemsCount(player, ITEM_3_1) >= (5 * mul)) && (getQuestItemsCount(player, ITEM_3_2) >= (5 * mul)))
 				{
-					qs.takeItems(ITEM_3_1, 5 * mul);
-					qs.takeItems(ITEM_3_2, 5 * mul);
-					qs.giveItems(REWARD_3, 1 * mul);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					takeItems(player, ITEM_3_1, 5 * mul);
+					takeItems(player, ITEM_3_2, 5 * mul);
+					giveItems(player, REWARD_3, 1 * mul);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
 				break;
 			}
 			case 11:
 			{
-				if ((qs.getQuestItemsCount(ITEM_4_1) >= (5 * mul)) && (qs.getQuestItemsCount(ITEM_4_2) >= (5 * mul)))
+				if ((getQuestItemsCount(player, ITEM_4_1) >= (5 * mul)) && (getQuestItemsCount(player, ITEM_4_2) >= (5 * mul)))
 				{
-					qs.takeItems(ITEM_4_1, 5 * mul);
-					qs.takeItems(ITEM_4_2, 5 * mul);
-					qs.giveItems(REWARD_4, 1 * mul);
-					qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					takeItems(player, ITEM_4_1, 5 * mul);
+					takeItems(player, ITEM_4_2, 5 * mul);
+					giveItems(player, REWARD_4, 1 * mul);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					return npcId + "-07.html";
 				}
 				break;
@@ -1596,6 +1599,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 	 */
 	private String shortThirdStep(QuestState qs, int npcId, int flag, int ITEM_1, int ITEM_2, int ITEM_3, int ITEM_4)
 	{
+		final L2PcInstance player = qs.getPlayer();
 		qs.set(PARAM_3, 0);
 		qs.set(FLAG, qs.getInt(FLAG) + flag);
 		if ((qs.getInt(PARAM_1) == qs.getInt(FLAG)) && (qs.getInt(WEIGHT_POINT) >= 0))
@@ -1605,22 +1609,22 @@ public final class Q00336_CoinsOfMagic extends Quest
 			{
 				case 42:
 				{
-					qs.giveItems(ITEM_1, 1);
+					giveItems(player, ITEM_1, 1);
 					break;
 				}
 				case 31:
 				{
-					qs.giveItems(ITEM_2, 1);
+					giveItems(player, ITEM_2, 1);
 					break;
 				}
 				case 21:
 				{
-					qs.giveItems(ITEM_3, 1);
+					giveItems(player, ITEM_3, 1);
 					break;
 				}
 				case 11:
 				{
-					qs.giveItems(ITEM_4, 1);
+					giveItems(player, ITEM_4, 1);
 					break;
 				}
 			}
@@ -1816,7 +1820,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
-		if ((qs != null) && qs.isStarted() && (qs.getMemoState() == memoState) && !qs.hasQuestItems(Q_KALDIS_GOLD_DRAGON))
+		if ((qs != null) && qs.isStarted() && (qs.getMemoState() == memoState) && !hasQuestItems(player, Q_KALDIS_GOLD_DRAGON))
 		{
 			candidates.add(qs);
 			candidates.add(qs);
@@ -1827,7 +1831,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 			player.getParty().getMembers().stream().forEach(pm ->
 			{
 				final QuestState qss = getQuestState(pm, false);
-				if ((qss != null) && qss.isStarted() && (qss.getMemoState() == memoState) && !qss.hasQuestItems(Q_KALDIS_GOLD_DRAGON) && Util.checkIfInRange(1500, npc, pm, true))
+				if ((qss != null) && qss.isStarted() && (qss.getMemoState() == memoState) && !hasQuestItems(player, Q_KALDIS_GOLD_DRAGON) && Util.checkIfInRange(1500, npc, pm, true))
 				{
 					candidates.add(qss);
 				}

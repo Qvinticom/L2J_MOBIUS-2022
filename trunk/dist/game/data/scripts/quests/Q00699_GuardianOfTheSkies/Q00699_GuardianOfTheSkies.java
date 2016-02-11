@@ -67,9 +67,9 @@ public class Q00699_GuardianOfTheSkies extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st != null)
+		if (qs != null)
 		{
 			switch (event)
 			{
@@ -81,13 +81,13 @@ public class Q00699_GuardianOfTheSkies extends Quest
 				}
 				case "32557-04.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
 				case "32557-09.html":
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 					break;
 				}
@@ -99,8 +99,8 @@ public class Q00699_GuardianOfTheSkies extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if (st != null)
+		final QuestState qs = getQuestState(killer, false);
+		if (qs != null)
 		{
 			if (npc.getId() == VALDSTONE)
 			{
@@ -122,15 +122,15 @@ public class Q00699_GuardianOfTheSkies extends Quest
 				{
 					amount = getRandom(10) + 60;
 				}
-				st.giveItems(VULTURES_GOLDEN_FEATHER, amount);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				giveItems(killer, VULTURES_GOLDEN_FEATHER, amount);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			else
 			{
 				if (getRandom(1000) < MONSTERS.get(npc.getId()))
 				{
-					st.giveItems(VULTURES_GOLDEN_FEATHER, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(killer, VULTURES_GOLDEN_FEATHER, 1);
+					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -140,25 +140,25 @@ public class Q00699_GuardianOfTheSkies extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		if (qs != null)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
-					st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-					htmltext = ((st == null) || (!st.isCompleted()) || (player.getLevel() < MIN_LVL)) ? "32557-02.htm" : "32557-01.htm";
+					qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+					htmltext = ((qs == null) || (!qs.isCompleted()) || (player.getLevel() < MIN_LVL)) ? "32557-02.htm" : "32557-01.htm";
 					break;
 				}
 				case State.STARTED:
 				{
-					final long feathers = st.getQuestItemsCount(VULTURES_GOLDEN_FEATHER);
+					final long feathers = getQuestItemsCount(player, VULTURES_GOLDEN_FEATHER);
 					if (feathers > 0)
 					{
-						st.giveAdena(((feathers * VULTURES_GOLDEN_FEATHER_ADENA) + (feathers > BONUS_COUNT ? BONUS : 0)), true);
-						st.takeItems(VULTURES_GOLDEN_FEATHER, -1);
+						giveAdena(player, ((feathers * VULTURES_GOLDEN_FEATHER_ADENA) + (feathers > BONUS_COUNT ? BONUS : 0)), true);
+						takeItems(player, VULTURES_GOLDEN_FEATHER, -1);
 						htmltext = (feathers > BONUS_COUNT) ? "32557-07.html" : "32557-06.html";
 					}
 					else

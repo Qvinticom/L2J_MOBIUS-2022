@@ -84,22 +84,22 @@ public class Q10732_AForeignLand extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case NAVARI:
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
 					htmltext = "33931-01.htm";
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
 					htmltext = "33931-04.html";
 				}
-				else if (st.isCompleted())
+				else if (qs.isCompleted())
 				{
 					htmltext = getAlreadyCompletedMsg(player);
 				}
@@ -107,11 +107,11 @@ public class Q10732_AForeignLand extends Quest
 			}
 			case GERETH:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					htmltext = "33932-01.html";
 				}
-				else if (st.isCompleted())
+				else if (qs.isCompleted())
 				{
 					htmltext = getAlreadyCompletedMsg(player);
 				}

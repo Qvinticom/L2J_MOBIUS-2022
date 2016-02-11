@@ -57,8 +57,8 @@ public final class Q00040_ASpecialOrder extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -67,36 +67,36 @@ public final class Q00040_ASpecialOrder extends Quest
 		{
 			case "accept":
 			{
-				st.setState(State.STARTED);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
+				qs.setState(State.STARTED);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 				if (getRandomBoolean())
 				{
-					st.setCond(2);
+					qs.setCond(2);
 					htmltext = "30081-03.html";
 				}
 				else
 				{
-					st.setCond(5);
+					qs.setCond(5);
 					htmltext = "30081-04.html";
 				}
 				break;
 			}
 			case "30081-07.html":
 			{
-				if (st.isCond(4) && st.hasQuestItems(BOX_OF_FISH))
+				if (qs.isCond(4) && hasQuestItems(player, BOX_OF_FISH))
 				{
-					st.rewardItems(WONDROUS_CUBIC, 1);
-					st.exitQuest(false, true);
+					rewardItems(player, WONDROUS_CUBIC, 1);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30081-10.html":
 			{
-				if (st.isCond(7) && st.hasQuestItems(BOX_OF_SEED))
+				if (qs.isCond(7) && hasQuestItems(player, BOX_OF_SEED))
 				{
-					st.rewardItems(WONDROUS_CUBIC, 1);
-					st.exitQuest(false, true);
+					rewardItems(player, WONDROUS_CUBIC, 1);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -109,18 +109,18 @@ public final class Q00040_ASpecialOrder extends Quest
 			}
 			case "31572-03.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30511-03.html":
 			{
-				if (st.isCond(5))
+				if (qs.isCond(5))
 				{
-					st.setCond(6, true);
+					qs.setCond(6, true);
 					htmltext = event;
 				}
 				break;
@@ -132,9 +132,9 @@ public final class Q00040_ASpecialOrder extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -142,7 +142,7 @@ public final class Q00040_ASpecialOrder extends Quest
 		{
 			case HELVETIA:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -151,7 +151,7 @@ public final class Q00040_ASpecialOrder extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 2:
 							case 3:
@@ -161,7 +161,7 @@ public final class Q00040_ASpecialOrder extends Quest
 							}
 							case 4:
 							{
-								if (st.hasQuestItems(BOX_OF_FISH))
+								if (hasQuestItems(player, BOX_OF_FISH))
 								{
 									htmltext = "30081-06.html";
 								}
@@ -175,7 +175,7 @@ public final class Q00040_ASpecialOrder extends Quest
 							}
 							case 7:
 							{
-								if (st.hasQuestItems(BOX_OF_SEED))
+								if (hasQuestItems(player, BOX_OF_SEED))
 								{
 									htmltext = "30081-09.html";
 								}
@@ -194,7 +194,7 @@ public final class Q00040_ASpecialOrder extends Quest
 			}
 			case OFULLE:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 2:
 					{
@@ -203,10 +203,10 @@ public final class Q00040_ASpecialOrder extends Quest
 					}
 					case 3:
 					{
-						if ((st.getQuestItemsCount(ORANGE_SWIFT_FISH) >= 10) && (st.getQuestItemsCount(ORANGE_UGLY_FISH) >= 10) && (st.getQuestItemsCount(ORANGE_WIDE_FISH) >= 10))
+						if ((getQuestItemsCount(player, ORANGE_SWIFT_FISH) >= 10) && (getQuestItemsCount(player, ORANGE_UGLY_FISH) >= 10) && (getQuestItemsCount(player, ORANGE_WIDE_FISH) >= 10))
 						{
-							st.setCond(4, true);
-							st.giveItems(BOX_OF_FISH, 1);
+							qs.setCond(4, true);
+							giveItems(player, BOX_OF_FISH, 1);
 							takeItems(player, 10, ORANGE_SWIFT_FISH, ORANGE_UGLY_FISH, ORANGE_WIDE_FISH);
 							htmltext = "31572-05.html";
 						}
@@ -226,7 +226,7 @@ public final class Q00040_ASpecialOrder extends Quest
 			}
 			case GESTO:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 5:
 					{
@@ -235,10 +235,10 @@ public final class Q00040_ASpecialOrder extends Quest
 					}
 					case 6:
 					{
-						if ((st.getQuestItemsCount(GOLDEN_COBOL) >= 40) && (st.getQuestItemsCount(BUR_COBOL) >= 40) && (st.getQuestItemsCount(GREAT_COBOL) >= 40))
+						if ((getQuestItemsCount(player, GOLDEN_COBOL) >= 40) && (getQuestItemsCount(player, BUR_COBOL) >= 40) && (getQuestItemsCount(player, GREAT_COBOL) >= 40))
 						{
-							st.setCond(7, true);
-							st.giveItems(BOX_OF_SEED, 1);
+							qs.setCond(7, true);
+							giveItems(player, BOX_OF_SEED, 1);
 							takeItems(player, 40, GOLDEN_COBOL, BUR_COBOL, GREAT_COBOL);
 							htmltext = "30511-05.html";
 						}

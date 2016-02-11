@@ -25,17 +25,14 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.AbstractScript;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowQuestMark;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -658,115 +655,6 @@ public final class QuestState
 		((L2PcInstance) character).addNotifyQuestOfDeath(this);
 	}
 	
-	// TODO: This all remains because of backward compatibility, should be cleared when all scripts are rewritten in java
-	
-	/**
-	 * Return the quantity of one sort of item hold by the player
-	 * @param itemId the Id of the item wanted to be count
-	 * @return long
-	 */
-	public long getQuestItemsCount(int itemId)
-	{
-		return AbstractScript.getQuestItemsCount(_player, itemId);
-	}
-	
-	/**
-	 * @param itemId the Id of the item required
-	 * @return true if item exists in player's inventory, false - if not
-	 */
-	public boolean hasQuestItems(int itemId)
-	{
-		return AbstractScript.hasQuestItems(_player, itemId);
-	}
-	
-	/**
-	 * @param itemIds list of items that are required
-	 * @return true if all items exists in player's inventory, false - if not
-	 */
-	public boolean hasQuestItems(int... itemIds)
-	{
-		return AbstractScript.hasQuestItems(_player, itemIds);
-	}
-	
-	/**
-	 * Return the level of enchantment on the weapon of the player(Done specifically for weapon SA's)
-	 * @param itemId Id of the item to check enchantment
-	 * @return int
-	 */
-	public int getEnchantLevel(int itemId)
-	{
-		return AbstractScript.getEnchantLevel(_player, itemId);
-	}
-	
-	/**
-	 * Give adena to the player
-	 * @param count
-	 * @param applyRates
-	 */
-	public void giveAdena(long count, boolean applyRates)
-	{
-		AbstractScript.giveAdena(_player, count, applyRates);
-	}
-	
-	/**
-	 * Give reward to player using multiplier's
-	 * @param item
-	 */
-	public void rewardItems(ItemHolder item)
-	{
-		AbstractScript.rewardItems(_player, item);
-	}
-	
-	/**
-	 * Give reward to player using multiplier's
-	 * @param itemId
-	 * @param count
-	 */
-	public void rewardItems(int itemId, long count)
-	{
-		AbstractScript.rewardItems(_player, itemId, count);
-	}
-	
-	/**
-	 * Give item/reward to the player
-	 * @param itemId
-	 * @param count
-	 */
-	public void giveItems(int itemId, long count)
-	{
-		AbstractScript.giveItems(_player, itemId, count, 0);
-	}
-	
-	public void giveItems(ItemHolder holder)
-	{
-		AbstractScript.giveItems(_player, holder.getId(), holder.getCount(), 0);
-	}
-	
-	public void giveItems(int itemId, long count, int enchantlevel)
-	{
-		AbstractScript.giveItems(_player, itemId, count, enchantlevel);
-	}
-	
-	public void giveItems(int itemId, long count, byte attributeId, int attributeLevel)
-	{
-		AbstractScript.giveItems(_player, itemId, count, attributeId, attributeLevel);
-	}
-	
-	public boolean giveItemRandomly(int itemId, long amount, long limit, double dropChance, boolean playSound)
-	{
-		return AbstractScript.giveItemRandomly(_player, null, itemId, amount, amount, limit, dropChance, playSound);
-	}
-	
-	public boolean giveItemRandomly(L2Npc npc, int itemId, long amount, long limit, double dropChance, boolean playSound)
-	{
-		return AbstractScript.giveItemRandomly(_player, npc, itemId, amount, amount, limit, dropChance, playSound);
-	}
-	
-	public boolean giveItemRandomly(L2Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound)
-	{
-		return AbstractScript.giveItemRandomly(_player, npc, itemId, minAmount, maxAmount, limit, dropChance, playSound);
-	}
-	
 	// TODO: More radar functions need to be added when the radar class is complete.
 	// BEGIN STUFF THAT WILL PROBABLY BE CHANGED
 	public void addRadar(int x, int y, int z)
@@ -783,61 +671,7 @@ public final class QuestState
 	{
 		_player.getRadar().removeAllMarkers();
 	}
-	
 	// END STUFF THAT WILL PROBABLY BE CHANGED
-	
-	/**
-	 * Remove items from player's inventory when talking to NPC in order to have rewards.<br>
-	 * Actions:<br>
-	 * <ul>
-	 * <li>Destroy quantity of items wanted</li>
-	 * <li>Send new inventory list to player</li>
-	 * </ul>
-	 * @param itemId Identifier of the item
-	 * @param count Quantity of items to destroy
-	 */
-	public void takeItems(int itemId, long count)
-	{
-		AbstractScript.takeItems(_player, itemId, count);
-	}
-	
-	/**
-	 * Send a packet in order to play a sound to the player.
-	 * @param sound the name of the sound to play
-	 */
-	public void playSound(String sound)
-	{
-		AbstractScript.playSound(_player, sound);
-	}
-	
-	/**
-	 * Send a packet in order to play a sound to the player.
-	 * @param sound the {@link QuestSound} object of the sound to play
-	 */
-	public void playSound(QuestSound sound)
-	{
-		AbstractScript.playSound(_player, sound);
-	}
-	
-	/**
-	 * Add XP and SP as quest reward
-	 * @param exp
-	 * @param sp
-	 */
-	public void addExpAndSp(long exp, int sp)
-	{
-		AbstractScript.addExpAndSp(_player, exp, sp);
-		PcCafePointsManager.getInstance().givePcCafePoint(getPlayer(), (long) (exp * Config.RATE_QUEST_REWARD_XP));
-	}
-	
-	/**
-	 * @param loc
-	 * @return number of ticks from GameTimeController
-	 */
-	public int getItemEquipped(int loc)
-	{
-		return AbstractScript.getItemEquipped(_player, loc);
-	}
 	
 	/**
 	 * @return {@code true} if quest is to be exited on clean up by QuestStateManager, {@code false} otherwise
@@ -1084,7 +918,7 @@ public final class QuestState
 		{
 			set("cond", "1");
 			setState(State.STARTED);
-			playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 		}
 		return this;
 	}
@@ -1134,7 +968,7 @@ public final class QuestState
 		exitQuest(type);
 		if (playExitQuest)
 		{
-			playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
+			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_FINISH);
 		}
 		return this;
 	}
@@ -1189,7 +1023,7 @@ public final class QuestState
 		exitQuest(repeatable);
 		if (playExitQuest)
 		{
-			playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
+			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_FINISH);
 		}
 		return this;
 	}

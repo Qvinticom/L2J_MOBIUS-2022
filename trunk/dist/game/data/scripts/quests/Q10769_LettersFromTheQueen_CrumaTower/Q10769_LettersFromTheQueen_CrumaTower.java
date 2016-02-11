@@ -88,9 +88,9 @@ public class Q10769_LettersFromTheQueen_CrumaTower extends Quest implements IByp
 			case "30070-03.html": // start the quest
 			{
 				qs.startQuest();
-				if (qs.getQuestItemsCount(SCROLL_OF_ESCAPE_CRUMA_TOWER.getId()) < 1)
+				if (getQuestItemsCount(player, SCROLL_OF_ESCAPE_CRUMA_TOWER.getId()) < 1)
 				{
-					qs.giveItems(SCROLL_OF_ESCAPE_CRUMA_TOWER);
+					giveItems(player, SCROLL_OF_ESCAPE_CRUMA_TOWER);
 					player.sendPacket(new ExShowScreenMessage("Try using the teleport scroll Sylvain gave you to go to Cruma Tower.", 10000));
 				}
 				htmltext = event;
@@ -101,9 +101,9 @@ public class Q10769_LettersFromTheQueen_CrumaTower extends Quest implements IByp
 				if (qs.isCond(2))
 				{
 					player.sendPacket(new ExShowScreenMessage("Grow stronger here until you receive the next letter from Queen Navari at Lv. 46!", 10000));
-					qs.giveItems(STEEL_DOOR_GUILD);
-					qs.giveItems(EAC);
-					qs.addExpAndSp(EXP_REWARD, SP_REWARD);
+					giveItems(player, STEEL_DOOR_GUILD);
+					giveItems(player, EAC);
+					addExpAndSp(player, EXP_REWARD, SP_REWARD);
 					qs.exitQuest(false, true);
 				}
 				htmltext = event;

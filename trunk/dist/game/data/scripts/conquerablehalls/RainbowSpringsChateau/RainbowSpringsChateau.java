@@ -829,9 +829,9 @@ final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static boolean isValidPassage(String text)
 	{
-		for (String st : _textPassages)
+		for (String qs : _textPassages)
 		{
-			if (st.equalsIgnoreCase(text))
+			if (qs.equalsIgnoreCase(text))
 			{
 				return true;
 			}

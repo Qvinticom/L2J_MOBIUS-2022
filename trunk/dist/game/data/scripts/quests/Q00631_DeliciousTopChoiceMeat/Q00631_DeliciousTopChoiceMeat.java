@@ -51,7 +51,6 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 		10380, // Recipe - Icarus Hall (60%)
 		10381, // Recipe - Icarus Spitter (60%)
 	};
-	
 	private static final int[] PIECE =
 	{
 		10397, // Icarus Sawsword Piece
@@ -64,10 +63,8 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 		10404, // Icarus Hall Piece
 		10405, // Icarus Spitter Piece
 	};
-	
 	private static final int GOLDEN_SPICE_CRATE = 15482;
 	private static final int CRYSTAL_SPICE_COMPRESSED_PACK = 15483;
-	
 	private static final Map<Integer, Double> MOBS_MEAT = new HashMap<>();
 	static
 	{
@@ -93,8 +90,8 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -106,7 +103,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = "31537-02.html";
 				}
 				else
@@ -117,62 +114,62 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 			}
 			case "31537-06.html":
 			{
-				if (st.isCond(2) && (getQuestItemsCount(player, PRIME_MEAT) >= PRIME_MEAT_COUNT))
+				if (qs.isCond(2) && (getQuestItemsCount(player, PRIME_MEAT) >= PRIME_MEAT_COUNT))
 				{
 					switch (getRandom(10))
 					{
 						case 0:
 						{
-							st.rewardItems(RECIPE[getRandom(RECIPE.length)], 1);
+							rewardItems(player, RECIPE[getRandom(RECIPE.length)], 1);
 							break;
 						}
 						case 1:
 						{
-							st.rewardItems(PIECE[getRandom(PIECE.length)], 1);
+							rewardItems(player, PIECE[getRandom(PIECE.length)], 1);
 							break;
 						}
 						case 2:
 						{
-							st.rewardItems(PIECE[getRandom(PIECE.length)], 2);
+							rewardItems(player, PIECE[getRandom(PIECE.length)], 2);
 							break;
 						}
 						case 3:
 						{
-							st.rewardItems(PIECE[getRandom(PIECE.length)], 3);
+							rewardItems(player, PIECE[getRandom(PIECE.length)], 3);
 							break;
 						}
 						case 4:
 						{
-							st.rewardItems(PIECE[getRandom(PIECE.length)], getRandom(5) + 2);
+							rewardItems(player, PIECE[getRandom(PIECE.length)], getRandom(5) + 2);
 							break;
 						}
 						case 5:
 						{
-							st.rewardItems(PIECE[getRandom(PIECE.length)], getRandom(7) + 2);
+							rewardItems(player, PIECE[getRandom(PIECE.length)], getRandom(7) + 2);
 							break;
 						}
 						case 6:
 						{
-							st.rewardItems(GOLDEN_SPICE_CRATE, 1);
+							rewardItems(player, GOLDEN_SPICE_CRATE, 1);
 							break;
 						}
 						case 7:
 						{
-							st.rewardItems(GOLDEN_SPICE_CRATE, 2);
+							rewardItems(player, GOLDEN_SPICE_CRATE, 2);
 							break;
 						}
 						case 8:
 						{
-							st.rewardItems(CRYSTAL_SPICE_COMPRESSED_PACK, 1);
+							rewardItems(player, CRYSTAL_SPICE_COMPRESSED_PACK, 1);
 							break;
 						}
 						case 9:
 						{
-							st.rewardItems(CRYSTAL_SPICE_COMPRESSED_PACK, 2);
+							rewardItems(player, CRYSTAL_SPICE_COMPRESSED_PACK, 2);
 							break;
 						}
 					}
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -184,12 +181,12 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, 1, 3, npc);
-		if (st != null)
+		final QuestState qs = getRandomPartyMemberState(player, 1, 3, npc);
+		if (qs != null)
 		{
-			if (st.giveItemRandomly(npc, PRIME_MEAT, 1, PRIME_MEAT_COUNT, MOBS_MEAT.get(npc.getId()), true))
+			if (giveItemRandomly(qs.getPlayer(), npc, PRIME_MEAT, 1, PRIME_MEAT_COUNT, MOBS_MEAT.get(npc.getId()), true))
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -198,29 +195,29 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = "31537-01.htm";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			if (st.isCond(1))
+			if (qs.isCond(1))
 			{
-				if (st.getQuestItemsCount(PRIME_MEAT) < PRIME_MEAT_COUNT)
+				if (getQuestItemsCount(player, PRIME_MEAT) < PRIME_MEAT_COUNT)
 				{
 					htmltext = "31537-04.html";
 				}
 			}
-			else if (st.isCond(2))
+			else if (qs.isCond(2))
 			{
-				if (st.getQuestItemsCount(PRIME_MEAT) >= PRIME_MEAT_COUNT)
+				if (getQuestItemsCount(player, PRIME_MEAT) >= PRIME_MEAT_COUNT)
 				{
 					htmltext = "31537-05.html";
 				}

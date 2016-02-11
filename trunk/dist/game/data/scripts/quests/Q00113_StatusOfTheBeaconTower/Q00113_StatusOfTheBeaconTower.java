@@ -47,9 +47,9 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -58,25 +58,31 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 		switch (event)
 		{
 			case "31979-02.htm":
-				st.startQuest();
-				st.giveItems(FLAME_BOX, 1);
+			{
+				qs.startQuest();
+				giveItems(player, FLAME_BOX, 1);
 				break;
+			}
 			case "32016-02.html":
-				if (st.hasQuestItems(FIRE_BOX))
+			{
+				if (hasQuestItems(player, FIRE_BOX))
 				{
-					st.giveAdena(21578, true);
-					st.addExpAndSp(76665, 5333);
+					giveAdena(player, 21578, true);
+					addExpAndSp(player, 76665, 5333);
 				}
 				else
 				{
-					st.giveAdena(154800, true);
-					st.addExpAndSp(619300, 44200);
+					giveAdena(player, 154800, true);
+					addExpAndSp(player, 619300, 44200);
 				}
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -85,9 +91,9 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -95,25 +101,35 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 		switch (npc.getId())
 		{
 			case MOIRA:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= 80) ? "31979-01.htm" : "31979-00.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "31979-03.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case TORRANT:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
 					htmltext = "32016-01.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

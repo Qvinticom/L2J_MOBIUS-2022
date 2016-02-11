@@ -77,8 +77,8 @@ public class Q00125_TheNameOfEvil1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -87,155 +87,155 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		switch (event)
 		{
 			case "32114-05.html":
-				st.startQuest();
+				qs.startQuest();
 				break;
 			case "32114-08.html":
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.giveItems(GAZKH_FRAGMENT, 1);
-					st.setCond(2, true);
+					giveItems(player, GAZKH_FRAGMENT, 1);
+					qs.setCond(2, true);
 				}
 				break;
 			case "32117-09.html":
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 				}
 				break;
 			case "32117-15.html":
-				if (st.isCond(4))
+				if (qs.isCond(4))
 				{
-					st.setCond(5, true);
+					qs.setCond(5, true);
 				}
 				break;
 			case "T_One":
-				st.set("T", "1");
+				qs.set("T", "1");
 				htmltext = "32119-04.html";
 				break;
 			case "E_One":
-				st.set("E", "1");
+				qs.set("E", "1");
 				htmltext = "32119-05.html";
 				break;
 			case "P_One":
-				st.set("P", "1");
+				qs.set("P", "1");
 				htmltext = "32119-06.html";
 				break;
 			case "U_One":
-				st.set("U", "1");
-				if (st.isCond(5) && (st.getInt("T") > 0) && (st.getInt("E") > 0) && (st.getInt("P") > 0) && (st.getInt("U") > 0))
+				qs.set("U", "1");
+				if (qs.isCond(5) && (qs.getInt("T") > 0) && (qs.getInt("E") > 0) && (qs.getInt("P") > 0) && (qs.getInt("U") > 0))
 				{
 					htmltext = "32119-08.html";
-					st.set("Memo", "1");
+					qs.set("Memo", "1");
 				}
 				else
 				{
 					htmltext = "32119-07.html";
 				}
-				st.unset("T");
-				st.unset("E");
-				st.unset("P");
-				st.unset("U");
+				qs.unset("T");
+				qs.unset("E");
+				qs.unset("P");
+				qs.unset("U");
 				break;
 			case "32119-07.html":
-				st.unset("T");
-				st.unset("E");
-				st.unset("P");
-				st.unset("U");
+				qs.unset("T");
+				qs.unset("E");
+				qs.unset("P");
+				qs.unset("U");
 				break;
 			case "32119-18.html":
-				if (st.isCond(5))
+				if (qs.isCond(5))
 				{
-					st.setCond(6, true);
-					st.unset("Memo");
+					qs.setCond(6, true);
+					qs.unset("Memo");
 				}
 				break;
 			case "T_Two":
-				st.set("T", "1");
+				qs.set("T", "1");
 				htmltext = "32120-04.html";
 				break;
 			case "O_Two":
-				st.set("O", "1");
+				qs.set("O", "1");
 				htmltext = "32120-05.html";
 				break;
 			case "O2_Two":
-				st.set("O2", "1");
+				qs.set("O2", "1");
 				htmltext = "32120-06.html";
 				break;
 			case "N_Two":
-				st.set("N", "1");
-				if (st.isCond(6) && (st.getInt("T") > 0) && (st.getInt("O") > 0) && (st.getInt("O2") > 0) && (st.getInt("N") > 0))
+				qs.set("N", "1");
+				if (qs.isCond(6) && (qs.getInt("T") > 0) && (qs.getInt("O") > 0) && (qs.getInt("O2") > 0) && (qs.getInt("N") > 0))
 				{
 					htmltext = "32120-08.html";
-					st.set("Memo", "1");
+					qs.set("Memo", "1");
 				}
 				else
 				{
 					htmltext = "32120-07.html";
 				}
-				st.unset("T");
-				st.unset("O");
-				st.unset("O2");
-				st.unset("N");
+				qs.unset("T");
+				qs.unset("O");
+				qs.unset("O2");
+				qs.unset("N");
 				break;
 			case "32120-07.html":
-				st.unset("T");
-				st.unset("O");
-				st.unset("O2");
-				st.unset("N");
+				qs.unset("T");
+				qs.unset("O");
+				qs.unset("O2");
+				qs.unset("N");
 			case "32120-17.html":
-				if (st.isCond(6))
+				if (qs.isCond(6))
 				{
-					st.setCond(7, true);
-					st.unset("Memo");
+					qs.setCond(7, true);
+					qs.unset("Memo");
 				}
 				break;
 			case "W_Three":
-				st.set("W", "1");
+				qs.set("W", "1");
 				htmltext = "32121-04.html";
 				break;
 			case "A_Three":
-				st.set("A", "1");
+				qs.set("A", "1");
 				htmltext = "32121-05.html";
 				break;
 			case "G_Three":
-				st.set("G", "1");
+				qs.set("G", "1");
 				htmltext = "32121-06.html";
 				break;
 			case "U_Three":
-				st.set("U", "1");
-				if (st.isCond(7) && (st.getInt("W") > 0) && (st.getInt("A") > 0) && (st.getInt("G") > 0) && (st.getInt("U") > 0))
+				qs.set("U", "1");
+				if (qs.isCond(7) && (qs.getInt("W") > 0) && (qs.getInt("A") > 0) && (qs.getInt("G") > 0) && (qs.getInt("U") > 0))
 				{
 					htmltext = "32121-08.html";
-					st.set("Memo", "1");
+					qs.set("Memo", "1");
 				}
 				else
 				{
 					htmltext = "32121-07.html";
 				}
-				st.unset("W");
-				st.unset("A");
-				st.unset("G");
-				st.unset("U");
+				qs.unset("W");
+				qs.unset("A");
+				qs.unset("G");
+				qs.unset("U");
 				break;
 			case "32121-07.html":
-				st.unset("W");
-				st.unset("A");
-				st.unset("G");
-				st.unset("U");
+				qs.unset("W");
+				qs.unset("A");
+				qs.unset("G");
+				qs.unset("U");
 				break;
 			case "32121-11.html":
-				st.set("Memo", "2");
+				qs.set("Memo", "2");
 				break;
 			case "32121-16.html":
-				st.set("Memo", "3");
+				qs.set("Memo", "3");
 				break;
 			case "32121-18.html":
-				if (st.isCond(7) && st.hasQuestItems(GAZKH_FRAGMENT))
+				if (qs.isCond(7) && hasQuestItems(player, GAZKH_FRAGMENT))
 				{
-					st.giveItems(EPITAPH_OF_WISDOM, 1);
-					st.takeItems(GAZKH_FRAGMENT, -1);
-					st.setCond(8, true);
-					st.unset("Memo");
+					giveItems(player, EPITAPH_OF_WISDOM, 1);
+					takeItems(player, GAZKH_FRAGMENT, -1);
+					qs.setCond(8, true);
+					qs.unset("Memo");
 				}
 				break;
 		}
@@ -251,36 +251,36 @@ public class Q00125_TheNameOfEvil1 extends Quest
 			return null;
 		}
 		
-		final QuestState st = getQuestState(partyMember, false);
+		final QuestState qs = getQuestState(partyMember, false);
 		final int npcId = npc.getId();
 		if (ORNITHOMIMUS.containsKey(npcId))
 		{
-			if (st.getQuestItemsCount(ORNITHOMIMUS_CLAW) < 2)
+			if (getQuestItemsCount(player, ORNITHOMIMUS_CLAW) < 2)
 			{
 				final float chance = ORNITHOMIMUS.get(npcId) * Config.RATE_QUEST_DROP;
 				if (getRandom(1000) < chance)
 				{
-					st.giveItems(ORNITHOMIMUS_CLAW, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, ORNITHOMIMUS_CLAW, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
 		else if (DEINONYCHUS.containsKey(npcId))
 		{
-			if (st.getQuestItemsCount(DEINONYCHUS_BONE) < 2)
+			if (getQuestItemsCount(player, DEINONYCHUS_BONE) < 2)
 			{
 				final float chance = DEINONYCHUS.get(npcId) * Config.RATE_QUEST_DROP;
 				if (getRandom(1000) < chance)
 				{
-					st.giveItems(DEINONYCHUS_BONE, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, DEINONYCHUS_BONE, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
 		
-		if ((st.getQuestItemsCount(ORNITHOMIMUS_CLAW) == 2) && (st.getQuestItemsCount(DEINONYCHUS_BONE) == 2))
+		if ((getQuestItemsCount(player, ORNITHOMIMUS_CLAW) == 2) && (getQuestItemsCount(player, DEINONYCHUS_BONE) == 2))
 		{
-			st.setCond(4, true);
+			qs.setCond(4, true);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -289,8 +289,8 @@ public class Q00125_TheNameOfEvil1 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = getQuestState(player, true);
-		if (st == null)
+		QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -298,7 +298,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		switch (npc.getId())
 		{
 			case MUSHIKA:
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 						if (player.getLevel() < 76)
@@ -307,12 +307,12 @@ public class Q00125_TheNameOfEvil1 extends Quest
 						}
 						else
 						{
-							st = player.getQuestState(Q00124_MeetingTheElroki.class.getSimpleName());
-							htmltext = ((st != null) && st.isCompleted()) ? "32114-01.htm" : "32114-01b.htm";
+							qs = player.getQuestState(Q00124_MeetingTheElroki.class.getSimpleName());
+							htmltext = ((qs != null) && qs.isCompleted()) ? "32114-01.htm" : "32114-01b.htm";
 						}
 						break;
 					case State.STARTED:
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 								htmltext = "32114-09.html";
@@ -328,11 +328,11 @@ public class Q00125_TheNameOfEvil1 extends Quest
 								htmltext = "32114-11.html";
 								break;
 							case 8:
-								if (st.hasQuestItems(EPITAPH_OF_WISDOM))
+								if (hasQuestItems(player, EPITAPH_OF_WISDOM))
 								{
 									htmltext = "32114-12.html";
-									st.addExpAndSp(859195, 86603);
-									st.exitQuest(false, true);
+									addExpAndSp(player, 859195, 86603);
+									qs.exitQuest(false, true);
 								}
 								break;
 						}
@@ -343,9 +343,9 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				}
 				break;
 			case KARAKAWEI:
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 							htmltext = "32117-01.html";
@@ -357,10 +357,10 @@ public class Q00125_TheNameOfEvil1 extends Quest
 							htmltext = "32117-10.html";
 							break;
 						case 4:
-							if ((st.getQuestItemsCount(ORNITHOMIMUS_CLAW) >= 2) && (st.getQuestItemsCount(DEINONYCHUS_BONE) >= 2))
+							if ((getQuestItemsCount(player, ORNITHOMIMUS_CLAW) >= 2) && (getQuestItemsCount(player, DEINONYCHUS_BONE) >= 2))
 							{
-								st.takeItems(ORNITHOMIMUS_CLAW, -1);
-								st.takeItems(DEINONYCHUS_BONE, -1);
+								takeItems(player, ORNITHOMIMUS_CLAW, -1);
+								takeItems(player, DEINONYCHUS_BONE, -1);
 								htmltext = "32117-11.html";
 							}
 							break;
@@ -378,9 +378,9 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				}
 				break;
 			case ULU_KAIMU:
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						case 2:
@@ -389,14 +389,14 @@ public class Q00125_TheNameOfEvil1 extends Quest
 							htmltext = "32119-01.html";
 							break;
 						case 5:
-							if (st.get("Memo") == null)
+							if (qs.get("Memo") == null)
 							{
 								htmltext = "32119-02.html";
 								npc.broadcastPacket(new MagicSkillUse(npc, player, 5089, 1, 1000, 0));
-								st.unset("T");
-								st.unset("E");
-								st.unset("P");
-								st.unset("U");
+								qs.unset("T");
+								qs.unset("E");
+								qs.unset("P");
+								qs.unset("U");
 							}
 							else
 							{
@@ -413,9 +413,9 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				}
 				break;
 			case BALU_KAIMU:
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						case 2:
@@ -425,14 +425,14 @@ public class Q00125_TheNameOfEvil1 extends Quest
 							htmltext = "32120-01.html";
 							break;
 						case 6:
-							if (st.get("Memo") == null)
+							if (qs.get("Memo") == null)
 							{
 								htmltext = "32120-02.html";
 								npc.broadcastPacket(new MagicSkillUse(npc, player, 5089, 1, 1000, 0));
-								st.unset("T");
-								st.unset("O");
-								st.unset("O2");
-								st.unset("N");
+								qs.unset("T");
+								qs.unset("O");
+								qs.unset("O2");
+								qs.unset("N");
 							}
 							else
 							{
@@ -449,9 +449,9 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				}
 				break;
 			case CHUTA_KAIMU:
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						case 2:
@@ -462,15 +462,15 @@ public class Q00125_TheNameOfEvil1 extends Quest
 							htmltext = "32121-01.html";
 							break;
 						case 7:
-							switch (st.getInt("Memo"))
+							switch (qs.getInt("Memo"))
 							{
 								case 0:
 									htmltext = "32121-02.html";
 									npc.broadcastPacket(new MagicSkillUse(npc, player, 5089, 1, 1000, 0));
-									st.unset("W");
-									st.unset("A");
-									st.unset("G");
-									st.unset("U");
+									qs.unset("W");
+									qs.unset("A");
+									qs.unset("G");
+									qs.unset("U");
 									break;
 								case 1:
 									htmltext = "32121-09.html";

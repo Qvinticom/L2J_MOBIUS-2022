@@ -116,7 +116,7 @@ public class Q10390_KekropusLetter extends Quest implements IBypassHandler
 			}
 			case "30332-02.html":
 			{
-				if (qs.getQuestItemsCount(KEKROPUS_LETTER.getId()) < 1)
+				if (getQuestItemsCount(player, KEKROPUS_LETTER.getId()) < 1)
 				{
 					giveItems(player, KEKROPUS_LETTER);
 				}

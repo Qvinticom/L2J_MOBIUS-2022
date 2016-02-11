@@ -57,9 +57,9 @@ public class Q00450_GraveRobberRescue extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -70,18 +70,26 @@ public class Q00450_GraveRobberRescue extends Quest
 			case "32650-04.htm":
 			case "32650-05.htm":
 			case "32650-06.html":
+			{
 				break;
+			}
 			case "32650-07.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "despawn":
+			{
 				npc.setBusy(false);
 				npc.deleteMe();
 				htmltext = null;
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -90,42 +98,49 @@ public class Q00450_GraveRobberRescue extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
 		if (npc.getId() == KANEMIKA)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.COMPLETED:
-					if (!st.isNowAvailable())
+				{
+					if (!qs.isNowAvailable())
 					{
 						htmltext = "32650-03.html";
 						break;
 					}
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
+					// fallthrou
+				}
 				case State.CREATED:
+				{
 					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32650-01.htm" : "32650-02.htm";
 					break;
+				}
 				case State.STARTED:
-					if (st.isCond(1))
+				{
+					if (qs.isCond(1))
 					{
-						htmltext = (!st.hasQuestItems(EVIDENCE_OF_MIGRATION)) ? "32650-08.html" : "32650-09.html";
+						htmltext = (!hasQuestItems(player, EVIDENCE_OF_MIGRATION)) ? "32650-08.html" : "32650-09.html";
 					}
 					else
 					{
-						st.giveAdena(65000, true); // Glory days reward: 6 886 980 exp, 8 116 410 sp, 371 400 Adena
-						st.exitQuest(QuestType.DAILY, true);
+						giveAdena(player, 65000, true); // Glory days reward: 6 886 980 exp, 8 116 410 sp, 371 400 Adena
+						qs.exitQuest(QuestType.DAILY, true);
 						htmltext = "32650-10.html";
 					}
 					break;
+				}
 			}
 		}
-		else if (st.isCond(1))
+		else if (qs.isCond(1))
 		{
 			if (npc.isBusy())
 			{
@@ -134,16 +149,16 @@ public class Q00450_GraveRobberRescue extends Quest
 			
 			if (getRandom(100) < 66)
 			{
-				st.giveItems(EVIDENCE_OF_MIGRATION, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				giveItems(player, EVIDENCE_OF_MIGRATION, 1);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(npc.getX() + 100, npc.getY() + 100, npc.getZ(), 0));
 				npc.setBusy(true);
 				
 				startQuestTimer("despawn", 3000, npc, player);
 				
-				if (st.getQuestItemsCount(EVIDENCE_OF_MIGRATION) == 10)
+				if (getQuestItemsCount(player, EVIDENCE_OF_MIGRATION) == 10)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				htmltext = "32651-01.html";
 			}

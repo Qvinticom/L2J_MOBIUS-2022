@@ -86,8 +86,8 @@ public class Q00458_PerfectForm extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final String noQuest = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return noQuest;
 		}
@@ -99,12 +99,15 @@ public class Q00458_PerfectForm extends Quest
 		switch (event)
 		{
 			case "32768-10.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "results1":
-				if (st.isCond(2))
+			{
+				if (qs.isCond(2))
 				{
-					final int overhitsTotal = st.getInt("overhitsTotal");
+					final int overhitsTotal = qs.getInt("overhitsTotal");
 					if (overhitsTotal >= 35)
 					{
 						htmltext = "32768-14a.html";
@@ -125,10 +128,12 @@ public class Q00458_PerfectForm extends Quest
 					htmltext = noQuest;
 				}
 				break;
+			}
 			case "results2":
-				if (st.isCond(2))
+			{
+				if (qs.isCond(2))
 				{
-					final int overhitsCritical = st.getInt("overhitsCritical");
+					final int overhitsCritical = qs.getInt("overhitsCritical");
 					if (overhitsCritical >= 30)
 					{
 						htmltext = "32768-15a.html";
@@ -149,10 +154,12 @@ public class Q00458_PerfectForm extends Quest
 					htmltext = noQuest;
 				}
 				break;
+			}
 			case "results3":
-				if (st.isCond(2))
+			{
+				if (qs.isCond(2))
 				{
-					final int overhitsConsecutive = st.getInt("overhitsConsecutive");
+					final int overhitsConsecutive = qs.getInt("overhitsConsecutive");
 					if (overhitsConsecutive >= 20)
 					{
 						htmltext = "32768-16a.html";
@@ -173,35 +180,38 @@ public class Q00458_PerfectForm extends Quest
 					htmltext = noQuest;
 				}
 				break;
+			}
 			case "32768-17.html":
-				if (st.isCond(2))
+			{
+				if (qs.isCond(2))
 				{
-					final int overhitsConsecutive = st.getInt("overhitsConsecutive");
+					final int overhitsConsecutive = qs.getInt("overhitsConsecutive");
 					if (overhitsConsecutive >= 20)
 					{
 						final int rnd = getRandom(ICARUS_WEAPON_RECIPES.length);
-						st.rewardItems(ICARUS_WEAPON_RECIPES[rnd], 1);
+						rewardItems(player, ICARUS_WEAPON_RECIPES[rnd], 1);
 					}
 					else if (overhitsConsecutive >= 7)
 					{
 						final int rnd = getRandom(ICARUS_WEAPON_PIECES.length);
-						st.rewardItems(ICARUS_WEAPON_PIECES[rnd], 5);
+						rewardItems(player, ICARUS_WEAPON_PIECES[rnd], 5);
 					}
 					else
 					{
 						final int rnd = getRandom(ICARUS_WEAPON_PIECES.length);
-						st.rewardItems(ICARUS_WEAPON_PIECES[rnd], 2);
+						rewardItems(player, ICARUS_WEAPON_PIECES[rnd], 2);
 						// not sure if this should use rewardItems
-						st.giveItems(15482, 10); // Golden Spice Crate
-						st.giveItems(15483, 10); // Crystal Spice Crate
+						giveItems(player, 15482, 10); // Golden Spice Crate
+						giveItems(player, 15483, 10); // Crystal Spice Crate
 					}
-					st.exitQuest(QuestType.DAILY, true);
+					qs.exitQuest(QuestType.DAILY, true);
 				}
 				else
 				{
 					htmltext = noQuest;
 				}
 				break;
+			}
 		}
 		
 		if (overHitHtml)
@@ -215,8 +225,8 @@ public class Q00458_PerfectForm extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
 		{
 			int npcId = npc.getId();
 			if ((npcId == KOOKABURRAS[0]) || (npcId == COUGARS[0]) || (npcId == BUFFALOS[0]) || (npcId == GRENDELS[0]))
@@ -225,24 +235,24 @@ public class Q00458_PerfectForm extends Quest
 			}
 			
 			final String variable = String.valueOf(npcId); // i3
-			final int currentValue = st.getInt(variable);
+			final int currentValue = qs.getInt(variable);
 			if (currentValue < 10)
 			{
-				st.set(variable, String.valueOf(currentValue + 1)); // IncreaseNPCLogByID
+				qs.set(variable, String.valueOf(currentValue + 1)); // IncreaseNPCLogByID
 				
 				final L2Attackable mob = (L2Attackable) npc;
 				if (mob.isOverhit())
 				{
-					st.set("overhitsTotal", String.valueOf(st.getInt("overhitsTotal") + 1)); // memoStateEx 1
+					qs.set("overhitsTotal", String.valueOf(qs.getInt("overhitsTotal") + 1)); // memoStateEx 1
 					final int maxHp = mob.getMaxHp();
 					// L2Attackable#calculateOverhitExp() way of calculating overhit % seems illogical
 					final double overhitPercentage = (maxHp + mob.getOverhitDamage()) / maxHp;
 					if (overhitPercentage >= 1.2)
 					{
-						st.set("overhitsCritical", String.valueOf(st.getInt("overhitsCritical") + 1)); // memoStateEx 2
+						qs.set("overhitsCritical", String.valueOf(qs.getInt("overhitsCritical") + 1)); // memoStateEx 2
 					}
-					final int overhitsConsecutive = st.getInt("overhitsConsecutive") + 1;
-					st.set("overhitsConsecutive", String.valueOf(overhitsConsecutive)); // memoStateEx 3
+					final int overhitsConsecutive = qs.getInt("overhitsConsecutive") + 1;
+					qs.set("overhitsConsecutive", String.valueOf(overhitsConsecutive)); // memoStateEx 3
 					/*
 					 * Retail logic (makes for a long/messy string in database): int i0 = overhitsConsecutive % 100; int i1 = overhitsConsecutive - (i0 * 100); if (i0 < i1) { st.set("overhitsConsecutive", String.valueOf((i1 * 100) + i1)); }
 					 */
@@ -250,28 +260,28 @@ public class Q00458_PerfectForm extends Quest
 				else
 				{
 					// st.set("overhitsConsecutive", String.valueOf((st.getInt("overhitsConsecutive") % 100) * 100));
-					if (st.getInt("overhitsConsecutive") > 0)
+					if (qs.getInt("overhitsConsecutive") > 0)
 					{
 						// avoid writing to database if variable is already zero
-						st.set("overhitsConsecutive", "0");
+						qs.set("overhitsConsecutive", "0");
 					}
 				}
 				
-				if ((st.getInt("18879") == 10) && (st.getInt("18886") == 10) && (st.getInt("18893") == 10) && (st.getInt("18900") == 10))
+				if ((qs.getInt("18879") == 10) && (qs.getInt("18886") == 10) && (qs.getInt("18893") == 10) && (qs.getInt("18900") == 10))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					// st.set("overhitsConsecutive", String.valueOf(st.getInt("overhitsConsecutive") % 100));
 				}
 				else
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
 				final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-				log.addNpc(18879, st.getInt("18879"));
-				log.addNpc(18886, st.getInt("18886"));
-				log.addNpc(18893, st.getInt("18893"));
-				log.addNpc(18900, st.getInt("18900"));
+				log.addNpc(18879, qs.getInt("18879"));
+				log.addNpc(18886, qs.getInt("18886"));
+				log.addNpc(18893, qs.getInt("18893"));
+				log.addNpc(18900, qs.getInt("18900"));
 				
 				player.sendPacket(log);
 			}
@@ -283,30 +293,36 @@ public class Q00458_PerfectForm extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
-				if (!st.isNowAvailable())
+			{
+				if (!qs.isNowAvailable())
 				{
 					htmltext = "32768-18.htm";
 					break;
 				}
-				st.setState(State.CREATED);
+				qs.setState(State.CREATED);
 				//$FALL-THROUGH$
+			}
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() > 81) ? "32768-01.htm" : "32768-00.htm";
 				break;
+			}
 			case State.STARTED:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 1:
-						if ((st.getInt("18879") == 0) && (st.getInt("18886") == 0) && (st.getInt("18893") == 0) && (st.getInt("18900") == 0))
+					{
+						if ((qs.getInt("18879") == 0) && (qs.getInt("18886") == 0) && (qs.getInt("18893") == 0) && (qs.getInt("18900") == 0))
 						{
 							htmltext = "32768-11.html";
 						}
@@ -315,11 +331,15 @@ public class Q00458_PerfectForm extends Quest
 							htmltext = "32768-12.html";
 						}
 						break;
+					}
 					case 2:
+					{
 						htmltext = "32768-13.html";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

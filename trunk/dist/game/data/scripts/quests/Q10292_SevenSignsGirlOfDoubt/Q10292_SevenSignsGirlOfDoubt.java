@@ -70,8 +70,8 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -87,7 +87,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case "32593-05.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -99,13 +99,13 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case "32597-07.html":
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
 			case "32784-02.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					htmltext = event;
 				}
@@ -113,16 +113,16 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case "32784-03.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32784-06.html":
 			{
-				if (st.isCond(4) && hasItem(player, ELCADIAS_MARK))
+				if (qs.isCond(4) && hasItem(player, ELCADIAS_MARK))
 				{
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = event;
@@ -131,10 +131,10 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case "32784-08.html":
 			{
-				if (st.isCond(4) && hasItem(player, ELCADIAS_MARK))
+				if (qs.isCond(4) && hasItem(player, ELCADIAS_MARK))
 				{
 					takeItem(player, ELCADIAS_MARK);
-					st.setCond(5, true);
+					qs.setCond(5, true);
 					htmltext = event;
 				}
 				break;
@@ -142,7 +142,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			case "32784-12.html":
 			case "32784-13.html":
 			{
-				if (st.isCond(6))
+				if (qs.isCond(6))
 				{
 					htmltext = event;
 				}
@@ -150,16 +150,16 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case "32784-14.html":
 			{
-				if (st.isCond(6))
+				if (qs.isCond(6))
 				{
-					st.setCond(7, true);
+					qs.setCond(7, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "SPAWN":
 			{
-				if (st.isCond(5))
+				if (qs.isCond(5))
 				{
 					isBusy = true;
 					final L2Npc creature1 = addSpawn(CREATURE_OF_THE_DUSK1, 89440, -238016, -9632, 335, false, 0, false, player.getInstanceId());
@@ -170,7 +170,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 					{
 						creature1.deleteMe();
 						creature2.deleteMe();
-						st.unset("ex");
+						qs.unset("ex");
 						isBusy = false;
 					}, 60000);
 				}
@@ -178,16 +178,16 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case "30832-02.html":
 			{
-				if (st.isCond(7))
+				if (qs.isCond(7))
 				{
-					st.setCond(8, true);
+					qs.setCond(8, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30832-03.html":
 			{
-				if (st.isCond(8))
+				if (qs.isCond(8))
 				{
 					htmltext = event;
 				}
@@ -202,22 +202,22 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 	{
 		if (Util.contains(MOBS, npc.getId()))
 		{
-			final QuestState st = getRandomPartyMemberState(player, 3, 3, npc);
-			if ((st != null) && giveItemRandomly(st.getPlayer(), npc, ELCADIAS_MARK.getId(), 1, ELCADIAS_MARK.getCount(), 1.0, true))
+			final QuestState qs = getRandomPartyMemberState(player, 3, 3, npc);
+			if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, ELCADIAS_MARK.getId(), 1, ELCADIAS_MARK.getCount(), 1.0, true))
 			{
-				st.setCond(4, true);
+				qs.setCond(4, true);
 			}
 		}
 		else
 		{
-			final QuestState st = getQuestState(player, false);
-			if ((st != null) && st.isCond(5))
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isCond(5))
 			{
-				final int value = st.getInt("ex") + 1;
-				st.set("ex", value);
+				final int value = qs.getInt("ex") + 1;
+				qs.set("ex", value);
 				if (value == 2)
 				{
-					st.setCond(6, true);
+					qs.setCond(6, true);
 				}
 			}
 		}
@@ -227,22 +227,22 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		switch (npc.getId())
 		{
 			case WOOD:
 			{
-				if (st.isCompleted())
+				if (qs.isCompleted())
 				{
 					htmltext = "32593-02.html";
 				}
-				else if (st.isCreated())
+				else if (qs.isCreated())
 				{
-					st = player.getQuestState(Q00198_SevenSignsEmbryo.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32593-01.htm" : "32593-03.htm";
+					qs = player.getQuestState(Q00198_SevenSignsEmbryo.class.getSimpleName());
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "32593-01.htm" : "32593-03.htm";
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
 					htmltext = "32593-07.html";
 				}
@@ -250,11 +250,11 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case FRANZ:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = "32597-01.html";
 				}
-				else if (st.isCond(2))
+				else if (qs.isCond(2))
 				{
 					htmltext = "32597-03.html";
 				}
@@ -262,7 +262,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case ELCADIA:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 2:
 					{
@@ -314,7 +314,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 						else
 						{
 							addExpAndSp(player, 10000000, 1000000);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							htmltext = "32784-16.html";
 						}
 						break;
@@ -324,11 +324,11 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case HARDIN:
 			{
-				if (st.isCond(7))
+				if (qs.isCond(7))
 				{
 					htmltext = "30832-01.html";
 				}
-				else if (st.isCond(8))
+				else if (qs.isCond(8))
 				{
 					htmltext = "30832-04.html";
 				}

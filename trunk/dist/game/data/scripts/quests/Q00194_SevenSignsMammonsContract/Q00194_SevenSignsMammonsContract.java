@@ -62,8 +62,8 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -73,13 +73,13 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 		{
 			case "30760-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "30760-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = event;
 				}
@@ -87,18 +87,18 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "30760-04.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = event;
-					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				}
 				break;
 			}
 			case "showmovie":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					player.showQuestMovie(10);
 					return "";
 				}
@@ -106,10 +106,10 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "30760-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.giveItems(ATHEBALDTS_INTRODUCTION, 1);
-					st.setCond(3, true);
+					giveItems(player, ATHEBALDTS_INTRODUCTION, 1);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
@@ -117,7 +117,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			case "32571-03.html":
 			case "32571-04.html":
 			{
-				if (st.isCond(3) && st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
+				if (qs.isCond(3) && hasQuestItems(player, ATHEBALDTS_INTRODUCTION))
 				{
 					htmltext = event;
 				}
@@ -125,19 +125,19 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32571-05.html":
 			{
-				if (st.isCond(3) && st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
+				if (qs.isCond(3) && hasQuestItems(player, ATHEBALDTS_INTRODUCTION))
 				{
-					st.takeItems(ATHEBALDTS_INTRODUCTION, -1);
+					takeItems(player, ATHEBALDTS_INTRODUCTION, -1);
 					npc.setTarget(player);
 					npc.doCast(TRANSFORMATION_FROG.getSkill());
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32571-07.html":
 			{
-				if (st.isCond(4) && (player.getTransformationId() != 111) && !st.hasQuestItems(FROG_KINGS_BEAD))
+				if (qs.isCond(4) && (player.getTransformationId() != 111) && !hasQuestItems(player, FROG_KINGS_BEAD))
 				{
 					npc.setTarget(player);
 					npc.doCast(TRANSFORMATION_FROG.getSkill());
@@ -147,7 +147,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32571-09.html":
 			{
-				if (st.isCond(4) && (player.getTransformationId() == 111) && !st.hasQuestItems(FROG_KINGS_BEAD))
+				if (qs.isCond(4) && (player.getTransformationId() == 111) && !hasQuestItems(player, FROG_KINGS_BEAD))
 				{
 					player.stopAllEffects();
 					htmltext = event;
@@ -156,10 +156,10 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32571-11.html":
 			{
-				if (st.isCond(5) && st.hasQuestItems(FROG_KINGS_BEAD))
+				if (qs.isCond(5) && hasQuestItems(player, FROG_KINGS_BEAD))
 				{
-					st.takeItems(FROG_KINGS_BEAD, -1);
-					st.setCond(6, true);
+					takeItems(player, FROG_KINGS_BEAD, -1);
+					qs.setCond(6, true);
 					htmltext = event;
 					if (player.getTransformationId() == 111)
 					{
@@ -170,18 +170,18 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32571-13.html":
 			{
-				if (st.isCond(6))
+				if (qs.isCond(6))
 				{
 					npc.setTarget(player);
 					npc.doCast(TRANSFORMATION_KID.getSkill());
-					st.setCond(7, true);
+					qs.setCond(7, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32571-15.html":
 			{
-				if (st.isCond(7) && (player.getTransformationId() != 112) && !st.hasQuestItems(GRANDA_TESS_CANDY_POUCH))
+				if (qs.isCond(7) && (player.getTransformationId() != 112) && !hasQuestItems(player, GRANDA_TESS_CANDY_POUCH))
 				{
 					npc.setTarget(player);
 					npc.doCast(TRANSFORMATION_KID.getSkill());
@@ -191,7 +191,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32571-17.html":
 			{
-				if (st.isCond(7) && (player.getTransformationId() == 112) && !st.hasQuestItems(GRANDA_TESS_CANDY_POUCH))
+				if (qs.isCond(7) && (player.getTransformationId() == 112) && !hasQuestItems(player, GRANDA_TESS_CANDY_POUCH))
 				{
 					player.stopAllEffects();
 					htmltext = event;
@@ -200,10 +200,10 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32571-19.html":
 			{
-				if (st.isCond(8) && st.hasQuestItems(GRANDA_TESS_CANDY_POUCH))
+				if (qs.isCond(8) && hasQuestItems(player, GRANDA_TESS_CANDY_POUCH))
 				{
-					st.takeItems(GRANDA_TESS_CANDY_POUCH, -1);
-					st.setCond(9, true);
+					takeItems(player, GRANDA_TESS_CANDY_POUCH, -1);
+					qs.setCond(9, true);
 					htmltext = event;
 					if (player.getTransformationId() == 112)
 					{
@@ -214,18 +214,18 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32571-21.html":
 			{
-				if (st.isCond(9))
+				if (qs.isCond(9))
 				{
 					npc.setTarget(player);
 					npc.doCast(TRANSFORMATION_NATIVE.getSkill());
-					st.setCond(10, true);
+					qs.setCond(10, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32571-23.html":
 			{
-				if (st.isCond(10) && (player.getTransformationId() != 124) && !st.hasQuestItems(NATIVES_GLOVE))
+				if (qs.isCond(10) && (player.getTransformationId() != 124) && !hasQuestItems(player, NATIVES_GLOVE))
 				{
 					npc.setTarget(player);
 					npc.doCast(TRANSFORMATION_NATIVE.getSkill());
@@ -235,7 +235,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32571-25.html":
 			{
-				if (st.isCond(10) && (player.getTransformationId() == 124) && !st.hasQuestItems(NATIVES_GLOVE))
+				if (qs.isCond(10) && (player.getTransformationId() == 124) && !hasQuestItems(player, NATIVES_GLOVE))
 				{
 					player.stopAllEffects();
 					htmltext = event;
@@ -244,10 +244,10 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32571-27.html":
 			{
-				if (st.isCond(11) && st.hasQuestItems(NATIVES_GLOVE))
+				if (qs.isCond(11) && hasQuestItems(player, NATIVES_GLOVE))
 				{
-					st.takeItems(NATIVES_GLOVE, -1);
-					st.setCond(12, true);
+					takeItems(player, NATIVES_GLOVE, -1);
+					qs.setCond(12, true);
 					htmltext = event;
 					if (player.getTransformationId() == 124)
 					{
@@ -259,7 +259,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			case "32572-03.html":
 			case "32572-04.html":
 			{
-				if (st.isCond(4))
+				if (qs.isCond(4))
 				{
 					htmltext = event;
 				}
@@ -267,17 +267,17 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32572-05.html":
 			{
-				if (st.isCond(4))
+				if (qs.isCond(4))
 				{
-					st.giveItems(FROG_KINGS_BEAD, 1);
-					st.setCond(5, true);
+					giveItems(player, FROG_KINGS_BEAD, 1);
+					qs.setCond(5, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32573-03.html":
 			{
-				if (st.isCond(7))
+				if (qs.isCond(7))
 				{
 					htmltext = event;
 				}
@@ -285,10 +285,10 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32573-04.html":
 			{
-				if (st.isCond(7))
+				if (qs.isCond(7))
 				{
-					st.giveItems(GRANDA_TESS_CANDY_POUCH, 1);
-					st.setCond(8, true);
+					giveItems(player, GRANDA_TESS_CANDY_POUCH, 1);
+					qs.setCond(8, true);
 					htmltext = event;
 				}
 				break;
@@ -296,7 +296,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			case "32574-03.html":
 			case "32574-04.html":
 			{
-				if (st.isCond(10))
+				if (qs.isCond(10))
 				{
 					htmltext = event;
 				}
@@ -304,17 +304,17 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "32574-05.html":
 			{
-				if (st.isCond(10))
+				if (qs.isCond(10))
 				{
-					st.giveItems(NATIVES_GLOVE, 1);
-					st.setCond(11, true);
+					giveItems(player, NATIVES_GLOVE, 1);
+					qs.setCond(11, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31001-02.html":
 			{
-				if (st.isCond(12))
+				if (qs.isCond(12))
 				{
 					htmltext = event;
 				}
@@ -322,12 +322,12 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case "31001-03.html":
 			{
-				if (st.isCond(12))
+				if (qs.isCond(12))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						st.addExpAndSp(52518015, 5817677);
-						st.exitQuest(false, true);
+						addExpAndSp(player, 52518015, 5817677);
+						qs.exitQuest(false, true);
 						htmltext = event;
 					}
 					else
@@ -344,9 +344,9 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -357,8 +357,8 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (npc.getId() == SIR_GUSTAV_ATHEBALDT)
 				{
-					st = player.getQuestState(Q00193_SevenSignsDyingMessage.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && st.isCompleted()) ? "30760-01.htm" : "30760-05.html";
+					qs = player.getQuestState(Q00193_SevenSignsDyingMessage.class.getSimpleName());
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "30760-01.htm" : "30760-05.html";
 				}
 				break;
 			}
@@ -368,15 +368,15 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 				{
 					case SIR_GUSTAV_ATHEBALDT:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "30760-02.html";
 						}
-						else if (st.isCond(2))
+						else if (qs.isCond(2))
 						{
 							htmltext = "30760-06.html";
 						}
-						else if (st.isCond(3) && st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
+						else if (qs.isCond(3) && hasQuestItems(player, ATHEBALDTS_INTRODUCTION))
 						{
 							htmltext = "30760-08.html";
 						}
@@ -384,7 +384,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 					}
 					case COLIN:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							case 2:
@@ -394,7 +394,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 							}
 							case 3:
 							{
-								if (st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
+								if (hasQuestItems(player, ATHEBALDTS_INTRODUCTION))
 								{
 									htmltext = "32571-02.html";
 								}
@@ -402,7 +402,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 							}
 							case 4:
 							{
-								if (!st.hasQuestItems(FROG_KINGS_BEAD))
+								if (!hasQuestItems(player, FROG_KINGS_BEAD))
 								{
 									htmltext = (player.getTransformationId() != 111) ? "32571-06.html" : "32571-08.html";
 								}
@@ -410,7 +410,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 							}
 							case 5:
 							{
-								if (st.hasQuestItems(FROG_KINGS_BEAD))
+								if (hasQuestItems(player, FROG_KINGS_BEAD))
 								{
 									htmltext = "32571-10.html";
 								}
@@ -423,7 +423,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 							}
 							case 7:
 							{
-								if (!st.hasQuestItems(GRANDA_TESS_CANDY_POUCH))
+								if (!hasQuestItems(player, GRANDA_TESS_CANDY_POUCH))
 								{
 									htmltext = (player.getTransformationId() != 112) ? "32571-14.html" : "32571-16.html";
 								}
@@ -431,7 +431,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 							}
 							case 8:
 							{
-								if (st.hasQuestItems(GRANDA_TESS_CANDY_POUCH))
+								if (hasQuestItems(player, GRANDA_TESS_CANDY_POUCH))
 								{
 									htmltext = "32571-18.html";
 								}
@@ -444,7 +444,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 							}
 							case 10:
 							{
-								if (!st.hasQuestItems(NATIVES_GLOVE))
+								if (!hasQuestItems(player, NATIVES_GLOVE))
 								{
 									htmltext = (player.getTransformationId() != 124) ? "32571-22.html" : "32571-24.html";
 								}
@@ -452,7 +452,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 							}
 							case 11:
 							{
-								if (st.hasQuestItems(NATIVES_GLOVE))
+								if (hasQuestItems(player, NATIVES_GLOVE))
 								{
 									htmltext = "32571-26.html";
 								}
@@ -468,7 +468,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 					}
 					case FROG:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							case 2:
@@ -484,7 +484,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 							}
 							case 5:
 							{
-								if (st.hasQuestItems(FROG_KINGS_BEAD) && (player.getTransformationId() == 111))
+								if (hasQuestItems(player, FROG_KINGS_BEAD) && (player.getTransformationId() == 111))
 								{
 									htmltext = "32572-07.html";
 								}
@@ -495,7 +495,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 					}
 					case TESS:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							case 2:
@@ -514,7 +514,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 							}
 							case 8:
 							{
-								if (st.hasQuestItems(GRANDA_TESS_CANDY_POUCH) && (player.getTransformationId() == 112))
+								if (hasQuestItems(player, GRANDA_TESS_CANDY_POUCH) && (player.getTransformationId() == 112))
 								{
 									htmltext = "32573-06.html";
 								}
@@ -525,7 +525,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 					}
 					case KUTA:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							case 2:
@@ -547,7 +547,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 							}
 							case 11:
 							{
-								if (st.hasQuestItems(NATIVES_GLOVE) && (player.getTransformationId() == 124))
+								if (hasQuestItems(player, NATIVES_GLOVE) && (player.getTransformationId() == 124))
 								{
 									htmltext = "32574-07.html";
 								}
@@ -558,7 +558,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 					}
 					case CLAUDIA_ATHEBALDT:
 					{
-						if (st.isCond(12))
+						if (qs.isCond(12))
 						{
 							htmltext = "31001-01.html";
 						}

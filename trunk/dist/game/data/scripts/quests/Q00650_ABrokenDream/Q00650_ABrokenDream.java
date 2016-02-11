@@ -63,9 +63,9 @@ public final class Q00650_ABrokenDream extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -74,9 +74,9 @@ public final class Q00650_ABrokenDream extends Quest
 		{
 			case "32054-03.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
@@ -84,7 +84,7 @@ public final class Q00650_ABrokenDream extends Quest
 			case "32054-07.html":
 			case "32054-08.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					htmltext = event;
 				}
@@ -92,9 +92,9 @@ public final class Q00650_ABrokenDream extends Quest
 			}
 			case "32054-09.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -106,14 +106,14 @@ public final class Q00650_ABrokenDream extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -130,7 +130,7 @@ public final class Q00650_ABrokenDream extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = st.hasQuestItems(REMNANTS_OF_OLD_DWARVES_DREAMS) ? "32054-05.html" : "32054-06.html";
+				htmltext = hasQuestItems(player, REMNANTS_OF_OLD_DWARVES_DREAMS) ? "32054-05.html" : "32054-06.html";
 				break;
 			}
 		}
@@ -141,8 +141,8 @@ public final class Q00650_ABrokenDream extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final List<L2PcInstance> randomList = new ArrayList<>();
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isStarted())
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isStarted())
 		{
 			randomList.add(killer);
 			randomList.add(killer);
@@ -153,8 +153,8 @@ public final class Q00650_ABrokenDream extends Quest
 		{
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
-				final QuestState qs = getQuestState(member, false);
-				if ((qs != null) && qs.isStarted())
+				final QuestState qst = getQuestState(member, false);
+				if ((qst != null) && qst.isStarted())
 				{
 					randomList.add(member);
 				}

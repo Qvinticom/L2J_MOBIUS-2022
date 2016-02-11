@@ -43,8 +43,8 @@ public class Q00121_PavelTheGiant extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -52,12 +52,16 @@ public class Q00121_PavelTheGiant extends Quest
 		switch (event)
 		{
 			case "31961-02.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "32041-02.html":
-				st.addExpAndSp(346320, 26069);
-				st.exitQuest(false, true);
+			{
+				addExpAndSp(player, 346320, 26069);
+				qs.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -66,8 +70,8 @@ public class Q00121_PavelTheGiant extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -75,25 +79,35 @@ public class Q00121_PavelTheGiant extends Quest
 		switch (npc.getId())
 		{
 			case NEWYEAR:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= 70) ? "31961-01.htm" : "31961-00.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "31961-03.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case YUMI:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
 					htmltext = "32041-01.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

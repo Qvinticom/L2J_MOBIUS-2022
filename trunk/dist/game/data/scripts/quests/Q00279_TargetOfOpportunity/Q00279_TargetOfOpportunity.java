@@ -68,22 +68,22 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if ((st == null) || (player.getLevel() < 82))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs == null) || (player.getLevel() < 82))
 		{
 			return getNoQuestMsg(player);
 		}
 		
-		if (event.equalsIgnoreCase("32302-05.html"))
+		if (event.equals("32302-05.html"))
 		{
-			st.startQuest();
-			st.set("progress", "1");
+			qs.startQuest();
+			qs.set("progress", "1");
 		}
-		else if (event.equalsIgnoreCase("32302-08.html") && (st.getInt("progress") == 1) && st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3]))
+		else if (event.equals("32302-08.html") && (qs.getInt("progress") == 1) && hasQuestItems(player, SEAL_COMPONENTS[0]) && hasQuestItems(player, SEAL_COMPONENTS[1]) && hasQuestItems(player, SEAL_COMPONENTS[2]) && hasQuestItems(player, SEAL_COMPONENTS[3]))
 		{
-			st.giveItems(SEAL_BREAKERS[0], 1);
-			st.giveItems(SEAL_BREAKERS[1], 1);
-			st.exitQuest(true, true);
+			giveItems(player, SEAL_BREAKERS[0], 1);
+			giveItems(player, SEAL_BREAKERS[1], 1);
+			qs.exitQuest(true, true);
 		}
 		return htmltext;
 	}
@@ -98,19 +98,19 @@ public final class Q00279_TargetOfOpportunity extends Quest
 			return null;
 		}
 		
-		final QuestState st = getQuestState(pl, false);
+		final QuestState qs = getQuestState(pl, false);
 		if (getRandom(1000) < (int) (311 * Config.RATE_QUEST_DROP))
 		{
-			if (!st.hasQuestItems(SEAL_COMPONENTS[idx]))
+			if (!hasQuestItems(player, SEAL_COMPONENTS[idx]))
 			{
-				st.giveItems(SEAL_COMPONENTS[idx], 1);
-				if (haveAllExceptThis(st, idx))
+				giveItems(player, SEAL_COMPONENTS[idx], 1);
+				if (haveAllExceptThis(player, idx))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -121,24 +121,24 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.getState() == State.CREATED)
+		if (qs.getState() == State.CREATED)
 		{
 			htmltext = (player.getLevel() >= 82) ? "32302-01.htm" : "32302-02.html";
 		}
-		else if ((st.getState() == State.STARTED) && (st.getInt("progress") == 1))
+		else if ((qs.getState() == State.STARTED) && (qs.getInt("progress") == 1))
 		{
-			htmltext = (st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3])) ? "32302-07.html" : "32302-06.html";
+			htmltext = (hasQuestItems(player, SEAL_COMPONENTS[0]) && hasQuestItems(player, SEAL_COMPONENTS[1]) && hasQuestItems(player, SEAL_COMPONENTS[2]) && hasQuestItems(player, SEAL_COMPONENTS[3])) ? "32302-07.html" : "32302-06.html";
 		}
 		return htmltext;
 	}
 	
-	private static final boolean haveAllExceptThis(QuestState st, int idx)
+	private static final boolean haveAllExceptThis(L2PcInstance player, int idx)
 	{
 		for (int i = 0; i < SEAL_COMPONENTS.length; i++)
 		{
@@ -147,7 +147,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 				continue;
 			}
 			
-			if (!st.hasQuestItems(SEAL_COMPONENTS[i]))
+			if (!hasQuestItems(player, SEAL_COMPONENTS[i]))
 			{
 				return false;
 			}

@@ -46,8 +46,8 @@ public class Q00020_BringUpWithLove extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -71,17 +71,17 @@ public class Q00020_BringUpWithLove extends Quest
 			}
 			case "31537-11.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "31537-16.html":
 			{
-				if (st.isCond(2) && st.hasQuestItems(INNOCENCE_JEWEL))
+				if (qs.isCond(2) && hasQuestItems(player, INNOCENCE_JEWEL))
 				{
-					st.giveItems(WATER_CRYSTAL, 1);
-					st.takeItems(INNOCENCE_JEWEL, -1);
-					st.exitQuest(false, true);
+					giveItems(player, WATER_CRYSTAL, 1);
+					takeItems(player, INNOCENCE_JEWEL, -1);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -93,14 +93,14 @@ public class Q00020_BringUpWithLove extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -108,10 +108,13 @@ public class Q00020_BringUpWithLove extends Quest
 				break;
 			}
 			case State.CREATED:
+			{
 				htmltext = player.getLevel() >= MIN_LEVEL ? "31537-01.htm" : "31537-13.html";
 				break;
+			}
 			case State.STARTED:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -120,22 +123,23 @@ public class Q00020_BringUpWithLove extends Quest
 					}
 					case 2:
 					{
-						htmltext = (!st.hasQuestItems(INNOCENCE_JEWEL)) ? "31537-14.html" : "31537-15.html";
+						htmltext = (!hasQuestItems(player, INNOCENCE_JEWEL)) ? "31537-14.html" : "31537-15.html";
 						break;
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
 	
 	public static void checkJewelOfInnocence(L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
-		if ((st != null) && st.isCond(1) && !st.hasQuestItems(INNOCENCE_JEWEL) && (getRandom(100) < 5))
+		final QuestState qs = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
+		if ((qs != null) && qs.isCond(1) && !hasQuestItems(player, INNOCENCE_JEWEL) && (getRandom(100) < 5))
 		{
-			st.giveItems(INNOCENCE_JEWEL, 1);
-			st.setCond(2, true);
+			giveItems(player, INNOCENCE_JEWEL, 1);
+			qs.setCond(2, true);
 		}
 	}
 }

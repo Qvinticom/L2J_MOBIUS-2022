@@ -43,8 +43,8 @@ public class Q00122_OminousNews extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -52,13 +52,17 @@ public class Q00122_OminousNews extends Quest
 		switch (event)
 		{
 			case "31979-02.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "32017-02.html":
-				st.giveAdena(8923, true);
-				st.addExpAndSp(45151, 2310);
-				st.exitQuest(false, true);
+			{
+				giveAdena(player, 8923, true);
+				addExpAndSp(player, 45151, 2310);
+				qs.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -67,8 +71,8 @@ public class Q00122_OminousNews extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -76,25 +80,35 @@ public class Q00122_OminousNews extends Quest
 		switch (npc.getId())
 		{
 			case MOIRA:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= 20) ? "31979-01.htm" : "31979-00.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "31979-03.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case KARUDA:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
 					htmltext = "32017-01.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

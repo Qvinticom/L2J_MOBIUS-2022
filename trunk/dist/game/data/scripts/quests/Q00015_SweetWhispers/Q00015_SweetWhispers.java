@@ -45,8 +45,8 @@ public class Q00015_SweetWhispers extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -54,21 +54,27 @@ public class Q00015_SweetWhispers extends Quest
 		switch (event)
 		{
 			case "31302-01.html":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "31518-01.html":
-				if (st.isCond(1))
+			{
+				if (qs.isCond(1))
 				{
-					st.setCond(2);
+					qs.setCond(2);
 				}
 				break;
+			}
 			case "31517-01.html":
-				if (st.isCond(2))
+			{
+				if (qs.isCond(2))
 				{
-					st.addExpAndSp(350531, 28204);
-					st.exitQuest(false, true);
+					addExpAndSp(player, 350531, 28204);
+					qs.exitQuest(false, true);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -77,52 +83,64 @@ public class Q00015_SweetWhispers extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
 		final int npcId = npc.getId();
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 			case State.CREATED:
+			{
 				if (npcId == VLADIMIR)
 				{
 					htmltext = (player.getLevel() >= 60) ? "31302-00.htm" : "31302-00a.html";
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				switch (npcId)
 				{
 					case VLADIMIR:
-						if (st.isCond(1))
+					{
+						if (qs.isCond(1))
 						{
 							htmltext = "31302-01a.html";
 						}
 						break;
+					}
 					case M_NECROMANCER:
-						switch (st.getCond())
+					{
+						int cond = qs.getCond();
+						if (cond == 1)
 						{
-							case 1:
-								htmltext = "31518-00.html";
-								break;
-							case 2:
-								htmltext = "31518-01a.html";
-								break;
+							htmltext = "31518-00.html";
+						}
+						else if (cond == 2)
+						{
+							htmltext = "31518-01a.html";
 						}
 						break;
+					}
 					case HIERARCH:
-						if (st.isCond(2))
+					{
+						if (qs.isCond(2))
 						{
 							htmltext = "31517-00.html";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

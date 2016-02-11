@@ -75,8 +75,8 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -91,26 +91,39 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 			case "30612-04.html":
 			case "30612-06.html":
 			case "30612-07.html":
+			{
 				break;
+			}
 			case "30894-01.html":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "30894-03.html":
-				st.giveItems(CRYPTOGRAM_OF_THE_ANGEL_SEARCH, 1);
-				st.setCond(2, true);
+			{
+				giveItems(player, CRYPTOGRAM_OF_THE_ANGEL_SEARCH, 1);
+				qs.setCond(2, true);
 				break;
+			}
 			case "30289-05.html":
-				st.unset("talk");
-				st.setCond(3, true);
+			{
+				qs.unset("talk");
+				qs.setCond(3, true);
 				break;
+			}
 			case "30612-05.html":
-				st.set("talk", "2");
+			{
+				qs.set("talk", "2");
 				break;
+			}
 			case "30612-08.html":
-				st.unset("talk");
-				st.setCond(4, true);
+			{
+				qs.unset("talk");
+				qs.setCond(4, true);
 				break;
+			}
 			case "32368-04.html":
+			{
 				if (isAngelSpawned)
 				{
 					return "32368-03.html";
@@ -119,14 +132,20 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 				isAngelSpawned = true;
 				startQuestTimer("despawn", 120000, null, player);
 				break;
+			}
 			case "despawn":
+			{
 				if (isAngelSpawned)
 				{
 					isAngelSpawned = false;
 				}
+				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -134,14 +153,14 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st;
+		final QuestState qs;
 		if ((npc.getId() == FALLEN_ANGEL))
 		{
-			st = getQuestState(player, false);
-			if (st.isCond(5))
+			qs = getQuestState(player, false);
+			if (qs.isCond(5))
 			{
-				st.giveItems(FALLEN_ANGEL_BLOOD, 1);
-				st.setCond(6, true);
+				giveItems(player, FALLEN_ANGEL_BLOOD, 1);
+				qs.setCond(6, true);
 				isAngelSpawned = false;
 			}
 		}
@@ -150,18 +169,18 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 			final L2PcInstance member = getRandomPartyMember(player, 4);
 			if (member != null)
 			{
-				st = getQuestState(member, false);
+				qs = getQuestState(member, false);
 				if (getRandom(1000) < MOBS.get(npc.getId()))
 				{
-					st.giveItems(PROPHECY_FRAGMENT, 1);
-					if (st.getQuestItemsCount(PROPHECY_FRAGMENT) >= FRAGMENT_COUNT)
+					giveItems(player, PROPHECY_FRAGMENT, 1);
+					if (getQuestItemsCount(player, PROPHECY_FRAGMENT) >= FRAGMENT_COUNT)
 					{
-						st.takeItems(PROPHECY_FRAGMENT, -1);
-						st.setCond(5, true);
+						takeItems(player, PROPHECY_FRAGMENT, -1);
+						qs.setCond(5, true);
 					}
 					else
 					{
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 			}
@@ -173,8 +192,8 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -182,110 +201,146 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 		switch (npc.getId())
 		{
 			case NATOOLS:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.STARTED:
-						switch (st.getCond())
+					{
+						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "30894-01.html";
 								break;
+							}
 							default:
+							{
 								htmltext = "30894-04.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case RAYMOND:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
+						{
 							htmltext = "30289-01.html";
 							break;
+						}
 						case 2:
-							if (st.isSet("talk"))
+						{
+							if (qs.isSet("talk"))
 							{
 								htmltext = "30289-03.html";
 							}
 							else
 							{
-								st.takeItems(CRYPTOGRAM_OF_THE_ANGEL_SEARCH, -1);
-								st.set("talk", "1");
+								takeItems(player, CRYPTOGRAM_OF_THE_ANGEL_SEARCH, -1);
+								qs.set("talk", "1");
 								htmltext = "30289-02.html";
 							}
 							break;
+						}
 						case 3:
 						case 4:
 						case 5:
+						{
 							htmltext = "30289-06.html";
 							break;
+						}
 						case 6:
-							st.giveAdena(92676, true);
+						{
+							giveAdena(player, 92676, true);
 							if (player.getLevel() <= MAX_REWARD_LEVEL)
 							{
-								st.addExpAndSp(223036, 13091);
+								addExpAndSp(player, 223036, 13091);
 							}
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							htmltext = "30289-07.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case CASIAN:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						case 2:
+						{
 							htmltext = "30612-01.html";
 							break;
+						}
 						case 3:
-							if (st.getInt("talk") == 1)
+						{
+							if (qs.getInt("talk") == 1)
 							{
 								htmltext = "30612-03.html";
 							}
-							else if (st.getInt("talk") == 2)
+							else if (qs.getInt("talk") == 2)
 							{
 								htmltext = "30612-06.html";
 							}
 							else
 							{
 								htmltext = "30612-02.html";
-								st.set("talk", "1");
+								qs.set("talk", "1");
 							}
 							break;
+						}
 						case 4:
 						case 5:
 						case 6:
+						{
 							htmltext = "30612-09.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case ROCK:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 5:
+						{
 							htmltext = "32368-02.html";
 							break;
+						}
 						case 6:
+						{
 							htmltext = "32368-05.html";
 							break;
+						}
 						default:
+						{
 							htmltext = "32368-01.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

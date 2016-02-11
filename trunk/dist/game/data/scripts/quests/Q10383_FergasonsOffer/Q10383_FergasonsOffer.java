@@ -85,9 +85,9 @@ public class Q10383_FergasonsOffer extends Quest
 			}
 			case "sofa_aku_q10383_03.html":
 			{
-				qs.takeItems(UNSTABLE_PETRA, -1L);
-				qs.addExpAndSp(951127800, 435041400);
-				qs.giveItems(57, 3256740);
+				takeItems(player, UNSTABLE_PETRA, -1L);
+				addExpAndSp(player, 951127800, 435041400);
+				giveAdena(player, 3256740, true);
 				qs.exitQuest(QuestType.ONE_TIME, true);
 				break;
 			}

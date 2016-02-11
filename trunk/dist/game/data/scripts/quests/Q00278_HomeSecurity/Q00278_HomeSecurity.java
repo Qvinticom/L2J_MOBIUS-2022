@@ -53,8 +53,8 @@ public class Q00278_HomeSecurity extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -68,7 +68,7 @@ public class Q00278_HomeSecurity extends Quest
 			}
 			case "31537-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "31537-07.html":
@@ -77,58 +77,58 @@ public class Q00278_HomeSecurity extends Quest
 				
 				if (i0 < 10)
 				{
-					st.giveItems(960, 1);
+					giveItems(player, 960, 1);
 				}
 				else if (i0 < 19)
 				{
-					st.giveItems(960, 2);
+					giveItems(player, 960, 2);
 				}
 				else if (i0 < 27)
 				{
-					st.giveItems(960, 3);
+					giveItems(player, 960, 3);
 				}
 				else if (i0 < 34)
 				{
-					st.giveItems(960, 4);
+					giveItems(player, 960, 4);
 				}
 				else if (i0 < 40)
 				{
-					st.giveItems(960, 5);
+					giveItems(player, 960, 5);
 				}
 				else if (i0 < 45)
 				{
-					st.giveItems(960, 6);
+					giveItems(player, 960, 6);
 				}
 				else if (i0 < 49)
 				{
-					st.giveItems(960, 7);
+					giveItems(player, 960, 7);
 				}
 				else if (i0 < 52)
 				{
-					st.giveItems(960, 8);
+					giveItems(player, 960, 8);
 				}
 				else if (i0 < 54)
 				{
-					st.giveItems(960, 9);
+					giveItems(player, 960, 9);
 				}
 				else if (i0 < 55)
 				{
-					st.giveItems(960, 10);
+					giveItems(player, 960, 10);
 				}
 				else if (i0 < 75)
 				{
-					st.giveItems(9553, 1);
+					giveItems(player, 9553, 1);
 				}
 				else if (i0 < 90)
 				{
-					st.giveItems(9553, 2);
+					giveItems(player, 9553, 2);
 				}
 				else
 				{
-					st.giveItems(959, 1);
+					giveItems(player, 959, 1);
 				}
 				
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = "31537-07.html";
 				break;
 			}
@@ -139,26 +139,26 @@ public class Q00278_HomeSecurity extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, 1, 3, npc);
-		if (st != null)
+		final QuestState qs = getRandomPartyMemberState(player, 1, 3, npc);
+		if (qs != null)
 		{
 			switch (npc.getId())
 			{
 				case 18905: // Farm Ravager (Crazy)
 				{
 					final int itemCount = ((getRandom(1000) < 486) ? getRandom(6) + 1 : getRandom(5) + 1);
-					if (st.giveItemRandomly(npc, SEL_MAHUM_MANE, itemCount, SEL_MAHUM_MANE_COUNT, 1.0, true))
+					if (giveItemRandomly(qs.getPlayer(), npc, SEL_MAHUM_MANE, itemCount, SEL_MAHUM_MANE_COUNT, 1.0, true))
 					{
-						st.setCond(2, true);
+						qs.setCond(2, true);
 					}
 					break;
 				}
 				case 18906: // Farm Bandit
 				case 18907: // Beast Devourer
 				{
-					if (st.giveItemRandomly(npc, SEL_MAHUM_MANE, 1, SEL_MAHUM_MANE_COUNT, 0.85, true))
+					if (giveItemRandomly(qs.getPlayer(), npc, SEL_MAHUM_MANE, 1, SEL_MAHUM_MANE_COUNT, 0.85, true))
 					{
-						st.setCond(2, true);
+						qs.setCond(2, true);
 					}
 					break;
 				}
@@ -171,23 +171,23 @@ public class Q00278_HomeSecurity extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = "31537-01.htm";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			if (st.isCond(1) || (getQuestItemsCount(player, SEL_MAHUM_MANE) < SEL_MAHUM_MANE_COUNT))
+			if (qs.isCond(1) || (getQuestItemsCount(player, SEL_MAHUM_MANE) < SEL_MAHUM_MANE_COUNT))
 			{
 				htmltext = "31537-06.html";
 			}
-			else if (st.isCond(2) && (getQuestItemsCount(player, SEL_MAHUM_MANE) >= SEL_MAHUM_MANE_COUNT))
+			else if (qs.isCond(2) && (getQuestItemsCount(player, SEL_MAHUM_MANE) >= SEL_MAHUM_MANE_COUNT))
 			{
 				htmltext = "31537-05.html";
 			}

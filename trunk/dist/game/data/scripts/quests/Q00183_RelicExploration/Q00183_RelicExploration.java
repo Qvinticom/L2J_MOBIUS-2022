@@ -74,10 +74,10 @@ public final class Q00183_RelicExploration extends Quest
 			{
 				if (qs.isMemoState(2))
 				{
-					qs.giveAdena(18100, true);
+					giveAdena(player, 18100, true);
 					if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
 					{
-						qs.addExpAndSp(60000, 3000);
+						addExpAndSp(player, 60000, 3000);
 					}
 					qs.exitQuest(false, true);
 					htmltext = event;

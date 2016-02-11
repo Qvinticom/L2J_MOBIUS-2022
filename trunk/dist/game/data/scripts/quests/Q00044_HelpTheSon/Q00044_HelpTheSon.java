@@ -55,8 +55,8 @@ public class Q00044_HelpTheSon extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -65,46 +65,56 @@ public class Q00044_HelpTheSon extends Quest
 		switch (event)
 		{
 			case "30827-01.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "30827-03.html":
-				if (st.hasQuestItems(WORK_HAMMER))
+			{
+				if (hasQuestItems(player, WORK_HAMMER))
 				{
-					st.takeItems(WORK_HAMMER, 1);
-					st.setCond(2, true);
+					takeItems(player, WORK_HAMMER, 1);
+					qs.setCond(2, true);
 				}
 				else
 				{
 					htmltext = "30827-03a.html";
 				}
 				break;
+			}
 			case "30827-06.html":
-				if (st.getQuestItemsCount(GEMSTONE_FRAGMENT) == 30)
+			{
+				if (getQuestItemsCount(player, GEMSTONE_FRAGMENT) == 30)
 				{
-					st.takeItems(GEMSTONE_FRAGMENT, -1);
-					st.giveItems(GEMSTONE, 1);
-					st.setCond(4, true);
+					takeItems(player, GEMSTONE_FRAGMENT, -1);
+					giveItems(player, GEMSTONE, 1);
+					qs.setCond(4, true);
 				}
 				else
 				{
 					htmltext = "30827-06a.html";
 				}
 				break;
+			}
 			case "30505-02.html":
-				if (st.hasQuestItems(GEMSTONE))
+			{
+				if (hasQuestItems(player, GEMSTONE))
 				{
-					st.takeItems(GEMSTONE, -1);
-					st.setCond(5, true);
+					takeItems(player, GEMSTONE, -1);
+					qs.setCond(5, true);
 				}
 				else
 				{
 					htmltext = "30505-02a.html";
 				}
 				break;
+			}
 			case "30827-09.html":
-				st.giveItems(PET_TICKET, 1);
-				st.exitQuest(false, true);
+			{
+				giveItems(player, PET_TICKET, 1);
+				qs.exitQuest(false, true);
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -113,17 +123,17 @@ public class Q00044_HelpTheSon extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(2))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(2))
 		{
-			st.giveItems(GEMSTONE_FRAGMENT, 1);
-			if (st.getQuestItemsCount(GEMSTONE_FRAGMENT) == 30)
+			giveItems(player, GEMSTONE_FRAGMENT, 1);
+			if (getQuestItemsCount(player, GEMSTONE_FRAGMENT) == 30)
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 			}
 			else
 			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -133,8 +143,8 @@ public class Q00044_HelpTheSon extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -142,50 +152,74 @@ public class Q00044_HelpTheSon extends Quest
 		switch (npc.getId())
 		{
 			case LUNDY:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= 24) ? "30827-00.htm" : "30827-00a.html";
 						break;
+					}
 					case State.STARTED:
-						switch (st.getCond())
+					{
+						switch (qs.getCond())
 						{
 							case 1:
-								htmltext = (st.hasQuestItems(WORK_HAMMER)) ? "30827-02.html" : "30827-02a.html";
+							{
+								htmltext = hasQuestItems(player, WORK_HAMMER) ? "30827-02.html" : "30827-02a.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "30827-04.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "30827-05.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "30827-07.html";
 								break;
+							}
 							case 5:
+							{
 								htmltext = "30827-08.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
-				}
-				break;
-			case DRIKUS:
-				if (st.isStarted())
-				{
-					switch (st.getCond())
-					{
-						case 4:
-							htmltext = "30505-01.html";
-							break;
-						case 5:
-							htmltext = "30505-03.html";
-							break;
 					}
 				}
 				break;
+			}
+			case DRIKUS:
+			{
+				if (qs.isStarted())
+				{
+					switch (qs.getCond())
+					{
+						case 4:
+						{
+							htmltext = "30505-01.html";
+							break;
+						}
+						case 5:
+						{
+							htmltext = "30505-03.html";
+							break;
+						}
+					}
+				}
+				break;
+			}
 		}
 		return htmltext;
 	}

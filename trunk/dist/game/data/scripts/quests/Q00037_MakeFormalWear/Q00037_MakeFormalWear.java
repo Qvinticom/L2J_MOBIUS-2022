@@ -56,8 +56,8 @@ public class Q00037_MakeFormalWear extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -66,58 +66,76 @@ public class Q00037_MakeFormalWear extends Quest
 		switch (event)
 		{
 			case "30842-03.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "31520-02.html":
-				st.giveItems(SIGNET_RING, 1);
-				st.setCond(2, true);
+			{
+				giveItems(player, SIGNET_RING, 1);
+				qs.setCond(2, true);
 				break;
+			}
 			case "31521-02.html":
-				st.giveItems(ICE_WINE, 1);
-				st.setCond(3, true);
+			{
+				giveItems(player, ICE_WINE, 1);
+				qs.setCond(3, true);
 				break;
+			}
 			case "31627-02.html":
-				if (!st.hasQuestItems(ICE_WINE))
+			{
+				if (!hasQuestItems(player, ICE_WINE))
 				{
 					return getNoQuestMsg(player);
 				}
-				st.takeItems(ICE_WINE, 1);
-				st.setCond(4, true);
+				takeItems(player, ICE_WINE, 1);
+				qs.setCond(4, true);
 				break;
+			}
 			case "31521-05.html":
-				st.giveItems(BOX_OF_COOKIES, 1);
-				st.setCond(5, true);
+			{
+				giveItems(player, BOX_OF_COOKIES, 1);
+				qs.setCond(5, true);
 				break;
+			}
 			case "31520-05.html":
-				if (!st.hasQuestItems(BOX_OF_COOKIES))
+			{
+				if (!hasQuestItems(player, BOX_OF_COOKIES))
 				{
 					return getNoQuestMsg(player);
 				}
-				st.takeItems(BOX_OF_COOKIES, 1);
-				st.setCond(6, true);
+				takeItems(player, BOX_OF_COOKIES, 1);
+				qs.setCond(6, true);
 				break;
+			}
 			case "31520-08.html":
-				if (!st.hasQuestItems(SEWING_KIT, JEWEL_BOX, MYSTERIOUS_CLOTH))
+			{
+				if (!hasQuestItems(player, SEWING_KIT, JEWEL_BOX, MYSTERIOUS_CLOTH))
 				{
 					return "31520-09.html";
 				}
-				st.takeItems(SEWING_KIT, 1);
-				st.takeItems(JEWEL_BOX, 1);
-				st.takeItems(MYSTERIOUS_CLOTH, 1);
-				st.setCond(7, true);
+				takeItems(player, SEWING_KIT, 1);
+				takeItems(player, JEWEL_BOX, 1);
+				takeItems(player, MYSTERIOUS_CLOTH, 1);
+				qs.setCond(7, true);
 				break;
+			}
 			case "31520-12.html":
-				if (!st.hasQuestItems(DRESS_SHOES_BOX))
+			{
+				if (!hasQuestItems(player, DRESS_SHOES_BOX))
 				{
 					return "31520-13.html";
 				}
-				st.takeItems(DRESS_SHOES_BOX, 1);
-				st.giveItems(FORMAL_WEAR, 1);
-				st.exitQuest(false, true);
+				takeItems(player, DRESS_SHOES_BOX, 1);
+				giveItems(player, FORMAL_WEAR, 1);
+				qs.exitQuest(false, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -126,87 +144,123 @@ public class Q00037_MakeFormalWear extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		switch (npc.getId())
 		{
 			case ALEXIS:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30842-01.htm" : "30842-02.html";
 						break;
+					}
 					case State.STARTED:
-						if (st.isCond(1))
+					{
+						if (qs.isCond(1))
 						{
 							htmltext = "30842-04.html";
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case LEIKAR:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
+						{
 							htmltext = "31520-01.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = "31520-03.html";
 							break;
+						}
 						case 5:
+						{
 							htmltext = "31520-04.html";
 							break;
+						}
 						case 6:
-							htmltext = (st.hasQuestItems(SEWING_KIT, JEWEL_BOX, MYSTERIOUS_CLOTH)) ? "31520-06.html" : "31520-07.html";
+						{
+							htmltext = hasQuestItems(player, SEWING_KIT, JEWEL_BOX, MYSTERIOUS_CLOTH) ? "31520-06.html" : "31520-07.html";
 							break;
+						}
 						case 7:
-							htmltext = (st.hasQuestItems(DRESS_SHOES_BOX)) ? "31520-10.html" : "31520-11.html";
+						{
+							htmltext = hasQuestItems(player, DRESS_SHOES_BOX) ? "31520-10.html" : "31520-11.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case JEREMY:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 2:
+						{
 							htmltext = "31521-01.html";
 							break;
+						}
 						case 3:
+						{
 							htmltext = "31521-03.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "31521-04.html";
 							break;
+						}
 						case 5:
+						{
 							htmltext = "31521-06.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case MIST:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 3:
+						{
 							htmltext = "31627-01.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "31627-03.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

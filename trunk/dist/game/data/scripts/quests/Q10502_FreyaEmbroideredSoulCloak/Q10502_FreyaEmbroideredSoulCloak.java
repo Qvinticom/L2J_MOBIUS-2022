@@ -53,15 +53,15 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			final long currentCount = getQuestItemsCount(player, FREYAS_SOUL_FRAGMENT);
 			final long count = getRandom(1, 3);
 			if (count >= (FRAGMENT_COUNT - currentCount))
 			{
 				giveItems(player, FREYAS_SOUL_FRAGMENT, FRAGMENT_COUNT - currentCount);
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 			else
 			{
@@ -74,10 +74,10 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && (player.getLevel() >= MIN_LEVEL) && event.equals("32612-04.html"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && (player.getLevel() >= MIN_LEVEL) && event.equals("32612-04.html"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			return event;
 		}
 		return null;
@@ -93,14 +93,14 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -109,7 +109,7 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -122,7 +122,7 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 						{
 							giveItems(player, SOUL_CLOAK_OF_FREYA, 1);
 							playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							htmltext = "32612-06.html";
 						}
 						break;

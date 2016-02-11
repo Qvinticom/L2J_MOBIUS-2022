@@ -65,8 +65,8 @@ final class Jinia extends AbstractNpcAI
 				}
 				else
 				{
-					final QuestState st = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
-					if ((st != null) && st.isCompleted())
+					final QuestState qs = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
+					if ((qs != null) && qs.isCompleted())
 					{
 						giveItems(player, FROZEN_CORE, 1);
 					}
@@ -85,14 +85,14 @@ final class Jinia extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
-		if ((st != null) && (player.getLevel() >= MIN_LEVEL))
+		final QuestState qs = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
+		if ((qs != null) && (player.getLevel() >= MIN_LEVEL))
 		{
-			if (st.isCond(5) || st.isCond(6))
+			if (qs.isCond(5) || qs.isCond(6))
 			{
 				return "32781-09.html";
 			}
-			else if (st.isCond(7))
+			else if (qs.isCond(7))
 			{
 				return "32781-01.html";
 			}

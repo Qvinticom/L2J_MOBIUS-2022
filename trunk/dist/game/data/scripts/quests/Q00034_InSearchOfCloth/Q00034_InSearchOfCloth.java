@@ -63,8 +63,8 @@ public class Q00034_InSearchOfCloth extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -73,43 +73,57 @@ public class Q00034_InSearchOfCloth extends Quest
 		switch (event)
 		{
 			case "30088-03.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "30294-02.html":
-				st.setCond(2, true);
+			{
+				qs.setCond(2, true);
 				break;
+			}
 			case "30088-06.html":
-				st.setCond(3, true);
+			{
+				qs.setCond(3, true);
 				break;
+			}
 			case "30165-02.html":
-				st.setCond(4, true);
+			{
+				qs.setCond(4, true);
 				break;
+			}
 			case "30165-05.html":
-				if (st.getQuestItemsCount(SPINNERET) < SPINNERET_COUNT)
+			{
+				if (getQuestItemsCount(player, SPINNERET) < SPINNERET_COUNT)
 				{
 					return getNoQuestMsg(player);
 				}
-				st.takeItems(SPINNERET, SPINNERET_COUNT);
-				st.giveItems(SKEIN_OF_YARN, 1);
-				st.setCond(6, true);
+				takeItems(player, SPINNERET, SPINNERET_COUNT);
+				giveItems(player, SKEIN_OF_YARN, 1);
+				qs.setCond(6, true);
 				break;
+			}
 			case "30088-10.html":
-				if ((st.getQuestItemsCount(SUEDE) >= SUEDE_COUNT) && (st.getQuestItemsCount(THREAD) >= THREAD_COUNT) && st.hasQuestItems(SKEIN_OF_YARN))
+			{
+				if ((getQuestItemsCount(player, SUEDE) >= SUEDE_COUNT) && (getQuestItemsCount(player, THREAD) >= THREAD_COUNT) && hasQuestItems(player, SKEIN_OF_YARN))
 				{
-					st.takeItems(SKEIN_OF_YARN, 1);
-					st.takeItems(SUEDE, SUEDE_COUNT);
-					st.takeItems(THREAD, THREAD_COUNT);
-					st.giveItems(MYSTERIOUS_CLOTH, 1);
-					st.exitQuest(false, true);
+					takeItems(player, SKEIN_OF_YARN, 1);
+					takeItems(player, SUEDE, SUEDE_COUNT);
+					takeItems(player, THREAD, THREAD_COUNT);
+					giveItems(player, MYSTERIOUS_CLOTH, 1);
+					qs.exitQuest(false, true);
 				}
 				else
 				{
 					htmltext = "30088-11.html";
 				}
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -120,15 +134,15 @@ public class Q00034_InSearchOfCloth extends Quest
 		final L2PcInstance member = getRandomPartyMember(player, 4);
 		if ((member != null) && getRandomBoolean())
 		{
-			final QuestState st = getQuestState(member, false);
-			st.giveItems(SPINNERET, 1);
-			if (st.getQuestItemsCount(SPINNERET) >= SPINNERET_COUNT)
+			final QuestState qs = getQuestState(member, false);
+			giveItems(player, SPINNERET, 1);
+			if (getQuestItemsCount(player, SPINNERET) >= SPINNERET_COUNT)
 			{
-				st.setCond(5, true);
+				qs.setCond(5, true);
 			}
 			else
 			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -138,8 +152,8 @@ public class Q00034_InSearchOfCloth extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -147,67 +161,99 @@ public class Q00034_InSearchOfCloth extends Quest
 		switch (npc.getId())
 		{
 			case RADIA:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30088-01.htm" : "30088-02.html";
 						break;
+					}
 					case State.STARTED:
-						switch (st.getCond())
+					{
+						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "30088-04.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "30088-05.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "30088-07.html";
 								break;
+							}
 							case 6:
-								htmltext = ((st.getQuestItemsCount(SUEDE) >= SUEDE_COUNT) && (st.getQuestItemsCount(THREAD) >= THREAD_COUNT)) ? "30088-08.html" : "30088-09.html";
+							{
+								htmltext = ((getQuestItemsCount(player, SUEDE) >= SUEDE_COUNT) && (getQuestItemsCount(player, THREAD) >= THREAD_COUNT)) ? "30088-08.html" : "30088-09.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case VARAN:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
+						{
 							htmltext = "30294-01.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = "30294-03.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case RALFORD:
-				if (st.isStarted())
+			{
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 3:
+						{
 							htmltext = "30165-01.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "30165-03.html";
 							break;
+						}
 						case 5:
+						{
 							htmltext = "30165-04.html";
 							break;
+						}
 						case 6:
+						{
 							htmltext = "30165-06.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -79,9 +79,9 @@ public class Q10740_NeverForget extends Quest
 			}
 			case "33989-02.html":
 			{
-				if (qs.isCond(2) && (qs.getQuestItemsCount(UNNAMED_RELICS) >= 20))
+				if (qs.isCond(2) && (getQuestItemsCount(player, UNNAMED_RELICS) >= 20))
 				{
-					qs.takeItems(UNNAMED_RELICS, 20);
+					takeItems(player, UNNAMED_RELICS, 20);
 					qs.setCond(3, true);
 					htmltext = event;
 				}

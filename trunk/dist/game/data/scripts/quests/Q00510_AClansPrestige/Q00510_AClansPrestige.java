@@ -56,8 +56,8 @@ public class Q00510_AClansPrestige extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -65,11 +65,15 @@ public class Q00510_AClansPrestige extends Quest
 		switch (event)
 		{
 			case "31331-3.html":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "31331-6.html":
-				st.exitQuest(true, true);
+			{
+				qs.exitQuest(true, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -82,24 +86,24 @@ public class Q00510_AClansPrestige extends Quest
 			return null;
 		}
 		
-		QuestState st = null;
+		QuestState qs = null;
 		if (player.isClanLeader())
 		{
-			st = getQuestState(player, false);
+			qs = getQuestState(player, false);
 		}
 		else
 		{
 			final L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
 			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
 			{
-				st = getQuestState(pleader, false);
+				qs = getQuestState(pleader, false);
 			}
 		}
 		
-		if ((st != null) && st.isStarted())
+		if ((qs != null) && qs.isStarted())
 		{
-			st.rewardItems(TYRANNOSAURUS_CLAW, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			rewardItems(player, TYRANNOSAURUS_CLAW, 1);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return null;
 	}
@@ -108,43 +112,49 @@ public class Q00510_AClansPrestige extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
 		final L2Clan clan = player.getClan();
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = ((clan == null) || !player.isClanLeader() || (clan.getLevel() < 5)) ? "31331-0.htm" : "31331-1.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				if ((clan == null) || !player.isClanLeader())
 				{
-					st.exitQuest(true);
+					qs.exitQuest(true);
 					return "31331-8.html";
 				}
 				
-				if (!st.hasQuestItems(TYRANNOSAURUS_CLAW))
+				if (!hasQuestItems(player, TYRANNOSAURUS_CLAW))
 				{
 					htmltext = "31331-4.html";
 				}
 				else
 				{
-					final int count = (int) st.getQuestItemsCount(TYRANNOSAURUS_CLAW);
+					final int count = (int) getQuestItemsCount(player, TYRANNOSAURUS_CLAW);
 					final int reward = (count < 10) ? (30 * count) : (59 + (30 * count));
-					st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_1);
-					st.takeItems(TYRANNOSAURUS_CLAW, -1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_FANFARE_1);
+					takeItems(player, TYRANNOSAURUS_CLAW, -1);
 					clan.addReputationScore(reward, true);
 					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINT_S_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION).addInt(reward));
 					clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 					htmltext = "31331-7.html";
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return htmltext;
 	}

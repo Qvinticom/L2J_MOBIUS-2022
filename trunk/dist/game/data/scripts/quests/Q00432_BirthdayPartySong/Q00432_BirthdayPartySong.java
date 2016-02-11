@@ -51,9 +51,9 @@ public class Q00432_BirthdayPartySong extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -62,20 +62,25 @@ public class Q00432_BirthdayPartySong extends Quest
 		switch (event)
 		{
 			case "31043-02.htm":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "31043-05.html":
-				if (st.getQuestItemsCount(RED_CRYSTAL) < 50)
+			{
+				if (getQuestItemsCount(player, RED_CRYSTAL) < 50)
 				{
 					return "31043-06.html";
 				}
-				
-				st.giveItems(ECHO_CRYSTAL, 25);
-				st.exitQuest(true, true);
+				giveItems(player, ECHO_CRYSTAL, 25);
+				qs.exitQuest(true, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -83,18 +88,18 @@ public class Q00432_BirthdayPartySong extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if ((st != null) && st.isCond(1) && getRandomBoolean())
+		if ((qs != null) && qs.isCond(1) && getRandomBoolean())
 		{
-			st.giveItems(RED_CRYSTAL, 1);
-			if (st.getQuestItemsCount(RED_CRYSTAL) == 50)
+			giveItems(player, RED_CRYSTAL, 1);
+			if (getQuestItemsCount(player, RED_CRYSTAL) == 50)
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 			else
 			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -104,21 +109,25 @@ public class Q00432_BirthdayPartySong extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= 31) ? "31043-01.htm" : "31043-00.htm";
 				break;
+			}
 			case State.STARTED:
-				htmltext = (st.isCond(1)) ? "31043-03.html" : "31043-04.html";
+			{
+				htmltext = (qs.isCond(1)) ? "31043-03.html" : "31043-04.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

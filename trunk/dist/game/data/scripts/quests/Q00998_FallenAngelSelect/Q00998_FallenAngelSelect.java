@@ -50,8 +50,8 @@ public class Q00998_FallenAngelSelect extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -61,13 +61,19 @@ public class Q00998_FallenAngelSelect extends Quest
 			case "30894-01.html":
 			case "30894-02.html":
 			case "30894-03.html":
+			{
 				return event;
+			}
 			case "dawn":
+			{
 				startQuest(Q00142_FallenAngelRequestOfDawn.class.getSimpleName(), player);
 				break;
+			}
 			case "dusk":
+			{
 				startQuest(Q00143_FallenAngelRequestOfDusk.class.getSimpleName(), player);
 				break;
+			}
 		}
 		return null;
 	}
@@ -86,9 +92,9 @@ public class Q00998_FallenAngelSelect extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
-		final QuestState qs = player.getQuestState(Q00141_ShadowFoxPart3.class.getSimpleName());
-		if ((st == null) || !st.isStarted())
+		final QuestState qs = getQuestState(player, true);
+		final QuestState qst = player.getQuestState(Q00141_ShadowFoxPart3.class.getSimpleName());
+		if ((qst == null) || !qst.isStarted())
 		{
 			return getNoQuestMsg(player);
 		}

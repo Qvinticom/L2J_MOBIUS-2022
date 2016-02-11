@@ -67,16 +67,16 @@ public class Q10274_CollectingInTheAir extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		if (event.equals("32557-03.html"))
 		{
-			st.startQuest();
-			st.giveItems(SCROLL, 8);
+			qs.startQuest();
+			giveItems(player, SCROLL, 8);
 		}
 		return event;
 	}
@@ -84,33 +84,39 @@ public class Q10274_CollectingInTheAir extends Quest
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		final QuestState st = getQuestState(caster, false);
-		if ((st == null) || !st.isStarted())
+		final QuestState qs = getQuestState(caster, false);
+		if ((qs == null) || !qs.isStarted())
 		{
 			return null;
 		}
 		
-		if (st.isCond(1) && (skill.getId() == 2630))
+		if (qs.isCond(1) && (skill.getId() == 2630))
 		{
 			switch (npc.getId())
 			{
 				case 18684:
 				case 18685:
 				case 18686:
-					st.giveItems(RED, 1);
+				{
+					giveItems(caster, RED, 1);
 					break;
+				}
 				case 18687:
 				case 18688:
 				case 18689:
-					st.giveItems(BLUE, 1);
+				{
+					giveItems(caster, BLUE, 1);
 					break;
+				}
 				case 18690:
 				case 18691:
 				case 18692:
-					st.giveItems(GREEN, 1);
+				{
+					giveItems(caster, GREEN, 1);
 					break;
+				}
 			}
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			playSound(caster, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			npc.doDie(caster);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
@@ -120,41 +126,47 @@ public class Q10274_CollectingInTheAir extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = getQuestState(player, true);
-		if (st == null)
+		QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = "32557-0a.html";
 				break;
+			}
 			case State.CREATED:
-				st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-				if (st == null)
+			{
+				qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+				if (qs == null)
 				{
 					htmltext = "32557-00.html";
 				}
 				else
 				{
-					htmltext = ((player.getLevel() >= 75) && st.isCompleted()) ? "32557-01.htm" : "32557-00.html";
+					htmltext = ((player.getLevel() >= 75) && qs.isCompleted()) ? "32557-01.htm" : "32557-00.html";
 				}
 				break;
+			}
 			case State.STARTED:
-				if ((st.getQuestItemsCount(RED) + st.getQuestItemsCount(BLUE) + st.getQuestItemsCount(GREEN)) >= 8)
+			{
+				if ((getQuestItemsCount(player, RED) + getQuestItemsCount(player, BLUE) + getQuestItemsCount(player, GREEN)) >= 8)
 				{
 					htmltext = "32557-05.html";
-					st.giveItems(13728, 1);
-					st.addExpAndSp(25160, 2525);
-					st.exitQuest(false, true);
+					giveItems(player, 13728, 1);
+					addExpAndSp(player, 25160, 2525);
+					qs.exitQuest(false, true);
 				}
 				else
 				{
 					htmltext = "32557-04.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

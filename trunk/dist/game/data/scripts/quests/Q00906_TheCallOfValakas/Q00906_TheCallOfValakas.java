@@ -54,26 +54,26 @@ public class Q00906_TheCallOfValakas extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			st.giveItems(LAVASAURUS_ALPHA_FRAGMENT, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			st.setCond(2, true);
+			giveItems(player, LAVASAURUS_ALPHA_FRAGMENT, 1);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			qs.setCond(2, true);
 		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
 		
 		String htmltext = null;
-		if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
+		if ((player.getLevel() >= MIN_LEVEL) && hasQuestItems(player, VACUALITE_FLOATING_STONE))
 		{
 			switch (event)
 			{
@@ -84,7 +84,7 @@ public class Q00906_TheCallOfValakas extends Quest
 				}
 				case "31540-06.html":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
@@ -103,14 +103,14 @@ public class Q00906_TheCallOfValakas extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -118,7 +118,7 @@ public class Q00906_TheCallOfValakas extends Quest
 				{
 					htmltext = "31540-03.html";
 				}
-				else if (!st.hasQuestItems(VACUALITE_FLOATING_STONE))
+				else if (!hasQuestItems(player, VACUALITE_FLOATING_STONE))
 				{
 					htmltext = "31540-04.html";
 				}
@@ -130,7 +130,7 @@ public class Q00906_TheCallOfValakas extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -139,9 +139,9 @@ public class Q00906_TheCallOfValakas extends Quest
 					}
 					case 2:
 					{
-						st.giveItems(SCROLL_VALAKAS_CALL, 1);
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						st.exitQuest(QuestType.DAILY, true);
+						giveItems(player, SCROLL_VALAKAS_CALL, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						qs.exitQuest(QuestType.DAILY, true);
 						htmltext = "31540-08.html";
 						break;
 					}
@@ -150,18 +150,18 @@ public class Q00906_TheCallOfValakas extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if (!st.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					htmltext = "31540-02.html";
 				}
 				else
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					if (player.getLevel() < MIN_LEVEL)
 					{
 						htmltext = "31540-03.html";
 					}
-					else if (!st.hasQuestItems(VACUALITE_FLOATING_STONE))
+					else if (!hasQuestItems(player, VACUALITE_FLOATING_STONE))
 					{
 						htmltext = "31540-04.html";
 					}

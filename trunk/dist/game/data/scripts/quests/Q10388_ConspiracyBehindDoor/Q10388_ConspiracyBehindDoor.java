@@ -68,12 +68,12 @@ public class Q10388_ConspiracyBehindDoor extends Quest
 			case "toCond3.html":
 			{
 				qs.setCond(3);
-				qs.giveItems(VISITORS_BADGE, 1);
+				giveItems(player, VISITORS_BADGE, 1);
 				break;
 			}
 			case "final.html":
 			{
-				qs.addExpAndSp(29638350, 2963835);
+				addExpAndSp(player, 29638350, 2963835);
 				qs.exitQuest(false, true);
 				break;
 			}

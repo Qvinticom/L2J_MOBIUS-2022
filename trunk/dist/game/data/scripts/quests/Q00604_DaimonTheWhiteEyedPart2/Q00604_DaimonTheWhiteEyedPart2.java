@@ -80,7 +80,7 @@ public final class Q00604_DaimonTheWhiteEyedPart2 extends Quest
 				}
 				
 				giveItems(player, ESSENCE_OF_DAIMON, 1);
-				qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 	}

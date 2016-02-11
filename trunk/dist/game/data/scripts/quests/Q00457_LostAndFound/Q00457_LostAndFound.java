@@ -67,8 +67,8 @@ public final class Q00457_LostAndFound extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -79,7 +79,7 @@ public final class Q00457_LostAndFound extends Quest
 			case "32759-06.html":
 			{
 				npc.setScriptValue(0);
-				st.startQuest();
+				qs.startQuest();
 				npc.setTarget(player);
 				npc.setWalking();
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
@@ -108,7 +108,7 @@ public final class Q00457_LostAndFound extends Quest
 			case "TIME_LIMIT":
 			{
 				startQuestTimer("STOP", 2000, npc, player);
-				st.exitQuest(QuestType.DAILY);
+				qs.exitQuest(QuestType.DAILY);
 				break;
 			}
 			case "CHECK":
@@ -119,7 +119,7 @@ public final class Q00457_LostAndFound extends Quest
 					if (distance > 5000)
 					{
 						startQuestTimer("STOP", 2000, npc, player);
-						st.exitQuest(QuestType.DAILY);
+						qs.exitQuest(QuestType.DAILY);
 					}
 					else if (npc.isScriptValue(0))
 					{
@@ -134,7 +134,7 @@ public final class Q00457_LostAndFound extends Quest
 					else if (npc.isScriptValue(2))
 					{
 						startQuestTimer("STOP", 2000, npc, player);
-						st.exitQuest(QuestType.DAILY);
+						qs.exitQuest(QuestType.DAILY);
 					}
 				}
 				for (L2Spawn escortSpawn : _escortCheckers)
@@ -147,8 +147,8 @@ public final class Q00457_LostAndFound extends Quest
 						cancelQuestTimer("CHECK", npc, player);
 						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), NpcStringId.AH_FRESH_AIR));
 						broadcastNpcSay(npc, player, NpcStringId.AH_FRESH_AIR, false);
-						st.giveItems(PACKAGED_BOOK, 1);
-						st.exitQuest(QuestType.DAILY, true);
+						giveItems(player, PACKAGED_BOOK, 1);
+						qs.exitQuest(QuestType.DAILY, true);
 						break;
 					}
 				}
@@ -192,9 +192,9 @@ public final class Q00457_LostAndFound extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		if ((getRandom(100) < CHANCE_SPAWN) && st.isNowAvailable() && (player.getLevel() >= MIN_LV))
+		if ((getRandom(100) < CHANCE_SPAWN) && qs.isNowAvailable() && (player.getLevel() >= MIN_LV))
 		{
 			addSpawn(GUMIEL, npc);
 		}
@@ -205,13 +205,13 @@ public final class Q00457_LostAndFound extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = getQuestState(player, true);
-		if (st == null)
+		QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
-			st = newQuestState(player);
+			qs = newQuestState(player);
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -220,9 +220,9 @@ public final class Q00457_LostAndFound extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if (st.isNowAvailable())
+				if (qs.isNowAvailable())
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					htmltext = (player.getLevel() >= MIN_LV) ? "32759-01.htm" : "32759-03.html";
 				}
 				else

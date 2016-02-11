@@ -75,16 +75,16 @@ public class Q00700_CursedLife extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, false);
+		QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st != null)
+		if (qs != null)
 		{
 			switch (event)
 			{
 				case "32560-02.htm":
 				{
-					st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-					htmltext = ((player.getLevel() < MIN_LVL) || (st == null) || (!st.isCompleted())) ? "32560-03.htm" : event;
+					qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+					htmltext = ((player.getLevel() < MIN_LVL) || (qs == null) || (!qs.isCompleted())) ? "32560-03.htm" : event;
 					break;
 				}
 				case "32560-04.htm":
@@ -95,13 +95,13 @@ public class Q00700_CursedLife extends Quest
 				}
 				case "32560-05.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
 				case "32560-10.html":
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 					break;
 				}
@@ -113,11 +113,11 @@ public class Q00700_CursedLife extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		if (qs != null)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -126,13 +126,13 @@ public class Q00700_CursedLife extends Quest
 				}
 				case State.STARTED:
 				{
-					final long bones = st.getQuestItemsCount(SWALLOWED_BONES);
-					final long ribs = st.getQuestItemsCount(SWALLOWED_STERNUM);
-					final long skulls = st.getQuestItemsCount(SWALLOWED_SKULL);
+					final long bones = getQuestItemsCount(player, SWALLOWED_BONES);
+					final long ribs = getQuestItemsCount(player, SWALLOWED_STERNUM);
+					final long skulls = getQuestItemsCount(player, SWALLOWED_SKULL);
 					final long sum = bones + ribs + skulls;
 					if (sum > 0)
 					{
-						st.giveAdena(((bones * SWALLOWED_BONES_ADENA) + (ribs * SWALLOWED_STERNUM_ADENA) + (skulls * SWALLOWED_SKULL_ADENA) + (sum >= 10 ? BONUS : 0)), true);
+						giveAdena(player, ((bones * SWALLOWED_BONES_ADENA) + (ribs * SWALLOWED_STERNUM_ADENA) + (skulls * SWALLOWED_SKULL_ADENA) + (sum >= 10 ? BONUS : 0)), true);
 						takeItems(player, -1, SWALLOWED_BONES, SWALLOWED_STERNUM, SWALLOWED_SKULL);
 						htmltext = sum < 10 ? "32560-07.html" : "32560-08.html";
 					}
@@ -150,8 +150,8 @@ public class Q00700_CursedLife extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st != null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs != null)
 		{
 			if (npc.getId() == ROK)
 			{
@@ -192,7 +192,7 @@ public class Q00700_CursedLife extends Quest
 				{
 					amount = getRandom(49) + 76;
 				}
-				st.giveItems(SWALLOWED_BONES, amount);
+				giveItems(player, SWALLOWED_BONES, amount);
 				chance = getRandom(1000);
 				if (chance < 520)
 				{
@@ -218,7 +218,7 @@ public class Q00700_CursedLife extends Quest
 				{
 					amount = getRandom(8) + 6;
 				}
-				st.giveItems(SWALLOWED_STERNUM, amount);
+				giveItems(player, SWALLOWED_STERNUM, amount);
 				chance = getRandom(1000);
 				if (chance < 185)
 				{
@@ -240,8 +240,8 @@ public class Q00700_CursedLife extends Quest
 				{
 					amount = getRandom(6) + 17;
 				}
-				st.giveItems(SWALLOWED_SKULL, amount);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				giveItems(player, SWALLOWED_SKULL, amount);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			else
 			{
@@ -249,18 +249,18 @@ public class Q00700_CursedLife extends Quest
 				final int chance = getRandom(1000);
 				if (chance < chances[0])
 				{
-					st.giveItems(SWALLOWED_BONES, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, SWALLOWED_BONES, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else if (chance < chances[1])
 				{
-					st.giveItems(SWALLOWED_STERNUM, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, SWALLOWED_STERNUM, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else if (chance < chances[2])
 				{
-					st.giveItems(SWALLOWED_SKULL, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					giveItems(player, SWALLOWED_SKULL, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}

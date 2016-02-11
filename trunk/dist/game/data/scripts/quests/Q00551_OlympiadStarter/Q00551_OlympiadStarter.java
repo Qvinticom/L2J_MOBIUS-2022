@@ -52,8 +52,8 @@ public class Q00551_OlympiadStarter extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -61,19 +61,19 @@ public class Q00551_OlympiadStarter extends Quest
 		
 		if (event.equalsIgnoreCase("31688-03.html"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		else if (event.equalsIgnoreCase("31688-04.html"))
 		{
-			final long count = st.getQuestItemsCount(CERT_3) + st.getQuestItemsCount(CERT_5);
+			final long count = getQuestItemsCount(player, CERT_3) + getQuestItemsCount(player, CERT_5);
 			if (count > 0)
 			{
-				st.giveItems(OLY_CHEST, count); // max 2
+				giveItems(player, OLY_CHEST, count); // max 2
 				if (count == 2)
 				{
-					st.giveItems(MEDAL_OF_GLORY, 3);
+					giveItems(player, MEDAL_OF_GLORY, 3);
 				}
-				st.exitQuest(QuestType.DAILY, true);
+				qs.exitQuest(QuestType.DAILY, true);
 			}
 			else
 			{
@@ -88,32 +88,38 @@ public class Q00551_OlympiadStarter extends Quest
 	{
 		if (loser != null)
 		{
-			final QuestState st = getQuestState(loser, false);
-			if ((st != null) && st.isStarted())
+			final QuestState qs = getQuestState(loser, false);
+			if ((qs != null) && qs.isStarted())
 			{
-				final int matches = st.getInt("matches") + 1;
+				final int matches = qs.getInt("matches") + 1;
 				switch (matches)
 				{
 					case 3:
-						if (!st.hasQuestItems(CERT_3))
+					{
+						if (!hasQuestItems(loser, CERT_3))
 						{
-							st.giveItems(CERT_3, 1);
+							giveItems(loser, CERT_3, 1);
 						}
 						break;
+					}
 					case 5:
-						if (!st.hasQuestItems(CERT_5))
+					{
+						if (!hasQuestItems(loser, CERT_5))
 						{
-							st.giveItems(CERT_5, 1);
+							giveItems(loser, CERT_5, 1);
 						}
 						break;
+					}
 					case 10:
-						if (!st.hasQuestItems(CERT_10))
+					{
+						if (!hasQuestItems(loser, CERT_10))
 						{
-							st.giveItems(CERT_10, 1);
+							giveItems(loser, CERT_10, 1);
 						}
 						break;
+					}
 				}
-				st.set("matches", String.valueOf(matches));
+				qs.set("matches", String.valueOf(matches));
 			}
 		}
 	}
@@ -128,32 +134,38 @@ public class Q00551_OlympiadStarter extends Quest
 			{
 				return;
 			}
-			final QuestState st = getQuestState(player, false);
-			if ((st != null) && st.isStarted())
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isStarted())
 			{
-				final int matches = st.getInt("matches") + 1;
+				final int matches = qs.getInt("matches") + 1;
 				switch (matches)
 				{
 					case 3:
-						if (!st.hasQuestItems(CERT_3))
+					{
+						if (!hasQuestItems(player, CERT_3))
 						{
-							st.giveItems(CERT_3, 1);
+							giveItems(player, CERT_3, 1);
 						}
 						break;
+					}
 					case 5:
-						if (!st.hasQuestItems(CERT_5))
+					{
+						if (!hasQuestItems(player, CERT_5))
 						{
-							st.giveItems(CERT_5, 1);
+							giveItems(player, CERT_5, 1);
 						}
 						break;
+					}
 					case 10:
-						if (!st.hasQuestItems(CERT_10))
+					{
+						if (!hasQuestItems(player, CERT_10))
 						{
-							st.giveItems(CERT_10, 1);
+							giveItems(player, CERT_10, 1);
 						}
 						break;
+					}
 				}
-				st.set("matches", String.valueOf(matches));
+				qs.set("matches", String.valueOf(matches));
 			}
 		}
 		
@@ -164,32 +176,38 @@ public class Q00551_OlympiadStarter extends Quest
 			{
 				return;
 			}
-			final QuestState st = getQuestState(player, false);
-			if ((st != null) && st.isStarted())
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isStarted())
 			{
-				final int matches = st.getInt("matches") + 1;
+				final int matches = qs.getInt("matches") + 1;
 				switch (matches)
 				{
 					case 3:
-						if (!st.hasQuestItems(CERT_3))
+					{
+						if (!hasQuestItems(player, CERT_3))
 						{
-							st.giveItems(CERT_3, 1);
+							giveItems(player, CERT_3, 1);
 						}
 						break;
+					}
 					case 5:
-						if (!st.hasQuestItems(CERT_5))
+					{
+						if (!hasQuestItems(player, CERT_5))
 						{
-							st.giveItems(CERT_5, 1);
+							giveItems(player, CERT_5, 1);
 						}
 						break;
+					}
 					case 10:
-						if (!st.hasQuestItems(CERT_10))
+					{
+						if (!hasQuestItems(player, CERT_10))
 						{
-							st.giveItems(CERT_10, 1);
+							giveItems(player, CERT_10, 1);
 						}
 						break;
+					}
 				}
-				st.set("matches", String.valueOf(matches));
+				qs.set("matches", String.valueOf(matches));
 			}
 		}
 	}
@@ -198,8 +216,8 @@ public class Q00551_OlympiadStarter extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -208,15 +226,15 @@ public class Q00551_OlympiadStarter extends Quest
 		{
 			htmltext = "31688-00.htm";
 		}
-		else if (st.isCreated())
+		else if (qs.isCreated())
 		{
 			htmltext = "31688-01.htm";
 		}
-		else if (st.isCompleted())
+		else if (qs.isCompleted())
 		{
-			if (st.isNowAvailable())
+			if (qs.isNowAvailable())
 			{
-				st.setState(State.CREATED);
+				qs.setState(State.CREATED);
 				htmltext = (player.getLevel() < 75) || !player.isNoble() ? "31688-00.htm" : "31688-01.htm";
 			}
 			else
@@ -224,15 +242,15 @@ public class Q00551_OlympiadStarter extends Quest
 				htmltext = "31688-05.html";
 			}
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			final long count = st.getQuestItemsCount(CERT_3) + st.getQuestItemsCount(CERT_5) + st.getQuestItemsCount(CERT_10);
+			final long count = getQuestItemsCount(player, CERT_3) + getQuestItemsCount(player, CERT_5) + getQuestItemsCount(player, CERT_10);
 			if (count == 3)
 			{
 				htmltext = "31688-04.html";
-				st.giveItems(OLY_CHEST, 4);
-				st.giveItems(MEDAL_OF_GLORY, 5);
-				st.exitQuest(QuestType.DAILY, true);
+				giveItems(player, OLY_CHEST, 4);
+				giveItems(player, MEDAL_OF_GLORY, 5);
+				qs.exitQuest(QuestType.DAILY, true);
 			}
 			else
 			{

@@ -67,12 +67,12 @@ final class GrandBossTeleporters extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
 		if (hasQuestItems(player, VACUALITE_FLOATING_STONE))
 		{
 			player.teleToLocation(ENTER_HALL_OF_FLAMES);
-			st.set("allowEnter", "1");
+			qs.set("allowEnter", "1");
 		}
 		else
 		{
@@ -85,7 +85,7 @@ final class GrandBossTeleporters extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{
@@ -101,9 +101,9 @@ final class GrandBossTeleporters extends AbstractNpcAI
 						{
 							htmltext = "31385-03.htm";
 						}
-						else if (st.getInt("allowEnter") == 1)
+						else if (qs.getInt("allowEnter") == 1)
 						{
-							st.unset("allowEnter");
+							qs.unset("allowEnter");
 							final L2BossZone zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
 							
 							if (zone != null)

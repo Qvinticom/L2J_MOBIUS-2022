@@ -57,9 +57,9 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -68,29 +68,29 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 		{
 			case "31555-02.html":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
 			}
 			case "31665-02.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
-					st.giveItems(KRORINS_JOURNAL, 1);
+					qs.setCond(2, true);
+					giveItems(player, KRORINS_JOURNAL, 1);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31555-05.html":
 			{
-				if (st.isCond(2) && st.hasQuestItems(KRORINS_JOURNAL))
+				if (qs.isCond(2) && hasQuestItems(player, KRORINS_JOURNAL))
 				{
-					st.takeItems(KRORINS_JOURNAL, -1);
-					st.setCond(3, true);
+					takeItems(player, KRORINS_JOURNAL, -1);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
@@ -100,20 +100,20 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 			case "31663-02.html":
 			case "31664-02.html":
 			{
-				if (MONUMENTS.contains(npc.getId()) && st.isCond(MONUMENTS.indexOf(npc.getId()) + 3))
+				if (MONUMENTS.contains(npc.getId()) && qs.isCond(MONUMENTS.indexOf(npc.getId()) + 3))
 				{
-					st.setCond(st.getCond() + 1, true);
+					qs.setCond(qs.getCond() + 1, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31555-08.html":
 			{
-				if (st.isCond(7))
+				if (qs.isCond(7))
 				{
-					st.addExpAndSp(490000, 45880);
-					st.giveAdena(120000, true);
-					st.exitQuest(false, true);
+					addExpAndSp(player, 490000, 45880);
+					giveAdena(player, 120000, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -125,9 +125,9 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -135,7 +135,7 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 		{
 			case ABERCROMBIE:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -144,7 +144,7 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -153,7 +153,7 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 							}
 							case 2:
 							{
-								if (st.hasQuestItems(KRORINS_JOURNAL))
+								if (hasQuestItems(player, KRORINS_JOURNAL))
 								{
 									htmltext = "31555-04.html";
 								}
@@ -182,7 +182,7 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 			}
 			case CORPSE_OF_DWARF:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -203,11 +203,11 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 			case FORGOTTEN_MONUMENT_4:
 			{
 				final int loc = MONUMENTS.indexOf(npc.getId()) + 3;
-				if (st.isCond(loc))
+				if (qs.isCond(loc))
 				{
 					htmltext = npc.getId() + "-01.html";
 				}
-				else if (st.isCond(loc + 1))
+				else if (qs.isCond(loc + 1))
 				{
 					htmltext = npc.getId() + "-03.html";
 				}

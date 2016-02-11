@@ -150,26 +150,26 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		if (event.endsWith("-04.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		else if (event.endsWith("-09.htm"))
 		{
-			st.giveItems(RED_SOUL_CRYSTAL0_ID, 1);
+			giveItems(player, RED_SOUL_CRYSTAL0_ID, 1);
 		}
 		else if (event.endsWith("-10.htm"))
 		{
-			st.giveItems(GREEN_SOUL_CRYSTAL0_ID, 1);
+			giveItems(player, GREEN_SOUL_CRYSTAL0_ID, 1);
 		}
 		else if (event.endsWith("-11.htm"))
 		{
-			st.giveItems(BLUE_SOUL_CRYSTAL0_ID, 1);
+			giveItems(player, BLUE_SOUL_CRYSTAL0_ID, 1);
 		}
 		else if (event.equalsIgnoreCase("exit.htm"))
 		{
-			st.exitQuest(true);
+			qs.exitQuest(true);
 		}
 		return htmltext;
 	}
@@ -218,36 +218,36 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.getState() == State.CREATED)
+		if (qs.getState() == State.CREATED)
 		{
-			st.set("cond", "0");
+			qs.set("cond", "0");
 		}
-		if (st.getInt("cond") == 0)
+		if (qs.getInt("cond") == 0)
 		{
 			htmltext = npc.getId() + "-01.htm";
 		}
-		else if (check(st))
+		else if (check(player))
 		{
 			htmltext = npc.getId() + "-03.htm";
 		}
-		else if (!st.hasQuestItems(RED_SOUL_CRYSTAL0_ID) && !st.hasQuestItems(GREEN_SOUL_CRYSTAL0_ID) && !st.hasQuestItems(BLUE_SOUL_CRYSTAL0_ID))
+		else if (!hasQuestItems(player, RED_SOUL_CRYSTAL0_ID) && !hasQuestItems(player, GREEN_SOUL_CRYSTAL0_ID) && !hasQuestItems(player, BLUE_SOUL_CRYSTAL0_ID))
 		{
 			htmltext = npc.getId() + "-21.htm";
 		}
 		return htmltext;
 	}
 	
-	private static boolean check(QuestState st)
+	private static boolean check(L2PcInstance player)
 	{
 		for (int i = 4629; i < 4665; i++)
 		{
-			if (st.hasQuestItems(i))
+			if (hasQuestItems(player, i))
 			{
 				return true;
 			}
@@ -290,8 +290,8 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	
 	private static SoulCrystal getSCForPlayer(L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(Q00350_EnhanceYourWeapon.class.getSimpleName());
-		if ((st == null) || !st.isStarted())
+		final QuestState qs = player.getQuestState(Q00350_EnhanceYourWeapon.class.getSimpleName());
+		if ((qs == null) || !qs.isStarted())
 		{
 			return null;
 		}
@@ -447,6 +447,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		switch (mainlvlInfo.getAbsorbCrystalType())
 		{
 			case PARTY_ONE_RANDOM:
+			{
 				// This is a naive method for selecting a random member. It gets any random party member and
 				// then checks if the member has a valid crystal. It does not select the random party member
 				// among those who have crystals, only. However, this might actually be correct (same as retail).
@@ -460,7 +461,9 @@ public class Q00350_EnhanceYourWeapon extends Quest
 					levelCrystal(killer, players.get(killer), mob);
 				}
 				break;
+			}
 			case PARTY_RANDOM:
+			{
 				if (killer.getParty() != null)
 				{
 					final List<L2PcInstance> luckyParty = new ArrayList<>();
@@ -479,7 +482,9 @@ public class Q00350_EnhanceYourWeapon extends Quest
 					levelCrystal(killer, players.get(killer), mob);
 				}
 				break;
+			}
 			case FULL_PARTY:
+			{
 				if (killer.getParty() != null)
 				{
 					for (L2PcInstance pl : killer.getParty().getMembers())
@@ -492,9 +497,12 @@ public class Q00350_EnhanceYourWeapon extends Quest
 					levelCrystal(killer, players.get(killer), mob);
 				}
 				break;
+			}
 			case LAST_HIT:
+			{
 				levelCrystal(killer, players.get(killer), mob);
 				break;
+			}
 		}
 	}
 	

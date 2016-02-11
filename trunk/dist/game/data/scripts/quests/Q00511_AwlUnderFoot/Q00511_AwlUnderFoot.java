@@ -206,8 +206,8 @@ public final class Q00511_AwlUnderFoot extends Quest
 		}
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			final QuestState st = getQuestState(partyMember, false);
-			if ((st == null) || (st.getInt("cond") < 1))
+			final QuestState qs = getQuestState(partyMember, false);
+			if ((qs == null) || (qs.getCond() < 1))
 			{
 				return getHtm(player.getHtmlPrefix(), "FortressWarden-05.htm").replace("%player%", partyMember.getName());
 			}
@@ -327,18 +327,18 @@ public final class Q00511_AwlUnderFoot extends Quest
 			tele[2] = -6580;
 			return enterInstance(player, "fortdungeon.xml", tele, _fortDungeons.get(npc.getId()), checkFortCondition(player, npc, true));
 		}
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		if (event.equalsIgnoreCase("FortressWarden-10.htm"))
 		{
-			if (st.isCond(0))
+			if (qs.isCond(0))
 			{
-				st.startQuest();
+				qs.startQuest();
 			}
 		}
 		else if (event.equalsIgnoreCase("FortressWarden-15.htm"))
 		{
-			st.exitQuest(true, true);
+			qs.exitQuest(true, true);
 		}
 		return htmltext;
 	}
@@ -407,23 +407,23 @@ public final class Q00511_AwlUnderFoot extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		final String ret = checkFortCondition(player, npc, false);
 		if (ret != null)
 		{
 			return ret;
 		}
-		else if (st != null)
+		else if (qs != null)
 		{
 			final int npcId = npc.getId();
 			int cond = 0;
-			if (st.getState() == State.CREATED)
+			if (qs.getState() == State.CREATED)
 			{
-				st.set("cond", "0");
+				qs.set("cond", "0");
 			}
 			else
 			{
-				cond = st.getInt("cond");
+				cond = qs.getCond();
 			}
 			if (_fortDungeons.containsKey(npcId) && (cond == 0))
 			{
@@ -434,17 +434,17 @@ public final class Q00511_AwlUnderFoot extends Quest
 				else
 				{
 					htmltext = "FortressWarden-00.htm";
-					st.exitQuest(true);
+					qs.exitQuest(true);
 				}
 			}
-			else if (_fortDungeons.containsKey(npcId) && (cond > 0) && (st.getState() == State.STARTED))
+			else if (_fortDungeons.containsKey(npcId) && (cond > 0) && (qs.getState() == State.STARTED))
 			{
-				final long count = st.getQuestItemsCount(DL_MARK);
+				final long count = getQuestItemsCount(player, DL_MARK);
 				if ((cond == 1) && (count > 0))
 				{
 					htmltext = "FortressWarden-14.htm";
-					st.takeItems(DL_MARK, -1);
-					st.rewardItems(KNIGHT_EPALUETTE, count);
+					takeItems(player, DL_MARK, -1);
+					rewardItems(player, KNIGHT_EPALUETTE, count);
 				}
 				else if ((cond == 1) && (count == 0))
 				{
@@ -457,11 +457,11 @@ public final class Q00511_AwlUnderFoot extends Quest
 	
 	private void rewardPlayer(L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if (qs.isCond(1))
 		{
-			st.giveItems(DL_MARK, 140);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			giveItems(player, DL_MARK, 140);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 	}
 	

@@ -65,14 +65,14 @@ public class Q10381_ToTheSeedOfHellfire extends Quest
 			case "kbarldire_q10381_03.html":
 			{
 				qs.setCond(2);
-				qs.giveItems(KBALDIRS_LETTER, 1);
+				giveItems(player, KBALDIRS_LETTER, 1);
 				break;
 			}
 			case "sofa_sizraku_q10381_03.html":
 			{
-				qs.takeItems(KBALDIRS_LETTER, -1);
-				qs.addExpAndSp(951127800, 435041400);
-				qs.giveItems(57, 3256740);
+				takeItems(player, KBALDIRS_LETTER, -1);
+				addExpAndSp(player, 951127800, 435041400);
+				giveAdena(player, 3256740, true);
 				qs.exitQuest(QuestType.ONE_TIME, true);
 				break;
 			}

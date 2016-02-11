@@ -67,8 +67,8 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -77,18 +77,18 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 		{
 			case "30126-03.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
 			}
 			case "30126-06.html":
 			{
-				if (st.getQuestItemsCount(BRACELET_OF_LIZARDMAN) >= REQUIRED_BRACELET_COUNT)
+				if (getQuestItemsCount(player, BRACELET_OF_LIZARDMAN) >= REQUIRED_BRACELET_COUNT)
 				{
-					st.takeItems(BRACELET_OF_LIZARDMAN, -1);
+					takeItems(player, BRACELET_OF_LIZARDMAN, -1);
 					final int rand = getRandom(1000);
 					if (rand < 500)
 					{
@@ -102,7 +102,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 					{
 						giveItems(player, REWARD_ANIMAL_BONE);
 					}
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				else
@@ -121,17 +121,17 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = getQuestState(partyMember, false);
-			if (st.isCond(1) && (getRandom(1000) < MOBS_SAC.get(npc.getId())))
+			final QuestState qs = getQuestState(partyMember, false);
+			if (qs.isCond(1) && (getRandom(1000) < MOBS_SAC.get(npc.getId())))
 			{
-				st.giveItems(BRACELET_OF_LIZARDMAN, 1);
-				if (st.getQuestItemsCount(BRACELET_OF_LIZARDMAN) == REQUIRED_BRACELET_COUNT)
+				giveItems(partyMember, BRACELET_OF_LIZARDMAN, 1);
+				if (getQuestItemsCount(partyMember, BRACELET_OF_LIZARDMAN) == REQUIRED_BRACELET_COUNT)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -142,13 +142,13 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -157,7 +157,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -166,7 +166,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 					}
 					case 2:
 					{
-						if (st.getQuestItemsCount(BRACELET_OF_LIZARDMAN) >= REQUIRED_BRACELET_COUNT)
+						if (getQuestItemsCount(player, BRACELET_OF_LIZARDMAN) >= REQUIRED_BRACELET_COUNT)
 						{
 							htmltext = "30126-05.html";
 						}

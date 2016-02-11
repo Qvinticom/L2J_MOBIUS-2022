@@ -91,7 +91,7 @@ public class Q10760_LettersFromTheQueen_OrcBarracs extends Quest implements IByp
 			{
 				qs.startQuest();
 				
-				if (qs.getQuestItemsCount(SCROLL_OF_ESCAPE_ORC_BARRACS.getId()) < 1)
+				if (getQuestItemsCount(player, SCROLL_OF_ESCAPE_ORC_BARRACS.getId()) < 1)
 				{
 					giveItems(player, SCROLL_OF_ESCAPE_ORC_BARRACS);
 					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_LEVIAN_GAVE_YOU_TO_GO_TO_ORC_BARRACKS, ExShowScreenMessage.TOP_CENTER, 4500);

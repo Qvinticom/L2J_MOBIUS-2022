@@ -421,7 +421,7 @@ public final class Q00420_LittleWing extends Quest
 		if ((qs != null) && (getQuestItemsCount(attacker, DELUXE_FAIRY_STONE) > 0) && (getRandom(100) < 30))
 		{
 			takeItems(attacker, DELUXE_FAIRY_STONE, -1);
-			qs.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+			playSound(attacker, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 			npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THE_STONE_THE_ELVEN_STONE_BROKE));
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);

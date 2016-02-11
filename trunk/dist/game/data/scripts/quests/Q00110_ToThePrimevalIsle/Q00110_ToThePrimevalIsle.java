@@ -45,8 +45,8 @@ public class Q00110_ToThePrimevalIsle extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -54,15 +54,19 @@ public class Q00110_ToThePrimevalIsle extends Quest
 		switch (event)
 		{
 			case "31338-1.html":
-				st.giveItems(ANCIENT_BOOK, 1);
-				st.startQuest();
+			{
+				giveItems(player, ANCIENT_BOOK, 1);
+				qs.startQuest();
 				break;
+			}
 			case "32113-2.html":
 			case "32113-2a.html":
-				st.giveAdena(191678, true);
-				st.addExpAndSp(251602, 25245);
-				st.exitQuest(false, true);
+			{
+				giveAdena(player, 191678, true);
+				addExpAndSp(player, 251602, 25245);
+				qs.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -71,8 +75,8 @@ public class Q00110_ToThePrimevalIsle extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -80,25 +84,35 @@ public class Q00110_ToThePrimevalIsle extends Quest
 		switch (npc.getId())
 		{
 			case ANTON:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() < 75) ? "31338-0a.htm" : "31338-0b.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "31338-1a.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case MARQUEZ:
-				if (st.isCond(1))
+			{
+				if (qs.isCond(1))
 				{
 					htmltext = "32113-1.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

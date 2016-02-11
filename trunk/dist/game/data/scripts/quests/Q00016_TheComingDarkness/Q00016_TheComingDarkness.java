@@ -54,31 +54,35 @@ public class Q00016_TheComingDarkness extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		final int cond = st.getCond();
+		final int cond = qs.getCond();
 		switch (event)
 		{
 			case "31517-02.htm":
-				st.startQuest();
-				st.giveItems(CRYSTAL_OF_SEAL, 5);
+			{
+				qs.startQuest();
+				giveItems(player, CRYSTAL_OF_SEAL, 5);
 				break;
+			}
 			case "31512-01.html":
 			case "31513-01.html":
 			case "31514-01.html":
 			case "31515-01.html":
 			case "31516-01.html":
+			{
 				final int npcId = Integer.parseInt(event.replace("-01.html", ""));
-				if ((cond == (npcId - 31511)) && st.hasQuestItems(CRYSTAL_OF_SEAL))
+				if ((cond == (npcId - 31511)) && hasQuestItems(player, CRYSTAL_OF_SEAL))
 				{
-					st.takeItems(CRYSTAL_OF_SEAL, 1);
-					st.setCond(cond + 1, true);
+					takeItems(player, CRYSTAL_OF_SEAL, 1);
+					qs.setCond(cond + 1, true);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -87,34 +91,39 @@ public class Q00016_TheComingDarkness extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		final QuestState st2 = player.getQuestState(Q00017_LightAndDarkness.class.getSimpleName());
-		if ((st2 != null) && !st2.isCompleted())
+		final QuestState qs2 = player.getQuestState(Q00017_LightAndDarkness.class.getSimpleName());
+		if ((qs2 != null) && !qs2.isCompleted())
 		{
 			return "31517-04.html";
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= 62) ? "31517-00.htm" : "31517-05.html";
 				break;
+			}
 			case State.STARTED:
+			{
 				final int npcId = npc.getId();
 				if (npcId == HIERARCH)
 				{
-					if (st.isCond(6))
+					if (qs.isCond(6))
 					{
-						st.addExpAndSp(865187, 69172);
-						st.exitQuest(false, true);
+						addExpAndSp(player, 865187, 69172);
+						qs.exitQuest(false, true);
 						htmltext = "31517-03.html";
 					}
 					else
@@ -122,7 +131,7 @@ public class Q00016_TheComingDarkness extends Quest
 						htmltext = "31517-02a.html";
 					}
 				}
-				else if ((npcId - 31511) == st.getCond())
+				else if ((npcId - 31511) == qs.getCond())
 				{
 					htmltext = npcId + "-00.html";
 				}
@@ -131,6 +140,7 @@ public class Q00016_TheComingDarkness extends Quest
 					htmltext = npcId + "-01.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
