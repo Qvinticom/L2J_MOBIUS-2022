@@ -97,6 +97,7 @@ import quests.Q00255_Tutorial.Q00255_Tutorial;
 import quests.Q00270_TheOneWhoEndsSilence.Q00270_TheOneWhoEndsSilence;
 import quests.Q00278_HomeSecurity.Q00278_HomeSecurity;
 import quests.Q00279_TargetOfOpportunity.Q00279_TargetOfOpportunity;
+import quests.Q00298_LizardmensConspiracy.Q00298_LizardmensConspiracy;
 import quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman;
 import quests.Q00307_ControlDeviceOfTheGiants.Q00307_ControlDeviceOfTheGiants;
 import quests.Q00310_OnlyWhatRemains.Q00310_OnlyWhatRemains;
@@ -370,6 +371,7 @@ final class QuestMasterHandler
 		Q00270_TheOneWhoEndsSilence.class,
 		Q00278_HomeSecurity.class,
 		Q00279_TargetOfOpportunity.class,
+		Q00298_LizardmensConspiracy.class,
 		Q00300_HuntingLetoLizardman.class,
 		Q00307_ControlDeviceOfTheGiants.class,
 		Q00310_OnlyWhatRemains.class,
