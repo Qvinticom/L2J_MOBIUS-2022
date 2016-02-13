@@ -37,6 +37,7 @@ import instances.HarnakUndergroundRuins.HarnakUndergroundRuins;
 import instances.HideoutOfTheDawn.HideoutOfTheDawn;
 import instances.IceQueensCastle.IceQueensCastle;
 import instances.IceQueensCastleBattle.IceQueensCastleBattle;
+import instances.IncubatorOfEvil.IncubatorOfEvil;
 import instances.JiniaGuildHideout1.JiniaGuildHideout1;
 import instances.JiniaGuildHideout2.JiniaGuildHideout2;
 import instances.JiniaGuildHideout3.JiniaGuildHideout3;
@@ -83,6 +84,7 @@ final class InstanceLoader
 		ChamberOfDelusionWest.class,
 		IceQueensCastle.class,
 		IceQueensCastleBattle.class,
+		IncubatorOfEvil.class,
 		JiniaGuildHideout1.class,
 		JiniaGuildHideout2.class,
 		JiniaGuildHideout3.class,

@@ -87,12 +87,17 @@
 	<item id="22607" name="Mysterious Blessed Spiritshot Pack (5000) (S-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing 5,000 Mysterious Blessed Spiritshots (S-grade). -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_s_i00" />
+		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="22371-1" /> <!-- Mysterious Blessed Spiritshot Pack (S-grade) -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1000" />
 	</item>

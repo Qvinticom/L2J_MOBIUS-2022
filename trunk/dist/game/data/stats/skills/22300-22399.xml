@@ -384,14 +384,40 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22370" levels="1" name="Mysterious Soulshot Pack (S-grade)">
-		<!-- Desciption: There is no available description. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="21850" itemCount="10000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22371" levels="1" name="Mysterious Blessed Spiritshot Pack (S-grade)">
-		<!-- Desciption: There is no available description. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="21856" itemCount="5000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22372" levels="1" name="Meteor">
 		<!-- Desciption: There is no available description. -->

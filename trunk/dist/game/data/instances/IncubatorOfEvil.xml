@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="Incubator of Evil" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<allowSummon val="false" />
+	<emptyDestroyTime val="5" />  
+	<exitPoint x="185798" y="20400" z="-3345" />
+	<doorlist>
+		<door doorId="16240001" />
+		<door doorId="16240002" />
+	</doorlist>
+	<spawnlist>
+		<group name="general">
+			<spawn npcId="33170" x="56168" y="-172664" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33171" x="56280" y="-172632" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33172" x="56376" y="-172632" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33173" x="56056" y="-172632" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33174" x="55976" y="-172632" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33416" x="56280" y="-176296" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="33416" x="56072" y="-176296" z="-7976" heading="16383" respawn="0" />
+			<spawn npcId="33416" x="56504" y="-176296" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="33416" x="55880" y="-176296" z="-7980" heading="16383" respawn="0" />
+		</group>
+	</spawnlist>
+</instance>

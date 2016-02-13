@@ -40,6 +40,11 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 		_npcLogList.add(new NpcLogListHolder(npcId, false, count));
 	}
 	
+	public void addItem(int itemId, int count)
+	{
+		_npcLogList.add(new NpcLogListHolder(itemId, false, count));
+	}
+	
 	public void addNpcString(NpcStringId npcStringId, int count)
 	{
 		_npcLogList.add(new NpcLogListHolder(npcStringId.getId(), true, count));

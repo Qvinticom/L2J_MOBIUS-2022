@@ -223,6 +223,12 @@ import quests.Q10335_RequestToFindSakum.Q10335_RequestToFindSakum;
 import quests.Q10336_DividedSakumKanilov.Q10336_DividedSakumKanilov;
 import quests.Q10337_SakumsInfluence.Q10337_SakumsInfluence;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
+import quests.Q10341_DayOfDestinyHumansFate.Q10341_DayOfDestinyHumansFate;
+import quests.Q10342_DayOfDestinyElvenFate.Q10342_DayOfDestinyElvenFate;
+import quests.Q10343_DayOfDestinyDarkElfsFate.Q10343_DayOfDestinyDarkElfsFate;
+import quests.Q10344_DayOfDestinyOrcsFate.Q10344_DayOfDestinyOrcsFate;
+import quests.Q10345_DayOfDestinyDwarfsFate.Q10345_DayOfDestinyDwarfsFate;
+import quests.Q10346_DayOfDestinyKamaelsFate.Q10346_DayOfDestinyKamaelsFate;
 import quests.Q10358_DividedSakumPoslof.Q10358_DividedSakumPoslof;
 import quests.Q10359_SakumsTrace.Q10359_SakumsTrace;
 import quests.Q10360_CertificationOfFate.Q10360_CertificationOfFate;
@@ -497,6 +503,12 @@ final class QuestMasterHandler
 		Q10336_DividedSakumKanilov.class,
 		Q10337_SakumsInfluence.class,
 		Q10338_SeizeYourDestiny.class,
+		Q10341_DayOfDestinyHumansFate.class,
+		Q10342_DayOfDestinyElvenFate.class,
+		Q10343_DayOfDestinyDarkElfsFate.class,
+		Q10344_DayOfDestinyOrcsFate.class,
+		Q10345_DayOfDestinyDwarfsFate.class,
+		Q10346_DayOfDestinyKamaelsFate.class,
 		Q10358_DividedSakumPoslof.class,
 		Q10359_SakumsTrace.class,
 		Q10360_CertificationOfFate.class,
