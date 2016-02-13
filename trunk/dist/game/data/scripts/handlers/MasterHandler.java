@@ -136,6 +136,7 @@ import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.BuyShadowItem;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
+import handlers.bypasshandlers.CrystalCavernsMovie;
 import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.Freight;
 import handlers.bypasshandlers.ItemAuctionLink;
@@ -416,6 +417,7 @@ final class MasterHandler
 			BuyShadowItem.class,
 			ChatLink.class,
 			ClanWarehouse.class,
+			CrystalCavernsMovie.class,
 			EventEngine.class,
 			Freight.class,
 			ItemAuctionLink.class,
