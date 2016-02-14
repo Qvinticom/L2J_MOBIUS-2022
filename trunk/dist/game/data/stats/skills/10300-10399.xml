@@ -701,7 +701,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<!-- Engages target in 1:1 combat. All damage from the target is ignored. --> 
+		<!-- Engages target in 1:1 combat. All damage from the target is ignored. --> 
 	<skill id="10331" levels="1" name="Last Man Standing">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
@@ -710,10 +710,34 @@
 	</skill>
 	<!-- Increases P. Atk. by $s2 for $s1 when a dualsword/dual blunt is equipped. Critical Rate of skills that consume Momentum greatly increases, and their Power increases by $s3. Consumes $s4 Soulstones. --> 
 	<skill id="10332" levels="1" name="Duelist Wrath">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="icon" val="icon.skill10332" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
+		<set name="effectPoint" val="438" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="64" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<cond msgId="113" addName="1">
+			<using kind="DUAL, DUALBLUNT" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.2">
+					<using kind="DUAL, DUALBLUNT" />
+				</mul>
+				<mul stat="critRate" val="1.2" >
+					<using kind="DUAL, DUALBLUNT" />
+				</mul>
+				<mul stat="physicalSkillPower" val="1.2">
+					<using kind="DUAL, DUALBLUNT" />
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases P. Atk. By $s2 for $s1 when a spear is equipped. Range of normal attacks increases by $s3 and has a $s4 chance to Stun when striking. Consumes $s5 Soulstones. --> 
 	<skill id="10333" levels="1" name="Winged Spear">

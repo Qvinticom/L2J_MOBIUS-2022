@@ -1428,6 +1428,7 @@
 		</for>
 	</skill>
 	<skill id="10278" levels="8" name="Reduce Anger" enchantGroup1="10" enchantGroup2="10" enchantGroup9="10">
+	<!-- NEED FIX -->
 		<table name="#ench1MpConsume">90 86 82 78 75 71 67 63 60 56</table>
 		<table name="#ench2Power"> -451 -502 -553 -604 -655 -706 -757 -808 -859 -910 </table> <!-- Need verify -->
 		<table name="#magicLvl">85 86 88 90 92 94 96 98</table>
@@ -2010,6 +2011,7 @@
 		<table name="#ench1Time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000</table>
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalType" val="DETECT_WEAKNESS" />
 		<set name="targetType" val="SELF" />
 		<set name="abnormalTime" val="1800" />
 		<set name="hitTime" val="2000" />
@@ -2035,6 +2037,7 @@
 		<table name="#ench1Time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000</table>
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalType" val="DETECT_WEAKNESS" />
 		<set name="abnormalTime" val="1800" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2000" />

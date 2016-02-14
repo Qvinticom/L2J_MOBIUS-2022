@@ -94,7 +94,6 @@
 	</skill>
 		<!-- Creates 250 Enhanced Orichalcum Arrows with increased Atk. Spd. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19213" levels="1" name="Polishing Arrows: Atk. Spd.">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="hitTime" val="3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -103,7 +102,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="117" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="60" />
+		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -120,7 +119,6 @@
 	</skill>
 	<!-- Creates 250 Enhanced Orichalcum Bolts with increased Atk. Spd. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19214" levels="1" name="Polishing Bolts: Atk. Spd.">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="hitTime" val="3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -129,7 +127,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="117" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="60" />
+		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -146,7 +144,6 @@
 	</skill>
 	<!-- Creates 250 Enhanced Orichalcum Arrows with increased P. Atk. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19215" levels="1" name="Polishing Arrows: P. Atk.">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="hitTime" val="3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -155,7 +152,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="117" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="60" />
+		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -172,7 +169,6 @@
 	</skill>
 	<!-- Creates 250 Enhanced Orichalcum Bolts with increased P. Atk. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19216" levels="1" name="Polishing Bolts: P. Atk.">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="hitTime" val="3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -181,7 +177,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="117" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="60" />
+		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -198,7 +194,6 @@
 	</skill>
 	<!-- Creates 250 Enhanced Orichalcum Arrows with Additional Hit. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19217" levels="1" name="Polishing Arrows: Added Blow">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="hitTime" val="3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -207,7 +202,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="128" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="60" />
+		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -224,7 +219,6 @@
 	</skill>
 	<!-- Creates 250 Enhanced Orichalcum Bolts with Additional Hit. Consumes 1 Crystal (R-grade). --> 
 	<skill id="19218" levels="1" name="Polishing Bolts: Added Blow">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="hitTime" val="3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -233,7 +227,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="128" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="60" />
+		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">

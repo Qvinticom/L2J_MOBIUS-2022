@@ -165,17 +165,49 @@
 	</skill>
 	<!-- Increases P. Def. by $s1, Received Heal by $s2, and decreases Received P. Critical Damage by $s3. Increases party members' P. Def. by $s4, Received Heal by $s5, and decreases Received Critical Damage by $s6. Only one Knight's Aura can be active at any time. --> 
 	<skill id="10104" levels="1" name="Paladin's Aura">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="icon" val="icon.skill10104" />
+		<set name="magicLvl" val="85" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
+		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.25" />
+				<mul stat="defCritDamage" val="1.25" />
+				<mul stat="healEffect" val="1.25" />		
+			</effect>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="10108" skillLevel="1" />
+				<param targetType="PARTY" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases P. Atk./Atk. Spd by $s1, P. Critical Rate by $s2, P. Critical Damage by $s3, and Speed by $s4. Decreases P./M. Atk. by $s5, Atk. Spd./Casting Spd. by $s6, Speed by $s7 and Received Critical Damage by $s8 of nearby enemies. Only one Knight's Aura can be active at any time. --> 
 	<skill id="10105" levels="1" name="Avenger's Aura">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="icon" val="icon.skill10105" />
+		<set name="reuseDelay" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="abnormalVisualEffect" val="AURA_DEBUFF_SELF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.25" />
+				<mul stat="pAtkSpd" val="1.25" />
+				<add stat="critRate" val="80" />
+				<mul stat="critDmgAdd" val="1.25" />
+				<add stat="runSpd" val="20" />
+			</effect>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="10109" skillLevel="1" />
+				<param targetType="AURA" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases M. Def. by $s1, $s2 Attribute Resistance by $s3, and Debuff Resistance by $s4. Increases party members' M. Def. by $s5, $s6 Attribute Resistance by $s7, and Debuff Resistance by $s8. Only one Knight's Aura can be active at any time. --> 
 	<skill id="10106" levels="1" name="Sentinel's Aura">
@@ -211,24 +243,66 @@
 	</skill>
 	<!-- Increases P. Atk. by $s1, Atk. Spd. by $s2, and Speed by $s3. Increases party members' P. Atk. By $s4, Atk. Spd. by $s5, M. Atk. by $s6, Casting Spd. by $s7 and Speed by $s8. Only one Knight's Aura can be active at any time. --> 
 	<skill id="10107" levels="1" name="Templar's Aura">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="icon" val="icon.skill10107" />
+		<set name="magicLvl" val="85" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
+		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.15" />
+				<mul stat="pAtkSpd" val="1.15" />
+				<add stat="runSpd" val="10" />		
+			</effect>
+			<effect name="TriggerForce" ticks="2">
+				<param skillId="10111" skillLevel="1" />
+				<param targetType="PARTY" />
+			</effect>
+		</for>
 	</skill>
 	<!-- P. Def. + $s1, heal amount + $s2, and Received P. Critical Damage - $s3. --> 
 	<skill id="10108" levels="1" name="Paladin's Aura">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="icon" val="icon.skill10108" />
+		<set name="hitTime" val="500" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
+		<set name="isTriggeredSkill" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.20" />
+				<mul stat="defCritDamage" val="1.20" />
+				<mul stat="healEffect" val="1.20" />			
+			</effect>
+		</for>
 	</skill>
 	<!-- P./M. Atk. - $s1, Atk. Spd./Casting Spd. - $s2, Speed - $s3, and Received Critical Damage + $s4. --> 
 	<skill id="10109" levels="1" name="Avenger's Aura">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="icon" val="icon.skill10109" />
+		<set name="magicLvl" val="85" />
+<!--		<set name="abnormalTime" val="1" /> -->
+		<set name="abnormalVisualEffect" val="AURA_DEBUFF" />
+		<set name="targetType" val="AURA" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="3" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="isTriggeredSkill" val="true" />
+		<for>
+			<effect name="Debuff">
+				<mul stat="pAtk" val="0.70" />
+				<mul stat="mAtk" val="0.70" />
+				<mul stat="pAtkSpd" val="0.70" />
+				<mul stat="mAtkSpd" val="0.70" />
+				<sub stat="runSpd" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<!-- M. Def. + $s1, $s2 Attribute Resistance + $s3, Debuff Resistance + $s4. --> 
 	<skill id="10110" levels="1" name="Sentinel's Aura">
@@ -262,9 +336,24 @@
 	</skill>
 	<!-- P. Atk. + $s1, Atk. Spd. + $s2, M. Atk. + $s3, Casting Spd. + $s4, Speed + $s5. --> 
 	<skill id="10111" levels="1" name="Templar's Aura">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="icon" val="icon.skill10111" />
+		<set name="hitTime" val="500" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="SIGEL_AURA" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="85" />
+		<set name="isMagic" val="3" />
+		<set name="isTriggeredSkill" val="true" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.10" />
+				<mul stat="mAtk" val="1.10" />
+				<mul stat="pAtkSpd" val="1.10" />
+				<mul stat="mAtkSpd" val="1.10" />
+				<add stat="runSpd" val="10" />		
+			</effect>
+		</for>
 	</skill>
 </list>

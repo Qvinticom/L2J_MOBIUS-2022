@@ -157,8 +157,9 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="castRange" val="#castRange" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="reuseDelay" val="30000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="coolTime" val="400" />
