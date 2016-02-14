@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.KartiasLabyrinth.AI;
+package com.l2jmobius.gameserver.ai.npc;
 
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -29,13 +29,13 @@ import com.l2jmobius.util.Rnd;
 /**
  * @author Mobius
  */
-final class Healer implements Runnable
+public final class FighterAI implements Runnable
 {
 	private L2PcInstance _player;
 	private final L2QuestGuardInstance _guard;
-	private int _followRange = 200;
+	private int _followRange = 150;
 	
-	public Healer(L2PcInstance player, L2QuestGuardInstance guard)
+	public FighterAI(L2PcInstance player, L2QuestGuardInstance guard)
 	{
 		_player = player;
 		_guard = guard;
@@ -64,29 +64,21 @@ final class Healer implements Runnable
 		{
 			return;
 		}
-		ThreadPoolManager.getInstance().scheduleGeneral(new Healer(_player, _guard), _guard.isInCombat() ? 1000 : 3000);
+		ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(_player, _guard), _guard.isInCombat() ? 1000 : 3000);
 		
 		// Guard is occupied. Use skills logic.
 		if (_guard.isInCombat())
 		{
-			L2PcInstance targetPlayer = null;
-			for (L2Character ch : _guard.getKnownList().getKnownCharacters())
+			if ((_guard.getTarget() != null) && _guard.getTarget().isMonster() && ((L2Character) _guard.getTarget()).isAlikeDead())
 			{
-				if (ch.isPlayer() && !ch.isAlikeDead())
+				for (Skill skill : _guard.getSkills().values())
 				{
-					targetPlayer = (L2PcInstance) ch;
-					break;
-				}
-			}
-			for (Skill skill : _guard.getSkills().values())
-			{
-				if ((targetPlayer != null) && !targetPlayer.isAlikeDead() //
-					&& !skill.isBad() && !_guard.isCastingNow() && (_guard.calculateDistance(targetPlayer, false, false) < skill.getCastRange()))
-				{
-					_guard.setHeading(Util.calculateHeadingFrom(_guard, targetPlayer));
-					_guard.setTarget(targetPlayer);
-					skill.activateSkill(_guard, targetPlayer);
-					break;
+					if (skill.isBad() && (skill.getCoolTime() <= 0) && !_guard.isCastingNow() && (_guard.calculateDistance(_guard.getTarget(), false, false) < skill.getCastRange()))
+					{
+						_guard.setHeading(Util.calculateHeadingFrom(_guard, _guard.getTarget()));
+						skill.activateSkill(_guard, _guard.getTarget());
+						break;
+					}
 				}
 			}
 			return; // Guard is occupied, no need to proceed.

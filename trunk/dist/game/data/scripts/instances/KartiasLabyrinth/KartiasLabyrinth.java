@@ -23,6 +23,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.ai.npc.FighterAI;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -38,7 +39,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.util.Util;
 
 import instances.AbstractInstance;
-import instances.KartiasLabyrinth.AI.Fighter;
 import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
 import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
 import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGluttonyKaliosGroup;
@@ -831,23 +831,23 @@ public final class KartiasLabyrinth extends AbstractInstance
 		}
 		if (((KartiaWorld) world).adolph != null)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new Fighter(player, ((KartiaWorld) world).adolph), 1000);
+			ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(player, ((KartiaWorld) world).adolph), 1000);
 		}
 		if (((KartiaWorld) world).barton != null)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new Fighter(player, ((KartiaWorld) world).barton), 1000);
+			ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(player, ((KartiaWorld) world).barton), 1000);
 		}
 		if (((KartiaWorld) world).hayuk != null)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new Fighter(player, ((KartiaWorld) world).hayuk), 1000);
+			ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(player, ((KartiaWorld) world).hayuk), 1000);
 		}
 		if (((KartiaWorld) world).eliyah != null)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new Fighter(player, ((KartiaWorld) world).eliyah), 1000);
+			ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(player, ((KartiaWorld) world).eliyah), 1000);
 		}
 		if (((KartiaWorld) world).elise != null)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new Fighter(player, ((KartiaWorld) world).elise), 1000);
+			ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(player, ((KartiaWorld) world).elise), 1000);
 		}
 		((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave1", world.getInstanceId()));
 		startQuestTimer("checkStatus", 5000, null, player, true);
