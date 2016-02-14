@@ -4372,17 +4372,10 @@ public final class L2PcInstance extends L2Playable
 	
 	public final void broadcastPacket(SocialAction sa)
 	{
-		final Collection<L2Object> objs = getKnownList().getKnownObjects().values();
-		for (L2Object npc : objs)
+		L2Object target = getTarget();
+		if ((target != null) && target.isNpc())
 		{
-			if ((npc != null) && npc.isNpc())
-			{
-				final L2Npc npcMob = (L2Npc) npc;
-				if (npcMob.isInsideRadius(this, 100, true, true)) // 150 radius?
-				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSocialActionSee(npcMob, getActingPlayer(), sa.getId()), npcMob);
-				}
-			}
+			EventDispatcher.getInstance().notifyEventAsync(new OnNpcSocialActionSee((L2Npc) target, getActingPlayer(), sa.getId()), (L2Npc) target);
 		}
 		broadcastPacket((L2GameServerPacket) sa);
 	}

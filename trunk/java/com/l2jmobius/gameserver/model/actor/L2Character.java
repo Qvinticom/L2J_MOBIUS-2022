@@ -6655,17 +6655,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return;
 		}
 		
-		final Collection<L2Object> objs = getKnownList().getKnownObjects().values();
-		for (L2Object npc : objs)
+		L2Object target = getTarget();
+		if ((target != null) && target.isNpc())
 		{
-			if ((npc != null) && npc.isNpc())
-			{
-				final L2Npc npcMob = (L2Npc) npc;
-				if (npcMob.isInsideRadius(this, 150, true, true)) // 150 radius?
-				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSocialActionSee(npcMob, getActingPlayer(), id), npcMob);
-				}
-			}
+			EventDispatcher.getInstance().notifyEventAsync(new OnNpcSocialActionSee((L2Npc) target, getActingPlayer(), id), (L2Npc) target);
 		}
 	}
 	

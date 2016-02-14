@@ -1409,9 +1409,10 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19157" level="10" type="L2Npc" name="Resurrected Vengeful Spirit">
+	<npc id="19157" level="10" type="L2Monster" name="Resurrected Vengeful Spirit">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
+		<acquire exp="0" sp="0" />
 		<stats>
 			<vitals hp="258" hpRegen="7.5" mp="258" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1420,12 +1421,12 @@
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="8" />
+				<run ground="120" />
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" />
 		</skillList>
@@ -1435,9 +1436,10 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="19158" level="8" type="L2Npc" name="Resurrected Vengeful Spirit">
+	<npc id="19158" level="8" type="L2Monster" name="Resurrected Vengeful Spirit">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<acquire exp="0" sp="0" />
 		<stats>
 			<vitals hp="198" hpRegen="7.5" mp="198" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1446,12 +1448,12 @@
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="8" />
+				<run ground="120" />
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="14" />
 		</skillList>
