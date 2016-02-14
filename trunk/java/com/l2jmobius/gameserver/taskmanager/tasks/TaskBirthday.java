@@ -40,9 +40,8 @@ public class TaskBirthday extends Task
 {
 	private static final String NAME = "birthday";
 	/** Get all players that have had a birthday since last check. */
-	private static final String SELECT_PENDING_BIRTHDAY_GIFTS = "SELECT charId, char_name, createDate, (YEAR(NOW()) - YEAR(createDate)) AS age " //
-		+ "FROM characters WHERE (YEAR(NOW()) - YEAR(createDate) > 0) AND (DATE_FORMAT(createDate, '%m-%d') > DATE_FORMAT(FROM_UNIXTIME(?), '%m-%d'))";
-		
+	private static final String SELECT_PENDING_BIRTHDAY_GIFTS = "SELECT charId, char_name, createDate, (YEAR(NOW()) - YEAR(createDate)) AS age FROM characters WHERE (YEAR(NOW()) - YEAR(createDate) > 0) AND ((DATE_ADD(createDate, INTERVAL (YEAR(NOW()) - YEAR(createDate)) YEAR)) BETWEEN FROM_UNIXTIME(?) AND NOW())";
+	
 	@Override
 	public String getName()
 	{
