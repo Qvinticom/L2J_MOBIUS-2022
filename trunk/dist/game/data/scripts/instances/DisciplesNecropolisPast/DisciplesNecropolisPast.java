@@ -43,13 +43,6 @@ import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmpero
  */
 public final class DisciplesNecropolisPast extends AbstractInstance
 {
-	class DNPWorld extends InstanceWorld
-	{
-		final List<L2Npc> anakimGroup = new ArrayList<>();
-		final List<L2Npc> lilithGroup = new ArrayList<>();
-		int countKill = 0;
-	}
-	
 	// NPCs
 	private static final int SEAL_DEVICE = 27384;
 	private static final int PROMISE_OF_MAMMON = 32585;
@@ -88,7 +81,6 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		SKILLS.put(32720, new SkillHolder(6194, 1)); // Presentation - Anakim's Guard Battle
 		SKILLS.put(32721, new SkillHolder(6195, 1)); // Presentation - Anakim's Executor Battle
 	}
-	
 	// Locations
 	private static final Location ENTER = new Location(-89554, 216078, -7488, 0, 0);
 	private static final Location EXIT = new Location(171895, -17501, -4903, 0, 0);
@@ -118,6 +110,13 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		ANAKIM_SPAWN.put(ANAKIMS_GUARDIAN, new Location(-83321, 216507, -7492, 16166));
 		ANAKIM_SPAWN.put(ANAKIMS_GUARD, new Location(-83086, 216519, -7495, 15910));
 		ANAKIM_SPAWN.put(ANAKIMS_EXECUTOR, new Location(-83031, 216604, -7492, 17071));
+	}
+	
+	class DNPWorld extends InstanceWorld
+	{
+		final List<L2Npc> anakimGroup = new ArrayList<>();
+		final List<L2Npc> lilithGroup = new ArrayList<>();
+		int countKill = 0;
 	}
 	
 	public DisciplesNecropolisPast()

@@ -44,7 +44,7 @@ import quests.Q10331_StartOfFate.Q10331_StartOfFate;
  */
 public final class LabyrinthOfBelis extends AbstractInstance
 {
-	// Npcs
+	// NPCs
 	private static final int OFFICER = 19155;
 	private static final int NEMERTESS = 22984;
 	private static final int EMBRYO_HANDYMAN = 22997;
@@ -100,14 +100,13 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = player.getQuestState(Q10331_StartOfFate.class.getSimpleName());
-		if (qs == null)
-		{
-			return null;
-		}
-		
 		if (event.equals("enter_instance"))
 		{
+			final QuestState qs = player.getQuestState(Q10331_StartOfFate.class.getSimpleName());
+			if (qs == null)
+			{
+				return null;
+			}
 			enterInstance(player, new LOBWorld(), "LabyrinthOfBelis.xml", TEMPLATE_ID);
 			return null;
 		}
@@ -117,7 +116,6 @@ public final class LabyrinthOfBelis extends AbstractInstance
 		{
 			return null;
 		}
-		
 		final LOBWorld world = (LOBWorld) tmpworld;
 		
 		switch (event)

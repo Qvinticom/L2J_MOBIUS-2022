@@ -62,20 +62,6 @@ import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
  */
 public final class IceQueensCastleBattle extends AbstractInstance
 {
-	class IQCNBWorld extends InstanceWorld
-	{
-		final List<L2PcInstance> playersInside = new ArrayList<>();
-		final List<L2Npc> knightStatues = new ArrayList<>();
-		final List<L2Attackable> spawnedMobs = new CopyOnWriteArrayList<>();
-		L2NpcInstance controller = null;
-		L2GrandBossInstance freya = null;
-		L2QuestGuardInstance supp_Jinia = null;
-		L2QuestGuardInstance supp_Kegor = null;
-		boolean isSupportActive = false;
-		boolean canSpawnMobs = true;
-		boolean isHardCore = false;
-	}
-	
 	// Npcs
 	private static final int FREYA_THRONE = 29177; // First freya
 	private static final int FREYA_SPELLING = 29178; // Second freya
@@ -176,6 +162,20 @@ public final class IceQueensCastleBattle extends AbstractInstance
 		23140214,
 		23140216,
 	};
+	
+	class IQCNBWorld extends InstanceWorld
+	{
+		final List<L2PcInstance> playersInside = new ArrayList<>();
+		final List<L2Npc> knightStatues = new ArrayList<>();
+		final List<L2Attackable> spawnedMobs = new CopyOnWriteArrayList<>();
+		L2NpcInstance controller = null;
+		L2GrandBossInstance freya = null;
+		L2QuestGuardInstance supp_Jinia = null;
+		L2QuestGuardInstance supp_Kegor = null;
+		boolean isSupportActive = false;
+		boolean canSpawnMobs = true;
+		boolean isHardCore = false;
+	}
 	
 	public IceQueensCastleBattle()
 	{

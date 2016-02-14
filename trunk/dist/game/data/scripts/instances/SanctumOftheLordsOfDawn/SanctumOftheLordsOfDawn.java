@@ -43,17 +43,6 @@ import quests.Q00195_SevenSignsSecretRitualOfThePriests.Q00195_SevenSignsSecretR
  */
 public final class SanctumOftheLordsOfDawn extends AbstractInstance
 {
-	static final class HSWorld extends InstanceWorld
-	{
-		int doorst = 0;
-		final static Map<Integer, List<L2Npc>> _save_point = new HashMap<>();
-		
-		static Map<Integer, List<L2Npc>> getMonsters()
-		{
-			return _save_point;
-		}
-	}
-	
 	// NPCs
 	private static final int GUARDS_OF_THE_DAWN = 18834;
 	private static final int GUARDS_OF_THE_DAWN_2 = 18835;
@@ -82,6 +71,17 @@ public final class SanctumOftheLordsOfDawn extends AbstractInstance
 		new Location(-77699, 208905, -7640),
 		new Location(-79939, 205857, -7888),
 	};
+	
+	static final class HSWorld extends InstanceWorld
+	{
+		int doorst = 0;
+		final static Map<Integer, List<L2Npc>> _save_point = new HashMap<>();
+		
+		static Map<Integer, List<L2Npc>> getMonsters()
+		{
+			return _save_point;
+		}
+	}
 	
 	public SanctumOftheLordsOfDawn()
 	{

@@ -41,12 +41,6 @@ import quests.Q00129_PailakaDevilsLegacy.Q00129_PailakaDevilsLegacy;
  */
 public final class PailakaDevilsLegacy extends AbstractInstance
 {
-	class DIWorld extends InstanceWorld
-	{
-		L2Attackable _lematanNpc = null;
-		final List<L2Attackable> _followerslist = new CopyOnWriteArrayList<>();
-	}
-	
 	// NPCs
 	private static final int LEMATAN = 18633; // Lematan
 	private static final int SURVIVOR = 32498; // Devil's Isle Survivor
@@ -88,6 +82,12 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	private static final int ZONE_EXIT = 200000;
 	private static final int TIGRESS_LVL1 = 14916;
 	private static final int TIGRESS_LVL2 = 14917;
+	
+	class DIWorld extends InstanceWorld
+	{
+		L2Attackable _lematanNpc = null;
+		final List<L2Attackable> _followerslist = new CopyOnWriteArrayList<>();
+	}
 	
 	public PailakaDevilsLegacy()
 	{

@@ -35,10 +35,6 @@ import quests.Q10296_SevenSignsPowerOfTheSeal.Q10296_SevenSignsPowerOfTheSeal;
  */
 public final class ElcadiasTent extends AbstractInstance
 {
-	class ETWorld extends InstanceWorld
-	{
-	}
-	
 	// NPCs
 	private static final int ELCADIA = 32784;
 	private static final int GRUFF_LOOKING_MAN = 32862;
@@ -47,6 +43,10 @@ public final class ElcadiasTent extends AbstractInstance
 	private static final Location EXIT_LOC = new Location(43316, -87986, -2832, 0, 0);
 	// Misc
 	private static final int TEMPLATE_ID = 158;
+	
+	class ETWorld extends InstanceWorld
+	{
+	}
 	
 	public ElcadiasTent()
 	{

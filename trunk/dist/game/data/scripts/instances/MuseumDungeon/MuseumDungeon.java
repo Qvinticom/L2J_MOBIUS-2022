@@ -41,7 +41,7 @@ import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheB
  */
 public final class MuseumDungeon extends AbstractInstance
 {
-	// Npcs
+	// NPCs
 	private static final int PANTHEON = 32972;
 	private static final int TOYRON = 33004;
 	private static final int DESK = 33126;

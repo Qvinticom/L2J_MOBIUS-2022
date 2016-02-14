@@ -30,10 +30,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public final class SecretArea extends Quest
 {
-	class SAWorld extends InstanceWorld
-	{
-	}
-	
 	private static final int TEMPLATE_ID = 117;
 	private static final int GINBY = 32566;
 	private static final int LELRIKIA = 32567;
@@ -44,6 +40,10 @@ public final class SecretArea extends Quest
 		new Location(-23758, -8959, -5384),
 		new Location(-185057, 242821, 1576)
 	};
+	
+	class SAWorld extends InstanceWorld
+	{
+	}
 	
 	public SecretArea()
 	{

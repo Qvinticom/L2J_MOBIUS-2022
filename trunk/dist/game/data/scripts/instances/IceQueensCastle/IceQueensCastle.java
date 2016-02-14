@@ -40,11 +40,6 @@ import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
  */
 public final class IceQueensCastle extends AbstractInstance
 {
-	class IQCWorld extends InstanceWorld
-	{
-		L2PcInstance player = null;
-	}
-	
 	// NPCs
 	private static final int FREYA = 18847;
 	private static final int BATTALION_LEADER = 18848;
@@ -62,6 +57,11 @@ public final class IceQueensCastle extends AbstractInstance
 	private static final int TEMPLATE_ID = 137;
 	private static final int ICE_QUEEN_DOOR = 23140101;
 	private static final int MIN_LV = 82;
+	
+	class IQCWorld extends InstanceWorld
+	{
+		L2PcInstance player = null;
+	}
 	
 	public IceQueensCastle()
 	{

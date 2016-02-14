@@ -514,10 +514,7 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		if (debug || player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
 		{
-			if (debug)
-			{
-				return true;
-			}
+			return true;
 		}
 		
 		final L2Party party = player.getParty();

@@ -43,9 +43,7 @@ import quests.Q10296_SevenSignsPowerOfTheSeal.Q10296_SevenSignsPowerOfTheSeal;
 
 public class MonasteryOfSilence2 extends AbstractNpcAI
 {
-	// Values
-	private static final int INSTANCE_ID = 151;
-	// NPC's
+	// NPCs
 	private static final int OddGlobe = 32815;
 	private static final int Elcadia_First_Room = 32787;
 	private static final int Elcadia_Support = 32785;
@@ -69,7 +67,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 	private static final int AltarOfHallows_Sword = 32858;
 	private static final int AltarOfHallows_Scroll = 32859;
 	private static final int AltarOfHallows_Shield = 32860;
-	// Teleport's
+	// Teleports
 	private static final int ENTER = 0;
 	private static final int HOLYGRAL = 1;
 	private static final int EXIT = 2;
@@ -152,7 +150,6 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		}
 		// EtisEtina
 	};
-	
 	private static final int[] TALK =
 	{
 		OddGlobe,
@@ -178,7 +175,6 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		AltarOfHallows_Scroll,
 		AltarOfHallows_Shield
 	};
-	
 	private static final int[] MageBuff =
 	{
 		6725,
@@ -193,7 +189,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		6716,
 		6717
 	};
-	
+	private static final int INSTANCE_ID = 151;
 	private final HashMap<Integer, InstanceHolder> instanceWorlds = new HashMap<>();
 	
 	static class InstanceHolder
@@ -201,11 +197,8 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		final List<L2Npc> mobs = new ArrayList<>();
 	}
 	
-	private class MoSWorld2 extends InstanceWorld
+	class MoSWorld2 extends InstanceWorld
 	{
-		public MoSWorld2()
-		{
-		}
 	}
 	
 	public MonasteryOfSilence2()

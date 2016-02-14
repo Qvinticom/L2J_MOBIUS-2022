@@ -31,16 +31,16 @@ import quests.Q10287_StoryOfThoseLeft.Q10287_StoryOfThoseLeft;
  */
 public final class JiniaGuildHideout4 extends AbstractInstance
 {
-	class JGH4World extends InstanceWorld
-	{
-	}
-	
 	// NPC
 	private static final int RAFFORTY = 32020;
 	// Location
 	private static final Location START_LOC = new Location(-23530, -8963, -5413, 0, 0);
 	// Misc
 	private static final int TEMPLATE_ID = 146;
+	
+	class JGH4World extends InstanceWorld
+	{
+	}
 	
 	public JiniaGuildHideout4()
 	{

@@ -43,15 +43,6 @@ import instances.AbstractInstance;
  */
 public final class NornilsGarden extends AbstractInstance
 {
-	class NornilsWorld extends InstanceWorld
-	{
-		L2Npc first_npc = null;
-		boolean spawned_1 = false;
-		boolean spawned_2 = false;
-		boolean spawned_3 = false;
-		boolean spawned_4 = false;
-	}
-	
 	// NPCs
 	private static final int _garden_guard = 32330;
 	private static final int[] _final_gates =
@@ -165,36 +156,13 @@ public final class NornilsGarden extends AbstractInstance
 	};
 	// @formatter:on
 	
-	private static final void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
+	class NornilsWorld extends InstanceWorld
 	{
-		final int chance = getRandom(100);
-		for (int[] element : drop)
-		{
-			if (chance < element[2])
-			{
-				mob.dropItem(player, element[0], element[1]);
-			}
-		}
-	}
-	
-	private static final void giveBuffs(L2Character ch)
-	{
-		if (skill1 != null)
-		{
-			skill1.applyEffects(ch, ch);
-		}
-		if (skill2 != null)
-		{
-			skill2.applyEffects(ch, ch);
-		}
-		if (skill3 != null)
-		{
-			skill3.applyEffects(ch, ch);
-		}
-		if (skill4 != null)
-		{
-			skill4.applyEffects(ch, ch);
-		}
+		L2Npc first_npc = null;
+		boolean spawned_1 = false;
+		boolean spawned_2 = false;
+		boolean spawned_3 = false;
+		boolean spawned_4 = false;
 	}
 	
 	public NornilsGarden()
@@ -458,6 +426,38 @@ public final class NornilsGarden extends AbstractInstance
 			return "32330-08.html";
 		}
 		return "ok";
+	}
+	
+	private static final void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
+	{
+		final int chance = getRandom(100);
+		for (int[] element : drop)
+		{
+			if (chance < element[2])
+			{
+				mob.dropItem(player, element[0], element[1]);
+			}
+		}
+	}
+	
+	private static final void giveBuffs(L2Character ch)
+	{
+		if (skill1 != null)
+		{
+			skill1.applyEffects(ch, ch);
+		}
+		if (skill2 != null)
+		{
+			skill2.applyEffects(ch, ch);
+		}
+		if (skill3 != null)
+		{
+			skill3.applyEffects(ch, ch);
+		}
+		if (skill4 != null)
+		{
+			skill4.applyEffects(ch, ch);
+		}
 	}
 	
 	@Override

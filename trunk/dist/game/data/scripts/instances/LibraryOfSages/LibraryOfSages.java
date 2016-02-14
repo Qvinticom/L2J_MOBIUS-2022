@@ -32,11 +32,6 @@ import instances.AbstractInstance;
  */
 public final class LibraryOfSages extends AbstractInstance
 {
-	class LoSWorld extends InstanceWorld
-	{
-		L2Npc elcadia = null;
-	}
-	
 	// NPCs
 	private static final int SOPHIA1 = 32596;
 	private static final int PILE_OF_BOOKS1 = 32809;
@@ -61,6 +56,11 @@ public final class LibraryOfSages extends AbstractInstance
 	};
 	// Misc
 	private static final int TEMPLATE_ID = 156;
+	
+	class LoSWorld extends InstanceWorld
+	{
+		L2Npc elcadia = null;
+	}
 	
 	public LibraryOfSages()
 	{

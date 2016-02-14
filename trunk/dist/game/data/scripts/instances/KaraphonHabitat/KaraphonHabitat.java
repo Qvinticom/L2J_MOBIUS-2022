@@ -31,7 +31,7 @@ import quests.Q10745_TheSecretIngredients.Q10745_TheSecretIngredients;
  */
 public class KaraphonHabitat extends AbstractInstance
 {
-	// Npcs
+	// NPCs
 	private static final int DOLKIN = 33954;
 	private static final int DOLKIN_INSTANCE = 34002;
 	// Locations

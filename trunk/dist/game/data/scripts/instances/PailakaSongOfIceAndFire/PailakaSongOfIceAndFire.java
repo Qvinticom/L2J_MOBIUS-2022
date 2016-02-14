@@ -34,10 +34,6 @@ import instances.AbstractInstance;
  */
 public final class PailakaSongOfIceAndFire extends AbstractInstance
 {
-	class PSoIWorld extends InstanceWorld
-	{
-	}
-	
 	// NPCs
 	private static final int ADLER1 = 32497;
 	private static final int GARGOS = 18607;
@@ -54,6 +50,10 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 43;
 	private static final int ZONE = 20108;
+	
+	class PSoIWorld extends InstanceWorld
+	{
+	}
 	
 	public PailakaSongOfIceAndFire()
 	{

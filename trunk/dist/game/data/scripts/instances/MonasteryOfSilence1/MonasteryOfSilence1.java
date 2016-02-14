@@ -33,11 +33,6 @@ import instances.AbstractInstance;
  */
 public final class MonasteryOfSilence1 extends AbstractInstance
 {
-	static final class MoSWorld extends InstanceWorld
-	{
-		L2Npc elcadia = null;
-	}
-	
 	// NPCs
 	private static final int ELCADIA_INSTANCE = 32787;
 	private static final int ERIS_EVIL_THOUGHTS = 32792;
@@ -76,6 +71,11 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 	};
 	// Misc
 	private static final int TEMPLATE_ID = 151;
+	
+	static final class MoSWorld extends InstanceWorld
+	{
+		L2Npc elcadia = null;
+	}
 	
 	public MonasteryOfSilence1()
 	{

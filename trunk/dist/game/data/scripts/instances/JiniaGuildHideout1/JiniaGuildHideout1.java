@@ -31,16 +31,16 @@ import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
  */
 public final class JiniaGuildHideout1 extends AbstractInstance
 {
-	class JGH1World extends InstanceWorld
-	{
-	}
-	
 	// NPC
 	private static final int RAFFORTY = 32020;
 	// Location
 	private static final Location START_LOC = new Location(-23530, -8963, -5413);
 	// Misc
 	private static final int TEMPLATE_ID = 140;
+	
+	class JGH1World extends InstanceWorld
+	{
+	}
 	
 	public JiniaGuildHideout1()
 	{

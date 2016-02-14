@@ -34,7 +34,7 @@ import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
  */
 public final class FaeronTrainingGrounds2 extends AbstractInstance
 {
-	// NPC's
+	// NPCs
 	private static final int KATALIN = 33943;
 	private static final int KATALIN_2 = 33945;
 	// Locations

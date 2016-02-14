@@ -31,16 +31,16 @@ import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
  */
 public final class JiniaGuildHideout2 extends AbstractInstance
 {
-	class JGH2World extends InstanceWorld
-	{
-	}
-	
 	// NPC
 	private static final int RAFFORTY = 32020;
 	// Location
 	private static final Location START_LOC = new Location(-23530, -8963, -5413, 0, 0);
 	// Misc
 	private static final int TEMPLATE_ID = 141;
+	
+	class JGH2World extends InstanceWorld
+	{
+	}
 	
 	public JiniaGuildHideout2()
 	{
