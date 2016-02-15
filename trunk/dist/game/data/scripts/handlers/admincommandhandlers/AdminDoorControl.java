@@ -16,13 +16,17 @@
  */
 package handlers.admincommandhandlers;
 
+import java.awt.Color;
+
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
 
 /**
  * This class handles following admin commands: - open1 = open coloseum door 24190001 - open2 = open coloseum door 24190002 - open3 = open coloseum door 24190003 - open4 = open coloseum door 24190004 - openall = open all coloseum door - close1 = close coloseum door 24190001 - close2 = close coloseum
@@ -37,7 +41,8 @@ public class AdminDoorControl implements IAdminCommandHandler
 		"admin_open",
 		"admin_close",
 		"admin_openall",
-		"admin_closeall"
+		"admin_closeall",
+		"admin_showdoors"
 	};
 	
 	@Override
@@ -81,7 +86,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 					}
 				}
 			}
-			if (command.equals("admin_closeall"))
+			else if (command.equals("admin_closeall"))
 			{
 				for (L2DoorInstance door : _doorTable.getDoors())
 				{
@@ -95,7 +100,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 					}
 				}
 			}
-			if (command.equals("admin_openall"))
+			else if (command.equals("admin_openall"))
 			{
 				for (L2DoorInstance door : _doorTable.getDoors())
 				{
@@ -109,7 +114,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 					}
 				}
 			}
-			if (command.equals("admin_open"))
+			else if (command.equals("admin_open"))
 			{
 				final L2Object target = activeChar.getTarget();
 				if (target instanceof L2DoorInstance)
@@ -121,8 +126,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 					activeChar.sendMessage("Incorrect target.");
 				}
 			}
-			
-			if (command.equals("admin_close"))
+			else if (command.equals("admin_close"))
 			{
 				final L2Object target = activeChar.getTarget();
 				if (target instanceof L2DoorInstance)
@@ -132,6 +136,34 @@ public class AdminDoorControl implements IAdminCommandHandler
 				else
 				{
 					activeChar.sendMessage("Incorrect target.");
+				}
+			}
+			else if (command.equals("admin_showdoors"))
+			{
+				for (L2Character ch : activeChar.getKnownList().getKnownCharacters())
+				{
+					final ExServerPrimitive packet = new ExServerPrimitive("door" + ch.getId(), activeChar.getX(), activeChar.getY(), -16000);
+					if (ch.isDoor())
+					{
+						final L2DoorInstance door = (L2DoorInstance) ch;
+						final Color color = door.getOpen() ? Color.GREEN : Color.RED;
+						// box 1
+						packet.addLine(color, door.getX(0), door.getY(0), door.getZMin(), door.getX(1), door.getY(1), door.getZMin());
+						packet.addLine(color, door.getX(1), door.getY(1), door.getZMin(), door.getX(2), door.getY(2), door.getZMax());
+						packet.addLine(color, door.getX(2), door.getY(2), door.getZMax(), door.getX(3), door.getY(3), door.getZMax());
+						packet.addLine(color, door.getX(3), door.getY(3), door.getZMax(), door.getX(0), door.getY(0), door.getZMin());
+						// box 2
+						packet.addLine(color, door.getX(0), door.getY(0), door.getZMax(), door.getX(1), door.getY(1), door.getZMax());
+						packet.addLine(color, door.getX(1), door.getY(1), door.getZMax(), door.getX(2), door.getY(2), door.getZMin());
+						packet.addLine(color, door.getX(2), door.getY(2), door.getZMin(), door.getX(3), door.getY(3), door.getZMin());
+						packet.addLine(color, door.getX(3), door.getY(3), door.getZMin(), door.getX(0), door.getY(0), door.getZMax());
+						// diagonals
+						packet.addLine(color, door.getX(0), door.getY(0), door.getZMin(), door.getX(1), door.getY(1), door.getZMax());
+						packet.addLine(color, door.getX(2), door.getY(2), door.getZMin(), door.getX(3), door.getY(3), door.getZMax());
+						packet.addLine(color, door.getX(0), door.getY(0), door.getZMax(), door.getX(1), door.getY(1), door.getZMin());
+						packet.addLine(color, door.getX(2), door.getY(2), door.getZMax(), door.getX(3), door.getY(3), door.getZMin());
+					}
+					activeChar.sendPacket(packet);
 				}
 			}
 		}
