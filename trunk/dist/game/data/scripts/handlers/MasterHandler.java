@@ -128,6 +128,7 @@ import handlers.admincommandhandlers.AdminTest;
 import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
+import handlers.admincommandhandlers.AdminWall;
 import handlers.admincommandhandlers.AdminZone;
 import handlers.bypasshandlers.AlternateClassMaster;
 import handlers.bypasshandlers.ArcanCityMovie;
@@ -406,6 +407,7 @@ final class MasterHandler
 			AdminTvTEvent.class,
 			AdminUnblockIp.class,
 			AdminVitality.class,
+			AdminWall.class,
 			AdminZone.class,
 		},
 		{

@@ -104,6 +104,9 @@
 	<admin command="admin_closeall" accessLevel="100" />
 	<admin command="admin_showdoors" accessLevel="100" />
 
+	<!-- ADMIN WALL CONTROL -->
+	<admin command="admin_showwalls" accessLevel="100" />
+
 	<!-- ADMIN EDIT CHAR -->
 	<admin command="admin_edit_character" accessLevel="100" />
 	<admin command="admin_current_player" accessLevel="100" />

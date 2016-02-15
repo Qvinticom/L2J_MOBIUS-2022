@@ -25,6 +25,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.geodriver.Cell;
 import com.l2jmobius.commons.geodriver.GeoDriver;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
+import com.l2jmobius.gameserver.data.xml.impl.WallData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -280,6 +281,10 @@ public class GeoData
 		{
 			return false;
 		}
+		if (WallData.getInstance().checkIfWallsBetween(x, y, z, tx, ty, tz))
+		{
+			return false;
+		}
 		return canSeeTarget(x, y, z, tx, ty, tz);
 	}
 	
@@ -470,6 +475,10 @@ public class GeoData
 		{
 			return new Location(x, y, getHeight(x, y, z));
 		}
+		if (WallData.getInstance().checkIfWallsBetween(x, y, z, tx, ty, tz))
+		{
+			return new Location(x, y, getHeight(x, y, z));
+		}
 		
 		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
 		// first point is guaranteed to be available
@@ -529,6 +538,10 @@ public class GeoData
 		toZ = getNearestZ(tGeoX, tGeoY, toZ);
 		
 		if (DoorData.getInstance().checkIfDoorsBetween(fromX, fromY, fromZ, toX, toY, toZ, instanceId, false))
+		{
+			return false;
+		}
+		if (WallData.getInstance().checkIfWallsBetween(fromX, fromY, fromZ, toX, toY, toZ))
 		{
 			return false;
 		}

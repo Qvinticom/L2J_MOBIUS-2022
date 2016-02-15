@@ -38,6 +38,7 @@ import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
+import com.l2jmobius.gameserver.data.xml.impl.WallData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -188,6 +189,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					DoorData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Doors.");
+					break;
+				}
+				case "wall":
+				{
+					WallData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Walls.");
 					break;
 				}
 				case "zone":
