@@ -1673,6 +1673,7 @@
 	<npc id="33170" level="85" type="L2QuestGuard" name="Adolph" title="Aden Vanguard Captain">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<equipment rhand="80" lhand="6377"/> <!-- rhand: Tallum Blade lhand: Imperial Crusader Shield -->
 		<stats>
 			<vitals hp="25950" hpRegen="7.5" mp="25950" mpRegen="2.7" />
 			<attack physical="2422" magical="1492" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1699,6 +1700,7 @@
 	<npc id="33171" level="85" type="L2QuestGuard" name="Priest Alice" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<equipment rhand="10252"/> <!-- rhand: Dynasty Staff -->
 		<stats>
 			<vitals hp="8650" hpRegen="7.5" mp="8650" mpRegen="2.7" />
 			<attack physical="2422" magical="1492" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1725,6 +1727,7 @@
 	<npc id="33172" level="85" type="L2QuestGuard" name="Officer Barton" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
+		<equipment rhand="10004"/> <!-- rhand: Dynasty Dualsword -->
 		<stats>
 			<vitals hp="17300" hpRegen="7.5" mp="17300" mpRegen="2.7" />
 			<attack physical="2422" magical="1492" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />

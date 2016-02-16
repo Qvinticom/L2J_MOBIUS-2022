@@ -857,6 +857,7 @@
 	<npc id="27432" level="76" type="L2Monster" name="Tracker" title="Resurrected">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
+		<equipment rhand="946" lhand="945"/> <!-- rhand: Skeleton Dagger lhand: Skeleton Buckler -->
 		<stats>
 			<vitals hp="4371" hpRegen="7.5" mp="4371" mpRegen="2.7" />
 			<attack physical="1615" magical="995" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -912,6 +913,7 @@
 	<npc id="27434" level="76" type="L2Monster" name="Guardian of Darkness" title="Resurrected">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
+		<equipment rhand="77"/> <!-- rhand: Tsurugi -->
 		<stats>
 			<vitals hp="8743" hpRegen="7.5" mp="8743" mpRegen="2.7" />
 			<attack physical="1615" magical="995" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />

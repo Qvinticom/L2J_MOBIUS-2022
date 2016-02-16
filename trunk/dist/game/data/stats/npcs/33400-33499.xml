@@ -339,6 +339,7 @@
 	</npc>
 	<npc id="33414" level="76" type="L2QuestGuard" name="Van Archer">
 		<race>HUMAN</race>
+		<equipment rhand="288"/> <!-- rhand: Carnage Bow -->
 		<stats>
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
 			<attack physical="1615" magical="995" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
@@ -363,6 +364,7 @@
 	</npc>
 	<npc id="33415" level="76" type="L2QuestGuard" name="Van Infantry">
 		<race>HUMAN</race>
+		<equipment rhand="13052"/> <!-- rhand: Spear of Silenos -->
 		<stats>
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
 			<attack physical="1615" magical="995" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
