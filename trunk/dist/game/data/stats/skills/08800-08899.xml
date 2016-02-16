@@ -1116,7 +1116,8 @@
 		<table name="#spd">100</table>
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="reuseDelay" val="300000" />
+		<set name="abnormalTime" val="120" />
+		<set name="reuseDelay" val="600000" />
 		<set name="itemConsumeId" val="36415" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="targetType" val="SELF" />
@@ -1154,15 +1155,22 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="8893" levels="1" name="Antharas' Breath">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Decreases nearby target's P. Atk./Casting Spd./Speed by 90% for 5 sec., after which they are rendered immobile for another 10 sec. Requires 1 Dragon Blood. Cooldown is 5 min. -->
-		<set name="icon" val="icon.item_gragonskill_i02" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="itemConsumeId" val="36415" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="PARALYZE" />
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="Paralyze" />
+		</for>
 	</skill>
 	<skill id="8894" levels="1" name="Paralyzing Breath">
 		<!-- AUTO GENERATED SKILL -->
@@ -1173,58 +1181,99 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="8895" levels="1" name="Antharas Tail Blow">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Dissolves nearby enemies' CP. Requires 1 Dragon Blood. Cooldown is 5 min. -->
-		<set name="icon" val="icon.item_gragonskill_i04" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="AURA" />
+		<set name="nextActionAttack" val="true" />
+		<set name="itemConsumeId" val="36415" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="effectRange" val="1600" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
+		<set name="affectRange" val="600" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isDebuff" val="true" />
+		<for>
+		    <effect name="PhysicalAttack" />
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8896" levels="1" name="Valakas' Breath">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Decreases nearby target's P. Atk./Casting Spd./Speed by 90% for 5 sec., after which they are rendered immobile for another 10 sec. Requires 1 Dragon Blood. Cooldown is 5 min. -->
-		<set name="icon" val="icon.skill4683" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="itemConsumeId" val="36415" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="PARALYZE" />
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="Paralyze" />
+		</for>
 	</skill>
 	<skill id="8897" levels="1" name="Valakas' Meteor">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Dissolves nearby enemies' CP. Requires 1 Dragon Blood. Cooldown is 5 min. -->
-		<set name="icon" val="icon.skill1467" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="AURA" />
+		<set name="nextActionAttack" val="true" />
+		<set name="itemConsumeId" val="36415" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="effectRange" val="1600" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
+		<set name="affectRange" val="600" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isDebuff" val="true" />
+		<for>
+		    <effect name="PhysicalAttack" />
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8898" levels="1" name="Lindvior's Breath">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Decreases nearby target's P. Atk./Casting Spd./Speed by 90% for 5 sec., after which they are rendered immobile for another 10 sec. Requires 1 Dragon Blood. Cooldown is 5 min. -->
-		<set name="icon" val="icon.item_gragonskill_i03" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="itemConsumeId" val="36415" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="PARALYZE" />
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="Paralyze" />
+		</for>
 	</skill>
 	<skill id="8899" levels="1" name="Lindvior's Wingbeat">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Dissolves nearby enemies' CP. Requires 1 Dragon Blood. Cooldown is 5 min. -->
-		<set name="icon" val="icon.item_gragonskill_i05" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="AURA" />
+		<set name="nextActionAttack" val="true" />
+		<set name="itemConsumeId" val="36415" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="effectRange" val="1600" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
+		<set name="affectRange" val="600" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isDebuff" val="true" />
+		<for>
+		    <effect name="PhysicalAttack" />
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.50" />
+			</effect>
+		</for>
 	</skill>
 </list>
