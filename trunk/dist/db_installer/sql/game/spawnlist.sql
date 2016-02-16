@@ -35759,8 +35759,6 @@ INSERT INTO `spawnlist` VALUES
 ("23_20", 1, 33587, 116921, 77195, -2695, 0, 0, 38057, 0, 0, 0, 0),
 -- Mysterious Butler
 ("23_20", 1, 33685, 116045, 77812, -2680, 0, 0, 49811, 0, 0, 0, 0),
--- Aria Furstmater
-("Aria_Hunter_Vilage", 1, 33918, 116390, 75387, -2712, 0, 0, 12298, 60, 0, 0, 0),
 
 -- [23_21]
 
@@ -49716,3 +49714,8 @@ INSERT INTO `spawnlist` VALUES
 ('Altar of Sacrifice', 1, 33887, 48227, -30305, -1680, 0, 0, 48000, 60, 0, 0, 0),
 ('Altar of Sacrifice', 1, 33812, 48471, -30182, -1680, 0, 0, 48000, 60, 0, 0, 0),
 ('Altar of Sacrifice', 1, 33881, 48319, -30204, -1680, 0, 0, 48000, 60, 0, 0, 0);
+
+-- Hunters Village
+INSERT INTO `spawnlist` VALUES 
+('HuntersVillage', 1, 34018, 116503, 75392, -2712, 0, 0, 12298, 60, 0, 0, 0),
+('HuntersVillage', 1, 33918, 116390, 75387, -2712, 0, 0, 12298, 60, 0, 0, 0);
