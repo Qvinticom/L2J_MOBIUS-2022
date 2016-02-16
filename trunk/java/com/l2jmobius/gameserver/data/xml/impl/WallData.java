@@ -41,16 +41,16 @@ public class WallData implements IXmlReader
 	
 	protected WallData()
 	{
-		if (!Config.ENABLE_WALL_DATA)
-		{
-			return;
-		}
 		load();
 	}
 	
 	@Override
 	public void load()
 	{
+		if (!Config.ENABLE_WALL_DATA)
+		{
+			return;
+		}
 		_walls.clear();
 		parseDatapackDirectory("walls", false);
 	}
