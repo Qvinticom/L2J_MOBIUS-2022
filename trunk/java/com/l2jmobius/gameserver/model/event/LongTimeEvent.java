@@ -36,6 +36,7 @@ import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
 import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.instancemanager.EventShrineManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.announce.EventAnnouncement;
 import com.l2jmobius.gameserver.model.drops.DropListScope;
@@ -122,6 +123,15 @@ public class LongTimeEvent extends Quest
 			_eventName = doc.getDocumentElement().getAttributes().getNamedItem("name").getNodeValue();
 			final String period = doc.getDocumentElement().getAttributes().getNamedItem("active").getNodeValue();
 			_eventPeriod = DateRange.parse(period, new SimpleDateFormat("dd MM yyyy", Locale.US));
+			
+			if (doc.getDocumentElement().getAttributes().getNamedItem("enableShrines") != null)
+			{
+				final String enableShrines = doc.getDocumentElement().getAttributes().getNamedItem("enableShrines").getNodeValue();
+				if (enableShrines.equalsIgnoreCase("true"))
+				{
+					EventShrineManager.setEnabled(true);
+				}
+			}
 			
 			if (doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod") != null)
 			{
