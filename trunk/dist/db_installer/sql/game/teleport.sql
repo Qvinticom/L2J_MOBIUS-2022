@@ -1114,3 +1114,6 @@ INSERT INTO `teleport` VALUES ('UndergroundLevel1', 990008, -114700, 147909, -77
 INSERT INTO `teleport` VALUES ('UndergroundLevel2', 990005, -114708, 147867, -10744, 0, 0, 57);
 INSERT INTO `teleport` VALUES ('UndergroundLevel3', 990006, -114698, 181951, -13808, 0, 0, 57);
 INSERT INTO `teleport` VALUES ('UndergroundOutside', 990007, -116160, 236370, -3088, 0, 0, 57);
+
+-- Shuttgart to Frozen Labyrinth
+INSERT INTO `teleport` VALUES ('Shuttgart', '200929', '123521', '-126591', '-2448', '500', '0', '57');
