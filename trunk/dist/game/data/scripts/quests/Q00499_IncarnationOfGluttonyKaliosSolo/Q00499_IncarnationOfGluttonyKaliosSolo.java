@@ -80,13 +80,13 @@ public class Q00499_IncarnationOfGluttonyKaliosSolo extends Quest
 		{
 			case State.CREATED:
 			{
-				if (player.getLevel() > MAX_LEVEL)
+				if ((player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL))
 				{
 					htmltext = "33647-00.htm";
 				}
 				else
 				{
-					htmltext = ((player.getLevel() < MIN_LEVEL)) ? "33647-00.htm" : "33647-01.htm";
+					htmltext = "33647-01.htm";
 				}
 				break;
 			}
@@ -98,7 +98,7 @@ public class Q00499_IncarnationOfGluttonyKaliosSolo extends Quest
 				}
 				else if (qs.isCond(2))
 				{
-					if ((player.getLevel() < MIN_LEVEL) && (player.getLevel() > MAX_LEVEL))
+					if ((player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL))
 					{
 						htmltext = "33647-00a.htm";
 					}
@@ -111,18 +111,18 @@ public class Q00499_IncarnationOfGluttonyKaliosSolo extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if (qs.isNowAvailable())
-				{
-					qs.setState(State.CREATED);
-					htmltext = ((player.getLevel() < MIN_LEVEL)) ? "33647-00.htm" : "33647-01.htm";
-				}
-				else if (player.getLevel() > MAX_LEVEL)
+				if ((player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL))
 				{
 					htmltext = "33647-00.htm";
 				}
-				else
+				else if (!qs.isNowAvailable())
 				{
 					htmltext = "33647-07.html";
+				}
+				else
+				{
+					qs.setState(State.CREATED);
+					htmltext = "33647-01.htm";
 				}
 				break;
 			}
