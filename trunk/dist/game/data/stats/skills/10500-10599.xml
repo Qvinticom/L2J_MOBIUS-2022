@@ -933,7 +933,7 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<enchant9 name="reuseDelay" val="#ench9Reuse" />
@@ -1877,9 +1877,15 @@
 			<using kind="DAGGER, DUALDAGGER" />
 		</cond>
 		<for>
-			<effect name="Bluff" />
-			<effect  name="Stun" />
-			<effect name="TargetCancel" />
+			<effect name="Bluff">
+				<param chance="80" />
+			</effect>
+			<effect name="TargetCancel">
+				<param chance="80" />
+			</effect>
+			<effect name="DeleteHateOfMe">
+				<param chance="80" />
+			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" chance="70" />

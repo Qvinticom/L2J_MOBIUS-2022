@@ -156,6 +156,7 @@ final class EffectMasterHandler
 		RefuelAirship.class,
 		Relax.class,
 		RemoteControl.class,
+		RemoveArmor.class,
 		RemoveTarget.class,
 		ResistSkill.class,
 		Restoration.class,

@@ -50,10 +50,34 @@
 	</skill>
 	<!-- Cancels target's armor for $s1. Requires dagger/dual dagger. Consumes $s2 Soulstones. --> 
 	<skill id="10703" levels="3" name="Armor Breaker">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="icon" val="icon.skill10703" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
+		<set name="abnormalType" val="DISBODY" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="activateRate" val="90" />
+		<set name="power" val="50" />
+		<set name="basicProperty" val="STR" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="99" />
+		<set name="mpConsume" val="77" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="90000" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<set name="itemConsumeCount" val="2" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->		
+		<for>
+			<effect name="RemoveArmor">
+				<param chance="80" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Reveals the enemy's back and inflicts Stun for $s1. Requires dagger/dual dagger. Consumes $s2 Soulstones. --> 
 	<skill id="10704" levels="3" name="Mass Power Bluff">
