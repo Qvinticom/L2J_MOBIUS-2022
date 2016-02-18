@@ -131,6 +131,7 @@ import quests.Q00464_Oath.Q00464_Oath;
 import quests.Q00471_BreakingThroughTheEmeraldSquare.Q00471_BreakingThroughTheEmeraldSquare;
 import quests.Q00472_ChallengeSteamCorridor.Q00472_ChallengeSteamCorridor;
 import quests.Q00473_InTheCoralGarden.Q00473_InTheCoralGarden;
+import quests.Q00490_DutyOfTheSurvivor.Q00490_DutyOfTheSurvivor;
 import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
 import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
 import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGluttonyKaliosGroup;
@@ -411,6 +412,7 @@ final class QuestMasterHandler
 		Q00471_BreakingThroughTheEmeraldSquare.class,
 		Q00472_ChallengeSteamCorridor.class,
 		Q00473_InTheCoralGarden.class,
+		Q00490_DutyOfTheSurvivor.class,
 		Q00494_IncarnationOfGreedZellakaGroup.class,
 		Q00495_IncarnationOfJealousyPellineGroup.class,
 		Q00496_IncarnationOfGluttonyKaliosGroup.class,
