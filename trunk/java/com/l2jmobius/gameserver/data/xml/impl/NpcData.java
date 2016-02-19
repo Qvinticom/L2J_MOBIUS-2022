@@ -203,20 +203,20 @@ public class NpcData implements IXmlReader
 												set.set("baseMAtk", parseDouble(attrs, "magical"));
 												set.set("baseRndDam", parseInteger(attrs, "random"));
 												set.set("baseCritRate", parseInteger(attrs, "critical"));
-												set.set("accuracy", parseDouble(attrs, "accuracy"));// TODO: Implement me
+												set.set("accuracy", parseDouble(attrs, "accuracy")); // TODO: Implement me
 												set.set("basePAtkSpd", parseInteger(attrs, "attackSpeed"));
-												set.set("reuseDelay", parseInteger(attrs, "reuseDelay"));// TODO: Implement me
+												set.set("reuseDelay", parseInteger(attrs, "reuseDelay")); // TODO: Implement me
 												set.set("baseAtkType", parseString(attrs, "type"));
 												set.set("baseAtkRange", parseInteger(attrs, "range"));
-												set.set("distance", parseInteger(attrs, "distance"));// TODO: Implement me
-												set.set("width", parseInteger(attrs, "width"));// TODO: Implement me
+												set.set("distance", parseInteger(attrs, "distance")); // TODO: Implement me
+												set.set("width", parseInteger(attrs, "width")); // TODO: Implement me
 												break;
 											}
 											case "defence":
 											{
 												set.set("basePDef", parseDouble(attrs, "physical"));
 												set.set("baseMDef", parseDouble(attrs, "magical"));
-												set.set("evasion", parseInteger(attrs, "evasion"));// TODO: Implement me
+												set.set("evasion", parseInteger(attrs, "evasion")); // TODO: Implement me
 												set.set("baseShldDef", parseInteger(attrs, "shield"));
 												set.set("baseShldRate", parseInteger(attrs, "shieldRate"));
 												break;
@@ -310,7 +310,7 @@ public class NpcData implements IXmlReader
 											}
 											case "hitTime":
 											{
-												set.set("hitTime", npcNode.getTextContent());// TODO: Implement me default 600 (value in ms)
+												set.set("hitTime", npcNode.getTextContent()); // TODO: Implement me default 600 (value in ms)
 												break;
 											}
 										}

@@ -132,7 +132,7 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 			writeD(0x00); // C4
 			writeD(0x00); // C6
 			writeD(0x00);
-			writeD(0);// CT1.5 Pet form and skills
+			writeD(0); // CT1.5 Pet form and skills
 			writeC(0x01);
 			writeC(0x01);
 			writeD(0x00);

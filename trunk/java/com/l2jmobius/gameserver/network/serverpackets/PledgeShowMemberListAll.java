@@ -101,7 +101,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		writeD(_clan.getAllyId());
 		writeS(_clan.getAllyName());
 		writeD(_clan.getAllyCrestId());
-		writeD(_clan.isAtWar() ? 1 : 0);// new c3
+		writeD(_clan.isAtWar() ? 1 : 0); // new c3
 		writeD(0x00); // Territory castle ID
 		writeD(_clan.getSubPledgeMembersCount(_pledgeType));
 		
@@ -118,7 +118,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 			if (player != null)
 			{
 				writeD(player.getAppearance().getSex() ? 1 : 0); // no visible effect
-				writeD(player.getRace().ordinal());// writeD(1);
+				writeD(player.getRace().ordinal()); // writeD(1);
 			}
 			else
 			{

@@ -40,7 +40,7 @@ public final class RequestGetItemFromPet extends L2GameClientPacket
 	{
 		_objectId = readD();
 		_amount = readQ();
-		_unknown = readD();// = 0 for most trades
+		_unknown = readD(); // = 0 for most trades
 	}
 	
 	@Override

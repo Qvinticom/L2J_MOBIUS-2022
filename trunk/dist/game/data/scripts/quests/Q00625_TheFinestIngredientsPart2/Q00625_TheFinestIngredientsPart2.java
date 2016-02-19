@@ -257,7 +257,7 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 	public String onSpawn(L2Npc npc)
 	{
 		startQuestTimer("NPC_TALK", 1000 * 1200, npc, null);
-		// npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.I_SMELL_SOMETHING_DELICIOUS)); //TODO: St3eT: Find proper NpcStringId
+		// npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.I_SMELL_SOMETHING_DELICIOUS)); // TODO: St3eT: Find proper NpcStringId
 		return super.onSpawn(npc);
 	}
 	

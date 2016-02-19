@@ -86,8 +86,8 @@ public class ExSendUIEvent extends L2GameServerPacket
 		writeH(0x8F);
 		writeD(_objectId);
 		writeD(_type ? 1 : 0); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
-		writeD(0);// unknown
-		writeD(0);// unknown
+		writeD(0); // unknown
+		writeD(0); // unknown
 		writeS(_countUp ? "1" : "0"); // 0 = count down, 1 = count up
 		// timer always disappears 10 seconds before end
 		writeS(String.valueOf(_startTime / 60));

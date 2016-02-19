@@ -47,7 +47,7 @@ public class Q00140_ShadowFoxPart2 extends Quest
 	{
 		MOBS.put(20789, 45); // Crokian
 		MOBS.put(20790, 58); // Dailaon
-		MOBS.put(20791, 100);// Crokian Warrior
+		MOBS.put(20791, 100); // Crokian Warrior
 		MOBS.put(20792, 92); // Farhite
 	}
 	

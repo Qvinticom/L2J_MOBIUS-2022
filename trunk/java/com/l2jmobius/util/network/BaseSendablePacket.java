@@ -117,7 +117,7 @@ public abstract class BaseSendablePacket
 	public byte[] getBytes()
 	{
 		// if (this instanceof Init)
-		// writeD(0x00); //reserve for XOR initial key
+		// writeD(0x00); // reserve for XOR initial key
 		
 		writeD(0x00); // reserve for checksum
 		

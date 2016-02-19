@@ -114,41 +114,41 @@ public class PetInfo extends L2GameServerPacket
 		
 		writeD(_curFed); // how fed it is
 		writeD(_maxFed); // max fed it can be
-		writeD((int) _summon.getCurrentHp());// current hp
-		writeD(_summon.getMaxHp());// max hp
-		writeD((int) _summon.getCurrentMp());// current mp
-		writeD(_summon.getMaxMp());// max mp
+		writeD((int) _summon.getCurrentHp()); // current hp
+		writeD(_summon.getMaxHp()); // max hp
+		writeD((int) _summon.getCurrentMp()); // current mp
+		writeD(_summon.getMaxMp()); // max mp
 		
 		writeQ(_summon.getStat().getSp()); // sp
-		writeC(_summon.getLevel());// lvl
+		writeC(_summon.getLevel()); // lvl
 		writeQ(_summon.getStat().getExp());
 		
 		if (_summon.getExpForThisLevel() > _summon.getStat().getExp())
 		{
-			writeQ(_summon.getStat().getExp());// 0% absolute value
+			writeQ(_summon.getStat().getExp()); // 0% absolute value
 		}
 		else
 		{
-			writeQ(_summon.getExpForThisLevel());// 0% absolute value
+			writeQ(_summon.getExpForThisLevel()); // 0% absolute value
 		}
 		
-		writeQ(_summon.getExpForNextLevel());// 100% absoulte value
+		writeQ(_summon.getExpForNextLevel()); // 100% absoulte value
 		
-		writeD(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0);// weight
-		writeD(_summon.getMaxLoad());// max weight it can carry
-		writeD((int) _summon.getPAtk(null));// patk
-		writeD((int) _summon.getPDef(null));// pdef
-		writeD(_summon.getAccuracy());// accuracy
-		writeD(_summon.getEvasionRate(null));// evasion
-		writeD(_summon.getCriticalHit(null, null));// critical
-		writeD((int) _summon.getMAtk(null, null));// matk
-		writeD((int) _summon.getMDef(null, null));// mdef
+		writeD(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0); // weight
+		writeD(_summon.getMaxLoad()); // max weight it can carry
+		writeD((int) _summon.getPAtk(null)); // patk
+		writeD((int) _summon.getPDef(null)); // pdef
+		writeD(_summon.getAccuracy()); // accuracy
+		writeD(_summon.getEvasionRate(null)); // evasion
+		writeD(_summon.getCriticalHit(null, null)); // critical
+		writeD((int) _summon.getMAtk(null, null)); // matk
+		writeD((int) _summon.getMDef(null, null)); // mdef
 		writeD(_summon.getMagicAccuracy()); // magic accuracy
 		writeD(_summon.getMagicEvasionRate(null)); // magic evasion
 		writeD(_summon.getMCriticalHit(null, null)); // mcritical
-		writeD((int) _summon.getStat().getMoveSpeed());// speed
-		writeD((int) _summon.getPAtkSpd());// atkspeed
-		writeD(_summon.getMAtkSpd());// casting speed
+		writeD((int) _summon.getStat().getMoveSpeed()); // speed
+		writeD((int) _summon.getPAtkSpd()); // atkspeed
+		writeD(_summon.getMAtkSpd()); // casting speed
 		
 		writeC(0); // TODO: Check me, might be ride status
 		writeC(_summon.getTeam().getId()); // Confirmed

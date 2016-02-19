@@ -59,7 +59,7 @@ final class GiantServant extends AbstractNpcAI
 		SERVANT_TELEPORTS.put("GardenOfGenesis", new Location(207129, 111132, -2040)); // 1010725 Garden of Genesis (Lv. 90)
 		SERVANT_TELEPORTS.put("FairySettlement", new Location(214432, 79587, 824)); // 1010726 Fairy Settlement (Lv. 90)
 		SERVANT_TELEPORTS.put("SealOfShilen", new Location(187383, 20498, -3584)); // 1010727 Seal of Shilen (Lv. 95)
-		SERVANT_TELEPORTS.put("OrbisTempleEntrance", new Location(198703, 86034, -192));// 1010728 Orbis Temple Entrance (Lv. 95)
+		SERVANT_TELEPORTS.put("OrbisTempleEntrance", new Location(198703, 86034, -192)); // 1010728 Orbis Temple Entrance (Lv. 95)
 		SERVANT_TELEPORTS.put("Parnassus", new Location(149358, 172479, -952)); // 1010729 Parnassus (Lv. 97)
 		SERVANT_TELEPORTS.put("GuilloutineFortress", new Location(44725, 146026, -3512)); // 1010114 Guilloutine Fortress (Lv. 95)
 	}

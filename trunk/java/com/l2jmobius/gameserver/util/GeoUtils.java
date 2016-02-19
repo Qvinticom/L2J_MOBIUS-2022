@@ -187,30 +187,30 @@ public final class GeoUtils
 		{
 			if (y > lastY)
 			{
-				return Cell.NSWE_SOUTH_EAST;// Direction.SOUTH_EAST;
+				return Cell.NSWE_SOUTH_EAST; // Direction.SOUTH_EAST;
 			}
 			else if (y < lastY)
 			{
-				return Cell.NSWE_NORTH_EAST;// Direction.NORTH_EAST;
+				return Cell.NSWE_NORTH_EAST; // Direction.NORTH_EAST;
 			}
 			else
 			{
-				return Cell.NSWE_EAST;// Direction.EAST;
+				return Cell.NSWE_EAST; // Direction.EAST;
 			}
 		}
 		else if (x < lastX) // west
 		{
 			if (y > lastY)
 			{
-				return Cell.NSWE_SOUTH_WEST;// Direction.SOUTH_WEST;
+				return Cell.NSWE_SOUTH_WEST; // Direction.SOUTH_WEST;
 			}
 			else if (y < lastY)
 			{
-				return Cell.NSWE_NORTH_WEST;// Direction.NORTH_WEST;
+				return Cell.NSWE_NORTH_WEST; // Direction.NORTH_WEST;
 			}
 			else
 			{
-				return Cell.NSWE_WEST;// Direction.WEST;
+				return Cell.NSWE_WEST; // Direction.WEST;
 			}
 		}
 		else
@@ -218,11 +218,11 @@ public final class GeoUtils
 		{
 			if (y > lastY)
 			{
-				return Cell.NSWE_SOUTH;// Direction.SOUTH;
+				return Cell.NSWE_SOUTH; // Direction.SOUTH;
 			}
 			else if (y < lastY)
 			{
-				return Cell.NSWE_NORTH;// Direction.NORTH;
+				return Cell.NSWE_NORTH; // Direction.NORTH;
 			}
 			else
 			{

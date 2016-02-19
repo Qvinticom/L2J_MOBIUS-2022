@@ -1267,27 +1267,27 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 									// @TODO: : RequestExSetPledgeCrestLarge is now chunked, each case is a different chunk
 									case 0x00:
 									{
-										msg = new RequestExSetPledgeCrestLarge();// 0
+										msg = new RequestExSetPledgeCrestLarge(); // 0
 										break;
 									}
 									case 0x01:
 									{
-										msg = new RequestExSetPledgeCrestLarge();// 1
+										msg = new RequestExSetPledgeCrestLarge(); // 1
 										break;
 									}
 									case 0x02:
 									{
-										msg = new RequestExSetPledgeCrestLarge();// 2
+										msg = new RequestExSetPledgeCrestLarge(); // 2
 										break;
 									}
 									case 0x03:
 									{
-										msg = new RequestExSetPledgeCrestLarge();// 3
+										msg = new RequestExSetPledgeCrestLarge(); // 3
 										break;
 									}
 									case 0x04:
 									{
-										msg = new RequestExSetPledgeCrestLarge();// 4
+										msg = new RequestExSetPledgeCrestLarge(); // 4
 										break;
 									}
 									default:
@@ -2261,42 +2261,42 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 							}
 							case 0xBB:
 							{
-								// msg = new RequestJoinCuriousHouse();// (ch)
+								// msg = new RequestJoinCuriousHouse(); // (ch)
 								break;
 							}
 							case 0xBC:
 							{
-								// msg = new RequestCancelCuriousHouse();// (ch)
+								// msg = new RequestCancelCuriousHouse(); // (ch)
 								break;
 							}
 							case 0xBD:
 							{
-								// msg = new RequestLeaveCuriousHouse();// (ch)
+								// msg = new RequestLeaveCuriousHouse(); // (ch)
 								break;
 							}
 							case 0xBE:
 							{
-								// msg = new RequestObservingListCuriousHouse();// (ch)
+								// msg = new RequestObservingListCuriousHouse(); // (ch)
 								break;
 							}
 							case 0xBF:
 							{
-								// msg = new RequestObservingCuriousHouse();// (chd)
+								// msg = new RequestObservingCuriousHouse(); // (chd)
 								break;
 							}
 							case 0xC0:
 							{
-								// msg = new RequestLeaveObservingCuriousHouse();// (ch)
+								// msg = new RequestLeaveObservingCuriousHouse(); // (ch)
 								break;
 							}
 							case 0xC1:
 							{
-								// msg = new RequestCuriousHouseHtml();// (ch)
+								// msg = new RequestCuriousHouseHtml(); // (ch)
 								break;
 							}
 							case 0xC2:
 							{
-								// msg = new RequestCuriousHouseRecord();// (ch)
+								// msg = new RequestCuriousHouseRecord(); // (ch)
 								break;
 							}
 							case 0xC3:

@@ -191,7 +191,7 @@ public final class MapRegionManager implements IXmlReader
 	 */
 	public final int getMapRegionX(int posX)
 	{
-		return (posX >> 15) + 9 + 11;// + centerTileX;
+		return (posX >> 15) + 9 + 11; // + centerTileX;
 	}
 	
 	/**
@@ -200,7 +200,7 @@ public final class MapRegionManager implements IXmlReader
 	 */
 	public final int getMapRegionY(int posY)
 	{
-		return (posY >> 15) + 10 + 8;// + centerTileX;
+		return (posY >> 15) + 10 + 8; // + centerTileX;
 	}
 	
 	/**

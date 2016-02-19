@@ -104,7 +104,7 @@ public abstract class PathFinding
 		int end_x = end.getLoc().getX();
 		int end_y = end.getLoc().getY();
 		//List of Visited Nodes
-		FastNodeList visited = new FastNodeList(800);//TODO! Add limit to cfg
+		FastNodeList visited = new FastNodeList(800); // TODO! Add limit to cfg
 		
 		// List of Nodes to Visit
 		BinaryNodeHeap to_visit = new BinaryNodeHeap(800);

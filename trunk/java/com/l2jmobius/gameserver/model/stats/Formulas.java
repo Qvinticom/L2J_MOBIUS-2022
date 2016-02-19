@@ -1442,7 +1442,7 @@ public final class Formulas
 			double val = 0;
 			if (attacker.isChargedShot(ShotType.BLESSED_SPIRITSHOTS))
 			{
-				val = mAtk * 3.0;// 3.0 is the blessed spiritshot multiplier
+				val = mAtk * 3.0; // 3.0 is the blessed spiritshot multiplier
 			}
 			val += mAtk;
 			val = (Math.sqrt(val) / target.getMDef(null, null)) * 11.0;

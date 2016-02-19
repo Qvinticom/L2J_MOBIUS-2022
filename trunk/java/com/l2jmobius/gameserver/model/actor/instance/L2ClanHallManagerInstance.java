@@ -1724,7 +1724,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 			filename = "html/clanHallManager/chamberlain-" + getId() + ".htm";
 			if (!HtmCache.getInstance().isLoadable(filename))
 			{
-				filename = "html/clanHallManager/chamberlain.htm";// Owner message window
+				filename = "html/clanHallManager/chamberlain.htm"; // Owner message window
 			}
 		}
 		else if (condition == COND_OWNER_FALSE)

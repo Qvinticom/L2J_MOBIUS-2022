@@ -251,7 +251,7 @@ public final class Fort extends AbstractResidence
 		initResidenceZone();
 		initNpcs(); // load and spawn npcs (Always spawned)
 		initSiegeNpcs(); // load suspicious merchants (Despawned 10mins before siege)
-		// spawnSuspiciousMerchant();// spawn suspicious merchants
+		// spawnSuspiciousMerchant(); // spawn suspicious merchants
 		initNpcCommanders(); // npc Commanders (not monsters) (Spawned during siege)
 		spawnNpcCommanders(); // spawn npc Commanders
 		initSpecialEnvoys(); // envoys from castles (Spawned after fort taken)

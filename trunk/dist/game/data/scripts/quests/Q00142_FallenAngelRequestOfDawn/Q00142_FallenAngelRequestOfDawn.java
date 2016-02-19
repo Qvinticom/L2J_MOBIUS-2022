@@ -49,7 +49,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 		MOBS.put(20084, 421); // Ant Patrol
 		MOBS.put(20086, 371); // Ant Guard
 		MOBS.put(20087, 900); // Ant Soldier
-		MOBS.put(20088, 1000);// Ant Warrior Captain
+		MOBS.put(20088, 1000); // Ant Warrior Captain
 		MOBS.put(20089, 431); // Noble Ant
 		MOBS.put(20090, 917); // Noble Ant Leader
 	}

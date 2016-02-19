@@ -436,7 +436,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 	{
 		if (msg == null)
 		{
-			return;// wrong usage
+			return; // wrong usage
 		}
 		
 		final CreatureSay creatureSay = new CreatureSay(0, ChatType.NPC_SHOUT, getName(), msg);

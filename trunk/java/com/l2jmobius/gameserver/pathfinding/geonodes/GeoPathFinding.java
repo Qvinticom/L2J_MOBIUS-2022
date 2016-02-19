@@ -349,7 +349,7 @@ public class GeoPathFinding extends PathFinding
 		final ByteBuffer pn = _pathNodes.get(regoffset);
 		// reading
 		final byte nodes = pn.get(idx);
-		idx += (layer * 10) + 1;// byte + layer*10byte
+		idx += (layer * 10) + 1; // byte + layer*10byte
 		if (nodes < layer)
 		{
 			_log.warning("SmthWrong!");

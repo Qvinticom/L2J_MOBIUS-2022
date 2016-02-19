@@ -46,7 +46,7 @@ public class RequestExAutoFish extends L2GameClientPacket
 		}
 		if (activeChar.isFishing())
 		{
-			activeChar.endFishing(true, false);// TODO: Correct Animation
+			activeChar.endFishing(true, false); // TODO: Correct Animation
 		}
 		else
 		{
