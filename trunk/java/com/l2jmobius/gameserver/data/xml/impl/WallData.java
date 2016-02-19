@@ -112,30 +112,28 @@ public class WallData implements IXmlReader
 		}
 		
 		final Collection<WallHolder> allWalls = _walls.get(MapRegionManager.getInstance().getMapRegionLocId(x, y));
-		if (allWalls == null)
+		if (allWalls != null)
 		{
-			return false;
-		}
-		
-		for (WallHolder wall : allWalls)
-		{
-			// lower part of the multiplier fraction, if it is 0 we avoid an error and also know that the lines are parallel
-			final int denominator = ((ty - y) * (wall.getPoint1X() - wall.getPoint2X())) - ((tx - x) * (wall.getPoint1Y() - wall.getPoint2Y()));
-			if (denominator == 0)
+			for (WallHolder wall : allWalls)
 			{
-				continue;
-			}
-			
-			// multipliers to the equations of the lines. If they are lower than 0 or bigger than 1, we know that segments don't intersect
-			final float multiplier1 = (float) (((wall.getPoint2X() - wall.getPoint1X()) * (y - wall.getPoint1Y())) - ((wall.getPoint2Y() - wall.getPoint1Y()) * (x - wall.getPoint1X()))) / denominator;
-			final float multiplier2 = (float) (((tx - x) * (y - wall.getPoint1Y())) - ((ty - y) * (x - wall.getPoint1X()))) / denominator;
-			if ((multiplier1 >= 0) && (multiplier1 <= 1) && (multiplier2 >= 0) && (multiplier2 <= 1))
-			{
-				final int intersectZ = Math.round(z + (multiplier1 * (tz - z)));
-				// now checking if the resulting point is between door's min and max z
-				if ((intersectZ > wall.getZMin()) && (intersectZ < wall.getZMax()))
+				// lower part of the multiplier fraction, if it is 0 we avoid an error and also know that the lines are parallel
+				final int denominator = ((ty - y) * (wall.getPoint1X() - wall.getPoint2X())) - ((tx - x) * (wall.getPoint1Y() - wall.getPoint2Y()));
+				if (denominator == 0)
 				{
-					return true;
+					continue;
+				}
+				
+				// multipliers to the equations of the lines. If they are lower than 0 or bigger than 1, we know that segments don't intersect
+				final float multiplier1 = (float) (((wall.getPoint2X() - wall.getPoint1X()) * (y - wall.getPoint1Y())) - ((wall.getPoint2Y() - wall.getPoint1Y()) * (x - wall.getPoint1X()))) / denominator;
+				final float multiplier2 = (float) (((tx - x) * (y - wall.getPoint1Y())) - ((ty - y) * (x - wall.getPoint1X()))) / denominator;
+				if ((multiplier1 >= 0) && (multiplier1 <= 1) && (multiplier2 >= 0) && (multiplier2 <= 1))
+				{
+					final int intersectZ = Math.round(z + (multiplier1 * (tz - z)));
+					// now checking if the resulting point is between the wall min and max z
+					if ((intersectZ > wall.getZMin()) && (intersectZ < wall.getZMax()))
+					{
+						return true;
+					}
 				}
 			}
 		}
