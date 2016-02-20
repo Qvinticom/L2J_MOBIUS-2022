@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="35200" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -20,17 +21,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -42,14 +39,15 @@
 		</collision>
 	</npc>
 	<npc id="35201" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="48001" magical="3813" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -61,17 +59,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -83,14 +77,15 @@
 		</collision>
 	</npc>
 	<npc id="35202" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -102,17 +97,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -124,14 +115,15 @@
 		</collision>
 	</npc>
 	<npc id="35203" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -143,17 +135,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -165,14 +153,15 @@
 		</collision>
 	</npc>
 	<npc id="35204" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="48001" magical="3813" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -184,17 +173,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -206,14 +191,15 @@
 		</collision>
 	</npc>
 	<npc id="35205" level="93" type="L2Defender" name="Royal Knight" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
 		<acquire exp="864" sp="1" />
 		<stats>
-			<vitals hp="120142" hpRegen="8.5" mp="4923" mpRegen="3" />
-			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
+			<vitals hp="200231" hpRegen="8.5" mp="9692" mpRegen="3" />
+			<attack physical="32783" magical="4791" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" shield="124" shieldRate="20" />
 			<attribute>
 				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
 			</attribute>
@@ -225,17 +211,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -247,6 +229,7 @@
 		</collision>
 	</npc>
 	<npc id="35206" level="91" type="L2Defender" name="Royal Wizard" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
@@ -255,9 +238,9 @@
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
 		<acquire exp="828" sp="1" />
 		<stats>
-			<vitals hp="195646" hpRegen="8.5" mp="4722" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="195647" hpRegen="8.5" mp="9362" mpRegen="3" />
+			<attack physical="29486" magical="4278" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="808" magical="683" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -270,17 +253,13 @@
 		<skillList>
 			<skill id="4026" level="1" /> <!-- Gludio Flame -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -292,6 +271,7 @@
 		</collision>
 	</npc>
 	<npc id="35207" level="91" type="L2Defender" name="Royal Wizard" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
@@ -300,9 +280,9 @@
 		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
 		<acquire exp="828" sp="1" />
 		<stats>
-			<vitals hp="195646" hpRegen="8.5" mp="4722" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="195647" hpRegen="8.5" mp="9362" mpRegen="3" />
+			<attack physical="29486" magical="4278" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="808" magical="683" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -315,17 +295,13 @@
 		<skillList>
 			<skill id="4027" level="1" /> <!-- Gludio Heal -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -337,14 +313,15 @@
 		</collision>
 	</npc>
 	<npc id="35208" level="91" type="L2Defender" name="Royal Guard" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
 		<acquire exp="828" sp="1" />
 		<stats>
-			<vitals hp="117394" hpRegen="8.5" mp="4722" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="195647" hpRegen="8.5" mp="9362" mpRegen="3" />
+			<attack physical="29486" magical="4278" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="808" magical="683" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -356,17 +333,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -378,14 +351,15 @@
 		</collision>
 	</npc>
 	<npc id="35209" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -397,17 +371,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -419,14 +389,15 @@
 		</collision>
 	</npc>
 	<npc id="35210" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -438,17 +409,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -460,14 +427,15 @@
 		</collision>
 	</npc>
 	<npc id="35211" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="191170" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="48001" magical="3813" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -479,17 +447,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -501,14 +465,15 @@
 		</collision>
 	</npc>
 	<npc id="35212" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -520,17 +485,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -542,14 +503,15 @@
 		</collision>
 	</npc>
 	<npc id="35213" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -561,17 +523,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -583,14 +541,15 @@
 		</collision>
 	</npc>
 	<npc id="35214" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="48001" magical="3813" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -602,17 +561,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -624,14 +579,15 @@
 		</collision>
 	</npc>
 	<npc id="35215" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -643,17 +599,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -665,14 +617,15 @@
 		</collision>
 	</npc>
 	<npc id="35216" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -684,17 +637,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -706,14 +655,15 @@
 		</collision>
 	</npc>
 	<npc id="35217" level="89" type="L2Defender" name="Escort" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="48001" magical="3813" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -725,17 +675,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -747,6 +693,7 @@
 		</collision>
 	</npc>
 	<npc id="35218" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -773,9 +720,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -787,16 +734,12 @@
 		<status attackable="false" undying="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -808,6 +751,7 @@
 		</collision>
 	</npc>
 	<npc id="35219" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -834,9 +778,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -848,16 +792,12 @@
 		<status attackable="false" undying="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -869,6 +809,7 @@
 		</collision>
 	</npc>
 	<npc id="35220" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -895,9 +836,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -909,16 +850,12 @@
 		<status attackable="false" undying="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -930,6 +867,7 @@
 		</collision>
 	</npc>
 	<npc id="35221" level="75" type="L2Npc" name="Mass Gatekeeper" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -941,9 +879,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -955,22 +893,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" />
+		<ai aggroRange="1000" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35222" level="75" type="L2CastleDoormen" name="Outer Castle Gatekeeper" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -988,9 +923,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1002,22 +937,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35223" level="75" type="L2CastleDoormen" name="Inner Castle Gatekeeper" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1035,9 +967,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1049,22 +981,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35224" level="75" type="L2Npc" name="Blacksmith" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -1073,9 +1002,9 @@
 		<sex>MALE</sex>
 		<equipment rhand="89" /> <!-- rhand: Big Hammer -->
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1087,22 +1016,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
 		<collision>
 			<radius normal="7" />
 			<height normal="16.5" />
 		</collision>
 	</npc>
 	<npc id="35225" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1110,9 +1036,9 @@
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1124,22 +1050,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="35226" level="75" type="L2Merchant" name="Chamberlain of Light">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1164,9 +1087,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1178,22 +1101,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="35227" level="75" type="L2Npc" name="Finrod" title="Wyvern Manager">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1201,9 +1121,9 @@
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1215,22 +1135,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="15" /> <!-- Elves -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
 		<collision>
 			<radius normal="6" />
 			<height normal="24.5" />
 		</collision>
 	</npc>
 	<npc id="35228" level="75" type="L2Merchant" name="Morrison" title="Mercenary Manager">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1239,9 +1156,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1253,22 +1170,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="35229" level="75" type="L2Merchant" name="Manor Manager" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1277,9 +1191,9 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1291,22 +1205,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="35230" level="75" type="L2Merchant" name="Manor Manager" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1315,9 +1226,9 @@
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1329,22 +1240,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="15" /> <!-- Elves -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="6" />
 			<height normal="24.5" />
 		</collision>
 	</npc>
 	<npc id="35231" level="75" type="L2Merchant" name="Manor Manager" title="Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1353,9 +1261,9 @@
 		<race>DARK_ELF</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1367,22 +1275,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="16" /> <!-- Dark Elves -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="35232" level="75" type="L2Npc" name="Sherwood" title="Herald from Oren">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1392,9 +1297,9 @@
 		<equipment rhand="74" /> <!-- rhand: Katana -->
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1406,29 +1311,26 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35233" level="20" type="L2Artefact" name="Aden Holy Artifact">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
 		<stats>
-			<vitals hp="342.5127" hpRegen="2.5" mp="192.0" mpRegen="1.2" />
-			<attack physical="44.32863" magical="30.2707" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="86.87049" magical="63.56806" />
+			<vitals hp="593" hpRegen="2.5" mp="291" mpRegen="1.2" />
+			<attack physical="90" magical="58" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="95" magical="105" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -1441,30 +1343,27 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="25" />
 			<height normal="98" />
 		</collision>
 	</npc>
 	<npc id="35234" level="99" type="L2Defender" name="Amadeo Cadmus" title="King">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" /> <!-- rhand: Tallum Blade -->
 		<acquire exp="980" sp="1" />
 		<stats>
-			<vitals hp="854199" hpRegen="8.5" mp="16621.2" mpRegen="3" />
-			<attack physical="3566.61778497004" magical="811.84586495282" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+			<vitals hp="1423665" hpRegen="8.5" mp="10704" mpRegen="3" />
+			<attack physical="135280" magical="35490" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1888" magical="1658" />
 			<attribute>
 				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
@@ -1476,17 +1375,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>OREN_SIEGE</clan>
@@ -1498,14 +1393,15 @@
 		</collision>
 	</npc>
 	<npc id="35235" level="95" type="L2Defender" name="Royal Knight" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="902" sp="1" />
 		<stats>
-			<vitals hp="299399" hpRegen="8.5" mp="15379.2" mpRegen="3" />
-			<attack physical="3036.96805390282" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
+			<vitals hp="498994" hpRegen="8.5" mp="10026" mpRegen="3" />
+			<attack physical="83632" magical="7462" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="894" magical="770" />
 			<attribute>
 				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
@@ -1517,17 +1413,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1539,6 +1431,7 @@
 		</collision>
 	</npc>
 	<npc id="35236" level="93" type="L2Defender" name="Royal Wizard" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
@@ -1547,9 +1440,9 @@
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
 		<acquire exp="864" sp="1" />
 		<stats>
-			<vitals hp="97513" hpRegen="8.5" mp="4923.0" mpRegen="3" />
-			<attack physical="2789.79244295546" magical="635.022195830619" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+			<vitals hp="162522" hpRegen="8.5" mp="3231" mpRegen="3" />
+			<attack physical="51491" magical="6654" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
 				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
 			</attribute>
@@ -1562,16 +1455,12 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4114" level="1" /> <!-- Aden Flame -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1583,6 +1472,7 @@
 		</collision>
 	</npc>
 	<npc id="35237" level="93" type="L2Defender" name="Royal Wizard" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
@@ -1591,9 +1481,9 @@
 		<equipment rhand="92" /> <!-- rhand: Sprite's Staff -->
 		<acquire exp="864" sp="1" />
 		<stats>
-			<vitals hp="97513" hpRegen="8.5" mp="4923.0" mpRegen="3" />
-			<attack physical="2789.79244295546" magical="635.022195830619" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+			<vitals hp="162522" hpRegen="8.5" mp="3231" mpRegen="3" />
+			<attack physical="51491" magical="6654" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
 				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
 			</attribute>
@@ -1606,16 +1496,12 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4115" level="1" /> <!-- Aden Heal -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1627,14 +1513,15 @@
 		</collision>
 	</npc>
 	<npc id="35238" level="93" type="L2Defender" name="Royal Guard" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1376" /> <!-- rhand: Guard Spear -->
 		<acquire exp="864" sp="1" />
 		<stats>
-			<vitals hp="97513" hpRegen="8.5" mp="4923.0" mpRegen="3" />
-			<attack physical="2789.79244295546" magical="635.022195830619" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+			<vitals hp="162522" hpRegen="8.5" mp="3231" mpRegen="3" />
+			<attack physical="51491" magical="6654" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
 				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
 			</attribute>
@@ -1646,16 +1533,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1667,14 +1550,15 @@
 		</collision>
 	</npc>
 	<npc id="35239" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="300" /> <!-- rhand: Great Axe -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1686,16 +1570,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1707,14 +1587,15 @@
 		</collision>
 	</npc>
 	<npc id="35240" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1726,16 +1607,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1747,14 +1624,15 @@
 		</collision>
 	</npc>
 	<npc id="35241" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="88466" magical="6288" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1766,16 +1644,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1787,14 +1661,15 @@
 		</collision>
 	</npc>
 	<npc id="35242" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1806,16 +1681,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1827,14 +1698,15 @@
 		</collision>
 	</npc>
 	<npc id="35243" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1846,16 +1718,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1867,14 +1735,15 @@
 		</collision>
 	</npc>
 	<npc id="35244" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="88466" magical="6288" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1886,16 +1755,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1907,14 +1772,15 @@
 		</collision>
 	</npc>
 	<npc id="35245" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1926,16 +1792,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1947,14 +1809,15 @@
 		</collision>
 	</npc>
 	<npc id="35246" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -1966,16 +1829,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -1987,14 +1846,15 @@
 		</collision>
 	</npc>
 	<npc id="35247" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="88466" magical="6288" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2006,16 +1866,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2027,14 +1883,15 @@
 		</collision>
 	</npc>
 	<npc id="35248" level="95" type="L2Defender" name="Royal Knight" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="633" /> <!-- rhand: Keshanberk lhand: Zubei's Shield -->
 		<acquire exp="902" sp="1" />
 		<stats>
-			<vitals hp="299399" hpRegen="8.5" mp="15379.2" mpRegen="3" />
-			<attack physical="3036.96805390282" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" shield="148" shieldRate="20" />
+			<vitals hp="498994" hpRegen="8.5" mp="10026" mpRegen="3" />
+			<attack physical="83632" magical="7462" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="894" magical="770" shield="148" shieldRate="20" />
 			<attribute>
 				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
@@ -2046,17 +1903,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2068,6 +1921,7 @@
 		</collision>
 	</npc>
 	<npc id="35249" level="93" type="L2Defender" name="Royal Wizard" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
@@ -2076,9 +1930,9 @@
 		<equipment rhand="326" /> <!-- rhand: Heathen's Book -->
 		<acquire exp="864" sp="1" />
 		<stats>
-			<vitals hp="162521" hpRegen="8.5" mp="4923.0" mpRegen="3" />
-			<attack physical="2789.79244295546" magical="635.022195830619" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+			<vitals hp="162522" hpRegen="8.5" mp="3231" mpRegen="3" />
+			<attack physical="51491" magical="6654" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
 				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
 			</attribute>
@@ -2091,16 +1945,12 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4114" level="1" /> <!-- Aden Flame -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2112,6 +1962,7 @@
 		</collision>
 	</npc>
 	<npc id="35250" level="93" type="L2Defender" name="Royal Wizard" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
@@ -2120,9 +1971,9 @@
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
 		<acquire exp="864" sp="1" />
 		<stats>
-			<vitals hp="162521" hpRegen="8.5" mp="4923.0" mpRegen="3" />
-			<attack physical="2789.79244295546" magical="635.022195830619" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+			<vitals hp="162522" hpRegen="8.5" mp="3231" mpRegen="3" />
+			<attack physical="51491" magical="6654" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
 				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
 			</attribute>
@@ -2135,16 +1986,12 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4115" level="1" /> <!-- Aden Heal -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2156,14 +2003,15 @@
 		</collision>
 	</npc>
 	<npc id="35251" level="93" type="L2Defender" name="Royal Guard" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="300" /> <!-- rhand: Great Axe -->
 		<acquire exp="864" sp="1" />
 		<stats>
-			<vitals hp="97513" hpRegen="8.5" mp="4923.0" mpRegen="3" />
-			<attack physical="2789.79244295546" magical="635.022195830619" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+			<vitals hp="162522" hpRegen="8.5" mp="3231" mpRegen="3" />
+			<attack physical="51491" magical="6654" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
 				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
 			</attribute>
@@ -2175,16 +2023,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2196,14 +2040,15 @@
 		</collision>
 	</npc>
 	<npc id="35252" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2215,16 +2060,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2236,14 +2077,15 @@
 		</collision>
 	</npc>
 	<npc id="35253" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2255,16 +2097,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2276,14 +2114,15 @@
 		</collision>
 	</npc>
 	<npc id="35254" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="285" /> <!-- rhand: Noble Elven Bow -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="159665" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="88466" magical="6288" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2295,16 +2134,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2316,14 +2151,15 @@
 		</collision>
 	</npc>
 	<npc id="35255" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2335,16 +2171,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2356,14 +2188,15 @@
 		</collision>
 	</npc>
 	<npc id="35256" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2375,16 +2208,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2396,14 +2225,15 @@
 		</collision>
 	</npc>
 	<npc id="35257" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="88466" magical="6288" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2415,16 +2245,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2436,14 +2262,15 @@
 		</collision>
 	</npc>
 	<npc id="35258" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2455,16 +2282,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2476,14 +2299,15 @@
 		</collision>
 	</npc>
 	<npc id="35259" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="48833" magical="6288" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2495,16 +2319,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2516,14 +2336,15 @@
 		</collision>
 	</npc>
 	<npc id="35260" level="92" type="L2Defender" name="Escort" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="846" sp="1" />
 		<stats>
-			<vitals hp="95800" hpRegen="8.5" mp="4822.2" mpRegen="3" />
-			<attack physical="2671.50257996412" magical="608.096657928153" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="159666" hpRegen="8.5" mp="3176" mpRegen="3" />
+			<attack physical="88466" magical="6288" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="829" magical="704" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2535,16 +2356,12 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2556,6 +2373,7 @@
 		</collision>
 	</npc>
 	<npc id="35261" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2600,9 +2418,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2614,16 +2432,12 @@
 		<status attackable="false" undying="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2635,6 +2449,7 @@
 		</collision>
 	</npc>
 	<npc id="35262" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2679,9 +2494,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2693,16 +2508,12 @@
 		<status attackable="false" undying="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2714,6 +2525,7 @@
 		</collision>
 	</npc>
 	<npc id="35263" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2758,9 +2570,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2772,16 +2584,12 @@
 		<status attackable="false" undying="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2793,6 +2601,7 @@
 		</collision>
 	</npc>
 	<npc id="35264" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2837,9 +2646,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2851,16 +2660,12 @@
 		<status attackable="false" undying="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2872,6 +2677,7 @@
 		</collision>
 	</npc>
 	<npc id="35265" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2916,9 +2722,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2930,16 +2736,12 @@
 		<status attackable="false" undying="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="600" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="600" isAggressive="false">
 			<clanList>
 				<clan>ADEN_SIEGE</clan>
 				<clan>DOOR</clan>
@@ -2951,6 +2753,7 @@
 		</collision>
 	</npc>
 	<npc id="35266" level="75" type="L2Npc" name="Mass Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2962,9 +2765,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -2976,22 +2779,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" />
+		<ai aggroRange="1000" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35267" level="75" type="L2CastleDoormen" name="Outer Castle Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3009,9 +2809,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3023,22 +2823,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35268" level="75" type="L2CastleDoormen" name="Inner Castle Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3056,9 +2853,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3070,22 +2867,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35269" level="75" type="L2CastleDoormen" name="Hall Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3103,9 +2897,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3117,22 +2911,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35270" level="75" type="L2CastleDoormen" name="Inner Castle Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3150,9 +2941,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3164,22 +2955,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35271" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3195,9 +2983,9 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3209,22 +2997,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35272" level="75" type="L2Npc" name="Blacksmith" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -3233,9 +3018,9 @@
 		<sex>MALE</sex>
 		<equipment rhand="89" /> <!-- rhand: Big Hammer -->
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3247,22 +3032,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
 		<collision>
 			<radius normal="7" />
 			<height normal="16.5" />
 		</collision>
 	</npc>
 	<npc id="35273" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3270,9 +3052,9 @@
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3284,22 +3066,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="35274" level="75" type="L2Merchant" name="Chamberlain of Light">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -3332,9 +3111,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3346,22 +3125,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="35275" level="75" type="L2Npc" name="Kruger" title="Wyvern Manager">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3369,9 +3145,9 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3383,22 +3159,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" />
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="35276" level="75" type="L2Merchant" name="Eldon" title="Mercenary Manager">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3407,9 +3180,9 @@
 		<sex>MALE</sex>
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3421,22 +3194,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="35277" level="75" type="L2Merchant" name="Manor Manager" title="Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3445,9 +3215,9 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3459,22 +3229,19 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="35278" level="75" type="L2Npc" name="Ruford" title="Herald from Aden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3484,9 +3251,9 @@
 		<equipment rhand="135" /> <!-- rhand: Samurai Longsword -->
 		<acquire exp="562" sp="10" />
 		<stats>
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="4631" hpRegen="8.5" mp="2285" mpRegen="3" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3498,29 +3265,26 @@
 		<status attackable="false" canMove="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="35279" level="20" type="L2Artefact" name="Innadril Holy Artifact">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
 		<stats>
-			<vitals hp="342.5127" hpRegen="2.5" mp="192.0" mpRegen="1.2" />
-			<attack physical="44.32863" magical="30.2707" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="86.87049" magical="63.56806" />
+			<vitals hp="593" hpRegen="2.5" mp="291" mpRegen="1.2" />
+			<attack physical="90" magical="58" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="95" magical="105" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -3533,30 +3297,27 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="25" />
 			<height normal="98" />
 		</collision>
 	</npc>
 	<npc id="35280" level="97" type="L2Defender" name="Baron Lionel Hunter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- rhand: Sword of Damascus -->
 		<acquire exp="940" sp="1" />
 		<stats>
-			<vitals hp="845779" hpRegen="8.5" mp="15996.6" mpRegen="3" />
-			<attack physical="3298.27085008098" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+			<vitals hp="1409625" hpRegen="8.5" mp="10363" mpRegen="3" />
+			<attack physical="121701" magical="8365" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1138" magical="990" />
 			<attribute>
 				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
@@ -3568,17 +3329,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -3590,14 +3347,15 @@
 		</collision>
 	</npc>
 	<npc id="35281" level="95" type="L2Defender" name="Schaht" title="Royal Guard Captain">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
 		<acquire exp="902" sp="1" />
 		<stats>
-			<vitals hp="199599" hpRegen="8.5" mp="15379.2" mpRegen="3" />
-			<attack physical="3036.96805390282" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
+			<vitals hp="332663" hpRegen="8.5" mp="10026" mpRegen="3" />
+			<attack physical="69312" magical="7462" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="894" magical="770" />
 			<attribute>
 				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
 			</attribute>
@@ -3609,17 +3367,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -3631,14 +3385,15 @@
 		</collision>
 	</npc>
 	<npc id="35282" level="93" type="L2Defender" name="Royal Knight" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
 		<acquire exp="864" sp="1" />
 		<stats>
-			<vitals hp="120142" hpRegen="8.5" mp="4923" mpRegen="3" />
-			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
+			<vitals hp="200231" hpRegen="8.5" mp="9692" mpRegen="3" />
+			<attack physical="32783" magical="4791" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" shield="124" shieldRate="20" />
 			<attribute>
 				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
 			</attribute>
@@ -3650,17 +3405,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -3672,6 +3423,7 @@
 		</collision>
 	</npc>
 	<npc id="35283" level="91" type="L2Defender" name="Royal Wizard" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
@@ -3680,9 +3432,9 @@
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
 		<acquire exp="828" sp="1" />
 		<stats>
-			<vitals hp="117394" hpRegen="8.5" mp="4722" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="195647" hpRegen="8.5" mp="9362" mpRegen="3" />
+			<attack physical="29486" magical="4278" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="808" magical="683" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3695,17 +3447,13 @@
 		<skillList>
 			<skill id="4026" level="1" /> <!-- Gludio Flame -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -3717,6 +3465,7 @@
 		</collision>
 	</npc>
 	<npc id="35284" level="91" type="L2Defender" name="Royal Wizard" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
@@ -3725,9 +3474,9 @@
 		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
 		<acquire exp="828" sp="1" />
 		<stats>
-			<vitals hp="117394" hpRegen="8.5" mp="4722" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="195647" hpRegen="8.5" mp="9362" mpRegen="3" />
+			<attack physical="29486" magical="4278" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="808" magical="683" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3740,17 +3489,13 @@
 		<skillList>
 			<skill id="4027" level="1" /> <!-- Gludio Heal -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -3762,14 +3507,15 @@
 		</collision>
 	</npc>
 	<npc id="35285" level="91" type="L2Defender" name="Royal Guard" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
 		<acquire exp="828" sp="1" />
 		<stats>
-			<vitals hp="117394" hpRegen="8.5" mp="4722" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="195647" hpRegen="8.5" mp="9362" mpRegen="3" />
+			<attack physical="29486" magical="4278" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="808" magical="683" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3781,17 +3527,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -3803,14 +3545,15 @@
 		</collision>
 	</npc>
 	<npc id="35286" level="89" type="L2Defender" name="Escort" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3822,17 +3565,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -3844,14 +3583,15 @@
 		</collision>
 	</npc>
 	<npc id="35287" level="89" type="L2Defender" name="Escort" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3863,17 +3603,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -3885,14 +3621,15 @@
 		</collision>
 	</npc>
 	<npc id="35288" level="89" type="L2Defender" name="Escort" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="48001" magical="3813" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3904,17 +3641,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -3926,14 +3659,15 @@
 		</collision>
 	</npc>
 	<npc id="35289" level="89" type="L2Defender" name="Escort" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3945,17 +3679,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -3967,14 +3697,15 @@
 		</collision>
 	</npc>
 	<npc id="35290" level="89" type="L2Defender" name="Escort" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -3986,17 +3717,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -4008,14 +3735,15 @@
 		</collision>
 	</npc>
 	<npc id="35291" level="89" type="L2Defender" name="Escort" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="48001" magical="3813" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -4027,17 +3755,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -4049,14 +3773,15 @@
 		</collision>
 	</npc>
 	<npc id="35292" level="89" type="L2Defender" name="Escort" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -4068,17 +3793,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -4090,14 +3811,15 @@
 		</collision>
 	</npc>
 	<npc id="35293" level="89" type="L2Defender" name="Escort" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -4109,17 +3831,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -4131,14 +3849,15 @@
 		</collision>
 	</npc>
 	<npc id="35294" level="89" type="L2Defender" name="Escort" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="48001" magical="3813" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -4150,17 +3869,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -4172,14 +3887,15 @@
 		</collision>
 	</npc>
 	<npc id="35295" level="93" type="L2Defender" name="Royal Knight" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
 		<acquire exp="864" sp="1" />
 		<stats>
-			<vitals hp="120142" hpRegen="8.5" mp="4923" mpRegen="3" />
-			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" shield="124" shieldRate="20" />
+			<vitals hp="200231" hpRegen="8.5" mp="9692" mpRegen="3" />
+			<attack physical="32783" magical="4791" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" shield="124" shieldRate="20" />
 			<attribute>
 				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
 			</attribute>
@@ -4191,17 +3907,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -4213,6 +3925,7 @@
 		</collision>
 	</npc>
 	<npc id="35296" level="91" type="L2Defender" name="Royal Wizard" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
@@ -4221,9 +3934,9 @@
 		<equipment rhand="325" /> <!-- rhand: Horn of Glory -->
 		<acquire exp="828" sp="1" />
 		<stats>
-			<vitals hp="195646" hpRegen="8.5" mp="4722" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="195647" hpRegen="8.5" mp="9362" mpRegen="3" />
+			<attack physical="29486" magical="4278" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="808" magical="683" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -4236,17 +3949,13 @@
 		<skillList>
 			<skill id="4026" level="1" /> <!-- Gludio Flame -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -4258,6 +3967,7 @@
 		</collision>
 	</npc>
 	<npc id="35297" level="91" type="L2Defender" name="Royal Wizard" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
@@ -4266,9 +3976,9 @@
 		<equipment rhand="193" /> <!-- rhand: Stick of Faith -->
 		<acquire exp="828" sp="1" />
 		<stats>
-			<vitals hp="195646" hpRegen="8.5" mp="4722" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="195647" hpRegen="8.5" mp="9362" mpRegen="3" />
+			<attack physical="29486" magical="4278" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="808" magical="683" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -4281,17 +3991,13 @@
 		<skillList>
 			<skill id="4027" level="1" /> <!-- Gludio Heal -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai type="MAGE" aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -4303,14 +4009,15 @@
 		</collision>
 	</npc>
 	<npc id="35298" level="91" type="L2Defender" name="Royal Guard" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
 		<acquire exp="828" sp="1" />
 		<stats>
-			<vitals hp="117394" hpRegen="8.5" mp="4722" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="195647" hpRegen="8.5" mp="9362" mpRegen="3" />
+			<attack physical="29486" magical="4278" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="808" magical="683" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -4322,17 +4029,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
@@ -4344,14 +4047,15 @@
 		</collision>
 	</npc>
 	<npc id="35299" level="89" type="L2Defender" name="Escort" title="Innadril">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
 		<acquire exp="792" sp="1" />
 		<stats>
-			<vitals hp="114703" hpRegen="8.5" mp="4523.4" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="191171" hpRegen="8.5" mp="9036" mpRegen="3" />
+			<attack physical="26497" magical="3813" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="768" magical="643" />
 			<attribute>
 				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
 			</attribute>
@@ -4363,17 +4067,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="1200" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="1200" isAggressive="false">
 			<clanList>
 				<clan>DOOR</clan>
 				<clan>INNADRILE_SIEGE</clan>
