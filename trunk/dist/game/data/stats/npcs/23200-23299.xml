@@ -5,11 +5,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats>
-			<vitals hp="719353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2016" magical="1710" />
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="632" magical="458" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -21,6 +21,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -29,13 +31,13 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="9736" max="22727" chance="70" /> <!-- Adena -->
-				<item id="35296" min="1" max="1" chance="0.75" /> <!-- Specter Shaper Fragment-->
-				<item id="35420" min="1" max="1" chance="0.03" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="57" min="20173" max="46689" chance="70" />
+				<item id="35296" min="1" max="1" chance="0.4" />
+				<item id="35420" min="1" max="1" chance="0.03" />
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="32.83" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="2.999" /> <!-- Durable Braid -->
+				<item id="36533" min="1" max="1" chance="72.37" />
+				<item id="36534" min="1" max="1" chance="6.805" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -44,11 +46,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="12348772" sp="33498" />
 		<stats>
-			<vitals hp="650630" hpRegen="7.5" mp="22058" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1280" magical="1650" />
+			<vitals hp="1084382" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="214450" magical="96804" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="401" magical="432" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -61,6 +63,8 @@
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -68,14 +72,16 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="9219" max="21502" chance="70" /> <!-- Adena -->
-				<item id="35312" min="1" max="1" chance="0.75" /> <!-- Seraph Shield Ingredient -->
-				<item id="17401" min="1" max="1" chance="0.03" /> <!-- Seraph Shield -->
-				<item id="35436" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="57" min="18958" max="44286" chance="70" />
+				<item id="36558" min="1" max="1" chance="4.4" />
+				<item id="35312" min="1" max="1" chance="1.38" />
+				<item id="36559" min="1" max="1" chance="0.42017" />
+				<item id="17401" min="1" max="1" chance="0.04299" />
+				<item id="35436" min="1" max="1" chance="0.022" />
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="15" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="1.340" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36558" min="1" max="1" chance="32.74" />
+				<item id="36559" min="1" max="1" chance="3.032" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -84,11 +90,11 @@
 		<race>BEAST</race>
 		<acquire exp="12663060" sp="34626" />
 		<stats>
-			<vitals hp="651824" hpRegen="7.5" mp="22428" mpRegen="2.7" />
-			<attack physical="41000" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1968" magical="1680" />
+			<vitals hp="1086371" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="226107" magical="102434" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="616" magical="445" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -101,6 +107,8 @@
 			<skill id="5465" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="15093" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 			<skill id="15061" level="1" />
 		</skillList>
@@ -110,12 +118,12 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="9418" max="21995" chance="70" /> <!-- Adena -->
-				<item id="36558" min="1" max="1" chance="18.42" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="1.814" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="19442" max="45306" chance="70" />
+				<item id="35314" min="1" max="1" chance="0.75188" />
+				<item id="35438" min="1" max="1" chance="0.013" />
 			</death>
 			<corpse>
-				<item id="36559" min="1" max="1" chance="2.735" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36559" min="1" max="1" chance="6.027" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -205,11 +213,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats>
-			<vitals hp="719353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2016" magical="1710" />
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="632" magical="458" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="247" dark="444" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -221,6 +229,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -229,11 +239,12 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="9736" max="22727" chance="70" /> <!-- Adena -->
-				<item id="35444" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="57" min="20081" max="46671" chance="70" />
+				<item id="35320" min="1" max="1" chance="0.86207" />
+				<item id="35444" min="1" max="1" chance="0.03" />
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="29.56" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="68.56" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -242,11 +253,11 @@
 		<race>GIANT</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats>
-			<vitals hp="79353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1344" magical="1710" />
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="422" magical="458" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -259,6 +270,8 @@
 			<skill id="4416" level="11" />
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<collision>
 			<radius normal="46" />
@@ -266,13 +279,13 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="9736" max="22727" chance="70" /> <!-- Adena -->
-				<item id="35323" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil Ingredient -->
-				<item id="35447" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil -->
+				<item id="57" min="20071" max="46798" chance="70" />
+				<item id="35323" min="1" max="1" chance="1.6" />
+				<item id="35447" min="1" max="1" chance="0.09497" />
+				<item id="17412" min="1" max="1" chance="0.046" />
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="30.91" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="66.91" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -281,11 +294,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="12663060" sp="34626" />
 		<stats>
-			<vitals hp="651824" hpRegen="7.5" mp="22428" mpRegen="2.7" />
-			<attack physical="41000" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="400" distance="80" width="120" />
-			<defence physical="1968" magical="1680" />
+			<vitals hp="1086371" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="409615" magical="102434" random="30" critical="4" accuracy="4.75" attackSpeed="162" type="SWORD" range="400" distance="80" width="120" />
+			<defence physical="616" magical="445" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -296,7 +309,9 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="5464" level="1" />
+			<skill id="4415" level="9" />
 			<skill id="4416" level="1" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
@@ -306,12 +321,12 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="9418" max="21995" chance="70" /> <!-- Adena -->
-				<item id="36558" min="1" max="1" chance="15" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="1.340" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="19656" max="44639" chance="70" />
+				<item id="35302" min="1" max="1" chance="0.86207" />
+				<item id="35426" min="1" max="1" chance="0.03" />
 			</death>
 			<corpse>
-				<item id="36563" min="1" max="1" chance="7.200" /> <!-- Synthetic Cokes -->
+				<item id="36563" min="1" max="1" chance="16.69" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -320,11 +335,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="12663060" sp="34626" />
 		<stats>
-			<vitals hp="1086370" hpRegen="7.5" mp="1086370" mpRegen="2.7" />
-			<attack physical="41000" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1312" magical="1680" />
+			<vitals hp="1086371" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="226107" magical="102434" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="411" magical="445" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="227" dark="424" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -340,6 +355,8 @@
 			<skill id="4414" level="3" />
 			<skill id="4416" level="1" />
 			<skill id="15093" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -347,12 +364,12 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="9418" max="21995" chance="70" /> <!-- Adena -->
-				<item id="36558" min="1" max="1" chance="18" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="1.662" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="19440" max="45305" chance="70" />
+				<item id="35319" min="1" max="1" chance="0.70922" />
+				<item id="35443" min="1" max="1" chance="0.018" />
 			</death>
 			<corpse>
-				<item id="19440" min="1" max="1" chance="3.750" /> <!-- Gemstone (R-grade) -->
+				<item id="19440" min="1" max="1" chance="8.43799" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -361,11 +378,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats>
-			<vitals hp="719353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2016" magical="1710" />
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="632" magical="458" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="247" dark="444" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -377,6 +394,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -385,14 +404,16 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="9736" max="22727" chance="70" /> <!-- Adena -->
-				<item id="36558" min="1" max="1" chance="20.64" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="1.785" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="20097" max="46650" chance="70" />
+				<item id="36558" min="1" max="1" chance="4.7" />
+				<item id="35315" min="1" max="1" chance="1.18" />
+				<item id="36559" min="1" max="1" chance="0.3003" />
+				<item id="35439" min="1" max="1" chance="0.03" />
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="10.47" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
-				<item id="36893" min="1" max="1" chance="0.0055" /> <!-- Recipe: Durable Leather Braid - Downgrade -->
+				<item id="36558" min="1" max="1" chance="22.03" />
+				<item id="36559" min="1" max="1" chance="2.134" />
+				<item id="36893" min="1" max="1" chance="0.3003" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -401,11 +422,11 @@
 		<race>PLANT</race>
 		<acquire exp="5340345" sp="22864" />
 		<stats>
-			<vitals hp="334154" hpRegen="7.5" mp="22058" mpRegen="2.7" />
-			<attack physical="40000" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1280" magical="1650" />
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="133659" magical="80473" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="770" />
 			<attribute>
-				<defence fire="207" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -417,8 +438,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
 			<skill id="4416" level="5" />
-			<!-- <skill id="4411" level="15" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -426,13 +448,13 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="2305" max="5376" chance="70" /> <!-- Adena -->
-				<item id="36558" min="1" max="1" chance="4.712" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="4746" max="11062" chance="70" />
+				<item id="36558" min="1" max="1" chance="9.65" />
+				<item id="36559" min="1" max="1" chance="0.6993" />
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="3.670" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36558" min="1" max="1" chance="8.03399" />
+				<item id="36559" min="1" max="1" chance="0.75188" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -441,11 +463,11 @@
 		<race>PLANT</race>
 		<acquire exp="5340345" sp="22864" />
 		<stats>
-			<vitals hp="334154" hpRegen="7.5" mp="22058" mpRegen="2.7" />
-			<attack physical="40000" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1280" magical="1650" />
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="133659" magical="80473" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="770" />
 			<attribute>
-				<defence fire="207" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -457,8 +479,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
 			<skill id="4416" level="5" />
-			<!-- <skill id="4411" level="15" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -466,14 +489,14 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="2305" max="5376" chance="70" /> <!-- Adena) -->
-				<item id="36558" min="1" max="1" chance="5.100" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="4742" max="11070" chance="70" />
+				<item id="36558" min="1" max="1" chance="9.25" />
+				<item id="36559" min="1" max="1" chance="0.9009" />
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="2.265" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
-				<item id="36911" min="1" max="1" chance="0.003" /> <!-- Recipe: Orichalcum Wire - Combination -->
+				<item id="36558" min="1" max="1" chance="5.364" />
+				<item id="36559" min="1" max="1" chance="0.3003" />
+				<item id="36911" min="1" max="1" chance="0.3003" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -482,11 +505,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="131345081" sp="36204" />
 		<stats>
-			<vitals hp="4795677" hpRegen="7.5" mp="4795677" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2016" magical="1710" />
+			<vitals hp="4795678" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="632" magical="458" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -498,6 +521,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -628,9 +653,6 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -784,11 +806,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="6107876" sp="16954" />
 		<stats>
-			<vitals hp="767500" hpRegen="7.5" mp="767500" mpRegen="2.7" />
-			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2081" magical="1444" />
+			<vitals hp="1535001" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="304316" magical="167646" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1960" magical="979" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -800,11 +822,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
-			<!-- <skill id="4413" level="9" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -827,11 +847,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="27497785" sp="76814" />
 		<stats>
-			<vitals hp="1536018" hpRegen="7.5" mp="1536018" mpRegen="2.7" />
-			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2570" magical="2584" />
+			<vitals hp="1536019" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="387132" magical="259992" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2425" magical="1775" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -843,10 +863,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4413" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
-			<!-- <skill id="4412" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -966,11 +984,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="14612219" sp="202801" />
 		<stats>
-			<vitals hp="1535000" hpRegen="7.5" mp="1535000" mpRegen="2.7" />
-			<attack physical="62780" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2081" magical="2105" />
+			<vitals hp="1535001" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="367191" magical="167646" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1960" magical="1427" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -982,11 +1000,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1005,11 +1021,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="36600943" sp="161369" />
 		<stats>
-			<vitals hp="2465241" hpRegen="7.5" mp="2465241" mpRegen="2.7" />
-			<attack physical="77880" magical="48180" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2570" magical="2142" />
+			<vitals hp="2465242" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="585033" magical="137807" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1732" magical="1051" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1021,11 +1037,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
-			<!-- <skill id="4410" level="17" /> -->
-			<!-- <skill id="4412" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="22" />
@@ -1048,11 +1062,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="36600943" sp="161369" />
 		<stats>
-			<vitals hp="2465241" hpRegen="7.5" mp="2465241" mpRegen="2.7" />
-			<attack physical="77880" magical="48180" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2570" magical="2142" />
+			<vitals hp="2465242" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="585033" magical="137807" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1732" magical="1051" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1064,11 +1078,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
-			<!-- <skill id="4410" level="17" /> -->
-			<!-- <skill id="4412" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1091,11 +1103,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="36600943" sp="161369" />
 		<stats>
-			<vitals hp="2465241" hpRegen="7.5" mp="2465241" mpRegen="2.7" />
-			<attack physical="77880" magical="48180" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="2570" magical="2142" />
+			<vitals hp="2465242" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="491767" magical="137807" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1732" magical="1051" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1106,12 +1118,10 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" />
+			<skill id="4415" level="12" />
 			<skill id="5462" level="1" />
-			<!-- <skill id="4410" level="17" /> -->
-			<!-- <skill id="4412" level="15" /> -->
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1398,11 +1408,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="6107876" sp="16954" />
 		<stats>
-			<vitals hp="767500" hpRegen="7.5" mp="767500" mpRegen="2.7" />
-			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2081" magical="1444" />
+			<vitals hp="1535001" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="304316" magical="167646" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1960" magical="979" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1414,11 +1424,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
-			<!-- <skill id="4413" level="9" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1441,11 +1449,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="20292155" sp="56327" />
 		<stats>
-			<vitals hp="1535000" hpRegen="7.5" mp="1535000" mpRegen="2.7" />
-			<attack physical="62780" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2064" magical="2105" />
+			<vitals hp="1535001" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="367191" magical="167646" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1620" magical="1427" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1457,10 +1465,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1483,11 +1490,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="19798405" sp="55306" />
 		<stats>
-			<vitals hp="1536018" hpRegen="7.5" mp="1536018" mpRegen="2.7" />
-			<attack physical="53240" magical="48180" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2130" magical="1770" />
+			<vitals hp="1536019" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="320842" magical="177378" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2010" magical="1216" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1499,10 +1506,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1525,11 +1531,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="36384750" sp="101639" />
 		<stats>
-			<vitals hp="3072037" hpRegen="7.5" mp="3072037" mpRegen="2.7" />
-			<attack physical="64240" magical="48180" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2112" magical="2142" />
+			<vitals hp="3072038" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="387132" magical="177378" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1661" magical="1471" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1541,10 +1547,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="22" />
@@ -1567,11 +1572,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="20292155" sp="56327" />
 		<stats>
-			<vitals hp="1535000" hpRegen="7.5" mp="1535000" mpRegen="2.7" />
-			<attack physical="62780" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2064" magical="2105" />
+			<vitals hp="1535001" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="367191" magical="167646" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1620" magical="1427" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1583,10 +1588,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1608,11 +1612,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="1536018" hpRegen="7.5" mp="1536018" mpRegen="2.7" />
-			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1408" magical="1770" />
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="422" magical="458" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="247" dark="333" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1625,6 +1629,8 @@
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<collision>
 			<radius normal="25" />
@@ -1635,11 +1641,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="1536018" hpRegen="7.5" mp="1536018" mpRegen="2.7" />
-			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1408" magical="1770" />
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="422" magical="458" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="247" dark="333" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1652,6 +1658,8 @@
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<collision>
 			<radius normal="25" />
@@ -1663,11 +1671,11 @@
 		<race>PLANT</race>
 		<acquire exp="4844514" sp="20741" />
 		<stats>
-			<vitals hp="334154" hpRegen="7.5" mp="22058" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1280" magical="1650" />
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="133659" magical="37605" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="770" />
 			<attribute>
-				<defence fire="247" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1679,7 +1687,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
 			<skill id="4416" level="5" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -1687,14 +1697,14 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="2997" max="6989" chance="70" /> <!-- Adena -->
-				<item id="36558" min="1" max="1" chance="6" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="6162" max="14394" chance="70" />
+				<item id="36558" min="1" max="1" chance="11" />
+				<item id="36559" min="1" max="1" chance="1" />
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="3.116" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
-				<item id="19440" min="1" max="1" chance="0.3" /> <!-- Gemstone (R-grade) -->
+				<item id="36558" min="1" max="1" chance="6.885" />
+				<item id="19440" min="1" max="1" chance="0.75188" />
+				<item id="36559" min="1" max="1" chance="0.75188" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -1703,11 +1713,11 @@
 		<race>PLANT</race>
 		<acquire exp="4844514" sp="20741" />
 		<stats>
-			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1280" magical="1650" />
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="133659" magical="37605" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="770" />
 			<attribute>
-				<defence fire="207" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1719,7 +1729,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
 			<skill id="4416" level="5" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -1727,14 +1739,14 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="2997" max="6989" chance="70" /> <!-- Adena -->
-				<item id="36558" min="1" max="1" chance="6" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="6162" max="14394" chance="70" />
+				<item id="36558" min="1" max="1" chance="10.9" />
+				<item id="36559" min="1" max="1" chance="1.05" />
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="3.116" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
-				<item id="19440" min="1" max="1" chance="0.3" /> <!-- Gemstone (R-grade) -->
+				<item id="36558" min="1" max="1" chance="6.935" />
+				<item id="19440" min="1" max="1" chance="0.75188" />
+				<item id="36559" min="1" max="1" chance="0.75188" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -1743,11 +1755,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats>
-			<vitals hp="719353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1344" magical="1710" />
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="422" magical="458" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1760,6 +1772,8 @@
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<collision>
 			<radius normal="25" />
@@ -1767,14 +1781,14 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="12657" max="29546" chance="70" /> <!-- Adena -->
-				<item id="35318" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35442" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="17407" min="1" max="1" chance="0.03" /> <!-- Seraph Circlet -->
+				<item id="57" min="26094" max="60839" chance="70" />
+				<item id="35318" min="1" max="1" chance="0.82645" />
+				<item id="35442" min="1" max="1" chance="0.07502" />
+				<item id="17407" min="1" max="1" chance="0.03" />
 			</death>
 			<corpse>
-				<item id="36534" min="1" max="1" chance="4" /> <!-- Durable Braid -->
-				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
+				<item id="36534" min="1" max="1" chance="8.904" />
+				<item id="36886" min="1" max="1" chance="0.3003" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -1783,11 +1797,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="13288424" sp="36629" />
 		<stats>
-			<vitals hp="719353" hpRegen="7.5" mp="22800" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2016" magical="1710" />
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="632" magical="458" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1799,6 +1813,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -1807,13 +1823,13 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="12657" max="29546" chance="70" /> <!-- Adena -->
-				<item id="35307" min="1" max="1" chance="0.75" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35431" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="17396" min="1" max="1" chance="0.03" /> <!-- Seraph Helmet -->
+				<item id="57" min="26108" max="60828" chance="70" />
+				<item id="35307" min="1" max="1" chance="1.65" />
+				<item id="35431" min="1" max="1" chance="0.07502" />
+				<item id="17396" min="1" max="1" chance="0.03" />
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="5" chance="89.32" /> <!-- Synthetic Braid -->
+				<item id="36533" min="1" max="5" chance="65.32" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -1862,11 +1878,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="13015848" sp="36629" />
 		<stats>
-			<vitals hp="651824" hpRegen="7.5" mp="22428" mpRegen="2.7" />
-			<attack physical="41000" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="400" distance="80" width="120" />
-			<defence physical="1968" magical="1680" />
+			<vitals hp="1086371" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="409615" magical="102434" random="30" critical="4" accuracy="4.75" attackSpeed="162" type="SWORD" range="400" distance="80" width="120" />
+			<defence physical="616" magical="445" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="293" dark="207" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1877,7 +1893,9 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="5464" level="1" />
+			<skill id="4415" level="9" />
 			<skill id="4416" level="1" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
@@ -1887,13 +1905,14 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="12385" max="28925" chance="70" /> <!-- Adena -->
-				<item id="35319" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35443" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="57" min="25577" max="59523" chance="70" />
+				<item id="35304" min="1" max="1" chance="1.35" />
+				<item id="35428" min="1" max="1" chance="0.03" />
+				<item id="17390" min="1" max="1" chance="0.003" />
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="42.63" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="9.729" /> <!-- Durable Braid -->
+				<item id="36533" min="1" max="1" chance="93.63" />
+				<item id="36534" min="1" max="1" chance="8.729" />
 			</corpse>
 		</dropLists>
 	</npc>
@@ -2817,11 +2836,11 @@
 		<race>CONSTRUCT</race>
 		<acquire exp="1453348" sp="6160" />
 		<stats>
-			<vitals hp="75502" hpRegen="7.5" mp="75502" mpRegen="2.7" />
-			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1848" magical="1485" />
+			<vitals hp="125838" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="24070" magical="8974" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1151" magical="822" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2833,11 +2852,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3182,11 +3199,11 @@
 		<race>CONSTRUCT</race>
 		<acquire exp="1791830" sp="7529" />
 		<stats>
-			<vitals hp="125144" hpRegen="7.5" mp="125144" mpRegen="2.7" />
-			<attack physical="18786" magical="25444" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1320" magical="1155" />
+			<vitals hp="125145" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="22828" magical="8480" random="30" critical="4" accuracy="4.75" attackSpeed="308" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1122" magical="798" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="72" />
@@ -3198,11 +3215,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 		</skillList>
 		<collision>
 			<radius normal="23" />
@@ -3383,11 +3398,11 @@
 		<race>CONSTRUCT</race>
 		<acquire exp="3221283" sp="13535" />
 		<stats>
-			<vitals hp="200230" hpRegen="7.5" mp="200230" mpRegen="2.7" />
-			<attack physical="17623" magical="42038" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3175" magical="2646" />
+			<vitals hp="175202" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="22828" magical="8480" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1122" magical="798" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -3399,11 +3414,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -3444,10 +3457,6 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3472,11 +3481,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="4608118" sp="19362" />
 		<stats>
-			<vitals hp="250288" hpRegen="7.5" mp="250288" mpRegen="2.7" />
-			<attack physical="36575" magical="28738" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1815" magical="1458" />
+			<vitals hp="125145" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="18880" magical="5797" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="748" magical="798" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -3488,11 +3497,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3519,11 +3526,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="4714465" sp="19982" />
 		<stats>
-			<vitals hp="251674" hpRegen="7.5" mp="251674" mpRegen="2.7" />
-			<attack physical="37538" magical="29494" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="400" distance="80" width="120" />
-			<defence physical="1848" magical="1485" />
+			<vitals hp="125838" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="36063" magical="6135" random="30" critical="8" accuracy="4.75" attackSpeed="162" type="SWORD" range="400" distance="80" width="120" />
+			<defence physical="767" magical="822" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3535,11 +3542,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4414" level="3" />
+			<skill id="4415" level="9" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3563,11 +3568,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="3266048" sp="13983" />
 		<stats>
-			<vitals hp="204924" hpRegen="7.5" mp="204924" mpRegen="2.7" />
-			<attack physical="19360" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="553" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3168" magical="2530" />
+			<vitals hp="125838" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="19907" magical="6135" random="30" critical="4" accuracy="4.75" attackSpeed="393" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="767" magical="822" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -3579,11 +3584,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="8" />
@@ -3607,11 +3610,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="3460476" sp="14667" />
 		<stats>
-			<vitals hp="201339" hpRegen="7.5" mp="201339" mpRegen="2.7" />
-			<attack physical="36451" magical="35588" random="30" critical="8" accuracy="4.75" attackSpeed="453" type="SWORD" range="400" distance="80" width="120" />
-			<defence physical="3036" magical="2585" />
+			<vitals hp="125838" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="36063" magical="6135" random="30" critical="8" accuracy="4.75" attackSpeed="290" type="SWORD" range="400" distance="80" width="120" />
+			<defence physical="767" magical="822" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -3623,11 +3626,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4414" level="3" />
+			<skill id="4415" level="9" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -3653,11 +3654,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="7687705" sp="32914" />
 		<stats>
-			<vitals hp="179309" hpRegen="7.5" mp="179309" mpRegen="2.7" />
-			<attack physical="53200" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2112" magical="1815" />
+			<vitals hp="179310" hpRegen="7.5" mp="3342" mpRegen="2.7" />
+			<attack physical="25396" magical="9509" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1180" magical="847" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -3669,11 +3670,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3706,11 +3705,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="6338492" sp="27355" />
 		<stats>
-			<vitals hp="309118" hpRegen="7.5" mp="309118" mpRegen="2.7" />
-			<attack physical="21280" magical="54428" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3300" magical="2640" />
+			<vitals hp="180319" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="22146" magical="6879" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="807" magical="873" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -3722,11 +3721,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
-			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -4379,10 +4376,6 @@
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4413" level="4" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
 		</skillList>
 		<ai clanHelpRange="300">
 			<clanList>
@@ -4416,10 +4409,6 @@
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4413" level="4" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
 		</skillList>
 		<ai clanHelpRange="300">
 			<clanList>
@@ -4453,10 +4442,6 @@
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4413" level="4" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
 		</skillList>
 		<ai clanHelpRange="300">
 			<clanList>
@@ -4489,8 +4474,6 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai clanHelpRange="300">
@@ -4524,10 +4507,6 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="10" /> -->
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4410" level="10" /> -->
-			<!-- <skill id="4412" level="19" /> -->
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai clanHelpRange="300">
@@ -4545,9 +4524,9 @@
 		<race>HUMANOID</race>
 		<acquire exp="1566445" sp="6814" />
 		<stats>
-			<vitals hp="27135" hpRegen="7.5" mp="27135" mpRegen="2.7" />
-			<attack physical="89880" magical="144585" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5221" magical="1300" />
+			<vitals hp="27135" hpRegen="7.5" mp="2782" mpRegen="2.7" />
+			<attack physical="230553" magical="193496" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2922" magical="622" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -4561,10 +4540,6 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
-			<!-- <skill id="4413" level="8" /> -->
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -4593,9 +4568,9 @@
 		<race>HUMANOID</race>
 		<acquire exp="1176698" sp="5119" />
 		<stats>
-			<vitals hp="27135" hpRegen="7.5" mp="27135" mpRegen="2.7" />
-			<attack physical="89880" magical="144585" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4351" magical="975" />
+			<vitals hp="27135" hpRegen="7.5" mp="2782" mpRegen="2.7" />
+			<attack physical="230553" magical="193496" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2435" magical="466" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -4609,10 +4584,6 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4413" level="5" /> -->
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
 		</skillList>
 		<collision>
 			<radius normal="19" />
@@ -4636,9 +4607,9 @@
 		<race>DIVINE</race>
 		<acquire exp="1176698" sp="5119" />
 		<stats>
-			<vitals hp="27135" hpRegen="7.5" mp="27135" mpRegen="2.7" />
-			<attack physical="89880" magical="144585" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5221" magical="975" />
+			<vitals hp="27135" hpRegen="7.5" mp="2782" mpRegen="2.7" />
+			<attack physical="230553" magical="193496" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2922" magical="466" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -4652,10 +4623,6 @@
 		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4413" level="5" /> -->
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -4681,9 +4648,9 @@
 		<race>DIVINE</race>
 		<acquire exp="1226281" sp="5406" />
 		<stats>
-			<vitals hp="27406" hpRegen="7.5" mp="27406" mpRegen="2.7" />
-			<attack physical="94160" magical="151470" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5470" magical="1009" />
+			<vitals hp="27406" hpRegen="7.5" mp="2875" mpRegen="2.7" />
+			<attack physical="256279" magical="216621" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3072" magical="495" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -4697,10 +4664,6 @@
 		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4413" level="5" /> -->
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -4773,9 +4736,9 @@
 		<race>HUMANOID</race>
 		<acquire exp="1599543" sp="7007" />
 		<stats>
-			<vitals hp="27267" hpRegen="7.5" mp="27267" mpRegen="2.7" />
-			<attack physical="92020" magical="148028" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5346" magical="1322" />
+			<vitals hp="27267" hpRegen="7.5" mp="2828" mpRegen="2.7" />
+			<attack physical="243354" magical="204953" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2997" magical="641" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -4789,10 +4752,6 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
-			<!-- <skill id="4413" level="8" /> -->
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -4844,8 +4803,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="32.4" />
 		</collision>
 		<dropLists>
 			<death>
@@ -4870,9 +4829,9 @@
 		<race>DIVINE</race>
 		<acquire exp="1201561" sp="5263" />
 		<stats>
-			<vitals hp="27267" hpRegen="7.5" mp="27267" mpRegen="2.7" />
-			<attack physical="92020" magical="148028" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3564" magical="992" />
+			<vitals hp="27267" hpRegen="7.5" mp="2828" mpRegen="2.7" />
+			<attack physical="243354" magical="204953" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1998" magical="481" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -4887,10 +4846,6 @@
 			<skill id="4416" level="8" />
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
-			<!-- <skill id="4413" level="5" /> -->
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
 		</skillList>
 		<collision>
 			<radius normal="9" />
@@ -4916,9 +4871,9 @@
 		<race>UNDEAD</race>
 		<acquire exp="1201561" sp="5263" />
 		<stats>
-			<vitals hp="27267" hpRegen="7.5" mp="27267" mpRegen="2.7" />
-			<attack physical="92020" magical="148028" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5346" magical="992" />
+			<vitals hp="27267" hpRegen="7.5" mp="2828" mpRegen="2.7" />
+			<attack physical="243354" magical="204953" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2997" magical="481" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -4932,10 +4887,6 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4413" level="5" /> -->
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -4962,9 +4913,9 @@
 		<race>DIVINE</race>
 		<acquire exp="2856790" sp="12595" />
 		<stats>
-			<vitals hp="54812" hpRegen="7.5" mp="54812" mpRegen="2.7" />
-			<attack physical="94160" magical="151470" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5470" magical="1345" />
+			<vitals hp="54812" hpRegen="7.5" mp="2875" mpRegen="2.7" />
+			<attack physical="256279" magical="216621" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3072" magical="660" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -4978,10 +4929,6 @@
 		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
-			<!-- <skill id="4413" level="8" /> -->
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>

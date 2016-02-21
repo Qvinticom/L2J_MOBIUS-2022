@@ -2482,11 +2482,11 @@
 		<race>FAIRY</race>
 		<acquire exp="569701" sp="2264" />
 		<stats>
-			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
-			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="792" magical="960" />
+			<vitals hp="41547" hpRegen="7.5" mp="2958" mpRegen="2.7" />
+			<attack physical="13156" magical="3602" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="599" magical="623" />
 			<attribute>
-				<defence fire="175" water="200" wind="223" earth="200" holy="200" dark="200" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2499,6 +2499,8 @@
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2527,11 +2529,11 @@
 		<race>FAIRY</race>
 		<acquire exp="1211505" sp="4933" />
 		<stats>
-			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
-			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1040" magical="1250" />
+			<vitals hp="96097" hpRegen="7.5" mp="3067" mpRegen="2.7" />
+			<attack physical="16105" magical="4891" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="630" magical="662" />
 			<attribute>
-				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2544,8 +2546,8 @@
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="3" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2574,11 +2576,11 @@
 		<race>FAIRY</race>
 		<acquire exp="892271" sp="3593" />
 		<stats>
-			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="816" magical="980" />
+			<vitals hp="71689" hpRegen="7.5" mp="3012" mpRegen="2.7" />
+			<attack physical="13873" magical="3813" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="615" magical="643" />
 			<attribute>
-				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2591,6 +2593,8 @@
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2618,11 +2622,11 @@
 		<race>FAIRY</race>
 		<acquire exp="643256" sp="2590" />
 		<stats>
-			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="816" magical="980" />
+			<vitals hp="47793" hpRegen="7.5" mp="3012" mpRegen="2.7" />
+			<attack physical="13873" magical="3813" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="615" magical="643" />
 			<attribute>
-				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2635,6 +2639,8 @@
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2662,11 +2668,11 @@
 		<race>FAIRY</race>
 		<acquire exp="998082" sp="4105" />
 		<stats>
-			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
-			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1458" magical="1275" />
+			<vitals hp="73368" hpRegen="7.5" mp="3121" mpRegen="2.7" />
+			<attack physical="16982" magical="5176" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="711" magical="683" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2679,9 +2685,8 @@
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="4" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2709,11 +2714,11 @@
 		<race>FAIRY</race>
 		<acquire exp="2045722" sp="8596" />
 		<stats>
-			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
-			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1513" magical="1458" />
+			<vitals hp="150173" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="20768" magical="6995" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="748" magical="798" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2726,10 +2731,8 @@
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="4" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2759,11 +2762,11 @@
 		<race>FAIRY</race>
 		<acquire exp="1741611" sp="7250" />
 		<stats>
-			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1485" magical="1430" />
+			<vitals hp="122946" hpRegen="7.5" mp="3176" mpRegen="2.7" />
+			<attack physical="17906" magical="5478" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="729" magical="774" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2776,10 +2779,8 @@
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="4" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2807,11 +2808,11 @@
 		<race>FAIRY</race>
 		<acquire exp="1287461" sp="5360" />
 		<stats>
-			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1485" magical="1300" />
+			<vitals hp="98357" hpRegen="7.5" mp="3176" mpRegen="2.7" />
+			<attack physical="17906" magical="5478" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="729" magical="704" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2824,9 +2825,8 @@
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="4" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2855,11 +2855,11 @@
 		<race>FAIRY</race>
 		<acquire exp="569701" sp="2264" />
 		<stats>
-			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
-			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="792" magical="960" />
+			<vitals hp="41547" hpRegen="7.5" mp="2958" mpRegen="2.7" />
+			<attack physical="13156" magical="3602" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="599" magical="623" />
 			<attribute>
-				<defence fire="175" water="200" wind="223" earth="200" holy="200" dark="200" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2872,6 +2872,8 @@
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2897,11 +2899,11 @@
 		<race>FAIRY</race>
 		<acquire exp="1211505" sp="4933" />
 		<stats>
-			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
-			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1040" magical="1250" />
+			<vitals hp="96097" hpRegen="7.5" mp="3067" mpRegen="2.7" />
+			<attack physical="16105" magical="4891" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="630" magical="662" />
 			<attribute>
-				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2914,8 +2916,8 @@
 			<skill id="14043" level="1" />
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2941,11 +2943,11 @@
 		<race>FAIRY</race>
 		<acquire exp="892271" sp="3593" />
 		<stats>
-			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="816" magical="980" />
+			<vitals hp="71689" hpRegen="7.5" mp="3012" mpRegen="2.7" />
+			<attack physical="13873" magical="3813" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="615" magical="643" />
 			<attribute>
-				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2958,6 +2960,8 @@
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2982,11 +2986,11 @@
 		<race>FAIRY</race>
 		<acquire exp="643256" sp="2590" />
 		<stats>
-			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="816" magical="980" />
+			<vitals hp="47793" hpRegen="7.5" mp="3012" mpRegen="2.7" />
+			<attack physical="13873" magical="3813" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="615" magical="643" />
 			<attribute>
-				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2999,6 +3003,8 @@
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -3023,11 +3029,11 @@
 		<race>FAIRY</race>
 		<acquire exp="998082" sp="4105" />
 		<stats>
-			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
-			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1060" magical="1275" />
+			<vitals hp="73368" hpRegen="7.5" mp="3121" mpRegen="2.7" />
+			<attack physical="16982" magical="5176" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="647" magical="683" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3040,8 +3046,8 @@
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -3066,11 +3072,11 @@
 		<race>FAIRY</race>
 		<acquire exp="2045722" sp="8596" />
 		<stats>
-			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
-			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1513" magical="1458" />
+			<vitals hp="150173" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="20768" magical="6995" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="748" magical="798" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3083,10 +3089,8 @@
 			<skill id="14043" level="1" />
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -3113,11 +3117,11 @@
 		<race>FAIRY</race>
 		<acquire exp="1741611" sp="7250" />
 		<stats>
-			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1485" magical="1430" />
+			<vitals hp="122946" hpRegen="7.5" mp="3176" mpRegen="2.7" />
+			<attack physical="17906" magical="5478" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="729" magical="774" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3130,10 +3134,8 @@
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -3158,11 +3160,11 @@
 		<race>FAIRY</race>
 		<acquire exp="1287461" sp="5360" />
 		<stats>
-			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1080" magical="1300" />
+			<vitals hp="98357" hpRegen="7.5" mp="3176" mpRegen="2.7" />
+			<attack physical="17906" magical="5478" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="663" magical="704" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3175,8 +3177,8 @@
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -3201,11 +3203,11 @@
 		<race>FAIRY</race>
 		<acquire exp="569701" sp="2264" />
 		<stats>
-			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
-			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1188" magical="960" />
+			<vitals hp="41547" hpRegen="7.5" mp="2958" mpRegen="2.7" />
+			<attack physical="13156" magical="3602" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="899" magical="623" />
 			<attribute>
-				<defence fire="175" water="200" wind="223" earth="200" holy="200" dark="200" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3217,6 +3219,8 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="4414" level="1" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -3245,11 +3249,11 @@
 		<race>FAIRY</race>
 		<acquire exp="1211505" sp="4933" />
 		<stats>
-			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
-			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1560" magical="1250" />
+			<vitals hp="96097" hpRegen="7.5" mp="3067" mpRegen="2.7" />
+			<attack physical="16105" magical="4891" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="945" magical="662" />
 			<attribute>
-				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3261,9 +3265,9 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="14040" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
 			<skill id="4416" level="13" />
 		</skillList>
 		<collision>
@@ -3292,11 +3296,11 @@
 		<race>FAIRY</race>
 		<acquire exp="892271" sp="3593" />
 		<stats>
-			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1224" magical="980" />
+			<vitals hp="71689" hpRegen="7.5" mp="3012" mpRegen="2.7" />
+			<attack physical="13873" magical="3813" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="922" magical="643" />
 			<attribute>
-				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3308,6 +3312,8 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="4414" level="1" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -3336,11 +3342,11 @@
 		<race>FAIRY</race>
 		<acquire exp="643256" sp="2590" />
 		<stats>
-			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1224" magical="980" />
+			<vitals hp="47793" hpRegen="7.5" mp="3012" mpRegen="2.7" />
+			<attack physical="13873" magical="3813" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="922" magical="643" />
 			<attribute>
-				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3352,6 +3358,8 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="4414" level="1" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -3380,11 +3388,11 @@
 		<race>FAIRY</race>
 		<acquire exp="998082" sp="4105" />
 		<stats>
-			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
-			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="689" magical="1275" />
+			<vitals hp="73368" hpRegen="7.5" mp="3121" mpRegen="2.7" />
+			<attack physical="16982" magical="5176" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="504" magical="683" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3396,10 +3404,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="5" />
-			<!-- <skill id="4412" level="4" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
 			<skill id="4416" level="13" />
 		</skillList>
 		<collision>
@@ -3425,11 +3432,11 @@
 		<race>FAIRY</race>
 		<acquire exp="2045722" sp="8596" />
 		<stats>
-			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
-			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1513" magical="1458" />
+			<vitals hp="150173" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="20768" magical="6995" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1122" magical="798" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3441,11 +3448,9 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="14040" level="5" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 			<skill id="4416" level="13" />
 		</skillList>
 		<collision>
@@ -3474,11 +3479,11 @@
 		<race>FAIRY</race>
 		<acquire exp="1741611" sp="7250" />
 		<stats>
-			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1485" magical="1430" />
+			<vitals hp="122946" hpRegen="7.5" mp="3176" mpRegen="2.7" />
+			<attack physical="17906" magical="5478" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1094" magical="774" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3490,11 +3495,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="5" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 			<skill id="4416" level="13" />
 		</skillList>
 		<collision>
@@ -3523,11 +3526,11 @@
 		<race>FAIRY</race>
 		<acquire exp="1287461" sp="5360" />
 		<stats>
-			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="702" magical="1300" />
+			<vitals hp="98357" hpRegen="7.5" mp="3176" mpRegen="2.7" />
+			<attack physical="17906" magical="5478" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="517" magical="704" />
 			<attribute>
-				<defence fire="215" water="240" wind="263" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -3539,10 +3542,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="5" />
-			<!-- <skill id="4412" level="4" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
 			<skill id="4416" level="13" />
 		</skillList>
 		<collision>
@@ -3570,11 +3572,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="569701" sp="2264" />
 		<stats>
-			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
-			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="990" magical="960" />
+			<vitals hp="41547" hpRegen="7.5" mp="4437" mpRegen="2.7" />
+			<attack physical="13156" magical="1084" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="748" />
 			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3587,8 +3589,10 @@
 			<skill id="14045" level="2" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="2" />
 			<skill id="14048" level="1" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -3613,11 +3617,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1211505" sp="4933" />
 		<stats>
-			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
-			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1300" magical="1250" />
+			<vitals hp="96097" hpRegen="7.5" mp="4600" mpRegen="2.7" />
+			<attack physical="16105" magical="1571" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="552" magical="795" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3630,10 +3634,10 @@
 			<skill id="14045" level="2" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="2" />
 			<skill id="14048" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="14765" level="2" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -3659,11 +3663,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="892271" sp="3593" />
 		<stats>
-			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1020" magical="980" />
+			<vitals hp="71689" hpRegen="7.5" mp="4518" mpRegen="2.7" />
+			<attack physical="13873" magical="1126" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="538" magical="771" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3676,8 +3680,10 @@
 			<skill id="14045" level="2" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="2" />
 			<skill id="14048" level="1" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -3702,11 +3708,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="643256" sp="2590" />
 		<stats>
-			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1020" magical="980" />
+			<vitals hp="47793" hpRegen="7.5" mp="4518" mpRegen="2.7" />
+			<attack physical="13873" magical="1126" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="538" magical="771" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3719,8 +3725,10 @@
 			<skill id="14045" level="2" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="2" />
 			<skill id="14048" level="1" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -3746,11 +3754,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="998082" sp="4105" />
 		<stats>
-			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
-			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1325" magical="1403" />
+			<vitals hp="73368" hpRegen="7.5" mp="4681" mpRegen="2.7" />
+			<attack physical="16982" magical="1619" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="566" magical="901" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3763,11 +3771,10 @@
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="3" />
 			<skill id="14048" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -3792,11 +3799,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="2045722" sp="8596" />
 		<stats>
-			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
-			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1513" magical="1458" />
+			<vitals hp="150173" hpRegen="7.5" mp="4846" mpRegen="2.7" />
+			<attack physical="20768" magical="2076" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="655" magical="957" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3809,12 +3816,10 @@
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="3" />
 			<skill id="14048" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -3841,11 +3846,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1741611" sp="7250" />
 		<stats>
-			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1485" magical="1430" />
+			<vitals hp="122946" hpRegen="7.5" mp="4764" mpRegen="2.7" />
+			<attack physical="17906" magical="1669" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="638" magical="929" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3858,12 +3863,10 @@
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="3" />
 			<skill id="14048" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -3889,11 +3892,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1287461" sp="5360" />
 		<stats>
-			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1430" />
+			<vitals hp="98357" hpRegen="7.5" mp="4764" mpRegen="2.7" />
+			<attack physical="17906" magical="1669" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="580" magical="929" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3906,11 +3909,10 @@
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="3" />
 			<skill id="14048" level="1" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -3936,11 +3938,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="569701" sp="2264" />
 		<stats>
-			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
-			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="990" magical="960" />
+			<vitals hp="41547" hpRegen="7.5" mp="4437" mpRegen="2.7" />
+			<attack physical="13156" magical="1084" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="748" />
 			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3953,7 +3955,9 @@
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14047" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -3977,11 +3981,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1211505" sp="4933" />
 		<stats>
-			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
-			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1300" magical="1250" />
+			<vitals hp="96097" hpRegen="7.5" mp="4600" mpRegen="2.7" />
+			<attack physical="16105" magical="1571" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="552" magical="795" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -3994,9 +3998,9 @@
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14047" level="3" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="14765" level="2" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -4021,11 +4025,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="892271" sp="3593" />
 		<stats>
-			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1020" magical="980" />
+			<vitals hp="71689" hpRegen="7.5" mp="4518" mpRegen="2.7" />
+			<attack physical="13873" magical="1126" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="538" magical="771" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -4038,7 +4042,9 @@
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14047" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -4062,11 +4068,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="643256" sp="2590" />
 		<stats>
-			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1020" magical="980" />
+			<vitals hp="47793" hpRegen="7.5" mp="4518" mpRegen="2.7" />
+			<attack physical="13873" magical="1126" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="538" magical="771" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -4079,7 +4085,9 @@
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14047" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -4104,11 +4112,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="998082" sp="4105" />
 		<stats>
-			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
-			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1325" magical="1275" />
+			<vitals hp="73368" hpRegen="7.5" mp="4681" mpRegen="2.7" />
+			<attack physical="16982" magical="1619" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="566" magical="819" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -4121,9 +4129,9 @@
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14047" level="4" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="15" />

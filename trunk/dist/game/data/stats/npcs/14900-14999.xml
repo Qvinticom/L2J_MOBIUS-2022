@@ -789,13 +789,13 @@
 	</npc>
 	<npc id="14919" level="85" type="L2Servitor" name="Meow Unit">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="8650" hpRegen="7.5" mp="7575" mpRegen="2.7" />
+			<attack physical="4" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="3" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -805,6 +805,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -814,13 +817,13 @@
 	</npc>
 	<npc id="14920" level="85" type="L2Servitor" name="Cydiareal Archer">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>FAIRY</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="8650" hpRegen="7.5" mp="7575" mpRegen="2.7" />
+			<attack physical="4" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="3" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -830,7 +833,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="4416" level="13" />
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -839,13 +845,13 @@
 	</npc>
 	<npc id="14921" level="85" type="L2Servitor" name="Abyssal Tormentor">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="8650" hpRegen="7.5" mp="7575" mpRegen="2.7" />
+			<attack physical="4" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="3" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -855,6 +861,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="14136" level="1" />
 			<skill id="5038" level="15" />
 		</skillList>
@@ -865,13 +874,13 @@
 	</npc>
 	<npc id="14922" level="85" type="L2Servitor" name="Meow Unit">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="8650" hpRegen="7.5" mp="7575" mpRegen="2.7" />
+			<attack physical="4" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="3" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -881,6 +890,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -890,13 +902,13 @@
 	</npc>
 	<npc id="14923" level="85" type="L2Servitor" name="Cydiareal Archer">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>FAIRY</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="8650" hpRegen="7.5" mp="7575" mpRegen="2.7" />
+			<attack physical="4" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="3" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -906,7 +918,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="4416" level="13" />
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -915,13 +930,13 @@
 	</npc>
 	<npc id="14924" level="85" type="L2Servitor" name="Abyssal Tormentor">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="8650" hpRegen="7.5" mp="7575" mpRegen="2.7" />
+			<attack physical="4" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="3" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -931,6 +946,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -940,13 +958,13 @@
 	</npc>
 	<npc id="14925" level="85" type="L2Servitor" name="Unison of Lights">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="14011" hpRegen="7.5" mp="14011" mpRegen="2.7" />
-			<attack physical="6263" magical="3329" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="1268" magical="1231" />
+			<vitals hp="14012" hpRegen="7.5" mp="1399" mpRegen="2.7" />
+			<attack physical="7056" magical="3332" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="1269" magical="1233" />
 			<attribute>
-				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="75" />
@@ -956,6 +974,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4415" level="9" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="16" />
 		</skillList>
 		<collision>
@@ -965,13 +986,13 @@
 	</npc>
 	<npc id="14926" level="91" type="L2Servitor" name="Naviarope">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="15298" hpRegen="7.5" mp="15298" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="12" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="70886" hpRegen="7.5" mp="9362" mpRegen="2.7" />
+			<attack physical="15453" magical="6089" random="30" critical="12" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3714" magical="2865" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -981,6 +1002,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -990,13 +1014,13 @@
 	</npc>
 	<npc id="14927" level="99" type="L2Servitor" name="Death Gate">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>MERCENARY</race>
 		<stats>
-			<vitals hp="49955" hpRegen="7.5" mp="49955" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="12" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="49956" hpRegen="7.5" mp="10704" mpRegen="2.7" />
+			<attack physical="31696" magical="13483" random="30" critical="12" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2715" magical="2430" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="80" />
@@ -1006,7 +1030,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4121" level="9" />
+			<skill id="4416" level="23" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="14765" level="5" />
 		</skillList>
 		<collision>
 			<radius normal="57" />
@@ -1015,13 +1043,13 @@
 	</npc>
 	<npc id="14928" level="85" type="L2Servitor" name="Hodling">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="8650" hpRegen="7.5" mp="7575" mpRegen="2.7" />
+			<attack physical="4" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="3" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -1031,6 +1059,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -1040,13 +1071,13 @@
 	</npc>
 	<npc id="14929" level="85" type="L2Servitor" name="Cute Bear">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="18214" hpRegen="7.5" mp="18214" mpRegen="2.7" />
-			<attack physical="1877" magical="1737" random="30" critical="4" accuracy="4.75" attackSpeed="447" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2284" magical="4298" />
+			<vitals hp="18216" hpRegen="7.5" mp="1399" mpRegen="2.7" />
+			<attack physical="2592" magical="1743" random="30" critical="4" accuracy="4.75" attackSpeed="318" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2287" magical="2866" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1056,7 +1087,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="1" />
 		</skillList>
 		<collision>
@@ -1066,13 +1101,13 @@
 	</npc>
 	<npc id="14930" level="85" type="L2Servitor" name="Saber Tooth Cougar">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="12142" hpRegen="7.5" mp="12142" mpRegen="2.7" />
-			<attack physical="2213" magical="1367" random="30" critical="12" accuracy="4.75" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1522" magical="4432" />
+			<vitals hp="12143" hpRegen="7.5" mp="1399" mpRegen="2.7" />
+			<attack physical="3055" magical="1368" random="30" critical="12" accuracy="4.75" attackSpeed="349" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1525" magical="2958" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1082,7 +1117,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="1" />
 		</skillList>
 		<collision>
@@ -1092,13 +1131,13 @@
 	</npc>
 	<npc id="14931" level="85" type="L2Servitor" name="Grim Reaper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>HUMANOID</race>
+		<race>HUMAN</race>
 		<stats>
-			<vitals hp="12142" hpRegen="7.5" mp="12142" mpRegen="2.7" />
-			<attack physical="2449" magical="5354" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="1522" magical="1908" />
+			<vitals hp="12143" hpRegen="7.5" mp="2099" mpRegen="2.7" />
+			<attack physical="2764" magical="5355" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="1525" magical="1912" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1108,7 +1147,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" />
+			<skill id="4415" level="9" />
+			<skill id="4416" level="14" />
+			<skill id="4121" level="9" />
 			<skill id="10795" level="1" />
 			<skill id="10794" level="1" />
 			<skill id="5038" level="15" />
@@ -1121,13 +1162,13 @@
 	</npc>
 	<npc id="14932" level="85" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="7189" hpRegen="7.5" mp="7189" mpRegen="2.7" />
-			<attack physical="1387" magical="608" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1268" magical="1231" />
+			<vitals hp="7190" hpRegen="7.5" mp="1399" mpRegen="2.7" />
+			<attack physical="1915" magical="609" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1269" magical="1233" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1137,6 +1178,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="10795" level="1" />
 			<skill id="10794" level="1" />
 			<skill id="5038" level="15" />
@@ -1150,13 +1194,13 @@
 	</npc>
 	<npc id="14933" level="85" type="L2Servitor" name="Tree of Life">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>PLANT</race>
 		<stats>
-			<vitals hp="3460" hpRegen="7.5" mp="3460" mpRegen="2.7" />
-			<attack physical="2" magical="4" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1673" magical="1497" />
+			<vitals hp="3460" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1674" magical="1498" />
 			<attribute>
-				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="95" />
@@ -1166,7 +1210,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="4416" level="5" />
 		</skillList>
 		<collision>
 			<radius normal="51" />
@@ -1175,13 +1222,13 @@
 	</npc>
 	<npc id="14934" level="85" type="L2Servitor" name="Knock-down Cat">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="7189" hpRegen="7.5" mp="7189" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="2" hpRegen="7.5" mp="2" mpRegen="2.7" />
+			<attack physical="4" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="3" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -1191,6 +1238,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -1200,13 +1250,13 @@
 	</npc>
 	<npc id="14935" level="85" type="L2Servitor" name="Jumping Cat">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="7189" hpRegen="7.5" mp="7189" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="2" hpRegen="7.5" mp="2" mpRegen="2.7" />
+			<attack physical="4" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="3" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -1216,6 +1266,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -1225,13 +1278,13 @@
 	</npc>
 	<npc id="14936" level="85" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="7189" hpRegen="7.5" mp="7189" mpRegen="2.7" />
-			<attack physical="843" magical="124" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="728" magical="466" />
+			<vitals hp="7190" hpRegen="7.5" mp="1399" mpRegen="2.7" />
+			<attack physical="2736" magical="609" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1269" magical="1233" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1242,9 +1295,12 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="10053" level="1" />
+			<skill id="4416" level="4" />
 			<skill id="10052" level="1" />
 			<skill id="10054" level="1" />
 			<skill id="10051" level="1" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -1254,13 +1310,13 @@
 	</npc>
 	<npc id="14937" level="86" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="11987" hpRegen="7.5" mp="11987" mpRegen="2.7" />
-			<attack physical="868" magical="128" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="744" magical="478" />
+			<vitals hp="7292" hpRegen="7.5" mp="1425" mpRegen="2.7" />
+			<attack physical="2834" magical="636" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1302" magical="1271" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1271,9 +1327,12 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="10053" level="2" />
+			<skill id="4416" level="4" />
 			<skill id="10052" level="2" />
 			<skill id="10054" level="2" />
 			<skill id="10051" level="2" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -1283,11 +1342,11 @@
 	</npc>
 	<npc id="14938" level="89" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="10571" hpRegen="7.5" mp="10571" mpRegen="2.7" />
-			<attack physical="949" magical="140" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="789" magical="514" />
+			<vitals hp="7606" hpRegen="7.5" mp="1506" mpRegen="2.7" />
+			<attack physical="3150" magical="719" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1407" magical="1392" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
@@ -1300,9 +1359,12 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="10053" level="3" />
+			<skill id="4416" level="4" />
 			<skill id="10052" level="3" />
 			<skill id="10054" level="3" />
 			<skill id="10051" level="3" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -1312,13 +1374,13 @@
 	</npc>
 	<npc id="14939" level="92" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="14536" hpRegen="7.5" mp="14536" mpRegen="2.7" />
-			<attack physical="1037" magical="153" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="837" magical="554" />
+			<vitals hp="7931" hpRegen="7.5" mp="1588" mpRegen="2.7" />
+			<attack physical="3500" magical="812" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1517" magical="1524" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1329,9 +1391,12 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="10053" level="4" />
+			<skill id="4416" level="4" />
 			<skill id="10052" level="4" />
 			<skill id="10054" level="4" />
 			<skill id="10051" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -1341,13 +1406,13 @@
 	</npc>
 	<npc id="14940" level="87" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="7394" hpRegen="7.5" mp="7394" mpRegen="2.7" />
-			<attack physical="1488" magical="662" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1335" magical="1309" />
+			<vitals hp="7395" hpRegen="7.5" mp="1452" mpRegen="2.7" />
+			<attack physical="2055" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1336" magical="1310" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1357,6 +1422,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="10794" level="2" />
 			<skill id="5038" level="15" />
 			<skill id="10797" level="2" />
@@ -1369,11 +1437,11 @@
 	</npc>
 	<npc id="14941" level="89" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="7605" hpRegen="7.5" mp="7605" mpRegen="2.7" />
-			<attack physical="1589" magical="716" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1402" magical="1387" />
+			<vitals hp="7606" hpRegen="7.5" mp="1506" mpRegen="2.7" />
+			<attack physical="2205" magical="719" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1407" magical="1392" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
@@ -1385,6 +1453,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="10794" level="3" />
 			<skill id="5038" level="15" />
 			<skill id="10797" level="3" />
@@ -1397,13 +1468,13 @@
 	</npc>
 	<npc id="14942" level="91" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="7805" hpRegen="7.5" mp="7805" mpRegen="2.7" />
-			<attack physical="1690" magical="770" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1469" magical="1465" />
+			<vitals hp="7806" hpRegen="7.5" mp="1559" mpRegen="2.7" />
+			<attack physical="2366" magical="777" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1478" magical="1479" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1413,6 +1484,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="10794" level="4" />
 			<skill id="5038" level="15" />
 			<skill id="10797" level="4" />
@@ -1425,13 +1499,13 @@
 	</npc>
 	<npc id="14943" level="90" type="L2Servitor" name="Tree of Life">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>PLANT</race>
 		<stats>
-			<vitals hp="3460" hpRegen="7.5" mp="3460" mpRegen="2.7" />
-			<attack physical="2" magical="5" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1721" magical="1540" />
+			<vitals hp="3460" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4" magical="6" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1722" magical="1541" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1441,7 +1515,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="4416" level="5" />
 		</skillList>
 		<collision>
 			<radius normal="51" />
@@ -1450,13 +1527,13 @@
 	</npc>
 	<npc id="14944" level="90" type="L2Servitor" name="Unison of Lights">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="14753" hpRegen="7.5" mp="14753" mpRegen="2.7" />
-			<attack physical="7467" magical="4085" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="1440" magical="1431" />
+			<vitals hp="14754" hpRegen="7.5" mp="1532" mpRegen="2.7" />
+			<attack physical="8415" magical="4088" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="1441" magical="1435" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="75" />
@@ -1466,6 +1543,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4415" level="9" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="16" />
 		</skillList>
 		<collision>
@@ -1475,13 +1555,13 @@
 	</npc>
 	<npc id="14945" level="95" type="L2Servitor" name="Unison of Lights">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="15730" hpRegen="7.5" mp="15730" mpRegen="2.7" />
-			<attack physical="8899" magical="5002" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="1635" magical="1666" />
+			<vitals hp="15731" hpRegen="7.5" mp="1670" mpRegen="2.7" />
+			<attack physical="10028" magical="5008" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="1636" magical="1669" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="75" />
@@ -1491,6 +1571,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4415" level="9" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="16" />
 		</skillList>
 		<collision>
@@ -1500,13 +1583,13 @@
 	</npc>
 	<npc id="14946" level="99" type="L2Servitor" name="Unison of Lights">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="16829" hpRegen="7.5" mp="16829" mpRegen="2.7" />
-			<attack physical="10235" magical="5881" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="1808" magical="1879" />
+			<vitals hp="16830" hpRegen="7.5" mp="1781" mpRegen="2.7" />
+			<attack physical="11532" magical="5884" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="75" />
@@ -1516,6 +1599,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4415" level="9" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="16" />
 		</skillList>
 		<collision>
@@ -1525,13 +1611,13 @@
 	</npc>
 	<npc id="14947" level="87" type="L2Servitor" name="Cute Bear">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="18639" hpRegen="7.5" mp="18639" mpRegen="2.7" />
-			<attack physical="2013" magical="1897" random="30" critical="4" accuracy="4.75" attackSpeed="447" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2404" magical="4567" />
+			<vitals hp="18640" hpRegen="7.5" mp="1453" mpRegen="2.7" />
+			<attack physical="2782" magical="1898" random="30" critical="4" accuracy="4.75" attackSpeed="318" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2406" magical="3046" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1541,7 +1627,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="1" />
 		</skillList>
 		<collision>
@@ -1551,11 +1641,11 @@
 	</npc>
 	<npc id="14948" level="89" type="L2Servitor" name="Cute Bear">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="19076" hpRegen="7.5" mp="19076" mpRegen="2.7" />
-			<attack physical="2161" magical="2058" random="30" critical="4" accuracy="4.75" attackSpeed="447" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2529" magical="4850" />
+			<vitals hp="19077" hpRegen="7.5" mp="1506" mpRegen="2.7" />
+			<attack physical="2986" magical="2059" random="30" critical="4" accuracy="4.75" attackSpeed="318" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2532" magical="3237" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
@@ -1567,7 +1657,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="1" />
 		</skillList>
 		<collision>
@@ -1577,13 +1671,13 @@
 	</npc>
 	<npc id="14949" level="91" type="L2Servitor" name="Cute Bear">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="19523" hpRegen="7.5" mp="19523" mpRegen="2.7" />
-			<attack physical="2318" magical="2234" random="30" critical="4" accuracy="4.75" attackSpeed="447" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2662" magical="5154" />
+			<vitals hp="19524" hpRegen="7.5" mp="1561" mpRegen="2.7" />
+			<attack physical="3201" magical="2235" random="30" critical="4" accuracy="4.75" attackSpeed="318" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2663" magical="3439" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1593,7 +1687,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="1" />
 		</skillList>
 		<collision>
@@ -1603,13 +1701,13 @@
 	</npc>
 	<npc id="14950" level="93" type="L2Servitor" name="Cute Bear">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="19980" hpRegen="7.5" mp="19980" mpRegen="2.7" />
-			<attack physical="2487" magical="2423" random="30" critical="4" accuracy="4.75" attackSpeed="447" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2800" magical="5475" />
+			<vitals hp="19980" hpRegen="7.5" mp="1616" mpRegen="2.7" />
+			<attack physical="3436" magical="2424" random="30" critical="4" accuracy="4.75" attackSpeed="318" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2801" magical="3654" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1619,7 +1717,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="1" />
 		</skillList>
 		<collision>
@@ -1629,13 +1731,13 @@
 	</npc>
 	<npc id="14951" level="95" type="L2Servitor" name="Cute Bear">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="25169" hpRegen="7.5" mp="25169" mpRegen="2.7" />
-			<attack physical="3556" magical="4670" random="30" critical="4" accuracy="4.75" attackSpeed="447" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3437" magical="6786" />
+			<vitals hp="25170" hpRegen="7.5" mp="1671" mpRegen="2.7" />
+			<attack physical="4912" magical="4676" random="30" critical="4" accuracy="4.75" attackSpeed="318" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3438" magical="4528" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1645,7 +1747,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="2" />
 		</skillList>
 		<collision>
@@ -1655,13 +1761,13 @@
 	</npc>
 	<npc id="14952" level="97" type="L2Servitor" name="Cute Bear">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="26661" hpRegen="7.5" mp="26661" mpRegen="2.7" />
-			<attack physical="3816" magical="5061" random="30" critical="4" accuracy="4.75" attackSpeed="447" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3613" magical="7206" />
+			<vitals hp="26662" hpRegen="7.5" mp="1728" mpRegen="2.7" />
+			<attack physical="5267" magical="5068" random="30" critical="4" accuracy="4.75" attackSpeed="318" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3616" magical="4808" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1671,7 +1777,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="2" />
 		</skillList>
 		<collision>
@@ -1681,13 +1791,13 @@
 	</npc>
 	<npc id="14953" level="99" type="L2Servitor" name="Cute Bear">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="26927" hpRegen="7.5" mp="26927" mpRegen="2.7" />
-			<attack physical="4090" magical="5489" random="30" critical="4" accuracy="4.75" attackSpeed="447" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3801" magical="7655" />
+			<vitals hp="26928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="5649" magical="5490" random="30" critical="4" accuracy="4.75" attackSpeed="318" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="5104" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1697,7 +1807,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="2" />
 		</skillList>
 		<collision>
@@ -1707,13 +1821,13 @@
 	</npc>
 	<npc id="14954" level="87" type="L2Servitor" name="Saber Tooth Cougar">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="12425" hpRegen="7.5" mp="12425" mpRegen="2.7" />
-			<attack physical="2374" magical="1489" random="30" critical="12" accuracy="4.75" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1603" magical="4711" />
+			<vitals hp="12427" hpRegen="7.5" mp="1453" mpRegen="2.7" />
+			<attack physical="3277" magical="1495" random="30" critical="12" accuracy="4.75" attackSpeed="349" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1604" magical="3144" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1723,7 +1837,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="1" />
 		</skillList>
 		<collision>
@@ -1733,11 +1851,11 @@
 	</npc>
 	<npc id="14955" level="89" type="L2Servitor" name="Saber Tooth Cougar">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="12718" hpRegen="7.5" mp="12718" mpRegen="2.7" />
-			<attack physical="2547" magical="1614" random="30" critical="12" accuracy="4.75" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1682" magical="5007" />
+			<vitals hp="12719" hpRegen="7.5" mp="1506" mpRegen="2.7" />
+			<attack physical="3516" magical="1620" random="30" critical="12" accuracy="4.75" attackSpeed="349" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1688" magical="3339" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
@@ -1749,7 +1867,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="1" />
 		</skillList>
 		<collision>
@@ -1759,167 +1881,11 @@
 	</npc>
 	<npc id="14956" level="91" type="L2Servitor" name="Saber Tooth Cougar">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="13014" hpRegen="7.5" mp="13014" mpRegen="2.7" />
-			<attack physical="2731" magical="1755" random="30" critical="12" accuracy="4.75" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1774" magical="5321" />
-			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="1" />
-		</skillList>
-		<collision>
-			<radius normal="19" />
-			<height normal="12.25" />
-		</collision>
-	</npc>
-	<npc id="14957" level="93" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="13320" hpRegen="7.5" mp="13320" mpRegen="2.7" />
-			<attack physical="2931" magical="1901" random="30" critical="12" accuracy="4.75" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1867" magical="5649" />
-			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="1" />
-		</skillList>
-		<collision>
-			<radius normal="19" />
-			<height normal="12.25" />
-		</collision>
-	</npc>
-	<npc id="14958" level="95" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="16779" hpRegen="7.5" mp="16779" mpRegen="2.7" />
-			<attack physical="4192" magical="3668" random="30" critical="12" accuracy="4.75" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2290" magical="7003" />
-			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="1" />
-		</skillList>
-		<collision>
-			<radius normal="19" />
-			<height normal="12.25" />
-		</collision>
-	</npc>
-	<npc id="14959" level="97" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="17773" hpRegen="7.5" mp="17773" mpRegen="2.7" />
-			<attack physical="4496" magical="3977" random="30" critical="12" accuracy="4.75" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2408" magical="7439" />
-			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="19" />
-			<height normal="12.25" />
-		</collision>
-	</npc>
-	<npc id="14960" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="17950" hpRegen="7.5" mp="17950" mpRegen="2.7" />
-			<attack physical="4821" magical="4313" random="30" critical="12" accuracy="4.75" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2534" magical="7899" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="19" />
-			<height normal="12.25" />
-		</collision>
-	</npc>
-	<npc id="14961" level="87" type="L2Servitor" name="Grim Reaper">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="12425" hpRegen="7.5" mp="12425" mpRegen="2.7" />
-			<attack physical="2635" magical="5812" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="1603" magical="2029" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="14" />
-			<height normal="32" />
-		</collision>
-	</npc>
-	<npc id="14962" level="89" type="L2Servitor" name="Grim Reaper">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="12718" hpRegen="7.5" mp="12718" mpRegen="2.7" />
-			<attack physical="2825" magical="6306" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="1685" magical="2154" />
+			<vitals hp="13015" hpRegen="7.5" mp="1561" mpRegen="2.7" />
+			<attack physical="3774" magical="1756" random="30" critical="12" accuracy="4.75" attackSpeed="349" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1775" magical="3548" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
@@ -1931,6 +1897,188 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="19" />
+			<height normal="12.25" />
+		</collision>
+	</npc>
+	<npc id="14957" level="93" type="L2Servitor" name="Saber Tooth Cougar">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="13321" hpRegen="7.5" mp="1616" mpRegen="2.7" />
+			<attack physical="4049" magical="1907" random="30" critical="12" accuracy="4.75" attackSpeed="349" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1868" magical="3770" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="19" />
+			<height normal="12.25" />
+		</collision>
+	</npc>
+	<npc id="14958" level="95" type="L2Servitor" name="Saber Tooth Cougar">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="16780" hpRegen="7.5" mp="1671" mpRegen="2.7" />
+			<attack physical="5789" magical="3675" random="30" critical="12" accuracy="4.75" attackSpeed="349" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2291" magical="4670" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="19" />
+			<height normal="12.25" />
+		</collision>
+	</npc>
+	<npc id="14959" level="97" type="L2Servitor" name="Saber Tooth Cougar">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="17775" hpRegen="7.5" mp="1728" mpRegen="2.7" />
+			<attack physical="6209" magical="3983" random="30" critical="12" accuracy="4.75" attackSpeed="349" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2411" magical="4960" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="19" />
+			<height normal="12.25" />
+		</collision>
+	</npc>
+	<npc id="14960" level="99" type="L2Servitor" name="Saber Tooth Cougar">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="17951" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="6657" magical="4314" random="30" critical="12" accuracy="4.75" attackSpeed="349" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2535" magical="5267" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="19" />
+			<height normal="12.25" />
+		</collision>
+	</npc>
+	<npc id="14961" level="87" type="L2Servitor" name="Grim Reaper">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMAN</race>
+		<stats>
+			<vitals hp="12427" hpRegen="7.5" mp="2179" mpRegen="2.7" />
+			<attack physical="2968" magical="5813" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="1604" magical="2030" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4415" level="9" />
+			<skill id="4416" level="14" />
+			<skill id="4121" level="9" />
+			<skill id="5038" level="15" />
+			<skill id="11496" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="14962" level="89" type="L2Servitor" name="Grim Reaper">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMAN</race>
+		<stats>
+			<vitals hp="12719" hpRegen="7.5" mp="2259" mpRegen="2.7" />
+			<attack physical="3188" magical="6307" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="1688" magical="2158" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4415" level="9" />
+			<skill id="4416" level="14" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="15" />
 			<skill id="11496" level="1" />
 		</skillList>
@@ -1941,13 +2089,13 @@
 	</npc>
 	<npc id="14963" level="91" type="L2Servitor" name="Grim Reaper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<stats>
-			<vitals hp="13014" hpRegen="7.5" mp="13014" mpRegen="2.7" />
-			<attack physical="3029" magical="6839" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="1774" magical="2290" />
+			<vitals hp="13015" hpRegen="7.5" mp="2341" mpRegen="2.7" />
+			<attack physical="3418" magical="6840" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="1775" magical="2291" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1957,6 +2105,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4415" level="9" />
+			<skill id="4416" level="14" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="15" />
 			<skill id="11496" level="1" />
 		</skillList>
@@ -1967,13 +2118,13 @@
 	</npc>
 	<npc id="14964" level="93" type="L2Servitor" name="Grim Reaper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<stats>
-			<vitals hp="13320" hpRegen="7.5" mp="13320" mpRegen="2.7" />
-			<attack physical="3253" magical="7418" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="1867" magical="2434" />
+			<vitals hp="13321" hpRegen="7.5" mp="2423" mpRegen="2.7" />
+			<attack physical="3665" magical="7419" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="1868" magical="2435" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1983,6 +2134,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4415" level="9" />
+			<skill id="4416" level="14" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="15" />
 			<skill id="11496" level="1" />
 		</skillList>
@@ -1993,13 +2147,13 @@
 	</npc>
 	<npc id="14965" level="95" type="L2Servitor" name="Grim Reaper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<stats>
-			<vitals hp="16779" hpRegen="7.5" mp="16779" mpRegen="2.7" />
-			<attack physical="4650" magical="14305" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="2290" magical="3016" />
+			<vitals hp="16780" hpRegen="7.5" mp="2507" mpRegen="2.7" />
+			<attack physical="5244" magical="14306" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="2291" magical="3017" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2009,6 +2163,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4415" level="9" />
+			<skill id="4416" level="14" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="15" />
 			<skill id="11496" level="2" />
 		</skillList>
@@ -2019,13 +2176,13 @@
 	</npc>
 	<npc id="14966" level="97" type="L2Servitor" name="Grim Reaper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<stats>
-			<vitals hp="17773" hpRegen="7.5" mp="17773" mpRegen="2.7" />
-			<attack physical="4990" magical="15508" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="2408" magical="3203" />
+			<vitals hp="17775" hpRegen="7.5" mp="2591" mpRegen="2.7" />
+			<attack physical="5621" magical="15509" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="2411" magical="3204" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2035,6 +2192,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4415" level="9" />
+			<skill id="4416" level="14" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="15" />
 			<skill id="11496" level="2" />
 		</skillList>
@@ -2045,13 +2205,13 @@
 	</npc>
 	<npc id="14967" level="99" type="L2Servitor" name="Grim Reaper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<stats>
-			<vitals hp="17950" hpRegen="7.5" mp="17950" mpRegen="2.7" />
-			<attack physical="5348" magical="16809" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="2534" magical="3400" />
+			<vitals hp="17951" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="6030" magical="16810" random="30" critical="4" accuracy="4.75" attackSpeed="255" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="2535" magical="3404" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2061,6 +2221,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4415" level="9" />
+			<skill id="4416" level="14" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="15" />
 			<skill id="11496" level="2" />
 		</skillList>
@@ -2071,13 +2234,13 @@
 	</npc>
 	<npc id="14968" level="93" type="L2Servitor" name="Naviarope">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="16398" hpRegen="7.5" mp="16398" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="12" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="72892" hpRegen="7.5" mp="9692" mpRegen="2.7" />
+			<attack physical="16480" magical="6527" random="30" critical="12" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3899" magical="3044" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2087,6 +2250,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2096,13 +2262,13 @@
 	</npc>
 	<npc id="14969" level="95" type="L2Servitor" name="Naviarope">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="21140" hpRegen="7.5" mp="21140" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="12" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="74953" hpRegen="7.5" mp="10026" mpRegen="2.7" />
+			<attack physical="17574" magical="6997" random="30" critical="12" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4093" magical="3233" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2112,6 +2278,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2121,13 +2290,13 @@
 	</npc>
 	<npc id="14970" level="97" type="L2Servitor" name="Naviarope">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="22616" hpRegen="7.5" mp="22616" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="12" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="77063" hpRegen="7.5" mp="10363" mpRegen="2.7" />
+			<attack physical="20232" magical="8073" random="30" critical="12" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4296" magical="3434" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2137,6 +2306,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2146,13 +2318,13 @@
 	</npc>
 	<npc id="14971" level="99" type="L2Servitor" name="Cute Bear">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="26927" hpRegen="7.5" mp="26927" mpRegen="2.7" />
-			<attack physical="4190" magical="5589" random="30" critical="4" accuracy="4.75" attackSpeed="447" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3851" magical="7705" />
+			<vitals hp="16830" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="2690" magical="1373" random="30" critical="4" accuracy="4.75" attackSpeed="318" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2716" magical="3646" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2162,7 +2334,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="2" />
 		</skillList>
 		<collision>
@@ -2172,13 +2348,13 @@
 	</npc>
 	<npc id="14972" level="99" type="L2Servitor" name="Saber Tooth Cougar">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="17950" hpRegen="7.5" mp="17950" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="12" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="11220" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3170" magical="1079" random="30" critical="12" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1811" magical="3763" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="26" />
@@ -2188,7 +2364,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
 			<skill id="11496" level="2" />
 		</skillList>
 		<collision>
@@ -2198,13 +2378,13 @@
 	</npc>
 	<npc id="14973" level="99" type="L2Servitor" name="Grim Reaper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<stats>
-			<vitals hp="17950" hpRegen="7.5" mp="17950" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="900" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="11220" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="2871" magical="4203" random="30" critical="4" accuracy="4.75" attackSpeed="162" type="SWORD" range="900" distance="80" width="120" />
+			<defence physical="1811" magical="2431" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2214,6 +2394,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4415" level="9" />
+			<skill id="4416" level="14" />
+			<skill id="4121" level="9" />
 			<skill id="5038" level="15" />
 			<skill id="11496" level="2" />
 		</skillList>
@@ -2224,13 +2407,13 @@
 	</npc>
 	<npc id="14974" level="95" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2758" magical="584" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1308" magical="1789" />
+			<vitals hp="8270" hpRegen="7.5" mp="1670" mpRegen="2.7" />
+			<attack physical="3888" magical="915" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1636" magical="1669" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2241,9 +2424,12 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="10053" level="5" />
+			<skill id="4416" level="4" />
 			<skill id="10052" level="5" />
 			<skill id="10054" level="5" />
 			<skill id="10051" level="5" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2253,13 +2439,13 @@
 	</npc>
 	<npc id="14975" level="98" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2808" magical="634" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1358" magical="1439" />
+			<vitals hp="8621" hpRegen="7.5" mp="1755" mpRegen="2.7" />
+			<attack physical="4318" magical="1035" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1766" magical="1826" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2270,9 +2456,12 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="10053" level="6" />
+			<skill id="4416" level="4" />
 			<skill id="10052" level="6" />
 			<skill id="10054" level="6" />
 			<skill id="10051" level="6" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2282,13 +2471,13 @@
 	</npc>
 	<npc id="14976" level="90" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2858" magical="684" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1408" magical="1489" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4471" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2298,6 +2487,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2307,13 +2499,13 @@
 	</npc>
 	<npc id="14977" level="91" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2888" magical="734" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1458" magical="1539" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4471" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2323,6 +2515,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2332,13 +2527,13 @@
 	</npc>
 	<npc id="14978" level="92" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2938" magical="784" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1508" magical="1589" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4471" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2348,6 +2543,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2357,13 +2555,13 @@
 	</npc>
 	<npc id="14979" level="93" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2988" magical="834" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1558" magical="1639" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4471" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2373,6 +2571,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2382,13 +2583,13 @@
 	</npc>
 	<npc id="14980" level="94" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="3038" magical="884" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1608" magical="1689" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4471" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2398,6 +2599,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2407,13 +2611,13 @@
 	</npc>
 	<npc id="14981" level="95" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="3038" magical="884" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1608" magical="1689" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4471" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2423,6 +2627,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2432,13 +2639,13 @@
 	</npc>
 	<npc id="14982" level="96" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="3088" magical="924" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1658" magical="1739" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4471" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2448,6 +2655,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2457,13 +2667,13 @@
 	</npc>
 	<npc id="14983" level="97" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="3138" magical="974" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1708" magical="1789" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4471" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2473,6 +2683,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2482,13 +2695,13 @@
 	</npc>
 	<npc id="14984" level="98" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="3188" magical="1024" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1758" magical="1829" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4471" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2498,6 +2711,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2507,13 +2723,13 @@
 	</npc>
 	<npc id="14985" level="99" type="L2Servitor" name="Golden Lion">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="3238" magical="1074" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1808" magical="1879" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="4471" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -2523,6 +2739,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2532,13 +2751,13 @@
 	</npc>
 	<npc id="14986" level="93" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8042" hpRegen="7.5" mp="8042" mpRegen="2.7" />
-			<attack physical="1791" magical="824" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1536" magical="1543" />
+			<vitals hp="8043" hpRegen="7.5" mp="1615" mpRegen="2.7" />
+			<attack physical="2538" magical="847" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1557" magical="1571" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2548,6 +2767,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="10794" level="5" />
 			<skill id="5038" level="15" />
 			<skill id="10797" level="5" />
@@ -2560,13 +2782,13 @@
 	</npc>
 	<npc id="14987" level="95" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8269" hpRegen="7.5" mp="8269" mpRegen="2.7" />
-			<attack physical="1892" magical="878" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1603" magical="1621" />
+			<vitals hp="8270" hpRegen="7.5" mp="1670" mpRegen="2.7" />
+			<attack physical="2722" magical="915" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1636" magical="1669" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2576,6 +2798,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="10794" level="6" />
 			<skill id="5038" level="15" />
 			<skill id="10797" level="6" />
@@ -2588,13 +2813,13 @@
 	</npc>
 	<npc id="14988" level="97" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="15585" hpRegen="7.5" mp="15585" mpRegen="2.7" />
-			<attack physical="1993" magical="932" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1670" magical="1699" />
+			<vitals hp="8503" hpRegen="7.5" mp="1728" mpRegen="2.7" />
+			<attack physical="2919" magical="991" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1721" magical="1772" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2604,6 +2829,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="10794" level="7" />
 			<skill id="5038" level="15" />
 			<skill id="10797" level="7" />
@@ -2616,13 +2844,13 @@
 	</npc>
 	<npc id="14989" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2632,6 +2860,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="10794" level="8" />
 			<skill id="5038" level="15" />
 			<skill id="10797" level="8" />
@@ -2644,13 +2875,13 @@
 	</npc>
 	<npc id="14990" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2660,6 +2891,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2669,13 +2903,13 @@
 	</npc>
 	<npc id="14991" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2685,6 +2919,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2694,13 +2931,13 @@
 	</npc>
 	<npc id="14992" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2710,6 +2947,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2719,13 +2959,13 @@
 	</npc>
 	<npc id="14993" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2735,6 +2975,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2744,13 +2987,13 @@
 	</npc>
 	<npc id="14994" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2760,6 +3003,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2769,13 +3015,13 @@
 	</npc>
 	<npc id="14995" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2785,6 +3031,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2794,13 +3043,13 @@
 	</npc>
 	<npc id="14996" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2810,6 +3059,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2819,13 +3071,13 @@
 	</npc>
 	<npc id="14997" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2835,6 +3087,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2844,13 +3099,13 @@
 	</npc>
 	<npc id="14998" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2860,6 +3115,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>
@@ -2869,13 +3127,13 @@
 	</npc>
 	<npc id="14999" level="99" type="L2Servitor" name="Thunder Hawk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="8741" hpRegen="7.5" mp="8741" mpRegen="2.7" />
-			<attack physical="2004" magical="986" random="30" critical="4" accuracy="4.75" attackSpeed="299" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1737" magical="1777" />
+			<vitals hp="8742" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="3130" magical="1075" random="30" critical="4" accuracy="4.75" attackSpeed="213" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1809" magical="1882" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -2885,6 +3143,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="5038" level="15" />
 		</skillList>
 		<collision>

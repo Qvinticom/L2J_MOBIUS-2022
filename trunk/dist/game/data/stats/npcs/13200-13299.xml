@@ -3560,13 +3560,13 @@
 	</npc>
 	<npc id="13299" level="55" type="L2Npc" name="Orbis' Curse">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="5193" hpRegen="7.5" mp="5193" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="2895" hpRegen="7.5" mp="1349" mpRegen="2.7" />
+			<attack physical="1041" magical="884" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323" magical="358" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -3575,6 +3575,10 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4415" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="60" />

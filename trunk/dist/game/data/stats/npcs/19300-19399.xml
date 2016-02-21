@@ -4,11 +4,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="1113846" hpRegen="7.5" mp="1113846" mpRegen="2.7" />
-			<attack physical="87600" magical="96300" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="1113847" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="65048" magical="26825" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="687" magical="493" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -20,8 +20,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -64,11 +64,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1440" magical="1250" />
+			<vitals hp="541221" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="58470" magical="23922" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="653" magical="464" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -80,8 +80,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -122,11 +122,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="542125" hpRegen="7.5" mp="542125" mpRegen="2.7" />
-			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="800" distance="80" width="120" />
-			<defence physical="1680" magical="1350" />
+			<vitals hp="542126" hpRegen="7.5" mp="32861" mpRegen="2.7" />
+			<attack physical="61651" magical="25315" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="800" distance="80" width="120" />
+			<defence physical="670" magical="478" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -138,8 +138,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -149,13 +149,13 @@
 	</npc>
 	<npc id="19305" level="94" type="L2Npc" name="Boz" title="Spicula Clone Generator">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="25167" hpRegen="7.5" mp="25167" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="25168" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="18098" magical="5070" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1151" magical="822" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -164,6 +164,14 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4390" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="70" />
@@ -173,11 +181,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="125144" hpRegen="7.5" mp="125144" mpRegen="2.7" />
-			<attack physical="53200" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2112" magical="1815" />
+			<vitals hp="125145" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="23079" magical="8667" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1134" magical="806" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -188,11 +196,9 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4416" level="6" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -203,11 +209,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="125144" hpRegen="7.5" mp="125144" mpRegen="2.7" />
-			<attack physical="54530" magical="54428" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2165" magical="1848" />
+			<vitals hp="125145" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="23204" magical="8762" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1140" magical="811" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -218,11 +224,9 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4416" level="6" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -297,11 +301,7 @@
 	<status attackable="false" targetable="false" showName="true" talkable="false" />
 		<skillList>
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 		</skillList>
 		<collision>
 			<radius normal="23" />
@@ -347,11 +347,7 @@
 	<status attackable="false" targetable="false" showName="true" talkable="false" />
 		<skillList>
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 		</skillList>
 		<collision>
 			<radius normal="23" />
@@ -383,11 +379,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="128077" hpRegen="7.5" mp="128077" mpRegen="2.7" />
-			<attack physical="53200" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2112" magical="1815" />
+			<vitals hp="128078" hpRegen="7.5" mp="3342" mpRegen="2.7" />
+			<attack physical="5" magical="9509" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1180" magical="847" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -398,11 +394,9 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -413,11 +407,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="128077" hpRegen="7.5" mp="128077" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="128078" hpRegen="7.5" mp="3342" mpRegen="2.7" />
+			<attack physical="5" magical="9509" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1180" magical="847" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="130" />
@@ -426,6 +420,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="30" />
@@ -480,11 +480,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="125838" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="5" magical="8974" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1151" magical="822" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="13" />
@@ -493,6 +493,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="31" />
@@ -502,11 +508,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="377512" hpRegen="7.5" mp="377512" mpRegen="2.7" />
-			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1848" magical="1485" />
+			<vitals hp="377513" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="24070" magical="8974" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1151" magical="822" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="10" />
@@ -517,11 +523,11 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4390" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="45" />
@@ -530,13 +536,13 @@
 	</npc>
 	<npc id="19319" level="94" type="L2Npc" name="Cannon Golem" title="Black Anvil Guild">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>SIEGE_WEAPON</race>
 		<stats>
-			<vitals hp="377512" hpRegen="7.5" mp="377512" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="125838" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="24070" magical="8974" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1151" magical="822" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -545,6 +551,13 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4416" level="21" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="45" />
 			<height normal="47.5" />
@@ -573,13 +586,13 @@
 	</npc>
 	<npc id="19321" level="94" type="L2Npc" name="For Raid Presentation Purposes">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="11341" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="5560" magical="6001" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="863" magical="797" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -588,6 +601,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="25" />
@@ -597,11 +616,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="11341" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="5560" magical="6001" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="863" magical="797" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -610,6 +629,11 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="25" />
@@ -619,11 +643,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="11341" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="5560" magical="6001" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="863" magical="797" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -632,6 +656,11 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="25" />
@@ -639,13 +668,13 @@
 	</npc>
 	<npc id="19324" level="94" type="L2Npc" name="For Raid Presentation Purposes">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="11341" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="5560" magical="6001" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="863" magical="797" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -654,6 +683,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="25" />
@@ -661,13 +696,13 @@
 	</npc>
 	<npc id="19325" level="85" type="L2Npc" name="Sticky Mushroom">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>DWARF</race>
 		<stats>
-			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="11341" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="5560" magical="6001" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="863" magical="797" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -676,6 +711,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="18" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -683,13 +724,13 @@
 	</npc>
 	<npc id="19326" level="94" type="L2Npc" name="For Raid Presentation Purposes">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>DWARF</race>
 		<stats>
-			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="11341" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="5560" magical="6001" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="863" magical="797" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -698,6 +739,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="18" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
@@ -707,11 +754,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
-			<attack physical="328354" magical="476257" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5808" magical="4825" />
+			<vitals hp="2751745" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="337777" magical="92416" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -723,9 +770,10 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -777,11 +825,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="2751745" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="337777" magical="92416" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -793,8 +841,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -806,11 +854,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="2751745" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="337777" magical="92416" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -822,9 +870,10 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -835,11 +884,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="2751745" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="337777" magical="92416" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -851,9 +900,10 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -864,11 +914,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="2751745" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="337777" magical="92416" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -880,9 +930,10 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -893,11 +944,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="2751745" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="337777" magical="92416" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -909,9 +960,10 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -920,13 +972,13 @@
 	</npc>
 	<npc id="19333" level="95" type="L2Npc" name="Demolished Throne Stronghold">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="11923" hpRegen="7.5" mp="3342" mpRegen="2.7" />
+			<attack physical="8451" magical="13442" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="874" magical="807" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -935,6 +987,14 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="50" />
@@ -942,13 +1002,13 @@
 	</npc>
 	<npc id="19334" level="95" type="L2Npc" name="Transportation Stronghold">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="11923" hpRegen="7.5" mp="3342" mpRegen="2.7" />
+			<attack physical="8451" magical="13442" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="874" magical="807" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -957,6 +1017,13 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="17.5" />
 			<height normal="52.5" />
@@ -964,13 +1031,13 @@
 	</npc>
 	<npc id="19335" level="95" type="L2Npc" name="Attack Stronghold">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="662320" hpRegen="7.5" mp="662320" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="662321" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="227348" magical="73351" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1106" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -979,6 +1046,14 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="13" />
@@ -988,11 +1063,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="978641" hpRegen="7.5" mp="978641" mpRegen="2.7" />
-			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1350" />
+			<vitals hp="978642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="226113" magical="72556" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="990" magical="834" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1004,8 +1079,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
@@ -1027,11 +1102,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
-			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1350" />
+			<vitals hp="1324642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="226113" magical="72556" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1100" magical="834" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1043,8 +1118,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
@@ -1066,11 +1141,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
-			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
-			<defence physical="1680" magical="1350" />
+			<vitals hp="1324642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="409624" magical="72556" random="30" critical="4" accuracy="4.75" attackSpeed="162" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="1100" magical="834" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1081,9 +1156,9 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="5467" level="1" />
+			<skill id="4415" level="9" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
@@ -1105,11 +1180,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="1670641" hpRegen="7.5" mp="1670641" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="1670642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="227348" magical="73351" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1437" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1121,8 +1196,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
@@ -1144,11 +1219,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="1670641" hpRegen="7.5" mp="1670641" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="1670642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="227348" magical="73351" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1437" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1160,8 +1235,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
@@ -1183,11 +1258,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="1324642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="227348" magical="73351" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1106" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1199,8 +1274,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
@@ -1222,11 +1297,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="5346744" hpRegen="7.5" mp="5346744" mpRegen="2.7" />
-			<attack physical="328354" magical="476257" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5808" magical="4825" />
+			<vitals hp="5346745" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="337777" magical="92416" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1238,9 +1313,10 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -1292,11 +1368,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="5346744" hpRegen="7.5" mp="5346744" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="5346745" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="337777" magical="92416" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1308,9 +1384,10 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="5.5" />
@@ -1321,11 +1398,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="5346744" hpRegen="7.5" mp="5346744" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="5346745" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="337777" magical="92416" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1337,9 +1414,10 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="5.5" />
@@ -1350,11 +1428,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="5346744" hpRegen="7.5" mp="5346744" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="5346745" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="337777" magical="92416" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1366,9 +1444,10 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="19" />
@@ -1379,11 +1458,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
-			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1350" />
+			<vitals hp="1324642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="226113" magical="72556" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1100" magical="834" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1395,8 +1474,8 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -1408,11 +1487,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
-			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1350" />
+			<vitals hp="1324642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="226113" magical="72556" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1100" magical="834" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1424,8 +1503,8 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -1437,11 +1516,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="978641" hpRegen="7.5" mp="978641" mpRegen="2.7" />
-			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1350" />
+			<vitals hp="978642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="226113" magical="72556" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="990" magical="834" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1453,8 +1532,8 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -1466,11 +1545,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="978641" hpRegen="7.5" mp="978641" mpRegen="2.7" />
-			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1350" />
+			<vitals hp="978642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="226113" magical="72556" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="990" magical="834" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1482,8 +1561,8 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -1495,11 +1574,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="1670641" hpRegen="7.5" mp="1670641" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="1670642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="227348" magical="73351" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1437" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1511,8 +1590,8 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -1524,11 +1603,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="1324642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="227348" magical="73351" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1106" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1540,8 +1619,8 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -1553,11 +1632,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="662320" hpRegen="7.5" mp="662320" mpRegen="2.7" />
-			<attack physical="44713" magical="46813" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1560" magical="1250" />
+			<vitals hp="662321" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="221171" magical="69419" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1076" magical="816" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1569,8 +1648,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -1582,11 +1661,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
 		<stats>
-			<vitals hp="662320" hpRegen="7.5" mp="662320" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="662321" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="227348" magical="73351" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1106" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1598,8 +1677,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="14" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -1611,11 +1690,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats>
-			<vitals hp="662320" hpRegen="7.5" mp="662320" mpRegen="2.7" />
-			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="662321" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="227348" magical="73351" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1106" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="50" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1627,8 +1706,8 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -1638,13 +1717,13 @@
 	</npc>
 	<npc id="19355" level="95" type="L2Monster" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="11923" hpRegen="7.5" mp="3342" mpRegen="2.7" />
+			<attack physical="8451" magical="13442" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="874" magical="807" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1653,6 +1732,13 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -1669,13 +1755,13 @@
 	</npc>
 	<npc id="19356" level="95" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="11923" hpRegen="7.5" mp="3342" mpRegen="2.7" />
+			<attack physical="8451" magical="13442" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="874" magical="807" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1684,6 +1770,13 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -1693,11 +1786,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="14048992" hpRegen="7.5" mp="14048992" mpRegen="2.7" />
-			<attack physical="299117" magical="393914" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5808" magical="4825" />
+			<vitals hp="14048993" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="307701" magical="76438" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7966" magical="5802" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1709,9 +1802,10 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -1767,11 +1861,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="2604841" hpRegen="7.5" mp="2604841" mpRegen="2.7" />
-			<attack physical="70800" magical="93900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="2604842" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="275621" magical="107285" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1548" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1783,8 +1877,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="17" /> -->
-			<!-- <skill id="4410" level="17" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -1797,11 +1891,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="2016641" hpRegen="7.5" mp="2016641" mpRegen="2.7" />
-			<attack physical="70800" magical="93900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="2016642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="499313" magical="107285" random="30" critical="4" accuracy="4.75" attackSpeed="162" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="1504" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1813,8 +1907,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="17" /> -->
-			<!-- <skill id="4410" level="17" /> -->
+			<skill id="4415" level="9" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -1827,11 +1921,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
-			<attack physical="60401" magical="76294" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1350" />
+			<vitals hp="1324642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="274123" magical="106122" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1100" magical="834" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1843,8 +1937,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="17" /> -->
-			<!-- <skill id="4410" level="17" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -1857,11 +1951,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
-			<attack physical="60401" magical="76294" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
-			<defence physical="1680" magical="1350" />
+			<vitals hp="1324642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="496599" magical="106122" random="30" critical="4" accuracy="4.75" attackSpeed="162" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="1100" magical="834" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1873,8 +1967,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="17" /> -->
-			<!-- <skill id="4410" level="17" /> -->
+			<skill id="4415" level="9" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -1887,11 +1981,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
-			<attack physical="70800" magical="93900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="1324642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="275621" magical="107285" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1106" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1903,8 +1997,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="17" /> -->
-			<!-- <skill id="4410" level="17" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -1917,11 +2011,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
-			<attack physical="70800" magical="93900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1650" />
+			<vitals hp="1324642" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="275621" magical="107285" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1106" magical="839" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1933,8 +2027,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="17" /> -->
-			<!-- <skill id="4410" level="17" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -1945,13 +2039,13 @@
 	</npc>
 	<npc id="19364" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="916" magical="846" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1960,6 +2054,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -1967,57 +2067,13 @@
 	</npc>
 	<npc id="19365" level="1" type="L2Npc" name="Cute Buffalo">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="151" hpRegen="7.5" mp="151" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
-			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="186" />
-			</speed>
-			<hitTime>500</hitTime>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16" />
-			<height normal="22" />
-		</collision>
-	</npc>
-	<npc id="19366" level="1" type="L2Npc" name="Cute Spotted Buffalo">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="151" hpRegen="7.5" mp="151" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
-			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="186" />
-			</speed>
-			<hitTime>500</hitTime>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="19367" level="1" type="L2Npc" name="Silvermane White Tiger" title="Cow Thief">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BEAST</race>
 		<stats>
-			<vitals hp="75600" hpRegen="7.5" mp="75600" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4608" magical="825" />
+			<vitals hp="152" hpRegen="7.5" mp="28590" mpRegen="2.7" />
+			<attack physical="2" magical="2" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="2" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2028,88 +2084,23 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
-			<radius normal="34" />
-			<height normal="28" />
+			<radius normal="16" />
+			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="19368" level="1" type="L2Npc" name="Greedy Mahum Chef">
+	<npc id="19366" level="1" type="L2Npc" name="Cute Spotted Buffalo">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>BEAST</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="152" hpRegen="7.5" mp="28590" mpRegen="2.7" />
+			<attack physical="2" magical="2" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2" magical="2" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="186" />
-			</speed>
-			<hitTime>500</hitTime>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="20" />
-			<height normal="37" />
-		</collision>
-	</npc>
-	<npc id="19369" level="99" type="L2Npc" name="Campfire">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
-			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="186" />
-			</speed>
-			<hitTime>500</hitTime>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="32" />
-			<height normal="17.5" />
-		</collision>
-	</npc>
-	<npc id="19370" level="99" type="L2Npc" name="Mysterious Fruit Tree">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
-			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="186" />
-			</speed>
-			<hitTime>500</hitTime>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="51" />
-			<height normal="50.5" />
-		</collision>
-	</npc>
-	<npc id="19371" level="99" type="L2Npc" name="Greedy Pixie">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>FAIRY</race>
-		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4608" magical="825" />
-			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2119,6 +2110,145 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="19367" level="1" type="L2Npc" name="Silvermane White Tiger" title="Cow Thief">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats>
+			<vitals hp="75600" hpRegen="7.5" mp="28590" mpRegen="2.7" />
+			<attack physical="4" magical="3" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10800" magical="10926" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="34" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="19368" level="1" type="L2Npc" name="Greedy Mahum Chef">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats>
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="167546" magical="1735" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="439" magical="405" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4415" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="37" />
+		</collision>
+	</npc>
+	<npc id="19369" level="99" type="L2Npc" name="Campfire">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats>
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="916" magical="846" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="32" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="19370" level="99" type="L2Npc" name="Mysterious Fruit Tree">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<stats>
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="330527" magical="94389" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1186" magical="869" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4415" level="3" />
+			<skill id="4416" level="5" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="51" />
+			<height normal="50.5" />
+		</collision>
+	</npc>
+	<npc id="19371" level="99" type="L2Npc" name="Greedy Pixie">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<stats>
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="330527" magical="94389" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1186" magical="869" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 			<skill id="4416" level="13" />
 		</skillList>
@@ -2131,11 +2261,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ELEMENTAL</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4608" magical="825" />
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="916" magical="846" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2146,6 +2276,8 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4416" level="7" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -2155,13 +2287,13 @@
 	</npc>
 	<npc id="19373" level="1" type="L2Npc" name="Broken Toad Cannon">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>SIEGE_WEAPON</race>
 		<stats>
-			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="158231" magical="21632" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="568" magical="416" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2170,6 +2302,11 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4415" level="3" />
+			<skill id="4416" level="21" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="45" />
 			<height normal="47.5" />
@@ -2179,11 +2316,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4608" magical="825" />
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="158231" magical="21632" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="568" magical="416" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2194,6 +2331,7 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -2205,11 +2343,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4608" magical="825" />
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="330527" magical="94389" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1186" magical="869" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2220,6 +2358,8 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -2229,13 +2369,13 @@
 	</npc>
 	<npc id="19376" level="99" type="L2Npc" name="Repair Robot">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="330527" magical="94389" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1186" magical="869" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2244,6 +2384,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
@@ -2251,13 +2397,13 @@
 	</npc>
 	<npc id="19377" level="99" type="L2Npc" name="Teleport Source" title="Teleport">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="916" magical="846" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2266,6 +2412,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
@@ -2273,13 +2425,13 @@
 	</npc>
 	<npc id="19378" level="99" type="L2Npc" name="Star Stone" title="Gatherable">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="916" magical="846" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2288,6 +2440,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="54" />
 			<height normal="61" />
@@ -2297,11 +2455,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="330527" magical="94389" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1186" magical="869" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2310,6 +2468,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="19" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" />
@@ -2317,13 +2481,13 @@
 	</npc>
 	<npc id="19380" level="99" type="L2Npc" name="Stone Gathering Robot">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="330527" magical="94389" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1186" magical="869" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2332,6 +2496,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
@@ -2341,11 +2511,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4608" magical="825" />
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="158231" magical="21632" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="568" magical="416" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2356,6 +2526,7 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -2365,79 +2536,13 @@
 	</npc>
 	<npc id="19382" level="1" type="L2Npc" name="Clan Request Assistant">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
-			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="186" />
-			</speed>
-			<hitTime>500</hitTime>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5.5" />
-			<height normal="6.25" />
-		</collision>
-	</npc>
-	<npc id="19383" level="99" type="L2Npc" name="Blue Stone" title="Gatherable">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
-			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="186" />
-			</speed>
-			<hitTime>500</hitTime>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="38" />
-			<height normal="43.5" />
-		</collision>
-	</npc>
-	<npc id="19384" level="99" type="L2Npc" name="Dark Summon Circle">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
-			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="186" />
-			</speed>
-			<hitTime>500</hitTime>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="22.5" />
-		</collision>
-	</npc>
-	<npc id="19385" level="99" type="L2Npc" name="Crystal Raider">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4608" magical="825" />
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="3268" magical="1735" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="439" magical="405" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2448,6 +2553,91 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="5.5" />
+			<height normal="6.25" />
+		</collision>
+	</npc>
+	<npc id="19383" level="99" type="L2Npc" name="Blue Stone" title="Gatherable">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats>
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="916" magical="846" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="38" />
+			<height normal="43.5" />
+		</collision>
+	</npc>
+	<npc id="19384" level="99" type="L2Npc" name="Dark Summon Circle">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats>
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="916" magical="846" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19385" level="99" type="L2Npc" name="Crystal Raider">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats>
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="330527" magical="94389" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1186" magical="869" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -2459,11 +2649,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4608" magical="825" />
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="158231" magical="21632" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="568" magical="416" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2474,6 +2664,7 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -2485,11 +2676,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ANIMAL</race>
 		<stats>
-			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4608" magical="825" />
+			<vitals hp="616311" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="158231" magical="21632" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="568" magical="416" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2500,6 +2691,7 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4416" level="4" />
+			<skill id="4415" level="3" />
 			<skill id="4414" level="1" />
 		</skillList>
 		<collision>
@@ -2509,13 +2701,13 @@
 	</npc>
 	<npc id="19388" level="99" type="L2Npc" name="Summon Device">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="916" magical="846" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2524,6 +2716,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="22.5" />
@@ -2531,13 +2729,13 @@
 	</npc>
 	<npc id="19389" level="1" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="3268" magical="1735" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="439" magical="405" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2546,6 +2744,11 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -2553,13 +2756,13 @@
 	</npc>
 	<npc id="19390" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="763" magical="846" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2568,6 +2771,11 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -2575,13 +2783,13 @@
 	</npc>
 	<npc id="19391" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="763" magical="846" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2590,6 +2798,11 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -2597,13 +2810,13 @@
 	</npc>
 	<npc id="19392" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="14613" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="6825" magical="7567" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="763" magical="846" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2612,6 +2825,11 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -2619,13 +2837,13 @@
 	</npc>
 	<npc id="19393" level="85" type="L2Npc" name="Contaminated Cocoon">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
-			<attack physical="22500" magical="15000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="900" magical="900" />
+			<vitals hp="7325" hpRegen="7.5" mp="2798" mpRegen="2.7" />
+			<attack physical="3852" magical="3952" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="756" magical="698" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2634,6 +2852,11 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="112" />
 			<height normal="59" />
@@ -2641,13 +2864,13 @@
 	</npc>
 	<npc id="19394" level="85" type="L2Npc" name="Large Contaminated Cocoon">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
-			<attack physical="22500" magical="15000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="900" magical="900" />
+			<vitals hp="7325" hpRegen="7.5" mp="2798" mpRegen="2.7" />
+			<attack physical="3852" magical="3952" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="756" magical="698" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2656,6 +2879,11 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="112" />
 			<height normal="59" />
@@ -2663,13 +2891,13 @@
 	</npc>
 	<npc id="19395" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
-			<attack physical="22500" magical="15000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="900" magical="900" />
+			<vitals hp="2" hpRegen="7.5" mp="2" mpRegen="2.7" />
+			<attack physical="4" magical="6" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3" magical="3" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2678,6 +2906,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -2685,13 +2919,13 @@
 	</npc>
 	<npc id="19396" level="99" type="L2Npc" name="Mother Nornil">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1760" magical="1770" />
+			<vitals hp="2" hpRegen="7.5" mp="2" mpRegen="2.7" />
+			<attack physical="4" magical="6" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3" magical="3" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2700,6 +2934,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -2707,13 +2947,13 @@
 	</npc>
 	<npc id="19397" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
-			<defence physical="1760" magical="1770" />
+			<vitals hp="2" hpRegen="7.5" mp="2" mpRegen="2.7" />
+			<attack physical="4" magical="6" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="3" magical="3" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -2722,6 +2962,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -2729,13 +2975,13 @@
 	</npc>
 	<npc id="19398" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
-			<defence physical="1760" magical="1770" />
+			<vitals hp="2" hpRegen="7.5" mp="2" mpRegen="2.7" />
+			<attack physical="4" magical="6" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="3" magical="3" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="53" />
@@ -2744,6 +2990,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -2751,13 +3003,13 @@
 	</npc>
 	<npc id="19399" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<stats>
-			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
-			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
-			<defence physical="1760" magical="1770" />
+			<vitals hp="2" hpRegen="7.5" mp="2" mpRegen="2.7" />
+			<attack physical="4" magical="6" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="3" magical="3" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="130" />
@@ -2766,6 +3018,12 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />

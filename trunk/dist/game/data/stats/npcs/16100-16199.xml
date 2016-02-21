@@ -2,13 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="16100" level="55" type="L2Npc" name="Sin Eater">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="196" hpRegen="7.5" mp="196" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="2895" hpRegen="7.5" mp="1349" mpRegen="2.7" />
+			<attack physical="1041" magical="884" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323" magical="358" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -17,6 +17,10 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" />
+			<skill id="4415" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="6" />
 			<height normal="3" />
@@ -24,13 +28,13 @@
 	</npc>
 	<npc id="16101" level="55" type="L2Npc" name="Sin Eater">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="196" hpRegen="7.5" mp="196" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="2895" hpRegen="7.5" mp="1349" mpRegen="2.7" />
+			<attack physical="1041" magical="884" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323" magical="358" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -39,6 +43,10 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" />
+			<skill id="4415" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="6" />
 			<height normal="3" />
@@ -46,13 +54,13 @@
 	</npc>
 	<npc id="16102" level="55" type="L2Npc" name="Sin Eater">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<stats>
-			<vitals hp="196" hpRegen="7.5" mp="196" mpRegen="2.7" />
-			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" />
+			<vitals hp="2895" hpRegen="7.5" mp="1349" mpRegen="2.7" />
+			<attack physical="1041" magical="884" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323" magical="358" />
 			<attribute>
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -61,6 +69,10 @@
 			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" />
+			<skill id="4415" level="1" />
+		</skillList>
 		<collision>
 			<radius normal="6" />
 			<height normal="3" />
@@ -70,11 +82,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
-			<attack physical="671" magical="361" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="323" magical="302" />
+			<vitals hp="2895" hpRegen="7.5" mp="1349" mpRegen="2.7" />
+			<attack physical="754" magical="884" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323" magical="358" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -92,11 +104,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
-			<attack physical="671" magical="361" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="323" magical="302" />
+			<vitals hp="2895" hpRegen="7.5" mp="1349" mpRegen="2.7" />
+			<attack physical="754" magical="884" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323" magical="358" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -114,11 +126,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
-			<attack physical="671" magical="361" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="323" magical="302" />
+			<vitals hp="2895" hpRegen="7.5" mp="1349" mpRegen="2.7" />
+			<attack physical="754" magical="884" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323" magical="358" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -136,11 +148,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats>
-			<vitals hp="2641" hpRegen="7.5" mp="2641" mpRegen="2.7" />
-			<attack physical="671" magical="361" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="323" magical="302" />
+			<vitals hp="2895" hpRegen="7.5" mp="1349" mpRegen="2.7" />
+			<attack physical="754" magical="884" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323" magical="358" />
 			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
 				<walk ground="60" />

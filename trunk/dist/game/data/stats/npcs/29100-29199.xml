@@ -4066,11 +4066,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="2732594106" sp="186080440" />
 		<stats>
-			<vitals hp="47211215" hpRegen="7.5" mp="47211215" mpRegen="2.7" />
-			<attack physical="450000" magical="300000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6000" magical="4000" />
+			<vitals hp="47211216" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="282826" magical="162336" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6747" magical="7793" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -4082,8 +4082,11 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14726" level="1" />
 			<skill id="14285" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="50" />
@@ -4094,11 +4097,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BEAST</race>
 		<stats>
-			<vitals hp="2159243" hpRegen="7.5" mp="2159243" mpRegen="2.7" />
-			<attack physical="250000" magical="150000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5500" magical="3500" />
+			<vitals hp="2159244" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="156751" magical="44605" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3374" magical="2949" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -4112,6 +4115,9 @@
 			<skill id="5467" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14024" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="66" />
@@ -4123,11 +4129,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="2788645860" sp="186080440" />
 		<stats>
-			<vitals hp="29579579" hpRegen="7.5" mp="29579579" mpRegen="2.7" />
-			<attack physical="600000" magical="400000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6000" magical="4000" />
+			<vitals hp="29579580" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="282826" magical="162336" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5398" magical="6234" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -4142,7 +4148,10 @@
 			<skill id="14575" level="1" />
 			<skill id="5467" level="1" />
 			<skill id="14026" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14726" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
 		</skillList>
 		<collision>
 			<radius normal="17" />
@@ -4538,11 +4547,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
 		<stats>
-			<vitals hp="2208510" hpRegen="7.5" mp="2208510" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="2208511" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="165264" magical="47195" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3460" magical="3039" />
 			<attribute>
-				<defence fire="235" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -4558,7 +4567,9 @@
 			<skill id="4438" level="5" />
 			<skill id="4416" level="12" />
 			<skill id="5465" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14331" level="1" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<collision>
 			<radius normal="8" />
@@ -4569,11 +4580,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
 		<stats>
-			<vitals hp="2208510" hpRegen="7.5" mp="2208510" mpRegen="2.7" />
-			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341" magical="250" />
+			<vitals hp="2208511" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="165264" magical="47195" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3460" magical="3039" />
 			<attribute>
-				<defence fire="135" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" />
 			</attribute>
 			<speed>
 				<walk ground="1" />
@@ -4589,7 +4600,9 @@
 			<skill id="4438" level="5" />
 			<skill id="4416" level="12" />
 			<skill id="5465" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14333" level="1" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<collision>
 			<radius normal="20" />

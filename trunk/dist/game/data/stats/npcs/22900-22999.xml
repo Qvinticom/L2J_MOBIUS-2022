@@ -5,11 +5,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="2045722" sp="8596" />
 		<stats>
-			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
-			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1513" magical="1458" />
+			<vitals hp="150173" hpRegen="7.5" mp="4846" mpRegen="2.7" />
+			<attack physical="20768" magical="2076" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="655" magical="957" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -22,11 +22,9 @@
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14047" level="4" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -53,11 +51,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1741611" sp="7250" />
 		<stats>
-			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1485" magical="1430" />
+			<vitals hp="122946" hpRegen="7.5" mp="4764" mpRegen="2.7" />
+			<attack physical="17906" magical="1669" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="638" magical="929" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -70,11 +68,9 @@
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14047" level="4" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -99,11 +95,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1287461" sp="5360" />
 		<stats>
-			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="98357" hpRegen="7.5" mp="4764" mpRegen="2.7" />
+			<attack physical="17906" magical="1669" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="580" magical="844" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -116,9 +112,9 @@
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14047" level="4" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -144,11 +140,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="569701" sp="2264" />
 		<stats>
-			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
-			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="990" magical="960" />
+			<vitals hp="41547" hpRegen="7.5" mp="4437" mpRegen="2.7" />
+			<attack physical="13156" magical="1084" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="748" />
 			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -162,7 +158,9 @@
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14049" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -189,11 +187,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1211505" sp="4933" />
 		<stats>
-			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
-			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1300" magical="1250" />
+			<vitals hp="96097" hpRegen="7.5" mp="4600" mpRegen="2.7" />
+			<attack physical="16105" magical="1571" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="552" magical="795" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -207,9 +205,9 @@
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14049" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="3" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -236,11 +234,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="892271" sp="3593" />
 		<stats>
-			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1020" magical="980" />
+			<vitals hp="71689" hpRegen="7.5" mp="4518" mpRegen="2.7" />
+			<attack physical="13873" magical="1126" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="538" magical="771" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -254,7 +252,9 @@
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14049" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -280,11 +280,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="643256" sp="2590" />
 		<stats>
-			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
-			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1020" magical="980" />
+			<vitals hp="47793" hpRegen="7.5" mp="4518" mpRegen="2.7" />
+			<attack physical="13873" magical="1126" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="538" magical="771" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -298,7 +298,9 @@
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14049" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -325,11 +327,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="998082" sp="4105" />
 		<stats>
-			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
-			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1325" magical="1275" />
+			<vitals hp="73368" hpRegen="7.5" mp="4681" mpRegen="2.7" />
+			<attack physical="16982" magical="1619" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="566" magical="819" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -343,9 +345,9 @@
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14049" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="4" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -371,11 +373,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="2045722" sp="8596" />
 		<stats>
-			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
-			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1513" magical="1458" />
+			<vitals hp="150173" hpRegen="7.5" mp="4846" mpRegen="2.7" />
+			<attack physical="20768" magical="2076" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="655" magical="957" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -389,11 +391,9 @@
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14049" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="4" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -421,11 +421,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1741611" sp="7250" />
 		<stats>
-			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1485" magical="1430" />
+			<vitals hp="122946" hpRegen="7.5" mp="4764" mpRegen="2.7" />
+			<attack physical="17906" magical="1669" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="638" magical="929" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -439,11 +439,9 @@
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14049" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="4" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -469,11 +467,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1287461" sp="5360" />
 		<stats>
-			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
-			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="98357" hpRegen="7.5" mp="4764" mpRegen="2.7" />
+			<attack physical="17906" magical="1669" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="580" magical="844" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -487,9 +485,9 @@
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14049" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14046" level="4" />
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -515,11 +513,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="4844514" sp="20742" />
 		<stats>
-			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="96854" magical="37605" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="894" magical="770" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="80" />
@@ -531,7 +529,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="4" />
 			<skill id="14001" level="1" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -558,11 +558,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="5586196" sp="24109" />
 		<stats>
-			<vitals hp="557945" hpRegen="7.5" mp="557945" mpRegen="2.7" />
-			<attack physical="34030" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1640" magical="1680" />
+			<vitals hp="557946" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="169518" magical="79583" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="917" magical="794" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -574,8 +574,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4410" level="9" /> -->
+			<skill id="4415" level="4" />
 			<skill id="14001" level="1" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -603,11 +604,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="13008782" sp="56595" />
 		<stats>
-			<vitals hp="1231496" hpRegen="7.5" mp="1231496" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1710" />
+			<vitals hp="1231497" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="215470" magical="84312" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="940" magical="818" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -619,7 +620,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="4" />
 			<skill id="14001" level="1" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -647,11 +650,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="4844514" sp="20742" />
 		<stats>
-			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="112351" magical="37605" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="894" magical="770" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -662,7 +665,9 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" />
+			<skill id="4415" level="12" />
 			<skill id="5467" level="1" />
+			<skill id="14765" level="3" />
 			<skill id="14004" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -688,11 +693,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="5586196" sp="24109" />
 		<stats>
-			<vitals hp="557945" hpRegen="7.5" mp="557945" mpRegen="2.7" />
-			<attack physical="34030" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="1640" magical="1680" />
+			<vitals hp="557946" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="196641" magical="79583" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="917" magical="794" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -703,8 +708,9 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" />
+			<skill id="4415" level="12" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4410" level="9" /> -->
+			<skill id="14765" level="4" />
 			<skill id="14004" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -730,11 +736,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="13008782" sp="56595" />
 		<stats>
-			<vitals hp="1231496" hpRegen="7.5" mp="1231496" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="1680" magical="1710" />
+			<vitals hp="1231497" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="249945" magical="84312" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="940" magical="818" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -745,7 +751,9 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" />
+			<skill id="4415" level="12" />
 			<skill id="5467" level="1" />
+			<skill id="14765" level="4" />
 			<skill id="14004" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -772,11 +780,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="4844514" sp="20742" />
 		<stats>
-			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="96854" magical="37605" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="715" magical="616" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -788,7 +796,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="10" />
 			<skill id="14006" level="1" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -816,11 +826,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="5586196" sp="24109" />
 		<stats>
-			<vitals hp="557945" hpRegen="7.5" mp="557945" mpRegen="2.7" />
-			<attack physical="34030" magical="30750" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
-			<defence physical="1640" magical="1680" />
+			<vitals hp="557946" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="169518" magical="79583" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="734" magical="635" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -832,8 +842,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="10" />
 			<skill id="14006" level="1" />
-			<!-- <skill id="4410" level="9" /> -->
+			<skill id="14765" level="4" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -861,11 +872,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="13008782" sp="56595" />
 		<stats>
-			<vitals hp="1231496" hpRegen="7.5" mp="1231496" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
-			<defence physical="1680" magical="1710" />
+			<vitals hp="1231497" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="215470" magical="84312" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="752" magical="654" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -877,7 +888,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="10" />
 			<skill id="14006" level="1" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -907,11 +920,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="12705626" sp="54835" />
 		<stats>
-			<vitals hp="322511" hpRegen="7.5" mp="322511" mpRegen="2.7" />
-			<attack physical="45100" magical="30750" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
-			<defence physical="1640" magical="1680" />
+			<vitals hp="1115891" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="224662" magical="79583" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="734" magical="635" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -923,8 +936,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="10" />
 			<skill id="14007" level="1" />
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="14765" level="4" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -953,11 +967,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="4844514" sp="20742" />
 		<stats>
-			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="556924" hpRegen="7.5" mp="50127" mpRegen="2.7" />
+			<attack physical="133659" magical="76466" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="770" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -969,6 +983,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="14009" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -993,11 +1009,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="5586196" sp="24109" />
 		<stats>
-			<vitals hp="557945" hpRegen="7.5" mp="557945" mpRegen="2.7" />
-			<attack physical="41000" magical="21218" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1640" magical="1680" />
+			<vitals hp="557946" hpRegen="7.5" mp="50968" mpRegen="2.7" />
+			<attack physical="281849" magical="111863" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="734" magical="794" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1009,7 +1025,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
-			<!-- <skill id="4411" level="9" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="14009" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -1034,11 +1051,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="13008782" sp="56595" />
 		<stats>
-			<vitals hp="1231496" hpRegen="7.5" mp="1231496" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1710" />
+			<vitals hp="1231497" hpRegen="7.5" mp="51813" mpRegen="2.7" />
+			<attack physical="297349" magical="171961" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="752" magical="818" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="200" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1050,6 +1067,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="14009" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -1074,11 +1093,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="21113182" sp="91120" />
 		<stats>
-			<vitals hp="3347670" hpRegen="7.5" mp="3347670" mpRegen="2.7" />
-			<attack physical="41000" magical="30750" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1640" magical="1680" />
+			<vitals hp="3347671" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="140925" magical="39792" random="30" critical="1" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="917" magical="794" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1089,8 +1108,10 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" />
+			<skill id="4415" level="5" />
 			<skill id="14012" level="1" />
 			<skill id="5467" level="1" />
+			<skill id="14765" level="4" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -1116,11 +1137,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="33987470" sp="147863" />
 		<stats>
-			<vitals hp="3694489" hpRegen="7.5" mp="3694489" mpRegen="2.7" />
-			<attack physical="55860" magical="31500" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1710" />
+			<vitals hp="3694490" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="249320" magical="84312" random="30" critical="1" accuracy="4.75" attackSpeed="289" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="940" magical="818" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -1131,9 +1152,10 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" />
+			<skill id="4415" level="6" />
 			<skill id="14012" level="1" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="14765" level="4" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -1160,11 +1182,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="21113182" sp="91120" />
 		<stats>
-			<vitals hp="3347670" hpRegen="7.5" mp="3347670" mpRegen="2.7" />
-			<attack physical="41000" magical="30750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1640" magical="1680" />
+			<vitals hp="3347671" hpRegen="7.5" mp="50968" mpRegen="2.7" />
+			<attack physical="140925" magical="81061" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="734" magical="794" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1176,6 +1198,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="14009" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -1200,11 +1224,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="33987470" sp="147863" />
 		<stats>
-			<vitals hp="3694489" hpRegen="7.5" mp="3694489" mpRegen="2.7" />
-			<attack physical="42000" magical="55755" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1710" />
+			<vitals hp="3694490" hpRegen="7.5" mp="51813" mpRegen="2.7" />
+			<attack physical="297349" magical="304370" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="752" magical="818" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="200" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1216,7 +1240,8 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="14009" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -1242,11 +1267,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="3694489" hpRegen="7.5" mp="3694489" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1710" />
+			<vitals hp="3694490" hpRegen="7.5" mp="51813" mpRegen="2.7" />
+			<attack physical="148675" magical="85981" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="752" magical="818" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1259,11 +1284,14 @@
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14032" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="11556" level="1" />
 			<skill id="14034" level="1" />
 			<skill id="14033" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="5549" level="1" />
 		</skillList>
-		<ai aggroRange="600" clanHelpRange="1200"  />
+		<ai aggroRange="1500" clanHelpRange="1500" />
 		<collision>
 			<radius normal="25" />
 			<height normal="67" />
@@ -1273,11 +1301,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BEAST</race>
 		<stats>
-			<vitals hp="52324" hpRegen="7.5" mp="52324" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1710" />
+			<vitals hp="52325" hpRegen="7.5" mp="5013" mpRegen="2.7" />
+			<attack physical="9651" magical="3922" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="633" magical="779" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1289,10 +1317,12 @@
 		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
 			<skill id="14037" level="1" />
 			<skill id="14036" level="1" />
 		</skillList>
-		<ai aggroRange="600" clanHelpRange="1200"  />
+		<ai aggroRange="1500" clanHelpRange="1500" />
 		<collision>
 			<radius normal="40" />
 			<height normal="26" />
@@ -1302,11 +1332,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="1231496" hpRegen="7.5" mp="1231496" mpRegen="2.7" />
-			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1680" magical="1710" />
+			<vitals hp="1231497" hpRegen="7.5" mp="51813" mpRegen="2.7" />
+			<attack physical="148675" magical="85981" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="752" magical="818" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -1318,12 +1348,15 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14282" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="5549" level="1" />
 			<skill id="14010" level="3" />
 			<skill id="14011" level="3" />
 			<skill id="14009" level="3" />
 		</skillList>
-		<ai aggroRange="600" clanHelpRange="1200"  />
+		<ai aggroRange="1500" clanHelpRange="1500" />
 		<collision>
 			<radius normal="16" />
 			<height normal="36.5" />
@@ -1334,11 +1367,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1033874" sp="4002" />
 		<stats>
-			<vitals hp="91736" hpRegen="7.5" mp="91736" mpRegen="2.7" />
-			<attack physical="33945" magical="15500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="930" magical="920" />
+			<vitals hp="483120" hpRegen="7.5" mp="28510" mpRegen="2.7" />
+			<attack physical="40302" magical="16054" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="456" magical="376" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -1351,7 +1384,8 @@
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14448" level="1" />
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -1378,11 +1412,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1033874" sp="4002" />
 		<stats>
-			<vitals hp="91736" hpRegen="7.5" mp="91736" mpRegen="2.7" />
-			<attack physical="30923" magical="15500" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
-			<defence physical="930" magical="920" />
+			<vitals hp="483120" hpRegen="7.5" mp="28510" mpRegen="2.7" />
+			<attack physical="73011" magical="16054" random="30" critical="8" accuracy="4.75" attackSpeed="162" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="456" magical="376" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -1394,8 +1428,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
+			<skill id="4415" level="9" />
 			<skill id="14448" level="1" />
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -1423,11 +1458,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1058404" sp="4162" />
 		<stats>
-			<vitals hp="93399" hpRegen="7.5" mp="93399" mpRegen="2.7" />
-			<attack physical="35040" magical="16000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="960" magical="940" />
+			<vitals hp="966240" hpRegen="7.5" mp="28510" mpRegen="2.7" />
+			<attack physical="40302" magical="16054" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="569" magical="469" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -1440,7 +1475,8 @@
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14448" level="1" />
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -1466,11 +1502,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1033874" sp="4002" />
 		<stats>
-			<vitals hp="91736" hpRegen="7.5" mp="91736" mpRegen="2.7" />
-			<attack physical="28133" magical="15500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="930" magical="920" />
+			<vitals hp="966240" hpRegen="7.5" mp="28510" mpRegen="2.7" />
+			<attack physical="40302" magical="16054" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="569" magical="469" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1483,7 +1519,8 @@
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="14448" level="1" />
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -1508,11 +1545,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1008723" sp="3850" />
 		<stats>
-			<vitals hp="91265" hpRegen="7.5" mp="91265" mpRegen="2.7" />
-			<attack physical="27225" magical="21900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="900" magical="900" />
+			<vitals hp="483120" hpRegen="7.5" mp="42764" mpRegen="2.7" />
+			<attack physical="40302" magical="32107" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="456" magical="469" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1525,8 +1562,8 @@
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="14448" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -1553,11 +1590,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1008723" sp="3850" />
 		<stats>
-			<vitals hp="91265" hpRegen="7.5" mp="91265" mpRegen="2.7" />
-			<attack physical="27225" magical="21900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="900" magical="900" />
+			<vitals hp="483120" hpRegen="7.5" mp="42764" mpRegen="2.7" />
+			<attack physical="40302" magical="32107" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="456" magical="469" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1571,8 +1608,8 @@
 			<skill id="5465" level="1" />
 			<skill id="14609" level="1" />
 			<skill id="14448" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -1647,11 +1684,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1008723" sp="3850" />
 		<stats>
-			<vitals hp="91265" hpRegen="7.5" mp="91265" mpRegen="2.7" />
-			<attack physical="27225" magical="21900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="900" magical="900" />
+			<vitals hp="483120" hpRegen="7.5" mp="42764" mpRegen="2.7" />
+			<attack physical="40302" magical="32107" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="456" magical="469" />
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1664,8 +1701,8 @@
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="14448" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2058,11 +2095,11 @@
 		<race>BEAST</race>
 		<acquire exp="4175343" sp="17000" />
 		<stats>
-			<vitals hp="511792" hpRegen="7.5" mp="511792" mpRegen="2.7" />
-			<attack physical="30625" magical="31938" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1300" magical="1250" />
+			<vitals hp="511793" hpRegen="7.5" mp="45991" mpRegen="2.7" />
+			<attack physical="102481" magical="83272" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="630" magical="662" />
 			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="23" />
@@ -2074,8 +2111,9 @@
 		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
 			<skill id="14068" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2100,11 +2138,11 @@
 		<race>BUG</race>
 		<acquire exp="3978054" sp="16197" />
 		<stats>
-			<vitals hp="511792" hpRegen="7.5" mp="511792" mpRegen="2.7" />
-			<attack physical="30625" magical="21875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1300" magical="1250" />
+			<vitals hp="511793" hpRegen="7.5" mp="30661" mpRegen="2.7" />
+			<attack physical="102481" magical="28292" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="788" magical="662" />
 			<attribute>
-				<defence fire="175" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2116,6 +2154,8 @@
 		<skillList>
 			<skill id="4416" level="12" />
 			<skill id="5464" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
 			<skill id="14069" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -2141,11 +2181,11 @@
 		<race>BEAST</race>
 		<acquire exp="4497028" sp="18496" />
 		<stats>
-			<vitals hp="525953" hpRegen="7.5" mp="525953" mpRegen="2.7" />
-			<attack physical="45990" magical="22500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1325" magical="1275" />
+			<vitals hp="525954" hpRegen="7.5" mp="31206" mpRegen="2.7" />
+			<attack physical="157770" magical="29943" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="808" magical="683" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="36" />
@@ -2157,8 +2197,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
 			<skill id="14070" level="1" />
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2183,11 +2224,11 @@
 		<race>ANIMAL</race>
 		<acquire exp="10443620" sp="43475" />
 		<stats>
-			<vitals hp="1053491" hpRegen="7.5" mp="1053491" mpRegen="2.7" />
-			<attack physical="32375" magical="23125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="1053492" hpRegen="7.5" mp="31755" mpRegen="2.7" />
+			<attack physical="227887" magical="63378" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="51" />
@@ -2199,6 +2240,8 @@
 		<skillList>
 			<skill id="4416" level="4" />
 			<skill id="5465" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="14072" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -2227,11 +2270,11 @@
 		<race>UNDEAD</race>
 		<acquire exp="4175343" sp="17000" />
 		<stats>
-			<vitals hp="511792" hpRegen="7.5" mp="511792" mpRegen="2.7" />
-			<attack physical="37056" magical="21875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1300" magical="1250" />
+			<vitals hp="511793" hpRegen="7.5" mp="30661" mpRegen="2.7" />
+			<attack physical="124002" magical="28292" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="788" magical="662" />
 			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="147" dark="233" />
+				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="36" />
@@ -2243,8 +2286,9 @@
 		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14073" level="1" />
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="14765" level="2" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2270,11 +2314,11 @@
 		<race>FAIRY</race>
 		<acquire exp="4186788" sp="17428" />
 		<stats>
-			<vitals hp="526745" hpRegen="7.5" mp="526745" mpRegen="2.7" />
-			<attack physical="32375" magical="23125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="526746" hpRegen="7.5" mp="31755" mpRegen="2.7" />
+			<attack physical="113944" magical="31689" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
-				<defence fire="195" water="220" wind="243" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -2286,6 +2330,8 @@
 		<skillList>
 			<skill id="6578" level="1" />
 			<skill id="5464" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="4416" level="13" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -2314,11 +2360,11 @@
 		<race>BUG</race>
 		<acquire exp="4186788" sp="17428" />
 		<stats>
-			<vitals hp="526745" hpRegen="7.5" mp="526745" mpRegen="2.7" />
-			<attack physical="32375" magical="23125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="526746" hpRegen="7.5" mp="47632" mpRegen="2.7" />
+			<attack physical="113944" magical="64124" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="663" magical="704" />
 			<attribute>
-				<defence fire="195" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -2330,6 +2376,8 @@
 		<skillList>
 			<skill id="4416" level="12" />
 			<skill id="5464" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 			<skill id="14069" level="1" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -2357,11 +2405,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="11541723" sp="48921" />
 		<stats>
-			<vitals hp="1084251" hpRegen="7.5" mp="1084251" mpRegen="2.7" />
-			<attack physical="41291" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="1084252" hpRegen="7.5" mp="32861" mpRegen="2.7" />
+			<attack physical="306564" magical="70976" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="872" magical="747" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="13" />
@@ -2374,7 +2422,8 @@
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="14077" level="1" />
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2401,11 +2450,11 @@
 		<race>ANIMAL</race>
 		<acquire exp="10992117" sp="46591" />
 		<stats>
-			<vitals hp="1084251" hpRegen="7.5" mp="1084251" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="1084252" hpRegen="7.5" mp="32861" mpRegen="2.7" />
+			<attack physical="253359" magical="70976" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="872" magical="747" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="51" />
@@ -2418,6 +2467,8 @@
 			<skill id="4416" level="4" />
 			<skill id="5464" level="1" />
 			<skill id="14078" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2443,11 +2494,11 @@
 		<race>BEAST</race>
 		<acquire exp="7886975" sp="33140" />
 		<stats>
-			<vitals hp="1082441" hpRegen="7.5" mp="1082441" mpRegen="2.7" />
-			<attack physical="40233" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1375" magical="1325" />
+			<vitals hp="1082442" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="145374" magical="33536" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="36" />
@@ -2459,8 +2510,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
 			<skill id="14079" level="1" />
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2486,11 +2538,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="4398430" sp="18481" />
 		<stats>
-			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
-			<attack physical="36575" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1375" magical="1325" />
+			<vitals hp="541221" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="132159" magical="33536" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="57" />
@@ -2503,7 +2555,8 @@
 			<skill id="14081" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2534,11 +2587,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="11541723" sp="48921" />
 		<stats>
-			<vitals hp="1084251" hpRegen="7.5" mp="1084251" mpRegen="2.7" />
-			<attack physical="41291" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="1084252" hpRegen="7.5" mp="32861" mpRegen="2.7" />
+			<attack physical="306564" magical="70976" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="872" magical="747" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="13" />
@@ -2551,7 +2604,8 @@
 			<skill id="14082" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2577,11 +2631,11 @@
 		<race>ANIMAL</race>
 		<acquire exp="890966" sp="3708" />
 		<stats>
-			<vitals hp="263372" hpRegen="7.5" mp="263372" mpRegen="2.7" />
-			<attack physical="29461" magical="23125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="131687" hpRegen="7.5" mp="31755" mpRegen="2.7" />
+			<attack physical="103689" magical="31689" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="51" />
@@ -2594,7 +2648,8 @@
 			<skill id="4416" level="4" />
 			<skill id="5465" level="1" />
 			<skill id="6602" level="1" />
-			<!-- <skill id="4410" level="10" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2619,11 +2674,11 @@
 		<race>ANIMAL</race>
 		<acquire exp="10992117" sp="46591" />
 		<stats>
-			<vitals hp="1084251" hpRegen="7.5" mp="1084251" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="1084252" hpRegen="7.5" mp="32861" mpRegen="2.7" />
+			<attack physical="253359" magical="70976" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="872" magical="747" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="51" />
@@ -2636,6 +2691,8 @@
 			<skill id="4416" level="4" />
 			<skill id="5465" level="1" />
 			<skill id="14084" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2660,11 +2717,11 @@
 		<race>BEAST</race>
 		<acquire exp="4394428" sp="18293" />
 		<stats>
-			<vitals hp="526745" hpRegen="7.5" mp="526745" mpRegen="2.7" />
-			<attack physical="32375" magical="33763" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="526746" hpRegen="7.5" mp="47632" mpRegen="2.7" />
+			<attack physical="113944" magical="93621" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="663" magical="704" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="23" />
@@ -2676,8 +2733,9 @@
 		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
 			<skill id="14068" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2702,11 +2760,11 @@
 		<race>BEAST</race>
 		<acquire exp="8281904" sp="34800" />
 		<stats>
-			<vitals hp="1082441" hpRegen="7.5" mp="1082441" mpRegen="2.7" />
-			<attack physical="48545" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1375" magical="1325" />
+			<vitals hp="1082442" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="175410" magical="33536" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="36" />
@@ -2718,8 +2776,9 @@
 		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
 			<skill id="14079" level="1" />
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2745,11 +2804,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="4398430" sp="18481" />
 		<stats>
-			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
-			<attack physical="36575" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1375" magical="1325" />
+			<vitals hp="541221" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="132159" magical="33536" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="57" />
@@ -2762,7 +2821,8 @@
 			<skill id="14081" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2829,11 +2889,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="823011" sp="3426" />
 		<stats>
-			<vitals hp="263372" hpRegen="7.5" mp="263372" mpRegen="2.7" />
-			<attack physical="32375" magical="23125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="263373" hpRegen="7.5" mp="31755" mpRegen="2.7" />
+			<attack physical="113944" magical="31689" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2846,6 +2906,8 @@
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14130" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2874,11 +2936,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="823011" sp="3426" />
 		<stats>
-			<vitals hp="263372" hpRegen="7.5" mp="263372" mpRegen="2.7" />
-			<attack physical="32375" magical="23125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="263373" hpRegen="7.5" mp="47632" mpRegen="2.7" />
+			<attack physical="113944" magical="64124" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="663" magical="704" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2890,7 +2952,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14132" level="1" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2918,11 +2982,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="864539" sp="3599" />
 		<stats>
-			<vitals hp="263372" hpRegen="7.5" mp="263372" mpRegen="2.7" />
-			<attack physical="39174" magical="23125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="263373" hpRegen="7.5" mp="31755" mpRegen="2.7" />
+			<attack physical="137872" magical="31689" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2935,7 +2999,8 @@
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14130" level="1" />
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2964,11 +3029,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1895388" sp="8034" />
 		<stats>
-			<vitals hp="542125" hpRegen="7.5" mp="542125" mpRegen="2.7" />
-			<attack physical="45386" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="542126" hpRegen="7.5" mp="32861" mpRegen="2.7" />
+			<attack physical="168484" magical="35488" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="872" magical="747" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2981,7 +3046,8 @@
 			<skill id="14134" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4410" level="14" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3009,11 +3075,11 @@
 		<race>DEMONIC</race>
 		<acquire exp="1804285" sp="7582" />
 		<stats>
-			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
-			<attack physical="40233" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1375" magical="1325" />
+			<vitals hp="541221" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="145374" magical="33536" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="207" dark="404" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -3026,7 +3092,8 @@
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<skill id="14130" level="1" />
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="1" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3052,11 +3119,11 @@
 		<race>DEMONIC</race>
 		<acquire exp="1804285" sp="7582" />
 		<stats>
-			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
-			<attack physical="33250" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1375" magical="1325" />
+			<vitals hp="541221" hpRegen="7.5" mp="48459" mpRegen="2.7" />
+			<attack physical="120144" magical="99261" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="680" magical="725" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="207" dark="404" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3069,7 +3136,8 @@
 			<skill id="14131" level="1" />
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3096,11 +3164,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1760287" sp="7461" />
 		<stats>
-			<vitals hp="542125" hpRegen="7.5" mp="542125" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="542126" hpRegen="7.5" mp="32861" mpRegen="2.7" />
+			<attack physical="126680" magical="35488" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="872" magical="747" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3113,6 +3181,8 @@
 			<skill id="14143" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3143,11 +3213,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1760287" sp="7461" />
 		<stats>
-			<vitals hp="542125" hpRegen="7.5" mp="542125" mpRegen="2.7" />
-			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1400" magical="1350" />
+			<vitals hp="542126" hpRegen="7.5" mp="49291" mpRegen="2.7" />
+			<attack physical="126680" magical="72079" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="698" magical="747" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3159,7 +3229,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14145" level="1" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3188,11 +3260,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="1938618" sp="8300" />
 		<stats>
-			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
-			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1600" magical="1650" />
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="133659" magical="37605" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="894" magical="770" />
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3204,7 +3276,9 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
 			<skill id="14147" level="1" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3234,11 +3308,11 @@
 		<race>DEMONIC</race>
 		<acquire exp="100964" sp="425" />
 		<stats>
-			<vitals hp="25028" hpRegen="7.5" mp="25028" mpRegen="2.7" />
-			<attack physical="33250" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1375" magical="1325" />
+			<vitals hp="25029" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="17164" magical="4791" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="850" magical="725" />
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="207" dark="404" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3250,6 +3324,8 @@
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="13" />
@@ -3275,11 +3351,11 @@
 		<race>DEMONIC</race>
 		<acquire exp="6365" sp="267" />
 		<stats>
-			<vitals hp="1085" hpRegen="7.5" mp="1085" mpRegen="2.7" />
-			<attack physical="37" magical="25" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="81" magical="54" />
+			<vitals hp="1629" hpRegen="7.5" mp="237" mpRegen="2.7" />
+			<attack physical="81" magical="25" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="95" magical="86" />
 			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -3290,6 +3366,7 @@
 		<status attackable="true" targetable="true" showName="true" />
 		<skillList>
 			<skill id="4416" level="9" />
+			<skill id="4415" level="3" />
 			<skill id="14136" level="1" />
 		</skillList>
 		<collision>
@@ -3310,11 +3387,11 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<stats>
-			<vitals hp="526745" hpRegen="7.5" mp="526745" mpRegen="2.7" />
-			<attack physical="32375" magical="23125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1350" magical="1300" />
+			<vitals hp="526746" hpRegen="7.5" mp="31755" mpRegen="2.7" />
+			<attack physical="113944" magical="31689" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829" magical="704" />
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3327,6 +3404,8 @@
 			<skill id="14143" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -3380,11 +3459,11 @@
 		<race>HUMAN</race>
 		<acquire exp="330" sp="3" />
 		<stats>
-			<vitals hp="198" hpRegen="7.5" mp="198" mpRegen="2.7" />
-			<attack physical="23" magical="13" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="51" magical="31" />
+			<vitals hp="199" hpRegen="7.5" mp="115" mpRegen="2.7" />
+			<attack physical="32" magical="8" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="47" magical="39" />
 			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
 			</attribute>
 			<speed>
 				<walk ground="10" />
@@ -3396,9 +3475,7 @@
 		<skillList>
 			<skill id="14156" level="1" />
 			<skill id="4416" level="14" />
-			<!-- <skill id="4412" level="9" /> -->
-			<!-- <skill id="4413" level="8" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="3" />
 		</skillList>
 		<ai aggroRange="200" clanHelpRange="200" />
 		<collision>
@@ -3514,11 +3591,11 @@
 		<race>HUMAN</race>
 		<acquire exp="717" sp="6" />
 		<stats>
-			<vitals hp="478" hpRegen="7.5" mp="478" mpRegen="2.7" />
-			<attack physical="62" magical="4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="217" magical="115" />
+			<vitals hp="479" hpRegen="7.5" mp="216" mpRegen="2.7" />
+			<attack physical="68" magical="30" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="67" magical="66" />
 			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -3529,10 +3606,8 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="14" />
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4412" level="8" /> -->
+			<skill id="4415" level="3" />
 			<skill id="14162" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
 		</skillList>
 		<collision>
 			<radius normal="31" />
@@ -3556,11 +3631,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="559" sp="5" />
 		<stats>
-			<vitals hp="365" hpRegen="7.5" mp="365" mpRegen="2.7" />
-			<attack physical="19" magical="19" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="46" magical="34" />
+			<vitals hp="366" hpRegen="7.5" mp="174" mpRegen="2.7" />
+			<attack physical="47" magical="20" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="56" magical="55" />
 			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
 			</attribute>
 			<speed>
 				<walk ground="15" />
@@ -3572,9 +3647,7 @@
 		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="14164" level="1" />
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4412" level="8" /> -->
-			<!-- <skill id="4411" level="13" /> -->
+			<skill id="4415" level="3" />
 		</skillList>
 		<ai aggroRange="200" clanHelpRange="200" />
 		<collision>
@@ -3601,11 +3674,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="992" sp="5" />
 		<stats>
-			<vitals hp="478" hpRegen="7.5" mp="478" mpRegen="2.7" />
-			<attack physical="45" magical="37" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
-			<defence physical="62" magical="45" />
+			<vitals hp="479" hpRegen="7.5" mp="216" mpRegen="2.7" />
+			<attack physical="147" magical="30" random="30" critical="8" accuracy="4.75" attackSpeed="162" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="67" magical="66" />
 			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -3616,10 +3689,7 @@
 		<status attackable="true" targetable="true" showName="true" />
 		<skillList>
 			<skill id="4416" level="6" />
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4412" level="8" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="9" />
 			<skill id="14167" level="1" />
 		</skillList>
 		<collision>
@@ -3645,11 +3715,11 @@
 		<race>HUMANOID</race>
 		<acquire exp="992" sp="5" />
 		<stats>
-			<vitals hp="478" hpRegen="7.5" mp="478" mpRegen="2.7" />
-			<attack physical="45" magical="37" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="62" magical="45" />
+			<vitals hp="479" hpRegen="7.5" mp="216" mpRegen="2.7" />
+			<attack physical="82" magical="30" random="30" critical="4" accuracy="4.75" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="67" magical="66" />
 			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
@@ -3661,10 +3731,7 @@
 		<skillList>
 			<skill id="14169" level="1" />
 			<skill id="4416" level="6" />
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4412" level="8" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4415" level="3" />
 		</skillList>
 		<collision>
 			<radius normal="6" />
