@@ -49690,7 +49690,7 @@ INSERT INTO `spawnlist` VALUES
 -- Hunters Village
 INSERT INTO `spawnlist` VALUES 
 ('HuntersVillage', 1, 34018, 116503, 75392, -2712, 0, 0, 12298, 60, 0, 0, 0),
-('HuntersVillage', 1, 33918, 116390, 75387, -2712, 0, 0, 12298, 60, 0, 0, 0),
+('HuntersVillage', 1, 33918, 116390, 75387, -2712, 0, 0, 12298, 60, 0, 0, 0);
 
 -- Imperial Tomb
 INSERT INTO `spawnlist` VALUES
