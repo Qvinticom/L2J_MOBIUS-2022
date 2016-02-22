@@ -17,6 +17,7 @@
 package handlers.admincommandhandlers;
 
 import java.awt.Color;
+import java.util.List;
 
 import com.l2jmobius.gameserver.data.xml.impl.WallData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -46,20 +47,24 @@ public class AdminWall implements IAdminCommandHandler
 		if (command.equals("admin_showwalls"))
 		{
 			final ExServerPrimitive packet = new ExServerPrimitive("wall_info", activeChar.getX(), activeChar.getY(), -16000);
-			for (WallHolder wall : WallData.getInstance().getRegionWalls(activeChar.getX(), activeChar.getY()))
+			final List<WallHolder> allWalls = WallData.getInstance().getRegionWalls(activeChar.getX(), activeChar.getY());
+			if (allWalls != null)
 			{
-				if ((Util.calculateDistance(activeChar.getX(), activeChar.getY(), activeChar.getZ(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMin(), false, false) < 3000) //
-					|| (Util.calculateDistance(activeChar.getX(), activeChar.getY(), activeChar.getZ(), wall.getPoint1X(), wall.getPoint1Y(), wall.getZMin(), false, false) < 3000))
+				for (WallHolder wall : allWalls)
 				{
-					// top-bottom
-					packet.addLine(Color.GREEN, wall.getPoint1X(), wall.getPoint1Y(), wall.getZMax(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMax());
-					packet.addLine(Color.GREEN, wall.getPoint1X(), wall.getPoint1Y(), wall.getZMin(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMin());
-					// left-right
-					packet.addLine(Color.GREEN, wall.getPoint1X(), wall.getPoint1Y(), wall.getZMin(), wall.getPoint1X(), wall.getPoint1Y(), wall.getZMax());
-					packet.addLine(Color.GREEN, wall.getPoint2X(), wall.getPoint2Y(), wall.getZMin(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMax());
-					// diagonals
-					packet.addLine(Color.GREEN, wall.getPoint1X(), wall.getPoint1Y(), wall.getZMin(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMax());
-					packet.addLine(Color.GREEN, wall.getPoint1X(), wall.getPoint1Y(), wall.getZMax(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMin());
+					if ((Util.calculateDistance(activeChar.getX(), activeChar.getY(), activeChar.getZ(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMin(), false, false) < 3000) //
+						|| (Util.calculateDistance(activeChar.getX(), activeChar.getY(), activeChar.getZ(), wall.getPoint1X(), wall.getPoint1Y(), wall.getZMin(), false, false) < 3000))
+					{
+						// top-bottom
+						packet.addLine(Color.GREEN, wall.getPoint1X(), wall.getPoint1Y(), wall.getZMax(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMax());
+						packet.addLine(Color.GREEN, wall.getPoint1X(), wall.getPoint1Y(), wall.getZMin(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMin());
+						// left-right
+						packet.addLine(Color.GREEN, wall.getPoint1X(), wall.getPoint1Y(), wall.getZMin(), wall.getPoint1X(), wall.getPoint1Y(), wall.getZMax());
+						packet.addLine(Color.GREEN, wall.getPoint2X(), wall.getPoint2Y(), wall.getZMin(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMax());
+						// diagonals
+						packet.addLine(Color.GREEN, wall.getPoint1X(), wall.getPoint1Y(), wall.getZMin(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMax());
+						packet.addLine(Color.GREEN, wall.getPoint1X(), wall.getPoint1Y(), wall.getZMax(), wall.getPoint2X(), wall.getPoint2Y(), wall.getZMin());
+					}
 				}
 			}
 			activeChar.sendPacket(packet);
