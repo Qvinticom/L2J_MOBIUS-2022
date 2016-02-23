@@ -9,7 +9,7 @@
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="656224" hpRegen="39.4112754681274" mp="557.4" mpRegen="2.1" />
-			<attack physical="583.088791057736" magical="119.062093508884" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="583.088791057736" magical="119.062093508884" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="253.701255" magical="247.54" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="53" earth="20" holy="20" dark="20" />
@@ -45,7 +45,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="656224" hpRegen="39.4112754681274" mp="557.4" mpRegen="2.1" />
-			<attack physical="583.088791057736" magical="119.062093508884" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="583.088791057736" magical="119.062093508884" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="253.701255" magical="247.54" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -89,7 +89,7 @@
 		<acquire exp="5918766" sp="1420" raidPoints="764" />
 		<stats>
 			<vitals hp="380870" hpRegen="108.35639820142" mp="610" mpRegen="2.1" />
-			<attack physical="667.348949019213" magical="142.928040387499" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="667.348949019213" magical="142.928040387499" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="533.36238" magical="260.2" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -156,7 +156,7 @@
 		<acquire exp="22247944" sp="5339" raidPoints="1068" />
 		<stats>
 			<vitals hp="189660.129360453" hpRegen="64.1713408913048" mp="889.8" mpRegen="2.4" />
-			<attack physical="610.439011291351" magical="93.5186493178929" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="610.439011291351" magical="93.5186493178929" random="50" critical="1" accuracy="91" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="670.9086" magical="327.3" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -225,7 +225,7 @@
 		<equipment rhand="95" /> <!-- rhand: Poleaxe -->
 		<stats>
 			<vitals hp="29260.9404249556" hpRegen="62.194388632129" mp="861.0" mpRegen="2.4" />
-			<attack physical="2312.08069139469" magical="1393.84679470785" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<attack physical="2312.08069139469" magical="1393.84679470785" random="10" critical="8" accuracy="100" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="328.343835" magical="320.36" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -261,7 +261,7 @@
 		<equipment rhand="131" /> <!-- rhand: Spirit Sword -->
 		<stats>
 			<vitals hp="14630.4702124778" hpRegen="62.194388632129" mp="861.0" mpRegen="2.4" />
-			<attack physical="1156.04034569734" magical="348.461698676962" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1156.04034569734" magical="348.461698676962" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.343835" magical="320.36" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -305,7 +305,7 @@
 		<acquire exp="34637834" sp="8313" raidPoints="1240" />
 		<stats>
 			<vitals hp="347452" hpRegen="72.9643823396131" mp="1036" mpRegen="2.4" />
-			<attack physical="785.177450040489" magical="133.511957686818" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="785.177450040489" magical="133.511957686818" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="742.95024" magical="362.44" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -362,7 +362,7 @@
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
 		<stats>
 			<vitals hp="23070.2557526169" hpRegen="71.371053660127" mp="1007.0" mpRegen="2.4" />
-			<attack physical="1497.55052117409" magical="490.541905286893" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<attack physical="1497.55052117409" magical="490.541905286893" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="364.223895" magical="355.36" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -399,7 +399,7 @@
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
 		<stats>
 			<vitals hp="17216.6087706096" hpRegen="71.371053660127" mp="1007.0" mpRegen="2.4" />
-			<attack physical="1497.55052117409" magical="490.541905286893" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1497.55052117409" magical="490.541905286893" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="364.223895" magical="355.36" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -443,7 +443,7 @@
 		<acquire exp="5199406" sp="1247" raidPoints="3112" />
 		<stats>
 			<vitals hp="392895.926408634" hpRegen="122.142751323234" mp="1475.0" mpRegen="3" />
-			<attack physical="2396.99018807273" magical="851.89721101842" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="2396.99018807273" magical="851.89721101842" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="943.97961" magical="460.5" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -506,7 +506,7 @@
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="41619.8566765128" hpRegen="121.063992487928" mp="1442.4" mpRegen="3" />
-			<attack physical="6239.97653157886" magical="5934.25589445268" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="6239.97653157886" magical="5934.25589445268" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="465.044385" magical="453.74" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -546,7 +546,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="62119.189069422" hpRegen="121.063992487928" mp="1442.4" mpRegen="3" />
-			<attack physical="9360.19880233835" magical="13352.659941391" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="9360.19880233835" magical="13352.659941391" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="465.044385" magical="453.74" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -592,7 +592,7 @@
 		<acquire exp="2417862" sp="580" raidPoints="416" />
 		<stats>
 			<vitals hp="84373" hpRegen="3.5" mp="329" mpRegen="1.5" />
-			<attack physical="111.218777383212" magical="7.21487767094488" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="111.218777383212" magical="7.21487767094488" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="355.39281" magical="173.38" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -643,7 +643,7 @@
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="5492.48177132919" hpRegen="20.9291966395288" mp="315.12" mpRegen="1.5" />
-			<attack physical="273.913941778549" magical="46.6211618728441" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="273.913941778549" magical="46.6211618728441" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="172.50897" magical="168.32" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -683,7 +683,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="8197.73398705849" hpRegen="20.9291966395288" mp="315.12" mpRegen="1.5" />
-			<attack physical="410.881184697441" magical="104.90220368531" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="410.881184697441" magical="104.90220368531" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="172.50897" magical="168.32" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -729,7 +729,7 @@
 		<acquire exp="3818045" sp="916" raidPoints="1200" />
 		<stats>
 			<vitals hp="194682" hpRegen="45.7692657718863" mp="478" mpRegen="1.8" />
-			<attack physical="441.882498831282" magical="64.6856142899034" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="441.882498831282" magical="64.6856142899034" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="469.65105" magical="229.12" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -790,7 +790,7 @@
 		<equipment rhand="273" /> <!-- rhand: Composite Bow -->
 		<stats>
 			<vitals hp="12518.7694823552" hpRegen="43.4767816366365" mp="463.32" mpRegen="1.8" />
-			<attack physical="822.67619300665" magical="239.880400057452" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<attack physical="822.67619300665" magical="239.880400057452" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="228.70128" magical="223.14" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="53" />
@@ -825,7 +825,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="9342.36528533969" hpRegen="43.4767816366365" mp="463.32" mpRegen="1.8" />
-			<attack physical="822.67619300665" magical="239.880400057452" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="822.67619300665" magical="239.880400057452" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="228.70128" magical="223.14" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -868,7 +868,7 @@
 		<acquire exp="382478" sp="91" raidPoints="520" />
 		<stats>
 			<vitals hp="138899.136909231" hpRegen="66.9859801832901" mp="402.6" mpRegen="1.8" />
-			<attack physical="327.391297293902" magical="51.7199871013021" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="327.391297293902" magical="51.7199871013021" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="410.18844" magical="200.1" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -948,7 +948,7 @@
 		<acquire exp="7064466" sp="1695" raidPoints="1700" />
 		<stats>
 			<vitals hp="334950" hpRegen="73.9338965895966" mp="747" mpRegen="2.1" />
-			<attack physical="857.796934516553" magical="196.056732211217" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="857.796934516553" magical="196.056732211217" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="600.71532" magical="293.06" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="53" earth="20" holy="20" dark="20" />
@@ -1008,7 +1008,7 @@
 		<equipment rhand="90" /> <!-- rhand: Goat Head Staff -->
 		<stats>
 			<vitals hp="21787.806115718" hpRegen="70.8842869727447" mp="720.0" mpRegen="2.1" />
-			<attack physical="2151.29691858599" magical="1280.42760048861" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="2151.29691858599" magical="1280.42760048861" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="293.49453" magical="286.36" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="53" earth="20" holy="20" dark="20" />
@@ -1047,7 +1047,7 @@
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="32519.1136055492" hpRegen="70.8842869727447" mp="720.0" mpRegen="2.1" />
-			<attack physical="3227.02605353032" magical="2881.08814870588" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="3227.02605353032" magical="2881.08814870588" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="293.49453" magical="286.36" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="53" earth="20" holy="20" dark="20" />
@@ -1095,7 +1095,7 @@
 		<acquire exp="23103634" sp="5544" raidPoints="1104" />
 		<stats>
 			<vitals hp="308490" hpRegen="66.0848830657008" mp="918" mpRegen="2.4" />
-			<attack physical="643.78480571784" magical="100.162908399054" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="643.78480571784" magical="100.162908399054" random="50" critical="1" accuracy="91" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="685.20405" magical="334.26" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1155,7 +1155,7 @@
 		<equipment rhand="3937" /> <!-- rhand: Giant Bar -->
 		<stats>
 			<vitals hp="30345.6206976724" hpRegen="64.1713408913048" mp="889.8" mpRegen="2.4" />
-			<attack physical="2441.7560451654" magical="1496.29838908629" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="2441.7560451654" magical="1496.29838908629" random="50" critical="1" accuracy="91" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="335.4543" magical="327.3" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1191,7 +1191,7 @@
 		<equipment rhand="3938" /> <!-- rhand: Giant Rod -->
 		<stats>
 			<vitals hp="15172.8103488362" hpRegen="64.1713408913048" mp="889.8" mpRegen="2.4" />
-			<attack physical="1220.8780225827" magical="374.074597271571" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1220.8780225827" magical="374.074597271571" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="335.4543" magical="327.3" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1234,7 +1234,7 @@
 		<acquire exp="106892354" sp="25654" raidPoints="2592" />
 		<stats>
 			<vitals hp="1638609" hpRegen="277.057601433902" mp="1188" mpRegen="2.7" />
-			<attack physical="3631.01519545517" magical="2425.23781026179" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="3631.01519545517" magical="2425.23781026179" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="815.67099" magical="397.92" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1302,7 +1302,7 @@
 		<acquire exp="5390002" sp="1293" raidPoints="3404" />
 		<stats>
 			<vitals hp="829806.78327062" hpRegen="319.229319897932" mp="1641.0" mpRegen="3" />
-			<attack physical="5267.04651101713" magical="3790.2949006429" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="5267.04651101713" magical="3790.2949006429" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1011.21024" magical="493.3" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1380,7 +1380,7 @@
 		<acquire exp="1452604" sp="348" raidPoints="300" />
 		<stats>
 			<vitals hp="131222" hpRegen="44.9019254294477" mp="245" mpRegen="1.5" />
-			<attack physical="136.640905723798" magical="17.2030105157932" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="136.640905723798" magical="17.2030105157932" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="296.12757" magical="144.46" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1442,7 +1442,7 @@
 		<acquire exp="2417862" sp="580" raidPoints="476" />
 		<stats>
 			<vitals hp="98057" hpRegen="24.5170941308607" mp="372" mpRegen="1.8" />
-			<attack physical="140.55752969624" magical="11.194506287274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="140.55752969624" magical="11.194506287274" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="387.69285" magical="189.14" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1499,7 +1499,7 @@
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
 		<stats>
 			<vitals hp="6352.47741032537" hpRegen="23.5043088957683" mp="358.32" mpRegen="1.8" />
-			<attack physical="346.926261181684" magical="73.9971654034987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="346.926261181684" magical="73.9971654034987" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="188.365905" magical="183.78" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1538,7 +1538,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="9481.3095676498" hpRegen="23.5043088957683" mp="358.32" mpRegen="1.8" />
-			<attack physical="520.402401832572" magical="166.500906572535" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="520.402401832572" magical="166.500906572535" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="188.365905" magical="183.78" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1584,7 +1584,7 @@
 		<acquire exp="7064466" sp="1695" raidPoints="908" />
 		<stats>
 			<vitals hp="243650" hpRegen="53.8546339421093" mp="747" mpRegen="2.1" />
-			<attack physical="458.480434603136" magical="56.5276785347001" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="458.480434603136" magical="56.5276785347001" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="600.71532" magical="293.06" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1641,7 +1641,7 @@
 		<equipment rhand="273" /> <!-- rhand: Composite Bow -->
 		<stats>
 			<vitals hp="15873.7572796787" hpRegen="51.7193112926872" mp="720.0" mpRegen="2.1" />
-			<attack physical="862.566718997186" magical="207.710393090758" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<attack physical="862.566718997186" magical="207.710393090758" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="293.49453" magical="286.36" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1677,7 +1677,7 @@
 		<equipment rhand="69" /> <!-- rhand: Bastard Sword -->
 		<stats>
 			<vitals hp="11846.0875221483" hpRegen="51.7193112926872" mp="720.0" mpRegen="2.1" />
-			<attack physical="862.566718997186" magical="207.710393090758" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="862.566718997186" magical="207.710393090758" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="293.49453" magical="286.36" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1721,7 +1721,7 @@
 		<acquire exp="3818045" sp="916" raidPoints="632" />
 		<stats>
 			<vitals hp="144477" hpRegen="34.0387779378852" mp="478" mpRegen="1.8" />
-			<attack physical="236.34363334721" magical="18.6629186045602" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="236.34363334721" magical="18.6629186045602" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="469.65105" magical="229.12" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1777,7 +1777,7 @@
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
 		<stats>
 			<vitals hp="13899.4158866737" hpRegen="32.4117473308651" mp="463.32" mpRegen="1.8" />
-			<attack physical="439.938707656487" magical="69.1975609087206" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="439.938707656487" magical="69.1975609087206" random="50" critical="1" accuracy="91" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="228.70128" magical="223.14" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1814,7 +1814,7 @@
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<stats>
 			<vitals hp="6949.70794333687" hpRegen="32.4117473308651" mp="463.32" mpRegen="1.8" />
-			<attack physical="439.938707656487" magical="69.1975609087206" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="439.938707656487" magical="69.1975609087206" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="228.70128" magical="223.14" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1858,7 +1858,7 @@
 		<acquire exp="1238553" sp="297" raidPoints="1068" />
 		<stats>
 			<vitals hp="298044" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="610.439011291351" magical="93.5186493178929" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="610.439011291351" magical="93.5186493178929" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="670.9086" magical="327.3" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -1916,7 +1916,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="19604.8300847202" hpRegen="62.194388632129" mp="861.0" mpRegen="2.4" />
-			<attack physical="1541.34859291827" magical="619.460361738035" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1541.34859291827" magical="619.460361738035" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.343835" magical="320.36" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -1955,7 +1955,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="29260.9404249556" hpRegen="62.194388632129" mp="861.0" mpRegen="2.4" />
-			<attack physical="2312.08069139469" magical="1393.84679470785" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="2312.08069139469" magical="1393.84679470785" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.343835" magical="320.36" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -2003,7 +2003,7 @@
 		<acquire exp="5614732" sp="1347" raidPoints="2592" />
 		<stats>
 			<vitals hp="1028340" hpRegen="110.823040573561" mp="1777" mpRegen="2.7" />
-			<attack physical="1815.50759772758" magical="606.309452565447" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="1815.50759772758" magical="606.309452565447" random="50" critical="1" accuracy="91" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="815.67099" magical="397.92" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2058,7 +2058,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="53978.8912220944" hpRegen="109.161965526679" mp="1158.0" mpRegen="2.7" />
-			<attack physical="6982.68629353156" magical="9405.35311800509" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="6982.68629353156" magical="9405.35311800509" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="400.56702" magical="390.82" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2094,7 +2094,7 @@
 		<equipment rhand="3937" /> <!-- rhand: Giant Bar -->
 		<stats>
 			<vitals hp="26989.4456110472" hpRegen="109.161965526679" mp="1158.0" mpRegen="2.7" />
-			<attack physical="3491.34314676578" magical="2351.33827950127" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="3491.34314676578" magical="2351.33827950127" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="400.56702" magical="390.82" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2139,7 +2139,7 @@
 		<acquire exp="5346496" sp="1283" raidPoints="3344" />
 		<stats>
 			<vitals hp="977641" hpRegen="126.536105676163" mp="1607" mpRegen="3" />
-			<attack physical="2592.71886885803" magical="929.620860138406" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="2592.71886885803" magical="929.620860138406" random="50" critical="1" accuracy="91" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="998.10183" magical="486.92" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="15" />
@@ -2193,7 +2193,7 @@
 		<equipment rhand="201" /> <!-- rhand: Club of Nature -->
 		<stats>
 			<vitals hp="65696.0877669096" hpRegen="126.536105676163" mp="1607.4" mpRegen="3" />
-			<attack physical="5185.43773771605" magical="3718.48344055363" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="5185.43773771605" magical="3718.48344055363" random="50" critical="1" accuracy="91" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="499.050915" magical="486.92" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2230,7 +2230,7 @@
 		<equipment rhand="147" /> <!-- rhand: Tear of Darkness -->
 		<stats>
 			<vitals hp="32848.0438834548" hpRegen="126.536105676163" mp="1607.4" mpRegen="3" />
-			<attack physical="5185.43773771605" magical="3718.48344055363" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="5185.43773771605" magical="3718.48344055363" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="499.050915" magical="486.92" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="15" />
@@ -2275,7 +2275,7 @@
 		<acquire exp="1452604" sp="348" raidPoints="248" />
 		<stats>
 			<vitals hp="59539" hpRegen="16.8269664693931" mp="205" mpRegen="1.5" />
-			<attack physical="53.1275788089434" magical="3.16860505219161" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="53.1275788089434" magical="3.16860505219161" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="269.19177" magical="131.32" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2328,7 +2328,7 @@
 		<equipment rhand="2507" /> <!-- rhand: Lizardspear -->
 		<stats>
 			<vitals hp="3950.01834728225" hpRegen="16.5400323223535" mp="192.0" mpRegen="1.2" />
-			<attack physical="97.6503288577427" magical="9.52955003556756" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<attack physical="97.6503288577427" magical="9.52955003556756" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="130.305735" magical="127.14" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2364,7 +2364,7 @@
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<stats>
 			<vitals hp="2947.77488603153" hpRegen="16.5400323223535" mp="192.0" mpRegen="1.2" />
-			<attack physical="97.6503288577427" magical="9.52955003556756" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="97.6503288577427" magical="9.52955003556756" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="130.305735" magical="127.14" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2408,7 +2408,7 @@
 		<acquire exp="2615583" sp="627" raidPoints="320" />
 		<stats>
 			<vitals hp="43316.3085364372" hpRegen="18.4385313667577" mp="259.2" mpRegen="1.5" />
-			<attack physical="74.2223188804512" magical="4.67967242276365" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<attack physical="74.2223188804512" magical="4.67967242276365" random="10" critical="4" accuracy="95.25" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="305.50599" magical="149.04" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -2467,7 +2467,7 @@
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<stats>
 			<vitals hp="3066" hpRegen="17.9607701717791" mp="245" mpRegen="1.5" />
-			<attack physical="136.640905723798" magical="17.2030105157932" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<attack physical="136.640905723798" magical="17.2030105157932" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="148.063785" magical="144.46" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -2505,7 +2505,7 @@
 		<equipment rhand="946" /> <!-- rhand: Skeleton Dagger -->
 		<stats>
 			<vitals hp="2289" hpRegen="17.9607701717791" mp="245" mpRegen="1.5" />
-			<attack physical="136.640905723798" magical="17.2030105157932" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="136.640905723798" magical="17.2030105157932" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="148.063785" magical="144.46" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -2551,7 +2551,7 @@
 		<acquire exp="5476117" sp="1314" raidPoints="520" />
 		<stats>
 			<vitals hp="69449.5684546156" hpRegen="26.794392073316" mp="402.6" mpRegen="1.8" />
-			<attack physical="163.695648646951" magical="12.9299967753255" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<attack physical="163.695648646951" magical="12.9299967753255" random="10" critical="4" accuracy="95.25" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="410.18844" magical="200.1" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -2612,7 +2612,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="10526.6678685797" hpRegen="25.6128307622386" mp="387.72" mpRegen="1.8" />
-			<attack physical="606.971204239169" magical="192.649791042096" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="606.971204239169" magical="192.649791042096" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="199.4229" magical="194.58" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="53" earth="20" holy="20" dark="20" />
@@ -2647,7 +2647,7 @@
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="5263.33393428986" hpRegen="25.6128307622386" mp="387.72" mpRegen="1.8" />
-			<attack physical="303.485602119585" magical="48.1624477605241" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="303.485602119585" magical="48.1624477605241" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="199.4229" magical="194.58" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -2693,7 +2693,7 @@
 		<acquire exp="3818045" sp="916" raidPoints="1200" />
 		<stats>
 			<vitals hp="194682" hpRegen="45.7692657718863" mp="478" mpRegen="1.8" />
-			<attack physical="441.882498831282" magical="64.6856142899034" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="441.882498831282" magical="64.6856142899034" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="469.65105" magical="229.12" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2749,7 +2749,7 @@
 		<equipment rhand="123" lhand="19" /> <!-- rhand: Saber lhand: Small Shield -->
 		<stats>
 			<vitals hp="12518.7694823552" hpRegen="43.4767816366365" mp="463.32" mpRegen="1.8" />
-			<attack physical="1096.87416813577" magical="426.435387182133" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1096.87416813577" magical="426.435387182133" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="228.70128" magical="223.14" evasion="-18" shield="305" shieldRate="20" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2789,7 +2789,7 @@
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
 		<stats>
 			<vitals hp="18684.7305706794" hpRegen="43.4767816366365" mp="463.32" mpRegen="1.8" />
-			<attack physical="1645.3523860133" magical="959.521600229809" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="1645.3523860133" magical="959.521600229809" random="50" critical="1" accuracy="91" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="228.70128" magical="223.14" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2834,7 +2834,7 @@
 		<acquire exp="5476117" sp="1314" raidPoints="1592" />
 		<stats>
 			<vitals hp="109138" hpRegen="169.608687032915" mp="402" mpRegen="2.1" />
-			<attack physical="1515.63786852925" magical="663.49811656612" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1515.63786852925" magical="663.49811656612" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="573.38409" magical="279.72" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2897,7 +2897,7 @@
 		<acquire exp="8151307" sp="1956" raidPoints="1036" />
 		<stats>
 			<vitals hp="287391" hpRegen="62.194388632129" mp="861" mpRegen="2.4" />
-			<attack physical="578.020172848672" magical="87.1154246692405" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="578.020172848672" magical="87.1154246692405" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="656.68767" magical="320.36" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2954,7 +2954,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="28159.6165299449" hpRegen="60.1633937196702" mp="832.4" mpRegen="2.4" />
-			<attack physical="1093.15424907494" magical="322.489091733196" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1093.15424907494" magical="322.489091733196" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="321.27489" magical="313.46" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -2990,7 +2990,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="14079.8082649724" hpRegen="60.1633937196702" mp="832.4" mpRegen="2.4" />
-			<attack physical="1093.15424907494" magical="322.489091733196" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1093.15424907494" magical="322.489091733196" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="321.27489" magical="313.46" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3033,7 +3033,7 @@
 		<acquire exp="2077342" sp="498" raidPoints="2288" />
 		<stats>
 			<vitals hp="614249.151468482" hpRegen="253.244358973511" mp="1036.8" mpRegen="2.4" />
-			<attack physical="2937.05045117962" magical="1851.60109271048" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="2937.05045117962" magical="1851.60109271048" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="742.95024" magical="362.44" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3106,7 +3106,7 @@
 		<acquire exp="226669890" sp="54400" raidPoints="2884" />
 		<stats>
 			<vitals hp="1778067" hpRegen="294.21090607215" mp="1345" mpRegen="2.7" />
-			<attack physical="4309.76223426093" magical="2869.61548504493" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="4309.76223426093" magical="2869.61548504493" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="887.74791" magical="433.08" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3177,7 +3177,7 @@
 		<acquire exp="2615583" sp="627" raidPoints="616" />
 		<stats>
 			<vitals hp="89016" hpRegen="24.0862326352072" mp="259" mpRegen="1.5" />
-			<attack physical="138.03739078453" magical="16.1331725262125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="138.03739078453" magical="16.1331725262125" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.50599" magical="149.04" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -3230,7 +3230,7 @@
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="5978" hpRegen="23.4374674791976" mp="245" mpRegen="1.5" />
-			<attack physical="253.592373602383" magical="59.1834627128382" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="253.592373602383" magical="59.1834627128382" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="148.063785" magical="144.46" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -3269,7 +3269,7 @@
 		<equipment rhand="299" /> <!-- rhand: Orcish Poleaxe -->
 		<stats>
 			<vitals hp="2989" hpRegen="23.4374674791976" mp="245" mpRegen="1.5" />
-			<attack physical="253.592373602383" magical="59.1834627128382" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="253.592373602383" magical="59.1834627128382" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="148.063785" magical="144.46" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -3314,7 +3314,7 @@
 		<acquire exp="2417862" sp="580" raidPoints="792" />
 		<stats>
 			<vitals hp="222338" hpRegen="71.4116064656513" mp="329" mpRegen="1.5" />
-			<attack physical="416.072961376921" magical="100.070888819998" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="416.072961376921" magical="100.070888819998" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="355.39281" magical="173.38" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3382,7 +3382,7 @@
 		<acquire exp="5476117" sp="1314" raidPoints="588" />
 		<stats>
 			<vitals hp="129000" hpRegen="30.8726873073006" mp="447.96" mpRegen="1.8" />
-			<attack physical="204.554218646784" magical="16.1476898312799" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<attack physical="204.554218646784" magical="16.1476898312799" random="10" critical="8" accuracy="100" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="445.32861" magical="217.24" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3433,7 +3433,7 @@
 		<equipment rhand="278" /> <!-- rhand: Gastraphetes -->
 		<stats>
 			<vitals hp="8317.93283689914" hpRegen="29.4232868171158" mp="432.72" mpRegen="1.8" />
-			<attack physical="380.124427536806" magical="60.2732663328511" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<attack physical="380.124427536806" magical="60.2732663328511" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="216.71637" magical="211.44" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3469,7 +3469,7 @@
 		<equipment rhand="291" /> <!-- rhand: Trident -->
 		<stats>
 			<vitals hp="6207.41256485011" hpRegen="29.4232868171158" mp="432.72" mpRegen="1.8" />
-			<attack physical="380.124427536806" magical="60.2732663328511" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="380.124427536806" magical="60.2732663328511" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="216.71637" magical="211.44" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3513,7 +3513,7 @@
 		<acquire exp="5918766" sp="1420" raidPoints="764" />
 		<stats>
 			<vitals hp="190435" hpRegen="43.342559280568" mp="610" mpRegen="2.1" />
-			<attack physical="333.674474509607" magical="35.7320100968747" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="333.674474509607" magical="35.7320100968747" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="533.36238" magical="260.2" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3569,7 +3569,7 @@
 		<equipment rhand="127" /> <!-- rhand: Crimson Sword -->
 		<stats>
 			<vitals hp="18378.2066200427" hpRegen="41.3470424277186" mp="584.0" mpRegen="2.1" />
-			<attack physical="624.124257296051" magical="130.530898435504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="624.124257296051" magical="130.530898435504" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="260.15328" magical="253.82" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3605,7 +3605,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="9189.10331002134" hpRegen="41.3470424277186" mp="584.0" mpRegen="2.1" />
-			<attack physical="624.124257296051" magical="130.530898435504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="624.124257296051" magical="130.530898435504" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="260.15328" magical="253.82" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3650,7 +3650,7 @@
 		<acquire exp="1238553" sp="297" raidPoints="1068" />
 		<stats>
 			<vitals hp="189660.129360453" hpRegen="64.1713408913048" mp="889.8" mpRegen="2.4" />
-			<attack physical="610.439011291351" magical="93.5186493178929" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<attack physical="610.439011291351" magical="93.5186493178929" random="10" critical="4" accuracy="95.25" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="670.9086" magical="327.3" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -3717,7 +3717,7 @@
 		<equipment rhand="75" /> <!-- rhand: Caliburs -->
 		<stats>
 			<vitals hp="29260.9404249556" hpRegen="62.194388632129" mp="861.0" mpRegen="2.4" />
-			<attack physical="2312.08069139469" magical="1393.84679470785" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="2312.08069139469" magical="1393.84679470785" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.343835" magical="320.36" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -3753,7 +3753,7 @@
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="14630.4702124778" hpRegen="62.194388632129" mp="861.0" mpRegen="2.4" />
-			<attack physical="1156.04034569734" magical="348.461698676962" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1156.04034569734" magical="348.461698676962" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.343835" magical="320.36" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -3799,7 +3799,7 @@
 		<acquire exp="34637834" sp="8313" raidPoints="1240" />
 		<stats>
 			<vitals hp="347452" hpRegen="72.9643823396131" mp="1036" mpRegen="2.4" />
-			<attack physical="785.177450040489" magical="133.511957686818" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<attack physical="785.177450040489" magical="133.511957686818" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="742.95024" magical="362.44" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3857,7 +3857,7 @@
 		<equipment rhand="3938" /> <!-- rhand: Giant Rod -->
 		<stats>
 			<vitals hp="23070.2557526169" hpRegen="71.371053660127" mp="1007.0" mpRegen="2.4" />
-			<attack physical="1996.68410988141" magical="872.03634502851" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1996.68410988141" magical="872.03634502851" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="364.223895" magical="355.36" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3896,7 +3896,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="34433.2175412192" hpRegen="71.371053660127" mp="1007.0" mpRegen="2.4" />
-			<attack physical="2995.10104234817" magical="1962.16762114757" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="2995.10104234817" magical="1962.16762114757" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="364.223895" magical="355.36" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -3941,7 +3941,7 @@
 		<acquire exp="1342137" sp="322" raidPoints="1208" />
 		<stats>
 			<vitals hp="338192" hpRegen="6.5" mp="1007" mpRegen="2.4" />
-			<attack physical="748.775260587043" magical="122.635476321723" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="748.775260587043" magical="122.635476321723" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="728.44779" magical="355.36" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -4009,7 +4009,7 @@
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="33456.1241342261" hpRegen="69.6906910362243" mp="977.4" mpRegen="2.4" />
-			<attack physical="1426.0444120344" magical="460.012771989048" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1426.0444120344" magical="460.012771989048" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="356.991435" magical="348.3" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -4047,7 +4047,7 @@
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
 		<stats>
 			<vitals hp="16728.062067113" hpRegen="69.6906910362243" mp="977.4" mpRegen="2.4" />
-			<attack physical="1426.0444120344" magical="460.012771989048" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1426.0444120344" magical="460.012771989048" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="356.991435" magical="348.3" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />
@@ -4093,7 +4093,7 @@
 		<acquire exp="5476117" sp="1314" raidPoints="520" />
 		<stats>
 			<vitals hp="109138" hpRegen="26.794392073316" mp="402" mpRegen="1.8" />
-			<attack physical="163.695648646951" magical="12.9299967753255" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<attack physical="163.695648646951" magical="12.9299967753255" random="10" critical="8" accuracy="100" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="410.18844" magical="200.1" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4147,7 +4147,7 @@
 		<equipment rhand="272" /> <!-- rhand: Forest Bow -->
 		<stats>
 			<vitals hp="7052.86747194841" hpRegen="25.6128307622386" mp="387.72" mpRegen="1.8" />
-			<attack physical="303.485602119585" magical="48.1624477605241" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<attack physical="303.485602119585" magical="48.1624477605241" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="199.4229" magical="194.58" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4183,7 +4183,7 @@
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
 		<stats>
 			<vitals hp="5263.33393428986" hpRegen="25.6128307622386" mp="387.72" mpRegen="1.8" />
-			<attack physical="303.485602119585" magical="48.1624477605241" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="303.485602119585" magical="48.1624477605241" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="199.4229" magical="194.58" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4226,7 +4226,7 @@
 		<acquire exp="2417862" sp="580" raidPoints="416" />
 		<stats>
 			<vitals hp="168744" hpRegen="3.5" mp="329" mpRegen="1.5" />
-			<attack physical="222.437554766423" magical="28.8595106837795" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="222.437554766423" magical="28.8595106837795" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="355.39281" magical="173.38" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4293,7 +4293,7 @@
 		<acquire exp="2417862" sp="580" raidPoints="496" />
 		<stats>
 			<vitals hp="103390" hpRegen="4.5" mp="387" mpRegen="1.8" />
-			<attack physical="151.742801059792" magical="12.040611940131" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="151.742801059792" magical="12.040611940131" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="398.8458" magical="194.58" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4344,7 +4344,7 @@
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="6689.08130706126" hpRegen="24.5170941308607" mp="372.96" mpRegen="1.8" />
-			<attack physical="374.810708687992" magical="79.6018953075482" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="374.810708687992" magical="79.6018953075482" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="193.846425" magical="189.14" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4383,7 +4383,7 @@
 		<sex>MALE</sex>
 		<stats>
 			<vitals hp="9983.70344337502" hpRegen="24.5170941308607" mp="372.96" mpRegen="1.8" />
-			<attack physical="562.230118784958" magical="179.112100596385" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="562.230118784958" magical="179.112100596385" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="193.846425" magical="189.14" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4431,7 +4431,7 @@
 		<acquire exp="3818045" sp="916" raidPoints="708" />
 		<stats>
 			<vitals hp="170913" hpRegen="39.4112754681274" mp="557" mpRegen="2.1" />
-			<attack physical="291.544395528868" magical="29.765523377221" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="291.544395528868" magical="29.765523377221" random="50" critical="1" accuracy="91" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="507.40251" magical="247.54" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4486,7 +4486,7 @@
 		<equipment rhand="5130" /> <!-- rhand: Nos Sword -->
 		<stats>
 			<vitals hp="16462.9527852879" hpRegen="37.543530210746" mp="531.0" mpRegen="2.1" />
-			<attack physical="1088.40749417475" magical="433.045867285342" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1088.40749417475" magical="433.045867285342" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.327695" magical="241.32" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4522,7 +4522,7 @@
 		<equipment rhand="5127" /> <!-- rhand: Dailaon Knife -->
 		<stats>
 			<vitals hp="8231.47639264397" hpRegen="37.543530210746" mp="531.0" mpRegen="2.1" />
-			<attack physical="544.203747087374" magical="108.261466821336" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<attack physical="544.203747087374" magical="108.261466821336" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="247.327695" magical="241.32" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4565,7 +4565,7 @@
 		<acquire exp="4596479" sp="1103" raidPoints="2884" />
 		<stats>
 			<vitals hp="1778067" hpRegen="294.21090607215" mp="1345" mpRegen="2.7" />
-			<attack physical="4309.76223426093" magical="2869.61548504493" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="4309.76223426093" magical="2869.61548504493" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="887.74791" magical="433.08" evasion="-18" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
@@ -4633,7 +4633,7 @@
 		<acquire exp="5139654" sp="1233" raidPoints="3000" />
 		<stats>
 			<vitals hp="913018" hpRegen="119.969286557872" mp="1410" mpRegen="3" />
-			<attack physical="2280.56634336123" magical="813.637215287937" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="2280.56634336123" magical="813.637215287937" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="916.07841" magical="446.9" evasion="-18" />
 			<attribute>
 				<attack type="DARK" value="20" />

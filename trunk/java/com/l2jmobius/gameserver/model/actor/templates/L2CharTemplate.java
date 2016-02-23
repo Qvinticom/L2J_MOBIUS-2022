@@ -116,7 +116,7 @@ public class L2CharTemplate extends ListenersContainer
 		_basePAtkSpd = set.getInt("basePAtkSpd", 300);
 		_baseMAtkSpd = set.getInt("baseMAtkSpd", 333);
 		_baseShldDef = set.getInt("baseShldDef", 0);
-		_basePAcc = set.getDouble("accuracy", 0);
+		_basePAcc = set.getDouble("accuracy", 100);
 		_baseAttackRange = set.getInt("baseAtkRange", 40);
 		_randomDamage = set.getInt("baseRndDam", 0);
 		_baseAttackType = set.getEnum("baseAtkType", WeaponType.class, WeaponType.FIST);
