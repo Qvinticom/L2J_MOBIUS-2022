@@ -49696,3 +49696,7 @@ INSERT INTO `spawnlist` VALUES
 INSERT INTO `spawnlist` VALUES
 ('Imperial Tomb', 1, 33372, 186611, -75975, -2824, 0, 0, 8465, 60, 0, 0, 0),
 ('Imperial Tomb', 1, 33372, 186569, -75928, -2824, 0, 0, 7980, 60, 0, 0, 0);
+
+-- Dokara
+INSERT INTO  `spawnlist` VALUES 
+("Swamp of Screams", 1, 33847, 69540, -50392, -3292, 0, 0, 10000, 60, 0, 0, 0);

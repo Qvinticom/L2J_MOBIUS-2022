@@ -291,6 +291,7 @@ import quests.Q10764_FreeSpirit.Q10764_FreeSpirit;
 import quests.Q10769_LettersFromTheQueen_CrumaTower.Q10769_LettersFromTheQueen_CrumaTower;
 import quests.Q10782_LettersFromTheQueen_ForsakenPlains.Q10782_LettersFromTheQueen_ForsakenPlains;
 import quests.Q10785_LettersFromTheQueen_FieldsOfMassacre.Q10785_LettersFromTheQueen_FieldsOfMassacre;
+import quests.Q10789_LettersFromTheQueen_SwampOfScreams.Q10789_LettersFromTheQueen_SwampOfScreams;
 
 /**
  * @author NosBit
@@ -572,7 +573,8 @@ final class QuestMasterHandler
 		Q10764_FreeSpirit.class,
 		Q10769_LettersFromTheQueen_CrumaTower.class,
 		Q10782_LettersFromTheQueen_ForsakenPlains.class,
-		Q10785_LettersFromTheQueen_FieldsOfMassacre.class
+		Q10785_LettersFromTheQueen_FieldsOfMassacre.class,
+		Q10789_LettersFromTheQueen_SwampOfScreams.class
 	};
 	
 	public static void main(String[] args)
