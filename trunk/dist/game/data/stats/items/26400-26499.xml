@@ -1037,8 +1037,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<for>
-			<add stat="inventoryLimit" val="12" />
 			<add stat="mDef" val="101" order="0" />
+			<add stat="inventoryLimit" val="12" />
+			<set stat="broochJewels" val="5" />
 		</for>
 	</item>
 	<item id="26475" name="Radiant Gemstone Fragment" type="EtcItem">
@@ -1254,9 +1255,12 @@
 	<item id="26491" name="La Vie En Rose's Vital Stone Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Vital Stone. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
+		<set name="capsuled_items" val="26476,1,1,100" /> <!-- Lv. 1 Vital Stone -->
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_premium" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1264,9 +1268,12 @@
 	<item id="26492" name="La Vie En Rose's Garnet Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Garnet. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
+		<set name="capsuled_items" val="26481,1,1,100" /> <!-- Lv. 1 Garnet -->
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_premium" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1274,9 +1281,12 @@
 	<item id="26493" name="La Vie En Rose's Tanzanite Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Tanzanite. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
+		<set name="capsuled_items" val="26486,1,1,100" /> <!-- Lv. 1 Tanzanite -->
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_premium" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1284,9 +1294,12 @@
 	<item id="26494" name="La Vie En Rose's Radiant Brooch Chest" type="EtcItem">
 		<!-- Double-click to acquire a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
+	    <set name="capsuled_items" val="26474,1,1,100" /> <!-- La Vie En Rose's Radiant Brooch -->
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_premium" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
