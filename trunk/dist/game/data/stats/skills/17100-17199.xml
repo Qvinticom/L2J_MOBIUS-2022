@@ -575,7 +575,6 @@
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="40" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -585,18 +584,18 @@
 		</cond>
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtk" val="2" />
-				<mul stat="mAtk" val="2" />
-				<mul stat="pAtkSpd" val="2" />
-				<mul stat="mAtkSpd" val="2" />
+				<mul stat="pAtk" val="2.0" />
+				<mul stat="mAtk" val="2.0" />
+				<mul stat="pAtkSpd" val="2.0" />
+				<mul stat="mAtkSpd" val="2.0" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="17155" levels="1" name="Coco's Magic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Equipped weapon changes shape. Is it the sweet magic Coco emits? The effect disappears upon logout. -->
 		<set name="icon" val="icon.etc_whiteday_herb" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalVisualEffect" val="CHANGE_VALENTINE" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="100" />
