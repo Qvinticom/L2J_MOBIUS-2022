@@ -85,6 +85,11 @@
 		<!-- Herb that modifies the appearance of weapons for Valentine's Day. -->
 		<set name="icon" val="icon.etc_whiteday_herb" />
 		<set name="is_auctionable" val="false" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="for_npc" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="17154-1" /> <!-- Love Potion -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="37705" name="Chocolate Truffle" type="EtcItem">

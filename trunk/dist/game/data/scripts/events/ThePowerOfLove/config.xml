@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <event name="The Power Of Love" active="10 02 2016-24 02 2016" enableShrines="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
+	<droplist>
+		<add item="37704" min="1" max="1" chance="30%" /> <!-- Love Potion -->
+	</droplist>
 	<spawnlist>
 		<add npc="33893" x="-14143" y="123176" z="-3096" heading="30212" /> <!-- Gludio -->
 		<add npc="33893" x="16354" y="142848" z="-2680" heading="14450" /> <!-- Dion -->

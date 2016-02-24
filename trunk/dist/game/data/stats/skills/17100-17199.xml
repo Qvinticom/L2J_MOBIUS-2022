@@ -568,13 +568,29 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17154" levels="1" name="Love Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing...\nFor 2 minutes, P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. x 2. Effect disappears upon logout. -->
 		<set name="icon" val="icon.etc_whiteday_herb" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="abnormalTime" val="120" />
+		<set name="abnormalVisualEffect" val="CHANGE_VALENTINE" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="2" />
+				<mul stat="mAtk" val="2" />
+				<mul stat="pAtkSpd" val="2" />
+				<mul stat="mAtkSpd" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17155" levels="1" name="Coco's Magic">
 		<!-- AUTO GENERATED SKILL -->
