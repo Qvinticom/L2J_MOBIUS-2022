@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30298</npc> <!-- Pinter (Blacksmith) -->
+		<npc>30300</npc> <!-- Pushkin (Blacksmith) -->
+		<npc>30317</npc> <!-- Kluto (Blacksmith) -->
+		<npc>30458</npc> <!-- Poitan (Blacksmith) -->
+		<npc>30471</npc> <!-- Rupio (Blacksmith) -->
+		<npc>30678</npc> <!-- Helton (Blacksmith) -->
+		<npc>30688</npc> <!-- Duning (Blacksmith) -->
+		<npc>30846</npc> <!-- Wilbert (Blacksmith) -->
+		<npc>30898</npc> <!-- Morning (Blacksmith) -->
+		<npc>31271</npc> <!-- Hilda (Blacksmith) -->
+		<npc>31316</npc> <!-- Vincenz (Blacksmith) -->
+		<npc>31583</npc> <!-- Feynn (Blacksmith) -->
+		<npc>31960</npc> <!-- Buryun (Blacksmith) -->
+		<npc>31990</npc> <!-- Siger (Blacksmith) -->
+		<npc>33998</npc> <!-- Momet (Blacksmith) -->
+		<npc>34208</npc> <!-- Bartman (Blacksmith) -->
+	</npcs>
+	<!-- R Weapon Requiem -->
+	<item>
+		<!-- Bound Requiem Shaper -->
+		<ingredient count="1" id="17831" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Shaper -->
+		<production count="1" id="18103" />
+	</item>
+	<item>
+		<!-- Bound Seraph Ring -->
+		<ingredient count="1" id="17932" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Cutter -->
+		<production count="1" id="18104" />
+	</item>
+	<item>
+		<!-- Bound Requiem Slasher -->
+		<ingredient count="1" id="17833" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Slasher -->
+		<production count="1" id="18105" />
+	</item>
+	<item>
+		<!-- Bound Requiem Avenger -->
+		<ingredient count="1" id="17834" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Avenger -->
+		<production count="1" id="18106" />
+	</item>
+	<item>
+		<!-- Bound Requiem Fighter -->
+		<ingredient count="1" id="17835" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Fighter -->
+		<production count="1" id="18107" />
+	</item>
+	<item>
+		<!-- Bound Requiem Stormer -->
+		<ingredient count="1" id="17836" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Stormer -->
+		<production count="1" id="18108" />
+	</item>
+	<item>
+		<!-- Bound Requiem Thrower -->
+		<ingredient count="1" id="17837" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Thrower -->
+		<production count="1" id="18109" />
+	</item>
+	<item>
+		<!-- Bound Requiem Shooter -->
+		<ingredient count="1" id="17838" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Shooter -->
+		<production count="1" id="18110" />
+	</item>
+	<item>
+		<!-- Bound Requiem Buster -->
+		<ingredient count="1" id="17839" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Buster -->
+		<production count="1" id="18111" />
+	</item>
+	<item>
+		<!-- Bound Requiem Caster -->
+		<ingredient count="1" id="17840" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Caster -->
+		<production count="1" id="18112" />
+	</item>
+	<item>
+		<!-- Bound Requiem Retributer -->
+		<ingredient count="1" id="17841" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Retributer -->
+		<production count="1" id="18113" />
+	</item>
+	<item>
+		<!-- Bound Requiem Dualsword -->
+		<ingredient count="1" id="17842" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Dualsword -->
+		<production count="1" id="18114" />
+	</item>
+	<item>
+		<!-- Bound Requiem Dual Dagger -->
+		<ingredient count="1" id="17843" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Dual Dagger -->
+		<production count="1" id="18115" />
+	</item>
+	<item>
+		<!-- Bound Requiem Dual Blunt Weapon -->
+		<ingredient count="1" id="17844" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Requiem Dual Blunt Weapon -->
+		<production count="1" id="18116" />
+	</item>
+	<!-- R Weapon Apocalypse -->
+	<item>
+		<!-- Bound Apocalypse Shaper -->
+		<ingredient count="1" id="17865" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Shaper -->
+		<production count="1" id="18137" />
+	</item>
+	<item>
+		<!-- Bound Eternal Ring -->
+		<ingredient count="1" id="17966" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Cutter -->
+		<production count="1" id="18138" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Slasher -->
+		<ingredient count="1" id="17867" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Slasher -->
+		<production count="1" id="18139" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Avenger -->
+		<ingredient count="1" id="17868" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Avenger -->
+		<production count="1" id="18140" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Fighter -->
+		<ingredient count="1" id="17869" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Fighter -->
+		<production count="1" id="18141" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Stormer -->
+		<ingredient count="1" id="17870" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Stormer -->
+		<production count="1" id="18142" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Thrower -->
+		<ingredient count="1" id="17871" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Thrower -->
+		<production count="1" id="18143" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Shooter -->
+		<ingredient count="1" id="17872" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Shooter -->
+		<production count="1" id="18144" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Buster -->
+		<ingredient count="1" id="17873" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Buster -->
+		<production count="1" id="18145" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Caster -->
+		<ingredient count="1" id="17874" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Caster -->
+		<production count="1" id="18146" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Retributer -->
+		<ingredient count="1" id="17875" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Retributer -->
+		<production count="1" id="18147" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Dualsword -->
+		<ingredient count="1" id="17876" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Dualsword -->
+		<production count="1" id="18148" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Dual Dagger -->
+		<ingredient count="1" id="17877" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Dual Dagger -->
+		<production count="1" id="18149" />
+	</item>
+	<item>
+		<!-- Bound Apocalypse Dual Blunt Weapon -->
+		<ingredient count="1" id="17878" />
+		<!-- Scroll: Seal Weapon (R-grade) -->
+		<ingredient count="1" id="34021" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Apocalypse Dual Blunt Weapon -->
+		<production count="1" id="18150" />
+	</item>
+	<!-- R Armor Immortal -->
+	<item>
+		<!-- Bound Immortal Helmet -->
+		<ingredient count="1" id="17845" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Helmet -->
+		<production count="1" id="18117" />
+	</item>
+	<item>
+		<!-- Bound Immortal Breastplate -->
+		<ingredient count="1" id="17846" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Breastplate -->
+		<production count="1" id="18118" />
+	</item>
+	<item>
+		<!-- Bound Immortal Gaiters -->
+		<ingredient count="1" id="17847" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Gaiters -->
+		<production count="1" id="18119" />
+	</item>
+	<item>
+		<!-- Bound Immortal Gauntlets -->
+		<ingredient count="1" id="17848" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Gauntlets -->
+		<production count="1" id="18120" />
+	</item>
+	<item>
+		<!-- Bound Immortal Boots -->
+		<ingredient count="1" id="17849" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Boots -->
+		<production count="1" id="18121" />
+	</item>
+	<item>
+		<!-- Bound Immortal Shield -->
+		<ingredient count="1" id="17850" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Shield -->
+		<production count="1" id="18122" />
+	</item>
+	<item>
+		<!-- Bound Immortal Leather Helmet -->
+		<ingredient count="1" id="17851" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Leather Helmet -->
+		<production count="1" id="18123" />
+	</item>
+	<item>
+		<!-- Bound Immortal Leather Armor -->
+		<ingredient count="1" id="17852" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Leather Armor -->
+		<production count="1" id="18124" />
+	</item>
+	<item>
+		<!-- Bound Immortal Leather Leggings -->
+		<ingredient count="1" id="17853" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Leather Leggings -->
+		<production count="1" id="18125" />
+	</item>
+	<item>
+		<!-- Bound Immortal Leather Gloves -->
+		<ingredient count="1" id="17854" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Leather Gloves -->
+		<production count="1" id="18126" />
+	</item>
+	<item>
+		<!-- Bound Immortal Leather Boots -->
+		<ingredient count="1" id="17855" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Leather Boots -->
+		<production count="1" id="18127" />
+	</item>
+	<item>
+		<!-- Bound Immortal Circlet -->
+		<ingredient count="1" id="17856" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Circlet -->
+		<production count="1" id="18128" />
+	</item>
+	<item>
+		<!-- Bound Immortal Tunic -->
+		<ingredient count="1" id="17857" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Tunic -->
+		<production count="1" id="18129" />
+	</item>
+	<item>
+		<!-- Bound Immortal Stockings -->
+		<ingredient count="1" id="17858" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Stockings -->
+		<production count="1" id="18130" />
+	</item>
+	<item>
+		<!-- Bound Immortal Gloves -->
+		<ingredient count="1" id="17859" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Gloves -->
+		<production count="1" id="18131" />
+	</item>
+	<item>
+		<!-- Bound Immortal Shoes -->
+		<ingredient count="1" id="17860" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Shoes -->
+		<production count="1" id="18132" />
+	</item>
+	<item>
+		<!-- Bound Immortal Sigil -->
+		<ingredient count="1" id="17861" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Sigil -->
+		<production count="1" id="18133" />
+	</item>
+	<item>
+		<!-- Bound Immortal Necklace -->
+		<ingredient count="1" id="17862" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Necklace -->
+		<production count="1" id="18134" />
+	</item>
+	<item>
+		<!-- Bound Immortal Earring -->
+		<ingredient count="1" id="17863" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Earring -->
+		<production count="1" id="18135" />
+	</item>
+	<item>
+		<!-- Bound Immortal Ring -->
+		<ingredient count="1" id="17864" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Immortal Ring -->
+		<production count="1" id="18136" />
+	</item>
+	<!-- R Armor Twilight -->
+	<item>
+		<!-- Bound Twilight Helmet -->
+		<ingredient count="1" id="17879" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Helmet -->
+		<production count="1" id="18151" />
+	</item>
+	<item>
+		<!-- Bound Twilight Breastplate -->
+		<ingredient count="1" id="17880" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Breastplate -->
+		<production count="1" id="18152" />
+	</item>
+	<item>
+		<!-- Bound Twilight Gaiters -->
+		<ingredient count="1" id="17881" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Gaiters -->
+		<production count="1" id="18153" />
+	</item>
+	<item>
+		<!-- Bound Twilight Gauntlets -->
+		<ingredient count="1" id="17882" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Gauntlets -->
+		<production count="1" id="18154" />
+	</item>
+	<item>
+		<!-- Bound Twilight Boots -->
+		<ingredient count="1" id="17883" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Boots -->
+		<production count="1" id="18155" />
+	</item>
+	<item>
+		<!-- Bound Twilight Shield -->
+		<ingredient count="1" id="17884" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Shield -->
+		<production count="1" id="18156" />
+	</item>
+	<item>
+		<!-- Bound Twilight Leather Helmet -->
+		<ingredient count="1" id="17885" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Leather Helmet -->
+		<production count="1" id="18157" />
+	</item>
+	<item>
+		<!-- Bound Twilight Leather Armor -->
+		<ingredient count="1" id="17886" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Leather Armor -->
+		<production count="1" id="18158" />
+	</item>
+	<item>
+		<!-- Bound Twilight Leather Leggings -->
+		<ingredient count="1" id="17887" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Leather Leggings -->
+		<production count="1" id="18159" />
+	</item>
+	<item>
+		<!-- Bound Twilight Leather Gloves -->
+		<ingredient count="1" id="17888" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Leather Gloves -->
+		<production count="1" id="18160" />
+	</item>
+	<item>
+		<!-- Bound Twilight Leather Boots -->
+		<ingredient count="1" id="17889" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Leather Boots -->
+		<production count="1" id="18161" />
+	</item>
+	<item>
+		<!-- Bound Twilight Circlet -->
+		<ingredient count="1" id="17890" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Circlet -->
+		<production count="1" id="18162" />
+	</item>
+	<item>
+		<!-- Bound Twilight Tunic -->
+		<ingredient count="1" id="17891" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Tunic -->
+		<production count="1" id="18163" />
+	</item>
+	<item>
+		<!-- Bound Twilight Stockings -->
+		<ingredient count="1" id="17892" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Stockings -->
+		<production count="1" id="18164" />
+	</item>
+	<item>
+		<!-- Bound Twilight Gloves -->
+		<ingredient count="1" id="17893" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Gloves -->
+		<production count="1" id="18165" />
+	</item>
+	<item>
+		<!-- Bound Twilight Shoes -->
+		<ingredient count="1" id="17894" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Shoes -->
+		<production count="1" id="18166" />
+	</item>
+	<item>
+		<!-- Bound Twilight Sigil -->
+		<ingredient count="1" id="17895" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Sigil -->
+		<production count="1" id="18167" />
+	</item>
+	<item>
+		<!-- Bound Twilight Necklace -->
+		<ingredient count="1" id="17896" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Necklace -->
+		<production count="1" id="18168" />
+	</item>
+	<item>
+		<!-- Bound Twilight Earring -->
+		<ingredient count="1" id="17897" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Earring -->
+		<production count="1" id="18169" />
+	</item>
+	<item>
+		<!-- Bound Twilight Ring -->
+		<ingredient count="1" id="17898" />
+		<!-- Scroll: Seal Armor (R-grade) -->
+		<ingredient count="1" id="34030" />
+		<!-- Adena -->
+		<ingredient count="1826300" id="57" />
+		<!-- Unidentified Twilight Ring -->
+		<production count="1" id="18170" />
+	</item>
+</list>
