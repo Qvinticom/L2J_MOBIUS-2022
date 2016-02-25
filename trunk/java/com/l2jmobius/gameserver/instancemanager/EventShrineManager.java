@@ -23,13 +23,23 @@ public final class EventShrineManager
 {
 	private static boolean ENABLE_SHRINES = false;
 	
-	public static boolean areShrinesEnabled()
+	public boolean areShrinesEnabled()
 	{
 		return ENABLE_SHRINES;
 	}
 	
-	public static void setEnabled(boolean enabled)
+	public void setEnabled(boolean enabled)
 	{
 		ENABLE_SHRINES = enabled;
+	}
+	
+	public static final EventShrineManager getInstance()
+	{
+		return SingletonHolder._instance;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final EventShrineManager _instance = new EventShrineManager();
 	}
 }

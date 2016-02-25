@@ -59,7 +59,7 @@ final class EventShrines extends Quest
 	@Override
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
-		if (character.isPlayer() && EventShrineManager.areShrinesEnabled())
+		if (character.isPlayer() && EventShrineManager.getInstance().areShrinesEnabled())
 		{
 			character.sendPacket(new OnEventTrigger(ZONE_TRIGGERS.get(zone.getId()), true));
 		}

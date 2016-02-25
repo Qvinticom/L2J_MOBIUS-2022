@@ -53,6 +53,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
 public class LongTimeEvent extends Quest
 {
 	private String _eventName;
+	boolean _enableShrines = false;
 	
 	// Messages
 	private String _onEnterMsg = "Event is in process";
@@ -61,7 +62,7 @@ public class LongTimeEvent extends Quest
 	private DateRange _eventPeriod = null;
 	private DateRange _dropPeriod;
 	
-	// NPC's to spawm and their spawn points
+	// NPCs to spawm and their spawn points
 	private final List<NpcSpawn> _spawnList = new ArrayList<>();
 	
 	// Drop data for event
@@ -129,7 +130,7 @@ public class LongTimeEvent extends Quest
 				final String enableShrines = doc.getDocumentElement().getAttributes().getNamedItem("enableShrines").getNodeValue();
 				if (enableShrines.equalsIgnoreCase("true"))
 				{
-					EventShrineManager.setEnabled(true);
+					_enableShrines = true;
 				}
 			}
 			
@@ -297,6 +298,12 @@ public class LongTimeEvent extends Quest
 			}
 		}
 		
+		// Enable town shrines
+		if (_enableShrines)
+		{
+			EventShrineManager.getInstance().setEnabled(true);
+		}
+		
 		// Send message on begin
 		Broadcast.toAllOnlinePlayers(_onEnterMsg);
 		
@@ -345,6 +352,11 @@ public class LongTimeEvent extends Quest
 		@Override
 		public void run()
 		{
+			// Disable town shrines
+			if (_enableShrines)
+			{
+				EventShrineManager.getInstance().setEnabled(false);
+			}
 			// Send message on end
 			Broadcast.toAllOnlinePlayers(_endMsg);
 		}
