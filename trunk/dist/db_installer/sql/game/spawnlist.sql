@@ -49700,3 +49700,7 @@ INSERT INTO `spawnlist` VALUES
 -- Dokara
 INSERT INTO  `spawnlist` VALUES 
 ("Swamp of Screams", 1, 33847, 69540, -50392, -3292, 0, 0, 10000, 60, 0, 0, 0);
+
+-- Hatuba
+INSERT INTO  `spawnlist` VALUES 
+("ForestOfTheDead", 1, 33849, 52480, -54127, -3090, 0, 0, 32600, 60, 0, 0, 0);

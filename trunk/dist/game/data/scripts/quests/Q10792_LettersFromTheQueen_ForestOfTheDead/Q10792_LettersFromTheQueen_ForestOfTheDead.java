@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10789_LettersFromTheQueen_SwampOfScreams;
+package quests.Q10792_LettersFromTheQueen_ForestOfTheDead;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -42,17 +42,17 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
- * Letters From The Queen: Swamp Of Screams (10789)
- * @URL https://l2wiki.com/Letters_from_the_Queen:_Swamp_of_Screams
+ * Letters from the Queen: Forest of the Dead (10792)
+ * @URL https://l2wiki.com/Letters_from_the_Queen:_Forest_of_the_Dead
  * @author Gigi
  */
-public class Q10789_LettersFromTheQueen_SwampOfScreams extends Quest implements IBypassHandler
+public class Q10792_LettersFromTheQueen_ForestOfTheDead extends Quest implements IBypassHandler
 {
 	// NPCs
 	private static final int INNOCENTIN = 31328;
-	private static final int DOKARA = 33847;
+	private static final int HATUBA = 33849;
 	// Items
-	private static final ItemHolder SCROLL_OF_ESCAPE_SWAMP_OF_SCREAMS = new ItemHolder(37030, 1);
+	private static final ItemHolder SCROLL_OF_ESCAPE_FOREST_OF_THE_DEAD = new ItemHolder(37031, 1);
 	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 91);
 	private static final ItemHolder EWA = new ItemHolder(729, 1);
 	// Reward
@@ -62,20 +62,20 @@ public class Q10789_LettersFromTheQueen_SwampOfScreams extends Quest implements 
 	private static final int MIN_LEVEL = 65;
 	private static final int MAX_LEVEL = 69;
 	// Teleport
-	private static final Location TP_LOC = new Location(36563, -49178, -1128);
+	private static final Location TP_LOC = new Location(36599, -49238, -1133);
 	private static final String[] TP_COMMANDS =
 	{
-		"Q10789_Teleport"
+		"Q10792_Teleport"
 	};
 	
-	public Q10789_LettersFromTheQueen_SwampOfScreams()
+	public Q10792_LettersFromTheQueen_ForestOfTheDead()
 	{
-		super(10789, Q10789_LettersFromTheQueen_SwampOfScreams.class.getSimpleName(), "Letters from the Queen: SwampOfScreams");
+		super(10792, Q10792_LettersFromTheQueen_ForestOfTheDead.class.getSimpleName(), "Letters from the Queen: ForestOfTheDead");
 		addStartNpc(INNOCENTIN);
-		addTalkId(INNOCENTIN, DOKARA);
+		addTalkId(INNOCENTIN, HATUBA);
 		addCondRace(Race.ERTHEIA, "noErtheia.html");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
-		addCondClassId(ClassId.MARAUDER, "no_quest.html");
+		addCondClassId(ClassId.CLOUD_BREAKER, "no_quest.html");
 		BypassHandler.getInstance().registerHandler(this);
 	}
 	
@@ -92,24 +92,24 @@ public class Q10789_LettersFromTheQueen_SwampOfScreams extends Quest implements 
 		{
 			case "31328-02.htm":
 			case "31328-04.html":
-			case "33847-02.htm":
+			case "33849-02.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "31328-03.htm": // start the quest
+			case "31328-03.htm":
 			{
 				qs.startQuest();
-				if (getQuestItemsCount(player, SCROLL_OF_ESCAPE_SWAMP_OF_SCREAMS.getId()) < 1)
+				if (getQuestItemsCount(player, SCROLL_OF_ESCAPE_FOREST_OF_THE_DEAD.getId()) < 1)
 				{
-					giveItems(player, SCROLL_OF_ESCAPE_SWAMP_OF_SCREAMS);
-					player.sendPacket(new ExShowScreenMessage("Try using the teleport scroll Innocentin gave you to go to Swamp Of Screams.", 10000));
+					giveItems(player, SCROLL_OF_ESCAPE_FOREST_OF_THE_DEAD);
+					player.sendPacket(new ExShowScreenMessage("Try using the teleport scroll Innocentin gave you to go to Forest of the Dead.", 10000));
 					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
-			case "33847-03.htm":
+			case "33849-03.html":
 			{
 				if (qs.isCond(2))
 				{
@@ -153,9 +153,10 @@ public class Q10789_LettersFromTheQueen_SwampOfScreams extends Quest implements 
 						htmltext = "31328-01.html";
 						break;
 					}
-					case DOKARA:
+					
+					case HATUBA:
 					{
-						if (player.getRace() != Race.ERTHEIA)
+						if ((player.getRace() != Race.ERTHEIA))
 						{
 							htmltext = getNoQuestMsg(player);
 						}
@@ -185,11 +186,11 @@ public class Q10789_LettersFromTheQueen_SwampOfScreams extends Quest implements 
 						}
 						break;
 					}
-					case DOKARA:
+					case HATUBA:
 					{
 						if (qs.isCond(2))
 						{
-							htmltext = "33847-01.html";
+							htmltext = "33849-01.html";
 						}
 						break;
 					}
@@ -216,13 +217,13 @@ public class Q10789_LettersFromTheQueen_SwampOfScreams extends Quest implements 
 		final L2PcInstance player = event.getActiveChar();
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
-		if ((oldLevel == (newLevel - 1)) && (player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() == Race.ERTHEIA) && (player.getClassId() == ClassId.MARAUDER))
+		if ((oldLevel == (newLevel - 1)) && (player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() == Race.ERTHEIA) && (player.getClassId() == ClassId.CLOUD_BREAKER))
 		{
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10789_LettersFromTheQueen_SwampOfScreams/Announce.html"));
+				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10792_LettersFromTheQueen_ForestOfTheDead/Announce.html"));
 				player.sendPacket(html);
 			}
 		}
@@ -232,7 +233,7 @@ public class Q10789_LettersFromTheQueen_SwampOfScreams extends Quest implements 
 	public boolean useBypass(String command, L2PcInstance player, L2Character bypassOrigin)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) || (player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL) || ((player.getRace() != Race.ERTHEIA) && (player.getClassId() != ClassId.MARAUDER)))
+		if ((qs != null) || (player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL) || ((player.getRace() != Race.ERTHEIA) && (player.getClassId() != ClassId.CLOUD_BREAKER)))
 		{
 			return false;
 		}

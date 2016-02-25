@@ -292,6 +292,7 @@ import quests.Q10769_LettersFromTheQueen_CrumaTower.Q10769_LettersFromTheQueen_C
 import quests.Q10782_LettersFromTheQueen_ForsakenPlains.Q10782_LettersFromTheQueen_ForsakenPlains;
 import quests.Q10785_LettersFromTheQueen_FieldsOfMassacre.Q10785_LettersFromTheQueen_FieldsOfMassacre;
 import quests.Q10789_LettersFromTheQueen_SwampOfScreams.Q10789_LettersFromTheQueen_SwampOfScreams;
+import quests.Q10792_LettersFromTheQueen_ForestOfTheDead.Q10792_LettersFromTheQueen_ForestOfTheDead;
 
 /**
  * @author NosBit
@@ -574,7 +575,8 @@ final class QuestMasterHandler
 		Q10769_LettersFromTheQueen_CrumaTower.class,
 		Q10782_LettersFromTheQueen_ForsakenPlains.class,
 		Q10785_LettersFromTheQueen_FieldsOfMassacre.class,
-		Q10789_LettersFromTheQueen_SwampOfScreams.class
+		Q10789_LettersFromTheQueen_SwampOfScreams.class,
+		Q10792_LettersFromTheQueen_ForestOfTheDead.class
 	};
 	
 	public static void main(String[] args)
