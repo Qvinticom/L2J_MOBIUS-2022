@@ -16,6 +16,7 @@
  */
 package ai.npc.AdventurersGuide;
 
+import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -25,7 +26,7 @@ import ai.npc.AbstractNpcAI;
 
 /**
  * Adventurers Guide AI.
- * @author St3eT, Updated by Stayway, Mobius
+ * @author St3eT, Stayway, Mobius
  */
 final class AdventurersGuide extends AbstractNpcAI
 {
@@ -69,6 +70,7 @@ final class AdventurersGuide extends AbstractNpcAI
 		
 		switch (event)
 		{
+			case "blessing_list003.html":
 			case "guide-01.html":
 			case "guide-02.html":
 			case "guide-03.html":
@@ -111,6 +113,7 @@ final class AdventurersGuide extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
+		playSound(player, QuestSound.DIALOG_GUIDE_FOR_ADVENTURER_GREETING_1);
 		return npc.getId() + ".html";
 	}
 	
