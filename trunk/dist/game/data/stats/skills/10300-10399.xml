@@ -721,7 +721,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 		<set name="itemConsumeCount" val="5" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1785" /> <!-- Soul Ore -->
 		<cond msgId="113" addName="1">
 			<using kind="DUAL, DUALBLUNT" />
 		</cond>
@@ -751,7 +751,7 @@
 		<set name="mpConsume" val="64" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="itemConsumeCount" val="5" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->	
+		<set name="itemConsumeId" val="1785" /> <!-- Soul Ore -->	
 		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
