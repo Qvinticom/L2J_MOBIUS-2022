@@ -145,7 +145,6 @@ import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.L2GamePacketHandler;
 import com.l2jmobius.gameserver.pathfinding.PathFinding;
-import com.l2jmobius.gameserver.script.faenor.FaenorScriptEngine;
 import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jmobius.gameserver.taskmanager.KnownListUpdateTaskManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
@@ -369,9 +368,6 @@ public final class GameServer
 		
 		MonsterRace.getInstance();
 		AutoSpawnHandler.getInstance();
-		
-		FaenorScriptEngine.getInstance();
-		// Init of a cursed weapon manager
 		
 		_log.info("AutoSpawnHandler: Loaded " + AutoSpawnHandler.getInstance().size() + " handlers in total.");
 		
