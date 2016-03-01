@@ -355,7 +355,6 @@ public abstract class AbstractScript implements INamable
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides delayed (Depending on {@link com.l2jmobius.gameserver.model.actor.L2Attackable#getOnKillDelay()}) callback operation when L2Attackable dies from a player.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -366,7 +365,6 @@ public abstract class AbstractScript implements INamable
 	}
 	
 	/**
-	 * Provides delayed (Depending on {@link com.l2jmobius.gameserver.model.actor.L2Attackable#getOnKillDelay()}) callback operation when L2Attackable dies from a player.
 	 * @param callback
 	 * @param npcIds
 	 * @return
