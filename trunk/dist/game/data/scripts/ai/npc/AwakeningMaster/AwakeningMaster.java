@@ -66,6 +66,8 @@ public final class AwakeningMaster extends AbstractNpcAI
 	private final static int NAVIAROPE_POWER = 32269;
 	private final static int LEISTER_POWER = 32270;
 	private final static int LAKCIS_POWER = 32271;
+	// Other
+	private final static int AWAKENING_END_USM_ID = 10;
 	
 	private AwakeningMaster()
 	{
@@ -283,7 +285,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 		
 		ThreadPoolManager.getInstance().scheduleGeneral(() ->
 		{
-			player.sendPacket(ExShowUsm.AWAKENING_END);
+			player.sendPacket(new ExShowUsm(AWAKENING_END_USM_ID));
 		}, 10000);
 	}
 	

@@ -34,6 +34,7 @@ public class Q10732_AForeignLand extends Quest
 	private static final int GERETH = 33932;
 	// Misc
 	private static final int MAX_LEVEL = 20;
+	private final static int ERTHEIA_FIRST_QUEST_USM_ID = 14;
 	
 	public Q10732_AForeignLand()
 	{
@@ -60,7 +61,7 @@ public class Q10732_AForeignLand extends Quest
 			case "33931-03.html":
 			{
 				qs.startQuest();
-				player.sendPacket(ExShowUsm.ERTHEIA_FIRST_QUEST);
+				player.sendPacket(new ExShowUsm(ERTHEIA_FIRST_QUEST_USM_ID));
 				htmltext = event;
 				break;
 			}

@@ -21,15 +21,9 @@ package com.l2jmobius.gameserver.network.serverpackets;
  */
 public class ExShowUsm extends L2GameServerPacket
 {
-	public static final ExShowUsm GOD_INTRO = new ExShowUsm(2);
-	public static final ExShowUsm AWAKENING_END = new ExShowUsm(10);
-	public static final ExShowUsm ERTHEIA_FIRST_QUEST = new ExShowUsm(14);
-	public static final ExShowUsm ERTHEIA_INTRO_FOR_ERTHEIA = new ExShowUsm(147);
-	public static final ExShowUsm ERTHEIA_INTRO_FOR_OTHERS = new ExShowUsm(148);
-	
 	private final int _videoId;
 	
-	private ExShowUsm(int videoId)
+	public ExShowUsm(int videoId)
 	{
 		_videoId = videoId;
 	}
@@ -39,7 +33,6 @@ public class ExShowUsm extends L2GameServerPacket
 	{
 		writeC(0xFE);
 		writeH(0x109);
-		
 		writeD(_videoId);
 	}
 }

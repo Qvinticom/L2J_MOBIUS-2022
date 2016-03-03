@@ -110,9 +110,11 @@ import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
  */
 public class EnterWorld extends L2GameClientPacket
 {
-	private static final String _C__11_ENTERWORLD = "[C] 11 EnterWorld";
-	
+	private final static String _C__11_ENTERWORLD = "[C] 11 EnterWorld";
 	private final int[][] tracert = new int[5][4];
+	
+	private final static int ERTHEIA_INTRO_FOR_ERTHEIA_USM_ID = 147;
+	private final static int ERTHEIA_INTRO_FOR_OTHERS_USM_ID = 148;
 	
 	@Override
 	protected void readImpl()
@@ -474,11 +476,11 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.getVariables().remove("intro_god_video");
 			if (activeChar.getRace() == Race.ERTHEIA)
 			{
-				activeChar.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_ERTHEIA);
+				activeChar.sendPacket(new ExShowUsm(ERTHEIA_INTRO_FOR_ERTHEIA_USM_ID));
 			}
 			else
 			{
-				activeChar.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_OTHERS);
+				activeChar.sendPacket(new ExShowUsm(ERTHEIA_INTRO_FOR_OTHERS_USM_ID));
 			}
 		}
 		
