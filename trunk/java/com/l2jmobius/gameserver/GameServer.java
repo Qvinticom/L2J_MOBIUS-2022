@@ -82,6 +82,7 @@ import com.l2jmobius.gameserver.data.xml.impl.ShuttleData;
 import com.l2jmobius.gameserver.data.xml.impl.SiegeScheduleData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillLearnData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jmobius.gameserver.data.xml.impl.SoulCrystalOptionsData;
 import com.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
 import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
@@ -234,6 +235,7 @@ public final class GameServer
 		PrimeShopData.getInstance();
 		AppearanceItemData.getInstance();
 		LuckyGameData.getInstance();
+		SoulCrystalOptionsData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();

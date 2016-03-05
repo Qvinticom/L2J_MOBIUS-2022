@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model;
 
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
 
 public class TradeItem
 {
@@ -50,6 +51,8 @@ public class TradeItem
 	private final int _time;
 	private final int _visualId;
 	private final long _visualExpiration;
+	private SoulCrystalOption[] _commonSoulCrystalOptions;
+	private SoulCrystalOption _specialSoulCrystalOption;
 	
 	public TradeItem(L2ItemInstance item, long count, long price)
 	{
@@ -76,6 +79,8 @@ public class TradeItem
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
 		_visualId = item.getVisualId();
 		_visualExpiration = item.getTime();
+		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
+		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
 	}
 	
 	public TradeItem(L2Item item, long count, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
@@ -104,6 +109,8 @@ public class TradeItem
 		_time = -9999;
 		_visualId = appearanceId;
 		_visualExpiration = -1;
+		_commonSoulCrystalOptions = new SoulCrystalOption[2];
+		_specialSoulCrystalOption = null;
 	}
 	
 	public TradeItem(TradeItem item, long count, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
@@ -132,6 +139,8 @@ public class TradeItem
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
 		_visualId = item.getVisualId();
 		_visualExpiration = item.getVisualExpiration();
+		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
+		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
 	}
 	
 	public L2ItemInstance getItemInstance()
@@ -262,5 +271,25 @@ public class TradeItem
 	public int getRemainingTime()
 	{
 		return _time;
+	}
+	
+	public SoulCrystalOption[] getCommonSoulCrystalOptions()
+	{
+		return _commonSoulCrystalOptions;
+	}
+	
+	public void setSoulCrystalOptions(SoulCrystalOption[] options)
+	{
+		_commonSoulCrystalOptions = options;
+	}
+	
+	public SoulCrystalOption getSpecialSoulCrystalOption()
+	{
+		return _specialSoulCrystalOption;
+	}
+	
+	public void setSpecialSoulCrystalOption(SoulCrystalOption option)
+	{
+		_specialSoulCrystalOption = option;
 	}
 }

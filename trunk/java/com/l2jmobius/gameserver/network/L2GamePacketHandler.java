@@ -57,6 +57,7 @@ import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrys
 import com.l2jmobius.gameserver.network.clientpackets.dailymission.RequestOneDayRewardReceive;
 import com.l2jmobius.gameserver.network.clientpackets.dailymission.RequestTodoList;
 import com.l2jmobius.gameserver.network.clientpackets.dailymission.RequestTodoListHTML;
+import com.l2jmobius.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestAnswerFriendInvite;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDel;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
@@ -2614,7 +2615,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 							}
 							case 0x107:
 							{
-								// msg = new RequestItemEnsoul();
+								msg = new RequestItemEnsoul();
 								break;
 							}
 							case 0x108:

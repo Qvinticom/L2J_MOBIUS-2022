@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.model.buylist.Product;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.items.L2WarehouseItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
 
 /**
  * @author UnAfraid
@@ -116,6 +117,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			writeD(item.getVisualId()); // Item remodel visual ID
 		}
+		if (containsMask(mask, ItemListType.SOUL_CRYSTAL))
+		{
+			writeItemSoulCrystalOptions(item);
+		}
 	}
 	
 	protected static final int calculateMask(ItemInfo item)
@@ -158,6 +163,24 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			mask |= ItemListType.VISUAL_ID.getMask();
 		}
+		
+		if ((item.getCommonSoulCrystalOptions().length != 0) || (item.getSpecialSoulCrystalOption() != null))
+		{
+			for (SoulCrystalOption sco : item.getCommonSoulCrystalOptions())
+			{
+				if (sco != null)
+				{
+					mask |= ItemListType.SOUL_CRYSTAL.getMask();
+					break;
+				}
+			}
+			
+			if (item.getSpecialSoulCrystalOption() != null)
+			{
+				mask |= ItemListType.SOUL_CRYSTAL.getMask();
+			}
+		}
+		
 		return mask;
 	}
 	
@@ -216,5 +239,32 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		writeD(item.getVisualId());
 		writeC(0);
 		writeC(0);
+	}
+	
+	protected void writeItemSoulCrystalOptions(ItemInfo item)
+	{
+		int count = 0;
+		for (SoulCrystalOption sc : item.getCommonSoulCrystalOptions())
+		{
+			if (sc != null)
+			{
+				count++;
+			}
+		}
+		
+		writeC(count);
+		for (SoulCrystalOption sco : item.getCommonSoulCrystalOptions())
+		{
+			if (sco != null)
+			{
+				writeD(sco.getEffect());
+			}
+		}
+		
+		writeC(item.getSpecialSoulCrystalOption() != null);
+		if (item.getSpecialSoulCrystalOption() != null)
+		{
+			writeD(item.getSpecialSoulCrystalOption().getEffect());
+		}
 	}
 }

@@ -38,6 +38,7 @@ import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemOptionsData;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
+import com.l2jmobius.gameserver.data.xml.impl.SoulCrystalOptionsData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.ItemLocation;
@@ -77,6 +78,7 @@ import com.l2jmobius.gameserver.model.options.Options;
 import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jmobius.gameserver.model.variables.ItemVariables;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
 import com.l2jmobius.gameserver.network.serverpackets.DropItem;
 import com.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
@@ -131,6 +133,10 @@ public final class L2ItemInstance extends L2Object
 	
 	/** Augmented Item */
 	private L2Augmentation _augmentation = null;
+	
+	/** Soul Crystal **/
+	private SoulCrystalOption[] _commonSoulCrystalOptions = new SoulCrystalOption[2];
+	private SoulCrystalOption _specialSoulCrystalOption;
 	
 	/** Shadow item */
 	private int _mana = -1;
@@ -1554,6 +1560,11 @@ public final class L2ItemInstance extends L2Object
 		if (inst.isEquipable())
 		{
 			inst.restoreAttributes();
+			
+			if (inst.isWeapon())
+			{
+				inst.restoreSoulCrystalOptions();
+			}
 		}
 		
 		return inst;
@@ -1731,6 +1742,7 @@ public final class L2ItemInstance extends L2Object
 			{
 				updateItemElements(con);
 			}
+			// TODO: Soul Crystal
 		}
 		catch (Exception e)
 		{
@@ -1767,6 +1779,12 @@ public final class L2ItemInstance extends L2Object
 			}
 			
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ?"))
+			{
+				ps.setInt(1, getObjectId());
+				ps.executeUpdate();
+			}
+			
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_soulcrystal WHERE object_id = ?"))
 			{
 				ps.setInt(1, getObjectId());
 				ps.executeUpdate();
@@ -2358,5 +2376,168 @@ public final class L2ItemInstance extends L2Object
 	public boolean isAppearanceable()
 	{
 		return isWeapon() || isArmor();
+	}
+	
+	public SoulCrystalOption[] getCommonSoulCrystalOptions()
+	{
+		return _commonSoulCrystalOptions;
+	}
+	
+	public SoulCrystalOption getSpecialSoulCrystalOption()
+	{
+		return _specialSoulCrystalOption;
+	}
+	
+	public void setCommonSoulCrystalOptions(SoulCrystalOption[] options)
+	{
+		_commonSoulCrystalOptions = options;
+	}
+	
+	public void addCommonSoulCrystalOption(SoulCrystalOption option)
+	{
+		if ((isEquipped()) && (_commonSoulCrystalOptions[option.getSlot() - 1] != null) && (getActingPlayer() != null))
+		{
+			getActingPlayer().removeSkill(_commonSoulCrystalOptions[option.getSlot() - 1].getSkill(), true);
+		}
+		_commonSoulCrystalOptions[option.getSlot() - 1] = option;
+	}
+	
+	public void setSpecialSoulCrystalOption(SoulCrystalOption special)
+	{
+		if ((isEquipped()) && (_specialSoulCrystalOption != null) && (getActingPlayer() != null))
+		{
+			getActingPlayer().removeSkill(_specialSoulCrystalOption.getSkill(), true);
+		}
+		_specialSoulCrystalOption = special;
+	}
+	
+	public void addSoulCrystalOption(SoulCrystalOption option)
+	{
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		{
+			if (insertSoulCrystalOption(con, option))
+			{
+				if (!option.isSpecial())
+				{
+					addCommonSoulCrystalOption(option);
+				}
+				else
+				{
+					setSpecialSoulCrystalOption(option);
+				}
+				applySoulCrystalOptionEffect();
+			}
+		}
+		catch (SQLException e)
+		{
+			_log.log(Level.SEVERE, "Could not insert soul crystal option for item: " + this + " from DB:", e);
+		}
+	}
+	
+	private boolean insertSoulCrystalOption(Connection con, SoulCrystalOption option)
+	{
+		boolean result = true;
+		try (PreparedStatement ps = con.prepareStatement("INSERT INTO item_soulcrystal VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE effect_id = ?"))
+		{
+			ps.setInt(1, getObjectId());
+			ps.setInt(2, option.getSlot());
+			ps.setBoolean(3, option.isSpecial()); // special or not
+			ps.setInt(4, option.getEffect());
+			ps.setInt(5, option.getEffect());
+			ps.executeUpdate();
+			ps.close();
+		}
+		catch (SQLException e)
+		{
+			result = false;
+			_log.log(Level.SEVERE, "Could not insert soul crystal option for item: " + this + " from DB:", e);
+		}
+		return result;
+	}
+	
+	public void restoreSoulCrystalOptions()
+	{
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement("SELECT effect_id, slot_id FROM item_soulcrystal WHERE object_id=? ORDER BY object_id, effect_id, slot_id ASC");)
+		{
+			statement.setInt(1, getObjectId());
+			try (ResultSet rs = statement.executeQuery())
+			{
+				while (rs.next())
+				{
+					final int effect_id = rs.getInt("effect_id");
+					final int slot_id = rs.getInt("slot_id");
+					if (effect_id != 0)
+					{
+						SoulCrystalOption sco = SoulCrystalOptionsData.getInstance().getByEffectId(effect_id);
+						sco.setSlot(slot_id);
+						
+						if (sco.isSpecial())
+						{
+							setSpecialSoulCrystalOption(sco);
+						}
+						else
+						{
+							addCommonSoulCrystalOption(sco);
+						}
+					}
+				}
+				
+				applySoulCrystalOptionEffect();
+			}
+			statement.close();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.SEVERE, "Could not restore soul crystal data for item " + this + " from DB: " + e.getMessage(), e);
+		}
+	}
+	
+	public void applySoulCrystalOptionEffect()
+	{
+		L2PcInstance owner = getActingPlayer();
+		if ((owner == null) || (!isEquipped()))
+		{
+			return;
+		}
+		
+		for (SoulCrystalOption sco : getCommonSoulCrystalOptions())
+		{
+			if (sco != null)
+			{
+				owner.addSkill(sco.getSkill(), false);
+			}
+		}
+		
+		if (getSpecialSoulCrystalOption() != null)
+		{
+			owner.addSkill(getSpecialSoulCrystalOption().getSkill(), false);
+		}
+		
+		owner.sendSkillList();
+	}
+	
+	public void removeSoulCrystalOptionEffect()
+	{
+		L2PcInstance owner = getActingPlayer();
+		if ((owner == null) || (isEquipped()))
+		{
+			return;
+		}
+		
+		for (SoulCrystalOption sco : getCommonSoulCrystalOptions())
+		{
+			if (sco != null)
+			{
+				owner.removeSkill(sco.getSkill(), false);
+			}
+		}
+		
+		if (getSpecialSoulCrystalOption() != null)
+		{
+			owner.removeSkill(getSpecialSoulCrystalOption().getSkill(), false);
+		}
+		
+		owner.sendSkillList();
 	}
 }

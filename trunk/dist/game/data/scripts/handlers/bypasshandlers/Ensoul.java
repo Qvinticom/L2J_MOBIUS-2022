@@ -14,31 +14,35 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.enums;
+package handlers.bypasshandlers;
 
-import com.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
+import com.l2jmobius.gameserver.handler.IBypassHandler;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.serverpackets.ensoul.ExShowEnsoulWindow;
 
-/**
- * @author UnAfraid
- */
-public enum ItemListType implements IUpdateTypeComponent
+public class Ensoul implements IBypassHandler
 {
-	AUGMENT_BONUS(0x01),
-	ELEMENTAL_ATTRIBUTE(0x02),
-	ENCHANT_EFFECT(0x04),
-	VISUAL_ID(0x08),
-	SOUL_CRYSTAL(0x10);
-	
-	private final int _mask;
-	
-	private ItemListType(int mask)
+	private static final String[] COMMANDS =
 	{
-		_mask = mask;
+		"ensoul"
+	};
+	
+	@Override
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	{
+		if (!target.isNpc())
+		{
+			return false;
+		}
+		
+		activeChar.sendPacket(ExShowEnsoulWindow.STATIC_PACKET);
+		return true;
 	}
 	
 	@Override
-	public int getMask()
+	public String[] getBypassList()
 	{
-		return _mask;
+		return COMMANDS;
 	}
 }

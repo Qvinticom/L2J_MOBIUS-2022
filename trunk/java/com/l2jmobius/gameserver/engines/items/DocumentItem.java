@@ -98,6 +98,11 @@ public final class DocumentItem extends DocumentBase
 		final int itemId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 		final String className = n.getAttributes().getNamedItem("type").getNodeValue();
 		final String itemName = n.getAttributes().getNamedItem("name").getNodeValue();
+		String additionalName = null;
+		if (n.getAttributes().getNamedItem("additionalName") != null)
+		{
+			additionalName = n.getAttributes().getNamedItem("additionalName").getNodeValue();
+		}
 		
 		_currentItem.id = itemId;
 		_currentItem.name = itemName;
@@ -105,6 +110,7 @@ public final class DocumentItem extends DocumentBase
 		_currentItem.set = new StatsSet();
 		_currentItem.set.set("item_id", itemId);
 		_currentItem.set.set("name", itemName);
+		_currentItem.set.set("additionalName", additionalName);
 		
 		final Node first = n.getFirstChild();
 		for (n = first; n != null; n = n.getNextSibling())

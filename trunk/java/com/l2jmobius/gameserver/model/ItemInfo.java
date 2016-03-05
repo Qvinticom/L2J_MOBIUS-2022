@@ -20,6 +20,7 @@ import com.l2jmobius.gameserver.model.buylist.Product;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.L2WarehouseItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
 
 /**
  * Get all information from L2ItemInstance to generate ItemInfo.
@@ -75,6 +76,9 @@ public class ItemInfo
 	private int[] _option;
 	private int _visualId;
 	private long _visualExpiration;
+	
+	private SoulCrystalOption[] _commonSoulCrystalOptions = new SoulCrystalOption[2];
+	private SoulCrystalOption _specialSoulCrystalOption;
 	
 	/**
 	 * Get all information from L2ItemInstance to generate ItemInfo.
@@ -149,6 +153,9 @@ public class ItemInfo
 		}
 		_option = item.getEnchantOptions();
 		_visualId = item.getVisualId();
+		
+		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
+		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
 	}
 	
 	public ItemInfo(L2ItemInstance item, int change)
@@ -212,6 +219,8 @@ public class ItemInfo
 		
 		_option = item.getEnchantOptions();
 		_visualId = item.getVisualId();
+		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
+		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
 	}
 	
 	public ItemInfo(Product item)
@@ -301,6 +310,9 @@ public class ItemInfo
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
+		
+		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
+		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
 	}
 	
 	public int getObjectId()
@@ -406,5 +418,25 @@ public class ItemInfo
 	public long getVisualExpiration()
 	{
 		return _visualExpiration;
+	}
+	
+	public SoulCrystalOption[] getCommonSoulCrystalOptions()
+	{
+		return _commonSoulCrystalOptions;
+	}
+	
+	public void setSoulCrystalOptions(SoulCrystalOption[] options)
+	{
+		_commonSoulCrystalOptions = options;
+	}
+	
+	public SoulCrystalOption getSpecialSoulCrystalOption()
+	{
+		return _specialSoulCrystalOption;
+	}
+	
+	public void setSpecialSoulCrystalOption(SoulCrystalOption option)
+	{
+		_specialSoulCrystalOption = option;
 	}
 }

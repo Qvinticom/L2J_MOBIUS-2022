@@ -14,31 +14,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.enums;
+package com.l2jmobius.gameserver.network.serverpackets.ensoul;
 
-import com.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
+import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 
-/**
- * @author UnAfraid
- */
-public enum ItemListType implements IUpdateTypeComponent
+public class ExShowEnsoulWindow extends L2GameServerPacket
 {
-	AUGMENT_BONUS(0x01),
-	ELEMENTAL_ATTRIBUTE(0x02),
-	ENCHANT_EFFECT(0x04),
-	VISUAL_ID(0x08),
-	SOUL_CRYSTAL(0x10);
+	public static final ExShowEnsoulWindow STATIC_PACKET = new ExShowEnsoulWindow();
 	
-	private final int _mask;
-	
-	private ItemListType(int mask)
+	public ExShowEnsoulWindow()
 	{
-		_mask = mask;
 	}
 	
 	@Override
-	public int getMask()
+	protected void writeImpl()
 	{
-		return _mask;
+		writeC(0xFE);
+		writeD(0x17E);
 	}
 }

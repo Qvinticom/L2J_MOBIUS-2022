@@ -115,6 +115,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private final int _itemId;
 	private final int _displayId;
 	private final String _name;
+	private final String _additionalName;
 	private final String _icon;
 	private final int _weight;
 	private final boolean _stackable;
@@ -175,6 +176,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_itemId = set.getInt("item_id");
 		_displayId = set.getInt("displayId", _itemId);
 		_name = set.getString("name");
+		_additionalName = set.getString("additionalName", null);
 		_icon = set.getString("icon", null);
 		_weight = set.getInt("weight", 0);
 		_materialType = set.getEnum("material", MaterialType.class, MaterialType.STEEL);
@@ -535,6 +537,14 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public final String getName()
 	{
 		return _name;
+	}
+	
+	/**
+	 * @return the item's additional name.
+	 */
+	public String getAdditionalName()
+	{
+		return _additionalName;
 	}
 	
 	/**

@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.model.items;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.ItemType;
+import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
 
 /**
  * This class contains L2ItemInstance<BR>
@@ -62,6 +63,9 @@ public class L2WarehouseItem
 	
 	private final int _time;
 	
+	private SoulCrystalOption[] _commonSoulCrystalOptions;
+	private SoulCrystalOption _specialSoulCrystalOption;
+	
 	public L2WarehouseItem(L2ItemInstance item)
 	{
 		_item = item.getItem();
@@ -92,6 +96,9 @@ public class L2WarehouseItem
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_enchantOptions = item.getEnchantOptions();
+		
+		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
+		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
 	}
 	
 	/**
@@ -284,6 +291,26 @@ public class L2WarehouseItem
 	public int getTime()
 	{
 		return _time;
+	}
+	
+	public SoulCrystalOption[] getCommonSoulCrystalOptions()
+	{
+		return _commonSoulCrystalOptions;
+	}
+	
+	public void setSoulCrystalOptions(SoulCrystalOption[] options)
+	{
+		_commonSoulCrystalOptions = options;
+	}
+	
+	public SoulCrystalOption getSpecialSoulCrystalOption()
+	{
+		return _specialSoulCrystalOption;
+	}
+	
+	public void setSpecialSoulCrystalOption(SoulCrystalOption option)
+	{
+		_specialSoulCrystalOption = option;
 	}
 	
 	/**

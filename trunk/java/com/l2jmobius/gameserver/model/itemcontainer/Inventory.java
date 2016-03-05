@@ -375,6 +375,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			item.clearEnchantStats();
+			item.removeSoulCrystalOptionEffect();
 			
 			final SkillHolder[] skills = it.getSkills();
 			
@@ -504,6 +505,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			item.applyEnchantStats();
+			item.applySoulCrystalOptionEffect();
 			
 			final SkillHolder[] skills = it.getSkills();
 			
