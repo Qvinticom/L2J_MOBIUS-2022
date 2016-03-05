@@ -1043,7 +1043,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Chance to activate Focus when using a magic skill. --> 
-	<skill id="13894" levels="1" name="Magic Focus">
+	<skill id="13894" levels="2" name="Magic Focus">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -1064,7 +1064,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Chance to activate Mental Shield when using a magic skill. --> 
-	<skill id="13897" levels="1" name="Magic Mental Shield">
+	<skill id="13897" levels="2" name="Magic Mental Shield">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -1072,16 +1072,24 @@
 	</skill>
 	<!-- P. Atk. + $s1 --> 
 	<skill id="13898" levels="1" name="Tyrr">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-	</skill>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.05" />
+			</effect>
+		</for>
+	</skill>	
 	<!-- M. Atk. + $s1 --> 
 	<skill id="13899" levels="1" name="Feoh">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.05" />
+			</effect>
+		</for>
 	</skill>
 </list>

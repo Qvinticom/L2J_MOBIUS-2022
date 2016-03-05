@@ -2,10 +2,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<!-- Max HP + $s1 --> 
 	<skill id="13900" levels="1" name="Sigel">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Mounts the Shadow Blue. --> 
 	<skill id="13901" levels="1" name="Shadow Blue">
@@ -16,17 +20,25 @@
 	</skill>
 	<!-- Atk. Spd. +1%% --> 
 	<skill id="13902" levels="1" name="Fury (Practice)">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Casting Spd. +1%% --> 
 	<skill id="13903" levels="1" name="Acumen (Practice)">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Special buff prepared by Roa. Go find Roa during special events. For $s1 hour, XP/SP + $s2. --> 
 	<skill id="13904" levels="1" name="Roa's Assistance">
