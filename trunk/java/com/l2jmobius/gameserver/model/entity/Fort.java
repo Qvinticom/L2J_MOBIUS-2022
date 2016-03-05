@@ -1148,7 +1148,6 @@ public final class Fort extends AbstractResidence
 		for (L2Spawn spawnDat : _specialEnvoys)
 		{
 			spawnDat.doSpawn();
-			spawnDat.startRespawn();
 		}
 	}
 	

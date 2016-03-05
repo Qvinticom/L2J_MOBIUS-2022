@@ -34,7 +34,7 @@ public class RequestTutorialClientEvent extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getActiveChar();
 		
 		if (player == null)
 		{

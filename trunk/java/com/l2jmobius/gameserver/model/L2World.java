@@ -358,7 +358,8 @@ public final class L2World
 	}
 	
 	/**
-	 * Remove a L2Object from the world. <B><U> Concept</U> :</B> L2Object (including L2PcInstance) are identified in <B>_visibleObjects</B> of his current L2WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
+	 * Remove an object from the world.<br>
+	 * <B><U> Concept</U> :</B> L2Object (including L2PcInstance) are identified in <B>_visibleObjects</B> of his current L2WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
 	 * L2PcInstance are identified in <B>_allPlayers</B> of L2World, in <B>_allPlayers</B> of his current L2WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
 	 * <li>Remove the L2Object object from _allPlayers* of L2World</li>
 	 * <li>Remove the L2Object object from _visibleObjects and _allPlayers* of L2WorldRegion</li>
@@ -369,39 +370,39 @@ public final class L2World
 	 * <li>Pickup an Item</li>
 	 * <li>Decay a L2Character</li>
 	 * @param object L2object to remove from the world
-	 * @param oldRegion L2WorldRegion in which the object was before removing
+	 * @param oldWorldRegion L2WorldRegion in which the object was before removing
 	 */
-	public void removeVisibleObject(L2Object object, L2WorldRegion oldRegion)
+	public void removeVisibleObject(L2Object object, L2WorldRegion oldWorldRegion)
 	{
 		if (object == null)
 		{
 			return;
 		}
 		
-		if (oldRegion != null)
+		if (oldWorldRegion == null)
 		{
-			// Remove the object from the L2ObjectHashSet(L2Object) _visibleObjects of L2WorldRegion
-			// If object is a L2PcInstance, remove it from the L2ObjectHashSet(L2PcInstance) _allPlayers of this L2WorldRegion
-			oldRegion.removeVisibleObject(object);
-			
-			// Go through all surrounding L2WorldRegion L2Characters
-			for (L2WorldRegion reg : oldRegion.getSurroundingRegions())
+			return;
+		}
+		
+		// Removes the object from the visible objects of world region.
+		// If object is a player, removes it from the players map of this world region.
+		oldWorldRegion.removeVisibleObject(object);
+		
+		// Goes through all surrounding world region's creatures.
+		// And removes the object from their known lists.
+		for (L2WorldRegion worldRegion : oldWorldRegion.getSurroundingRegions())
+		{
+			for (L2Object obj : worldRegion.getVisibleObjects().values())
 			{
-				final Collection<L2Object> vObj = reg.getVisibleObjects().values();
-				for (L2Object obj : vObj)
+				if (obj != null)
 				{
-					if (obj != null)
-					{
-						obj.getKnownList().removeKnownObject(object);
-					}
+					obj.getKnownList().removeKnownObject(object);
 				}
 			}
-			
-			// If object is a L2Character :
-			// Remove all L2Object from L2ObjectHashSet(L2Object) containing all L2Object detected by the L2Character
-			// Remove all L2PcInstance from L2ObjectHashSet(L2PcInstance) containing all player ingame detected by the L2Character
-			object.getKnownList().removeAllKnownObjects();
 		}
+		
+		// Removes all objects from the object's known list.
+		object.getKnownList().removeAllKnownObjects();
 	}
 	
 	/**

@@ -135,26 +135,4 @@ public final class SubClass
 	{
 		_vitalityPoints = vit;
 	}
-	
-	public void incLevel()
-	{
-		if (!_dualClass && (getLevel() == _maxLevel))
-		{
-			return;
-		}
-		
-		_level++;
-		setExp(ExperienceData.getInstance().getExpForLevel(getLevel()));
-	}
-	
-	public void decLevel()
-	{
-		if (getLevel() == Config.BASE_SUBCLASS_LEVEL)
-		{
-			return;
-		}
-		
-		_level--;
-		setExp(ExperienceData.getInstance().getExpForLevel(getLevel()));
-	}
 }

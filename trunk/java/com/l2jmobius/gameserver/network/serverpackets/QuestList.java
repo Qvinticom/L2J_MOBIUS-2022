@@ -24,27 +24,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 
 public class QuestList extends L2GameServerPacket
 {
-	private List<Quest> _activeQuests;
-	private List<Quest> _completedQuests;
-	private L2PcInstance _activeChar;
-	private byte[] _info;
-	
-	public QuestList()
-	{
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		if ((getClient() != null) && (getClient().getActiveChar() != null))
-		{
-			_activeChar = getClient().getActiveChar();
-			_activeQuests = _activeChar.getAllActiveQuests();
-			_completedQuests = _activeChar.getAllCompletedQuests();
-			_info = new byte[128];
-		}
-	}
-	
 	@Override
 	protected final void writeImpl()
 	{
@@ -81,12 +60,22 @@ public class QuestList extends L2GameServerPacket
 		 * </pre>
 		 */
 		
+		final L2PcInstance activeChar = getClient().getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		
+		final List<Quest> activeQuests = activeChar.getAllActiveQuests();
+		final List<Quest> completedQuests = activeChar.getAllCompletedQuests();
+		final byte[] info = new byte[128];
+		
 		writeC(0x86);
-		writeH(_activeQuests.size());
-		for (Quest q : _activeQuests)
+		writeH(activeQuests.size());
+		for (Quest q : activeQuests)
 		{
 			writeD(q.getId());
-			final QuestState qs = _activeChar.getQuestState(q.getName());
+			final QuestState qs = activeChar.getQuestState(q.getName());
 			if (qs == null)
 			{
 				writeD(0);
@@ -104,7 +93,7 @@ public class QuestList extends L2GameServerPacket
 			}
 		}
 		
-		for (Quest q : _completedQuests)
+		for (Quest q : completedQuests)
 		{
 			// add completed quests
 			int questId = q.getId();
@@ -157,8 +146,8 @@ public class QuestList extends L2GameServerPacket
 					break;
 				}
 			}
-			_info[pos] = (byte) (_info[pos] + add);
+			info[pos] = (byte) (info[pos] + add);
 		}
-		writeB(_info);
+		writeB(info);
 	}
 }

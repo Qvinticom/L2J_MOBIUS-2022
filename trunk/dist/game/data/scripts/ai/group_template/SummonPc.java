@@ -36,6 +36,9 @@ final class SummonPc extends AbstractNpcAI
 	private static final int PERUM = 20221;
 	// Skill
 	private static final SkillHolder SUMMON_PC = new SkillHolder(4161, 1);
+	// Misc
+	private static final int MIN_DISTANCE = 300;
+	private static final int MIN_DISTANCE_MOST_HATED = 100;
 	
 	private SummonPc()
 	{
@@ -47,39 +50,29 @@ final class SummonPc extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		final int chance = getRandom(100);
 		final boolean attacked = npc.getVariables().getBoolean("attacked", false);
-		if ((npc.calculateDistance(attacker, true, false) > 300) && !attacked)
+		if (attacked)
+		{
+			return super.onAttack(npc, attacker, damage, isSummon);
+		}
+		
+		final int chance = getRandom(100);
+		final double distance = npc.calculateDistance(attacker, true, false);
+		if (distance > MIN_DISTANCE)
 		{
 			if (chance < 50)
 			{
-				if ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill()))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(SUMMON_PC.getSkill());
-				}
-				
-				if ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill()))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(SUMMON_PC.getSkill());
-					npc.getVariables().set("attacked", true);
-				}
+				doSummonPc(npc, attacker);
 			}
 		}
-		else if ((npc.calculateDistance(attacker, true, false) > 100) && !attacked)
+		else if (distance > MIN_DISTANCE_MOST_HATED)
 		{
 			final L2Attackable monster = (L2Attackable) npc;
 			if (monster.getMostHated() != null)
 			{
 				if (((monster.getMostHated() == attacker) && (chance < 50)) || (chance < 10))
 				{
-					if ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill()))
-					{
-						npc.setTarget(attacker);
-						npc.doCast(SUMMON_PC.getSkill());
-						npc.getVariables().set("attacked", true);
-					}
+					doSummonPc(npc, attacker);
 				}
 			}
 		}
@@ -93,8 +86,21 @@ final class SummonPc extends AbstractNpcAI
 		{
 			player.teleToLocation(npc);
 			npc.getVariables().set("attacked", false);
+			
+			// TODO(Zoey76): Teleport removes the player from all known lists, affecting aggro lists.
+			addAttackDesire(npc, player);
 		}
 		return super.onSpellFinished(npc, player, skill);
+	}
+	
+	private static void doSummonPc(L2Npc npc, L2PcInstance attacker)
+	{
+		if ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill()))
+		{
+			npc.setTarget(attacker);
+			npc.doCast(SUMMON_PC.getSkill());
+			npc.getVariables().set("attacked", true);
+		}
 	}
 	
 	public static void main(String[] args)

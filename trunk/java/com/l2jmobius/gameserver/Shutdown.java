@@ -594,7 +594,7 @@ public class Shutdown extends Thread
 		if (Config.BOTREPORT_ENABLE)
 		{
 			BotReportTable.getInstance().saveReportedCharData();
-			_log.info("Bot Report Table: Sucessfully saved reports to database!");
+			_log.info("Bot Report Table: Successfully saved reports to database!");
 		}
 		
 		try

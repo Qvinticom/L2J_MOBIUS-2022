@@ -740,20 +740,27 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
+		<enchant1 name="abnormalLvl" val="3" />
 		<enchant1 name="abnormalTime" val="30" />
+		<enchant1 name="abnormalType" val="ATTACK_TIME_UP" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
 		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="isDebuff" val="true" />
 		<enchant1 name="lvlBonusRate" val="1" />
 		<enchant1 name="operateType" val="ACTIVE_CONTINUOUS" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="abnormalLvl" val="3" />
 		<enchant2 name="abnormalTime" val="15" />
+		<enchant2 name="abnormalType" val="DOT_ATTR" />
+		<enchant2 name="operateType" val="ACTIVE_CONTINUOUS" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
 		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="isDebuff" val="true" />
 		<enchant2 name="lvlBonusRate" val="1" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<enchant3 name="abnormalLvl" val="1" />
 		<enchant3 name="abnormalTime" val="15" />
+		<enchant3 name="abnormalType" val="HOLY_ATTACK" />
 		<enchant3 name="activateRate" val="80" />
 		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="isDebuff" val="true" />

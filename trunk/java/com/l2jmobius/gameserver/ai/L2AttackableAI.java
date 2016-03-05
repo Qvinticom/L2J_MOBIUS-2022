@@ -1771,6 +1771,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		double dist = 0;
 		double dist2 = 0;
 		int range = 0;
+		if (getAttackTarget() == null)
+		{
+			return;
+		}
 		try
 		{
 			if (npc.getTarget() == null)

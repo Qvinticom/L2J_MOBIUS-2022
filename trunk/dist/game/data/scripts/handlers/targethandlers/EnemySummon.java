@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
+ * Enemy Summon target handler implementation.
  * @author UnAfraid
  */
 public class EnemySummon implements ITargetTypeHandler
@@ -32,7 +33,7 @@ public class EnemySummon implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		if (target.isSummon())
+		if ((target != null) && target.isSummon())
 		{
 			final L2Summon targetSummon = (L2Summon) target;
 			if ((activeChar.isPlayer() && (activeChar.getPet() != targetSummon) && activeChar.hasServitor(targetSummon.getObjectId()) && !targetSummon.isDead() && ((targetSummon.getOwner().getPvpFlag() != 0) || (targetSummon.getOwner().getReputation() < 0))) || (targetSummon.getOwner().isInsideZone(ZoneId.PVP) && activeChar.getActingPlayer().isInsideZone(ZoneId.PVP)) || (targetSummon.getOwner().isInDuel() && activeChar.getActingPlayer().isInDuel() && (targetSummon.getOwner().getDuelId() == activeChar.getActingPlayer().getDuelId())))

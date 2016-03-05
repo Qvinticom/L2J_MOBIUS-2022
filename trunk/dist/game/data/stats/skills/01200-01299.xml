@@ -885,6 +885,11 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
+		<enchant3 name="abnormalLvl" val="1" />
+		<enchant3 name="abnormalTime" val="60" />
+		<enchant3 name="abnormalType" val="HOLY_ATTACK" />
+		<enchant3 name="activateRate" val="40" />
+		<enchant3 name="lvlBonusRate" val="1" />
 		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -1128,10 +1133,15 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
+		<enchant3 name="abnormalLvl" val="1" />
+		<enchant3 name="abnormalTime" val="60" />
+		<enchant3 name="abnormalType" val="HOLY_ATTACK" />
+		<enchant3 name="activateRate" val="40" />
+		<enchant3 name="lvlBonusRate" val="1" />
 		<enchant3 name="basicProperty" val="MEN" />
-		<enchant3 name="isDebuff" val="true" />
-		<enchant3 name="operateType" val="ACTIVE_CONTINUOUS" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<enchant3 name="operateType" val="ACTIVE_CONTINUOUS" />
+		<enchant3 name="isDebuff" val="true" />		
 		<enchant4 name="elementPower" val="#ench4ElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -1355,9 +1365,14 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="elementPower" val="#ench2elementPower" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="operateType" val="ACTIVE_CONTINUOUS" />
+		<enchant3 name="abnormalLvl" val="1" />
+		<enchant3 name="abnormalTime" val="60" />
+		<enchant3 name="abnormalType" val="HOLY_ATTACK" />
+		<enchant3 name="activateRate" val="40" />
+		<enchant3 name="lvlBonusRate" val="1" />
 		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<enchant3 name="operateType" val="ACTIVE_CONTINUOUS" />
 		<enchant3 name="isDebuff" val="true" />
 		<for>
 			<effect name="MagicalAttack" />
