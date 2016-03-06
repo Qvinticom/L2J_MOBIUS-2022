@@ -187,6 +187,7 @@ import quests.Q00904_DragonTrophyAntharas.Q00904_DragonTrophyAntharas;
 import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
 import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
 import quests.Q00907_DragonTrophyValakas.Q00907_DragonTrophyValakas;
+import quests.Q00943_FillingTheEnergyOfDestruction.Q00943_FillingTheEnergyOfDestruction;
 import quests.Q00998_FallenAngelSelect.Q00998_FallenAngelSelect;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import quests.Q10274_CollectingInTheAir.Q10274_CollectingInTheAir;
@@ -472,6 +473,7 @@ final class QuestMasterHandler
 		Q00905_RefinedDragonBlood.class,
 		Q00906_TheCallOfValakas.class,
 		Q00907_DragonTrophyValakas.class,
+		Q00943_FillingTheEnergyOfDestruction.class,
 		Q00998_FallenAngelSelect.class,
 		Q10273_GoodDayToFly.class,
 		Q10274_CollectingInTheAir.class,
