@@ -79,7 +79,9 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		writeH(0x00); // Equipped : 00-No, 01-yes
 		writeC(item.getCustomType2());
 		writeD(0);
-		writeItemElementalAndEnchant(new ItemInfo(item));
+		final ItemInfo iteminfo = new ItemInfo(item);
+		writeItemElementalAndEnchant(iteminfo);
+		writeItemSoulCrystalOptions(iteminfo);
 	}
 	
 	protected void writeItem(ItemInfo item)
@@ -164,7 +166,11 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 			mask |= ItemListType.VISUAL_ID.getMask();
 		}
 		
-		if ((item.getCommonSoulCrystalOptions().length != 0) || (item.getSpecialSoulCrystalOption() != null))
+		if (item.getSpecialSoulCrystalOption() != null)
+		{
+			mask |= ItemListType.SOUL_CRYSTAL.getMask();
+		}
+		else
 		{
 			for (SoulCrystalOption sco : item.getCommonSoulCrystalOptions())
 			{
@@ -173,11 +179,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 					mask |= ItemListType.SOUL_CRYSTAL.getMask();
 					break;
 				}
-			}
-			
-			if (item.getSpecialSoulCrystalOption() != null)
-			{
-				mask |= ItemListType.SOUL_CRYSTAL.getMask();
 			}
 		}
 		
@@ -237,8 +238,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		writeH(item.getCustomType2());
 		writeItemElementalAndEnchant(item);
 		writeD(item.getVisualId());
-		writeC(0);
-		writeC(0);
+		writeItemSoulCrystalOptions(item);
 	}
 	
 	protected void writeItemSoulCrystalOptions(ItemInfo item)

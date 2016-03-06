@@ -21,6 +21,9 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ensoul.ExShowEnsoulWindow;
 
+/**
+ * @author Mathael
+ */
 public class Ensoul implements IBypassHandler
 {
 	private static final String[] COMMANDS =
