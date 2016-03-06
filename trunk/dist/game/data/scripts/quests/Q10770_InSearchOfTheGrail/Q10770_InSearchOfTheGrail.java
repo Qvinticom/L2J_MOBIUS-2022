@@ -33,6 +33,15 @@ public class Q10770_InSearchOfTheGrail extends Quest
 	// NPCs
 	private static final int LORAIN = 30673;
 	private static final int JANSSEN = 30484;
+	// Monsters
+	private static final int[] MONSTERS =
+	{
+		20213, // Porta
+		20214, // Excuro
+		20216, // Ricenseo
+		20217, // Krator
+		21036, // Shindebarn
+	};
 	// Items
 	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 30);
 	private static final ItemHolder EWC = new ItemHolder(951, 1);
@@ -43,15 +52,6 @@ public class Q10770_InSearchOfTheGrail extends Quest
 	private static final int SP_REWARD = 562;
 	// Misc
 	private static final int MIN_LEVEL = 40;
-	// Mobs
-	private static final int[] MOBNSTERS =
-	{
-		20213, // Porta
-		20214, // Excuro
-		20216, // Ricenseo
-		20217, // Krator
-		21036, // Shindebarn
-	};
 	
 	public Q10770_InSearchOfTheGrail()
 	{
@@ -59,7 +59,7 @@ public class Q10770_InSearchOfTheGrail extends Quest
 		addStartNpc(LORAIN);
 		addTalkId(LORAIN, JANSSEN);
 		registerQuestItems(SHINING_MYSTERIOUS);
-		addKillId(MOBNSTERS);
+		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "noLevel.html");
 		addCondRace(Race.ERTHEIA, "noErtheya.html");
 	}
