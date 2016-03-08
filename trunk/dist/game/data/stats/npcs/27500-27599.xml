@@ -740,18 +740,26 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="27533" level="45" type="L2Npc" name="Fragment Eater" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="27533" level="45" type="L2Monster" name="Fragment Eater" title="Quest Monster">
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="938" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="689" magical="470" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="699" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="140" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" />
+		</skillList>
 		<collision>
 			<radius normal="14.4" />
 			<height normal="22" />
@@ -861,7 +869,7 @@
 	</npc>
 	<npc id="27540" level="60" type="L2Monster" name="Embryo Purifier" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="3064" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
@@ -878,7 +886,7 @@
 	</npc>
 	<npc id="27541" level="60" type="L2Monster" name="Embryo Purifier" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats>
 			<vitals hp="3064" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />

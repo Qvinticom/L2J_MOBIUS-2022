@@ -49669,3 +49669,27 @@ INSERT INTO  `spawnlist` VALUES
 -- Hatuba
 INSERT INTO  `spawnlist` VALUES 
 ("ForestOfTheDead", 1, 33849, 52480, -54127, -3090, 0, 0, 32600, 60, 0, 0, 0);
+
+-- Cruma Tower
+INSERT INTO `spawnlist` VALUES 
+('Cruma Tower', 1, 33990,  20078, 118778, -12090, 0, 0, 20848, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  20555, 118798, -12090, 0, 0, 18744, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  21355, 118426, -12090, 0, 0, 16595, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  21456, 120353, -12090, 0, 0, 65061, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  21456, 120830, -12090, 0, 0, 227, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  21770, 118426, -12090, 0, 0, 51336, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  21824, 120829, -12090, 0, 0, 34488, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  21824, 120353, -12090, 0, 0, 32381, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22128, 117090, -12090, 0, 0, 64976, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22128, 118957, -12090, 0, 0, 65359, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22128, 117702, -12090, 0, 0, 65333, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22128, 118333, -12090, 0, 0, 800, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22136, 119586, -12090, 0, 0, 113, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22332, 116533, -12090, 0, 0, 14979, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22332, 120759, -12090, 0, 0, 49144, 60, 0, 0, 0),	-- Hidden Crusher			
+('Cruma Tower', 1, 33990,  22537, 120755, -12090, 0, 0, 48831, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22541, 116533, -12090, 0, 0, 16204, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22736, 117696, -12090, 0, 0, 33975, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22736, 118320, -12090, 0, 0, 60821, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22736, 118936, -12090, 0, 0, 33417, 60, 0, 0, 0),	-- Hidden Crusher
+('Cruma Tower', 1, 33990,  22736, 119586, -12090, 0, 0, 33333, 60, 0, 0, 0);	-- Hidden Crusher
