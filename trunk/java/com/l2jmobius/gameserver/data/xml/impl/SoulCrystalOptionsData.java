@@ -43,7 +43,7 @@ public class SoulCrystalOptionsData implements IXmlReader
 	{
 		_soulCrystalOptions.clear();
 		
-		parseDatapackFile("soulCrystalOptions.xml");
+		parseDatapackFile("SoulCrystalOptions.xml");
 		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _soulCrystalOptions.size() + " Soul Crystal Options.");
 	}

@@ -84,7 +84,7 @@ public final class BotReportTable
 			
 			try
 			{
-				final File punishments = new File("./config/botreport_punishments.xml");
+				final File punishments = new File("./config/BotReportPunishments.xml");
 				if (!punishments.exists())
 				{
 					throw new FileNotFoundException(punishments.getName());
@@ -95,7 +95,7 @@ public final class BotReportTable
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "BotReportTable: Could not load punishments from /config/botreport_punishments.xml", e);
+				LOGGER.log(Level.WARNING, "BotReportTable: Could not load punishments from /config/BotReportPunishments.xml", e);
 			}
 			
 			loadReportedCharData();
@@ -551,7 +551,7 @@ public final class BotReportTable
 	}
 	
 	/**
-	 * SAX loader to parse /config/botreport_punishments.xml file
+	 * SAX loader to parse /config/BotReportPunishments.xml file
 	 */
 	private final class PunishmentsLoader extends DefaultHandler
 	{

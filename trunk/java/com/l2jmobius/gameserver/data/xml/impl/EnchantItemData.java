@@ -52,7 +52,7 @@ public class EnchantItemData implements IXmlReader
 	{
 		_scrolls.clear();
 		_supports.clear();
-		parseDatapackFile("enchantItemData.xml");
+		parseDatapackFile("EnchantItemData.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _scrolls.size() + " Enchant Scrolls.");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _supports.size() + " Support Items.");
 	}

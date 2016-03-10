@@ -44,7 +44,7 @@ public class EnchantItemOptionsData implements IXmlReader
 	public synchronized void load()
 	{
 		_data.clear();
-		parseDatapackFile("enchantItemOptions.xml");
+		parseDatapackFile("EnchantItemOptions.xml");
 	}
 	
 	@Override

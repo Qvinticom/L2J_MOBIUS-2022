@@ -52,7 +52,7 @@ public class RecipeData implements IXmlReader
 	public void load()
 	{
 		_recipes.clear();
-		parseDatapackFile("recipes.xml");
+		parseDatapackFile("Recipes.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _recipes.size() + " recipes.");
 	}
 	

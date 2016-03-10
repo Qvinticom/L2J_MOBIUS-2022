@@ -121,7 +121,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 	@Override
 	public final void load()
 	{
-		parseDatapackFile("seeds.xml");
+		parseDatapackFile("Seeds.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _seeds.size() + " seeds.");
 	}
 	

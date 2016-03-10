@@ -2226,7 +2226,7 @@ public final class Config
 			
 			TVT_EVENT_ENABLED = CustomSettings.getBoolean("TvTEventEnabled", false);
 			TVT_EVENT_IN_INSTANCE = CustomSettings.getBoolean("TvTEventInInstance", false);
-			TVT_EVENT_INSTANCE_FILE = CustomSettings.getString("TvTEventInstanceFile", "coliseum.xml");
+			TVT_EVENT_INSTANCE_FILE = CustomSettings.getString("TvTEventInstanceFile", "Coliseum.xml");
 			TVT_EVENT_INTERVAL = CustomSettings.getString("TvTEventInterval", "20:00").split(",");
 			TVT_EVENT_PARTICIPATION_TIME = CustomSettings.getInt("TvTEventParticipationTime", 3600);
 			TVT_EVENT_RUNNING_TIME = CustomSettings.getInt("TvTEventRunningTime", 1800);

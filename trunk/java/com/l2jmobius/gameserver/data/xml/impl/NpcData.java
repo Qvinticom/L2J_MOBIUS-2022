@@ -838,7 +838,7 @@ public class NpcData implements IXmlReader
 		public void load()
 		{
 			_tempMinions.clear();
-			parseDatapackFile("minionData.xml");
+			parseDatapackFile("MinionData.xml");
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _tempMinions.size() + " minions data.");
 		}
 		

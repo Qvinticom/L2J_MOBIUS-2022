@@ -53,7 +53,7 @@ public class DailyMissionData implements IXmlReader
 	{
 		_dailyMissions.clear();
 		_dailyLevelUpMissions.clear();
-		parseDatapackFile("dailyMissions.xml");
+		parseDatapackFile("DailyMissions.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _dailyMissions.size() + " daily missions.");
 	}
 	

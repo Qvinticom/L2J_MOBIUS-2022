@@ -49,7 +49,7 @@ public final class CategoryData implements IXmlReader
 	public void load()
 	{
 		_categories.clear();
-		parseDatapackFile("categoryData.xml");
+		parseDatapackFile("CategoryData.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _categories.size() + " Categories.");
 	}
 	

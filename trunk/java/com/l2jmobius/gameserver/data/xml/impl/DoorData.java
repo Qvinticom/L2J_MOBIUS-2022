@@ -58,7 +58,7 @@ public class DoorData implements IXmlReader
 		_doors.clear();
 		_groups.clear();
 		_regions.clear();
-		parseDatapackFile("doors.xml");
+		parseDatapackFile("Doors.xml");
 	}
 	
 	@Override

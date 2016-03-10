@@ -66,7 +66,7 @@ public final class InstanceManager implements IXmlReader
 	public void load()
 	{
 		_instanceIdNames.clear();
-		parseDatapackFile("instancenames.xml");
+		parseDatapackFile("InstanceNames.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceIdNames.size() + " instance names.");
 	}
 	

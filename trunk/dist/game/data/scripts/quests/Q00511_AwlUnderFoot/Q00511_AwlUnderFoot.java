@@ -325,7 +325,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			tele[0] = 53322;
 			tele[1] = 246380;
 			tele[2] = -6580;
-			return enterInstance(player, "fortdungeon.xml", tele, _fortDungeons.get(npc.getId()), checkFortCondition(player, npc, true));
+			return enterInstance(player, "FortDungeon.xml", tele, _fortDungeons.get(npc.getId()), checkFortCondition(player, npc, true));
 		}
 		final QuestState qs = getQuestState(player, true);
 		

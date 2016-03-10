@@ -259,7 +259,7 @@ public final class Instance
 	
 	/**
 	 * Adds a door into the instance
-	 * @param doorId - from doors.xml
+	 * @param doorId - from Doors.xml
 	 * @param set - StatsSet for initializing door
 	 */
 	public void addDoor(int doorId, StatsSet set)

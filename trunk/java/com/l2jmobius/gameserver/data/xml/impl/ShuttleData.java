@@ -60,7 +60,7 @@ public final class ShuttleData implements IXmlReader
 			}
 			_shuttleInstances.clear();
 		}
-		parseDatapackFile("shuttledata.xml");
+		parseDatapackFile("ShuttleData.xml");
 		init();
 		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _shuttles.size() + " Shuttles.");
 	}
