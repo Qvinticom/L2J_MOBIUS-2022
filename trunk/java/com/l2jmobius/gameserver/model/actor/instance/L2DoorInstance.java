@@ -694,9 +694,10 @@ public class L2DoorInstance extends L2Character
 		}
 	}
 	
-	public void setTargetable(boolean b)
+	@Override
+	public void setTargetable(boolean value)
 	{
-		_isTargetable = b;
+		_isTargetable = value;
 		broadcastStatusUpdate();
 	}
 	

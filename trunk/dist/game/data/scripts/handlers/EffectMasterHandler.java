@@ -109,6 +109,7 @@ final class EffectMasterHandler
 		HealOverTime.class,
 		HealPercent.class,
 		Hide.class,
+		NoTarget.class,
 		HpByLevel.class,
 		HpCpHeal.class,
 		HpDrain.class,

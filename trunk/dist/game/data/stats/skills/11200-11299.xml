@@ -362,9 +362,10 @@
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="abnormalTime" val="10" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
 				<mul stat="mDef" val="1.3" />
@@ -385,9 +386,10 @@
 		<set name="hitTime" val="1490" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="5000" />
+		<set name="abnormalTime" val="10" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="11261" levels="9" name="Mark of Plague">
 	<!-- Source: https://l2wiki.com/Mark_of_Plague_-_Wynn_Arcana_Lord -->
@@ -401,9 +403,10 @@
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="abnormalTime" val="10" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="11262" levels="9" name="Mark of Trick">
 	<!-- Source: https://l2wiki.com/Mark_of_Trick_-_Wynn_Spectral_Master -->
@@ -417,9 +420,10 @@
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
+		<set name="abnormalTime" val="10" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="11263" levels="10" name="Invoke">
 	<!-- Source: https://l2wiki.com/Invoke_-_Wynn_Elemental_Master -->
@@ -808,13 +812,33 @@
 		<table name="#mpConsume"> 78 86 94 97 </table>
 		<set name="icon" val="icon.skill11274" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalTime" val="60" />		
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isMagic" val="1" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
+			<effect name="Buff">
+				<add stat="regHp" val="5" /> 		<!-- Need Verify -->
+			</effect>
+		</for>
 	</skill>
 	<skill id="11275" levels="2" name="Mark Flare">
 		<!-- AUTO GENERATED SKILL -->
@@ -999,6 +1023,7 @@
 		<set name="coolTime" val="#coolTime" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
+		<set name="abnormalTime" val="60" />
 		<cond msgId="113" addName="1">
 			<and>
 				<player hasServitor="true" />
@@ -1178,12 +1203,13 @@
 		<set name="icon" val="icon.skill11297" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="1800" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3799" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="60000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="SERVITOR" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.1" />

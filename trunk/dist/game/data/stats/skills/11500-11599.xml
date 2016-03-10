@@ -1613,6 +1613,7 @@
 				<add stat="pDef" val="4500" />
 				<add stat="mDef" val="4500" />
 			</effect>
+			<effect name="NoTarget" />
 		</for>
 		<enchant3for>
 			<effect name="Transformation">
@@ -1621,6 +1622,7 @@
 				<add stat="pDef" val="4500" />
 				<add stat="mDef" val="4500" />
 			</effect>
+			<effect name="NoTarget" />
 		</enchant3for>
 	</skill>
 	<skill id="11543" levels="6" name="Disperse" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10">

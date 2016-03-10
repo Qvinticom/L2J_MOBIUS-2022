@@ -77,6 +77,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	private final AtomicInteger _instanceId = new AtomicInteger(0);
 	private boolean _isVisible;
 	private boolean _isInvisible;
+	private boolean _isTargetable = true;
 	private ObjectKnownList _knownList;
 	
 	public L2Object(int objectId)
@@ -473,7 +474,16 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public boolean isTargetable()
 	{
-		return true;
+		return _isTargetable;
+	}
+	
+	/**
+	 * Set value of Targetable (isTargetable() function)
+	 * @param value Boolean
+	 */
+	public void setTargetable(boolean value)
+	{
+		_isTargetable = value;
 	}
 	
 	/**

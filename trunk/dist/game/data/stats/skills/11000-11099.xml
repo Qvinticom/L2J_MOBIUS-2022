@@ -1618,13 +1618,16 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="MagicalAttack" />
+			<effect name="DispelByCategory">
+				<param slot="buff" rate="100" max="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="11050" levels="7" name="Hell Binding">

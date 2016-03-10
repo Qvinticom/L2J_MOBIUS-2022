@@ -240,14 +240,14 @@
 		<enchant1 name="ench1mpConsume" val="#ench1mpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<for>
-			<effect name="ImmobilePetBuff">
+		<effect name="Buff">
 				<add stat="mDef" val="#mDef" />
 				<add stat="pDef" val="#pDef" />
 				<sub stat="cancelVuln" val="80" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="ImmobilePetBuff">
+		<effect name="Buff">
 				<add stat="mDef" val="4212" />
 				<add stat="pDef" val="4680" />
 				<mul stat="runSpd" val="#ench3Spd" />
@@ -951,6 +951,7 @@
 		<set name="icon" val="icon.skill11347" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="1800" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3500" />
@@ -1027,7 +1028,7 @@
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2400" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="11351" levels="5" name="Arcane Link">
 		<!-- AUTO GENERATED SKILL -->
