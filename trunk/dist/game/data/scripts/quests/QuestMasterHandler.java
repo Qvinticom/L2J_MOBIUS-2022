@@ -259,6 +259,7 @@ import quests.Q10411_KekropusLetter_TheForestOfTheDead.Q10411_KekropusLetter_The
 import quests.Q10414_KekropusLetter_WithCourage.Q10414_KekropusLetter_WithCourage;
 import quests.Q10415_KekropusLetter_WithWisdom.Q10415_KekropusLetter_WithWisdom;
 import quests.Q10453_StoppingTheWindDragon.Q10453_StoppingTheWindDragon;
+import quests.Q10472_WindsOfFate_EncroachingShadows.Q10472_WindsOfFate_EncroachingShadows;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
@@ -546,6 +547,7 @@ final class QuestMasterHandler
 		Q10414_KekropusLetter_WithCourage.class,
 		Q10415_KekropusLetter_WithWisdom.class,
 		Q10453_StoppingTheWindDragon.class,
+		Q10472_WindsOfFate_EncroachingShadows.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
 		Q10503_FrintezzaEmbroideredSoulCloak.class,

@@ -959,10 +959,11 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Counterfeit Atelia fragment is lodged in the body. -->
 		<set name="icon" val="icon.skill4035" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="operateType" val="TOGGLE" />
+		<set name="targetType" val="ONE" />
+		<set name="abnormalTime" val="240" />
 		<set name="castRange" val="600" />
-		<set name="coolTime" val="500" />
+		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="2000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
