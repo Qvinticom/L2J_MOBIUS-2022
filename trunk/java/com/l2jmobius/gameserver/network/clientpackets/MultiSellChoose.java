@@ -33,6 +33,7 @@ import com.l2jmobius.gameserver.model.multisell.Entry;
 import com.l2jmobius.gameserver.model.multisell.Ingredient;
 import com.l2jmobius.gameserver.model.multisell.PreparedListContainer;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -225,6 +226,9 @@ public class MultiSellChoose extends L2GameClientPacket
 				
 				final List<L2Augmentation> augmentation = new ArrayList<>();
 				Elementals[] elemental = null;
+				SoulCrystalOption[] commonSoulCrystalOptions = null;
+				SoulCrystalOption specialSoulCrystalOption = null;
+				
 				/** All ok, remove items and add final product */
 				
 				for (Ingredient e : entry.getIngredients())
@@ -290,6 +294,14 @@ public class MultiSellChoose extends L2GameClientPacket
 										{
 											player.setMultiSell(null);
 											return;
+										}
+										if (inventoryContents[i].getCommonSoulCrystalOptions() != null)
+										{
+											commonSoulCrystalOptions = inventoryContents[i].getCommonSoulCrystalOptions();
+										}
+										if (inventoryContents[i].getSpecialSoulCrystalOption() != null)
+										{
+											specialSoulCrystalOption = inventoryContents[i].getSpecialSoulCrystalOption();
 										}
 									}
 								}
@@ -417,6 +429,14 @@ public class MultiSellChoose extends L2GameClientPacket
 										{
 											product.setElementAttr(elm.getElement(), elm.getValue());
 										}
+									}
+									if (commonSoulCrystalOptions != null)
+									{
+										product.setCommonSoulCrystalOptions(commonSoulCrystalOptions);
+									}
+									if (specialSoulCrystalOption != null)
+									{
+										product.setSpecialSoulCrystalOption(specialSoulCrystalOption);
 									}
 									product.setEnchantLevel(e.getEnchantLevel());
 									product.updateDatabase();
