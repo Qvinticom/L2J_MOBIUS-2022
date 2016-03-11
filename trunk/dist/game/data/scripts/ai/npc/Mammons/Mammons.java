@@ -70,7 +70,7 @@ final class Mammons extends AbstractNpcAI
 		"Town of Giran",
 		"Town of Rune",
 	};
-	private static final int TELEPORT_DELAY = 1800000; // 30min
+	private static final int TELEPORT_DELAY = 3600000; // 60min
 	private static final List<L2Npc> _mammons = new ArrayList<>();
 	
 	private Mammons()
