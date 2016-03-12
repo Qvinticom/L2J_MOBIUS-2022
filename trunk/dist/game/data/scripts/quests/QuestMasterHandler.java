@@ -293,6 +293,7 @@ import quests.Q10764_FreeSpirit.Q10764_FreeSpirit;
 import quests.Q10769_LettersFromTheQueen_CrumaTower.Q10769_LettersFromTheQueen_CrumaTower;
 import quests.Q10770_InSearchOfTheGrail.Q10770_InSearchOfTheGrail;
 import quests.Q10771_VolatilePower.Q10771_VolatilePower;
+import quests.Q10772_ReportsFromCrumaTowerPart1.Q10772_ReportsFromCrumaTowerPart1;
 import quests.Q10782_LettersFromTheQueen_ForsakenPlains.Q10782_LettersFromTheQueen_ForsakenPlains;
 import quests.Q10785_LettersFromTheQueen_FieldsOfMassacre.Q10785_LettersFromTheQueen_FieldsOfMassacre;
 import quests.Q10789_LettersFromTheQueen_SwampOfScreams.Q10789_LettersFromTheQueen_SwampOfScreams;
@@ -581,6 +582,7 @@ final class QuestMasterHandler
 		Q10769_LettersFromTheQueen_CrumaTower.class,
 		Q10770_InSearchOfTheGrail.class,
 		Q10771_VolatilePower.class,
+		Q10772_ReportsFromCrumaTowerPart1.class,
 		Q10782_LettersFromTheQueen_ForsakenPlains.class,
 		Q10785_LettersFromTheQueen_FieldsOfMassacre.class,
 		Q10789_LettersFromTheQueen_SwampOfScreams.class,
