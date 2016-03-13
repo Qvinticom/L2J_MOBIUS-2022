@@ -198,6 +198,13 @@ public class Q10343_DayOfDestinyDarkElfsFate extends Quest
 							player.setClassId(110);
 							break;
 						}
+						// Phantom Summoner -> Spectral Master
+						case 41:
+						{
+							player.setBaseClassId(111);
+							player.setClassId(111);
+							break;
+						}
 						// Shillien Elder -> Shillien Saint
 						case 43:
 						{
