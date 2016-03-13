@@ -102,6 +102,7 @@ public class Q10363_RequestOfTheSeeker extends Quest
 				if (qs.getCond() == 6)
 				{
 					qs.setCond(7);
+					showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
 					htmltext = event;
 				}
 				break;

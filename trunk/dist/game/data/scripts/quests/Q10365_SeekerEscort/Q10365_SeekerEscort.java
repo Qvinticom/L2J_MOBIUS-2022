@@ -94,8 +94,8 @@ public final class Q10365_SeekerEscort extends Quest
 		addTalkId(DEP, SEBION);
 		addSpawnId(BLOODHOUND);
 		addMoveFinishedId(BLOODHOUND);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
-		addCondCompletedQuest(Q10364_ObligationsOfTheSeeker.class.getSimpleName(), "no_level.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33453-07.html");
+		addCondCompletedQuest(Q10364_ObligationsOfTheSeeker.class.getSimpleName(), "33453-07.html");
 	}
 	
 	@Override
@@ -115,7 +115,7 @@ public final class Q10365_SeekerEscort extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33453-03.html":
+			case "33453-03.htm":
 			{
 				qs.startQuest();
 				qs.setMemoState(2);
@@ -159,7 +159,7 @@ public final class Q10365_SeekerEscort extends Quest
 							{
 								if (loc_index == 16)
 								{
-									showOnScreenMsg(player, NpcStringId.YOU_MUST_MOVE_TO_EXPLORATION_AREA_5_IN_ORDER_TO_CONTINUE, ExShowScreenMessage.TOP_CENTER, 5000);
+									showOnScreenMsg(player, NpcStringId.YOU_MUST_MOVE_TO_EXPLORATION_AREA_5_IN_ORDER_TO_CONTINUE, ExShowScreenMessage.TOP_CENTER, 10000);
 									startQuestTimer("DELETE_NPC", 3000, npc, owner);
 									startQuestTimer("NEXT_AREA", 7000, npc, owner);
 									break;
@@ -188,7 +188,7 @@ public final class Q10365_SeekerEscort extends Quest
 						if (failCount >= 30)
 						{
 							qs.setMemoState(1);
-							showOnScreenMsg(player, NpcStringId.KING_HAS_RETURNED_TO_DEF_RETURN_TO_DEF_AND_START_AGAIN, ExShowScreenMessage.TOP_CENTER, 5000);
+							showOnScreenMsg(player, NpcStringId.KING_HAS_RETURNED_TO_DEF_RETURN_TO_DEF_AND_START_AGAIN, ExShowScreenMessage.TOP_CENTER, 10000);
 							npc.deleteMe();
 							break;
 						}
@@ -253,7 +253,7 @@ public final class Q10365_SeekerEscort extends Quest
 		
 		if (owner != null)
 		{
-			showOnScreenMsg(owner, NpcStringId.CATCH_UP_TO_KING_HE_S_WAITING, ExShowScreenMessage.TOP_CENTER, 5000);
+			showOnScreenMsg(owner, NpcStringId.CATCH_UP_TO_KING_HE_S_WAITING, ExShowScreenMessage.TOP_CENTER, 1000);
 			npc.setHeading(Util.calculateHeadingFrom(npc, owner));
 			npc.broadcastPacket(new ExRotation(npc.getObjectId(), npc.getHeading()));
 			startQuestTimer("CHECK_PLAYER", 1000, npc, owner);
@@ -270,11 +270,7 @@ public final class Q10365_SeekerEscort extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == DEP)
-				{
-					htmltext = "33453-01.htm";
-					break;
-				}
+				htmltext = npc.getId() == DEP ? "33453-01.htm" : "32978-05.html";
 				break;
 			}
 			case State.STARTED:
@@ -301,6 +297,10 @@ public final class Q10365_SeekerEscort extends Quest
 					{
 						htmltext = "32978-01.html";
 					}
+					else
+					{
+						htmltext = "32978-03.html";
+					}
 					break;
 				}
 				break;
@@ -309,7 +309,7 @@ public final class Q10365_SeekerEscort extends Quest
 			{
 				if (npc.getId() == SEBION)
 				{
-					htmltext = "32978-03.html";
+					htmltext = "32978-04.html";
 				}
 				else
 				{

@@ -16,17 +16,20 @@
  */
 package quests.Q10366_RuinsStatusUpdate;
 
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
 
 /**
  * Ruins status update (10366)
- * @author spider
+ * @author spider, gyo
  */
 public class Q10366_RuinsStatusUpdate extends Quest
 {
@@ -45,14 +48,21 @@ public class Q10366_RuinsStatusUpdate extends Quest
 	// Requirements
 	private static final int MIN_LEVEL = 16;
 	private static final int MAX_LEVEL = 25;
+	// NPCs Name
+	private static final String GRAND_MAGISTER_DEVON = "Grand Magister Devon";
+	private static final String GRAND_MASTER_RIVIAN = "Grand Master Rivian";
+	private static final String GRAND_MASTER_VALFAR = "Grand Master Valfar";
+	private static final String HEAD_BLACKSMITH_MOKA = "Head Blacksmith Moka";
+	private static final String HIGH_PREFECT_TOOK = "High Prefect Took";
+	private static final String HIGH_PRIEST_FRANCO = "High Priest Franco";
 	
 	public Q10366_RuinsStatusUpdate()
 	{
 		super(10366, Q10366_RuinsStatusUpdate.class.getSimpleName(), "Ruins status update");
 		addStartNpc(SEBION);
 		addTalkId(FRANCO, VALFAR, RIVIAN, TOOK, MOKA, DEVON, SEBION);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.htm");
-		addCondCompletedQuest(Q10365_SeekerEscort.class.getSimpleName(), "no_prequest.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "32978-05.htm");
+		addCondCompletedQuest(Q10365_SeekerEscort.class.getSimpleName(), "32978-05.htm");
 	}
 	
 	@Override
@@ -72,19 +82,68 @@ public class Q10366_RuinsStatusUpdate extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32978-03.htm": // FIXME: add race-specified texts
+			case "32978-03.html":
 			{
 				qs.startQuest();
-				qs.setCond(2);
-				htmltext = event;
+				showOnScreenMsg(qs.getPlayer(), NpcStringId.USE_THE_ESCAPE_SCROLL_IN_YOUR_INVENTORY_TO_GO_TO_THE_ADMINISTRATIVE_OFFICE_IN_TALKING_ISLAND, ExShowScreenMessage.TOP_CENTER, 10000);
+				htmltext = getHtm(player.getHtmlPrefix(), event);
+				switch (player.getRace())
+				{
+					case HUMAN:
+					{
+						qs.setCond(2);
+						htmltext = htmltext.replace("%MASTER%", HIGH_PRIEST_FRANCO);
+						break;
+					}
+					case ELF:
+					{
+						qs.setCond(3);
+						htmltext = htmltext.replace("%MASTER%", GRAND_MASTER_RIVIAN);
+						break;
+					}
+					case DARK_ELF:
+					{
+						qs.setCond(4);
+						htmltext = htmltext.replace("%MASTER%", GRAND_MAGISTER_DEVON);
+						break;
+					}
+					case ORC:
+					{
+						qs.setCond(5);
+						htmltext = htmltext.replace("%MASTER%", HIGH_PREFECT_TOOK);
+						break;
+					}
+					case DWARF:
+					{
+						qs.setCond(6);
+						htmltext = htmltext.replace("%MASTER%", HEAD_BLACKSMITH_MOKA);
+						break;
+					}
+					case KAMAEL:
+					{
+						qs.setCond(7);
+						htmltext = htmltext.replace("%MASTER%", GRAND_MASTER_VALFAR);
+						break;
+					}
+				}
 				break;
 			}
-			case "33750-02.html":
+			case "32146-02.html":
+			case "32147-02.html":
+			case "32150-02.html":
+			case "32153-02.html":
+			case "32157-02.html":
+			case "32160-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33750-03.html":
+			case "32146-03.html":
+			case "32147-03.html":
+			case "32150-03.html":
+			case "32153-03.html":
+			case "32157-03.html":
+			case "32160-03.html":
 			{
 				if (qs.getCond() > 1)
 				{
@@ -117,17 +176,112 @@ public class Q10366_RuinsStatusUpdate extends Quest
 				{
 					case SEBION:
 					{
-						htmltext = "32978-04.html";
+						htmltext = getHtm(player.getHtmlPrefix(), "32978-04.html");
+						switch (player.getRace())
+						{
+							case HUMAN:
+							{
+								htmltext = htmltext.replace("%MASTER%", HIGH_PRIEST_FRANCO);
+								break;
+							}
+							case ELF:
+							{
+								htmltext = htmltext.replace("%MASTER%", GRAND_MASTER_RIVIAN);
+								break;
+							}
+							case DARK_ELF:
+							{
+								htmltext = htmltext.replace("%MASTER%", GRAND_MAGISTER_DEVON);
+								break;
+							}
+							case ORC:
+							{
+								htmltext = htmltext.replace("%MASTER%", HIGH_PREFECT_TOOK);
+								break;
+							}
+							case DWARF:
+							{
+								htmltext = htmltext.replace("%MASTER%", HEAD_BLACKSMITH_MOKA);
+								break;
+							}
+							case KAMAEL:
+							{
+								htmltext = htmltext.replace("%MASTER%", GRAND_MASTER_VALFAR);
+								break;
+							}
+						}
 						break;
 					}
-					case VALFAR:// FIXME: add all races texts
-					case RIVIAN:
-					case TOOK:
-					case MOKA:
-					case DEVON:
 					case FRANCO:
 					{
-						htmltext = "33750-01.html";
+						if (player.getRace() == Race.HUMAN)
+						{
+							htmltext = "32153-01.html";
+						}
+						else
+						{
+							htmltext = "32153-04.html";
+						}
+						break;
+					}
+					case RIVIAN:
+					{
+						if (player.getRace() == Race.ELF)
+						{
+							htmltext = "32147-01.html";
+						}
+						else
+						{
+							htmltext = "32147-04.html";
+						}
+						break;
+					}
+					case DEVON:
+					{
+						if (player.getRace() == Race.DARK_ELF)
+						{
+							htmltext = "32160-01.html";
+						}
+						else
+						{
+							htmltext = "32160-04.html";
+						}
+						break;
+					}
+					case TOOK:
+					{
+						if (player.getRace() == Race.ORC)
+						{
+							htmltext = "32150-01.html";
+						}
+						else
+						{
+							htmltext = "32150-04.html";
+						}
+						break;
+					}
+					case MOKA:
+					{
+						if (player.getRace() == Race.DWARF)
+						{
+							htmltext = "32157-01.html";
+						}
+						else
+						{
+							htmltext = "32157-04.html";
+						}
+						break;
+					}
+					case VALFAR:
+					{
+						if (player.getRace() == Race.KAMAEL)
+						{
+							htmltext = "32146-01.html";
+						}
+						else
+						{
+							htmltext = "32146-04.html";
+						}
 						break;
 					}
 				}
@@ -135,7 +289,44 @@ public class Q10366_RuinsStatusUpdate extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = getAlreadyCompletedMsg(player);
+				switch (npc.getId())
+				{
+					case SEBION:
+					{
+						htmltext = "32978-06.html";
+						break;
+					}
+					case FRANCO:
+					{
+						htmltext = "32153-05.html";
+						break;
+					}
+					case RIVIAN:
+					{
+						htmltext = "32147-05.html";
+						break;
+					}
+					case DEVON:
+					{
+						htmltext = "32160-05.html";
+						break;
+					}
+					case TOOK:
+					{
+						htmltext = "32150-05.html";
+						break;
+					}
+					case MOKA:
+					{
+						htmltext = "32157-05.html";
+						break;
+					}
+					case VALFAR:
+					{
+						htmltext = "32146-05.html";
+						break;
+					}
+				}
 				break;
 			}
 		}

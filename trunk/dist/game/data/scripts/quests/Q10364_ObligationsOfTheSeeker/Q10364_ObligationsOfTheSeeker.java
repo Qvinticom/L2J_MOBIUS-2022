@@ -22,13 +22,15 @@ import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.util.Util;
 
 import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
 
 /**
  * Obligations of the Seeker (10364)
- * @author spider
+ * @author spider, gyo
  */
 public class Q10364_ObligationsOfTheSeeker extends Quest
 {
@@ -59,8 +61,8 @@ public class Q10364_ObligationsOfTheSeeker extends Quest
 		addTalkId(CELIN, WALTER, DEP);
 		addKillId(KRAPHER, AVIAN);
 		registerQuestItems(DIRTY_PIECE_OF_PAPER);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.htm");
-		addCondCompletedQuest(Q10363_RequestOfTheSeeker.class.getSimpleName(), "no_prequest.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33451-05.htm");
+		addCondCompletedQuest(Q10363_RequestOfTheSeeker.class.getSimpleName(), "33451-05.htm");
 	}
 	
 	@Override
@@ -97,7 +99,7 @@ public class Q10364_ObligationsOfTheSeeker extends Quest
 				if (qs.isCond(1))
 				{
 					htmltext = event;
-					qs.setCond(2);
+					qs.setCond(2, true);
 				}
 				break;
 			}
@@ -138,7 +140,24 @@ public class Q10364_ObligationsOfTheSeeker extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = getAlreadyCompletedMsg(player);
+				switch (npc.getId())
+				{
+					case CELIN:
+					{
+						htmltext = "33451-06.html";
+						break;
+					}
+					case WALTER:
+					{
+						htmltext = "33452-07.html";
+						break;
+					}
+					case DEP:
+					{
+						htmltext = "33453-05.html";
+						break;
+					}
+				}
 				break;
 			}
 			case State.STARTED:
@@ -147,7 +166,7 @@ public class Q10364_ObligationsOfTheSeeker extends Quest
 				{
 					case CELIN:
 					{
-						htmltext = "33451-04.htm";
+						htmltext = "33451-04.html";
 						break;
 					}
 					case WALTER:
@@ -156,9 +175,13 @@ public class Q10364_ObligationsOfTheSeeker extends Quest
 						{
 							htmltext = "33452-01.html";
 						}
-						else
+						else if (qs.isCond(2))
 						{
 							htmltext = "33452-05.html";
+						}
+						else
+						{
+							htmltext = "33452-06.html";
 						}
 						break;
 					}
@@ -188,13 +211,15 @@ public class Q10364_ObligationsOfTheSeeker extends Quest
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
-			if (getQuestItemsCount(qs.getPlayer(), DIRTY_PIECE_OF_PAPER) < DPP_REQUIRED)
+			if (getQuestItemsCount(qs.getPlayer(), DIRTY_PIECE_OF_PAPER) < (DPP_REQUIRED - 1))
 			{
 				giveItems(qs.getPlayer(), DIRTY_PIECE_OF_PAPER, 1);
 			}
 			else
 			{
-				qs.setCond(3);
+				giveItems(qs.getPlayer(), DIRTY_PIECE_OF_PAPER, 1);
+				qs.setCond(3, true);
+				showOnScreenMsg(qs.getPlayer(), NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_4, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
