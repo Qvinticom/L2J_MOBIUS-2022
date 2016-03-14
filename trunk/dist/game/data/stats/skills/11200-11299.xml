@@ -729,19 +729,33 @@
 	</skill>
 	<skill id="11273" levels="8" name="Exile">
 	<!-- Source: https://l2wiki.com/Exile_-_Wynn_Arcana_Lord -->
+		<table name="#effectPoints"> -333 -338 -343 -348 -343 -348 -353 -358 </table>
 		<table name="#magicLvl"> 85 88 91 94 97 101 103 105 </table>
-		<table name="#mpConsume"> 78 83 87 92 97 101 103 105 </table>
+		<table name="#mpConsume"> 78 83 87 92 97 102 107 112 </table>
+		<table name="#Dam"> 353 364 374 385 395 409 416 423 </table>
 		<set name="icon" val="icon.skill11273" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="abnormalTime" val="10" /> <!-- Need Verify -->
+		<set name="activateRate" val="90" /> <!-- Need Verify -->
+		<set name="abnormalType" val="MD_DOWN" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectRange" val="1400" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="60000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="targetType" val="SELF" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="DamOverTime" ticks="1">
+				<param power="#Dam" />
+			</effect>
+			<effect name="Paralyze" />
+		</for>
 	</skill>
 	<!-- Level 1 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. -->
 	<!-- Level 2 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. -->
@@ -856,16 +870,29 @@
 	</skill>
 	<skill id="11276" levels="6" name="Dimensional Binding">
 	<!-- Source: https://l2wiki.com/Dimensional_Binding_-_Wynn_Arcana_Lord -->
+		<table name="#effectPoints"> -343 -348 -343 -348 -353 -358 </table>
 		<table name="#magicLvl"> 93 96 99 101 103 105 </table>
 		<set name="icon" val="icon.skill11276" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="90" />
 		<set name="effectRange" val="900" />
+		<set name="abnormalTime" val="10" /> <!-- Need Verify -->
+		<set name="activateRate" val="90" /> <!-- Need Verify -->
 		<set name="hitTime" val="10000" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isDebuff" val="true" />
-		<set name="targetType" val="SELF" />
+		<set name="abnormalType" val="MD_DOWN" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectRange" val="1400" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul stat="mDef" val="0.7" />
+				<mul stat="pDef" val="0.7" />
+			</effect>
+			<effect name="Root" />
+		</for>
 	</skill>
 	<skill id="11277" levels="4" name="Sense of Loyalty">
 		<!-- AUTO GENERATED SKILL -->
@@ -1149,19 +1176,33 @@
 	</skill>
 	<skill id="11296" levels="9" name="Mass Exile">
 	<!-- Source: https://l2wiki.com/Mass_Exile_-_Wynn_Elemental_Master -->
+		<table name="#effectPoints"> -333 -338 -343 -348 -343 -348 -353 -358 -363 </table>
 		<table name="#magicLvl"> 85 87 90 93 96 99 101 103 105 </table>
 		<table name="#mpConsume"> 102 106 112 118 125 132 139 146 153 </table>
+		<table name="#Dam"> 282 288 296 305 313 322 336 343 350</table>
 		<set name="icon" val="icon.skill11296" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalType" val="MD_DOWN" />
+		<set name="abnormalTime" val="10" /> <!-- Need Verify -->
+		<set name="activateRate" val="90" /> <!-- Need Verify -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="targetType" val="AREA" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="DamOverTime" ticks="1">
+				<param power="#Dam" />
+			</effect>
+			<effect name="Paralyze" />
+		</for>
 	</skill>
 	<!-- Level 1 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30% and speed by 15%. -->
 	<!-- Level 2 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30% and speed by 10%. -->
