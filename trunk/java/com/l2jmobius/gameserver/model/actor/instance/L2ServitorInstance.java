@@ -173,6 +173,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		}
 		
 		CharSummonTable.getInstance().removeServitor(getOwner(), getObjectId());
+		getOwner().removeServitor(getObjectId());
 		return true;
 	}
 	
