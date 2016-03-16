@@ -10388,7 +10388,7 @@ public final class L2PcInstance extends L2Playable
 		_noble = val;
 		
 		sendSkillList();
-		if (val && (getLevel() == ExperienceData.getInstance().getMaxLevel()))
+		if (val && (getLevel() >= 99))
 		{
 			sendPacket(new ExAcquireAPSkillList(this));
 		}
