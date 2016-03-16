@@ -290,6 +290,7 @@ import quests.Q10761_AnOrcInLove.Q10761_AnOrcInLove;
 import quests.Q10762_MarionetteSpirit.Q10762_MarionetteSpirit;
 import quests.Q10763_TerrifyingChertuba.Q10763_TerrifyingChertuba;
 import quests.Q10764_FreeSpirit.Q10764_FreeSpirit;
+import quests.Q10766_ANewCraft.Q10766_ANewCraft;
 import quests.Q10769_LettersFromTheQueen_CrumaTower.Q10769_LettersFromTheQueen_CrumaTower;
 import quests.Q10770_InSearchOfTheGrail.Q10770_InSearchOfTheGrail;
 import quests.Q10771_VolatilePower.Q10771_VolatilePower;
@@ -580,6 +581,7 @@ final class QuestMasterHandler
 		Q10762_MarionetteSpirit.class,
 		Q10763_TerrifyingChertuba.class,
 		Q10764_FreeSpirit.class,
+		Q10766_ANewCraft.class,
 		Q10769_LettersFromTheQueen_CrumaTower.class,
 		Q10770_InSearchOfTheGrail.class,
 		Q10771_VolatilePower.class,
