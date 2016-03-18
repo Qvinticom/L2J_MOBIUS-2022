@@ -338,6 +338,7 @@ public abstract class L2Summon extends L2Playable
 		}
 		
 		DecayTaskManager.getInstance().add(this);
+		_owner.removeServitor(getObjectId());
 		return true;
 	}
 	
