@@ -41,20 +41,20 @@ final class MonumentOfHeroes extends AbstractNpcAI
 	private static final int WINGS_OF_DESTINY_CIRCLET = 6842;
 	private static final int[] WEAPONS =
 	{
-		6611, // Infinity Blade
-		6612, // Infinity Cleaver
-		6613, // Infinity Axe
-		6614, // Infinity Rod
-		6615, // Infinity Crusher
-		6616, // Infinity Scepter
-		6617, // Infinity Stinger
-		6618, // Infinity Fang
-		6619, // Infinity Bow
-		6620, // Infinity Wing
-		6621, // Infinity Spear
-		9388, // Infinity Rapier
-		9389, // Infinity Sword
-		9390, // Infinity Shooter
+		30392, // Infinity Shaper
+		30393, // Infinity Cutter
+		30394, // Infinity Slasher
+		30395, // Infinity Avenger
+		30396, // Infinity Fighter
+		30397, // Infinity Stormer
+		30398, // Infinity Thrower
+		30399, // Infinity Shooter
+		30400, // Infinity Buster
+		30401, // Infinity Caster
+		30402, // Infinity Retributer
+		30403, // Infinity Dualsword
+		30404, // Infinity Dual Dagger
+		30405, // Infinity Dual Blunt Weapon
 	};
 	
 	private MonumentOfHeroes()
