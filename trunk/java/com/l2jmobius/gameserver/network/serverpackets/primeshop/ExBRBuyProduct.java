@@ -57,7 +57,7 @@ public class ExBRBuyProduct extends L2GameServerPacket
 	
 	private final int _reply;
 	
-	public ExBRBuyProduct(final ExBrProductReplyType type)
+	public ExBRBuyProduct(ExBrProductReplyType type)
 	{
 		_reply = type.getId();
 	}

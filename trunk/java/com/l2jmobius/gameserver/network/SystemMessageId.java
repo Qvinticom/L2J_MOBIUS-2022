@@ -15206,7 +15206,7 @@ public final class SystemMessageId
 		}
 	}
 	
-	private static final int parseMessageParameters(final String name)
+	private static final int parseMessageParameters(String name)
 	{
 		int paramCount = 0;
 		char c1, c2;
@@ -15226,18 +15226,18 @@ public final class SystemMessageId
 		return paramCount;
 	}
 	
-	public static final SystemMessageId getSystemMessageId(final int id)
+	public static final SystemMessageId getSystemMessageId(int id)
 	{
 		final SystemMessageId smi = getSystemMessageIdInternal(id);
 		return smi == null ? new SystemMessageId(id) : smi;
 	}
 	
-	private static final SystemMessageId getSystemMessageIdInternal(final int id)
+	private static final SystemMessageId getSystemMessageIdInternal(int id)
 	{
 		return VALUES.get(id);
 	}
 	
-	public static final SystemMessageId getSystemMessageId(final String name)
+	public static final SystemMessageId getSystemMessageId(String name)
 	{
 		try
 		{
@@ -15352,7 +15352,7 @@ public final class SystemMessageId
 	private SMLocalisation[] _localisations;
 	private SystemMessage _staticSystemMessage;
 	
-	private SystemMessageId(final int id)
+	private SystemMessageId(int id)
 	{
 		_id = id;
 		_localisations = EMPTY_SML_ARRAY;
@@ -15363,7 +15363,7 @@ public final class SystemMessageId
 		return _id;
 	}
 	
-	private final void setName(final String name)
+	private final void setName(String name)
 	{
 		_name = name;
 	}
@@ -15382,7 +15382,7 @@ public final class SystemMessageId
 	 * You better don`t touch this!
 	 * @param params
 	 */
-	public final void setParamCount(final int params)
+	public final void setParamCount(int params)
 	{
 		if (params < 0)
 		{
@@ -15402,7 +15402,7 @@ public final class SystemMessageId
 		_params = (byte) params;
 	}
 	
-	public final SMLocalisation getLocalisation(final String lang)
+	public final SMLocalisation getLocalisation(String lang)
 	{
 		SMLocalisation sml;
 		for (int i = _localisations.length; i-- > 0;)
@@ -15416,7 +15416,7 @@ public final class SystemMessageId
 		return null;
 	}
 	
-	public final void attachLocalizedText(final String lang, final String text)
+	public final void attachLocalizedText(String lang, String text)
 	{
 		final int length = _localisations.length;
 		final SMLocalisation[] localisations = Arrays.copyOf(_localisations, length + 1);
@@ -15434,7 +15434,7 @@ public final class SystemMessageId
 		return _staticSystemMessage;
 	}
 	
-	public final void setStaticSystemMessage(final SystemMessage sm)
+	public final void setStaticSystemMessage(SystemMessage sm)
 	{
 		_staticSystemMessage = sm;
 	}
@@ -15450,7 +15450,7 @@ public final class SystemMessageId
 		private final String _lang;
 		private final Builder _builder;
 		
-		public SMLocalisation(final String lang, final String text)
+		public SMLocalisation(String lang, String text)
 		{
 			_lang = lang;
 			_builder = Builder.newBuilder(text);
@@ -15461,7 +15461,7 @@ public final class SystemMessageId
 			return _lang;
 		}
 		
-		public final String getLocalisation(final Object... params)
+		public final String getLocalisation(Object... params)
 		{
 			return _builder.toString(params);
 		}

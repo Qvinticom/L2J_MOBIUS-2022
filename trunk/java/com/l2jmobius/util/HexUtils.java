@@ -51,7 +51,7 @@ public class HexUtils
 	 * @param data byte to generate the hexadecimal character presentation from
 	 * @return a new char array with exactly 2 elements
 	 */
-	public static char[] b2HexChars(final byte data)
+	public static char[] b2HexChars(byte data)
 	{
 		return b2HexChars(data, null, 0);
 	}
@@ -63,7 +63,7 @@ public class HexUtils
 	 * @param dstOffset offset at which the hexadecimal character presentation is copied to dstHexChars
 	 * @return the char array the hexadecimal character presentation was copied to
 	 */
-	public static char[] b2HexChars(final byte data, char[] dstHexChars, int dstOffset)
+	public static char[] b2HexChars(byte data, char[] dstHexChars, int dstOffset)
 	{
 		if (dstHexChars == null)
 		{
@@ -84,7 +84,7 @@ public class HexUtils
 	 * @param data integer to generate the hexadecimal character presentation from
 	 * @return new char array with 8 elements
 	 */
-	public static char[] int2HexChars(final int data)
+	public static char[] int2HexChars(int data)
 	{
 		return int2HexChars(data, new char[8], 0);
 	}
@@ -96,7 +96,7 @@ public class HexUtils
 	 * @param dstOffset offset at which the hexadecimal character presentation is copied to dstHexChars
 	 * @return the char array the hexadecimal character presentation was copied to
 	 */
-	public static char[] int2HexChars(final int data, char[] dstHexChars, int dstOffset)
+	public static char[] int2HexChars(int data, char[] dstHexChars, int dstOffset)
 	{
 		if (dstHexChars == null)
 		{
@@ -119,7 +119,7 @@ public class HexUtils
 	 * @param len number of bytes to generate the hexadecimal character presentation from
 	 * @return a new char array with len*2 elements
 	 */
-	public static char[] bArr2HexChars(final byte[] data, final int offset, final int len)
+	public static char[] bArr2HexChars(byte[] data, int offset, int len)
 	{
 		return bArr2HexChars(data, offset, len, null, 0);
 	}
@@ -133,7 +133,7 @@ public class HexUtils
 	 * @param dstOffset offset at which the hexadecimal character presentation is copied to dstHexChars
 	 * @return the char array the hexadecimal character presentation was copied to
 	 */
-	public static char[] bArr2HexChars(final byte[] data, final int offset, final int len, char[] dstHexChars, int dstOffset)
+	public static char[] bArr2HexChars(byte[] data, int offset, int len, char[] dstHexChars, int dstOffset)
 	{
 		if (dstHexChars == null)
 		{
@@ -152,12 +152,12 @@ public class HexUtils
 		return dstHexChars;
 	}
 	
-	public static char[] bArr2AsciiChars(byte[] data, final int offset, final int len)
+	public static char[] bArr2AsciiChars(byte[] data, int offset, int len)
 	{
 		return bArr2AsciiChars(data, offset, len, new char[len], 0);
 	}
 	
-	public static char[] bArr2AsciiChars(byte[] data, final int offset, final int len, char[] dstAsciiChars, int dstOffset)
+	public static char[] bArr2AsciiChars(byte[] data, int offset, int len, char[] dstAsciiChars, int dstOffset)
 	{
 		if (dstAsciiChars == null)
 		{

@@ -124,7 +124,7 @@ public abstract class AbstractNpcAI extends Quest
 		Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId), radius);
 	}
 	
-	public void spawnMinions(final L2Npc npc, final String spawnName)
+	public void spawnMinions(L2Npc npc, String spawnName)
 	{
 		for (MinionHolder is : npc.getTemplate().getParameters().getMinionList(spawnName))
 		{

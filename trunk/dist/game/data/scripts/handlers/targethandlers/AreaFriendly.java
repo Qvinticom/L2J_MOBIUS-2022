@@ -120,7 +120,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		
 		if (target.isPlayable())
 		{
-			L2PcInstance targetPlayer = target.getActingPlayer();
+			final L2PcInstance targetPlayer = target.getActingPlayer();
 			
 			if (activeChar == targetPlayer)
 			{

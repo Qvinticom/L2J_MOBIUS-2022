@@ -68,7 +68,7 @@ public enum CommissionTreeType
 		CommissionItemType.MAGIC_ORNAMENT,
 		CommissionItemType.DYES,
 		CommissionItemType.OTHER_ITEM);
-		
+	
 	private final int _clientId;
 	private final Set<CommissionItemType> _commissionItemTypes;
 	

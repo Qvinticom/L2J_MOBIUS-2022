@@ -281,7 +281,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 		player.sendPacket(iu);
 	}
 	
-	private int addElement(final L2PcInstance player, final L2ItemInstance stone, final L2ItemInstance item, byte elementToAdd)
+	private int addElement(L2PcInstance player, L2ItemInstance stone, L2ItemInstance item, byte elementToAdd)
 	{
 		final Elementals oldElement = item.getElemental(elementToAdd);
 		final int elementValue = oldElement == null ? 0 : oldElement.getValue();

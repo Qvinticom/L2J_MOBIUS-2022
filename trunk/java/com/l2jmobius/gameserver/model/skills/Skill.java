@@ -1030,7 +1030,7 @@ public final class Skill implements IIdentifiable
 	 * @param player the player
 	 * @return {@code true} if the player can use this skill, {@code false} otherwise
 	 */
-	public boolean canBeUseWhileRiding(final L2PcInstance player)
+	public boolean canBeUseWhileRiding(L2PcInstance player)
 	{
 		return (_rideState == null) || _rideState.contains(player.getMountType());
 	}

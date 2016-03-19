@@ -25,7 +25,7 @@ public class ClanInfo
 	private final int _total;
 	private final int _online;
 	
-	public ClanInfo(final L2Clan clan)
+	public ClanInfo(L2Clan clan)
 	{
 		_clan = clan;
 		_total = clan.getMembersCount();

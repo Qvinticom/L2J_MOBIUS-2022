@@ -51,7 +51,7 @@ public final class FloodProtectorConfig
 	 * Creates new instance of FloodProtectorConfig.
 	 * @param floodProtectorType {@link #FLOOD_PROTECTOR_TYPE}
 	 */
-	public FloodProtectorConfig(final String floodProtectorType)
+	public FloodProtectorConfig(String floodProtectorType)
 	{
 		super();
 		FLOOD_PROTECTOR_TYPE = floodProtectorType;

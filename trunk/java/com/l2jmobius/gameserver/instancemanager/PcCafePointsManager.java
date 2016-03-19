@@ -30,7 +30,7 @@ public final class PcCafePointsManager
 	{
 	}
 	
-	public void givePcCafePoint(final L2PcInstance player, final long exp)
+	public void givePcCafePoint(L2PcInstance player, long exp)
 	{
 		if (!Config.PC_BANG_ENABLED)
 		{

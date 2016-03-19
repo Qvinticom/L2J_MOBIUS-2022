@@ -67,7 +67,7 @@ public final class MarkRetriever extends AbstractEffect
 		double damage = Formulas.calcMagicDam(activeChar, effected, info.getSkill(), shld, sps, bss, mcrit);
 		int count = 0;
 		
-		List<BuffInfo> effects = effected.getEffectList().getEffects();
+		final List<BuffInfo> effects = effected.getEffectList().getEffects();
 		for (BuffInfo buff : effects)
 		{
 			if ((buff.getSkill().getId() == 11259) || (buff.getSkill().getId() == 11261) || (buff.getSkill().getId() == 11262))

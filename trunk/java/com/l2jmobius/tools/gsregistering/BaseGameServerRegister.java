@@ -98,7 +98,7 @@ public abstract class BaseGameServerRegister
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM gameservers WHERE server_id = ?"))
-			
+		
 		{
 			ps.setInt(1, id);
 			ps.executeUpdate();

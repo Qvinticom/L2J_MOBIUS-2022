@@ -23,12 +23,12 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public final class SystemMessage extends AbstractMessagePacket<SystemMessage>
 {
-	private SystemMessage(final SystemMessageId smId)
+	private SystemMessage(SystemMessageId smId)
 	{
 		super(smId);
 	}
 	
-	public static final SystemMessage sendString(final String text)
+	public static final SystemMessage sendString(String text)
 	{
 		if (text == null)
 		{
@@ -40,7 +40,7 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage>
 		return sm;
 	}
 	
-	public static final SystemMessage getSystemMessage(final SystemMessageId smId)
+	public static final SystemMessage getSystemMessage(SystemMessageId smId)
 	{
 		SystemMessage sm = smId.getStaticSystemMessage();
 		if (sm != null)
@@ -73,7 +73,7 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage>
 	 * @deprecated
 	 */
 	@Deprecated
-	private SystemMessage(final int id)
+	private SystemMessage(int id)
 	{
 		this(SystemMessageId.getSystemMessageId(id));
 	}

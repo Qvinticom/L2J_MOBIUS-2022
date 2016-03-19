@@ -31,7 +31,7 @@ public class GameCrypt
 		System.arraycopy(key, 0, _outKey, 0, 16);
 	}
 	
-	public void decrypt(byte[] raw, final int offset, final int size)
+	public void decrypt(byte[] raw, int offset, int size)
 	{
 		if (!_isEnabled)
 		{
@@ -59,7 +59,7 @@ public class GameCrypt
 		_inKey[11] = (byte) ((old >> 0x18) & 0xff);
 	}
 	
-	public void encrypt(byte[] raw, final int offset, final int size)
+	public void encrypt(byte[] raw, int offset, int size)
 	{
 		if (!_isEnabled)
 		{

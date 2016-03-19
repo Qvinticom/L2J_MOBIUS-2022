@@ -124,7 +124,7 @@ public final class ItemAuctionManager
 		}
 	}
 	
-	public final ItemAuctionInstance getManagerInstance(final int instanceId)
+	public final ItemAuctionInstance getManagerInstance(int instanceId)
 	{
 		return _managerInstances.get(instanceId);
 	}
@@ -134,7 +134,7 @@ public final class ItemAuctionManager
 		return _auctionIds.getAndIncrement();
 	}
 	
-	public static final void deleteAuction(final int auctionId)
+	public static final void deleteAuction(int auctionId)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{

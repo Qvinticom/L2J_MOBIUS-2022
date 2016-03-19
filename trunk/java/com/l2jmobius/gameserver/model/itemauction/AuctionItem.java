@@ -35,7 +35,7 @@ public final class AuctionItem
 	private final long _itemCount;
 	private final StatsSet _itemExtra;
 	
-	public AuctionItem(final int auctionItemId, final int auctionLength, final long auctionInitBid, final int itemId, final long itemCount, final StatsSet itemExtra)
+	public AuctionItem(int auctionItemId, int auctionLength, long auctionInitBid, int itemId, long itemCount, StatsSet itemExtra)
 	{
 		_auctionItemId = auctionItemId;
 		_auctionLength = auctionLength;

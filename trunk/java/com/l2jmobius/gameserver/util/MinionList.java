@@ -71,7 +71,7 @@ public class MinionList
 	 * <BR>
 	 * @param minions
 	 */
-	public final void spawnMinions(final List<MinionHolder> minions)
+	public final void spawnMinions(List<MinionHolder> minions)
 	{
 		if (_master.isAlikeDead())
 		{

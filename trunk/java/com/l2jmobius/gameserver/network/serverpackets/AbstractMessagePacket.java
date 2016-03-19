@@ -57,7 +57,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		private final byte _type;
 		private final Object _value;
 		
-		public SMParam(final byte type, final Object value)
+		public SMParam(byte type, Object value)
 		{
 			_type = type;
 			_value = value;
@@ -148,7 +148,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		_params[_paramIndex++] = param;
 	}
 	
-	public final T addString(final String text)
+	public final T addString(String text)
 	{
 		append(new SMParam(TYPE_TEXT, text));
 		return (T) this;
@@ -173,25 +173,25 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 	 * @param number the conquerable entity
 	 * @return the system message with the proper parameter
 	 */
-	public final T addCastleId(final int number)
+	public final T addCastleId(int number)
 	{
 		append(new SMParam(TYPE_CASTLE_NAME, number));
 		return (T) this;
 	}
 	
-	public final T addInt(final int number)
+	public final T addInt(int number)
 	{
 		append(new SMParam(TYPE_INT_NUMBER, number));
 		return (T) this;
 	}
 	
-	public final T addLong(final long number)
+	public final T addLong(long number)
 	{
 		append(new SMParam(TYPE_LONG_NUMBER, number));
 		return (T) this;
 	}
 	
-	public final T addCharName(final L2Character cha)
+	public final T addCharName(L2Character cha)
 	{
 		if (cha.isNpc())
 		{
@@ -223,7 +223,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		return addString(cha.getName());
 	}
 	
-	public final T addPcName(final L2PcInstance pc)
+	public final T addPcName(L2PcInstance pc)
 	{
 		append(new SMParam(TYPE_PLAYER_NAME, pc.getAppearance().getVisibleName()));
 		return (T) this;
@@ -245,12 +245,12 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		return addNpcName(npc.getTemplate());
 	}
 	
-	public final T addNpcName(final L2Summon npc)
+	public final T addNpcName(L2Summon npc)
 	{
 		return addNpcName(npc.getId());
 	}
 	
-	public final T addNpcName(final L2NpcTemplate template)
+	public final T addNpcName(L2NpcTemplate template)
 	{
 		if (template.isUsingServerSideName())
 		{
@@ -259,23 +259,23 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		return addNpcName(template.getId());
 	}
 	
-	public final T addNpcName(final int id)
+	public final T addNpcName(int id)
 	{
 		append(new SMParam(TYPE_NPC_NAME, 1000000 + id));
 		return (T) this;
 	}
 	
-	public T addItemName(final L2ItemInstance item)
+	public T addItemName(L2ItemInstance item)
 	{
 		return addItemName(item.getId());
 	}
 	
-	public T addItemName(final L2Item item)
+	public T addItemName(L2Item item)
 	{
 		return addItemName(item.getId());
 	}
 	
-	public final T addItemName(final int id)
+	public final T addItemName(int id)
 	{
 		final L2Item item = ItemTable.getInstance().getTemplate(id);
 		if (item.getDisplayId() != id)
@@ -287,7 +287,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		return (T) this;
 	}
 	
-	public final T addZoneName(final int x, final int y, final int z)
+	public final T addZoneName(int x, int y, int z)
 	{
 		append(new SMParam(TYPE_ZONE_NAME, new int[]
 		{
@@ -298,7 +298,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		return (T) this;
 	}
 	
-	public final T addSkillName(final Skill skill)
+	public final T addSkillName(Skill skill)
 	{
 		if (skill.getId() != skill.getDisplayId())
 		{
@@ -307,12 +307,12 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		return addSkillName(skill.getId(), skill.getLevel());
 	}
 	
-	public final T addSkillName(final int id)
+	public final T addSkillName(int id)
 	{
 		return addSkillName(id, 1);
 	}
 	
-	public final T addSkillName(final int id, final int lvl)
+	public final T addSkillName(int id, int lvl)
 	{
 		append(new SMParam(TYPE_SKILL_NAME, new int[]
 		{
@@ -327,7 +327,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 	 * @param type
 	 * @return
 	 */
-	public final T addElemental(final int type)
+	public final T addElemental(int type)
 	{
 		append(new SMParam(TYPE_ELEMENT_NAME, type));
 		return (T) this;
@@ -338,7 +338,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 	 * @param type
 	 * @return
 	 */
-	public final T addSystemString(final int type)
+	public final T addSystemString(int type)
 	{
 		append(new SMParam(TYPE_SYSTEM_STRING, type));
 		return (T) this;
@@ -349,7 +349,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 	 * @param type
 	 * @return
 	 */
-	public final T addClassId(final int type)
+	public final T addClassId(int type)
 	{
 		append(new SMParam(TYPE_CLASS_ID, type));
 		return (T) this;
@@ -371,7 +371,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 	 * @param type id of instance
 	 * @return
 	 */
-	public final T addInstanceName(final int type)
+	public final T addInstanceName(int type)
 	{
 		append(new SMParam(TYPE_INSTANCE_NAME, type));
 		return (T) this;
@@ -530,7 +530,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		}
 	}
 	
-	public final T getLocalizedMessage(final String lang)
+	public final T getLocalizedMessage(String lang)
 	{
 		if (!Config.L2JMOD_MULTILANG_SM_ENABLE || (getSystemMessageId() == SystemMessageId.S13))
 		{

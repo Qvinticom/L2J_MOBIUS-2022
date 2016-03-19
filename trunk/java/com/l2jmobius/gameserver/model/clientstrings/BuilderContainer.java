@@ -23,13 +23,13 @@ final class BuilderContainer extends Builder
 {
 	private final Builder[] _builders;
 	
-	BuilderContainer(final Builder[] builders)
+	BuilderContainer(Builder[] builders)
 	{
 		_builders = builders;
 	}
 	
 	@Override
-	public final String toString(final Object param)
+	public final String toString(Object param)
 	{
 		return toString(new Object[]
 		{
@@ -38,7 +38,7 @@ final class BuilderContainer extends Builder
 	}
 	
 	@Override
-	public final String toString(final Object... params)
+	public final String toString(Object... params)
 	{
 		final int buildersLength = _builders.length;
 		final int paramsLength = params.length;

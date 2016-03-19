@@ -393,7 +393,7 @@ public class NpcViewMod implements IBypassHandler
 	 * @param sb
 	 * @param dropItem
 	 */
-	private static void addGeneralDropItem(L2PcInstance activeChar, L2Npc npc, final DecimalFormat amountFormat, final DecimalFormat chanceFormat, final StringBuilder sb, final GeneralDropItem dropItem)
+	private static void addGeneralDropItem(L2PcInstance activeChar, L2Npc npc, DecimalFormat amountFormat, DecimalFormat chanceFormat, StringBuilder sb, GeneralDropItem dropItem)
 	{
 		final L2Item item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
 		sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");

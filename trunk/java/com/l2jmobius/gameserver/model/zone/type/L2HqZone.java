@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
  */
 public class L2HqZone extends L2ZoneType
 {
-	public L2HqZone(final int id)
+	public L2HqZone(int id)
 	{
 		super(id);
 	}
@@ -57,7 +57,7 @@ public class L2HqZone extends L2ZoneType
 	}
 	
 	@Override
-	protected void onEnter(final L2Character character)
+	protected void onEnter(L2Character character)
 	{
 		if (character.isPlayer())
 		{
@@ -66,7 +66,7 @@ public class L2HqZone extends L2ZoneType
 	}
 	
 	@Override
-	protected void onExit(final L2Character character)
+	protected void onExit(L2Character character)
 	{
 		if (character.isPlayer())
 		{

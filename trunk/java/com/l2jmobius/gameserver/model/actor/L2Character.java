@@ -462,7 +462,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param zone
 	 * @param state
 	 */
-	public final void setInsideZone(ZoneId zone, final boolean state)
+	public final void setInsideZone(ZoneId zone, boolean state)
 	{
 		synchronized (_zones)
 		{
@@ -5309,7 +5309,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param weapon
 	 * @return the Reuse Time of Attack (used for bow delay)
 	 */
-	public int calculateReuseTime(final L2Weapon weapon)
+	public int calculateReuseTime(L2Weapon weapon)
 	{
 		if (isTransformed())
 		{
@@ -6655,7 +6655,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return;
 		}
 		
-		L2Object target = getTarget();
+		final L2Object target = getTarget();
 		if ((target != null) && target.isNpc())
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcSocialActionSee((L2Npc) target, getActingPlayer(), id), (L2Npc) target);
@@ -6896,7 +6896,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param target
 	 * @param isDot
 	 */
-	public void notifyAttackAvoid(final L2Character target, final boolean isDot)
+	public void notifyAttackAvoid(L2Character target, boolean isDot)
 	{
 		EventDispatcher.getInstance().notifyEventAsync(new OnCreatureAttackAvoid(this, target, isDot), target);
 	}

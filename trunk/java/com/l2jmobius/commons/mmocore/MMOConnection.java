@@ -58,7 +58,7 @@ public class MMOConnection<T extends MMOClient<?>>
 	
 	private T _client;
 	
-	public MMOConnection(final SelectorThread<T> selectorThread, final Socket socket, final SelectionKey key, boolean tcpNoDelay)
+	public MMOConnection(SelectorThread<T> selectorThread, Socket socket, SelectionKey key, boolean tcpNoDelay)
 	{
 		_selectorThread = selectorThread;
 		_socket = socket;
@@ -80,7 +80,7 @@ public class MMOConnection<T extends MMOClient<?>>
 		}
 	}
 	
-	final void setClient(final T client)
+	final void setClient(T client)
 	{
 		_client = client;
 	}
@@ -90,7 +90,7 @@ public class MMOConnection<T extends MMOClient<?>>
 		return _client;
 	}
 	
-	public final void sendPacket(final SendablePacket<T> sp)
+	public final void sendPacket(SendablePacket<T> sp)
 	{
 		sp._client = _client;
 		
@@ -137,17 +137,17 @@ public class MMOConnection<T extends MMOClient<?>>
 		_socket.close();
 	}
 	
-	final int read(final ByteBuffer buf) throws IOException
+	final int read(ByteBuffer buf) throws IOException
 	{
 		return _readableByteChannel.read(buf);
 	}
 	
-	final int write(final ByteBuffer buf) throws IOException
+	final int write(ByteBuffer buf) throws IOException
 	{
 		return _writableByteChannel.write(buf);
 	}
 	
-	final void createWriteBuffer(final ByteBuffer buf)
+	final void createWriteBuffer(ByteBuffer buf)
 	{
 		if (_primaryWriteBuffer == null)
 		{
@@ -186,7 +186,7 @@ public class MMOConnection<T extends MMOClient<?>>
 		return _primaryWriteBuffer != null;
 	}
 	
-	final void movePendingWriteBufferTo(final ByteBuffer dest)
+	final void movePendingWriteBufferTo(ByteBuffer dest)
 	{
 		_primaryWriteBuffer.flip();
 		dest.put(_primaryWriteBuffer);
@@ -195,7 +195,7 @@ public class MMOConnection<T extends MMOClient<?>>
 		_secondaryWriteBuffer = null;
 	}
 	
-	final void setReadBuffer(final ByteBuffer buf)
+	final void setReadBuffer(ByteBuffer buf)
 	{
 		_readBuffer = buf;
 	}
@@ -220,7 +220,7 @@ public class MMOConnection<T extends MMOClient<?>>
 	 */
 	
 	@SuppressWarnings("unchecked")
-	public final void close(final SendablePacket<T> sp)
+	public final void close(SendablePacket<T> sp)
 	{
 		close(new SendablePacket[]
 		{
@@ -228,7 +228,7 @@ public class MMOConnection<T extends MMOClient<?>>
 		});
 	}
 	
-	public final void close(final SendablePacket<T>[] closeList)
+	public final void close(SendablePacket<T>[] closeList)
 	{
 		if (_pendingClose)
 		{

@@ -20,7 +20,7 @@ public final class CSShowComBoard extends L2GameServerPacket
 {
 	private final byte[] _html;
 	
-	public CSShowComBoard(final byte[] html)
+	public CSShowComBoard(byte[] html)
 	{
 		_html = html;
 	}

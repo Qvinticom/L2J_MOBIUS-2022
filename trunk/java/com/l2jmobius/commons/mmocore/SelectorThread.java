@@ -67,7 +67,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 	
 	private boolean _shutdown;
 	
-	public SelectorThread(final SelectorConfig sc, final IMMOExecutor<T> executor, final IPacketHandler<T> packetHandler, final IClientFactory<T> clientFactory, final IAcceptFilter acceptFilter) throws IOException
+	public SelectorThread(SelectorConfig sc, IMMOExecutor<T> executor, IPacketHandler<T> packetHandler, IClientFactory<T> clientFactory, IAcceptFilter acceptFilter) throws IOException
 	{
 		super.setName("SelectorThread-" + super.getId());
 		
@@ -234,7 +234,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		closeSelectorThread();
 	}
 	
-	private final void finishConnection(final SelectionKey key, final MMOConnection<T> con)
+	private final void finishConnection(SelectionKey key, MMOConnection<T> con)
 	{
 		try
 		{
@@ -254,7 +254,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 	}
 	
-	private final void acceptConnection(final SelectionKey key, MMOConnection<T> con)
+	private final void acceptConnection(SelectionKey key, MMOConnection<T> con)
 	{
 		final ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
 		SocketChannel sc;
@@ -283,7 +283,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 	}
 	
-	private final void readPacket(final SelectionKey key, final MMOConnection<T> con)
+	private final void readPacket(SelectionKey key, MMOConnection<T> con)
 	{
 		if (!con.isClosed())
 		{
@@ -363,7 +363,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 	}
 	
-	private final boolean tryReadPacket(final SelectionKey key, final T client, final ByteBuffer buf, final MMOConnection<T> con)
+	private final boolean tryReadPacket(SelectionKey key, T client, ByteBuffer buf, MMOConnection<T> con)
 	{
 		switch (buf.remaining())
 		{
@@ -445,13 +445,13 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 	}
 	
-	private final void allocateReadBuffer(final MMOConnection<T> con)
+	private final void allocateReadBuffer(MMOConnection<T> con)
 	{
 		con.setReadBuffer(getPooledBuffer().put(READ_BUFFER));
 		READ_BUFFER.clear();
 	}
 	
-	private final void parseClientPacket(final int pos, final ByteBuffer buf, final int dataSize, final T client)
+	private final void parseClientPacket(int pos, ByteBuffer buf, int dataSize, T client)
 	{
 		final boolean ret = client.decrypt(buf, dataSize);
 		
@@ -480,7 +480,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 	}
 	
-	private final void writeClosePacket(final MMOConnection<T> con)
+	private final void writeClosePacket(MMOConnection<T> con)
 	{
 		SendablePacket<T> sp;
 		synchronized (con.getSendQueue())
@@ -510,7 +510,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 	}
 	
-	protected final void writePacket(final SelectionKey key, final MMOConnection<T> con)
+	protected final void writePacket(SelectionKey key, MMOConnection<T> con)
 	{
 		if (!prepareWriteBuffer(con))
 		{
@@ -561,7 +561,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 	}
 	
-	private final boolean prepareWriteBuffer(final MMOConnection<T> con)
+	private final boolean prepareWriteBuffer(MMOConnection<T> con)
 	{
 		boolean hasPending = false;
 		DIRECT_WRITE_BUFFER.clear();
@@ -619,7 +619,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		return hasPending;
 	}
 	
-	private final void putPacketIntoWriteBuffer(final T client, final SendablePacket<T> sp)
+	private final void putPacketIntoWriteBuffer(T client, SendablePacket<T> sp)
 	{
 		WRITE_BUFFER.clear();
 		
@@ -651,7 +651,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		WRITE_BUFFER.position(dataPos + dataSize);
 	}
 	
-	final void closeConnection(final MMOConnection<T> con)
+	final void closeConnection(MMOConnection<T> con)
 	{
 		synchronized (_pendingClose)
 		{
@@ -659,7 +659,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 	}
 	
-	private final void closeConnectionImpl(final SelectionKey key, final MMOConnection<T> con)
+	private final void closeConnectionImpl(SelectionKey key, MMOConnection<T> con)
 	{
 		try
 		{

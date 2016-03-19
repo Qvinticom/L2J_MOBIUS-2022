@@ -197,7 +197,7 @@ public final class StringUtil
 	 * @param strings strings to be concatenated
 	 * @return concatenated string
 	 */
-	public static String concat(final String... strings)
+	public static String concat(String... strings)
 	{
 		final StringBuilder sbString = new StringBuilder();
 		for (String string : strings)
@@ -213,7 +213,7 @@ public final class StringUtil
 	 * @param strings strings to be appended
 	 * @return created string builder
 	 */
-	public static StringBuilder startAppend(final int sizeHint, final String... strings)
+	public static StringBuilder startAppend(int sizeHint, String... strings)
 	{
 		final int length = getLength(strings);
 		final StringBuilder sbString = new StringBuilder(sizeHint > length ? sizeHint : length);
@@ -229,7 +229,7 @@ public final class StringUtil
 	 * @param sbString string builder
 	 * @param strings strings to be appended
 	 */
-	public static void append(final StringBuilder sbString, final String... strings)
+	public static void append(StringBuilder sbString, String... strings)
 	{
 		sbString.ensureCapacity(sbString.length() + getLength(strings));
 		
@@ -239,7 +239,7 @@ public final class StringUtil
 		}
 	}
 	
-	public static int getLength(final Iterable<String> strings)
+	public static int getLength(Iterable<String> strings)
 	{
 		int length = 0;
 		for (String string : strings)
@@ -254,7 +254,7 @@ public final class StringUtil
 	 * @param strings array of strings
 	 * @return total length of all the strings
 	 */
-	public static int getLength(final String[] strings)
+	public static int getLength(String[] strings)
 	{
 		int length = 0;
 		for (String string : strings)

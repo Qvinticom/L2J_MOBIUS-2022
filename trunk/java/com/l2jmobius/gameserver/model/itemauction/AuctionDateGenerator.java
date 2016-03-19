@@ -40,7 +40,7 @@ public final class AuctionDateGenerator
 	private int _hour_of_day;
 	private int _minute_of_hour;
 	
-	public AuctionDateGenerator(final StatsSet config) throws IllegalArgumentException
+	public AuctionDateGenerator(StatsSet config) throws IllegalArgumentException
 	{
 		_calendar = Calendar.getInstance();
 		_interval = config.getInt(FIELD_INTERVAL, -1);
@@ -55,7 +55,7 @@ public final class AuctionDateGenerator
 		checkMinuteOfHour(0);
 	}
 	
-	public synchronized final long nextDate(final long date)
+	public synchronized final long nextDate(long date)
 	{
 		_calendar.setTimeInMillis(date);
 		_calendar.set(Calendar.MILLISECOND, 0);
@@ -72,7 +72,7 @@ public final class AuctionDateGenerator
 		return calcDestTime(_calendar.getTimeInMillis(), date, TimeUnit.MILLISECONDS.convert(_interval, TimeUnit.DAYS));
 	}
 	
-	private final long calcDestTime(long time, final long date, final long add)
+	private final long calcDestTime(long time, long date, long add)
 	{
 		if (time < date)
 		{
@@ -85,7 +85,7 @@ public final class AuctionDateGenerator
 		return time;
 	}
 	
-	private final void checkDayOfWeek(final int defaultValue)
+	private final void checkDayOfWeek(int defaultValue)
 	{
 		if ((_day_of_week < 1) || (_day_of_week > 7))
 		{
@@ -101,7 +101,7 @@ public final class AuctionDateGenerator
 		}
 	}
 	
-	private final void checkHourOfDay(final int defaultValue)
+	private final void checkHourOfDay(int defaultValue)
 	{
 		if ((_hour_of_day < 0) || (_hour_of_day > 23))
 		{
@@ -113,7 +113,7 @@ public final class AuctionDateGenerator
 		}
 	}
 	
-	private final void checkMinuteOfHour(final int defaultValue)
+	private final void checkMinuteOfHour(int defaultValue)
 	{
 		if ((_minute_of_hour < 0) || (_minute_of_hour > 59))
 		{

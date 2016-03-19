@@ -23,13 +23,13 @@ import java.util.ArrayList;
  */
 public abstract class Builder
 {
-	public abstract String toString(final Object param);
+	public abstract String toString(Object param);
 	
-	public abstract String toString(final Object... params);
+	public abstract String toString(Object... params);
 	
 	public abstract int getIndex();
 	
-	public static final Builder newBuilder(final String text)
+	public static final Builder newBuilder(String text)
 	{
 		final ArrayList<Builder> builders = new ArrayList<>();
 		

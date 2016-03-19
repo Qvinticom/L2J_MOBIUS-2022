@@ -94,7 +94,7 @@ public final class FloodProtectors
 	 * Creates new instance of FloodProtectors.
 	 * @param client game client for which the collection of flood protectors is being created.
 	 */
-	public FloodProtectors(final L2GameClient client)
+	public FloodProtectors(L2GameClient client)
 	{
 		super();
 		_useItem = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_USE_ITEM);

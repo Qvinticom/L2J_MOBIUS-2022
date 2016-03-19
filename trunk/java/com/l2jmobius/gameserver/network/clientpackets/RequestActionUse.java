@@ -1656,7 +1656,7 @@ public final class RequestActionUse extends L2GameClientPacket
 	 * Perform a couple social action.
 	 * @param id the couple social action Id
 	 */
-	private void useCoupleSocial(final int id)
+	private void useCoupleSocial(int id)
 	{
 		final L2PcInstance requester = getActiveChar();
 		if (requester == null)

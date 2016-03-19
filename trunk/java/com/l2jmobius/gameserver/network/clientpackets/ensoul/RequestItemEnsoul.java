@@ -55,7 +55,7 @@ public class RequestItemEnsoul extends L2GameClientPacket
 			final int SCObjectId = readD(); // Soul Crystal objectId
 			final int effectId = readD(); // EffectId
 			
-			SoulCrystalOption sco = SoulCrystalOptionsData.getInstance().getByEffectId(effectId);
+			final SoulCrystalOption sco = SoulCrystalOptionsData.getInstance().getByEffectId(effectId);
 			sco.setSoulCrystalObjectId(SCObjectId);
 			sco.setSpecial(special);
 			sco.setSlot(slot);

@@ -23,7 +23,7 @@ final class BuilderObject extends Builder
 {
 	private final int _index;
 	
-	BuilderObject(final int id)
+	BuilderObject(int id)
 	{
 		if ((id < 1) || (id > 9))
 		{
@@ -33,13 +33,13 @@ final class BuilderObject extends Builder
 	}
 	
 	@Override
-	public final String toString(final Object param)
+	public final String toString(Object param)
 	{
 		return param == null ? "null" : param.toString();
 	}
 	
 	@Override
-	public final String toString(final Object... params)
+	public final String toString(Object... params)
 	{
 		if ((params == null) || (params.length == 0))
 		{

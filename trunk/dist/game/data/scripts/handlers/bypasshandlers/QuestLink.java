@@ -256,7 +256,7 @@ public class QuestLink implements IBypassHandler
 	 * @param player the L2PcInstance that talk with the {@code npc}.
 	 * @param npc the L2NpcInstance that chats with the {@code player}.
 	 */
-	private static void showQuestWindow(final L2PcInstance player, L2Npc npc)
+	private static void showQuestWindow(L2PcInstance player, L2Npc npc)
 	{
 		//@formatter:off
 		final Set<Quest> quests = npc.getListeners(EventType.ON_NPC_TALK).stream()

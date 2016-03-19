@@ -2469,7 +2469,7 @@ public final class L2ItemInstance extends L2Object
 					final int slot_id = rs.getInt("slot_id");
 					if (effect_id != 0)
 					{
-						SoulCrystalOption sco = SoulCrystalOptionsData.getInstance().getByEffectId(effect_id);
+						final SoulCrystalOption sco = SoulCrystalOptionsData.getInstance().getByEffectId(effect_id);
 						sco.setSlot(slot_id);
 						
 						if (sco.isSpecial())
@@ -2495,7 +2495,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public void applySoulCrystalOptionEffect()
 	{
-		L2PcInstance owner = getActingPlayer();
+		final L2PcInstance owner = getActingPlayer();
 		if ((owner == null) || (!isEquipped()))
 		{
 			return;
@@ -2519,7 +2519,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public void removeSoulCrystalOptionEffect()
 	{
-		L2PcInstance owner = getActingPlayer();
+		final L2PcInstance owner = getActingPlayer();
 		if ((owner == null) || (isEquipped()))
 		{
 			return;

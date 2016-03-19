@@ -144,7 +144,7 @@ public final class SiegableHall extends ClanHall
 		}
 	}
 	
-	public final void setSiege(final ClanHallSiegeEngine siegable)
+	public final void setSiege(ClanHallSiegeEngine siegable)
 	{
 		_siege = siegable;
 		_siegeZone.setSiegeInstance(siegable);
@@ -175,7 +175,7 @@ public final class SiegableHall extends ClanHall
 		_nextSiege.setTimeInMillis(date);
 	}
 	
-	public final void setNextSiegeDate(final Calendar c)
+	public final void setNextSiegeDate(Calendar c)
 	{
 		_nextSiege = c;
 	}
@@ -193,7 +193,7 @@ public final class SiegableHall extends ClanHall
 		updateDb();
 	}
 	
-	public final void addAttacker(final L2Clan clan)
+	public final void addAttacker(L2Clan clan)
 	{
 		if (getSiege() != null)
 		{
@@ -201,7 +201,7 @@ public final class SiegableHall extends ClanHall
 		}
 	}
 	
-	public final void removeAttacker(final L2Clan clan)
+	public final void removeAttacker(L2Clan clan)
 	{
 		if (getSiege() != null)
 		{

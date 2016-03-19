@@ -77,7 +77,7 @@ public final class ItemAuctionInstance
 	private ItemAuction _nextAuction;
 	private ScheduledFuture<?> _stateTask;
 	
-	public ItemAuctionInstance(final int instanceId, final AtomicInteger auctionIds, final Node node) throws Exception
+	public ItemAuctionInstance(int instanceId, AtomicInteger auctionIds, Node node) throws Exception
 	{
 		_instanceId = instanceId;
 		_auctionIds = auctionIds;
@@ -219,7 +219,7 @@ public final class ItemAuctionInstance
 		}
 	}
 	
-	private final AuctionItem getAuctionItem(final int auctionItemId)
+	private final AuctionItem getAuctionItem(int auctionItemId)
 	{
 		for (int i = _items.size(); i-- > 0;)
 		{
@@ -344,12 +344,12 @@ public final class ItemAuctionInstance
 		}
 	}
 	
-	public final ItemAuction getAuction(final int auctionId)
+	public final ItemAuction getAuction(int auctionId)
 	{
 		return _auctions.get(auctionId);
 	}
 	
-	public final ItemAuction[] getAuctionsByBidder(final int bidderObjId)
+	public final ItemAuction[] getAuctionsByBidder(int bidderObjId)
 	{
 		final Collection<ItemAuction> auctions = getAuctions();
 		final ArrayList<ItemAuction> stack = new ArrayList<>(auctions.size());
@@ -383,7 +383,7 @@ public final class ItemAuctionInstance
 	{
 		private final ItemAuction _auction;
 		
-		public ScheduleAuctionTask(final ItemAuction auction)
+		public ScheduleAuctionTask(ItemAuction auction)
 		{
 			_auction = auction;
 		}
@@ -479,7 +479,7 @@ public final class ItemAuctionInstance
 		}
 	}
 	
-	final void onAuctionFinished(final ItemAuction auction)
+	final void onAuctionFinished(ItemAuction auction)
 	{
 		auction.broadcastToAllBiddersInternal(SystemMessage.getSystemMessage(SystemMessageId.S1_S_AUCTION_HAS_ENDED).addInt(auction.getAuctionId()));
 		
@@ -514,7 +514,7 @@ public final class ItemAuctionInstance
 		}
 	}
 	
-	final void setStateTask(final ScheduledFuture<?> future)
+	final void setStateTask(ScheduledFuture<?> future)
 	{
 		final ScheduledFuture<?> stateTask = _stateTask;
 		if (stateTask != null)
@@ -525,7 +525,7 @@ public final class ItemAuctionInstance
 		_stateTask = future;
 	}
 	
-	private final ItemAuction createAuction(final long after)
+	private final ItemAuction createAuction(long after)
 	{
 		final AuctionItem auctionItem = _items.get(Rnd.get(_items.size()));
 		final long startingTime = _dateGenerator.nextDate(after);
@@ -535,7 +535,7 @@ public final class ItemAuctionInstance
 		return auction;
 	}
 	
-	private final ItemAuction loadAuction(final int auctionId) throws SQLException
+	private final ItemAuction loadAuction(int auctionId) throws SQLException
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{

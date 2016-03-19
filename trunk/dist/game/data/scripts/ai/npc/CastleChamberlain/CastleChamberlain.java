@@ -148,7 +148,7 @@ final class CastleChamberlain extends AbstractNpcAI
 		return packet;
 	}
 	
-	private final String funcConfirmHtml(final L2PcInstance player, final L2Npc npc, final Castle castle, final int func, final int level)
+	private final String funcConfirmHtml(L2PcInstance player, L2Npc npc, Castle castle, int func, int level)
 	{
 		if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_SET_FUNCTIONS))
 		{
@@ -177,7 +177,7 @@ final class CastleChamberlain extends AbstractNpcAI
 		return "chamberlain-21.html";
 	}
 	
-	private final void funcReplace(final Castle castle, final NpcHtmlMessage html, final int func, final String str)
+	private final void funcReplace(Castle castle, NpcHtmlMessage html, int func, String str)
 	{
 		final CastleFunction function = castle.getFunction(func);
 		if (function == null)
@@ -199,7 +199,7 @@ final class CastleChamberlain extends AbstractNpcAI
 		}
 	}
 	
-	private final int getFunctionFee(final int func, final int level)
+	private final int getFunctionFee(int func, int level)
 	{
 		int fee = 0;
 		switch (func)
@@ -233,7 +233,7 @@ final class CastleChamberlain extends AbstractNpcAI
 		return fee;
 	}
 	
-	private final long getFunctionRatio(final int func)
+	private final long getFunctionRatio(int func)
 	{
 		long ratio = 0;
 		switch (func)
@@ -267,7 +267,7 @@ final class CastleChamberlain extends AbstractNpcAI
 		return ratio;
 	}
 	
-	private final int getDoorUpgradePrice(final int type, final int level)
+	private final int getDoorUpgradePrice(int type, int level)
 	{
 		int price = 0;
 		switch (type)
@@ -342,7 +342,7 @@ final class CastleChamberlain extends AbstractNpcAI
 		return price;
 	}
 	
-	private final int getTrapUpgradePrice(final int level)
+	private final int getTrapUpgradePrice(int level)
 	{
 		int price = 0;
 		switch (level)
@@ -371,7 +371,7 @@ final class CastleChamberlain extends AbstractNpcAI
 		return price;
 	}
 	
-	private final boolean isDomainFortressInContractStatus(final int castleId)
+	private final boolean isDomainFortressInContractStatus(int castleId)
 	{
 		final int numFort = ((castleId == 1) || (castleId == 5)) ? 2 : 1;
 		final List<Integer> fortList = FORTRESS.get(castleId);
@@ -386,7 +386,7 @@ final class CastleChamberlain extends AbstractNpcAI
 		return false;
 	}
 	
-	private final boolean isOwner(final L2PcInstance player, final L2Npc npc)
+	private final boolean isOwner(L2PcInstance player, L2Npc npc)
 	{
 		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()));
 	}

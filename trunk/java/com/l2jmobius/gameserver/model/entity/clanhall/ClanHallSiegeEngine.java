@@ -76,7 +76,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	public ScheduledFuture<?> _siegeTask;
 	public boolean _missionAccomplished = false;
 	
-	public ClanHallSiegeEngine(String name, String descr, final int hallId)
+	public ClanHallSiegeEngine(String name, String descr, int hallId)
 	{
 		super(-1, name, descr);
 		_log = Logger.getLogger(getClass().getName());
@@ -448,7 +448,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		return Config.CHS_FAME_FREQUENCY;
 	}
 	
-	public final void broadcastNpcSay(final L2Npc npc, final ChatType type, final NpcStringId messageId)
+	public final void broadcastNpcSay(L2Npc npc, ChatType type, NpcStringId messageId)
 	{
 		final NpcSay npcSay = new NpcSay(npc.getObjectId(), type, npc.getId(), messageId);
 		final int sourceRegion = MapRegionManager.getInstance().getMapRegionLocId(npc);

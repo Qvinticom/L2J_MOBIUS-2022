@@ -27,7 +27,7 @@ public final class ItemAuctionBid
 	private final int _playerObjId;
 	private long _lastBid;
 	
-	public ItemAuctionBid(final int playerObjId, final long lastBid)
+	public ItemAuctionBid(int playerObjId, long lastBid)
 	{
 		_playerObjId = playerObjId;
 		_lastBid = lastBid;
@@ -43,7 +43,7 @@ public final class ItemAuctionBid
 		return _lastBid;
 	}
 	
-	final void setLastBid(final long lastBid)
+	final void setLastBid(long lastBid)
 	{
 		_lastBid = lastBid;
 	}

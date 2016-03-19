@@ -63,7 +63,7 @@ public class EventItem implements IItemHandler
 		return used;
 	}
 	
-	private final boolean useBlockCheckerItem(final L2PcInstance castor, L2ItemInstance item)
+	private final boolean useBlockCheckerItem(L2PcInstance castor, L2ItemInstance item)
 	{
 		final int blockCheckerArena = castor.getBlockCheckerArena();
 		if (blockCheckerArena == -1)

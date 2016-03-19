@@ -254,7 +254,7 @@ public final class WalkingManager implements IXmlReader
 	 * @param npc NPC to move
 	 * @param routeName name of route to move by
 	 */
-	public void startMoving(final L2Npc npc, final String routeName)
+	public void startMoving(L2Npc npc, String routeName)
 	{
 		if (_routes.containsKey(routeName) && (npc != null) && !npc.isDead()) // check, if these route and NPC present
 		{
@@ -355,7 +355,7 @@ public final class WalkingManager implements IXmlReader
 	 * Resumes previously stopped moving
 	 * @param npc NPC to resume
 	 */
-	public void resumeMoving(final L2Npc npc)
+	public void resumeMoving(L2Npc npc)
 	{
 		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
 		if (walk != null)
@@ -414,7 +414,7 @@ public final class WalkingManager implements IXmlReader
 	 * Manage "node arriving"-related tasks: schedule move to next node; send ON_NODE_ARRIVED event to Quest script
 	 * @param npc NPC to manage
 	 */
-	public void onArrived(final L2Npc npc)
+	public void onArrived(L2Npc npc)
 	{
 		if (_activeRoutes.containsKey(npc.getObjectId()))
 		{

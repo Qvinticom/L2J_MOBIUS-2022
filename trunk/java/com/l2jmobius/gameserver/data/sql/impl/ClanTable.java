@@ -352,7 +352,7 @@ public class ClanTable
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanDestroy(leaderMember, clan));
 	}
 	
-	public void scheduleRemoveClan(final int clanId)
+	public void scheduleRemoveClan(int clanId)
 	{
 		ThreadPoolManager.getInstance().scheduleGeneral(() ->
 		{

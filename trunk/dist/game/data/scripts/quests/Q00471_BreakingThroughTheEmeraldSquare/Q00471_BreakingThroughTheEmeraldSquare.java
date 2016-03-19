@@ -51,7 +51,7 @@ public class Q00471_BreakingThroughTheEmeraldSquare extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
+		final String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{

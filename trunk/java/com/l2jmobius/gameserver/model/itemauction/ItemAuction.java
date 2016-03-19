@@ -67,12 +67,12 @@ public final class ItemAuction
 	private static final String DELETE_ITEM_AUCTION_BID = "DELETE FROM item_auction_bid WHERE auctionId = ? AND playerObjId = ?";
 	private static final String INSERT_ITEM_AUCTION_BID = "INSERT INTO item_auction_bid (auctionId, playerObjId, playerBid) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE playerBid = ?";
 	
-	public ItemAuction(final int auctionId, final int instanceId, final long startingTime, final long endingTime, final AuctionItem auctionItem)
+	public ItemAuction(int auctionId, int instanceId, long startingTime, long endingTime, AuctionItem auctionItem)
 	{
 		this(auctionId, instanceId, startingTime, endingTime, auctionItem, new ArrayList<>(), ItemAuctionState.CREATED);
 	}
 	
-	public ItemAuction(final int auctionId, final int instanceId, final long startingTime, final long endingTime, final AuctionItem auctionItem, final List<ItemAuctionBid> auctionBids, final ItemAuctionState auctionState)
+	public ItemAuction(int auctionId, int instanceId, long startingTime, long endingTime, AuctionItem auctionItem, List<ItemAuctionBid> auctionBids, ItemAuctionState auctionState)
 	{
 		_auctionId = auctionId;
 		_instanceId = instanceId;
@@ -110,7 +110,7 @@ public final class ItemAuction
 		return auctionState;
 	}
 	
-	public final boolean setAuctionState(final ItemAuctionState expected, final ItemAuctionState wanted)
+	public final boolean setAuctionState(ItemAuctionState expected, ItemAuctionState wanted)
 	{
 		synchronized (_auctionStateLock)
 		{
@@ -210,20 +210,20 @@ public final class ItemAuction
 		}
 	}
 	
-	public final int getAndSetLastBidPlayerObjectId(final int playerObjId)
+	public final int getAndSetLastBidPlayerObjectId(int playerObjId)
 	{
 		final int lastBid = _lastBidPlayerObjId;
 		_lastBidPlayerObjId = playerObjId;
 		return lastBid;
 	}
 	
-	private final void updatePlayerBid(final ItemAuctionBid bid, final boolean delete)
+	private final void updatePlayerBid(ItemAuctionBid bid, boolean delete)
 	{
 		// TODO nBd maybe move such stuff to you db updater :D
 		updatePlayerBidInternal(bid, delete);
 	}
 	
-	final void updatePlayerBidInternal(final ItemAuctionBid bid, final boolean delete)
+	final void updatePlayerBidInternal(ItemAuctionBid bid, boolean delete)
 	{
 		final String query = delete ? DELETE_ITEM_AUCTION_BID : INSERT_ITEM_AUCTION_BID;
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -244,7 +244,7 @@ public final class ItemAuction
 		}
 	}
 	
-	public final void registerBid(final L2PcInstance player, final long newBid)
+	public final void registerBid(L2PcInstance player, long newBid)
 	{
 		if (player == null)
 		{
@@ -325,7 +325,7 @@ public final class ItemAuction
 		}
 	}
 	
-	private final void onPlayerBid(final L2PcInstance player, final ItemAuctionBid bid)
+	private final void onPlayerBid(L2PcInstance player, ItemAuctionBid bid)
 	{
 		if (_highestBid == null)
 		{
@@ -400,12 +400,12 @@ public final class ItemAuction
 		}
 	}
 	
-	public final void broadcastToAllBidders(final L2GameServerPacket packet)
+	public final void broadcastToAllBidders(L2GameServerPacket packet)
 	{
 		ThreadPoolManager.getInstance().executeGeneral(() -> broadcastToAllBiddersInternal(packet));
 	}
 	
-	public final void broadcastToAllBiddersInternal(final L2GameServerPacket packet)
+	public final void broadcastToAllBiddersInternal(L2GameServerPacket packet)
 	{
 		for (int i = _auctionBids.size(); i-- > 0;)
 		{
@@ -421,7 +421,7 @@ public final class ItemAuction
 		}
 	}
 	
-	public final boolean cancelBid(final L2PcInstance player)
+	public final boolean cancelBid(L2PcInstance player)
 	{
 		if (player == null)
 		{
@@ -508,7 +508,7 @@ public final class ItemAuction
 		}
 	}
 	
-	private final boolean reduceItemCount(final L2PcInstance player, final long count)
+	private final boolean reduceItemCount(L2PcInstance player, long count)
 	{
 		if (!player.reduceAdena("ItemAuction", count, player, true))
 		{
@@ -518,7 +518,7 @@ public final class ItemAuction
 		return true;
 	}
 	
-	private final void increaseItemCount(final L2PcInstance player, final long count)
+	private final void increaseItemCount(L2PcInstance player, long count)
 	{
 		player.addAdena("ItemAuction", count, player, true);
 	}
@@ -528,19 +528,19 @@ public final class ItemAuction
 	 * @param player The player that made the bid
 	 * @return The last bid the player made or -1
 	 */
-	public final long getLastBid(final L2PcInstance player)
+	public final long getLastBid(L2PcInstance player)
 	{
 		final ItemAuctionBid bid = getBidFor(player.getObjectId());
 		return bid != null ? bid.getLastBid() : -1L;
 	}
 	
-	public final ItemAuctionBid getBidFor(final int playerObjId)
+	public final ItemAuctionBid getBidFor(int playerObjId)
 	{
 		final int index = getBidIndexFor(playerObjId);
 		return index != -1 ? _auctionBids.get(index) : null;
 	}
 	
-	private final int getBidIndexFor(final int playerObjId)
+	private final int getBidIndexFor(int playerObjId)
 	{
 		for (int i = _auctionBids.size(); i-- > 0;)
 		{

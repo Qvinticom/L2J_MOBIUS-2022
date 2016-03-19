@@ -301,7 +301,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 				mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_S1_HAS_CONNECTED).addCharName(player));
 				mentee.sendPacket(new ExMentorList(mentee.getPlayerInstance()));
 			});
-			
+				
 			if (MentorManager.getInstance().hasOnlineMentees(player.getObjectId()))
 			{
 				// Starting buffs for Mentor

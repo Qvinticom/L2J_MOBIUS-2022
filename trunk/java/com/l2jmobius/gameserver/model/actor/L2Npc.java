@@ -1549,7 +1549,7 @@ public class L2Npc extends L2Character
 	 * @param paramName the parameter name to check
 	 * @return given AI parameter value
 	 */
-	public int getAIValue(final String paramName)
+	public int getAIValue(String paramName)
 	{
 		return hasAIValue(paramName) ? NpcPersonalAIData.getInstance().getAIValue(getSpawn().getName(), paramName) : -1;
 	}
@@ -1558,7 +1558,7 @@ public class L2Npc extends L2Character
 	 * @param paramName the parameter name to check
 	 * @return {@code true} if given parameter is set for NPC, {@code false} otherwise
 	 */
-	public boolean hasAIValue(final String paramName)
+	public boolean hasAIValue(String paramName)
 	{
 		return (getSpawn() != null) && (getSpawn().getName() != null) && NpcPersonalAIData.getInstance().hasAIValue(getSpawn().getName(), paramName);
 	}

@@ -29,7 +29,7 @@ public final class NioNetStringBuffer
 	
 	private int _len;
 	
-	public NioNetStringBuffer(final int size)
+	public NioNetStringBuffer(int size)
 	{
 		_buf = new char[size];
 		_size = size;
@@ -41,7 +41,7 @@ public final class NioNetStringBuffer
 		_len = 0;
 	}
 	
-	public final void append(final char c)
+	public final void append(char c)
 	{
 		if (_len < _size)
 		{

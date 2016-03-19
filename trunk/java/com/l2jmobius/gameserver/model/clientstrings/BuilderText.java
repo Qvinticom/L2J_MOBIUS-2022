@@ -23,19 +23,19 @@ final class BuilderText extends Builder
 {
 	private final String _text;
 	
-	BuilderText(final String text)
+	BuilderText(String text)
 	{
 		_text = text;
 	}
 	
 	@Override
-	public final String toString(final Object param)
+	public final String toString(Object param)
 	{
 		return toString();
 	}
 	
 	@Override
-	public final String toString(final Object... params)
+	public final String toString(Object... params)
 	{
 		return toString();
 	}

@@ -577,7 +577,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public final Location getInnerSpawnLoc(final L2PcInstance player)
+	public final Location getInnerSpawnLoc(L2PcInstance player)
 	{
 		Location loc = null;
 		if (player.getClanId() == _hall.getOwnerId())

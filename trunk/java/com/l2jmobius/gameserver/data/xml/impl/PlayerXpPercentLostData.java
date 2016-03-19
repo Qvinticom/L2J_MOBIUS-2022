@@ -69,7 +69,7 @@ public final class PlayerXpPercentLostData implements IXmlReader
 		}
 	}
 	
-	public double getXpPercent(final int level)
+	public double getXpPercent(int level)
 	{
 		if (level > _maxlevel)
 		{

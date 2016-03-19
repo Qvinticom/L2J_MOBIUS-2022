@@ -40,7 +40,7 @@ public abstract class ReceivablePacket<T extends MMOClient<?>>extends AbstractPa
 	 * Reads as many bytes as the length of the array.
 	 * @param dst : the byte array which will be filled with the data.
 	 */
-	protected final void readB(final byte[] dst)
+	protected final void readB(byte[] dst)
 	{
 		_buf.get(dst);
 	}
@@ -52,7 +52,7 @@ public abstract class ReceivablePacket<T extends MMOClient<?>>extends AbstractPa
 	 * @param offset : starts to fill the byte array from the given offset.
 	 * @param len : the given length of bytes to be read.
 	 */
-	protected final void readB(final byte[] dst, final int offset, final int len)
+	protected final void readB(byte[] dst, int offset, int len)
 	{
 		_buf.get(dst, offset, len);
 	}

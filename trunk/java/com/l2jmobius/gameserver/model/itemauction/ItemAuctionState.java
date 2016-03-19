@@ -27,7 +27,7 @@ public enum ItemAuctionState
 	
 	private final byte _stateId;
 	
-	private ItemAuctionState(final byte stateId)
+	private ItemAuctionState(byte stateId)
 	{
 		_stateId = stateId;
 	}
@@ -37,7 +37,7 @@ public enum ItemAuctionState
 		return _stateId;
 	}
 	
-	public static final ItemAuctionState stateForStateId(final byte stateId)
+	public static final ItemAuctionState stateForStateId(byte stateId)
 	{
 		for (ItemAuctionState state : ItemAuctionState.values())
 		{

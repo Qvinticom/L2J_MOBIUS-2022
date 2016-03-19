@@ -46,7 +46,7 @@ public interface IChanceMultiplierStrategy
 		return (Config.L2JMOD_CHAMPION_ENABLE && (victim != null) && victim.isChampion()) ? (Config.RATE_QUEST_DROP * championmult) : Config.RATE_QUEST_DROP;
 	};
 	
-	public static IChanceMultiplierStrategy DEFAULT_STRATEGY(final double defaultMultiplier)
+	public static IChanceMultiplierStrategy DEFAULT_STRATEGY(double defaultMultiplier)
 	{
 		return (item, victim) ->
 		{

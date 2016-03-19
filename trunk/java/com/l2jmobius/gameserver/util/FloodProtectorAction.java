@@ -69,7 +69,7 @@ public final class FloodProtectorAction
 	 * @param client the game client for which flood protection is being created
 	 * @param config flood protector configuration
 	 */
-	public FloodProtectorAction(final L2GameClient client, final FloodProtectorConfig config)
+	public FloodProtectorAction(L2GameClient client, FloodProtectorConfig config)
 	{
 		super();
 		_client = client;
@@ -81,7 +81,7 @@ public final class FloodProtectorAction
 	 * @param command command issued or short command description
 	 * @return true if action is allowed, otherwise false
 	 */
-	public boolean tryPerformAction(final String command)
+	public boolean tryPerformAction(String command)
 	{
 		final int curTick = GameTimeController.getInstance().getGameTicks();
 		

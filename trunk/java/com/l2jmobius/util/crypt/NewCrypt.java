@@ -47,7 +47,7 @@ public final class NewCrypt
 	 * @param raw data array to be verified
 	 * @return true when the checksum of the data is valid, false otherwise
 	 */
-	public static boolean verifyChecksum(final byte[] raw)
+	public static boolean verifyChecksum(byte[] raw)
 	{
 		return NewCrypt.verifyChecksum(raw, 0, raw.length);
 	}
@@ -60,7 +60,7 @@ public final class NewCrypt
 	 * @param size number of bytes to verify
 	 * @return true if the checksum of the data is valid, false otherwise
 	 */
-	public static boolean verifyChecksum(final byte[] raw, final int offset, final int size)
+	public static boolean verifyChecksum(byte[] raw, int offset, int size)
 	{
 		// check if size is multiple of 4 and if there is more then only the checksum
 		if (((size & 3) != 0) || (size <= 4))
@@ -95,7 +95,7 @@ public final class NewCrypt
 	 * Equivalent to calling {@link #appendChecksum(byte[], int, int)} with parameters (raw, 0, raw.length)
 	 * @param raw data array to compute the checksum from
 	 */
-	public static void appendChecksum(final byte[] raw)
+	public static void appendChecksum(byte[] raw)
 	{
 		NewCrypt.appendChecksum(raw, 0, raw.length);
 	}
@@ -106,7 +106,7 @@ public final class NewCrypt
 	 * @param offset offset where to start in the data array
 	 * @param size number of bytes to compute the checksum from
 	 */
-	public static void appendChecksum(final byte[] raw, final int offset, final int size)
+	public static void appendChecksum(byte[] raw, int offset, int size)
 	{
 		long chksum = 0;
 		final int count = size - 4;
@@ -153,7 +153,7 @@ public final class NewCrypt
 	 * @param size Length of the data to be encrypted
 	 * @param key The 4 bytes (int) XOR key
 	 */
-	static void encXORPass(byte[] raw, final int offset, final int size, int key)
+	static void encXORPass(byte[] raw, int offset, int size, int key)
 	{
 		final int stop = size - 8;
 		int pos = 4 + offset;
@@ -192,7 +192,7 @@ public final class NewCrypt
 	 * @param offset the offset at which to start decrypting
 	 * @param size the number of bytes to be decrypted
 	 */
-	public void decrypt(byte[] raw, final int offset, final int size)
+	public void decrypt(byte[] raw, int offset, int size)
 	{
 		for (int i = offset; i < (offset + size); i += 8)
 		{
@@ -208,7 +208,7 @@ public final class NewCrypt
 	 * @param offset the offset at which to start decrypting
 	 * @param size the number of bytes to be decrypted
 	 */
-	public void crypt(byte[] raw, final int offset, final int size)
+	public void crypt(byte[] raw, int offset, int size)
 	{
 		for (int i = offset; i < (offset + size); i += 8)
 		{

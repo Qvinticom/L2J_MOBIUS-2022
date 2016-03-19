@@ -142,7 +142,7 @@ public class Q10325_SearchingForNewPower extends Quest
 			}
 			case State.STARTED:
 			{
-				int cond = qs.getCond();
+				final int cond = qs.getCond();
 				switch (npc.getId())
 				{
 					case GALLINT:

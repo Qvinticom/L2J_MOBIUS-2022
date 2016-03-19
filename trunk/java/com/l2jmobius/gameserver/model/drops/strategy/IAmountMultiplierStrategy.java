@@ -31,7 +31,7 @@ public interface IAmountMultiplierStrategy
 	public static final IAmountMultiplierStrategy SPOIL = DEFAULT_STRATEGY(Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER);
 	public static final IAmountMultiplierStrategy STATIC = (item, victim) -> 1;
 	
-	public static IAmountMultiplierStrategy DEFAULT_STRATEGY(final double defaultMultiplier)
+	public static IAmountMultiplierStrategy DEFAULT_STRATEGY(double defaultMultiplier)
 	{
 		return (item, victim) ->
 		{

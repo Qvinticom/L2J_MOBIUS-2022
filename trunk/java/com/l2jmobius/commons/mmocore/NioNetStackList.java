@@ -33,7 +33,7 @@ public final class NioNetStackList<E>
 		clear();
 	}
 	
-	public final void addLast(final E elem)
+	public final void addLast(E elem)
 	{
 		final NioNetStackNode newEndNode = _buf.removeFirst();
 		_end._value = elem;
@@ -78,7 +78,7 @@ public final class NioNetStackList<E>
 			_start._next = _end;
 		}
 		
-		final void addLast(final NioNetStackNode node)
+		final void addLast(NioNetStackNode node)
 		{
 			node._next = null;
 			node._value = null;

@@ -101,7 +101,7 @@ public final class GameTimeController extends Thread
 	 * Add a L2Character to movingObjects of GameTimeController.
 	 * @param cha The L2Character to add to movingObjects of GameTimeController
 	 */
-	public final void registerMovingObject(final L2Character cha)
+	public final void registerMovingObject(L2Character cha)
 	{
 		if (cha == null)
 		{

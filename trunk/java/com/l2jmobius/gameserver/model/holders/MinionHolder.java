@@ -36,7 +36,7 @@ public class MinionHolder implements IIdentifiable
 	 * @param respawnTime the respawn time
 	 * @param weightPoint the weight point
 	 */
-	public MinionHolder(final int id, final int count, final long respawnTime, final int weightPoint)
+	public MinionHolder(int id, int count, long respawnTime, int weightPoint)
 	{
 		_id = id;
 		_count = count;

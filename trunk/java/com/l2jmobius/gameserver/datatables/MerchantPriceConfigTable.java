@@ -197,7 +197,7 @@ public class MerchantPriceConfigTable implements InstanceListManager
 		private Castle _castle;
 		private final int _zoneId;
 		
-		public MerchantPriceConfig(final int id, final String name, final int baseTax, final int castleId, final int zoneId)
+		public MerchantPriceConfig(int id, String name, int baseTax, int castleId, int zoneId)
 		{
 			_id = id;
 			_name = name;

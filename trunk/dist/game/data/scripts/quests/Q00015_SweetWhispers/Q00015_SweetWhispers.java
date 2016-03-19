@@ -119,7 +119,7 @@ public class Q00015_SweetWhispers extends Quest
 					}
 					case M_NECROMANCER:
 					{
-						int cond = qs.getCond();
+						final int cond = qs.getCond();
 						if (cond == 1)
 						{
 							htmltext = "31518-00.html";

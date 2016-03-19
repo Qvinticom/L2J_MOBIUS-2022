@@ -3004,7 +3004,7 @@ public final class Config
 	 * Loads flood protector configurations.
 	 * @param properties the properties object containing the actual values of the flood protector configs
 	 */
-	private static void loadFloodProtectorConfigs(final PropertiesParser properties)
+	private static void loadFloodProtectorConfigs(PropertiesParser properties)
 	{
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_USE_ITEM, "UseItem", 4);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_ROLL_DICE, "RollDice", 42);
@@ -3031,7 +3031,7 @@ public final class Config
 	 * @param configString flood protector configuration string that determines for which flood protector configuration should be read
 	 * @param defaultInterval default flood protector interval
 	 */
-	private static void loadFloodProtectorConfig(final PropertiesParser properties, final FloodProtectorConfig config, final String configString, final int defaultInterval)
+	private static void loadFloodProtectorConfig(PropertiesParser properties, FloodProtectorConfig config, String configString, int defaultInterval)
 	{
 		config.FLOOD_PROTECTION_INTERVAL = properties.getInt(StringUtil.concat("FloodProtector", configString, "Interval"), defaultInterval);
 		config.LOG_FLOODING = properties.getBoolean(StringUtil.concat("FloodProtector", configString, "LogFlooding"), false);

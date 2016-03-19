@@ -26,13 +26,13 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
  */
 public class L2NoStoreZone extends L2ZoneType
 {
-	public L2NoStoreZone(final int id)
+	public L2NoStoreZone(int id)
 	{
 		super(id);
 	}
 	
 	@Override
-	protected void onEnter(final L2Character character)
+	protected void onEnter(L2Character character)
 	{
 		if (character.isPlayer())
 		{
@@ -41,7 +41,7 @@ public class L2NoStoreZone extends L2ZoneType
 	}
 	
 	@Override
-	protected void onExit(final L2Character character)
+	protected void onExit(L2Character character)
 	{
 		if (character.isPlayer())
 		{

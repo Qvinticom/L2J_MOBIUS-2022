@@ -108,7 +108,7 @@ public final class RequestRestartPoint extends L2GameClientPacket
 		portPlayer(activeChar);
 	}
 	
-	protected final void portPlayer(final L2PcInstance activeChar)
+	protected final void portPlayer(L2PcInstance activeChar)
 	{
 		Location loc = null;
 		Castle castle = null;

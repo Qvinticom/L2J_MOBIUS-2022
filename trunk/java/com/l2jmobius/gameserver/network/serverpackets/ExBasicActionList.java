@@ -147,7 +147,7 @@ public final class ExBasicActionList extends L2GameServerPacket
 	
 	private final int[] _actionIds;
 	
-	public ExBasicActionList(final int[] actionIds)
+	public ExBasicActionList(int[] actionIds)
 	{
 		_actionIds = actionIds;
 	}

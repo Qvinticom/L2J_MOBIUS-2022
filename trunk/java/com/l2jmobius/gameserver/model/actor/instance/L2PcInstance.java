@@ -4370,7 +4370,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public final void broadcastPacket(SocialAction sa)
 	{
-		L2Object target = getTarget();
+		final L2Object target = getTarget();
 		if ((target != null) && target.isNpc())
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcSocialActionSee((L2Npc) target, getActingPlayer(), sa.getId()), (L2Npc) target);
@@ -14410,7 +14410,7 @@ public final class L2PcInstance extends L2Playable
 		return _pcBangPoints;
 	}
 	
-	public void setPcBangPoints(final int count)
+	public void setPcBangPoints(int count)
 	{
 		if (count < 200000)
 		{

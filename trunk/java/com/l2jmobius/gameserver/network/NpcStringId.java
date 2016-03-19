@@ -36264,7 +36264,7 @@ public final class NpcStringId
 		}
 	}
 	
-	private static final int parseMessageParameters(final String name)
+	private static final int parseMessageParameters(String name)
 	{
 		int paramCount = 0;
 		char c1, c2;
@@ -36284,23 +36284,23 @@ public final class NpcStringId
 		return paramCount;
 	}
 	
-	public static final NpcStringId getNpcStringId(final int id)
+	public static final NpcStringId getNpcStringId(int id)
 	{
 		return getNpcStringIdOrDefault(id, new NpcStringId(id));
 	}
 	
-	public static final NpcStringId getNpcStringIdOrDefault(final int id, NpcStringId defaultValue)
+	public static final NpcStringId getNpcStringIdOrDefault(int id, NpcStringId defaultValue)
 	{
 		final NpcStringId nsi = getNpcStringIdInternal(id);
 		return nsi == null ? defaultValue : nsi;
 	}
 	
-	private static final NpcStringId getNpcStringIdInternal(final int id)
+	private static final NpcStringId getNpcStringIdInternal(int id)
 	{
 		return VALUES.get(id);
 	}
 	
-	public static final NpcStringId getNpcStringId(final String name)
+	public static final NpcStringId getNpcStringId(String name)
 	{
 		try
 		{
@@ -36415,7 +36415,7 @@ public final class NpcStringId
 	private NSLocalisation[] _localisations;
 	private ExShowScreenMessage _staticScreenMessage;
 	
-	protected NpcStringId(final int id)
+	protected NpcStringId(int id)
 	{
 		_id = id;
 		_localisations = EMPTY_NSL_ARRAY;
@@ -36426,7 +36426,7 @@ public final class NpcStringId
 		return _id;
 	}
 	
-	private final void setName(final String name)
+	private final void setName(String name)
 	{
 		_name = name;
 	}
@@ -36445,7 +36445,7 @@ public final class NpcStringId
 	 * You better don`t touch this!
 	 * @param params
 	 */
-	public final void setParamCount(final int params)
+	public final void setParamCount(int params)
 	{
 		if (params < 0)
 		{
@@ -36465,7 +36465,7 @@ public final class NpcStringId
 		_params = (byte) params;
 	}
 	
-	public final NSLocalisation getLocalisation(final String lang)
+	public final NSLocalisation getLocalisation(String lang)
 	{
 		NSLocalisation nsl;
 		for (int i = _localisations.length; i-- > 0;)
@@ -36479,7 +36479,7 @@ public final class NpcStringId
 		return null;
 	}
 	
-	public final void attachLocalizedText(final String lang, final String text)
+	public final void attachLocalizedText(String lang, String text)
 	{
 		final int length = _localisations.length;
 		final NSLocalisation[] localisations = Arrays.copyOf(_localisations, length + 1);
@@ -36497,7 +36497,7 @@ public final class NpcStringId
 		return _staticScreenMessage;
 	}
 	
-	public final void setStaticSystemMessage(final ExShowScreenMessage ns)
+	public final void setStaticSystemMessage(ExShowScreenMessage ns)
 	{
 		_staticScreenMessage = ns;
 	}
@@ -36513,7 +36513,7 @@ public final class NpcStringId
 		private final String _lang;
 		private final Builder _builder;
 		
-		public NSLocalisation(final String lang, final String text)
+		public NSLocalisation(String lang, String text)
 		{
 			_lang = lang;
 			_builder = Builder.newBuilder(text);
@@ -36524,7 +36524,7 @@ public final class NpcStringId
 			return _lang;
 		}
 		
-		public final String getLocalisation(final Object... params)
+		public final String getLocalisation(Object... params)
 		{
 			return _builder.toString(params);
 		}

@@ -270,11 +270,11 @@ public class Q10363_RequestOfTheSeeker extends Quest
 			else
 			{
 				showOnScreenMsg(caster, NpcStringId.DON_T_TOY_WITH_THE_DEAD, ExShowScreenMessage.TOP_CENTER, 10000);
-				L2Npc Spirit1 = addSpawn(RESURRECTED_VENGEFUL_SPIRIT1, new Location(caster.getX() - getRandom(100), caster.getY() - getRandom(100), caster.getZ(), 0));
+				final L2Npc Spirit1 = addSpawn(RESURRECTED_VENGEFUL_SPIRIT1, new Location(caster.getX() - getRandom(100), caster.getY() - getRandom(100), caster.getZ(), 0));
 				Spirit1.setCurrentHp(Spirit1.getMaxHp() / 2);
 				addAttackDesire(Spirit1, caster);
 				startQuestTimer("life_over", 20000, Spirit1, caster);
-				L2Npc Spirit2 = addSpawn(RESURRECTED_VENGEFUL_SPIRIT2, new Location(caster.getX() - getRandom(100), caster.getY() - getRandom(100), caster.getZ(), 0));
+				final L2Npc Spirit2 = addSpawn(RESURRECTED_VENGEFUL_SPIRIT2, new Location(caster.getX() - getRandom(100), caster.getY() - getRandom(100), caster.getZ(), 0));
 				Spirit2.setCurrentHp(Spirit2.getMaxHp() / 2);
 				addAttackDesire(Spirit2, caster);
 				startQuestTimer("life_over", 20000, Spirit2, caster);

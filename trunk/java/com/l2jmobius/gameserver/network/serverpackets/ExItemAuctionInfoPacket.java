@@ -30,7 +30,7 @@ public final class ExItemAuctionInfoPacket extends AbstractItemPacket
 	private final ItemAuction _currentAuction;
 	private final ItemAuction _nextAuction;
 	
-	public ExItemAuctionInfoPacket(final boolean refresh, final ItemAuction currentAuction, final ItemAuction nextAuction)
+	public ExItemAuctionInfoPacket(boolean refresh, ItemAuction currentAuction, ItemAuction nextAuction)
 	{
 		if (currentAuction == null)
 		{

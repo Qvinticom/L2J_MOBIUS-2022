@@ -2680,7 +2680,7 @@ public abstract class AbstractScript implements INamable
 	 * @param smartDrop true if to not calculate a drop, which can't be given to any player 'cause of limits
 	 * @return the counts of each items given to each player
 	 */
-	protected static Map<L2PcInstance, Map<Integer, Long>> distributeItems(Collection<L2PcInstance> players, final GroupedGeneralDropItem items, L2Character killer, L2Character victim, Function<Integer, Long> limit, boolean playSound, boolean smartDrop)
+	protected static Map<L2PcInstance, Map<Integer, Long>> distributeItems(Collection<L2PcInstance> players, GroupedGeneralDropItem items, L2Character killer, L2Character victim, Function<Integer, Long> limit, boolean playSound, boolean smartDrop)
 	{
 		GroupedGeneralDropItem toDrop;
 		if (smartDrop)
@@ -2723,7 +2723,7 @@ public abstract class AbstractScript implements INamable
 	 * @param smartDrop true if to not calculate a drop, which can't be given to any player
 	 * @return the counts of each items given to each player
 	 */
-	protected static Map<L2PcInstance, Map<Integer, Long>> distributeItems(Collection<L2PcInstance> players, final GroupedGeneralDropItem items, L2Character killer, L2Character victim, Map<Integer, Long> limit, boolean playSound, boolean smartDrop)
+	protected static Map<L2PcInstance, Map<Integer, Long>> distributeItems(Collection<L2PcInstance> players, GroupedGeneralDropItem items, L2Character killer, L2Character victim, Map<Integer, Long> limit, boolean playSound, boolean smartDrop)
 	{
 		return distributeItems(players, items, killer, victim, Util.mapToFunction(limit), playSound, smartDrop);
 	}
@@ -2739,7 +2739,7 @@ public abstract class AbstractScript implements INamable
 	 * @param smartDrop true if to not calculate a drop, which can't be given to any player
 	 * @return the counts of each items given to each player
 	 */
-	protected static Map<L2PcInstance, Map<Integer, Long>> distributeItems(Collection<L2PcInstance> players, final GroupedGeneralDropItem items, L2Character killer, L2Character victim, long limit, boolean playSound, boolean smartDrop)
+	protected static Map<L2PcInstance, Map<Integer, Long>> distributeItems(Collection<L2PcInstance> players, GroupedGeneralDropItem items, L2Character killer, L2Character victim, long limit, boolean playSound, boolean smartDrop)
 	{
 		return distributeItems(players, items, killer, victim, t -> limit, playSound, smartDrop);
 	}
@@ -3058,7 +3058,7 @@ public abstract class AbstractScript implements INamable
 	 * @param includeCommandChannel if {@code true}, {@link #actionForEachPlayer(L2PcInstance, L2Npc, boolean)} will be called with the player's command channel members
 	 * @see #actionForEachPlayer(L2PcInstance, L2Npc, boolean)
 	 */
-	public final void executeForEachPlayer(L2PcInstance player, final L2Npc npc, final boolean isSummon, boolean includeParty, boolean includeCommandChannel)
+	public final void executeForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel)
 	{
 		if ((includeParty || includeCommandChannel) && player.isInParty())
 		{

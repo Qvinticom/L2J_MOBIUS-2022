@@ -27,7 +27,7 @@ public class ExBRGamePoint extends L2GameServerPacket
 	private final int _charId;
 	private final int _charPoints;
 	
-	public ExBRGamePoint(final L2PcInstance player)
+	public ExBRGamePoint(L2PcInstance player)
 	{
 		_charId = player.getObjectId();
 		_charPoints = player.getPrimePoints();

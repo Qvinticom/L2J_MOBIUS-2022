@@ -338,7 +338,7 @@ public final class BotReportTable
 	 * @param bot (L2PcInstance to be punished)
 	 * @param rcd (RepotedCharData linked to this bot)
 	 */
-	private void handleReport(L2PcInstance bot, final ReportedCharData rcd)
+	private void handleReport(L2PcInstance bot, ReportedCharData rcd)
 	{
 		// Report count punishment
 		punishBot(bot, _punishments.get(rcd.getReportCount()));
@@ -596,7 +596,7 @@ public final class BotReportTable
 		final Skill _punish;
 		final int _systemMessageId;
 		
-		PunishHolder(final Skill sk, final int sysMsg)
+		PunishHolder(Skill sk, int sysMsg)
 		{
 			_punish = sk;
 			_systemMessageId = sysMsg;

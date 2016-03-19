@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 public class L2StaticObjectInstanceAction implements IActionHandler
 {
 	@Override
-	public boolean action(final L2PcInstance activeChar, final L2Object target, final boolean interact)
+	public boolean action(L2PcInstance activeChar, final L2Object target, final boolean interact)
 	{
 		final L2StaticObjectInstance staticObject = (L2StaticObjectInstance) target;
 		if (staticObject.getType() < 0)

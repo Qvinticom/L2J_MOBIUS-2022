@@ -114,7 +114,7 @@ public abstract class AbstractPlayerGroup
 	 * Broadcast a packet to every member of this group.
 	 * @param packet the packet to broadcast
 	 */
-	public void broadcastPacket(final L2GameServerPacket packet)
+	public void broadcastPacket(L2GameServerPacket packet)
 	{
 		forEachMember(m ->
 		{
@@ -144,7 +144,7 @@ public abstract class AbstractPlayerGroup
 		broadcastPacket(SystemMessage.sendString(text));
 	}
 	
-	public void broadcastCreatureSay(final CreatureSay msg, final L2PcInstance broadcaster)
+	public void broadcastCreatureSay(CreatureSay msg, L2PcInstance broadcaster)
 	{
 		forEachMember(m ->
 		{

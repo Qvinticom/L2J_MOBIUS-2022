@@ -90,7 +90,7 @@ public class DocumentEngine
 		return doc.getSkills();
 	}
 	
-	public void loadAllSkills(final Map<Integer, Skill> allSkills)
+	public void loadAllSkills(Map<Integer, Skill> allSkills)
 	{
 		int count = 0;
 		for (File file : _skillFiles)

@@ -197,7 +197,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	}
 	
 	@Override
-	public boolean encrypt(final ByteBuffer buf, final int size)
+	public boolean encrypt(ByteBuffer buf, int size)
 	{
 		_crypt.encrypt(buf.array(), buf.position(), size);
 		buf.position(buf.position() + size);

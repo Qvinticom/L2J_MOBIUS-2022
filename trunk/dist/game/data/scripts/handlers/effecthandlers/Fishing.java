@@ -228,7 +228,7 @@ public final class Fishing extends AbstractEffect
 	 * @param waterZone the water zone
 	 * @return the bait z or {@link Integer#MIN_VALUE} when you cannot fish here
 	 */
-	private static int computeBaitZ(final L2PcInstance player, final int baitX, final int baitY, final L2FishingZone fishingZone, final L2WaterZone waterZone)
+	private static int computeBaitZ(L2PcInstance player, int baitX, int baitY, L2FishingZone fishingZone, L2WaterZone waterZone)
 	{
 		if ((fishingZone == null))
 		{

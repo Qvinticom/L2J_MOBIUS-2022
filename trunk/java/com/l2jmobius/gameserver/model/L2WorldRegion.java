@@ -122,7 +122,7 @@ public final class L2WorldRegion
 		return false;
 	}
 	
-	public boolean checkEffectRangeInsidePeaceZone(Skill skill, final int x, final int y, final int z)
+	public boolean checkEffectRangeInsidePeaceZone(Skill skill, int x, int y, int z)
 	{
 		final int range = skill.getEffectRange();
 		final int up = y + range;

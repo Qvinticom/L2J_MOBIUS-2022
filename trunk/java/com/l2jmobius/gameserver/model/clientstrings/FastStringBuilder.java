@@ -24,12 +24,12 @@ final class FastStringBuilder
 	private final char[] _array;
 	private int _len;
 	
-	public FastStringBuilder(final int capacity)
+	public FastStringBuilder(int capacity)
 	{
 		_array = new char[capacity];
 	}
 	
-	public final void append(final String text)
+	public final void append(String text)
 	{
 		text.getChars(0, text.length(), _array, _len);
 		_len += text.length();

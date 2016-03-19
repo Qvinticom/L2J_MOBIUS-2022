@@ -523,7 +523,7 @@ abstract class Chamber extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(final L2Npc npc, final L2PcInstance attacker, final int damage, final boolean isPet, final Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, Skill skill)
 	{
 		if (!npc.isBusy() && (npc.getCurrentHp() < (npc.getMaxHp() / 10)))
 		{

@@ -74,7 +74,7 @@ public class ThreadPoolManager
 	{
 		private final Runnable _r;
 		
-		public RunnableWrapper(final Runnable r)
+		public RunnableWrapper(Runnable r)
 		{
 			_r = r;
 		}
