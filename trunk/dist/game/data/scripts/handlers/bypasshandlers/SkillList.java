@@ -73,7 +73,7 @@ public class SkillList implements IBypassHandler
 					if (!own_class)
 					{
 						final String charType = activeChar.getClassId().isMage() ? "fighter" : "mage";
-						text += "Skills of your class are the easiest to learn.<br>" + "Skills of another class of your race are a little harder.<br>" + "Skills for classes of another race are extremely difficult.<br>" + "But the hardest of all to learn are the  " + charType + "skills!<br>";
+						text += "Skills of your class are the easiest to learn.<br>Skills of another class of your race are a little harder.<br>Skills for classes of another race are extremely difficult.<br>But the hardest of all to learn are the  " + charType + "skills!<br>";
 					}
 					
 					// make a list of classes

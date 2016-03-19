@@ -394,7 +394,7 @@ public final class L2AuctioneerInstance extends L2Npc
 				final Map<Integer, Bidder> bidders = ClanHallAuctionManager.getInstance().getAuction(auctionId).getBidders();
 				for (Bidder b : bidders.values())
 				{
-					biders += "<tr>" + "<td>" + b.getClanName() + "</td><td>" + b.getName() + "</td><td>" + b.getTimeBid().get(Calendar.YEAR) + "/" + (b.getTimeBid().get(Calendar.MONTH) + 1) + "/" + b.getTimeBid().get(Calendar.DATE) + "</td><td>" + b.getBid() + "</td>" + "</tr>";
+					biders += "<tr><td>" + b.getClanName() + "</td><td>" + b.getName() + "</td><td>" + b.getTimeBid().get(Calendar.YEAR) + "/" + (b.getTimeBid().get(Calendar.MONTH) + 1) + "/" + b.getTimeBid().get(Calendar.DATE) + "</td><td>" + b.getBid() + "</td></tr>";
 				}
 				final String filename = "html/auction/AgitBidderList.htm";
 				

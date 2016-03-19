@@ -1250,7 +1250,7 @@ public class L2Npc extends L2Character
 	@Override
 	public String toString()
 	{
-		return getClass().getSimpleName() + ":" + getName() + "(" + getId() + ")" + "[" + getObjectId() + "]";
+		return getClass().getSimpleName() + ":" + getName() + "(" + getId() + ")[" + getObjectId() + "]";
 	}
 	
 	public boolean isDecayed()

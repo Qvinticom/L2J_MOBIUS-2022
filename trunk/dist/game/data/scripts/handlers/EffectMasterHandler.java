@@ -130,6 +130,7 @@ final class EffectMasterHandler
 		ManaHealByLevel.class,
 		ManaHealOverTime.class,
 		ManaHealPercent.class,
+		MarkRetriever.class,
 		MaxCp.class,
 		MaxHp.class,
 		MpConsumePerLevel.class,
