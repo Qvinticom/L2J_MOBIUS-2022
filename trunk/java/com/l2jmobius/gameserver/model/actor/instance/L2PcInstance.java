@@ -1,5 +1,4 @@
 /*
- * This file is part of the L2J Mobius project.
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -1490,7 +1489,6 @@ public final class L2PcInstance extends L2Playable
 	 * Gets all the active quests.
 	 * @return a list of active quests
 	 */
-	
 	public List<Quest> getAllActiveQuests()
 	{
 		final List<Quest> quests = new LinkedList<>();

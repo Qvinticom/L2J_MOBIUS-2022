@@ -352,13 +352,16 @@
 	</skill>
 	<skill id="11259" levels="11" name="Mark of Weakness">
 	<!-- Source: https://l2wiki.com/Mark_of_Weakness_-_Wynn_Spectral_Master -->
+		<table name="#effectPoints"> -318 -323 -328 -333 -338 -343 -348 -343 -348 -353 -358 </table>
 		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
 		<table name="#mpConsume"> 54 58 62 66 70 74 78 82 86 90 94 </table>
+		<table name="#Dam"> 85 89 93 97 101 105 109 113 117 121 125 </table>
 		<set name="icon" val="icon.skill11259" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
@@ -367,34 +370,46 @@
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff">
-				<mul stat="mDef" val="1.3" />
-				<mul stat="pDef" val="1.3" />
-				<mul stat="debuffVuln" val="1.3" />
+			<effect name="Debuff">
+				<mul stat="mDef" val="0.9" />
+				<mul stat="pDef" val="0.9" />
 			</effect>
+			<effect name="DamOverTime" ticks="1">
+				<param power="#Dam" />
+ 			</effect>
 		</for>
 	</skill>
 	<skill id="11260" levels="8" name="Mark of Void">
 	<!-- Source: https://l2wiki.com/Mark_of_Void_-_Wynn_Elemental_Master -->
-		<table name="#magicLvl"> 85 88 91 94 97 101 103 105 </table>
+		<table name="#effectPoints"> -333 -338 -343 -348 -343 -348 -353 -358 </table>
+		<table name="#magicLvl"> 91 93 95 97 99 101 103 105 </table>
 		<table name="#mpConsume"> 54 60 66 72 78 84 90 96 </table>
 		<set name="icon" val="icon.skill11260" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
+		<table name="#Dam"> 85 91 97 103 109 117 121 125 </table>
 		<set name="effectRange" val="900" />
-		<set name="hitTime" val="1490" />
-		<set name="coolTime" val="300" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
 		<set name="abnormalTime" val="10" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="DamOverTime" ticks="1">
+				<param power="#Dam" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11261" levels="9" name="Mark of Plague">
 	<!-- Source: https://l2wiki.com/Mark_of_Plague_-_Wynn_Arcana_Lord -->
-		<table name="#magicLvl"> 85 87 90 93 96 99 101 103 105 </table>
+		<table name="#effectPoints"> -328 -333 -338 -343 -348 -343 -348 -353 -358 </table>
+		<table name="#magicLvl"> 89 91 93 95 97 99 101 103 105 </table>
 		<table name="#mpConsume"> 54 58 64 70 76 82 88 94 100 </table>
+		<table name="#Dam"> 85 89 95 101 107 113 117 121 125 </table>
 		<set name="icon" val="icon.skill11261" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -407,23 +422,40 @@
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul stat="healEffect" val="0.8" /> <!-- Need Verify -->
+			</effect>
+			<effect name="DamOverTime" ticks="1">
+				<param power="#Dam" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11262" levels="9" name="Mark of Trick">
 	<!-- Source: https://l2wiki.com/Mark_of_Trick_-_Wynn_Spectral_Master -->
-		<table name="#magicLvl"> 85 86 89 92 95 98 101 103 105 </table>
+		<table name="#effectPoints"> -328 -333 -338 -343 -348 -343 -348 -353 -358 </table>
+		<table name="#magicLvl"> 89 91 93 95 97 99 101 103 105 </table>
 		<table name="#mpConsume"> 54 56 62 68 74 80 86 92 98 </table>
-		<set name="icon" val="icon.skill11262" />
+		<table name="#Dam"> 85 89 95 101 107 113 117 121 125 </table>
+		<set name="icon" val="icon.skill11261" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
-		<set name="hitTime" val="1500" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
 		<set name="abnormalTime" val="10" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Mute" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="#Dam" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11263" levels="10" name="Invoke">
 	<!-- Source: https://l2wiki.com/Invoke_-_Wynn_Elemental_Master -->
@@ -683,16 +715,26 @@
 	<!-- Source: https://l2wiki.com/Mark_Retriever_-_Wynn_Spectral_Master -->
 		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
 		<table name="#mpConsume"> 82 84 88 92 96 100 104 108 112 116 120 </table>
-		<set name="icon" val="icon.skill11271" />
+		<table name="#effectPoints"> -318 -323 -328 -333 -338 -343 -348 -343 -348 -353 -358 </table>
+		<table name="#power"> 300 350 400 450 500 550 600 650 700 750 800 </table> <!-- Need Verify -->
+		<set name="icon" val="icon.skill11261" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
-		<set name="hitTime" val="1759" />
-		<set name="coolTime" val="300" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="power" val="#power" /> <!-- Need Verify -->
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MarkRetriever" >
+				<param power="1" /> <!-- For Enchant -->
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Switches locations with target servitor. -->
 	<!-- Level 101 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
