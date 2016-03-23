@@ -70,7 +70,7 @@
 													<xs:element name="moving" maxOccurs="1" minOccurs="1">
 														<xs:complexType>
 															<xs:attribute name="walk" type="xs:decimal" use="required" />
-															<xs:attribute name="run" type="xs:positiveInteger" use="required" />
+															<xs:attribute name="run" type="xs:int" use="required" />
 															<xs:attribute name="waterWalk" type="xs:positiveInteger" use="required" />
 															<xs:attribute name="waterRun" type="xs:positiveInteger" use="required" />
 															<xs:attribute name="flyWalk" type="xs:nonNegativeInteger" use="required" />
