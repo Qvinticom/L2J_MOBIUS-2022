@@ -27,4 +27,5 @@ public class Item
 	public StatsSet set;
 	public int currentLevel;
 	public L2Item item;
+	public L2Item isBlessedItem;
 }

@@ -148,6 +148,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private final boolean _ex_immediate_effect;
 	private final int _defaultEnchantLevel;
 	private final ActionType _defaultAction;
+	private final boolean _isBlessedItem;
 	
 	protected int _type1; // needed for item list (inventory)
 	protected int _type2; // different lists for armor, weapon, etc
@@ -208,6 +209,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_ex_immediate_effect = set.getBoolean("ex_immediate_effect", false);
 		
 		_defaultAction = set.getEnum("default_action", ActionType.class, ActionType.NONE);
+		_isBlessedItem = set.getBoolean("isBlessedItem", false);
 		_useSkillDisTime = set.getInt("useSkillDisTime", 0);
 		_defaultEnchantLevel = set.getInt("enchanted", 0);
 		_reuseDelay = set.getInt("reuse_delay", 0);
@@ -994,6 +996,14 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public ActionType getDefaultAction()
 	{
 		return _defaultAction;
+	}
+	
+	/**
+	 * @return {@code true} else item it is blessed (example: ID: 18084)
+	 */
+	public boolean isBlessedItem()
+	{
+		return _isBlessedItem;
 	}
 	
 	public int useSkillDisTime()

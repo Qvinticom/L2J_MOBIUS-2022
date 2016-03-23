@@ -38,7 +38,7 @@ import com.l2jmobius.util.data.xml.IXmlReader;
  * This class holds the Enchant HP Bonus Data.
  * @author MrPoke, Zoey76
  */
-public class EnchantItemHPBonusData implements IXmlReader
+public class EnchantItemBonusData implements IXmlReader
 {
 	private final Map<CrystalType, List<Integer>> _armorHPBonuses = new EnumMap<>(CrystalType.class);
 	
@@ -47,7 +47,7 @@ public class EnchantItemHPBonusData implements IXmlReader
 	/**
 	 * Instantiates a new enchant hp bonus data.
 	 */
-	protected EnchantItemHPBonusData()
+	protected EnchantItemBonusData()
 	{
 		load();
 	}
@@ -98,10 +98,49 @@ public class EnchantItemHPBonusData implements IXmlReader
 					switch (item.getBodyPart())
 					{
 						case L2Item.SLOT_CHEST:
+							if (item.getCrystalTypePlus() == CrystalType.R)
+							{
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPATK.getName(), -1, Stats.POWER_ATTACK, 0));
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTMATK.getName(), -1, Stats.MAGIC_ATTACK, 0));
+								break;
+							}
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+							break;
 						case L2Item.SLOT_FEET:
+							if (item.getCrystalTypePlus() == CrystalType.R)
+							{
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTRUNSPD.getName(), -1, Stats.MOVE_SPEED, 0));
+								break;
+							}
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+							break;
 						case L2Item.SLOT_GLOVES:
+							if (item.getCrystalTypePlus() == CrystalType.R)
+							{
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.ACCURACY_COMBAT, 0));
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.ACCURACY_MAGIC, 0));
+								break;
+							}
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+							break;
 						case L2Item.SLOT_HEAD:
+							if (item.getCrystalTypePlus() == CrystalType.R)
+							{
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.EVASION_RATE, 0));
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.MAGIC_EVASION_RATE, 0));
+								break;
+							}
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+							break;
 						case L2Item.SLOT_LEGS:
+							if (item.getCrystalTypePlus() == CrystalType.R)
+							{
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPMCRITATK.getName(), -1, Stats.CRITICAL_RATE, 0));
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPMCRITATK.getName(), -1, Stats.MCRITICAL_RATE, 0));
+								break;
+							}
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+							break;
 						case L2Item.SLOT_BACK:
 						case L2Item.SLOT_FULL_ARMOR:
 						case L2Item.SLOT_UNDERWEAR:
@@ -134,25 +173,27 @@ public class EnchantItemHPBonusData implements IXmlReader
 			return 0;
 		}
 		
+		double blessedArmorBonus = item.isBlessedItem() ? 1.5 : 1;
+		
 		final int bonus = values.get(Math.min(item.getOlyEnchantLevel(), values.size()) - 1);
 		if (item.getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR)
 		{
-			return (int) (bonus * FULL_ARMOR_MODIFIER);
+			return (int) (bonus * FULL_ARMOR_MODIFIER * blessedArmorBonus);
 		}
 		return bonus;
 	}
 	
 	/**
-	 * Gets the single instance of EnchantHPBonusData.
-	 * @return single instance of EnchantHPBonusData
+	 * Gets the single instance of EnchantBonusData.
+	 * @return single instance of EnchantBonusData
 	 */
-	public static final EnchantItemHPBonusData getInstance()
+	public static final EnchantItemBonusData getInstance()
 	{
 		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EnchantItemHPBonusData _instance = new EnchantItemHPBonusData();
+		protected static final EnchantItemBonusData _instance = new EnchantItemBonusData();
 	}
 }

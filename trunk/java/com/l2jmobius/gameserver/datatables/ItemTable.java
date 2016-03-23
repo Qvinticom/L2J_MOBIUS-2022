@@ -32,7 +32,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
+import com.l2jmobius.gameserver.data.xml.impl.EnchantItemBonusData;
 import com.l2jmobius.gameserver.engines.DocumentEngine;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
@@ -64,6 +64,7 @@ public class ItemTable
 	private final Map<Integer, L2EtcItem> _etcItems = new HashMap<>();
 	private final Map<Integer, L2Armor> _armors = new HashMap<>();
 	private final Map<Integer, L2Weapon> _weapons = new HashMap<>();
+	
 	static
 	{
 		SLOTS.put("shirt", L2Item.SLOT_UNDERWEAR);
@@ -380,7 +381,7 @@ public class ItemTable
 	public void reload()
 	{
 		load();
-		EnchantItemHPBonusData.getInstance().load();
+		EnchantItemBonusData.getInstance().load();
 	}
 	
 	protected static class ResetOwner implements Runnable

@@ -16,19 +16,17 @@
  */
 package com.l2jmobius.gameserver.model.stats.functions;
 
-import com.l2jmobius.gameserver.data.xml.impl.EnchantItemBonusData;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
-/**
- * @author Yamaneko
- */
-public class FuncEnchantHp extends AbstractFunction
+public class FuncEnchantAccEvas extends AbstractFunction
 {
-	public FuncEnchantHp(Stats stat, int order, Object owner, double value, Condition applayCond)
+	private static final double blessedBonus = 1.5;
+	
+	public FuncEnchantAccEvas(Stats stat, int order, Object owner, double value, Condition applayCond)
 	{
 		super(stat, order, owner, value, applayCond);
 	}
@@ -36,15 +34,25 @@ public class FuncEnchantHp extends AbstractFunction
 	@Override
 	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
 	{
+		double value = initVal;
 		if ((getApplayCond() != null) && !getApplayCond().test(effector, effected, skill))
 		{
-			return initVal;
+			return value;
 		}
 		
 		final L2ItemInstance item = (L2ItemInstance) getFuncOwner();
-		if (item.getEnchantLevel() > 0)
+		if (item.getEnchantLevel() > 3)
 		{
-			return initVal + EnchantItemBonusData.getInstance().getHPBonus(item);
+			// Increases Phys.Evasion / Mag. Evasion for helmets
+			// Increases Phys.Accuracy / Mag.Accuracy for gloves
+			if (item.getEnchantLevel() == 4)
+			{
+				value += (0.2 * blessedBonus);
+			}
+			else
+			{
+				value += (0.2 * blessedBonus * ((item.getEnchantLevel() * 2) - 9));
+			}
 		}
 		return initVal;
 	}

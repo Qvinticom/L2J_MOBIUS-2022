@@ -2141,6 +2141,11 @@ public final class L2ItemInstance extends L2Object
 		}
 	}
 	
+	public boolean isBlessedItem()
+	{
+		return getItem().isBlessedItem();
+	}
+	
 	@Override
 	public boolean isItem()
 	{

@@ -247,6 +247,11 @@ public abstract class DocumentBase
 				case "share":
 				case "enchant":
 				case "enchanthp":
+				case "enchantPAtk":
+				case "enchantMAtk":
+				case "enchantRunSpd":
+				case "enchantAccEvas":
+				case "enchantPMcritAtk":
 				{
 					attachFunc(n, template, name, condition);
 				}
