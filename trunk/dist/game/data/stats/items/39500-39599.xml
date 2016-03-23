@@ -195,43 +195,55 @@
 		<!-- Teleports you to Valley of Saints. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
+        <set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+        <set name="item_skill" val="18004-1" /> <!-- Teleports you Valley of Saints -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+        <cond msgId="113" addName="1">
+             <player flyMounted="false" />
+         </cond>
 	</item>
 	<item id="39515" name="Scroll of Escape: Forge of the Gods" type="EtcItem">
 		<!-- Teleports you to Forge of the Gods. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
+        <set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+        <set name="item_skill" val="18005-1" /> <!-- Teleports you Forge of the Gods -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+        <cond msgId="113" addName="1">
+             <player flyMounted="false" />
+         </cond>
 	</item>
 	<item id="39516" name="Scroll of Escape: Ivory Tower" type="EtcItem">
 		<!-- Teleports you to Ivory Tower. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
+        <set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+        <set name="item_skill" val="18006-1" /> <!-- Teleports you to Ivory Tower -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+        <cond msgId="113" addName="1">
+             <player flyMounted="false" />
+         </cond>
 	</item>
 	<item id="39517" name="Scroll of Escape: Secret Room" type="EtcItem">
 		<!-- Teleports you to Cerenas, who can let you knot Eva's Secret Room. -->

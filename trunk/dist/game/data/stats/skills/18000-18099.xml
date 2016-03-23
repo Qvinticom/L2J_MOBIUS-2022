@@ -40,25 +40,61 @@
 		</for>
 	</skill>
 	<skill id="18004" levels="1" name="Scroll of Escape: Valley of Saints">
-		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="400" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="39514" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="78301" y="-83468" z="-3608" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18005" levels="1" name="Scroll of Escape: Forge of the Gods">
-		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="400" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="39515" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="180057" y="-111604" z="-5838" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18006" levels="1" name="Scroll of Escape: Ivory Tower">
-		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="hitTime" val="400" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="39516" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="85391" y="16228" z="-3640" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18007" levels="1" name="Scroll of Escape: Secret Room">
 		<!-- AUTO GENERATED SKILL -->

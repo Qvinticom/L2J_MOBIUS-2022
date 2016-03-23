@@ -950,25 +950,30 @@
 	<item id="36067" name="Clearest Water" type="EtcItem">
 		<!-- The cleanest water received from the Lady of the Lake. Can be used on the Mother Tree at the center of Elven Village. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="icon" val="icon.etc_torch_on_i09" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="9579-1" /> <!-- Clearest Water -->
+		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="36068" name="Brightest Light" type="EtcItem">
 		<!-- The Brightest Light received from Nerupa in the Arms of Timiniel in Magmeld. Can be used in front of Shilen's Stone Statue towering at the center of Dark Elf Village. -->
-		<set name="icon" val="icon.tersi_specter_seed" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="icon" val="icon.etc_torch_on_i09" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="9580-1" /> <!-- Brightest Light -->
+		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
@@ -976,12 +981,14 @@
 	<item id="36069" name="Purest Soul" type="EtcItem">
 		<!-- The Purest Soul received from Enfeux in the Valley of Saints. Can be used in front of the Cave of Souls close to Kamael Village. -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="9581-1" /> <!-- Purest Soul -->
+		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
@@ -989,12 +996,14 @@
 	<item id="36070" name="Fiercest Flame" type="EtcItem">
 		<!-- The Fiercest Flame received from the Blacksmith of Flame Vulcan at the Forge of the Gods. Can be used in front of the Pa'agrio Temple in Orc Village. -->
 		<set name="icon" val="icon.etc_torch_on_i09" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="9582-1" /> <!-- Fiercest Flame -->
+		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
@@ -1002,12 +1011,14 @@
 	<item id="36071" name="Fondest Heart" type="EtcItem">
 		<!-- Letter that shows the Fondest Heart of the Blacksmith of Flame Vulcan. Can be used in the Deserted Dwarven House. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="9583-1" /> <!-- Fondest Heart -->
+		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
@@ -1016,11 +1027,12 @@
 		<!-- Mysterious Letter handed over by Subclass Master Raina of Talking Island Village. Double-click to check the content. -->
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
+		<set name="handler" val="Book" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />

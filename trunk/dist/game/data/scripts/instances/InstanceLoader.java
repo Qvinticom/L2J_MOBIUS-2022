@@ -55,6 +55,7 @@ import instances.NornilsGarden.NornilsGarden;
 import instances.PailakaDevilsLegacy.PailakaDevilsLegacy;
 import instances.PailakaSongOfIceAndFire.PailakaSongOfIceAndFire;
 import instances.SanctumOftheLordsOfDawn.SanctumOftheLordsOfDawn;
+import instances.TalkingIsland.TalkingIsland;
 
 /**
  * Instance class-loader.
@@ -102,6 +103,7 @@ final class InstanceLoader
 		PailakaDevilsLegacy.class,
 		PailakaSongOfIceAndFire.class,
 		SanctumOftheLordsOfDawn.class,
+		TalkingIsland.class,
 	};
 	
 	public static void main(String[] args)

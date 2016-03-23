@@ -48300,7 +48300,7 @@ INSERT INTO `spawnlist` VALUES
 -- Rizraell
 ("Arcan", 1, 30361, 204997, 88138, -1000, 0, 0, 4347, 60, 0, 0, 0),
 -- Nerupa
-("Fairy Settlement", 0, 30370, 215678, 80911, 826, 0, 0, 38971, 0, 0, 0, 0),
+('Arcan', 1, 30370, 215654, 80868, 826, 0, 0, 38012, 60, 0, 0, 0),
 -- Kasiel
 ("Arcan", 1, 31358, 204980, 88166, -1000, 0, 0, 6321, 60, 0, 0, 0),
 -- Adventure Guildsman
@@ -49663,3 +49663,14 @@ INSERT INTO `spawnlist` VALUES
 ('Windmill Hill', '1', '20030', '-72174', '169956', '-3570', '0', '0', '14539', '60', '0', '0', '0'),
 ('Windmill Hill', '1', '20030', '-71892', '170032', '-3566', '0', '0', '2745', '60', '0', '0', '0'),
 ('Windmill Hill', '1', '20030', '-71673', '169741', '-3565', '0', '0', '55881', '60', '0', '0', '0');
+
+-- Lanya
+INSERT INTO `spawnlist` VALUES ('Graden of Eva', '1', '33783', '82627', '241562', '-6719', '0', '0', '15689', '60', '0', '0', '0');
+-- Water Source
+INSERT INTO `spawnlist` VALUES ('Garden of Eva', '1', '33784', '82663', '252066', '-7649', '0', '0', '50713', '60', '0', '0', '0');
+-- Altar of Shilen
+INSERT INTO `spawnlist` VALUES ('Dark Elf', '1', '33785', '28993', '11034', '-4232', '0', '0', '32024', '60', '0', '0', '0');
+-- Paagrio Temple
+INSERT INTO `spawnlist` VALUES ('Orc Village', '1', '33787', '-52081', '-113605', '-86', '0', '0', '2280', '60', '0', '0', '0');
+-- Cave of Souls
+INSERT INTO `custom_spawnlist` VALUES ('Cave of Souls', '1', '33789', '-122910', '38135', '1434', '0', '0', '63714', '60', '0', '0', '0');

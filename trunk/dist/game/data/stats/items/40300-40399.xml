@@ -121,14 +121,19 @@
 		<!-- Teleports you to Dwarven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
+        <set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
-		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+        <set name="item_skill" val="18167-1" /> <!-- Teleports you to Dwarven Village -->
 		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+        <cond msgId="113" addName="1">
+             <player flyMounted="false" />
+         </cond>
 	</item>
 	<item id="40310" name="Appearance Stone: Santa Hat" type="EtcItem">
 		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. Only for hair accessories that use 2 slots. -->

@@ -246,6 +246,7 @@ import quests.Q10381_ToTheSeedOfHellfire.Q10381_ToTheSeedOfHellfire;
 import quests.Q10382_DayOfLiberation.Q10382_DayOfLiberation;
 import quests.Q10383_FergasonsOffer.Q10383_FergasonsOffer;
 import quests.Q10384_AnAudienceWithTauti.Q10384_AnAudienceWithTauti;
+import quests.Q10385_RedThreadOfFate.Q10385_RedThreadOfFate;
 import quests.Q10386_MysteriousJourney.Q10386_MysteriousJourney;
 import quests.Q10388_ConspiracyBehindDoor.Q10388_ConspiracyBehindDoor;
 import quests.Q10389_TheVoiceOfAuthority.Q10389_TheVoiceOfAuthority;
@@ -537,6 +538,7 @@ final class QuestMasterHandler
 		Q10382_DayOfLiberation.class,
 		Q10383_FergasonsOffer.class,
 		Q10384_AnAudienceWithTauti.class,
+		Q10385_RedThreadOfFate.class,
 		Q10386_MysteriousJourney.class,
 		Q10388_ConspiracyBehindDoor.class,
 		Q10389_TheVoiceOfAuthority.class,

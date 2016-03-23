@@ -619,59 +619,94 @@
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="9579" levels="1" name="Clearest Water">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Clearest Water given by the Lady of the Lake. You can use it on the Mother Tree in the Elven Village. -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="castRange" val="200" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="36067" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="100" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
+		<set name="reuseDelay" val="30" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<cond msgId="109">
+			<target npcId="33786" />
+		</cond>
 	</skill>
 	<skill id="9580" levels="1" name="Brightest Light">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Brightest Light given by Nerupa in the Arms of Timiniel of Magmeld. You can use it at Shilen's Stone Statue in the Dark Elf Village. -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="castRange" val="200" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="36068" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="100" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
+		<set name="reuseDelay" val="30" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<cond msgId="109">
+			<target npcId="33785" />
+		</cond>
 	</skill>
 	<skill id="9581" levels="1" name="Purest Soul">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Purest Soul given by Enfeux in the Valley of Saints. You can use it at the Cave of Souls near Kamael Village. -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="castRange" val="200" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="36069" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="100" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
+		<set name="reuseDelay" val="30" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<cond msgId="109">
+			<target npcId="33789" />
+		</cond>
 	</skill>
 	<skill id="9582" levels="1" name="Fiercest Flame">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Fiercest Flame given by Vulcan, the Blacksmith of Flame at the Forge of the Gods. You can use it at the Pa'agrio Temple in the Orc Village. -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="castRange" val="200" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="36070" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="100" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
+		<set name="reuseDelay" val="30" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<cond msgId="109">
+			<target npcId="33787" />
+		</cond>
 	</skill>
 	<skill id="9583" levels="1" name="Fondest Heart">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Letter containing the fond heart of Vulcan, the Blacksmith of Flame. You can use it at the ruined Dwarven Village. -->
 		<set name="icon" val="icon.skill0000" />
+		<set name="castRange" val="200" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="36071" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="100" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isMagic" val="1" />
+		<set name="reuseDelay" val="30" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<cond msgId="109">
+			<target npcId="33788" />
+		</cond>
 	</skill>
 	<skill id="9584" levels="1" name="Verna's Vaccine">
 		<!-- AUTO GENERATED SKILL -->
