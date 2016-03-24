@@ -9,7 +9,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="13062-1;13061-1" /> <!-- Special Ability: Damage Up, Special Ability: Long Blow -->
 		<set name="material" val="STEEL" />
@@ -36,7 +36,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3574-1;3010-1" /> <!-- Special Ability: Critical Slow, Special Ability: Focus -->
 		<set name="material" val="STEEL" />
@@ -63,7 +63,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3574-1;3036-1" /> <!-- Special Ability: Critical Slow, Special Ability: Haste -->
 		<set name="material" val="STEEL" />
@@ -90,7 +90,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3010-1;3036-1" /> <!-- Special Ability: Focus, Special Ability: Haste -->
 		<set name="material" val="STEEL" />
@@ -117,7 +117,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3047-1;3577-1" /> <!-- Special Ability: Acumen, Special Ability: Magic Hold -->
 		<set name="material" val="STEEL" />
@@ -143,7 +143,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3577-1;3014-1" /> <!-- Special Ability: Magic Hold, Special Ability: Mana Up -->
 		<set name="material" val="STEEL" />
@@ -169,7 +169,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3047-1;3014-1" /> <!-- Special Ability: Acumen, Special Ability: Mana Up -->
 		<set name="material" val="STEEL" />
@@ -195,7 +195,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3047-1;3072-1" /> <!-- Special Ability: Acumen, Special Ability: Empower -->
 		<set name="material" val="WOOD" />
@@ -222,7 +222,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3047-1;3577-1" /> <!-- Special Ability: Acumen, Special Ability: Magic Hold -->
 		<set name="material" val="WOOD" />
@@ -249,7 +249,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3072-1;3577-1" /> <!-- Special Ability: Empower, Special Ability: Magic Hold -->
 		<set name="material" val="WOOD" />
@@ -276,7 +276,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3047-1;3576-1" /> <!-- Special Ability: Acumen, Special Ability: MP Regeneration -->
 		<set name="material" val="WOOD" />
@@ -304,7 +304,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3047-1;3072-1" /> <!-- Special Ability: Acumen, Special Ability: Empower -->
 		<set name="material" val="WOOD" />
@@ -332,7 +332,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3072-1;3576-1" /> <!-- Special Ability: Empower, Special Ability: MP Regeneration -->
 		<set name="material" val="WOOD" />
@@ -360,7 +360,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="13062-1;3036-1" /> <!-- Special Ability: Damage Up, Special Ability: Haste -->
 		<set name="material" val="STEEL" />
@@ -386,7 +386,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="13062-1;3013-1" /> <!-- Special Ability: Damage Up, Special Ability: Health -->
 		<set name="material" val="STEEL" />
@@ -412,7 +412,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3036-1;3013-1" /> <!-- Special Ability: Haste, Special Ability: Health -->
 		<set name="material" val="STEEL" />
@@ -438,7 +438,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="13062-1;3010-1" /> <!-- Special Ability: Damage Up, Special Ability: Focus -->
 		<set name="material" val="STEEL" />
@@ -465,7 +465,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3010-1;3007-1" /> <!-- Special Ability: Focus, Special Ability: Guidance -->
 		<set name="material" val="STEEL" />
@@ -492,7 +492,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="13062-1;3007-1" /> <!-- Special Ability: Damage Up, Special Ability: Guidance -->
 		<set name="material" val="STEEL" />
@@ -519,7 +519,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3010-1;3007-1" /> <!-- Special Ability: Focus, Special Ability: Guidance -->
 		<set name="material" val="FINE_STEEL" />
@@ -546,7 +546,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="13062-1;3007-1" /> <!-- Special Ability: Damage Up, Special Ability: Guidance -->
 		<set name="material" val="FINE_STEEL" />
@@ -573,7 +573,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="13062-1;3010-1" /> <!-- Special Ability: Damage Up, Special Ability: Focus -->
 		<set name="material" val="FINE_STEEL" />
@@ -1987,7 +1987,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13280-3" /> <!-- Dagger Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2020,7 +2020,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13280-3" /> <!-- Dagger Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2053,7 +2053,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13280-3" /> <!-- Dagger Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2086,7 +2086,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13252-3" /> <!-- One-handed Sword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2118,7 +2118,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13252-3" /> <!-- One-handed Sword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2150,7 +2150,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13252-3" /> <!-- One-handed Sword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2182,7 +2182,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13259-3" /> <!-- Two-handed Sword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2214,7 +2214,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13259-3" /> <!-- Two-handed Sword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2246,7 +2246,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13259-3" /> <!-- Two-handed Sword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2278,7 +2278,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13254-3" /> <!-- One-handed Blunt Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2311,7 +2311,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13254-3" /> <!-- One-handed Blunt Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2344,7 +2344,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13254-3" /> <!-- One-handed Blunt Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2377,7 +2377,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13265-3" /> <!-- Fist Weapon Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2410,7 +2410,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13265-3" /> <!-- Fist Weapon Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2443,7 +2443,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13265-3" /> <!-- Fist Weapon Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2476,7 +2476,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13263-3" /> <!-- Spear Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2509,7 +2509,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13263-3" /> <!-- Spear Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2542,7 +2542,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13263-3" /> <!-- Spear Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2575,7 +2575,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13290-3" /> <!-- Bow Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2609,7 +2609,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13290-3" /> <!-- Bow Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2643,7 +2643,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13290-3" /> <!-- Bow Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2677,7 +2677,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13294-3" /> <!-- Crossbow Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2714,7 +2714,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13294-3" /> <!-- Crossbow Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2751,7 +2751,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13294-3" /> <!-- Crossbow Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2788,7 +2788,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13295-3" /> <!-- Magic Sword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2823,7 +2823,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13295-3" /> <!-- Magic Sword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2858,7 +2858,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13295-3" /> <!-- Magic Sword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2891,7 +2891,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13297-3" /> <!-- Magic One-handed Blunt Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2925,7 +2925,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13297-3" /> <!-- Magic One-handed Blunt Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2961,7 +2961,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13297-3" /> <!-- Magic One-handed Blunt Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -2997,7 +2997,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13302-3" /> <!-- Magic Two-handed Blunt Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -3032,7 +3032,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13302-3" /> <!-- Magic Two-handed Blunt Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -3067,7 +3067,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13302-3" /> <!-- Magic Two-handed Blunt Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -3102,7 +3102,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13275-3" /> <!-- Dualsword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -3134,7 +3134,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13275-3" /> <!-- Dualsword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
@@ -3166,7 +3166,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
-		<set name="blessed" val="true" />
+		<set name="isBlessedItem" val="true" />
 		<set name="enchant4_skill" val="13275-3" /> <!-- Dualsword Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
