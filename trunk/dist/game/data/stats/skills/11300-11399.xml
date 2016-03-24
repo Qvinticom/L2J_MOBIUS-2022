@@ -961,7 +961,8 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="castRange" val="900" />
+		<set name="targetType" val="SERVITOR" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
@@ -978,6 +979,7 @@
 		<table name="#cAtk"> 1.10 1.12 1.15 1.20 </table>
 		<set name="icon" val="icon.skill11348" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalTime" val="1800" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
@@ -985,6 +987,7 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="1" />
+		<set name="castRange" val="900" />
 		<set name="targetType" val="SERVITOR" />
 		<for>
 			<effect name="Buff">
@@ -1002,14 +1005,16 @@
 		<table name="#pAtk"> 1.1 1.12 1.15 1.2 </table>
 		<set name="icon" val="icon.skill11349" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalTime" val="1800" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
+		<set name="castRange" val="900" />
 		<set name="hitTime" val="3500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="SERVITOR" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="#pAtk" />
@@ -1068,14 +1073,21 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11354" levels="5" name="Elemental Link">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
 		<set name="icon" val="icon.skill11354" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="SERVITOR" />
+		<set name="hitTime" val="1000" />
 		<set name="castRange" val="900" />
 		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="4" />
+		<set name="isMagic" val="4" /> <!-- TODO: CHECK THIS -->
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.01" />
+				<mul stat="critRate" val="1.1" />
+				<mul stat="critDmg" val="1.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11355" levels="4" name="Elemental Ability">
 		<!-- AUTO GENERATED SKILL -->
@@ -1085,7 +1097,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11356" levels="7" name="Spectral Rage">
-	<!-- Source: https://l2wiki.com/Spectral_Rage_-_Wynn_Spectral_Master -->
+		<!-- Source: https://l2wiki.com/Spectral_Rage_-_Wynn_Spectral_Master -->
 		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
 		<table name="#power"> 188 202 215 227 242 248 254 </table>
 		<table name="#mpConsume"> 53 60 67 70 73 76 79 </table>
@@ -1099,24 +1111,44 @@
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2400" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
+		<set name="castRange" val="900" />
+ 		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="11357" levels="5" name="Spectral Link">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
+		<table name="#PatkCritDmg"> 1.01 1.03 1.05 1.1 1.15 </table>
+		<table name="#critRate"> 1.1 1.15 1.2 1.25 1.3 </table>
 		<set name="icon" val="icon.skill11357" />
+		<set name="abnormalTime" val="60" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="4" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#PatkCritDmg" />
+				<mul stat="critRate" val="#critRate" />
+				<mul stat="critDmg" val="#PatkCritDmg" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11358" levels="4" name="Spectral Ability">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 3%, and PvP Damage - 3%. -->
+		<table name="#buff"> 1.03 1.05 1.07 1.1 </table>
+		<table name="#debuff"> 0.97 0.95 0.93 0.9 </table>
 		<set name="icon" val="icon.skill11277" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#buff" />
+				<mul stat="pvpMagicalDmg" val="#debuff" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Level 1 : Summons a giant shaman stone to temporarily increase party's abilities. Consumes 15 Spirit Ores. -->
 	<!-- Level 2 : Summons a giant shaman stone to temporarily increase party's abilities. Consumes 15 Spirit Ores. -->
@@ -1182,15 +1214,19 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11364" levels="3" name="Elemental Dash">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Party's Speed + 15. -->
 		<set name="icon" val="icon.skill0028" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="70" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="4000" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11365" levels="4" name="Summon Demonic Crucifix">
 	<!-- Source: https://l2wiki.com/Summon_Demonic_Crucifix_-_Wynn_Spectral_Master -->
@@ -1198,20 +1234,23 @@
 		<table name="#power"> 518 526 542 558 </table>
 		<table name="#mpConsume"> 394 382 394 394 </table>
 		<set name="icon" val="icon.skill11365" />
+		<set name="abnormalTime" val="20" /> <!-- TODO: FIX ME -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="600" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="60000" />
+		<set name="castRange" val="600" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.3" />
+			<effect name="Debuff">
+				<mul stat="mAtkSpd" val="0.7" />
+				<mul stat="pAtkSpd" val="0.7" />
+				<sub stat="runSpd" val="180" />
 			</effect>
 		</for>
 	</skill>

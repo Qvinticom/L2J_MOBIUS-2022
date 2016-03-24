@@ -458,19 +458,25 @@
 		</for>
 	</skill>
 	<skill id="11263" levels="10" name="Invoke">
-	<!-- Source: https://l2wiki.com/Invoke_-_Wynn_Elemental_Master -->
+		<!-- https://l2wiki.com/Invoke_-_Wynn_Summoner -->
+		<table name="#power"> 147 151 156 160 164 168 172 198 204 210 </table>
 		<table name="#magicLvl"> 87 89 91 93 95 97 99 101 103 105 </table>
 		<table name="#mpConsume"> 227 236 245 255 265 276 286 296 306 316 </table>
 		<set name="icon" val="icon.skill11263" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="#power" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="2559" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="15000" />
 		<set name="isMagic" val="1" />
+		<set name="castRange" val="600" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<skill id="11264" levels="4" name="Strong Will" enchantGroup1="10" enchantGroup2="10">
 		<!-- Consume HP to recover 200 MP. Dispels debuffs and escapes immobility. -->
@@ -1319,6 +1325,7 @@
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<set name="icon" val="icon.skill11298" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalTime" val="20" /> <!-- TODO: FIND ME -->
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1328,7 +1335,8 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
+		<set name="castRange" val="900" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="power" val="#enchPower" />
 		<enchant2 name="pvpPower" val="#enchPower" />
@@ -1351,9 +1359,9 @@
 		<enchant8 name="element" val="5" />
 		<enchant8 name="power" val="#enchPower" />
 		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="DamOverTime" ticks="5">
-				<param power="#power" />
+			<effect name="MagicalAttack" />
+			<effect name="Fear">
+				<sub stat="runSpd" val="300" />
 			</effect>
 		</for>
 	</skill>

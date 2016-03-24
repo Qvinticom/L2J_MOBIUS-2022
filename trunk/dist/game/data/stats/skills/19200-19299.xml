@@ -264,25 +264,63 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- STR/DEX/CON/INT/WIT/MEN/CHA + 1. World Chat + $s8 times. --> 
-	<skill id="19222" levels="1" name="Dignity of the Exalted">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="19222" levels="3" name="Dignity of the Exalted">
+		<!-- TODO: FIX WORLD CHAT POINT -->
+		<table name="#val"> 1 2 3 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<effect name="Buff">
+			<add stat="STR" val="#val" />
+			<add stat="DEX" val="#val" />
+			<add stat="CON" val="#val" />
+			<add stat="INT" val="#val" />
+			<add stat="WIT" val="#val" />
+			<add stat="MEN" val="#val" />
+			<add stat="CHA" val="#val" />
+		</effect>
 	</skill>
 	<!-- Teleports to selected party member. Consumes 100 Spirit Ores. --> 
 	<skill id="19223" levels="1" name="Belief of the Exalted">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<!-- TODO: CHECK AND TEST -->
+		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0000" />
+		<set name="itemConsumeCount" val="100" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="142" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="PARTY_MEMBER" />
+		<for>
+			<effect name="TeleportToTarget" />
+		</for>
 	</skill>
 	<!-- Gives 'Blessing of the Exalted' effect to all party members. Maintains target's buff/de-buff condition even following death and resurrection. Consumes 40 Spirit Ores. --> 
 	<skill id="19224" levels="1" name="Blessing of the Exalted">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<!-- TODO: Check abnormal time -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="PRESERVE_ABNORMAL" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill1323" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="40" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="207" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="60000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="PARTY" />
+		<for>
+			<effect name="NoblesseBless" />
+		</for>
 	</skill>
 	<!-- Summons 5 Battle Quick Healing Potions. Consumes 40 Crystals (R-grade). --> 
 	<skill id="19225" levels="1" name="Summon Battle Potion">
@@ -292,11 +330,31 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- For $s1 hr., increases gained XP/SP by $s2. Consumes $s3 Spirit Ores. --> 
-	<skill id="19226" levels="1" name="Favor of the Exalted">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+	<skill id="19226" levels="2" name="Favor of the Exalted">
+		<table name="#expSpBonus"> 1.03 1.1 </table>
+		<table name="#consume"> 40 120 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill1323" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="#consume" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="142" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="bonusExp" val="#expSpBonus" />
+				<mul stat="bonusSp" val="#expSpBonus" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Blends into the wind for $s1. Increases Speed by $s2. Canceled when using normal attacks or attack skills. --> 
 	<skill id="19227" levels="1" name="Wind Hiding">
@@ -330,10 +388,14 @@
 	</skill>
 	<!-- LUC + 3. --> 
 	<skill id="19229" levels="1" name="Fate of the Exalted">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="LUC" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<!-- MP Recovery Bonus + $s2 for $s1. --> 
 	<skill id="19230" levels="1" name="MP Recovery">
@@ -344,16 +406,50 @@
 	</skill>
 	<!-- Party's M. Atk. + 30%% for 30 seconds. Consumes 5 Spirit Ores. --> 
 	<skill id="19231" levels="1" name="Song of Wisdom">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<!-- TODO: FIX IT: Icon, Cast Range, Magic Level -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
+		<set name="abnormalType" val="PRESERVE_ABNORMAL" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="8000" />
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="magicLvl" val="101" />
+		<set name="mpConsume" val="140" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="PARTY" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Party's P. Skill Power + 30%% for 30 seconds. Consumes 5 Spirit Ores. --> 
 	<skill id="19232" levels="1" name="Crippling Dance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<!-- TODO: FIX IT: Icon, Cast Range, Magic Level -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
+		<set name="abnormalType" val="PRESERVE_ABNORMAL" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="8000" />
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="magicLvl" val="101" />
+		<set name="mpConsume" val="140" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="PARTY" />
+		<for>
+			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 </list>

@@ -499,10 +499,21 @@
 	</skill>
 	<!-- STR/DEX/CON/INT/WIT/MEN/LUC/CHA + 1. --> 
 	<skill id="13771" levels="1" name="Exalted Cloak">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="1" />
+				<add stat="DEX" val="1" />
+				<add stat="CON" val="1" />
+				<add stat="INT" val="1" />
+				<add stat="WIT" val="1" />
+				<add stat="MEN" val="1" />
+				<add stat="LUC" val="1" />
+				<add stat="CHA" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Attack Attribute Bonus by 30. --> 
 	<skill id="13772" levels="1" name="Replica Tiara">
@@ -513,191 +524,353 @@
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13773" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13774" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13775" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13776" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13777" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13778" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13779" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13780" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13781" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13782" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13783" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13784" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13785" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13786" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13787" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13788" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13789" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13790" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13791" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13792" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13793" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13794" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13795" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13796" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13797" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13798" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Max HP/MP/CP by 10%% --> 
 	<skill id="13799" levels="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxCp" val="1.1" />
+				<mul stat="maxHp" val="1.1" />
+				<mul stat="maxMp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 </list>
