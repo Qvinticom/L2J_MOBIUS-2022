@@ -470,11 +470,35 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Poisoned with Atelia. Will affect battle ability if it adds up. Duration $s1. --> 
-	<skill id="23653" levels="1" name="Poisonous Atelia">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="23653" levels="4" name="Poisonous Atelia">
+	    <table name="#mpConsume">10 10 10 10</table>
+		<table name="#power">75 80 85 90</table>
+		<table name="#pAtk">0.9 0.9 0.8 0.6</table>
+		<table name="#mAtk">0.9 0.9 0.8 0.6</table>
+		<table name="#pAtkSpd">1.10 1.10 1.20 1.40</table>
+		<table name="#mAtkSpd">1.10 1.10 1.20 1.40</table>
+		<table name="#abnormalLvl">1 2 3 4</table>
+		<table name="#abnormalTime">15 15 15 15</table>
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="#power" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="BEHIND_AREA" />
+		<set name="abnormalTime" val="#abnormalTime" />
+		<set name="affectRange" val="600" />
+		<set name="hitTime" val="300" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+		<set name="castRange" val="600" />
+		<for>
+			<effect name="Debuff">
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="mAtk" val="#mAtk" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Inflicts great damage to a single target and knocks back by 100 grids. --> 
 	<skill id="23654" levels="1" name="Earth Breaker">

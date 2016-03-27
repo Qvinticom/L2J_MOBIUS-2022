@@ -1388,4 +1388,20 @@
 			<height normal="16" />
 		</collision>
 	</npc>
+		<npc id="19594" level="98" type="L2TerrainObject" name=" Atelia Flag">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="615901" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="22" />
+			<height normal="16" />
+		</collision>
+	</npc>
 </list>

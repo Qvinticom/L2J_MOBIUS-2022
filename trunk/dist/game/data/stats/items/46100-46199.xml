@@ -542,6 +542,8 @@
 		<!-- A teleport device that takes you to Stronghold I. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="for_npc" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -551,11 +553,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="150" />
+		<set name="item_skill" val="13822-1" />
+		<set name="time" val="1440" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="46147" name="Atelia Fortress Stronghold II Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold II. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="for_npc" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -565,11 +574,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="150" />
+		<set name="item_skill" val="13823-1" />
+		<set name="time" val="1440" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="46148" name="Atelia Fortress Stronghold III Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold III. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="for_npc" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -579,11 +595,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="150" />
+		<set name="item_skill" val="13824-1" />
+		<set name="time" val="1440" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold IV. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="for_npc" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -593,6 +616,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="150" />
+		<set name="item_skill" val="13825-1" />
+		<set name="time" val="1440" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="46150" name="Superior Giant's Codex Chapter 1" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 11~+ 20 after Awakening. -->

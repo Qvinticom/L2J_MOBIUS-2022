@@ -214,25 +214,101 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
+	<skill id="13822" levels="1" name="Stronghold I Teleport">
+		<table name="#coordX"> -45564 </table>
+		<table name="#coordY"> 58333 </table>
+		<table name="#coordZ"> -3003 </table>
+		<set name="blockedInOlympiad" val="true" />
+		<set name="hitTime" val="10000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="itemConsumeCount" val="0" />
+		<set name="itemConsumeId" val="46146" /> <!-- Atelia Fortress Stronghold I Teleport Device -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="#coordX" y="#coordY" z="#coordZ" />
+			</effect>
+		</for>
+	</skill>
 	<skill id="13823" levels="1" name="Stronghold II Teleport">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#coordX"> -44564 </table>
+		<table name="#coordY"> 50447 </table>
+		<table name="#coordZ"> -2197 </table>
+		<set name="blockedInOlympiad" val="true" />
+		<set name="hitTime" val="10000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="itemConsumeCount" val="0" />
+		<set name="itemConsumeId" val="46147" /> <!-- Atelia Fortress Stronghold II Teleport Device -->
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="#coordX" y="#coordY" z="#coordZ" />
+			</effect>
+		</for>
 	</skill>
-	<!-- none --> 
 	<skill id="13824" levels="1" name="Stronghold III Teleport">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#coordX"> -47328 </table>
+		<table name="#coordY"> 41297 </table>
+		<table name="#coordZ"> -1549 </table>
+		<set name="blockedInOlympiad" val="true" />
+		<set name="hitTime" val="10000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="itemConsumeCount" val="0" />
+		<set name="itemConsumeId" val="46148" /> <!-- Atelia Fortress Stronghold III Teleport Device -->
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="#coordX" y="#coordY" z="#coordZ" />
+			</effect>
+		</for>
 	</skill>
-	<!-- none --> 
 	<skill id="13825" levels="1" name="Stronghold IV Teleport">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#coordX"> -60211 </table>
+		<table name="#coordY"> 46692 </table>
+		<table name="#coordZ"> -1641 </table>
+		<set name="blockedInOlympiad" val="true" />
+		<set name="hitTime" val="10000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="itemConsumeCount" val="0" />
+		<set name="itemConsumeId" val="46149" /> <!-- Atelia Fortress Stronghold IV Teleport Device -->
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="#coordX" y="#coordY" z="#coordZ" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Changes the appearance into that of Santa while equipped with the Christmas Fishing Rod. --> 
 	<skill id="13826" levels="1" name="Christmas Fishing Rod">

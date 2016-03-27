@@ -184,10 +184,23 @@
 	</skill>
 	<!-- The supplies to the camp have been blocked. Decreases P./M. Atk. and Atk./Casting Spd. by $s1. --> 
 	<skill id="16526" levels="1" name="Supply Blockade">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	    <table name="#abnormalLvl"> 1 2 3 4</table>
+	    <set name="basicProperty" val="CON" />
+	    <set name="abnormalLvl" val="#abnormalLvl" />
+		<set name="abnormalType" val="ALL_ATTACK_DOWN" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+            <mul stat="pAtk" val="0.90" />
+			<mul stat="mAtk" val="0.90" />
+			<mul stat="pAtkSpd" val="0.90" />
+			<mul stat="mAtkSpd" val="0.90" />
+			</effect>
+		</for>
 	</skill>
 	<!-- The supplies to the camp have been blocked and the equipment haven't been repaired. Decreases P./M. Atk. by 20%%. --> 
 	<skill id="16527" levels="1" name="Poor Equipment">
@@ -295,11 +308,22 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- The supplies to the $s1st floor have been blocked because of Quartermaster Hummel's death, decreasing their Max HP by $s2. The effect disappears when Quartermaster Hummel respawns. --> 
-	<skill id="16542" levels="1" name="Supply Blockade">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="16542" levels="3" name="Supply Blockade">
+	    <table name="#maxHp"> 0.85 0.85 0.85 </table>
+		<table name="#abnormalLvl"> 1 2 3 </table>
+	    <set name="basicProperty" val="CON" />
+	    <set name="abnormalLvl" val="#abnormalLvl" />
+		<set name="abnormalType" val="MAX_HP_DOWN" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+            <mul stat="maxHp" val="#maxHp" />
+			</effect>
+		</for>
 	</skill>
 	<!-- When the Fortress Spy finds infiltrators inside the fortress will request aid and summon Fortress Raider, Atelia Passionate Soldier, and Atelia Elite Captain. --> 
 	<skill id="16543" levels="1" name="Spy's Aid Request">
