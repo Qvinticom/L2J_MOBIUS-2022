@@ -35,7 +35,7 @@ final class Devianne extends AbstractNpcAI
 	// Location
 	private static final Location DEVIANNE_LOC = new Location(-50063, 49439, -1760, 40362);
 	// Other
-	private static final int DESPAWN = 3600000; // Time 1 Hour
+	private static final int DESPAWN_DELAY = 3600000; // Time 1 Hour
 	
 	private Devianne()
 	{
@@ -45,23 +45,9 @@ final class Devianne extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equals("devianne_despawn"))
-		{
-			if (npc != null)
-			{
-				npc.deleteMe();
-			}
-		}
-		return event;
-	}
-	
-	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final L2Npc devianne = addSpawn(DEVIANNE, DEVIANNE_LOC);
-		startQuestTimer("devianne_despawn", DESPAWN, devianne, null);
+		addSpawn(DEVIANNE, DEVIANNE_LOC, false, DESPAWN_DELAY);
 		return super.onKill(npc, killer, isSummon);
 	}
 	

@@ -46,25 +46,20 @@ final class Hardin extends AbstractNpcAI
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		switch (npc.getId())
+		
+		if ((player.getRace() != Race.ERTHEIA) && (player.getLevel() < MIN_LEVEL))
 		{
-			case HARDIN:
-			{
-				if ((player.getRace() != Race.ERTHEIA) && (player.getLevel() < MIN_LEVEL))
-				{
-					htmltext = "33870-01.html";
-				}
-				else if ((player.getRace() != Race.ERTHEIA) && (CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, player.getBaseClassId())))
-				{
-					htmltext = "33870-02.html";
-				}
-				else if ((player.getRace() == Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL))
-				{
-					htmltext = "33870-03.html";
-				}
-				break;
-			}
+			htmltext = "33870-01.html";
 		}
+		else if ((player.getRace() != Race.ERTHEIA) && (CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, player.getBaseClassId())))
+		{
+			htmltext = "33870-02.html";
+		}
+		else if ((player.getRace() == Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL))
+		{
+			htmltext = "33870-03.html";
+		}
+		
 		return htmltext;
 	}
 	

@@ -84,32 +84,26 @@ public class Q10382_DayOfLiberation extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (npc.getId())
+		if (qs.isCreated())
 		{
-			case SIZRAK:
+			htmltext = "sofa_sizraku_q10382_01.htm";
+		}
+		else if (qs.isStarted())
+		{
+			if (qs.isCond(1))
 			{
-				if (qs.isCreated())
-				{
-					htmltext = "sofa_sizraku_q10382_01.htm";
-				}
-				else if (qs.isStarted())
-				{
-					if (qs.isCond(1))
-					{
-						htmltext = "sofa_sizraku_q10382_07.html";
-					}
-					else if (qs.isCond(2))
-					{
-						htmltext = "sofa_sizraku_q10382_08.html";
-					}
-				}
-				else if (qs.isCompleted())
-				{
-					htmltext = "sofa_sizraku_q10382_06.html";
-				}
-				break;
+				htmltext = "sofa_sizraku_q10382_07.html";
+			}
+			else if (qs.isCond(2))
+			{
+				htmltext = "sofa_sizraku_q10382_08.html";
 			}
 		}
+		else if (qs.isCompleted())
+		{
+			htmltext = "sofa_sizraku_q10382_06.html";
+		}
+		
 		return htmltext;
 	}
 	

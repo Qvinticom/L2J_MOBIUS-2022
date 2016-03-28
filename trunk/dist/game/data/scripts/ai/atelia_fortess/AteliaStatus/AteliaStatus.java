@@ -409,28 +409,15 @@ final class AteliaStatus extends AbstractNpcAI
 				}
 				break;
 			}
-			// Quest Timer to Stages
-			case "TimeEnd":
-			{
-				if (npc != null)
-				{
-					npc.deleteMe();
-				}
-				break;
-			}
 			// Stronghold's
 			case "SH_1":
 			{
 				if (npc == null)
 				{
-					final L2Npc barton = addSpawn(BARTON, BARTON_LOC);
-					final L2Npc glenki = addSpawn(GLENKI, GLENKI_LOC);
-					final L2Npc flagone = addSpawn(FLAG, FLAG_1_LOC);
-					final L2Npc flagtwo = addSpawn(FLAG, FLAG_2_LOC);
-					startQuestTimer("TimeEnd", DESPAWN, barton, null);
-					startQuestTimer("TimeEnd", DESPAWN, glenki, null);
-					startQuestTimer("TimeEnd", DESPAWN, flagone, null);
-					startQuestTimer("TimeEnd", DESPAWN, flagtwo, null);
+					addSpawn(BARTON, BARTON_LOC, false, DESPAWN);
+					addSpawn(GLENKI, GLENKI_LOC, false, DESPAWN);
+					addSpawn(FLAG, FLAG_1_LOC, false, DESPAWN);
+					addSpawn(FLAG, FLAG_2_LOC, false, DESPAWN);
 				}
 				break;
 			}
@@ -438,14 +425,10 @@ final class AteliaStatus extends AbstractNpcAI
 			{
 				if (npc == null)
 				{
-					final L2Npc hayuk = addSpawn(HAYUK, HAYUK_LOC);
-					final L2Npc hurak = addSpawn(HURAK, HURAK_LOC);
-					final L2Npc flagthree = addSpawn(FLAG, FLAG_3_LOC);
-					final L2Npc flagfour = addSpawn(FLAG, FLAG_4_LOC);
-					startQuestTimer("TimeEnd", DESPAWN, hayuk, null);
-					startQuestTimer("TimeEnd", DESPAWN, hurak, null);
-					startQuestTimer("TimeEnd", DESPAWN, flagthree, null);
-					startQuestTimer("TimeEnd", DESPAWN, flagfour, null);
+					addSpawn(HAYUK, HAYUK_LOC, false, DESPAWN);
+					addSpawn(HURAK, HURAK_LOC, false, DESPAWN);
+					addSpawn(FLAG, FLAG_3_LOC, false, DESPAWN);
+					addSpawn(FLAG, FLAG_4_LOC, false, DESPAWN);
 				}
 				break;
 			}
@@ -453,18 +436,12 @@ final class AteliaStatus extends AbstractNpcAI
 			{
 				if (npc == null)
 				{
-					final L2Npc elise = addSpawn(ELISE, ELISE_LOC);
-					final L2Npc laffian = addSpawn(LAFFIAN, LAFFIAN_LOC);
-					final L2Npc julia = addSpawn(JULIA, JULIA_LOC);
-					final L2Npc mion = addSpawn(MION, MION_LOC);
-					final L2Npc flagfive = addSpawn(FLAG, FLAG_5_LOC);
-					final L2Npc flagsix = addSpawn(FLAG, FLAG_6_LOC);
-					startQuestTimer("TimeEnd", DESPAWN, elise, null);
-					startQuestTimer("TimeEnd", DESPAWN, laffian, null);
-					startQuestTimer("TimeEnd", DESPAWN, julia, null);
-					startQuestTimer("TimeEnd", DESPAWN, mion, null);
-					startQuestTimer("TimeEnd", DESPAWN, flagfive, null);
-					startQuestTimer("TimeEnd", DESPAWN, flagsix, null);
+					addSpawn(ELISE, ELISE_LOC, false, DESPAWN);
+					addSpawn(LAFFIAN, LAFFIAN_LOC, false, DESPAWN);
+					addSpawn(JULIA, JULIA_LOC, false, DESPAWN);
+					addSpawn(MION, MION_LOC, false, DESPAWN);
+					addSpawn(FLAG, FLAG_5_LOC, false, DESPAWN);
+					addSpawn(FLAG, FLAG_6_LOC, false, DESPAWN);
 				}
 				break;
 			}
@@ -472,18 +449,12 @@ final class AteliaStatus extends AbstractNpcAI
 			{
 				if (npc == null)
 				{
-					final L2Npc eliyah = addSpawn(ELIYAH, ELIYAH_LOC);
-					final L2Npc sherry = addSpawn(SHERRY, SHERRY_LOC);
-					final L2Npc saylem = addSpawn(SAYLEM, SAYLEM_LOC);
-					final L2Npc nika = addSpawn(NIKA, NIKA_LOC);
-					final L2Npc flagseven = addSpawn(FLAG, FLAG_7_LOC);
-					final L2Npc flageight = addSpawn(FLAG, FLAG_8_LOC);
-					startQuestTimer("TimeEnd", DESPAWN, eliyah, null);
-					startQuestTimer("TimeEnd", DESPAWN, sherry, null);
-					startQuestTimer("TimeEnd", DESPAWN, saylem, null);
-					startQuestTimer("TimeEnd", DESPAWN, nika, null);
-					startQuestTimer("TimeEnd", DESPAWN, flagseven, null);
-					startQuestTimer("TimeEnd", DESPAWN, flageight, null);
+					addSpawn(ELIYAH, ELIYAH_LOC, false, DESPAWN);
+					addSpawn(SHERRY, SHERRY_LOC, false, DESPAWN);
+					addSpawn(SAYLEM, SAYLEM_LOC, false, DESPAWN);
+					addSpawn(NIKA, NIKA_LOC, false, DESPAWN);
+					addSpawn(FLAG, FLAG_7_LOC, false, DESPAWN);
+					addSpawn(FLAG, FLAG_8_LOC, false, DESPAWN);
 				}
 				break;
 			}
@@ -583,14 +554,6 @@ final class AteliaStatus extends AbstractNpcAI
 							monster.stopSkillEffects(true, 16542);
 						}
 					}
-				}
-				break;
-			}
-			case "DEVIANNE_CLEAR":
-			{
-				if (npc != null)
-				{
-					npc.deleteMe();
 				}
 				break;
 			}
@@ -701,8 +664,7 @@ final class AteliaStatus extends AbstractNpcAI
 		}
 		else if (npc.getId() == BURNSTEIN)
 		{
-			final L2Npc devianne = addSpawn(DEVIANNE, DEVIANNE_LOC);
-			startQuestTimer("DEVIANNE_CLEAR", DDESPAWN, devianne, null);
+			addSpawn(DEVIANNE, DEVIANNE_LOC, false, DDESPAWN);
 			startQuestTimer("SPY_CLEAR", 100, npc, null);
 			startQuestTimer("SB_3", 100, npc, killer);
 		}

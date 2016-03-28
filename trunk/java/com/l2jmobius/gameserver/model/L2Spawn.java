@@ -87,7 +87,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	private String _areaName;
 	private int _globalMapId;
 	
-	private String _title = "";
+	private final String _title = "";
 	
 	/** The task launching the function doSpawn() */
 	class SpawnTask implements Runnable
@@ -693,10 +693,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		{
 			mob.setTitle(_title);
 		}
-		
-		
-		
-
 		
 		// Reset summoner
 		mob.setSummoner(null);

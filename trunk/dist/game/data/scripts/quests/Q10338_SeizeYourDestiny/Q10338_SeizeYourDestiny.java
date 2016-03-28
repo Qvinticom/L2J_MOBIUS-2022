@@ -208,13 +208,10 @@ public class Q10338_SeizeYourDestiny extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if (npc.getId() == HARNAKS_WRAITH)
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(2))
 		{
-			final QuestState qs = getQuestState(player, false);
-			if ((qs != null) && qs.isCond(2))
-			{
-				qs.setCond(3, true);
-			}
+			qs.setCond(3, true);
 		}
 		return super.onKill(npc, player, isSummon);
 	}

@@ -52,11 +52,6 @@ final class AltarOfSouls extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getId() != ALTAR_OF_SOULS)
-		{
-			return null;
-		}
-		
 		switch (event)
 		{
 			case "request_boss_88":

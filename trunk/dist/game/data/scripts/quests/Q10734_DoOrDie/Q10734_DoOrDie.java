@@ -283,31 +283,30 @@ public class Q10734_DoOrDie extends Quest
 		{
 			return super.onKill(npc, killer, isSummon);
 		}
-		if (npc.getId() == TRAINING_DUMMY)
+		
+		if (qs.isCond(1))
 		{
-			if (qs.isCond(1))
+			if (killer.isMageClass())
 			{
-				if (killer.isMageClass())
-				{
-					qs.setCond(2, true);
-				}
-				else
-				{
-					qs.setCond(3, true);
-				}
+				qs.setCond(2, true);
 			}
-			else if (qs.isCond(6))
+			else
 			{
-				if (killer.isMageClass())
-				{
-					qs.setCond(7, true);
-				}
-				else
-				{
-					qs.setCond(8, true);
-				}
+				qs.setCond(3, true);
 			}
 		}
+		else if (qs.isCond(6))
+		{
+			if (killer.isMageClass())
+			{
+				qs.setCond(7, true);
+			}
+			else
+			{
+				qs.setCond(8, true);
+			}
+		}
+		
 		return super.onKill(npc, killer, isSummon);
 	}
 }

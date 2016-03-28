@@ -145,11 +145,7 @@ public class Q10760_LettersFromTheQueen_OrcBarracs extends Quest implements IByp
 					}
 					case PIOTUR:
 					{
-						if (player.getRace() != Race.ERTHEIA)
-						{
-							htmltext = getNoQuestMsg(player);
-						}
-						else if (qs.isCreated())
+						if (qs.isCreated())
 						{
 							htmltext = getNoQuestMsg(player);
 						}

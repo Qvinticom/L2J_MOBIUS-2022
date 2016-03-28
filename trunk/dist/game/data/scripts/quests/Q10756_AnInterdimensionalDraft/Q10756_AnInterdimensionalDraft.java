@@ -101,40 +101,34 @@ public class Q10756_AnInterdimensionalDraft extends Quest
 			htmltext = getAlreadyCompletedMsg(player);
 		}
 		
-		switch (npc.getId())
+		if (qs.isCreated())
 		{
-			case PIO:
+			htmltext = "33963-01.htm";
+		}
+		else if (qs.isStarted())
+		{
+			switch (qs.getCond())
 			{
-				if (qs.isCreated())
+				case 1:
 				{
-					htmltext = "33963-01.htm";
+					htmltext = "33963-05.htm";
+					break;
 				}
-				else if (qs.isStarted())
+				case 2:
 				{
-					switch (qs.getCond())
+					if (qs.isCond(2) && (getQuestItemsCount(player, UNWORLDLY_WIND) >= 30))
 					{
-						case 1:
-						{
-							htmltext = "33963-05.htm";
-							break;
-						}
-						case 2:
-						{
-							if (qs.isCond(2) && (getQuestItemsCount(player, UNWORLDLY_WIND) >= 30))
-							{
-								takeItems(player, UNWORLDLY_WIND, 30);
-								giveItems(player, STEEL_DOOR_GUILD_COIN);
-								addExpAndSp(player, 174222, 41);
-								qs.exitQuest(false, true);
-								htmltext = "33963-07.html";
-							}
-							break;
-						}
+						takeItems(player, UNWORLDLY_WIND, 30);
+						giveItems(player, STEEL_DOOR_GUILD_COIN);
+						addExpAndSp(player, 174222, 41);
+						qs.exitQuest(false, true);
+						htmltext = "33963-07.html";
 					}
+					break;
 				}
-				break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
