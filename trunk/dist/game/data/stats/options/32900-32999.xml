@@ -1,49 +1,416 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/optionsData.xsd">
+	<option id="32900" name="weapon_shadow">
+		<!-- Atk. Spd. + 12% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.12" />
+		</for>
+	</option>
+	<option id="32901" name="weapon_shadow">
+		<!-- Atk. Spd. + 15% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+		</for>
+	</option>
+	<option id="32902" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 30 -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="30" />
+		</for>
+	</option>
+	<option id="32903" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 60 -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="60" />
+		</for>
+	</option>
+	<option id="32904" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 100 -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="100" />
+		</for>
+	</option>
+	<option id="32905" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 5% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="100" />
+			<mul stat="maxHp" val="1.05" />
+			<mul stat="maxMp" val="1.05" />
+		</for>
+	</option>
+	<option id="32906" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="100" />
+			<mul stat="maxHp" val="1.10" />
+			<mul stat="maxMp" val="1.10" />
+		</for>
+	</option>
+	<option id="32907" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="100" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+		</for>
+	</option>
+	<option id="32908" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15%, P. Atk. + 7 -->
+		<!-- NPC Damage + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="100" />
+			<mul stat="maxHp" val="1.05" />
+			<mul stat="maxMp" val="1.05" />
+			<add stat="pAtk" val="7" />
+			<mul stat="pvePhysDmg" val="1.10" />
+			<mul stat="pvePhysSkillsDmg" val="1.10" />
+			<mul stat="pveBowDmg" val="1.10" />
+			<mul stat="pveBowSkillsDmg" val="1.10" />
+			<mul stat="pveMagicalDmg" val="1.10" />
+		</for>
+	</option>
+	<option id="32909" name="weapon_shadow">
+		<!-- Atk. Spd. + 5% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.05" />
+		</for>
+	</option>
+	<option id="32910" name="weapon_shadow">
+		<!-- Atk. Spd. + 7% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.07" />
+		</for>
+	</option>
+	<option id="32911" name="weapon_shadow">
+		<!-- Atk. Spd. + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.10" />
+		</for>
+	</option>
+	<option id="32912" name="weapon_shadow">
+		<!-- Atk. Spd. + 12% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.12" />
+		</for>
+	</option>
+	<option id="32913" name="weapon_shadow">
+		<!-- Atk. Spd. + 15% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+		</for>
+	</option>
+	<option id="32914" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 30 -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="30" />
+		</for>
+	</option>
+	<option id="32915" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 60 -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="60" />
+		</for>
+	</option>
+	<option id="32916" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 100 -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="100" />
+		</for>
+	</option>
+	<option id="32917" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 5% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="100" />
+			<mul stat="maxHp" val="1.05" />
+			<mul stat="maxMp" val="1.05" />
+		</for>
+	</option>
+	<option id="32918" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="100" />
+			<mul stat="maxHp" val="1.10" />
+			<mul stat="maxMp" val="1.10" />
+		</for>
+	</option>
+	<option id="32919" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="100" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+		</for>
+	</option>
+	<option id="32920" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15%, P. Atk. + 7 -->
+		<!-- NPC Damage + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<add stat="critRate" val="100" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+			<add stat="pAtk" val="7" />
+			<mul stat="pvePhysDmg" val="1.10" />
+			<mul stat="pvePhysSkillsDmg" val="1.10" />
+			<mul stat="pveBowDmg" val="1.10" />
+			<mul stat="pveBowSkillsDmg" val="1.10" />
+			<mul stat="pveMagicalDmg" val="1.10" />
+		</for>
+	</option>
+	<option id="32921" name="weapon_shadow">
+		<!-- Atk. Spd. + 5% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.05" />
+		</for>
+	</option>
+	<option id="32922" name="weapon_shadow">
+		<!-- Atk. Spd. + 7% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.07" />
+		</for>
+	</option>
+	<option id="32923" name="weapon_shadow">
+		<!-- Atk. Spd. + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.10" />
+		</for>
+	</option>
+	<option id="32924" name="weapon_shadow">
+		<!-- Atk. Spd. + 12% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.12" />
+		</for>
+	</option>
+	<option id="32925" name="weapon_shadow">
+		<!-- Atk. Spd. + 15% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+		</for>
+	</option>
+	<option id="32926" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 3% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.03" />
+		</for>
+	</option>
+	<option id="32927" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 6% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.06" />
+		</for>
+	</option>
+	<option id="32928" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+		</for>
+	</option>
+	<option id="32929" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 5% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.05" />
+			<mul stat="maxMp" val="1.05" />
+		</for>
+	</option>
+	<option id="32930" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.10" />
+			<mul stat="maxMp" val="1.10" />
+		</for>
+	</option>
+	<option id="32931" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 15% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+		</for>
+	</option>
+	<option id="32932" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 15%, P. Atk. + 7 -->
+		<!-- NPC Damage + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+			<add stat="pAtk" val="7" />
+			<mul stat="pvePhysDmg" val="1.10" />
+			<mul stat="pvePhysSkillsDmg" val="1.10" />
+			<mul stat="pveBowDmg" val="1.10" />
+			<mul stat="pveBowSkillsDmg" val="1.10" />
+			<mul stat="pveMagicalDmg" val="1.10" />
+		</for>
+	</option>
+	<option id="32933" name="weapon_shadow">
+		<!-- Atk. Spd. + 5% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.05" />
+		</for>
+	</option>
+	<option id="32934" name="weapon_shadow">
+		<!-- Atk. Spd. + 7% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.07" />
+		</for>
+	</option>
+	<option id="32935" name="weapon_shadow">
+		<!-- Atk. Spd. + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.10" />
+		</for>
+	</option>
+	<option id="32936" name="weapon_shadow">
+		<!-- Atk. Spd. + 12% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.12" />
+		</for>
+	</option>
+	<option id="32937" name="weapon_shadow">
+		<!-- Atk. Spd. + 15% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+		</for>
+	</option>
+	<option id="32938" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 3% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.03" />
+		</for>
+	</option>
+	<option id="32939" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 6% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.06" />
+		</for>
+	</option>
+	<option id="32940" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+		</for>
+	</option>
+	<option id="32941" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 5% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.05" />
+			<mul stat="maxMp" val="1.05" />
+		</for>
+	</option>
+	<option id="32942" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.10" />
+			<mul stat="maxMp" val="1.10" />
+		</for>
+	</option>
+	<option id="32943" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 15% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+		</for>
+	</option>
+	<option id="32944" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 15%, P. Atk. + 7 -->
+		<!-- NPC Damage + 10% -->
+		<for>
+			<mul stat="pAtkSpd" val="1.15" />
+			<mul stat="critDmgAdd" val="1.10" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+			<add stat="pAtk" val="7" />
+			<mul stat="pvePhysDmg" val="1.10" />
+			<mul stat="pvePhysSkillsDmg" val="1.10" />
+			<mul stat="pveBowDmg" val="1.10" />
+			<mul stat="pveBowSkillsDmg" val="1.10" />
+			<mul stat="pveMagicalDmg" val="1.10" />
+		</for>
+	</option>
 	<option id="32945" name="weapon_shadow">
+		<!-- Atk. Spd. + 5% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.05" />
 		</for>
 	</option>
 	<option id="32946" name="weapon_shadow">
+		<!-- Atk. Spd. + 7% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.07" />
 		</for>
-	</option>	
+	</option>
 	<option id="32947" name="weapon_shadow">
+		<!-- Atk. Spd. + 10% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.10" />
 		</for>
-	</option>	
+	</option>
 	<option id="32948" name="weapon_shadow">
+		<!-- Atk. Spd. + 12% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.12" />
 		</for>
-	</option>	
+	</option>
 	<option id="32949" name="weapon_shadow">
+		<!-- Atk. Spd. + 15% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.15" />
 		</for>
 	</option>
 	<option id="32950" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 3% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.15" />
 			<mul stat="critDmgAdd" val="1.03" />
 		</for>
-	</option>	
+	</option>
 	<option id="32951" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 6% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.15" />
 			<mul stat="critDmgAdd" val="1.06" />
 		</for>
-	</option>	
+	</option>
 	<option id="32952" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.15" />
 			<mul stat="critDmgAdd" val="1.10" />
 		</for>
 	</option>
 	<option id="32953" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 5% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.15" />
 			<mul stat="critDmgAdd" val="1.10" />
@@ -52,6 +419,7 @@
 		</for>
 	</option>
 	<option id="32954" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 10% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.15" />
 			<mul stat="critDmgAdd" val="1.10" />
@@ -60,6 +428,7 @@
 		</for>
 	</option>
 	<option id="32955" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 15% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.15" />
 			<mul stat="critDmgAdd" val="1.10" />
@@ -68,6 +437,8 @@
 		</for>
 	</option>
 	<option id="32956" name="weapon_shadow">
+		<!-- Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 15%, P. Atk. + 7 -->
+		<!-- NPC Damage + 10% -->
 		<for>
 			<mul stat="pAtkSpd" val="1.15" />
 			<mul stat="critDmgAdd" val="1.10" />
@@ -75,53 +446,65 @@
 			<mul stat="maxMp" val="1.15" />
 			<add stat="pAtk" val="7" />
 			<mul stat="pvePhysDmg" val="1.10" />
+			<mul stat="pvePhysSkillsDmg" val="1.10" />
+			<mul stat="pveBowDmg" val="1.10" />
+			<mul stat="pveBowSkillsDmg" val="1.10" />
+			<mul stat="pveMagicalDmg" val="1.10" />
 		</for>
 	</option>
-	<!-- Magic Stat -->
 	<option id="32957" name="weapon_shadow">
+		<!-- Casting Spd. + 5% -->
 		<for>
 			<mul stat="mAtkSpd" val="1.05" />
 		</for>
 	</option>
 	<option id="32958" name="weapon_shadow">
+		<!-- Casting Spd. + 7% -->
 		<for>
 			<mul stat="mAtkSpd" val="1.07" />
 		</for>
-	</option>	
+	</option>
 	<option id="32959" name="weapon_shadow">
+		<!-- Casting Spd. + 10% -->
 		<for>
 			<mul stat="mAtkSpd" val="1.10" />
 		</for>
-	</option>	
+	</option>
 	<option id="32960" name="weapon_shadow">
+		<!-- Casting Spd. + 12% -->
 		<for>
 			<mul stat="mAtkSpd" val="1.12" />
 		</for>
-	</option>	
+	</option>
 	<option id="32961" name="weapon_shadow">
+		<!-- Casting Spd. + 15% -->
 		<for>
 			<mul stat="mAtkSpd" val="1.15" />
 		</for>
 	</option>
 	<option id="32962" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Rate + 30 -->
 		<for>
 			<mul stat="mAtkSpd" val="1.15" />
 			<mul stat="mCritRate" val="30" />
 		</for>
-	</option>	
+	</option>
 	<option id="32963" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Rate + 60 -->
 		<for>
 			<mul stat="mAtkSpd" val="1.15" />
 			<mul stat="mCritRate" val="60" />
 		</for>
-	</option>	
+	</option>
 	<option id="32964" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Rate + 100 -->
 		<for>
 			<mul stat="mAtkSpd" val="1.15" />
 			<add stat="mCritRate" val="100" />
 		</for>
 	</option>
 	<option id="32965" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Rate + 100, Max HP/MP + 5% -->
 		<for>
 			<mul stat="mAtkSpd" val="1.15" />
 			<add stat="mCritRate" val="100" />
@@ -130,6 +513,7 @@
 		</for>
 	</option>
 	<option id="32966" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Rate + 100, Max HP/MP + 10% -->
 		<for>
 			<mul stat="mAtkSpd" val="1.15" />
 			<add stat="mCritRate" val="100" />
@@ -138,6 +522,7 @@
 		</for>
 	</option>
 	<option id="32967" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Rate + 100, Max HP/MP + 15% -->
 		<for>
 			<mul stat="mAtkSpd" val="1.15" />
 			<add stat="mCritRate" val="100" />
@@ -146,6 +531,8 @@
 		</for>
 	</option>
 	<option id="32968" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Rate + 100, Max HP/MP + 15%, M. Atk. + 7 -->
+		<!-- NPC Damage + 10% -->
 		<for>
 			<mul stat="mAtkSpd" val="1.15" />
 			<add stat="mCritRate" val="100" />
@@ -153,7 +540,104 @@
 			<mul stat="maxMp" val="1.15" />
 			<add stat="mAtk" val="7" />
 			<mul stat="pvePhysDmg" val="1.10" />
+			<mul stat="pvePhysSkillsDmg" val="1.10" />
+			<mul stat="pveBowDmg" val="1.10" />
+			<mul stat="pveBowSkillsDmg" val="1.10" />
+			<mul stat="pveMagicalDmg" val="1.10" />
 		</for>
 	</option>
-	
+	<option id="32969" name="weapon_shadow">
+		<!-- Casting Spd. + 5% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.05" />
+		</for>
+	</option>
+	<option id="32970" name="weapon_shadow">
+		<!-- Casting Spd. + 7% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.07" />
+		</for>
+	</option>
+	<option id="32971" name="weapon_shadow">
+		<!-- Casting Spd. + 10% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.10" />
+		</for>
+	</option>
+	<option id="32972" name="weapon_shadow">
+		<!-- Casting Spd. + 12% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.12" />
+		</for>
+	</option>
+	<option id="32973" name="weapon_shadow">
+		<!-- Casting Spd. + 15% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+		</for>
+	</option>
+	<option id="32974" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Damage 3% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<mul stat="mCritPower" val="1.03" />
+		</for>
+	</option>
+	<option id="32975" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Damage 6% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<mul stat="mCritPower" val="1.06" />
+		</for>
+	</option>
+	<option id="32976" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Damage 10% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<mul stat="mCritPower" val="1.10" />
+		</for>
+	</option>
+	<option id="32977" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Damage 10%, Max HP/MP + 5% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<mul stat="mCritPower" val="1.10" />
+			<mul stat="maxHp" val="1.05" />
+			<mul stat="maxMp" val="1.05" />
+		</for>
+	</option>
+	<option id="32978" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Damage 10%, Max HP/MP + 10% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<mul stat="mCritPower" val="1.10" />
+			<mul stat="maxHp" val="1.10" />
+			<mul stat="maxMp" val="1.10" />
+		</for>
+	</option>
+	<option id="32979" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Damage 10%, Max HP/MP + 15% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<mul stat="mCritPower" val="1.10" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+		</for>
+	</option>
+	<option id="32980" name="weapon_shadow">
+		<!-- Casting Spd. + 15%, M. Critical Damage 10%, Max HP/MP + 15%, M. Atk. + 7 -->
+		<!-- NPC Damage + 10% -->
+		<for>
+			<mul stat="mAtkSpd" val="1.15" />
+			<mul stat="mCritPower" val="1.10" />
+			<mul stat="maxHp" val="1.15" />
+			<mul stat="maxMp" val="1.15" />
+			<add stat="mAtk" val="7" />
+			<mul stat="pvePhysDmg" val="1.10" />
+			<mul stat="pvePhysSkillsDmg" val="1.10" />
+			<mul stat="pveBowDmg" val="1.10" />
+			<mul stat="pveBowSkillsDmg" val="1.10" />
+			<mul stat="pveMagicalDmg" val="1.10" />
+		</for>
+	</option>
 </list>

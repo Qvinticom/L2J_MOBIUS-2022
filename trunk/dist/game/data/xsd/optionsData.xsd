@@ -61,9 +61,20 @@
 															<xs:enumeration value="critDmgAdd" />
 															<xs:enumeration value="maxHp" />
 															<xs:enumeration value="maxMp" />
+															<xs:enumeration value="pvpPhysDmg" />
+															<xs:enumeration value="pvpMagicalDmg" />
+															<xs:enumeration value="pvpPhysSkillsDmg" />
+															<xs:enumeration value="pvpPhysDef" />
+															<xs:enumeration value="pvpMagicalDef" />
+															<xs:enumeration value="pvpPhysSkillsDef" />
 															<xs:enumeration value="pvePhysDmg" />
+															<xs:enumeration value="pvePhysSkillsDmg" />
+															<xs:enumeration value="pveBowDmg" />
+															<xs:enumeration value="pveBowSkillsDmg" />
+															<xs:enumeration value="pveMagicalDmg" />
 															<xs:enumeration value="mAtkSpd" />
 															<xs:enumeration value="mCritRate" />
+															<xs:enumeration value="mCritPower" />
 															<xs:enumeration value="mAtk" />
 														</xs:restriction>
 													</xs:simpleType>
