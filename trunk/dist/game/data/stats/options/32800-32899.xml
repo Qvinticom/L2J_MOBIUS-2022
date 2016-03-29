@@ -217,304 +217,166 @@
 		<!-- M. Def. + 15%. Received Magic Critical Damage - 25%, 15% chance of reflecting magical skills -->
 		<passive_skill id="18445" level="10" />
 	</option>
-	<option id="32861" name="weapon_shadow">
+	<option id="32861" name="shadow_cutter_ench0">
 		<!-- Atk. Spd. + 5% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.05" />
-		</for>
+		<passive_skill id="13837" level="1" />
 	</option>
-	<option id="32862" name="weapon_shadow">
+	<option id="32862" name="shadow_cutter_ench1">
 		<!-- Atk. Spd. + 7% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.07" />
-		</for>
+		<passive_skill id="13837" level="2" />		
 	</option>
-	<option id="32863" name="weapon_shadow">
+	<option id="32863" name="shadow_cutter_ench2">
 		<!-- Atk. Spd. + 10% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.10" />
-		</for>
+		<passive_skill id="13837" level="3" />
 	</option>
-	<option id="32864" name="weapon_shadow">
+	<option id="32864" name="shadow_cutter_ench3">
 		<!-- Atk. Spd. + 12% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.12" />
-		</for>
+		<passive_skill id="13837" level="4" />
 	</option>
-	<option id="32865" name="weapon_shadow">
+	<option id="32865" name="shadow_cutter_ench4">
 		<!-- Atk. Spd. + 15% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-		</for>
+		<passive_skill id="13837" level="5" />
 	</option>
-	<option id="32866" name="weapon_shadow">
+	<option id="32866" name="shadow_cutter_ench5">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 30 -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="30" />
-		</for>
+		<passive_skill id="13837" level="6" />
 	</option>
-	<option id="32867" name="weapon_shadow">
+	<option id="32867" name="shadow_cutter_ench6">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 60 -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="60" />
-		</for>
+		<passive_skill id="13837" level="7" />
 	</option>
-	<option id="32868" name="weapon_shadow">
+	<option id="32868" name="shadow_cutter_ench7">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100 -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-		</for>
+		<passive_skill id="13837" level="8" />
 	</option>
-	<option id="32869" name="weapon_shadow">
+	<option id="32869" name="shadow_cutter_ench8">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 5% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.05" />
-			<mul stat="maxMp" val="1.05" />
-		</for>
+		<passive_skill id="13837" level="9" />
 	</option>
-	<option id="32870" name="weapon_shadow">
+	<option id="32870" name="shadow_cutter_ench9">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 10% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.10" />
-			<mul stat="maxMp" val="1.10" />
-		</for>
+		<passive_skill id="13837" level="10" />
 	</option>
-	<option id="32871" name="weapon_shadow">
+	<option id="32871" name="shadow_cutter_ench10">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.15" />
-			<mul stat="maxMp" val="1.15" />
-		</for>
+		<passive_skill id="13837" level="11" />
 	</option>
-	<option id="32872" name="weapon_shadow">
+	<option id="32872" name="shadow_cutter_ench11">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15%, P. Atk. + 7 -->
 		<!-- NPC Damage + 10% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.15" />
-			<mul stat="maxMp" val="1.15" />
-			<mul stat="pAtk" val="1.07" />
-			<mul stat="pvePhysDmg" val="1.10" />
-			<mul stat="pvePhysSkillsDmg" val="1.10" />
-			<mul stat="pveBowDmg" val="1.10" />
-			<mul stat="pveBowSkillsDmg" val="1.10" />
-			<mul stat="pveMagicalDmg" val="1.10" />
-		</for>
+		<passive_skill id="13837" level="12" />
+		<passive_skill id="13847" level="1" />
 	</option>
-	<option id="32873" name="weapon_shadow">
+	<option id="32873" name="shadow_slasher_ench0">
 		<!-- Atk. Spd. + 5% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.05" />
-		</for>
+		<passive_skill id="13838" level="1" />
 	</option>
-	<option id="32874" name="weapon_shadow">
+	<option id="32874" name="shadow_slasher_ench1">
 		<!-- Atk. Spd. + 7% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.07" />
-		</for>
+		<passive_skill id="13838" level="2" />
 	</option>
-	<option id="32875" name="weapon_shadow">
+	<option id="32875" name="shadow_slasher_ench2">
 		<!-- Atk. Spd. + 10% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.10" />
-		</for>
+		<passive_skill id="13838" level="3" />
 	</option>
-	<option id="32876" name="weapon_shadow">
+	<option id="32876" name="shadow_slasher_ench3">
 		<!-- Atk. Spd. + 12% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.12" />
-		</for>
+		<passive_skill id="13838" level="4" />
 	</option>
-	<option id="32877" name="weapon_shadow">
+	<option id="32877" name="shadow_slasher_ench4">
 		<!-- Atk. Spd. + 15% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-		</for>
+		<passive_skill id="13838" level="5" />
 	</option>
-	<option id="32878" name="weapon_shadow">
+	<option id="32878" name="shadow_slasher_ench5">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 30 -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="30" />
-		</for>
+		<passive_skill id="13838" level="6" />
 	</option>
-	<option id="32879" name="weapon_shadow">
+	<option id="32879" name="shadow_slasher_ench6">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 60 -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="60" />
-		</for>
+		<passive_skill id="13838" level="7" />
 	</option>
-	<option id="32880" name="weapon_shadow">
+	<option id="32880" name="shadow_slasher_ench7">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100 -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-		</for>
+		<passive_skill id="13838" level="8" />
 	</option>
-	<option id="32881" name="weapon_shadow">
+	<option id="32881" name="shadow_slasher_ench8">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 5% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.05" />
-			<mul stat="maxMp" val="1.05" />
-		</for>
+		<passive_skill id="13838" level="9" />
 	</option>
-	<option id="32882" name="weapon_shadow">
+	<option id="32882" name="shadow_slasher_ench9">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 10% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.10" />
-			<mul stat="maxMp" val="1.10" />
-		</for>
+		<passive_skill id="13838" level="10" />
 	</option>
-	<option id="32883" name="weapon_shadow">
+	<option id="32883" name="shadow_slasher_ench10">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.15" />
-			<mul stat="maxMp" val="1.15" />
-		</for>
+		<passive_skill id="13838" level="11" />
 	</option>
-	<option id="32884" name="weapon_shadow">
+	<option id="32884" name="shadow_slasher_ench11">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15%, P. Atk. + 7 -->
 		<!-- NPC Damage + 10% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.15" />
-			<mul stat="maxMp" val="1.15" />
-			<mul stat="pAtk" val="1.07" />
-			<mul stat="pvePhysDmg" val="1.10" />
-			<mul stat="pvePhysSkillsDmg" val="1.10" />
-			<mul stat="pveBowDmg" val="1.10" />
-			<mul stat="pveBowSkillsDmg" val="1.10" />
-			<mul stat="pveMagicalDmg" val="1.10" />
-		</for>
+		<passive_skill id="13838" level="12" />
+		<passive_skill id="13847" level="1" />
 	</option>
-	<option id="32885" name="weapon_shadow">
+	<option id="32885" name="shadow_fighter_ench0">
 		<!-- Atk. Spd. + 5% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.05" />
-		</for>
+		<passive_skill id="13839" level="1" />
 	</option>
-	<option id="32886" name="weapon_shadow">
+	<option id="32886" name="shadow_fighter_ench1">
 		<!-- Atk. Spd. + 7% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.07" />
-		</for>
+		<passive_skill id="13839" level="2" />
 	</option>
-	<option id="32887" name="weapon_shadow">
+	<option id="32887" name="shadow_fighter_ench2">
 		<!-- Atk. Spd. + 10% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.10" />
-		</for>
+		<passive_skill id="13839" level="3" />
 	</option>
-	<option id="32888" name="weapon_shadow">
+	<option id="32888" name="shadow_fighter_ench3">
 		<!-- Atk. Spd. + 12% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.12" />
-		</for>
+		<passive_skill id="13839" level="4" />
 	</option>
-	<option id="32889" name="weapon_shadow">
+	<option id="32889" name="shadow_fighter_ench4">
 		<!-- Atk. Spd. + 15% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-		</for>
+		<passive_skill id="13839" level="5" />
 	</option>
-	<option id="32890" name="weapon_shadow">
+	<option id="32890" name="shadow_fighter_ench5">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 30 -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="30" />
-		</for>
+		<passive_skill id="13839" level="6" />
 	</option>
-	<option id="32891" name="weapon_shadow">
+	<option id="32891" name="shadow_fighter_ench6">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 60 -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="60" />
-		</for>
+		<passive_skill id="13839" level="7" />
 	</option>
-	<option id="32892" name="weapon_shadow">
+	<option id="32892" name="shadow_fighter_ench7">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100 -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-		</for>
+		<passive_skill id="13839" level="8" />
 	</option>
-	<option id="32893" name="weapon_shadow">
+	<option id="32893" name="shadow_fighter_ench8">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 5% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.05" />
-			<mul stat="maxMp" val="1.05" />
-		</for>
+		<passive_skill id="13839" level="9" />
 	</option>
-	<option id="32894" name="weapon_shadow">
+	<option id="32894" name="shadow_fighter_ench9">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 10% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.10" />
-			<mul stat="maxMp" val="1.10" />
-		</for>
+		<passive_skill id="13839" level="10" />
 	</option>
-	<option id="32895" name="weapon_shadow">
+	<option id="32895" name="shadow_fighter_ench10">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.15" />
-			<mul stat="maxMp" val="1.15" />
-		</for>
+		<passive_skill id="13839" level="11" />
 	</option>
-	<option id="32896" name="weapon_shadow">
+	<option id="32896" name="shadow_fighter_ench11">
 		<!-- Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15%, P. Atk. + 7 -->
 		<!-- NPC Damage + 10% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.15" />
-			<add stat="critRate" val="100" />
-			<mul stat="maxHp" val="1.15" />
-			<mul stat="maxMp" val="1.15" />
-			<mul stat="pAtk" val="1.07" />
-			<mul stat="pvePhysDmg" val="1.10" />
-			<mul stat="pvePhysSkillsDmg" val="1.10" />
-			<mul stat="pveBowDmg" val="1.10" />
-			<mul stat="pveBowSkillsDmg" val="1.10" />
-			<mul stat="pveMagicalDmg" val="1.10" />
-		</for>
+		<passive_skill id="13839" level="12" />
+		<passive_skill id="13847" level="1" />
 	</option>
-	<option id="32897" name="weapon_shadow">
+	<option id="32897" name="shadow_stormer_ench0">
 		<!-- Atk. Spd. + 5% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.05" />
-		</for>
+		<passive_skill id="13840" level="1" />
 	</option>
-	<option id="32898" name="weapon_shadow">
+	<option id="32898" name="shadow_stormer_ench1">
 		<!-- Atk. Spd. + 7% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.07" />
-		</for>
+		<passive_skill id="13840" level="2" />
 	</option>
-	<option id="32899" name="weapon_shadow">
+	<option id="32899" name="shadow_stormer_ench2">
 		<!-- Atk. Spd. + 10% -->
-		<for>
-			<mul stat="pAtkSpd" val="1.10" />
-		</for>
+		<passive_skill id="13840" level="3" />
 	</option>
 </list>

@@ -606,6 +606,8 @@
 			<effect name="Buff">
 				<mul stat="pvePhysDmg" val="1.10" />
 				<mul stat="pvePhysSkillsDmg" val="1.10" />
+				<mul stat="pveBowDmg" val="1.10" />
+				<mul stat="pveBowSkillsDmg" val="1.10" />
 				<mul stat="pveMagicalDmg" val="1.10" />
 			</effect>
 		</for>
