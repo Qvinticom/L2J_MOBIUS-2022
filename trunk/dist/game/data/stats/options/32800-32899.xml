@@ -303,7 +303,7 @@
 			<add stat="critRate" val="100" />
 			<mul stat="maxHp" val="1.15" />
 			<mul stat="maxMp" val="1.15" />
-			<add stat="pAtk" val="7" />
+			<mul stat="pAtk" val="1.07" />
 			<mul stat="pvePhysDmg" val="1.10" />
 			<mul stat="pvePhysSkillsDmg" val="1.10" />
 			<mul stat="pveBowDmg" val="1.10" />
@@ -397,7 +397,7 @@
 			<add stat="critRate" val="100" />
 			<mul stat="maxHp" val="1.15" />
 			<mul stat="maxMp" val="1.15" />
-			<add stat="pAtk" val="7" />
+			<mul stat="pAtk" val="1.07" />
 			<mul stat="pvePhysDmg" val="1.10" />
 			<mul stat="pvePhysSkillsDmg" val="1.10" />
 			<mul stat="pveBowDmg" val="1.10" />
@@ -491,7 +491,7 @@
 			<add stat="critRate" val="100" />
 			<mul stat="maxHp" val="1.15" />
 			<mul stat="maxMp" val="1.15" />
-			<add stat="pAtk" val="7" />
+			<mul stat="pAtk" val="1.07" />
 			<mul stat="pvePhysDmg" val="1.10" />
 			<mul stat="pvePhysSkillsDmg" val="1.10" />
 			<mul stat="pveBowDmg" val="1.10" />
