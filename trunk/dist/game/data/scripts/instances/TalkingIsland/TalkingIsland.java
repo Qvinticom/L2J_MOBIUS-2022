@@ -16,9 +16,11 @@
  */
 package instances.TalkingIsland;
 
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -26,6 +28,7 @@ import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -46,10 +49,12 @@ public class TalkingIsland extends AbstractInstance
 	// Skill
 	private static final SkillHolder NPC_TREE = new SkillHolder(9579, 1);
 	// Locations
+	private static final Location DARK_KNIGHT_LOC = new Location(209372, 15037, -3729, 0);
 	private static final Location START_LOC = new Location(210705, 13259, -3754);
 	private static final Location EXIT_LOC = new Location(-113647, 246016, -3696);
 	// Instance
 	private static final int TEMPLATE_ID = 241;
+	private static final int ZONE = 33751;
 	
 	class TIWorld extends InstanceWorld
 	{
@@ -63,6 +68,7 @@ public class TalkingIsland extends AbstractInstance
 		addFirstTalkId(DARIN, ROXXY, BIOTIN, DARK_KNIGHT);
 		addSkillSeeId(MOTHER_TREE);
 		addSpawnId(DARK_KNIGHT);
+		addEnterZoneId(ZONE);
 	}
 	
 	@Override
@@ -84,13 +90,7 @@ public class TalkingIsland extends AbstractInstance
 				if (qs.isCond(20) && (player.getInstanceId() == world.getInstanceId()))
 				{
 					qs.setCond(21);
-					spawnGroup("dark", world.getInstanceId());
 					showOnScreenMsg(player, NpcStringId.GO_OUTSIDE_THE_TEMPLE, ExShowScreenMessage.TOP_CENTER, 4500);
-					final double distance = npc.calculateDistance(player, false, false);
-					if ((distance <= 200))
-					{
-						showOnScreenMsg(player, NpcStringId.A_MYSTERIOUS_DARK_KNIGHT_IS_HERE, ExShowScreenMessage.TOP_CENTER, 4500);
-					}
 					return "30031-03.html";
 				}
 				break;
@@ -108,6 +108,8 @@ public class TalkingIsland extends AbstractInstance
 				if (qs.isCond(19))
 				{
 					showOnScreenMsg(player, NpcStringId.SPEAK_WITH_ROXXY, ExShowScreenMessage.TOP_CENTER, 4500);
+					qs.setMemoState(1);
+					return "33748-03.html";
 				}
 				break;
 			}
@@ -115,10 +117,18 @@ public class TalkingIsland extends AbstractInstance
 			{
 				qs.setCond(22);
 				{
-					teleportPlayer(player, EXIT_LOC, 0);
 					player.showQuestMovie(75);
+					player.setMovieId(75);
+					player.setIsTeleporting(true, false);
+					startQuestTimer("TELEPORT", 38000, npc, player);
 					break;
 				}
+			}
+			case "TELEPORT":
+			{
+				teleportPlayer(player, EXIT_LOC, 0);
+				break;
+				
 			}
 		}
 		return htmltext;
@@ -127,6 +137,7 @@ public class TalkingIsland extends AbstractInstance
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final TIWorld world = (TIWorld) InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		final QuestState qs = player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
 		String htmltext = null;
 		
@@ -151,6 +162,10 @@ public class TalkingIsland extends AbstractInstance
 							qs.setCond(20);
 							htmltext = "33749-02.html";
 						}
+						else if (qs.isCond(20))
+						{
+							htmltext = "33749-03.html";
+						}
 						break;
 					}
 					case BIOTIN:
@@ -167,10 +182,15 @@ public class TalkingIsland extends AbstractInstance
 						{
 							htmltext = "33751-02.html";
 						}
+						if (qs.isCond(22))
+						{
+							InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(38000);
+							InstanceManager.getInstance().getInstance(world.getInstanceId()).setEmptyDestroyTime(0);
+							world.removeAllowed(player.getObjectId());
+						}
 						break;
 					}
 				}
-				break;
 			}
 		}
 		return htmltext;
@@ -187,9 +207,13 @@ public class TalkingIsland extends AbstractInstance
 			{
 				case DARIN:
 				{
-					if (qs.isCond(19))
+					if ((qs.isCond(19)) && qs.isMemoState(0))
 					{
 						htmltext = "33748-01.html";
+					}
+					else if ((qs.isCond(19)) && qs.isMemoState(1))
+					{
+						htmltext = "33748-04.html";
 					}
 					break;
 				}
@@ -198,6 +222,10 @@ public class TalkingIsland extends AbstractInstance
 					if (qs.isCond(19))
 					{
 						htmltext = "33749-01.html";
+					}
+					else if (qs.isCond(20))
+					{
+						htmltext = "33749-03.html";
 					}
 					break;
 				}
@@ -235,6 +263,25 @@ public class TalkingIsland extends AbstractInstance
 			enterInstance(player, new TIWorld(), "TalkingIsland.xml", TEMPLATE_ID);
 		}
 		
+		return null;
+	}
+	
+	@Override
+	public String onEnterZone(L2Character character, L2ZoneType zone)
+	{
+		if (character.isPlayer())
+		{
+			final L2PcInstance player = character.getActingPlayer();
+			final TIWorld world = (TIWorld) InstanceManager.getInstance().getWorld(character.getInstanceId());
+			final QuestState qs = player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
+			if ((qs != null) && qs.isCond(21))
+			{
+				world.dark = addSpawn(DARK_KNIGHT, DARK_KNIGHT_LOC, false, 0, false, world.getInstanceId());
+				world.dark.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+				showOnScreenMsg(player, NpcStringId.A_MYSTERIOUS_DARK_KNIGHT_IS_HERE, ExShowScreenMessage.TOP_CENTER, 4500);
+			}
+			return super.onEnterZone(character, zone);
+		}
 		return null;
 	}
 	

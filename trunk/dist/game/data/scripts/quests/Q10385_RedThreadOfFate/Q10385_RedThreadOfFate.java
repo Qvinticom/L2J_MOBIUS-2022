@@ -59,7 +59,6 @@ public class Q10385_RedThreadOfFate extends Quest
 	private static final int SHILEN = 33785;
 	private static final int SOULS = 33789;
 	private static final int MOTHER_TREE = 33786;
-	
 	// Items
 	private static final int MYSTERIOUS_LETTER = 36072;
 	private static final int WATER_GARDEN_OF_EVA = 36066;
@@ -99,11 +98,12 @@ public class Q10385_RedThreadOfFate extends Quest
 		super(10385, Q10385_RedThreadOfFate.class.getSimpleName(), "Red Thread of Fate");
 		addStartNpc(RAINA);
 		addTalkId(RAINA, MORELYN, LANYA, WATER_SOURCE, LADY_OF_THE_LAKE, NERUPA, ENFEUX, INNOCENTIN, VULCAN, URN, WESLEY, HOUSE, PAAGRIO_TEMPLE, SHILEN, SOULS, MOTHER_TREE);
-		addFirstTalkId(LANYA, HOUSE, PAAGRIO_TEMPLE, SHILEN, SOULS, MOTHER_TREE);
+		addFirstTalkId(LANYA, WATER_SOURCE, HOUSE, PAAGRIO_TEMPLE, SHILEN, SOULS, MOTHER_TREE);
 		addSocialActionSeeId(LANYA);
 		addSkillSeeId(HOUSE, PAAGRIO_TEMPLE, SHILEN, SOULS, MOTHER_TREE);
 		registerQuestItems(MYSTERIOUS_LETTER, WATER_GARDEN_OF_EVA, CLEAREST_WATER, PUREST_SOUL, VULCAN_TRUE_GOLD, VULCAN_PURE_SILVER, VULCAN_BLOOD_FIRE, FIERCEST_FLAME, FONDEST_HEART, SCROLL_OF_ESCAPE_VOA, SCROLL_OF_ESCAPE_FOG, SCROLL_OF_ESCAPE_IT, SCROLL_OF_ESCAPE_DV);
 		addKillId(SHILEN_MESSENGER);
+		addAttackId(SHILEN_MESSENGER);
 		addSpawnId(SHILEN_MESSENGER);
 		addCondNotRace(Race.ERTHEIA, "noRace.html");
 		addCondCompletedQuest(Q10338_SeizeYourDestiny.class.getSimpleName(), "restriction.html");
@@ -180,16 +180,6 @@ public class Q10385_RedThreadOfFate extends Quest
 				}
 				break;
 			}
-			case "TP2":
-			{
-				if (qs.isCond(5))
-				{
-					qs.setCond(6);
-					player.teleToLocation(WATER_LOC, 0);
-					giveItems(player, WATER_GARDEN_OF_EVA, 1);
-				}
-				break;
-			}
 			case "31745-03.html":
 			{
 				if (qs.isCond(6))
@@ -227,6 +217,7 @@ public class Q10385_RedThreadOfFate extends Quest
 				{
 					qs.setCond(9);
 					giveItems(player, PUREST_SOUL, 1);
+					htmltext = "31519-02.html";
 				}
 				break;
 			}
@@ -236,6 +227,7 @@ public class Q10385_RedThreadOfFate extends Quest
 				{
 					qs.setCond(10);
 					giveItems(player, SCROLL_OF_ESCAPE_FOG, 1);
+					htmltext = "31328-02.html";
 					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_INNOCENTIN_GAVE_YOU_TO_GO_TO_THE_FORGE_OF_THE_GODS, ExShowScreenMessage.TOP_CENTER, 4500);
 				}
 				break;
@@ -249,6 +241,7 @@ public class Q10385_RedThreadOfFate extends Quest
 					giveItems(player, VULCAN_TRUE_GOLD, 1);
 					giveItems(player, VULCAN_PURE_SILVER, 1);
 					giveItems(player, VULCAN_BLOOD_FIRE, 1);
+					htmltext = "31539-04.html";
 					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_VULCAN_GAVE_YOU_TO_GO_TO_IVORY_TOWER, ExShowScreenMessage.TOP_CENTER, 4500);
 				}
 				break;
@@ -291,6 +284,7 @@ public class Q10385_RedThreadOfFate extends Quest
 					giveItems(player, SCROLL_OF_ESCAPE_DV, 1);
 					giveItems(player, FIERCEST_FLAME, 1);
 					giveItems(player, FONDEST_HEART, 1);
+					htmltext = "31539-08.html";
 				}
 				break;
 			}
@@ -311,38 +305,54 @@ public class Q10385_RedThreadOfFate extends Quest
 		{
 			case 14:
 			{
-				castSkill(npc, player, NPC_HOUSE.getSkill());
-				qs.setCond(15);
-				break;
+				if (skill.getId() == NPC_HOUSE.getSkillId())
+				{
+					castSkill(npc, player, NPC_HOUSE.getSkill());
+					qs.setCond(15);
+					break;
+				}
 			}
 			case 15:
 			{
-				castSkill(npc, player, NPC_PAAGRIO.getSkill());
-				qs.setCond(16);
-				break;
+				if (skill.getId() == NPC_PAAGRIO.getSkillId())
+				{
+					castSkill(npc, player, NPC_PAAGRIO.getSkill());
+					qs.setCond(16);
+					break;
+				}
 			}
 			case 16:
 			{
-				castSkill(npc, player, NPC_SHILEN.getSkill());
-				addAttackDesire(addSpawn(SHILEN_MESSENGER, npc, true, 0, false), player);
-				showOnScreenMsg(player, NpcStringId.YOU_MUST_DEFEAT_SHILEN_S_MESSENGER, ExShowScreenMessage.TOP_CENTER, 4500);
-				startQuestTimer("DESPAWN", 10000, npc, player);
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.BRIGHTEST_LIGHT_HOW_DARE_YOU_DESECRATE_THE_ALTAR_OF_SHILEN));
-				qs.setCond(17);
-				break;
+				if (skill.getId() == NPC_SHILEN.getSkillId())
+				{
+					castSkill(npc, player, NPC_SHILEN.getSkill());
+					addAttackDesire(addSpawn(SHILEN_MESSENGER, npc, true, 0, false), player);
+					showOnScreenMsg(player, NpcStringId.YOU_MUST_DEFEAT_SHILEN_S_MESSENGER, ExShowScreenMessage.TOP_CENTER, 4500);
+					startQuestTimer("DESPAWN", 10000, npc, player);
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.BRIGHTEST_LIGHT_HOW_DARE_YOU_DESECRATE_THE_ALTAR_OF_SHILEN));
+					qs.setCond(17);
+					break;
+				}
 			}
 			case 17:
 			{
-				castSkill(npc, player, NPC_SOULS.getSkill());
-				qs.setCond(18);
-				break;
+				if (skill.getId() == NPC_SOULS.getSkillId())
+				{
+					castSkill(npc, player, NPC_SOULS.getSkill());
+					qs.setCond(18);
+					break;
+				}
 			}
 			case 18:
 			{
-				castSkill(npc, player, NPC_TREE.getSkill());
-				qs.setCond(19);
-				break;
+				if (skill.getId() == NPC_TREE.getSkillId())
+				{
+					castSkill(npc, player, NPC_TREE.getSkill());
+					qs.setCond(19);
+					break;
+				}
 			}
+				return null;
 		}
 		return null;
 	}
@@ -424,13 +434,27 @@ public class Q10385_RedThreadOfFate extends Quest
 				}
 				break;
 			}
+			case WATER_SOURCE:
+			{
+				if (qs.isCond(5))
+				{
+					htmltext = "33784-01.html";
+				}
+				break;
+			}
 			case HOUSE:
 			{
 				if (qs.isCond(14))
 				{
 					htmltext = "33788-01.html";
+					showOnScreenMsg(player, NpcStringId.USE_THE_FONDEST_HEART_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
 				}
-				showOnScreenMsg(player, NpcStringId.USE_THE_FONDEST_HEART_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+				else if (qs.isCond(15))
+				{
+					{
+						htmltext = "33788-02.html";
+					}
+				}
 				break;
 			}
 			case PAAGRIO_TEMPLE:
@@ -438,8 +462,14 @@ public class Q10385_RedThreadOfFate extends Quest
 				if (qs.isCond(15))
 				{
 					htmltext = "33787-01.html";
+					showOnScreenMsg(player, NpcStringId.USE_THE_FIERCEST_FLAME_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
 				}
-				showOnScreenMsg(player, NpcStringId.USE_THE_FIERCEST_FLAME_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+				else if (qs.isCond(16))
+				{
+					{
+						htmltext = "33787-02.html";
+					}
+				}
 				break;
 			}
 			case SHILEN:
@@ -447,8 +477,14 @@ public class Q10385_RedThreadOfFate extends Quest
 				if (qs.isCond(16))
 				{
 					htmltext = "33785-01.html";
+					showOnScreenMsg(player, NpcStringId.USE_THE_BRIGHTEST_LIGHT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
 				}
-				showOnScreenMsg(player, NpcStringId.USE_THE_BRIGHTEST_LIGHT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+				else if (qs.isCond(17))
+				{
+					{
+						htmltext = "33785-02.html";
+					}
+				}
 				break;
 			}
 			case SOULS:
@@ -456,8 +492,14 @@ public class Q10385_RedThreadOfFate extends Quest
 				if (qs.isCond(17))
 				{
 					htmltext = "33789-01.html";
+					showOnScreenMsg(player, NpcStringId.USE_THE_PUREST_SOUL_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
 				}
-				showOnScreenMsg(player, NpcStringId.USE_THE_PUREST_SOUL_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+				else if (qs.isCond(18))
+				{
+					{
+						htmltext = "33789-02.html";
+					}
+				}
 				break;
 			}
 			case MOTHER_TREE:
@@ -526,7 +568,9 @@ public class Q10385_RedThreadOfFate extends Quest
 					{
 						if (qs.isCond(5))
 						{
-							htmltext = "33784-01.html";
+							qs.setCond(6);
+							player.teleToLocation(WATER_LOC, 0);
+							giveItems(player, WATER_GARDEN_OF_EVA, 1);
 						}
 						break;
 					}
@@ -544,6 +588,12 @@ public class Q10385_RedThreadOfFate extends Quest
 						{
 							htmltext = "30370-01.html";
 						}
+						else if (qs.isCond(8))
+						{
+							{
+								htmltext = "30370-05.html";
+							}
+						}
 						break;
 					}
 					case ENFEUX:
@@ -551,6 +601,12 @@ public class Q10385_RedThreadOfFate extends Quest
 						if (qs.isCond(8))
 						{
 							htmltext = "31519-01.html";
+						}
+						else if (qs.isCond(9))
+						{
+							{
+								htmltext = "31519-03.html";
+							}
 						}
 						break;
 					}
@@ -572,9 +628,17 @@ public class Q10385_RedThreadOfFate extends Quest
 						{
 							htmltext = "31539-01.html";
 						}
+						else if (qs.isCond(11))
+						{
+							htmltext = "31539-09.html";
+						}
 						else if (qs.isCond(13))
 						{
 							htmltext = "31539-05.html";
+						}
+						else if (qs.isCond(14))
+						{
+							htmltext = "31539-10.html";
 						}
 						break;
 					}
@@ -583,6 +647,10 @@ public class Q10385_RedThreadOfFate extends Quest
 						if (qs.isCond(11))
 						{
 							htmltext = "31149-01.html";
+						}
+						else if (qs.isCond(12))
+						{
+							htmltext = "31149-03.html";
 						}
 						break;
 					}
