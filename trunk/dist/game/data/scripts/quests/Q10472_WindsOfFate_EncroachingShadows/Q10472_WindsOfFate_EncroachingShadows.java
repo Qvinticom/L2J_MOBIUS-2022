@@ -440,10 +440,7 @@ public class Q10472_WindsOfFate_EncroachingShadows extends Quest
 				{
 					final String html = getHtm(player.getHtmlPrefix(), "33491-01.html");
 					return html.replace("%name%", player.getName());
-				}
-				htmltext = "33491-01.html";
-				{
-					break;
+					
 				}
 			}
 			case KARLA:
@@ -453,15 +450,14 @@ public class Q10472_WindsOfFate_EncroachingShadows extends Quest
 					final String html = getHtm(player.getHtmlPrefix(), "33933-01.html");
 					return html.replace("%name%", player.getName());
 				}
-				htmltext = "33933-01.html";
-			}
 				if (qs.isCond(19))
 				{
 					htmltext = "33933-04.html";
 				}
 				break;
+			}
+			
 		}
-		
 		return htmltext;
 	}
 	
