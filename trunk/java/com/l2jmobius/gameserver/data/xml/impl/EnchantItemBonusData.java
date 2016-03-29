@@ -135,8 +135,8 @@ public class EnchantItemBonusData implements IXmlReader
 						case L2Item.SLOT_LEGS:
 							if (item.getCrystalTypePlus() == CrystalType.R)
 							{
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPMCRITATK.getName(), -1, Stats.CRITICAL_RATE, 0));
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPMCRITATK.getName(), -1, Stats.MCRITICAL_RATE, 0));
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPMCRITRATE.getName(), -1, Stats.CRITICAL_RATE, 0));
+								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPMCRITRATE.getName(), -1, Stats.MCRITICAL_RATE, 0));
 								break;
 							}
 							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));

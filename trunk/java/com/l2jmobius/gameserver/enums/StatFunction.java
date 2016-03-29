@@ -28,7 +28,7 @@ public enum StatFunction
 	ENCHANTACCEVAS("EnchantAccEvas", 30),
 	ENCHANTPATK("EnchantPAtk", 30),
 	ENCHANTMATK("EnchantMAtk", 30),
-	ENCHANTPMCRITATK("EnchantPMCritAtk", 30),
+	ENCHANTPMCRITRATE("EnchantPMCritRate", 30),
 	ENCHANTRUNSPD("EnchantRunSpd", 30),
 	MUL("Mul", 20),
 	SET("Set", 0),
