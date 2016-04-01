@@ -117,7 +117,7 @@ public class Q10361_RolesOfTheSeeker extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == LAKCIS ? "32977-04.htm" : "33449-01.html";
+				htmltext = npc.getId() == LAKCIS ? "32977-04.html" : "33449-01.html";
 				break;
 			}
 			case State.COMPLETED:
