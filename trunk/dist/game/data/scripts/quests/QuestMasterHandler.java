@@ -129,6 +129,7 @@ import quests.Q00457_LostAndFound.Q00457_LostAndFound;
 import quests.Q00458_PerfectForm.Q00458_PerfectForm;
 import quests.Q00463_IMustBeaGenius.Q00463_IMustBeaGenius;
 import quests.Q00464_Oath.Q00464_Oath;
+import quests.Q00470_DivinityProtector.Q00470_DivinityProtector;
 import quests.Q00471_BreakingThroughTheEmeraldSquare.Q00471_BreakingThroughTheEmeraldSquare;
 import quests.Q00472_ChallengeSteamCorridor.Q00472_ChallengeSteamCorridor;
 import quests.Q00473_InTheCoralGarden.Q00473_InTheCoralGarden;
@@ -422,6 +423,7 @@ final class QuestMasterHandler
 		Q00458_PerfectForm.class,
 		Q00463_IMustBeaGenius.class,
 		Q00464_Oath.class,
+		Q00470_DivinityProtector.class,
 		Q00471_BreakingThroughTheEmeraldSquare.class,
 		Q00472_ChallengeSteamCorridor.class,
 		Q00473_InTheCoralGarden.class,
