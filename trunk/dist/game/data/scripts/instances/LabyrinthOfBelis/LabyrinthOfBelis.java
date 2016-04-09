@@ -40,7 +40,7 @@ import quests.Q10331_StartOfFate.Q10331_StartOfFate;
 
 /**
  * Labyrinth of Belis Instance Zone.
- * @author Mobius
+ * @author Mobius, gyo
  */
 public final class LabyrinthOfBelis extends AbstractInstance
 {
@@ -80,6 +80,8 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	private static final int DOOR_7 = 16240007;
 	private static final int DOOR_8 = 16240008;
 	private static final int DAMAGE_ZONE_ID = 10331;
+	private static final int REQUIRED_BELIS_MARK = 3;
+	LOBWorld world = null;
 	
 	class LOBWorld extends InstanceWorld
 	{
@@ -87,6 +89,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 		L2Npc generator = null;
 		List<L2Npc> savedSpawns = null;
 		boolean assistPlayer = false;
+		int insertedBelisMark = 0;
 	}
 	
 	public LabyrinthOfBelis()
@@ -116,7 +119,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 		{
 			return null;
 		}
-		final LOBWorld world = (LOBWorld) tmpworld;
+		world = (LOBWorld) tmpworld;
 		
 		switch (event)
 		{
@@ -124,7 +127,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 			{
 				if (world.getStatus() == 1)
 				{
-					showOnScreenMsg(player, NpcStringId.LET_ME_KNOW_WHEN_YOU_RE_ALL_READY, ExShowScreenMessage.TOP_CENTER, 4000);
+					showOnScreenMsg(player, NpcStringId.LET_ME_KNOW_WHEN_YOU_RE_ALL_READY, ExShowScreenMessage.TOP_CENTER, 10000);
 					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.LET_ME_KNOW_WHEN_YOU_RE_ALL_READY, 1000);
 					startQuestTimer("officer_wait_1", 5000, world.terian, player);
 				}
@@ -197,23 +200,29 @@ public final class LabyrinthOfBelis extends AbstractInstance
 			{
 				world.setStatus(5);
 				openDoor(DOOR_4, player.getInstanceId());
-				showOnScreenMsg(player, NpcStringId.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES_NUSE_THEM_IN_THE_BELIS_VERIFICATION_SYSTEM, ExShowScreenMessage.TOP_CENTER, 5000);
+				showOnScreenMsg(player, NpcStringId.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES_NUSE_THEM_IN_THE_BELIS_VERIFICATION_SYSTEM, ExShowScreenMessage.TOP_CENTER, 8000);
 				world.assistPlayer = true;
 				startQuestTimer("assist_player", 3000, world.terian, player);
 				return null;
 			}
 			case "insert_belis_marks":
 			{
-				if (getQuestItemsCount(player, BELIS_MARK) > 2)
+				if (getQuestItemsCount(player, BELIS_MARK) > 0)
 				{
-					takeItems(player, BELIS_MARK, 3);
-					openDoor(DOOR_5, player.getInstanceId());
-					world.assistPlayer = false;
-					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.COME_ON_ONTO_THE_NEXT_PLACE, 1000);
-					startQuestTimer("officer_goto_3", 5000, world.terian, player);
-					return "33215-02.html";
+					takeItems(player, BELIS_MARK, 1);
+					world.insertedBelisMark++;
+					if (world.insertedBelisMark >= REQUIRED_BELIS_MARK)
+					{
+						openDoor(DOOR_5, player.getInstanceId());
+						world.assistPlayer = false;
+						broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.COME_ON_ONTO_THE_NEXT_PLACE, 1000);
+						startQuestTimer("officer_goto_3", 5000, world.terian, player);
+						return "33215-02.html";
+					}
 				}
-				return "33215-03.html";
+				String htmltext = getHtm(player.getHtmlPrefix(), "33215-03.html");
+				htmltext = htmltext.replace("%BELISE_MARKS_LEFT%", String.valueOf(REQUIRED_BELIS_MARK - world.insertedBelisMark));
+				return htmltext;
 			}
 			case "officer_goto_3":
 			{
@@ -263,13 +272,15 @@ public final class LabyrinthOfBelis extends AbstractInstance
 			}
 			case "room_3_spawns":
 			{
-				showOnScreenMsg(player, NpcStringId.BEHIND_YOU_THE_ENEMY_IS_AMBUSHING_YOU, ExShowScreenMessage.TOP_CENTER, 4000);
 				broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE, 1000);
-				// TODO:
-				/*
-				 * if (getRandomBoolean()) { showOnScreenMsg(player, NpcStringId.IF_TERAIN_DIES_THE_MISSION_WILL_FAIL, ExShowScreenMessage.TOP_CENTER, 4000); }
-				 */
-				
+				if (getRandomBoolean())
+				{
+					showOnScreenMsg(player, NpcStringId.BEHIND_YOU_THE_ENEMY_IS_AMBUSHING_YOU, ExShowScreenMessage.TOP_CENTER, 10000);
+				}
+				else
+				{
+					showOnScreenMsg(player, NpcStringId.IF_TERAIN_DIES_THE_MISSION_WILL_FAIL, ExShowScreenMessage.TOP_CENTER, 10000);
+				}
 				final L2Npc invader;
 				if (getRandomBoolean())
 				{
@@ -300,7 +311,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 						world.generator.deleteMe();
 					}
 					openDoor(DOOR_7, player.getInstanceId());
-					showOnScreenMsg(player, NpcStringId.ELECTRONIC_DEVICE_HAS_BEEN_DESTROYED, ExShowScreenMessage.TOP_CENTER, 4000);
+					showOnScreenMsg(player, NpcStringId.ELECTRONIC_DEVICE_HAS_BEEN_DESTROYED, ExShowScreenMessage.TOP_CENTER, 7000);
 					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.DEVICE_DESTROYED_LET_S_GO_ONTO_THE_NEXT, 1000);
 					startQuestTimer("officer_goto_4", 1000, world.terian, player);
 				}
@@ -414,7 +425,16 @@ public final class LabyrinthOfBelis extends AbstractInstance
 			}
 			case VERIFICATION_SYSTEM:
 			{
-				return "33215-01.html";
+				String htmltext = null;
+				if (world.insertedBelisMark < REQUIRED_BELIS_MARK)
+				{
+					htmltext = "33215-01.html";
+				}
+				else
+				{
+					htmltext = "33215-04.html";
+				}
+				return htmltext;
 			}
 			case ELECTRICITY_GENERATOR:
 			{
