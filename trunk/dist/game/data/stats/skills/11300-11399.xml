@@ -21,16 +21,17 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="11302" levels="8" name="Servitor Major Heal" enchantGroup1="10">
-		<table name="#amount"> 1637 1645 1658 1671 1685 1698 1713 1727 </table>
-		<table name="#effectPoints"> 711 722 733 743 753 763 772 780 </table>
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#ench1mpConsume"> 67 64 61 58 56 53 50 47 44 42 </table>
+	<skill id="11302" levels="11" name="Servitor Major Heal" enchantGroup1="11">
+		<table name="#amount"> 1637 1645 1658 1671 1685 1698 1713 1727 1928 1944 1960</table>
+		<table name="#effectPoints"> 711 722 733 743 753 763 772 780 788 796 804</table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105</table>
+		<table name="#enchMagicLvl"> 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 </table>
+		<table name="#ench1Power"> 1980 1999 2019 2038 2058 2078 2097 2117 2136 2156 2176 2195 2215 2234 2254 2274 2293 2313 2332 2352 </table>
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="3500" />
 		<set name="coolTime" val="500" />
-		<set name="icon" val="icon.skill1127" />
+		<set name="icon" val="icon.skill11302" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="70" />
@@ -38,7 +39,12 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SERVITOR" />
-		<enchant1 name="ench1mpConsume" val="#ench1mpConsume" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant1for>
+			<effect name="Heal">
+				<param power="#ench1Power" />
+			</effect>		
+		</enchant1for>
 		<for>
 			<effect name="Heal">
 				<param power="#amount" />

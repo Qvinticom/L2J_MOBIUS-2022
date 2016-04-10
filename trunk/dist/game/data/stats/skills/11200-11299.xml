@@ -402,6 +402,16 @@
 			<effect name="DamOverTime" ticks="1">
 				<param power="#Dam" />
 			</effect>
+		<!--
+		<selfEffects>
+			<effect name="HealOverTime" ticks="1">
+				<param power="#Dam" />
+			</effect>
+			<effect name="ManaHealOverTime" ticks="1">
+				<param power="#Dam" />
+			</effect>		
+		</selfEffects>
+		-->
 		</for>
 	</skill>
 	<skill id="11261" levels="9" name="Mark of Plague">
