@@ -302,6 +302,8 @@ import quests.Q10775_InSearchOfAnAncientGiant.Q10775_InSearchOfAnAncientGiant;
 import quests.Q10782_LettersFromTheQueen_ForsakenPlains.Q10782_LettersFromTheQueen_ForsakenPlains;
 import quests.Q10785_LettersFromTheQueen_FieldsOfMassacre.Q10785_LettersFromTheQueen_FieldsOfMassacre;
 import quests.Q10789_LettersFromTheQueen_SwampOfScreams.Q10789_LettersFromTheQueen_SwampOfScreams;
+import quests.Q10790_AMercenaryHelper.Q10790_AMercenaryHelper;
+import quests.Q10791_TheManOfMystery.Q10791_TheManOfMystery;
 import quests.Q10792_LettersFromTheQueen_ForestOfTheDead.Q10792_LettersFromTheQueen_ForestOfTheDead;
 
 /**
@@ -596,6 +598,8 @@ final class QuestMasterHandler
 		Q10782_LettersFromTheQueen_ForsakenPlains.class,
 		Q10785_LettersFromTheQueen_FieldsOfMassacre.class,
 		Q10789_LettersFromTheQueen_SwampOfScreams.class,
+		Q10790_AMercenaryHelper.class,
+		Q10791_TheManOfMystery.class,
 		Q10792_LettersFromTheQueen_ForestOfTheDead.class
 	};
 	

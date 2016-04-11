@@ -799,52 +799,52 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="27536" level="65" type="L2Npc" name="Suspicious Cocoon" title="Quest Monster">
+	<npc id="27536" level="65" type="L2Monster" name="Suspicious Cocoon" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>ETC</race>
 		<stats>
-			<vitals hp="3476" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27537" level="65" type="L2Npc" name="Suspicious Cocoon" title="Quest Monster">
+	<npc id="27537" level="65" type="L2Monster" name="Suspicious Cocoon" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>ETC</race>
 		<stats>
-			<vitals hp="3476" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="35" />
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27538" level="65" type="L2Npc" name="Suspicious Cocoon" title="Quest Monster">
+	<npc id="27538" level="65" type="L2Monster" name="Suspicious Cocoon" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>ETC</race>
 		<stats>
-			<vitals hp="3476" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="48" />
 			<height normal="27" />
@@ -901,38 +901,44 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27542" level="68" type="L2Npc" name="Needle Stakato Captain" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="27542" level="68" type="L2Monster" name="Needle Stakato Captain" title="Quest Monster">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<stats>
 			<vitals hp="33462" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<defence physical="356.991435" magical="348.3" evasion="-18" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="50" /> <!-- TODO: FIX IT -->
+				<run ground="120" /> <!-- TODO: FIX IT -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="18" />
-			<height normal="40" />
+			<radius normal="18" /> <!-- TODO: FIX IT -->
+			<height normal="40" /> <!-- TODO: FIX IT -->
 		</collision>
 	</npc>
-	<npc id="27543" level="66" type="L2Npc" name="Needle Stakato" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="27543" level="66" type="L2Monster" name="Needle Stakato" title="Quest Monster">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<stats>
 			<vitals hp="3557" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<defence physical="223.6362" magical="148.899508363765" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="50" /> <!-- TODO: FIX IT -->
+				<run ground="120" /> <!-- TODO: FIX IT -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="15" />
-			<height normal="36" />
+			<radius normal="15" /> <!-- TODO: FIX IT -->
+			<height normal="36" /> <!-- TODO: FIX IT -->
 		</collision>
 	</npc>
 	<npc id="27544" level="85" type="L2Npc" name="Nebulite Eye" title="Quest Monster">
@@ -959,8 +965,8 @@
 		<stats>
 			<vitals hp="6710" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="50" />		
+				<run ground="120" />		
 			</speed>
 		</stats>
 		<status attackable="false" />
