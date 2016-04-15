@@ -310,12 +310,24 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- none --> 
 	<skill id="18555" levels="1" name="Curtiz's Reward Box">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Need verify chances -->
+		<table name="#extractableItems"> 36553,1,20;36554,1,15;36548,1,15;36549,1,10;17527,1,7;17526,1,2;9552,1,5;9553,1,5;9554,1,5;9555,1,5;9556,1,5;9557,1,5;19448,1,0.7;19449,1,0.3 </table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<!-- Changes the appearance of your entire armor into that of Blue Dynasty. Tops and one-pieces only. --> 
 	<skill id="18556" levels="1" name="Blue Dynasty Armor Appearance Stone">

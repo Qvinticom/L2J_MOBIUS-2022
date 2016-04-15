@@ -357,6 +357,10 @@ final class MinionSpawnManager extends AbstractNpcAI
 		NPC.add(25794); // Kernon
 		NPC.add(25797); // Meanas Anor
 		NPC.add(25800); // Mammon Collector Talos
+		NPC.add(26094); // Sola
+		NPC.add(26096); // Ariarc
+		NPC.add(26099); // Sirra
+		NPC.add(26102); // Dark Rider
 		NPC.add(27036); // Calpico
 		NPC.add(27041); // Varangka's Messenger
 		NPC.add(27062); // Tanukia

@@ -726,7 +726,8 @@
 	<item id="46560" name="Curtiz's Reward Box" type="EtcItem">
 		<!-- Reward box received from Captain Kurtiz for helping him with the monsters of the Nightmare Kamaloka. Double-click to open. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
-		<set name="default_action" val="CALL_SKILL" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -734,6 +735,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="18555-1" /> <!-- Curtiz's Reward Box -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="46561" name="Blue Dynasty" type="EtcItem">

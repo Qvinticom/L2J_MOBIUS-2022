@@ -494,9 +494,9 @@ public class L2Attackable extends L2Npc
 							// mob = 24, atk = 50, diff = 26 (no xp)
 							final int levelDiff = attacker.getLevel() - getLevel();
 							
-							final int[] expSp = calculateExpAndSp(levelDiff, damage, totalDamage);
+							final long[] expSp = calculateExpAndSp(levelDiff, damage, totalDamage);
 							long exp = expSp[0];
-							int sp = expSp[1];
+							int sp = (int) expSp[1];
 							
 							if (((levelDiff >= 10) && (levelDiff <= 14)) || ((levelDiff <= -10) && (levelDiff >= -14))) // 30% on 10 - 14 level diff
 							{
@@ -615,9 +615,9 @@ public class L2Attackable extends L2Npc
 						final int levelDiff = partyLvl - getLevel();
 						
 						// Calculate Exp and SP rewards
-						final int[] expSp = calculateExpAndSp(levelDiff, partyDmg, totalDamage);
+						final long[] expSp = calculateExpAndSp(levelDiff, partyDmg, totalDamage);
 						long exp = expSp[0];
-						int sp = expSp[1];
+						int sp = (int) expSp[1];
 						
 						if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
 						{
@@ -1347,7 +1347,7 @@ public class L2Attackable extends L2Npc
 	 * @param totalDamage The total damage done
 	 * @return
 	 */
-	private int[] calculateExpAndSp(int diff, int damage, long totalDamage)
+	private long[] calculateExpAndSp(int diff, int damage, long totalDamage)
 	{
 		double xp;
 		double sp;
@@ -1388,9 +1388,9 @@ public class L2Attackable extends L2Npc
 				sp = 0;
 			}
 		}
-		final int[] tmp =
+		final long[] tmp =
 		{
-			(int) xp,
+			(long) xp,
 			(int) sp
 		};
 		return tmp;

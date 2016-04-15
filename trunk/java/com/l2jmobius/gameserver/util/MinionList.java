@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.util;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
@@ -43,6 +44,15 @@ public class MinionList
 	private final List<L2MonsterInstance> _minionReferences = new CopyOnWriteArrayList<>();
 	/** List containing the cached deleted minions for reuse */
 	protected List<L2MonsterInstance> _reusedMinionReferences = null;
+	
+	private final static List<Integer> KEEP_MINION_AFTER_DEATH_BOSS_IDS = new ArrayList<>();
+	static
+	{
+		KEEP_MINION_AFTER_DEATH_BOSS_IDS.add(26094);
+		KEEP_MINION_AFTER_DEATH_BOSS_IDS.add(26096);
+		KEEP_MINION_AFTER_DEATH_BOSS_IDS.add(26099);
+		KEEP_MINION_AFTER_DEATH_BOSS_IDS.add(26102);
+	}
 	
 	public MinionList(L2MonsterInstance pMaster)
 	{
@@ -169,7 +179,7 @@ public class MinionList
 	 */
 	public void onMasterDie(boolean force)
 	{
-		if (_master.isRaid() || force)
+		if ((_master.isRaid() && !KEEP_MINION_AFTER_DEATH_BOSS_IDS.contains(_master.getId())) || force)
 		{
 			deleteSpawnedMinions();
 		}

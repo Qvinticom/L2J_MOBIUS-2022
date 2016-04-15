@@ -182,6 +182,7 @@ import quests.Q00754_AssistingTheRebelForces.Q00754_AssistingTheRebelForces;
 import quests.Q00755_InNeedOfPetras.Q00755_InNeedOfPetras;
 import quests.Q00756_TopQualityPetra.Q00756_TopQualityPetra;
 import quests.Q00757_TriolsMovement.Q00757_TriolsMovement;
+import quests.Q00760_BlockTheExit.Q00760_BlockTheExit;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
@@ -479,6 +480,7 @@ final class QuestMasterHandler
 		Q00755_InNeedOfPetras.class,
 		Q00756_TopQualityPetra.class,
 		Q00757_TriolsMovement.class,
+		Q00760_BlockTheExit.class,
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
 		Q00903_TheCallOfAntharas.class,

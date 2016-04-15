@@ -55,14 +55,24 @@
 		<set name="reuseDelay" val="5000" />
 	</skill>
 	<skill id="16205" levels="4" name="Burst Shot">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
-		<set name="castRange" val="900" />
+		<set name="mpConsume" val="167" />
+		<set name="power" val="39474" />
+		<set name="magicLvl" val="100" />
+		<set name="targetType" val="FRONT_AREA" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="250" />
+		<set name="baseCritRate" val="15" />
+		<set name="overHit" val="true" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="1000" />
+		<set name="castRange" val="1100" />
+		<set name="effectRange" val="1600" />
+		<set name="reuseDelay" val="10000" />
+		<set name="effectPoint" val="-100" /> <!-- Need verify -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<skill id="16206" levels="4" name="Holy Spike">
 		<!-- AUTO GENERATED SKILL -->

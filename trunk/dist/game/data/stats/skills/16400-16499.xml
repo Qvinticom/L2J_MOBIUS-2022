@@ -424,24 +424,65 @@
 	</skill>
 	<!-- none --> 
 	<skill id="16444" levels="1" name="Fatal Slasher">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Temp stats, need fix. -->
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="100" />
+		<set name="mpConsume" val="121" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="power" val="24563" />
+		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
 	</skill>
 	<!-- none --> 
 	<skill id="16445" levels="1" name="Dark Buster">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Temp stats, need fix. -->
+		<set name="affectRange" val="180" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="100" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="power" val="328" />
+		<set name="reuseDelay" val="20000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<!-- none --> 
 	<skill id="16446" levels="1" name="Unholy Blast">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Temp stats, need fix. -->
+		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="4" /> <!-- Holy -->
+		<set name="elementPower" val="20" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="100" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="power" val="385" />
+		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" />
+		</for>
 	</skill>
 	<!-- Poisoned. HP momentarily decreases. Power 14. --> 
 	<skill id="16447" levels="1" name="Mass Poison">
@@ -452,31 +493,118 @@
 	</skill>
 	<!-- Throws nearby enemies into the air and binds them for 10 sec. --> 
 	<skill id="16448" levels="1" name="Mass Airbind">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<!-- Temp stats, need fix. -->
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="castRange" val="1100" />
+		<set name="reuseDelay" val="120000" />
+		<set name="abnormalTime" val="9" />
+		<set name="effectPoint" val="-1" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
+		<set name="mpConsume" val="86" />
+		<set name="magicLvl" val="100" />
+		<set name="effectRange" val="1100" />
+		<set name="isDebuff" val="true" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="power" val="95" />
+		<set name="activateRate" val="70" />
+		<set name="targetType" val="AREA" />			
+		<for>
+			<effect name="ThrowUp" />
+		</for>
 	</skill>
 	<!-- Casts Hold on target and nearby enemies for 10 sec. --> 
 	<skill id="16449" levels="1" name="Mass Hold">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<!-- Temp stats, need fix. -->
+		<set name="affectRange" val="600" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
+		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="2000" />
+		<set name="icon" val="icon.skill1201" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="100" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="AREA" />
+		<set name="trait" val="HOLD" />
+		<set name="reuseDelay" val="15000" />
+		<for>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Moving against your will due to Fear. --> 
 	<skill id="16450" levels="1" name="Mass Fear">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<!-- Temp stats, need fix. -->
+		<set name="affectRange" val="600" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="6" />
+		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-574" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="2000" />
+		<set name="icon" val="icon.skill1169" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="100" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="20000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="AREA" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="Fear" />
+		</for>
 	</skill>
 	<!-- Attacks nearby enemies and stuns and cancels target for 10 sec. --> 
 	<skill id="16451" levels="1" name="Wide Stun">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<!-- Temp stats, need fix. -->
+		<set name="abnormalLvl" val="9" />
+		<set name="abnormalTime" val="9" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="60" />
+		<set name="fanRange" val="0,0,80,150" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="150" />
+		<set name="basicProperty" val="CON" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="470" />
+		<set name="castRange" val="40" />
+		<set name="reuseDelay" val="60000" />
+		<set name="mpConsume" val="77" />
+		<set name="power" val="16349" />
+		<set name="magicLvl" val="100" />
+		<set name="targetType" val="AURA" />
+		<set name="rideState" val="NONE" />
+		<set name="effectPoint" val="-100" /> <!-- temp fix -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<!-- One of Etis van Etina's disciples. Twin of Isadora, and a Dark Healer representing the Seal of Avarice. Has been aiming for Aden from another dimension to help Etis van Etina. --> 
 	<skill id="16452" levels="1" name="Raid Boss (Lv. 99)">

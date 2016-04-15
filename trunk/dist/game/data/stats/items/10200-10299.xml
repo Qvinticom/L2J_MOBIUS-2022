@@ -177,15 +177,16 @@
 	</item>
 	<item id="10212" name="For NPC (Bow)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
-		<set name="attack_range" val="40" />
+		<set name="attack_range" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="commissionItemType" val="BOW" />
-		<set name="damage_range" val="0;0;40;120" />
+		<set name="damage_range" val="0;0;10;0" />
 		<set name="default_action" val="EQUIP" />
 		<set name="for_npc" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="random_damage" val="10" />
+		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weapon_type" val="BOW" />
