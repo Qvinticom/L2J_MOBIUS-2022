@@ -366,7 +366,9 @@
 	<item id="39726" name="Emissary's Reward Box (Low-grade)" type="EtcItem">
 		<!-- Reward for successfully completing missions for the Delegation. Double-click to open. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="capsuled_items" val="36562,1,1,25;36517,1,1,25;36522,1,1,25;36527,1,1,25;" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -374,7 +376,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="material" val="LIQUID" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="39727" name="Emissary's Reward Box (Mid-grade)" type="EtcItem">
