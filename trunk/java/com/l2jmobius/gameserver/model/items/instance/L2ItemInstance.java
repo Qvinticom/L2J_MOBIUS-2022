@@ -2388,6 +2388,15 @@ public final class L2ItemInstance extends L2Object
 		return _commonSoulCrystalOptions;
 	}
 	
+	public int getCurrentCommonSAOptions()
+	{
+		if (_commonSoulCrystalOptions[0] == null)
+		{
+			return 1;
+		}
+		return 2;
+	}
+	
 	public SoulCrystalOption getSpecialSoulCrystalOption()
 	{
 		return _specialSoulCrystalOption;

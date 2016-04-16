@@ -136,14 +136,9 @@ public class RequestItemEnsoul extends L2GameClientPacket
 	{
 		final CrystalType targetItemGrade = targetItem.getItem().getCrystalType();
 		final int gemstoneId = getGemStoneId(targetItemGrade);
-		final long count = getGemstoneCount(targetItemGrade, targetItem.getCommonSoulCrystalOptions().length > 0, changing, special);
+		final long count = getGemstoneCount(targetItemGrade, targetItem.getCurrentCommonSAOptions() == 2, changing, special);
 		
 		if ((gemstoneId == 0) || (count == 0))
-		{
-			return false;
-		}
-		
-		if (changing && !special && !available2xCommonOption(targetItemGrade))
 		{
 			return false;
 		}
@@ -246,23 +241,6 @@ public class RequestItemEnsoul extends L2GameClientPacket
 			default:
 			{
 				return 0;
-			}
-		}
-	}
-	
-	private static final boolean available2xCommonOption(CrystalType ct)
-	{
-		switch (ct)
-		{
-			case R:
-			case R95:
-			case R99:
-			{
-				return true;
-			}
-			default:
-			{
-				return false;
 			}
 		}
 	}
