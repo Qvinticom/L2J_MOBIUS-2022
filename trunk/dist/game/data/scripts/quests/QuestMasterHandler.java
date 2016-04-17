@@ -133,6 +133,7 @@ import quests.Q00470_DivinityProtector.Q00470_DivinityProtector;
 import quests.Q00471_BreakingThroughTheEmeraldSquare.Q00471_BreakingThroughTheEmeraldSquare;
 import quests.Q00472_ChallengeSteamCorridor.Q00472_ChallengeSteamCorridor;
 import quests.Q00473_InTheCoralGarden.Q00473_InTheCoralGarden;
+import quests.Q00485_HotSpringWater.Q00485_HotSpringWater;
 import quests.Q00490_DutyOfTheSurvivor.Q00490_DutyOfTheSurvivor;
 import quests.Q00492_TombRaiders.Q00492_TombRaiders;
 import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
@@ -549,6 +550,7 @@ final class QuestMasterHandler
 		Q10383_FergasonsOffer.class,
 		Q10384_AnAudienceWithTauti.class,
 		Q10385_RedThreadOfFate.class,
+		Q00485_HotSpringWater.class,
 		Q10386_MysteriousJourney.class,
 		Q10388_ConspiracyBehindDoor.class,
 		Q10389_TheVoiceOfAuthority.class,
