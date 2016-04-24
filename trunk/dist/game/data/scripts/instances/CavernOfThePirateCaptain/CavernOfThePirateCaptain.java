@@ -244,8 +244,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 				return false;
 			}
 			
-			final Long reentertime = InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), (is83 ? TEMPLATE_ID_83 : TEMPLATE_ID_60));
-			if (System.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), (is83 ? TEMPLATE_ID_83 : TEMPLATE_ID_60)))
 			{
 				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_MAY_NOT_RE_ENTER_YET, true);
 				return false;
@@ -391,12 +390,9 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 								giveItems(playersInside, VORPAL_EARRING, 1);
 							}
 						}
-						else if (time <= 900000) // 15 minutes
+						else if ((time <= 900000) && (getRandom(100) < 25)) // 15 minutes
 						{
-							if (getRandom(100) < 25)
-							{
-								giveItems(playersInside, VORPAL_RING, 1);
-							}
+							giveItems(playersInside, VORPAL_RING, 1);
 						}
 					}
 				}

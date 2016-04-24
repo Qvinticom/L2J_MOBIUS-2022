@@ -85,19 +85,15 @@ public final class TriggerSkillBySkill extends AbstractEffect
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		final L2Object[] targets = targetHandler.getTargetList(triggerSkill, event.getCaster(), false, event.getTarget());
-		
-		for (L2Object triggerTarget : targets)
+		for (L2Object triggerTarget : targetHandler.getTargetList(triggerSkill, event.getCaster(), false, event.getTarget()))
 		{
 			if ((triggerTarget == null) || !triggerTarget.isCharacter())
 			{
 				continue;
 			}
-			
-			final L2Character targetChar = (L2Character) triggerTarget;
-			if (!targetChar.isInvul())
+			if (!((L2Character) triggerTarget).isInvul())
 			{
-				event.getCaster().makeTriggerCast(triggerSkill, targetChar);
+				event.getCaster().makeTriggerCast(triggerSkill, ((L2Character) triggerTarget));
 			}
 		}
 	}

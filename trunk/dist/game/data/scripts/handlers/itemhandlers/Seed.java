@@ -43,7 +43,7 @@ public class Seed implements IItemHandler
 		{
 			return false;
 		}
-		else if (!playable.isPlayer())
+		if (!playable.isPlayer())
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
@@ -59,7 +59,7 @@ public class Seed implements IItemHandler
 			playable.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
-		else if (!tgt.isMonster() || ((L2MonsterInstance) tgt).isRaid() || (tgt instanceof L2ChestInstance))
+		if (!tgt.isMonster() || ((L2MonsterInstance) tgt).isRaid() || (tgt instanceof L2ChestInstance))
 		{
 			playable.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
 			return false;
@@ -71,7 +71,7 @@ public class Seed implements IItemHandler
 			playable.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
-		else if (target.isSeeded())
+		if (target.isSeeded())
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
@@ -82,7 +82,7 @@ public class Seed implements IItemHandler
 		{
 			return false;
 		}
-		else if (seed.getCastleId() != MapRegionManager.getInstance().getAreaCastle(playable)) // TODO: replace me with tax zone
+		if (seed.getCastleId() != MapRegionManager.getInstance().getAreaCastle(playable))
 		{
 			playable.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
 			return false;

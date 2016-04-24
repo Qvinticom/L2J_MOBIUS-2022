@@ -89,19 +89,10 @@ public class RequestShowResetShopList extends L2GameClientPacket
 			requiredAdena += face.getResetAdena();
 		}
 		
-		if ((player.getAdena() < requiredAdena))
+		if ((player.getAdena() < requiredAdena) || ((requiredAdena > 0) && !player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true)))
 		{
 			player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
 			return;
-		}
-		
-		if (requiredAdena > 0)
-		{
-			if (!player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true))
-			{
-				player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
-				return;
-			}
 		}
 		
 		player.getVariables().remove("visualHairId");

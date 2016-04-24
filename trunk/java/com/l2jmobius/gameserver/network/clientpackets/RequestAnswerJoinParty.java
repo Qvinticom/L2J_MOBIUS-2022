@@ -87,14 +87,12 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 						requestor.sendPacket(sm);
 						return;
 					}
-					player.joinParty(requestor.getParty());
 				}
 				else
 				{
 					requestor.setParty(new L2Party(requestor, requestor.getPartyDistributionType()));
-					player.joinParty(requestor.getParty());
 				}
-				
+				player.joinParty(requestor.getParty());
 				if (requestor.isInPartyMatchRoom() && player.isInPartyMatchRoom())
 				{
 					final PartyMatchRoomList list = PartyMatchRoomList.getInstance();

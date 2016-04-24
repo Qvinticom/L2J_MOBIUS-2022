@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
 
 /**
@@ -54,21 +53,21 @@ public class AttackStanceTaskManager
 	 */
 	public void addAttackStanceTask(L2Character actor)
 	{
-		if (actor != null)
+		if (actor == null)
 		{
-			if (actor.isPlayable())
+			return;
+		}
+		if (actor.isPlayable())
+		{
+			for (L2CubicInstance cubic : actor.getActingPlayer().getCubics().values())
 			{
-				final L2PcInstance player = actor.getActingPlayer();
-				for (L2CubicInstance cubic : player.getCubics().values())
+				if (cubic.getId() != L2CubicInstance.LIFE_CUBIC)
 				{
-					if (cubic.getId() != L2CubicInstance.LIFE_CUBIC)
-					{
-						cubic.doAction();
-					}
+					cubic.doAction();
 				}
 			}
-			_attackStanceTasks.put(actor, System.currentTimeMillis());
 		}
+		_attackStanceTasks.put(actor, System.currentTimeMillis());
 	}
 	
 	/**
@@ -77,14 +76,15 @@ public class AttackStanceTaskManager
 	 */
 	public void removeAttackStanceTask(L2Character actor)
 	{
-		if (actor != null)
+		if (actor == null)
 		{
-			if (actor.isSummon())
-			{
-				actor = actor.getActingPlayer();
-			}
-			_attackStanceTasks.remove(actor);
+			return;
 		}
+		if (actor.isSummon())
+		{
+			actor = actor.getActingPlayer();
+		}
+		_attackStanceTasks.remove(actor);
 	}
 	
 	/**
@@ -94,15 +94,15 @@ public class AttackStanceTaskManager
 	 */
 	public boolean hasAttackStanceTask(L2Character actor)
 	{
-		if (actor != null)
+		if (actor == null)
 		{
-			if (actor.isSummon())
-			{
-				actor = actor.getActingPlayer();
-			}
-			return _attackStanceTasks.containsKey(actor);
+			return false;
 		}
-		return false;
+		if (actor.isSummon())
+		{
+			actor = actor.getActingPlayer();
+		}
+		return _attackStanceTasks.containsKey(actor);
 	}
 	
 	protected class FightModeScheduler implements Runnable

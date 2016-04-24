@@ -73,5 +73,4 @@ public class Expression
 			_log.log(Level.WARNING, "", e);
 		}
 	}
-	
 }

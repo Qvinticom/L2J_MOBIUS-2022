@@ -32,12 +32,13 @@ public class L2ShuttleAI extends L2VehicleAI
 	@Override
 	public void moveTo(int x, int y, int z)
 	{
-		if (!_actor.isMovementDisabled())
+		if (_actor.isMovementDisabled())
 		{
-			_clientMoving = true;
-			_actor.moveToLocation(x, y, z, 0);
-			_actor.broadcastPacket(new ExShuttleMove(getActor(), x, y, z));
+			return;
 		}
+		_clientMoving = true;
+		_actor.moveToLocation(x, y, z, 0);
+		_actor.broadcastPacket(new ExShuttleMove(getActor(), x, y, z));
 	}
 	
 	@Override

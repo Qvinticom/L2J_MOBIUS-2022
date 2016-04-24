@@ -87,9 +87,7 @@ public class OlympiadManagerLink implements IBypassHandler
 		{
 			if (command.toLowerCase().startsWith("olympiaddesc"))
 			{
-				final int val = Integer.parseInt(command.substring(13, 14));
-				final String suffix = command.substring(14);
-				((L2OlympiadManagerInstance) target).showChatWindow(activeChar, val, suffix);
+				((L2OlympiadManagerInstance) target).showChatWindow(activeChar, Integer.parseInt(command.substring(13, 14)), command.substring(14));
 			}
 			else if (command.toLowerCase().startsWith("olympiadnoble"))
 			{

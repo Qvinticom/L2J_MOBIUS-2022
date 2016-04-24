@@ -140,8 +140,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(14);
-				teleportTo(activeChar, val);
+				teleportTo(activeChar, command.substring(14));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -158,9 +157,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(25);
-				
-				teleportCharacter(activeChar, val);
+				teleportCharacter(activeChar, command.substring(25));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -173,9 +170,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				final String targetName = command.substring(17);
-				final L2PcInstance player = L2World.getInstance().getPlayer(targetName);
-				teleportToCharacter(activeChar, player);
+				teleportToCharacter(activeChar, L2World.getInstance().getPlayer(command.substring(17)));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -646,5 +641,4 @@ public class AdminTeleport implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 	}
-	
 }

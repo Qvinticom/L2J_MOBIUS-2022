@@ -74,12 +74,7 @@ public class Area implements ITargetTypeHandler
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharacters();
 		for (L2Character obj : objs)
 		{
-			if (!(obj.isAttackable() || obj.isPlayable()))
-			{
-				continue;
-			}
-			
-			if (obj == origin)
+			if (!(obj.isAttackable() || obj.isPlayable()) || (obj == origin))
 			{
 				continue;
 			}
@@ -100,12 +95,7 @@ public class Area implements ITargetTypeHandler
 			}
 		}
 		
-		if (targetList.isEmpty())
-		{
-			return EMPTY_TARGET_LIST;
-		}
-		
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.isEmpty() ? EMPTY_TARGET_LIST : targetList.toArray(new L2Character[targetList.size()]);
 	}
 	
 	@Override

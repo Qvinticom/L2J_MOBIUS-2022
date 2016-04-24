@@ -91,9 +91,7 @@ final class FortressOfTheDead extends ClanHallSiegeEngine
 				final int id = clan.getId();
 				if ((id > 0) && _damageToLidia.containsKey(id))
 				{
-					int newDamage = _damageToLidia.get(id);
-					newDamage += damage;
-					_damageToLidia.put(id, newDamage);
+					_damageToLidia.put(id, (_damageToLidia.get(id) + damage));
 				}
 				else
 				{
@@ -158,8 +156,7 @@ final class FortressOfTheDead extends ClanHallSiegeEngine
 		if ((hoursLeft < 0) || (hoursLeft > 6))
 		{
 			cancelSiegeTask();
-			final long scheduleTime = (24 - hoursLeft) * 10 * 60000;
-			_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeStarts(), scheduleTime);
+			_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeStarts(), ((24 - hoursLeft) * 10 * 60000));
 		}
 		else
 		{

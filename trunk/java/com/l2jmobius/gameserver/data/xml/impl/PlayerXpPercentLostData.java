@@ -71,12 +71,12 @@ public final class PlayerXpPercentLostData implements IXmlReader
 	
 	public double getXpPercent(int level)
 	{
-		if (level > _maxlevel)
+		if (level <= _maxlevel)
 		{
-			LOGGER.warning("Require to high level inside PlayerXpPercentLostData (" + level + ")");
-			return _playerXpPercentLost[_maxlevel];
+			return _playerXpPercentLost[level];
 		}
-		return _playerXpPercentLost[level];
+		LOGGER.warning("Require to high level inside PlayerXpPercentLostData (" + level + ")");
+		return _playerXpPercentLost[_maxlevel];
 	}
 	
 	/**

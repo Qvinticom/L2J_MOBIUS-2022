@@ -298,5 +298,4 @@ public class AdminReload implements IAdminCommandHandler
 	{
 		return ADMIN_COMMANDS;
 	}
-	
 }

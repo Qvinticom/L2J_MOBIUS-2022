@@ -64,9 +64,7 @@ public class RequestPledgeWaitingApply extends L2GameClientPacket
 			return;
 		}
 		
-		final PledgeApplicantInfo info = new PledgeApplicantInfo(activeChar.getObjectId(), activeChar.getName(), activeChar.getLevel(), _karma, _clanId, _message);
-		
-		if (ClanEntryManager.getInstance().addPlayerApplicationToClan(_clanId, info))
+		if (ClanEntryManager.getInstance().addPlayerApplicationToClan(_clanId, (new PledgeApplicantInfo(activeChar.getObjectId(), activeChar.getName(), activeChar.getLevel(), _karma, _clanId, _message))))
 		{
 			activeChar.sendPacket(new ExPledgeRecruitApplyInfo(ClanEntryStatus.WAITING));
 			
@@ -90,5 +88,4 @@ public class RequestPledgeWaitingApply extends L2GameClientPacket
 	{
 		return _C__D0_D7_REQUESTPLEDGEWAITINGAPPLY;
 	}
-	
 }

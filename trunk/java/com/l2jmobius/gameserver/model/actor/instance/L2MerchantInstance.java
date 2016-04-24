@@ -54,18 +54,7 @@ public class L2MerchantInstance extends L2NpcInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		
-		if (val == 0)
-		{
-			pom = "" + npcId;
-		}
-		else
-		{
-			pom = npcId + "-" + val;
-		}
-		
-		return "html/merchant/" + pom + ".htm";
+		return "html/merchant/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
 	}
 	
 	/**

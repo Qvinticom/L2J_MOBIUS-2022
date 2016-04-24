@@ -151,12 +151,9 @@ public class Q10775_InSearchOfAnAncientGiant extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, ENERGY_OF_REGENERATION, 1, 20, 0.2, true))
 		{
-			if (giveItemRandomly(killer, npc, ENERGY_OF_REGENERATION, 1, 20, 0.2, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

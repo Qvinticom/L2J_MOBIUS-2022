@@ -138,9 +138,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(22);
-				final int page = Integer.parseInt(val);
-				listCharacters(activeChar, page);
+				listCharacters(activeChar, Integer.parseInt(command.substring(22)));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -152,8 +150,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(21);
-				findCharacter(activeChar, val);
+				findCharacter(activeChar, command.substring(21));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{ // Case of empty character name
@@ -165,8 +162,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(14);
-				findCharactersPerIp(activeChar, val);
+				findCharactersPerIp(activeChar, command.substring(14));
 			}
 			catch (Exception e)
 			{ // Case of empty or malformed IP number
@@ -178,8 +174,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(19);
-				findCharactersPerAccount(activeChar, val);
+				findCharactersPerAccount(activeChar, command.substring(19));
 			}
 			catch (Exception e)
 			{ // Case of empty or malformed player name
@@ -212,9 +207,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(15);
-				final int karma = Integer.parseInt(val);
-				setTargetKarma(activeChar, karma);
+				setTargetKarma(activeChar, Integer.parseInt(command.substring(15)));
 			}
 			catch (Exception e)
 			{
@@ -570,9 +563,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final boolean changeCreateExpiryTime = st.nextToken().equalsIgnoreCase("create");
 				
 				final String playerName = st.nextToken();
-				L2PcInstance player = null;
-				player = L2World.getInstance().getPlayer(playerName);
-				
+				final L2PcInstance player = L2World.getInstance().getPlayer(playerName);
 				if (player == null)
 				{
 					final String updateQuery = "UPDATE characters SET " + (changeCreateExpiryTime ? "clan_create_expiry_time" : "clan_join_expiry_time") + " WHERE char_name=? LIMIT 1";
@@ -751,9 +742,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			L2Object target;
 			try
 			{
-				final String val = command.substring(19);
-				final int objId = Integer.parseInt(val);
-				target = L2World.getInstance().getPet(objId);
+				target = L2World.getInstance().getPet(Integer.parseInt(command.substring(19)));
 			}
 			catch (Exception e)
 			{
@@ -888,8 +877,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
-				final L2Playable playable = ((L2Playable) target);
-				playable.updatePvPFlag(Math.abs(playable.getPvpFlag() - 1));
+				((L2Playable) target).updatePvPFlag(Math.abs(((L2Playable) target).getPvpFlag() - 1));
 			}
 			catch (Exception e)
 			{
@@ -1079,8 +1067,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		if (target instanceof L2PcInstance)
 		{
-			final L2PcInstance player = (L2PcInstance) target;
-			gatherCharacterInfo(activeChar, player, "charedit.htm");
+			gatherCharacterInfo(activeChar, ((L2PcInstance) target), "charedit.htm");
 		}
 	}
 	
@@ -1378,8 +1365,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		public int hashCode()
 		{
 			final int prime = 31;
-			int result = 1;
-			result = (prime * result) + ((ip == null) ? 0 : ip.hashCode());
+			int result = (prime * 1) + ((ip == null) ? 0 : ip.hashCode());
 			for (int[] array : tracert)
 			{
 				result = (prime * result) + Arrays.hashCode(array);
@@ -1455,8 +1441,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		html.replace("%race%", target.getTemplate().getRace().toString());
 		if (target instanceof L2PetInstance)
 		{
-			final int objId = target.getActingPlayer().getObjectId();
-			html.replace("%inv%", " <a action=\"bypass admin_show_pet_inv " + objId + "\">view</a>");
+			html.replace("%inv%", " <a action=\"bypass admin_show_pet_inv " + target.getActingPlayer().getObjectId() + "\">view</a>");
 		}
 		else
 		{

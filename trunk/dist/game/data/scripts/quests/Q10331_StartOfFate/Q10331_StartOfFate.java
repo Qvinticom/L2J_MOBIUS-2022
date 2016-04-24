@@ -340,14 +340,7 @@ public class Q10331_StartOfFate extends Quest
 							}
 							case 6:
 							{
-								if (player.isMageClass())
-								{
-									htmltext = "32153-05.html";
-								}
-								else
-								{
-									htmltext = "32153-06.html";
-								}
+								htmltext = player.isMageClass() ? "32153-05.html" : "32153-06.html";
 								break;
 							}
 							case 7:
@@ -373,14 +366,7 @@ public class Q10331_StartOfFate extends Quest
 							}
 							case 7:
 							{
-								if (player.isMageClass())
-								{
-									htmltext = "32147-05.html";
-								}
-								else
-								{
-									htmltext = "32147-06.html";
-								}
+								htmltext = player.isMageClass() ? "32147-05.html" : "32147-06.html";
 								break;
 							}
 							case 6:
@@ -406,14 +392,7 @@ public class Q10331_StartOfFate extends Quest
 							}
 							case 8:
 							{
-								if (player.isMageClass())
-								{
-									htmltext = "32160-05.html";
-								}
-								else
-								{
-									htmltext = "32160-06.html";
-								}
+								htmltext = player.isMageClass() ? "32160-05.html" : "32160-06.html";
 								break;
 							}
 							case 6:
@@ -439,14 +418,7 @@ public class Q10331_StartOfFate extends Quest
 							}
 							case 9:
 							{
-								if (player.getClassId().getId() == 49)
-								{
-									htmltext = "32150-05.html";
-								}
-								else
-								{
-									htmltext = "32150-06.html";
-								}
+								htmltext = player.getClassId().getId() == 49 ? "32150-05.html" : "32150-06.html";
 								break;
 							}
 							case 6:
@@ -498,14 +470,7 @@ public class Q10331_StartOfFate extends Quest
 							}
 							case 11:
 							{
-								if (player.getAppearance().getSex())
-								{
-									htmltext = "32146-05.html";
-								}
-								else
-								{
-									htmltext = "32146-06.html";
-								}
+								htmltext = player.getAppearance().getSex() ? "32146-05.html" : "32146-06.html";
 								break;
 							}
 							case 6:
@@ -630,14 +595,7 @@ public class Q10331_StartOfFate extends Quest
 					{
 						if (player.getRace() == Race.HUMAN)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32153-01.htm";
-							}
-							else
-							{
-								htmltext = "32153-12.htm";
-							}
+							htmltext = player.getLevel() >= MIN_LEVEL ? "32153-01.htm" : "32153-12.htm";
 						}
 						else
 						{
@@ -652,14 +610,7 @@ public class Q10331_StartOfFate extends Quest
 					{
 						if (player.getRace() == Race.ELF)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32147-01.html";
-							}
-							else
-							{
-								htmltext = "32147-11.html";
-							}
+							htmltext = player.getLevel() >= MIN_LEVEL ? "32147-01.html" : "32147-11.html";
 						}
 						else
 						{
@@ -674,14 +625,7 @@ public class Q10331_StartOfFate extends Quest
 					{
 						if (player.getRace() == Race.DARK_ELF)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32160-01.html";
-							}
-							else
-							{
-								htmltext = "32160-11.html";
-							}
+							htmltext = player.getLevel() >= MIN_LEVEL ? "32160-01.html" : "32160-11.html";
 						}
 						else
 						{
@@ -696,14 +640,7 @@ public class Q10331_StartOfFate extends Quest
 					{
 						if (player.getRace() == Race.ORC)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32150-01.html";
-							}
-							else
-							{
-								htmltext = "32150-10.html";
-							}
+							htmltext = player.getLevel() >= MIN_LEVEL ? "32150-01.html" : "32150-10.html";
 						}
 						else
 						{
@@ -718,14 +655,7 @@ public class Q10331_StartOfFate extends Quest
 					{
 						if (player.getRace() == Race.DWARF)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32157-01.html";
-							}
-							else
-							{
-								htmltext = "32157-08.html";
-							}
+							htmltext = player.getLevel() >= MIN_LEVEL ? "32157-01.html" : "32157-08.html";
 						}
 						else
 						{
@@ -740,14 +670,7 @@ public class Q10331_StartOfFate extends Quest
 					{
 						if (player.getRace() == Race.KAMAEL)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32146-01.html";
-							}
-							else
-							{
-								htmltext = "32146-09.html";
-							}
+							htmltext = player.getLevel() >= MIN_LEVEL ? "32146-01.html" : "32146-09.html";
 						}
 						else
 						{

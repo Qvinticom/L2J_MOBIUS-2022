@@ -92,12 +92,7 @@ public final class AdminPForge implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				if (i > 0)
-				{
-					return true;
-				}
-				
-				return false;
+				return i > 0;
 			}
 			
 			if (opCodeLong < 0)
@@ -430,14 +425,7 @@ public final class AdminPForge implements IAdminCommandHandler
 							case "$boid":
 							{
 								boat = activeChar.getBoat();
-								if (boat != null)
-								{
-									value = String.valueOf(boat.getObjectId());
-								}
-								else
-								{
-									value = "0";
-								}
+								value = boat != null ? String.valueOf(boat.getObjectId()) : "0";
 								break;
 							}
 							case "$title":
@@ -481,93 +469,44 @@ public final class AdminPForge implements IAdminCommandHandler
 								if ((target != null) && (target instanceof L2Playable))
 								{
 									boat = ((L2Playable) target).getActingPlayer().getBoat();
-									if (boat != null)
-									{
-										value = String.valueOf(boat.getObjectId());
-									}
-									else
-									{
-										value = "0";
-									}
+									value = boat != null ? String.valueOf(boat.getObjectId()) : "0";
 								}
 								break;
 							}
 							case "$ttitle":
 							{
 								target = activeChar.getTarget();
-								if ((target != null) && (target instanceof L2Character))
-								{
-									value = String.valueOf(((L2Character) target).getTitle());
-								}
-								else
-								{
-									value = "";
-								}
+								value = (target != null) && (target instanceof L2Character) ? String.valueOf(((L2Character) target).getTitle()) : "";
 								break;
 							}
 							case "$tname":
 							{
 								target = activeChar.getTarget();
-								if (target != null)
-								{
-									value = String.valueOf(target.getName());
-								}
-								else
-								{
-									value = "";
-								}
+								value = target != null ? String.valueOf(target.getName()) : "";
 								break;
 							}
 							case "$tx":
 							{
 								target = activeChar.getTarget();
-								if (target != null)
-								{
-									value = String.valueOf(target.getX());
-								}
-								else
-								{
-									value = "0";
-								}
+								value = target != null ? String.valueOf(target.getX()) : "0";
 								break;
 							}
 							case "$ty":
 							{
 								target = activeChar.getTarget();
-								if (target != null)
-								{
-									value = String.valueOf(target.getY());
-								}
-								else
-								{
-									value = "0";
-								}
+								value = target != null ? String.valueOf(target.getY()) : "0";
 								break;
 							}
 							case "$tz":
 							{
 								target = activeChar.getTarget();
-								if (target != null)
-								{
-									value = String.valueOf(target.getZ());
-								}
-								else
-								{
-									value = "0";
-								}
+								value = target != null ? String.valueOf(target.getZ()) : "0";
 								break;
 							}
 							case "$theading":
 							{
 								target = activeChar.getTarget();
-								if (target != null)
-								{
-									value = String.valueOf(target.getHeading());
-								}
-								else
-								{
-									value = "0";
-								}
+								value = target != null ? String.valueOf(target.getHeading()) : "0";
 								break;
 							}
 						}

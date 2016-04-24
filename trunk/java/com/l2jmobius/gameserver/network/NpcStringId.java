@@ -36240,9 +36240,7 @@ public final class NpcStringId
 	
 	private static final void buildFastLookupTable()
 	{
-		final Field[] fields = NpcStringId.class.getDeclaredFields();
-		
-		for (Field field : fields)
+		for (Field field : NpcStringId.class.getDeclaredFields())
 		{
 			final int mod = field.getModifiers();
 			if (Modifier.isStatic(mod) && Modifier.isPublic(mod) && field.getType().equals(NpcStringId.class) && field.isAnnotationPresent(ClientString.class))

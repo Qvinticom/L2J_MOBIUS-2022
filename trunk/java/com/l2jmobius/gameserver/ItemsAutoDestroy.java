@@ -74,32 +74,24 @@ public final class ItemsAutoDestroy
 						}
 					}
 				}
-				else if (item.getItem().hasExImmediateEffect())
+				else if (item.getItem().hasExImmediateEffect() && ((curtime - item.getDropTime()) > Config.HERB_AUTO_DESTROY_TIME))
 				{
-					if ((curtime - item.getDropTime()) > Config.HERB_AUTO_DESTROY_TIME)
+					L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
+					L2World.getInstance().removeObject(item);
+					_items.remove(item.getObjectId());
+					if (Config.SAVE_DROPPED_ITEM)
 					{
-						L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
-						L2World.getInstance().removeObject(item);
-						_items.remove(item.getObjectId());
-						if (Config.SAVE_DROPPED_ITEM)
-						{
-							ItemsOnGroundManager.getInstance().removeObject(item);
-						}
+						ItemsOnGroundManager.getInstance().removeObject(item);
 					}
 				}
-				else
+				else if ((curtime - item.getDropTime()) > ((Config.AUTODESTROY_ITEM_AFTER == 0) ? 3600000 : Config.AUTODESTROY_ITEM_AFTER * 1000))
 				{
-					final long sleep = ((Config.AUTODESTROY_ITEM_AFTER == 0) ? 3600000 : Config.AUTODESTROY_ITEM_AFTER * 1000);
-					
-					if ((curtime - item.getDropTime()) > sleep)
+					L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
+					L2World.getInstance().removeObject(item);
+					_items.remove(item.getObjectId());
+					if (Config.SAVE_DROPPED_ITEM)
 					{
-						L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
-						L2World.getInstance().removeObject(item);
-						_items.remove(item.getObjectId());
-						if (Config.SAVE_DROPPED_ITEM)
-						{
-							ItemsOnGroundManager.getInstance().removeObject(item);
-						}
+						ItemsOnGroundManager.getInstance().removeObject(item);
 					}
 				}
 			}

@@ -42,11 +42,10 @@ public class FuncAtkEvasion extends AbstractFunction
 	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
 	{
 		final int level = effector.getLevel();
-		double value = initVal;
+		// [Square(DEX)] * 5 + lvl;
+		double value = initVal + (Math.sqrt(effector.getDEX()) * 5) + level;
 		if (effector.isPlayer())
 		{
-			// [Square(DEX)] * 5 + lvl;
-			value += (Math.sqrt(effector.getDEX()) * 5) + level;
 			if (level > 69)
 			{
 				value += level - 69;
@@ -72,14 +71,9 @@ public class FuncAtkEvasion extends AbstractFunction
 				value += 1;
 			}
 		}
-		else
+		else if (level > 69)
 		{
-			// [Square(DEX)] * 5 + lvl;
-			value += (Math.sqrt(effector.getDEX()) * 5) + level;
-			if (level > 69)
-			{
-				value += (level - 69) + 2;
-			}
+			value += (level - 69) + 2;
 		}
 		return (int) value;
 	}

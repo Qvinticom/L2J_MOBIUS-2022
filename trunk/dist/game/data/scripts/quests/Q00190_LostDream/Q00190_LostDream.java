@@ -188,12 +188,9 @@ public final class Q00190_LostDream extends Quest
 				}
 			}
 		}
-		else if (qs.isCompleted())
+		else if (qs.isCompleted() && (npc.getId() == HEAD_BLACKSMITH_KUSTO))
 		{
-			if (npc.getId() == HEAD_BLACKSMITH_KUSTO)
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-			}
+			htmltext = getAlreadyCompletedMsg(player);
 		}
 		return htmltext;
 	}

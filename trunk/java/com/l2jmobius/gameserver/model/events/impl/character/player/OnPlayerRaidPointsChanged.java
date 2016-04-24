@@ -56,5 +56,4 @@ public class OnPlayerRaidPointsChanged implements IBaseEvent
 	{
 		return EventType.ON_PLAYER_RAID_POINTS_CHANGED;
 	}
-	
 }

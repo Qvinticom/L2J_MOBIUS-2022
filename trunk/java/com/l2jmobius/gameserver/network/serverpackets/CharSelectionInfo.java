@@ -235,19 +235,15 @@ public class CharSelectionInfo extends L2GameServerPacket
 		
 		// See if the char must be deleted
 		final long deletetime = chardata.getLong("deletetime");
-		if (deletetime > 0)
+		if ((deletetime > 0) && (System.currentTimeMillis() > deletetime))
 		{
-			if (System.currentTimeMillis() > deletetime)
+			final L2Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
+			if (clan != null)
 			{
-				final L2Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
-				if (clan != null)
-				{
-					clan.removeClanMember(objectId, 0);
-				}
-				
-				L2GameClient.deleteCharByObjId(objectId);
-				return null;
+				clan.removeClanMember(objectId, 0);
 			}
+			L2GameClient.deleteCharByObjId(objectId);
+			return null;
 		}
 		
 		final CharSelectInfoPackage charInfopackage = new CharSelectInfoPackage(objectId, name);

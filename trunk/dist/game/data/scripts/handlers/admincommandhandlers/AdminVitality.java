@@ -57,8 +57,7 @@ public class AdminVitality implements IAdminCommandHandler
 		
 		if (activeChar.getTarget() instanceof L2PcInstance)
 		{
-			L2PcInstance target;
-			target = (L2PcInstance) activeChar.getTarget();
+			final L2PcInstance target = (L2PcInstance) activeChar.getTarget();
 			
 			if (cmd.equals("admin_set_vitality"))
 			{

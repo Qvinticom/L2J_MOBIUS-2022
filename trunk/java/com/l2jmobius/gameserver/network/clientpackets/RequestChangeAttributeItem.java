@@ -80,19 +80,13 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (!item.isWeapon())
+		if (!item.isWeapon() || (_newAttributeID == -1))
 		{
 			player.removeRequest(request.getClass());
 			player.sendPacket(new ExChangeAttributeItemList(player, _attributeOID));
 			return;
 		}
 		
-		if (_newAttributeID == -1)
-		{
-			player.removeRequest(request.getClass());
-			player.sendPacket(new ExChangeAttributeItemList(player, _attributeOID));
-			return;
-		}
 		final L2ItemInstance attribute = player.getInventory().getItemByObjectId(_attributeOID);
 		player.getInventory().destroyItem("ChangingAttribute", _attributeOID, 1, player, null);
 		

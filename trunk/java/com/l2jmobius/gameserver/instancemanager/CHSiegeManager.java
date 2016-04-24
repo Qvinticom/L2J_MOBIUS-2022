@@ -117,11 +117,7 @@ public final class CHSiegeManager
 	public final ClanHallSiegeEngine getSiege(L2Character character)
 	{
 		final SiegableHall hall = getNearbyClanHall(character);
-		if (hall == null)
-		{
-			return null;
-		}
-		return hall.getSiege();
+		return hall == null ? null : hall.getSiege();
 	}
 	
 	public final void registerClan(L2Clan clan, SiegableHall hall, L2PcInstance player)

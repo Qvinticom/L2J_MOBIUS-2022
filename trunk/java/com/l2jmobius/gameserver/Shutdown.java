@@ -84,14 +84,7 @@ public class Shutdown extends Thread
 	{
 		_log.warning("IP: " + IP + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		
-		if (restart)
-		{
-			_shutdownMode = GM_RESTART;
-		}
-		else
-		{
-			_shutdownMode = GM_SHUTDOWN;
-		}
+		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 		
 		if (_shutdownMode > 0)
 		{
@@ -167,14 +160,7 @@ public class Shutdown extends Thread
 			seconds = 0;
 		}
 		_secondsShut = seconds;
-		if (restart)
-		{
-			_shutdownMode = GM_RESTART;
-		}
-		else
-		{
-			_shutdownMode = GM_SHUTDOWN;
-		}
+		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 	}
 	
 	/**
@@ -319,14 +305,7 @@ public class Shutdown extends Thread
 	 */
 	public void startShutdown(L2PcInstance activeChar, int seconds, boolean restart)
 	{
-		if (restart)
-		{
-			_shutdownMode = GM_RESTART;
-		}
-		else
-		{
-			_shutdownMode = GM_SHUTDOWN;
-		}
+		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 		
 		_log.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		

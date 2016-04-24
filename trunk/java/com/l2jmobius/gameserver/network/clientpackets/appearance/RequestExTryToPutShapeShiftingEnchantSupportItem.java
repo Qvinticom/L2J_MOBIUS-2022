@@ -69,48 +69,20 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem extends L2GameClie
 		final L2ItemInstance targetItem = inventory.getItemByObjectId(_targetItemObjId);
 		final L2ItemInstance extracItem = inventory.getItemByObjectId(_extracItemObjId);
 		L2ItemInstance stone = request.getAppearanceStone();
-		if ((targetItem == null) || (extracItem == null) || (stone == null))
+		if ((targetItem == null) || (extracItem == null) || (stone == null) || !extracItem.isAppearanceable() || ((extracItem.getItemLocation() != ItemLocation.INVENTORY) && (extracItem.getItemLocation() != ItemLocation.PAPERDOLL)) || ((stone = inventory.getItemByObjectId(stone.getObjectId())) == null))
 		{
 			player.sendPacket(ExShapeShiftingResult.FAILED);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
 		
-		if (!extracItem.isAppearanceable())
-		{
-			player.sendPacket(ExShapeShiftingResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
-		}
-		
-		if ((extracItem.getItemLocation() != ItemLocation.INVENTORY) && (extracItem.getItemLocation() != ItemLocation.PAPERDOLL))
-		{
-			player.sendPacket(ExShapeShiftingResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
-		}
-		
-		if ((stone = inventory.getItemByObjectId(stone.getObjectId())) == null)
-		{
-			player.sendPacket(ExShapeShiftingResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
-		}
 		final AppearanceStone appearanceStone = AppearanceItemData.getInstance().getStone(stone.getId());
-		if (appearanceStone == null)
+		if ((appearanceStone == null) || (appearanceStone.getType() == AppearanceType.RESTORE) || (appearanceStone.getType() == AppearanceType.FIXED))
 		{
 			player.sendPacket(ExShapeShiftingResult.FAILED);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
-		
-		if ((appearanceStone.getType() == AppearanceType.RESTORE) || (appearanceStone.getType() == AppearanceType.FIXED))
-		{
-			player.sendPacket(ExShapeShiftingResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
-		}
-		
 		if (extracItem.getVisualId() > 0)
 		{
 			player.sendPacket(ExShapeShiftingResult.FAILED);
@@ -118,16 +90,12 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem extends L2GameClie
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
-		
-		if (appearanceStone.getWeaponType() != WeaponType.NONE)
+		if ((appearanceStone.getWeaponType() != WeaponType.NONE) && (!targetItem.isWeapon() || (targetItem.getItemType() != appearanceStone.getWeaponType())))
 		{
-			if (!targetItem.isWeapon() || (targetItem.getItemType() != appearanceStone.getWeaponType()))
-			{
-				player.sendPacket(ExShapeShiftingResult.FAILED);
-				player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-				player.removeRequest(ShapeShiftingItemRequest.class);
-				return;
-			}
+			player.sendPacket(ExShapeShiftingResult.FAILED);
+			player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
+			player.removeRequest(ShapeShiftingItemRequest.class);
+			return;
 		}
 		
 		if (appearanceStone.getWeaponType() != WeaponType.NONE)
@@ -139,7 +107,6 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem extends L2GameClie
 				player.removeRequest(ShapeShiftingItemRequest.class);
 				return;
 			}
-			
 			switch (appearanceStone.getHandType())
 			{
 				case ONE_HANDED:

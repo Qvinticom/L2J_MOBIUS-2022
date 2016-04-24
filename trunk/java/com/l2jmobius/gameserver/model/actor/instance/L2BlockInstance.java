@@ -56,22 +56,11 @@ public class L2BlockInstance extends L2MonsterInstance
 		synchronized (this)
 		{
 			final BlockCheckerEngine event = holder.getEvent();
-			if (_colorEffect == 0x53)
-			{
-				// Change color
-				_colorEffect = 0x00;
-				// BroadCast to all known players
-				broadcastPacket(new NpcInfo(this));
-				increaseTeamPointsAndSend(attacker, team, event);
-			}
-			else
-			{
-				// Change color
-				_colorEffect = 0x53;
-				// BroadCast to all known players
-				broadcastPacket(new NpcInfo(this));
-				increaseTeamPointsAndSend(attacker, team, event);
-			}
+			// Change color
+			_colorEffect = _colorEffect == 0x53 ? 0x00 : 0x53;
+			// BroadCast to all known players
+			broadcastPacket(new NpcInfo(this));
+			increaseTeamPointsAndSend(attacker, team, event);
 			// 30% chance to drop the event items
 			final int random = Rnd.get(100);
 			// Bond
@@ -107,11 +96,7 @@ public class L2BlockInstance extends L2MonsterInstance
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		if (attacker instanceof L2PcInstance)
-		{
-			return (attacker.getActingPlayer() != null) && (attacker.getActingPlayer().getBlockCheckerArena() > -1);
-		}
-		return true;
+		return !(attacker instanceof L2PcInstance) || ((attacker.getActingPlayer() != null) && (attacker.getActingPlayer().getBlockCheckerArena() > -1));
 	}
 	
 	@Override

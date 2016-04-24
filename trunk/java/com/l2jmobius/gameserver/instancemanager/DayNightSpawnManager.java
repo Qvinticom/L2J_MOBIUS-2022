@@ -169,14 +169,7 @@ public final class DayNightSpawnManager
 	{
 		try
 		{
-			if (GameTimeController.getInstance().isNight())
-			{
-				changeMode(1);
-			}
-			else
-			{
-				changeMode(0);
-			}
+			changeMode(GameTimeController.getInstance().isNight() ? 1 : 0);
 		}
 		catch (Exception e)
 		{

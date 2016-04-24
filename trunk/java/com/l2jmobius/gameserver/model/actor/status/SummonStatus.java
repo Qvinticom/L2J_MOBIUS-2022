@@ -56,10 +56,8 @@ public class SummonStatus extends PlayableStatus
 		{
 			if ((caster != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && getActiveChar().getParty().getMembers().contains(caster))
 			{
-				int transferDmg = 0;
+				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, (((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100));
 				
-				transferDmg = ((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100;
-				transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
 				if (transferDmg > 0)
 				{
 					int membersInRange = 0;
@@ -92,10 +90,8 @@ public class SummonStatus extends PlayableStatus
 		}
 		else if ((caster != null) && (caster == getActiveChar().getOwner()) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead()) // when no party, transfer only to owner (caster)
 		{
-			int transferDmg = 0;
+			int transferDmg = Math.min((int) caster.getCurrentHp() - 1, (((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100));
 			
-			transferDmg = ((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100;
-			transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
 			if (transferDmg > 0)
 			{
 				if ((attacker instanceof L2Playable) && (caster.getCurrentCp() > 0))

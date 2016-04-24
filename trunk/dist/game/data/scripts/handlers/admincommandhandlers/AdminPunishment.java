@@ -91,8 +91,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				}
 				else
 				{
-					final String subcmd = st.nextToken();
-					switch (subcmd)
+					switch (st.nextToken())
 					{
 						case "info":
 						{
@@ -388,11 +387,7 @@ public class AdminPunishment implements IAdminCommandHandler
 	private static final String findCharId(String key)
 	{
 		final int charId = CharNameTable.getInstance().getIdByName(key);
-		if (charId > 0) // Yeah its a char name!
-		{
-			return Integer.toString(charId);
-		}
-		return key;
+		return charId > 0 ? Integer.toString(charId) : key;
 	}
 	
 	@Override

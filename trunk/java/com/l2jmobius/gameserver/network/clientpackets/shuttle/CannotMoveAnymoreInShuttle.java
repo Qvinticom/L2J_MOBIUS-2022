@@ -51,14 +51,11 @@ public class CannotMoveAnymoreInShuttle extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isInShuttle())
+		if (activeChar.isInShuttle() && (activeChar.getShuttle().getObjectId() == _boatId))
 		{
-			if (activeChar.getShuttle().getObjectId() == _boatId)
-			{
-				activeChar.setInVehiclePosition(new Location(_x, _y, _z));
-				activeChar.setHeading(_heading);
-				activeChar.broadcastPacket(new ExStopMoveInShuttle(activeChar, _boatId));
-			}
+			activeChar.setInVehiclePosition(new Location(_x, _y, _z));
+			activeChar.setHeading(_heading);
+			activeChar.broadcastPacket(new ExStopMoveInShuttle(activeChar, _boatId));
 		}
 	}
 	
@@ -67,5 +64,4 @@ public class CannotMoveAnymoreInShuttle extends L2GameClientPacket
 	{
 		return "[C] 5D CannotMoveAnymoreInVehicle";
 	}
-	
 }

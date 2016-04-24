@@ -81,7 +81,7 @@ final class Minigame extends AbstractNpcAI
 				{
 					return "32758-05.html";
 				}
-				else if ((npc.getTarget() != null) && (npc.getTarget() != player))
+				if ((npc.getTarget() != null) && (npc.getTarget() != player))
 				{
 					return "32758-04.html";
 				}
@@ -261,8 +261,7 @@ final class Minigame extends AbstractNpcAI
 	public void onSkillUse(OnCreatureSkillUse event)
 	{
 		final MinigameRoom room = getRoomByParticipant((L2PcInstance) event.getCaster());
-		final boolean miniGameStarted = room.getStarted();
-		if (miniGameStarted && (event.getSkill().getId() == SKILL_TORCH_LIGHT))
+		if (room.getStarted() && (event.getSkill().getId() == SKILL_TORCH_LIGHT))
 		{
 			for (L2Object obj : event.getTargets())
 			{

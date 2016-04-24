@@ -42,10 +42,6 @@ public class ConditionPlayerTvTEvent extends Condition
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
 		final L2PcInstance player = effector.getActingPlayer();
-		if ((player == null) || !TvTEvent.isStarted())
-		{
-			return !_val;
-		}
-		return (TvTEvent.isPlayerParticipant(player.getObjectId()) == _val);
+		return (player == null) || !TvTEvent.isStarted() ? !_val : TvTEvent.isPlayerParticipant(player.getObjectId()) == _val;
 	}
 }

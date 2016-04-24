@@ -433,8 +433,7 @@ public final class FourSepulchersManager
 					spawnDat.setHeading(rs.getInt("heading"));
 					spawnDat.setRespawnDelay(rs.getInt("respawn_delay"));
 					SpawnTable.getInstance().addNewSpawn(spawnDat, false);
-					final int keyNpcId = rs.getInt("key_npc_id");
-					_mysteriousBoxSpawns.put(keyNpcId, spawnDat);
+					_mysteriousBoxSpawns.put(rs.getInt("key_npc_id"), spawnDat);
 				}
 			}
 			LOG.info(getClass().getSimpleName() + ": loaded " + _mysteriousBoxSpawns.size() + " Mysterious-Box spawns.");
@@ -1046,10 +1045,6 @@ public final class FourSepulchersManager
 					mem.destroyItemByItemId("Quest", CHAPEL_KEY, hallsKey.getCount(), mem, true);
 				}
 			}
-			
-			_challengers.put(npcId, player);
-			
-			_hallInUse.put(npcId, true);
 		}
 		else
 		{
@@ -1062,17 +1057,14 @@ public final class FourSepulchersManager
 			{
 				player.addItem("Quest", USED_PASS, 1, player, true);
 			}
-			
 			final L2ItemInstance hallsKey = player.getInventory().getItemByItemId(CHAPEL_KEY);
 			if (hallsKey != null)
 			{
 				player.destroyItemByItemId("Quest", CHAPEL_KEY, hallsKey.getCount(), player, true);
 			}
-			
-			_challengers.put(npcId, player);
-			
-			_hallInUse.put(npcId, true);
 		}
+		_hallInUse.put(npcId, true);
+		_challengers.put(npcId, player);
 	}
 	
 	public void spawnMysteriousBox(int npcId)
@@ -1098,115 +1090,108 @@ public final class FourSepulchersManager
 		}
 		
 		final List<L2SepulcherMonsterInstance> mobs = new CopyOnWriteArrayList<>();
-		final List<L2Spawn> monsterList;
-		if (Rnd.get(2) == 0)
+		final List<L2Spawn> monsterList = Rnd.get(2) == 0 ? _physicalMonsters.get(npcId) : _magicalMonsters.get(npcId);
+		if (monsterList == null)
 		{
-			monsterList = _physicalMonsters.get(npcId);
-		}
-		else
-		{
-			monsterList = _magicalMonsters.get(npcId);
+			return;
 		}
 		
-		if (monsterList != null)
+		boolean spawnKeyBoxMob = false;
+		boolean spawnedKeyBoxMob = false;
+		
+		for (L2Spawn spawnDat : monsterList)
 		{
-			boolean spawnKeyBoxMob = false;
-			boolean spawnedKeyBoxMob = false;
-			
-			for (L2Spawn spawnDat : monsterList)
+			if (spawnedKeyBoxMob)
 			{
-				if (spawnedKeyBoxMob)
+				spawnKeyBoxMob = false;
+			}
+			else
+			{
+				switch (npcId)
 				{
-					spawnKeyBoxMob = false;
-				}
-				else
-				{
-					switch (npcId)
+					case 31469:
+					case 31474:
+					case 31479:
+					case 31484:
 					{
-						case 31469:
-						case 31474:
-						case 31479:
-						case 31484:
+						if (Rnd.get(48) == 0)
 						{
-							if (Rnd.get(48) == 0)
-							{
-								spawnKeyBoxMob = true;
-							}
-							break;
+							spawnKeyBoxMob = true;
 						}
-						default:
-						{
-							spawnKeyBoxMob = false;
-						}
+						break;
 					}
-				}
-				
-				L2SepulcherMonsterInstance mob = null;
-				
-				if (spawnKeyBoxMob)
-				{
-					try
+					default:
 					{
-						final L2Spawn keyBoxMobSpawn = new L2Spawn(18149);
-						keyBoxMobSpawn.setAmount(1);
-						keyBoxMobSpawn.setLocation(spawnDat.getLocation());
-						keyBoxMobSpawn.setRespawnDelay(3600);
-						SpawnTable.getInstance().addNewSpawn(keyBoxMobSpawn, false);
-						mob = (L2SepulcherMonsterInstance) keyBoxMobSpawn.doSpawn();
-						keyBoxMobSpawn.stopRespawn();
+						spawnKeyBoxMob = false;
 					}
-					catch (Exception e)
-					{
-						LOG.log(Level.WARNING, "FourSepulchersManager.SpawnMonster: Spawn could not be initialized: " + e.getMessage(), e);
-					}
-					
-					spawnedKeyBoxMob = true;
-				}
-				else
-				{
-					mob = (L2SepulcherMonsterInstance) spawnDat.doSpawn();
-					spawnDat.stopRespawn();
-				}
-				
-				if (mob != null)
-				{
-					mob.mysteriousBoxId = npcId;
-					switch (npcId)
-					{
-						case 31469:
-						case 31474:
-						case 31479:
-						case 31484:
-						case 31472:
-						case 31477:
-						case 31482:
-						case 31487:
-						{
-							mobs.add(mob);
-						}
-					}
-					_allMobs.add(mob);
 				}
 			}
 			
-			switch (npcId)
+			L2SepulcherMonsterInstance mob = null;
+			
+			if (spawnKeyBoxMob)
 			{
-				case 31469:
-				case 31474:
-				case 31479:
-				case 31484:
+				try
 				{
-					_viscountMobs.put(npcId, mobs);
-					break;
+					final L2Spawn keyBoxMobSpawn = new L2Spawn(18149);
+					keyBoxMobSpawn.setAmount(1);
+					keyBoxMobSpawn.setLocation(spawnDat.getLocation());
+					keyBoxMobSpawn.setRespawnDelay(3600);
+					SpawnTable.getInstance().addNewSpawn(keyBoxMobSpawn, false);
+					mob = (L2SepulcherMonsterInstance) keyBoxMobSpawn.doSpawn();
+					keyBoxMobSpawn.stopRespawn();
 				}
-				case 31472:
-				case 31477:
-				case 31482:
-				case 31487:
+				catch (Exception e)
 				{
-					_dukeMobs.put(npcId, mobs);
-					break;
+					LOG.log(Level.WARNING, "FourSepulchersManager.SpawnMonster: Spawn could not be initialized: " + e.getMessage(), e);
 				}
+				
+				spawnedKeyBoxMob = true;
+			}
+			else
+			{
+				mob = (L2SepulcherMonsterInstance) spawnDat.doSpawn();
+				spawnDat.stopRespawn();
+			}
+			
+			if (mob != null)
+			{
+				mob.mysteriousBoxId = npcId;
+				switch (npcId)
+				{
+					case 31469:
+					case 31474:
+					case 31479:
+					case 31484:
+					case 31472:
+					case 31477:
+					case 31482:
+					case 31487:
+					{
+						mobs.add(mob);
+					}
+				}
+				_allMobs.add(mob);
+			}
+		}
+		
+		switch (npcId)
+		{
+			case 31469:
+			case 31474:
+			case 31479:
+			case 31484:
+			{
+				_viscountMobs.put(npcId, mobs);
+				break;
+			}
+			case 31472:
+			case 31477:
+			case 31482:
+			case 31487:
+			{
+				_dukeMobs.put(npcId, mobs);
+				break;
 			}
 		}
 	}
@@ -1293,32 +1278,29 @@ public final class FourSepulchersManager
 	
 	public void spawnArchonOfHalisha(int npcId)
 	{
-		if (!isAttackTime())
-		{
-			return;
-		}
-		
-		if (_archonSpawned.get(npcId))
+		if (!isAttackTime() || _archonSpawned.get(npcId))
 		{
 			return;
 		}
 		
 		final List<L2Spawn> monsterList = _dukeFinalMobs.get(npcId);
-		if (monsterList != null)
+		if (monsterList == null)
 		{
-			for (L2Spawn spawnDat : monsterList)
-			{
-				final L2SepulcherMonsterInstance mob = (L2SepulcherMonsterInstance) spawnDat.doSpawn();
-				spawnDat.stopRespawn();
-				
-				if (mob != null)
-				{
-					mob.mysteriousBoxId = npcId;
-					_allMobs.add(mob);
-				}
-			}
-			_archonSpawned.put(npcId, true);
+			return;
 		}
+		
+		for (L2Spawn spawnDat : monsterList)
+		{
+			final L2SepulcherMonsterInstance mob = (L2SepulcherMonsterInstance) spawnDat.doSpawn();
+			spawnDat.stopRespawn();
+			
+			if (mob != null)
+			{
+				mob.mysteriousBoxId = npcId;
+				_allMobs.add(mob);
+			}
+		}
+		_archonSpawned.put(npcId, true);
 	}
 	
 	public void spawnEmperorsGraveNpc(int npcId)
@@ -1537,13 +1519,6 @@ public final class FourSepulchersManager
 			
 			min = minuteSelect(min);
 			
-			NpcStringId msg = NpcStringId.MINUTE_S_HAVE_PASSED;
-			
-			if (min == 90)
-			{
-				msg = NpcStringId.GAME_OVER_THE_TELEPORT_WILL_APPEAR_MOMENTARILY;
-			}
-			
 			for (L2Spawn temp : _managers)
 			{
 				if (temp == null)
@@ -1562,29 +1537,20 @@ public final class FourSepulchersManager
 				{
 					continue;
 				}
-				
-				((L2SepulcherNpcInstance) temp.getLastSpawn()).sayInShout(msg);
+				((L2SepulcherNpcInstance) temp.getLastSpawn()).sayInShout((min == 90 ? NpcStringId.GAME_OVER_THE_TELEPORT_WILL_APPEAR_MOMENTARILY : NpcStringId.MINUTE_S_HAVE_PASSED));
 			}
 		}
-		
 		else if (_inEntryTime)
 		{
-			final NpcStringId msg1 = NpcStringId.YOU_MAY_NOW_ENTER_THE_SEPULCHER;
-			final NpcStringId msg2 = NpcStringId.IF_YOU_PLACE_YOUR_HAND_ON_THE_STONE_STATUE_IN_FRONT_OF_EACH_SEPULCHER_YOU_WILL_BE_ABLE_TO_ENTER;
 			for (L2Spawn temp : _managers)
 			{
-				if (temp == null)
+				if ((temp == null) || !(temp.getLastSpawn() instanceof L2SepulcherNpcInstance))
 				{
 					LOG.warning(getClass().getSimpleName() + ": Something goes wrong in managerSay()...");
 					continue;
 				}
-				if (!(temp.getLastSpawn() instanceof L2SepulcherNpcInstance))
-				{
-					LOG.warning(getClass().getSimpleName() + ": Something goes wrong in managerSay()...");
-					continue;
-				}
-				((L2SepulcherNpcInstance) temp.getLastSpawn()).sayInShout(msg1);
-				((L2SepulcherNpcInstance) temp.getLastSpawn()).sayInShout(msg2);
+				((L2SepulcherNpcInstance) temp.getLastSpawn()).sayInShout(NpcStringId.YOU_MAY_NOW_ENTER_THE_SEPULCHER);
+				((L2SepulcherNpcInstance) temp.getLastSpawn()).sayInShout(NpcStringId.IF_YOU_PLACE_YOUR_HAND_ON_THE_STONE_STATUE_IN_FRONT_OF_EACH_SEPULCHER_YOU_WILL_BE_ABLE_TO_ENTER);
 			}
 		}
 	}

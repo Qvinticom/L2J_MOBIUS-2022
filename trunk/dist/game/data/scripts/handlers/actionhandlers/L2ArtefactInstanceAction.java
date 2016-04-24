@@ -50,14 +50,11 @@ public class L2ArtefactInstanceAction implements IActionHandler
 		{
 			activeChar.setTarget(target);
 		}
-		else if (interact)
+		// Calculate the distance between the L2PcInstance and the L2NpcInstance
+		else if (interact && !((L2Npc) target).canInteract(activeChar))
 		{
-			// Calculate the distance between the L2PcInstance and the L2NpcInstance
-			if (!((L2Npc) target).canInteract(activeChar))
-			{
-				// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
-			}
+			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
+			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 		}
 		return true;
 	}

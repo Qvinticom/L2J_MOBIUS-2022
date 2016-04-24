@@ -201,8 +201,7 @@ public final class Q10286_ReunionWithSirra extends Quest
 					{
 						if (qs.isMemoState(1))
 						{
-							final int state = qs.getInt("ex");
-							switch (state)
+							switch (qs.getInt("ex"))
 							{
 								case 0:
 								{

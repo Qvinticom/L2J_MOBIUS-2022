@@ -51,15 +51,7 @@ public class PrimeShopData implements IXmlReader
 	{
 		_primeItems.clear();
 		parseDatapackFile("PrimeShop.xml");
-		
-		if (_primeItems.size() > 0)
-		{
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _primeItems.size() + " items");
-		}
-		else
-		{
-			LOGGER.info(getClass().getSimpleName() + ": System is disabled.");
-		}
+		LOGGER.info(_primeItems.size() > 0 ? getClass().getSimpleName() + ": Loaded " + _primeItems.size() + " items" : getClass().getSimpleName() + ": System is disabled.");
 	}
 	
 	@Override

@@ -98,19 +98,15 @@ public final class MapRegionManager implements IXmlReader
 								final int spawnY = parseInteger(attrs, "Y");
 								final int spawnZ = parseInteger(attrs, "Z");
 								
-								final boolean other = parseBoolean(attrs, "isOther", false);
-								final boolean chaotic = parseBoolean(attrs, "isChaotic", false);
-								final boolean banish = parseBoolean(attrs, "isBanish", false);
-								
-								if (other)
+								if (parseBoolean(attrs, "isOther", false))
 								{
 									region.addOtherSpawn(spawnX, spawnY, spawnZ);
 								}
-								else if (chaotic)
+								else if (parseBoolean(attrs, "isChaotic", false))
 								{
 									region.addChaoticSpawn(spawnX, spawnY, spawnZ);
 								}
-								else if (banish)
+								else if (parseBoolean(attrs, "isBanish", false))
 								{
 									region.addBanishSpawn(spawnX, spawnY, spawnZ);
 								}
@@ -160,11 +156,7 @@ public final class MapRegionManager implements IXmlReader
 	public final int getMapRegionLocId(int locX, int locY)
 	{
 		final L2MapRegion region = getMapRegion(locX, locY);
-		if (region != null)
-		{
-			return region.getLocId();
-		}
-		return 0;
+		return region != null ? region.getLocId() : 0;
 	}
 	
 	/**
@@ -211,13 +203,7 @@ public final class MapRegionManager implements IXmlReader
 	public String getClosestTownName(L2Character activeChar)
 	{
 		final L2MapRegion region = getMapRegion(activeChar);
-		
-		if (region == null)
-		{
-			return "Aden Castle Town";
-		}
-		
-		return region.getTown();
+		return region == null ? "Aden Castle Town" : region.getTown();
 	}
 	
 	/**
@@ -227,13 +213,7 @@ public final class MapRegionManager implements IXmlReader
 	public int getAreaCastle(L2Character activeChar)
 	{
 		final L2MapRegion region = getMapRegion(activeChar);
-		
-		if (region == null)
-		{
-			return 0;
-		}
-		
-		return region.getCastle();
+		return region == null ? 0 : region.getCastle();
 	}
 	
 	/**
@@ -264,11 +244,7 @@ public final class MapRegionManager implements IXmlReader
 						final L2ClanHallZone zone = clanhall.getZone();
 						if ((zone != null) && !player.isFlyingMounted())
 						{
-							if (player.getReputation() < 0)
-							{
-								return zone.getChaoticSpawnLoc();
-							}
-							return zone.getSpawnLoc();
+							return player.getReputation() < 0 ? zone.getChaoticSpawnLoc() : zone.getSpawnLoc();
 						}
 					}
 				}
@@ -290,11 +266,7 @@ public final class MapRegionManager implements IXmlReader
 					
 					if ((castle != null) && (castle.getResidenceId() > 0))
 					{
-						if (player.getReputation() < 0)
-						{
-							return castle.getResidenceZone().getChaoticSpawnLoc();
-						}
-						return castle.getResidenceZone().getSpawnLoc();
+						return player.getReputation() < 0 ? castle.getResidenceZone().getChaoticSpawnLoc() : castle.getResidenceZone().getSpawnLoc();
 					}
 				}
 				
@@ -315,11 +287,7 @@ public final class MapRegionManager implements IXmlReader
 					
 					if ((fort != null) && (fort.getResidenceId() > 0))
 					{
-						if (player.getReputation() < 0)
-						{
-							return fort.getResidenceZone().getChaoticSpawnLoc();
-						}
-						return fort.getResidenceZone().getSpawnLoc();
+						return player.getReputation() < 0 ? fort.getResidenceZone().getChaoticSpawnLoc() : fort.getResidenceZone().getSpawnLoc();
 					}
 				}
 				
@@ -373,34 +341,20 @@ public final class MapRegionManager implements IXmlReader
 				try
 				{
 					final L2RespawnZone zone = ZoneManager.getInstance().getZone(player, L2RespawnZone.class);
-					if (zone != null)
-					{
-						return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getChaoticSpawnLoc();
-					}
-					return getMapRegion(activeChar).getChaoticSpawnLoc();
+					return zone != null ? getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getChaoticSpawnLoc() : getMapRegion(activeChar).getChaoticSpawnLoc();
 				}
 				catch (Exception e)
 				{
-					if (player.isFlyingMounted())
-					{
-						return _regions.get("union_base_of_kserth").getChaoticSpawnLoc();
-					}
-					return _regions.get(defaultRespawn).getChaoticSpawnLoc();
+					return player.isFlyingMounted() ? _regions.get("union_base_of_kserth").getChaoticSpawnLoc() : _regions.get(defaultRespawn).getChaoticSpawnLoc();
 				}
 			}
 			
 			// Checking if needed to be respawned in "far" town from the castle;
 			castle = CastleManager.getInstance().getCastle(player);
-			if (castle != null)
+			// Check if player's clan is participating
+			if ((castle != null) && castle.getSiege().isInProgress() && (castle.getSiege().checkIsDefender(player.getClan()) || castle.getSiege().checkIsAttacker(player.getClan())))
 			{
-				if (castle.getSiege().isInProgress())
-				{
-					// Check if player's clan is participating
-					if ((castle.getSiege().checkIsDefender(player.getClan()) || castle.getSiege().checkIsAttacker(player.getClan())))
-					{
-						return castle.getResidenceZone().getOtherSpawnLoc();
-					}
-				}
+				return castle.getResidenceZone().getOtherSpawnLoc();
 			}
 			
 			// Checking if in an instance
@@ -434,11 +388,7 @@ public final class MapRegionManager implements IXmlReader
 		try
 		{
 			final L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
-			if (zone != null)
-			{
-				return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getSpawnLoc();
-			}
-			return getMapRegion(activeChar).getSpawnLoc();
+			return zone != null ? getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getSpawnLoc() : getMapRegion(activeChar).getSpawnLoc();
 		}
 		catch (Exception e)
 		{

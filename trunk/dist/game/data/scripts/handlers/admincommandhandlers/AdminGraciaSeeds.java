@@ -39,12 +39,7 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
 		
-		String val = "";
-		if (st.countTokens() >= 1)
-		{
-			val = st.nextToken();
-		}
-		
+		final String val = st.countTokens() >= 1 ? st.nextToken() : "";
 		if (actualCommand.equalsIgnoreCase("admin_kill_tiat"))
 		{
 			GraciaSeedsManager.getInstance().increaseSoDTiatKilled();

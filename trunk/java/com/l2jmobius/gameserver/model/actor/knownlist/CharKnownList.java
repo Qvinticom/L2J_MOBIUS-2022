@@ -212,12 +212,9 @@ public class CharKnownList extends ObjectKnownList
 		final List<L2Character> result = new LinkedList<>();
 		for (L2Object obj : getKnownObjects().values())
 		{
-			if (obj instanceof L2Character)
+			if ((obj instanceof L2Character) && Util.checkIfInRange((int) radius, getActiveChar(), obj, true))
 			{
-				if (Util.checkIfInRange((int) radius, getActiveChar(), obj, true))
-				{
-					result.add((L2Character) obj);
-				}
+				result.add((L2Character) obj);
 			}
 		}
 		return result;

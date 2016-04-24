@@ -41,5 +41,4 @@ public class ConditionTargetHp extends Condition
 	{
 		return (effected != null) && (((effected.getCurrentHp() * 100) / effected.getMaxHp()) <= _hp);
 	}
-	
 }

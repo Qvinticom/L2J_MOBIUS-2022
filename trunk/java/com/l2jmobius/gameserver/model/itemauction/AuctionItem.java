@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.itemauction;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.L2Augmentation;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 
 /**
@@ -48,12 +47,7 @@ public final class AuctionItem
 	
 	public final boolean checkItemExists()
 	{
-		final L2Item item = ItemTable.getInstance().getTemplate(_itemId);
-		if (item == null)
-		{
-			return false;
-		}
-		return true;
+		return ItemTable.getInstance().getTemplate(_itemId) != null;
 	}
 	
 	public final int getAuctionItemId()

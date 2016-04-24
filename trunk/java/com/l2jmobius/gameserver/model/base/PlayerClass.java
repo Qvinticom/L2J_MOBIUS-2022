@@ -263,12 +263,9 @@ public enum PlayerClass
 		
 		for (PlayerClass playerClass : EnumSet.allOf(PlayerClass.class))
 		{
-			if ((race == null) || playerClass.isOfRace(race))
+			if (((race == null) || playerClass.isOfRace(race)) && ((level == null) || playerClass.isOfLevel(level)))
 			{
-				if ((level == null) || playerClass.isOfLevel(level))
-				{
-					allOf.add(playerClass);
-				}
+				allOf.add(playerClass);
 			}
 		}
 		return allOf;

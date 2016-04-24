@@ -102,11 +102,7 @@ public final class FishingMonstersData implements IXmlReader
 	 */
 	public L2FishingMonster getFishingMonsterById(int id)
 	{
-		if (_fishingMonstersData.containsKey(id))
-		{
-			return _fishingMonstersData.get(id);
-		}
-		return null;
+		return _fishingMonstersData.containsKey(id) ? _fishingMonstersData.get(id) : null;
 	}
 	
 	/**

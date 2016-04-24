@@ -76,7 +76,7 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 				activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
 				return;
 			}
-			else if (paymentId > 0)
+			if (paymentId > 0)
 			{
 				if (!activeChar.destroyItemByItemId("PrimeShop-" + item.getBrId(), paymentId, price, activeChar, true))
 				{
@@ -121,43 +121,33 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid brId from Prime", Config.DEFAULT_PUNISH);
 			return false;
 		}
-		else if ((count < 1) && (count > 99))
+		if ((count < 1) && (count > 99))
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid itemcount [" + count + "] from Prime", Config.DEFAULT_PUNISH);
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
 			return false;
 		}
-		else if ((item.getMinLevel() > 0) && (item.getMinLevel() > player.getLevel()))
+		if (((item.getMinLevel() > 0) && (item.getMinLevel() > player.getLevel())) || ((item.getMaxLevel() > 0) && (item.getMaxLevel() < player.getLevel())))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
 			return false;
 		}
-		else if ((item.getMaxLevel() > 0) && (item.getMaxLevel() < player.getLevel()))
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
-			return false;
-		}
-		else if ((item.getMinBirthday() > 0) && (item.getMinBirthday() > player.getBirthdays()))
+		if (((item.getMinBirthday() > 0) && (item.getMinBirthday() > player.getBirthdays())) || ((item.getMaxBirthday() > 0) && (item.getMaxBirthday() < player.getBirthdays())))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
 			return false;
 		}
-		else if ((item.getMaxBirthday() > 0) && (item.getMaxBirthday() < player.getBirthdays()))
-		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
-			return false;
-		}
-		else if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) & item.getDaysOfWeek()) == 0)
+		if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) & item.getDaysOfWeek()) == 0)
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.NOT_DAY_OF_WEEK));
 			return false;
 		}
-		else if ((item.getStartSale() > 1) && (item.getStartSale() > currentTime))
+		if ((item.getStartSale() > 1) && (item.getStartSale() > currentTime))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.BEFORE_SALE_DATE));
 			return false;
 		}
-		else if ((item.getEndSale() > 1) && (item.getEndSale() < currentTime))
+		if ((item.getEndSale() > 1) && (item.getEndSale() < currentTime))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.AFTER_SALE_DATE));
 			return false;
@@ -166,15 +156,7 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 		final int weight = item.getWeight() * count;
 		final long slots = item.getCount() * count;
 		
-		if (player.getInventory().validateWeight(weight))
-		{
-			if (!player.getInventory().validateCapacity(slots))
-			{
-				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
-				return false;
-			}
-		}
-		else
+		if (!player.getInventory().validateWeight(weight) || !player.getInventory().validateCapacity(slots))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
 			return false;

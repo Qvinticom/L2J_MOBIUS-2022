@@ -214,74 +214,32 @@ public class Q10366_RuinsStatusUpdate extends Quest
 					}
 					case FRANCO:
 					{
-						if (player.getRace() == Race.HUMAN)
-						{
-							htmltext = "32153-01.html";
-						}
-						else
-						{
-							htmltext = "32153-04.html";
-						}
+						htmltext = player.getRace() == Race.HUMAN ? "32153-01.html" : "32153-04.html";
 						break;
 					}
 					case RIVIAN:
 					{
-						if (player.getRace() == Race.ELF)
-						{
-							htmltext = "32147-01.html";
-						}
-						else
-						{
-							htmltext = "32147-04.html";
-						}
+						htmltext = player.getRace() == Race.ELF ? "32147-01.html" : "32147-04.html";
 						break;
 					}
 					case DEVON:
 					{
-						if (player.getRace() == Race.DARK_ELF)
-						{
-							htmltext = "32160-01.html";
-						}
-						else
-						{
-							htmltext = "32160-04.html";
-						}
+						htmltext = player.getRace() == Race.DARK_ELF ? "32160-01.html" : "32160-04.html";
 						break;
 					}
 					case TOOK:
 					{
-						if (player.getRace() == Race.ORC)
-						{
-							htmltext = "32150-01.html";
-						}
-						else
-						{
-							htmltext = "32150-04.html";
-						}
+						htmltext = player.getRace() == Race.ORC ? "32150-01.html" : "32150-04.html";
 						break;
 					}
 					case MOKA:
 					{
-						if (player.getRace() == Race.DWARF)
-						{
-							htmltext = "32157-01.html";
-						}
-						else
-						{
-							htmltext = "32157-04.html";
-						}
+						htmltext = player.getRace() == Race.DWARF ? "32157-01.html" : "32157-04.html";
 						break;
 					}
 					case VALFAR:
 					{
-						if (player.getRace() == Race.KAMAEL)
-						{
-							htmltext = "32146-01.html";
-						}
-						else
-						{
-							htmltext = "32146-04.html";
-						}
+						htmltext = player.getRace() == Race.KAMAEL ? "32146-01.html" : "32146-04.html";
 						break;
 					}
 				}

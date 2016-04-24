@@ -167,5 +167,4 @@ public class AdminRide implements IAdminCommandHandler
 	{
 		return ADMIN_COMMANDS;
 	}
-	
 }

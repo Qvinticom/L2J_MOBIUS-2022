@@ -39,7 +39,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.L2Event;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
@@ -166,10 +165,9 @@ public class Wedding implements IVoicedCommandHandler
 					skillId = 4361;
 				}
 				
-				final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 				if (!activeChar.isAffectedBySkill(skillId))
 				{
-					skill.applyEffects(activeChar, activeChar);
+					SkillData.getInstance().getSkill(skillId, skillLevel).applyEffects(activeChar, activeChar);
 				}
 			}
 			return false;

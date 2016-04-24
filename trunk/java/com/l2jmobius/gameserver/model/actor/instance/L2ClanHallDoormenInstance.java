@@ -66,58 +66,48 @@ public class L2ClanHallDoormenInstance extends L2DoormenInstance
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
-		if (_hasEvolve && command.startsWith("evolve"))
+		if (_hasEvolve && command.startsWith("evolve") && isOwnerClan(player))
 		{
-			if (isOwnerClan(player))
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			if (st.countTokens() < 2)
 			{
-				final StringTokenizer st = new StringTokenizer(command, " ");
-				if (st.countTokens() < 2)
-				{
-					return;
-				}
-				
-				st.nextToken();
-				boolean ok = false;
-				switch (Integer.parseInt(st.nextToken()))
-				{
-					case 1:
-					{
-						ok = Evolve.doEvolve(player, this, 9882, 10307, 55);
-						break;
-					}
-					case 2:
-					{
-						ok = Evolve.doEvolve(player, this, 4422, 10308, 55);
-						break;
-					}
-					case 3:
-					{
-						ok = Evolve.doEvolve(player, this, 4423, 10309, 55);
-						break;
-					}
-					case 4:
-					{
-						ok = Evolve.doEvolve(player, this, 4424, 10310, 55);
-						break;
-					}
-					case 5:
-					{
-						ok = Evolve.doEvolve(player, this, 10426, 10611, 70);
-						break;
-					}
-				}
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				if (ok)
-				{
-					html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/evolve-ok.htm");
-				}
-				else
-				{
-					html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/evolve-no.htm");
-				}
-				player.sendPacket(html);
 				return;
 			}
+			
+			st.nextToken();
+			boolean ok = false;
+			switch (Integer.parseInt(st.nextToken()))
+			{
+				case 1:
+				{
+					ok = Evolve.doEvolve(player, this, 9882, 10307, 55);
+					break;
+				}
+				case 2:
+				{
+					ok = Evolve.doEvolve(player, this, 4422, 10308, 55);
+					break;
+				}
+				case 3:
+				{
+					ok = Evolve.doEvolve(player, this, 4423, 10309, 55);
+					break;
+				}
+				case 4:
+				{
+					ok = Evolve.doEvolve(player, this, 4424, 10310, 55);
+					break;
+				}
+				case 5:
+				{
+					ok = Evolve.doEvolve(player, this, 10426, 10611, 70);
+					break;
+				}
+			}
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			html.setFile(player.getHtmlPrefix(), ok ? "html/clanHallDoormen/evolve-ok.htm" : "html/clanHallDoormen/evolve-no.htm");
+			player.sendPacket(html);
+			return;
 		}
 		super.onBypassFeedback(player, command);
 	}
@@ -129,40 +119,30 @@ public class L2ClanHallDoormenInstance extends L2DoormenInstance
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		
-		if (getClanHall() != null)
+		if (getClanHall() == null)
 		{
-			final L2Clan owner = ClanTable.getInstance().getClan(getClanHall().getOwnerId());
-			if (isOwnerClan(player))
-			{
-				if (_hasEvolve)
-				{
-					html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/doormen2.htm");
-					html.replace("%clanname%", owner.getName());
-				}
-				else
-				{
-					html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/doormen1.htm");
-					html.replace("%clanname%", owner.getName());
-				}
-			}
-			else
-			{
-				if ((owner != null) && (owner.getLeader() != null))
-				{
-					html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/doormen-no.htm");
-					html.replace("%leadername%", owner.getLeaderName());
-					html.replace("%clanname%", owner.getName());
-				}
-				else
-				{
-					html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/emptyowner.htm");
-					html.replace("%hallname%", getClanHall().getName());
-				}
-			}
+			return;
+		}
+		
+		final L2Clan owner = ClanTable.getInstance().getClan(getClanHall().getOwnerId());
+		if (isOwnerClan(player))
+		{
+			html.setFile(player.getHtmlPrefix(), _hasEvolve ? "html/clanHallDoormen/doormen2.htm" : "html/clanHallDoormen/doormen1.htm");
+			html.replace("%clanname%", owner.getName());
 		}
 		else
 		{
-			return;
+			if ((owner != null) && (owner.getLeader() != null))
+			{
+				html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/doormen-no.htm");
+				html.replace("%leadername%", owner.getLeaderName());
+				html.replace("%clanname%", owner.getName());
+			}
+			else
+			{
+				html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/emptyowner.htm");
+				html.replace("%hallname%", getClanHall().getName());
+			}
 		}
 		
 		html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -212,13 +192,6 @@ public class L2ClanHallDoormenInstance extends L2DoormenInstance
 	@Override
 	protected final boolean isOwnerClan(L2PcInstance player)
 	{
-		if ((player.getClan() != null) && (getClanHall() != null))
-		{
-			if (player.getClanId() == getClanHall().getOwnerId())
-			{
-				return true;
-			}
-		}
-		return false;
+		return (player.getClan() != null) && (getClanHall() != null) && (player.getClanId() == getClanHall().getOwnerId());
 	}
 }

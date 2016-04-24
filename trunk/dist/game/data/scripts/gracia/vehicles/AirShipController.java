@@ -285,34 +285,31 @@ public abstract class AirShipController extends Quest
 	@Override
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
-		if (character instanceof L2ControllableAirShipInstance)
+		if ((character instanceof L2ControllableAirShipInstance) && (_dockedShip == null))
 		{
-			if (_dockedShip == null)
+			_dockedShip = (L2ControllableAirShipInstance) character;
+			_dockedShip.setInDock(_dockZone);
+			_dockedShip.setOustLoc(_oustLoc);
+			
+			// Ship is not empty - display movie to passengers and dock
+			if (!_dockedShip.isEmpty())
 			{
-				_dockedShip = (L2ControllableAirShipInstance) character;
-				_dockedShip.setInDock(_dockZone);
-				_dockedShip.setOustLoc(_oustLoc);
-				
-				// Ship is not empty - display movie to passengers and dock
-				if (!_dockedShip.isEmpty())
+				if (_movieId != 0)
 				{
-					if (_movieId != 0)
+					for (L2PcInstance passenger : _dockedShip.getPassengers())
 					{
-						for (L2PcInstance passenger : _dockedShip.getPassengers())
+						if (passenger != null)
 						{
-							if (passenger != null)
-							{
-								passenger.showQuestMovie(_movieId);
-							}
+							passenger.showQuestMovie(_movieId);
 						}
 					}
-					
-					ThreadPoolManager.getInstance().scheduleGeneral(_decayTask, 1000);
 				}
-				else
-				{
-					_departSchedule = ThreadPoolManager.getInstance().scheduleGeneral(_departTask, DEPART_INTERVAL);
-				}
+				
+				ThreadPoolManager.getInstance().scheduleGeneral(_decayTask, 1000);
+			}
+			else
+			{
+				_departSchedule = ThreadPoolManager.getInstance().scheduleGeneral(_departTask, DEPART_INTERVAL);
 			}
 		}
 		return null;
@@ -321,20 +318,17 @@ public abstract class AirShipController extends Quest
 	@Override
 	public String onExitZone(L2Character character, L2ZoneType zone)
 	{
-		if (character instanceof L2ControllableAirShipInstance)
+		if ((character instanceof L2ControllableAirShipInstance) && character.equals(_dockedShip))
 		{
-			if (character.equals(_dockedShip))
+			if (_departSchedule != null)
 			{
-				if (_departSchedule != null)
-				{
-					_departSchedule.cancel(false);
-					_departSchedule = null;
-				}
-				
-				_dockedShip.setInDock(0);
-				_dockedShip = null;
-				_isBusy = false;
+				_departSchedule.cancel(false);
+				_departSchedule = null;
 			}
+			
+			_dockedShip.setInDock(0);
+			_dockedShip = null;
+			_isBusy = false;
 		}
 		return null;
 	}
@@ -373,14 +367,11 @@ public abstract class AirShipController extends Quest
 				}
 			}
 		}
-		if (_arrivalPath == null)
+		if ((_arrivalPath == null) && !ZoneManager.getInstance().getZoneById(_dockZone, L2ScriptZone.class).isInsideZone(_shipSpawnX, _shipSpawnY, _shipSpawnZ))
 		{
-			if (!ZoneManager.getInstance().getZoneById(_dockZone, L2ScriptZone.class).isInsideZone(_shipSpawnX, _shipSpawnY, _shipSpawnZ))
-			{
-				_log.log(Level.WARNING, getName() + ": Arrival path is null and spawn point not in zone " + _dockZone + ", controller disabled");
-				_isBusy = true;
-				return;
-			}
+			_log.log(Level.WARNING, getName() + ": Arrival path is null and spawn point not in zone " + _dockZone + ", controller disabled");
+			_isBusy = true;
+			return;
 		}
 		
 		if (_departPath != null)

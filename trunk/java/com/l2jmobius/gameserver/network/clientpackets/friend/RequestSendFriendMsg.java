@@ -50,12 +50,7 @@ public final class RequestSendFriendMsg extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if ((_message == null) || _message.isEmpty() || (_message.length() > 300))
+		if ((activeChar == null) || (_message == null) || _message.isEmpty() || (_message.length() > 300))
 		{
 			return;
 		}

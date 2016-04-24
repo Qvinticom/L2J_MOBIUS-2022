@@ -41,16 +41,19 @@ public class GameGuardCheckTask implements Runnable
 	@Override
 	public void run()
 	{
-		if ((_player != null))
+		if (_player == null)
 		{
-			final L2GameClient client = _player.getClient();
-			if ((client != null) && !client.isAuthedGG() && _player.isOnline())
-			{
-				AdminData.getInstance().broadcastMessageToGMs("Client " + client + " failed to reply GameGuard query and is being kicked!");
-				_log.info("Client " + client + " failed to reply GameGuard query and is being kicked!");
-				
-				client.close(LeaveWorld.STATIC_PACKET);
-			}
+			return;
 		}
+		
+		final L2GameClient client = _player.getClient();
+		if ((client == null) || client.isAuthedGG() || !_player.isOnline())
+		{
+			return;
+		}
+		
+		AdminData.getInstance().broadcastMessageToGMs("Client " + client + " failed to reply GameGuard query and is being kicked!");
+		_log.info("Client " + client + " failed to reply GameGuard query and is being kicked!");
+		client.close(LeaveWorld.STATIC_PACKET);
 	}
 }

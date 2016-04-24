@@ -170,12 +170,9 @@ public final class Q00623_TheFinestFood extends Quest
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
 		final ItemHolder holder = MONSTER_DROPS.get(npc.getId());
-		if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, holder.getId(), 1, holder.getCount(), 1, true))
+		if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, holder.getId(), 1, holder.getCount(), 1, true) && hasAllItems(qs.getPlayer(), true, BUFFALO_MEAT, HORN_OF_ANTELOPE, LEAF_OF_FLAVA))
 		{
-			if (hasAllItems(qs.getPlayer(), true, BUFFALO_MEAT, HORN_OF_ANTELOPE, LEAF_OF_FLAVA))
-			{
-				qs.setCond(2);
-			}
+			qs.setCond(2);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

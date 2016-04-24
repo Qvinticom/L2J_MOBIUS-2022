@@ -265,13 +265,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	
 	public void sendPacket(L2GameServerPacket gsp)
 	{
-		if (_isDetached || (gsp == null))
-		{
-			return;
-		}
-		
-		// Packets from invisible chars sends only to GMs
-		if (gsp.isInvisible() && (getActiveChar() != null) && !getActiveChar().canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS))
+		if (_isDetached || (gsp == null) || (gsp.isInvisible() && (getActiveChar() != null) && !getActiveChar().canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)))
 		{
 			return;
 		}
@@ -1025,14 +1019,15 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			closeNow();
 			return;
 		}
-		if (_state == GameClientState.CONNECTED) // in CONNECTED state kick client immediately
+		if (_state != GameClientState.CONNECTED)
 		{
-			if (Config.PACKET_HANDLER_DEBUG)
-			{
-				_log.severe("Client " + toString() + " - Disconnected, too many buffer underflows in non-authed state.");
-			}
-			closeNow();
+			return;
 		}
+		if (Config.PACKET_HANDLER_DEBUG)
+		{
+			_log.severe("Client " + toString() + " - Disconnected, too many buffer underflows in non-authed state.");
+		}
+		closeNow();
 	}
 	
 	/**
@@ -1046,14 +1041,15 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			closeNow();
 			return;
 		}
-		if (_state == GameClientState.CONNECTED) // in CONNECTED state kick client immediately
+		if (_state != GameClientState.CONNECTED)
 		{
-			if (Config.PACKET_HANDLER_DEBUG)
-			{
-				_log.severe("Client " + toString() + " - Disconnected, too many unknown packets in non-authed state.");
-			}
-			closeNow();
+			return;
 		}
+		if (Config.PACKET_HANDLER_DEBUG)
+		{
+			_log.severe("Client " + toString() + " - Disconnected, too many unknown packets in non-authed state.");
+		}
+		closeNow();
 	}
 	
 	/**

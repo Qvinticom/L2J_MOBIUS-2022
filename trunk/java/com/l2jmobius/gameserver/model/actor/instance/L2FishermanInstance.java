@@ -46,18 +46,7 @@ public final class L2FishermanInstance extends L2MerchantInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		
-		if (val == 0)
-		{
-			pom = "" + npcId;
-		}
-		else
-		{
-			pom = npcId + "-" + val;
-		}
-		
-		return "html/fisherman/" + pom + ".htm";
+		return "html/fisherman/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
 	}
 	
 	@Override

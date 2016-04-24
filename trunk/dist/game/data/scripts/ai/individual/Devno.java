@@ -64,14 +64,10 @@ final class Devno extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("npc_move") && (npc != null))
 		{
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, DEVNO_SHOUT[getRandom(3)], 1000);
 			if (getRandom(100) > 40)
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, DEVNO_SHOUT[getRandom(3)], 1000);
 				addMoveToDesire(npc, DEVNO_LOC[getRandom(10)], 0);
-			}
-			else
-			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, DEVNO_SHOUT[getRandom(3)], 1000);
 			}
 		}
 		return null;

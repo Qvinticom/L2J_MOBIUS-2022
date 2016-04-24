@@ -71,16 +71,13 @@ public class RegionBoard implements IWriteBoardHandler
 				sb.append(link);
 			}
 			
-			String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/region.html");
-			html = html.replace("%region_list%", sb.toString());
-			CommunityBoardHandler.separateAndSend(html, activeChar);
+			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/region.html").replace("%region_list%", sb.toString()), activeChar);
 		}
 		else if (command.startsWith("_bbsloc;"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(activeChar, "Region>", command);
 			
-			final String id = command.replace("_bbsloc;", "");
-			if (!Util.isDigit(id))
+			if (!Util.isDigit(command.replace("_bbsloc;", "")))
 			{
 				LOG.warning(RegionBoard.class.getSimpleName() + ": Player " + activeChar + " sent and invalid region bypass " + command + "!");
 				return false;

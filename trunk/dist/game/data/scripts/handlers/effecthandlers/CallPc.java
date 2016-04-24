@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.entity.Instance;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.holders.SummonRequestHolder;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
@@ -151,14 +150,10 @@ public final class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if (activeChar.getInstanceId() > 0)
+		if ((activeChar.getInstanceId() > 0) && (!Config.ALLOW_SUMMON_IN_INSTANCE || !InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).isSummonAllowed()))
 		{
-			final Instance summonerInstance = InstanceManager.getInstance().getInstance(activeChar.getInstanceId());
-			if (!Config.ALLOW_SUMMON_IN_INSTANCE || !summonerInstance.isSummonAllowed())
-			{
-				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
-				return false;
-			}
+			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
+			return false;
 		}
 		return true;
 	}

@@ -203,14 +203,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	 */
 	private boolean isAffected(L2Character character)
 	{
-		// Check lvl
-		if ((character.getLevel() < _minLvl) || (character.getLevel() > _maxLvl))
-		{
-			return false;
-		}
-		
-		// check obj class
-		if (!character.isInstanceTypes(_target))
+		if ((character.getLevel() < _minLvl) || (character.getLevel() > _maxLvl) || !character.isInstanceTypes(_target))
 		{
 			return false;
 		}
@@ -388,12 +381,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	{
 		// It will check if coords are within the zone if the given instanceId or
 		// the zone's _instanceId are in the multiverse or they match
-		if ((_instanceId == -1) || (instanceId == -1) || (_instanceId == instanceId))
-		{
-			return _zone.isInsideZone(x, y, z);
-		}
-		
-		return false;
+		return ((_instanceId == -1) || (instanceId == -1) || (_instanceId == instanceId)) && _zone.isInsideZone(x, y, z);
 	}
 	
 	/**
@@ -419,12 +407,9 @@ public abstract class L2ZoneType extends ListenersContainer
 	public void revalidateInZone(L2Character character)
 	{
 		// If the character can't be affected by this zone return
-		if (_checkAffected)
+		if (_checkAffected && !isAffected(character))
 		{
-			if (!isAffected(character))
-			{
-				return;
-			}
+			return;
 		}
 		
 		// If the object is inside the zone...

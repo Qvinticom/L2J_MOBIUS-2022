@@ -45,8 +45,7 @@ public final class RequestSiegeDefenderList extends L2GameClientPacket
 		{
 			return;
 		}
-		final SiegeDefenderList sdl = new SiegeDefenderList(castle);
-		sendPacket(sdl);
+		sendPacket(new SiegeDefenderList(castle));
 	}
 	
 	@Override

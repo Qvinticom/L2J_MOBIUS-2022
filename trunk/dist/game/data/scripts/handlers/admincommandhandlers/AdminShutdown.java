@@ -125,5 +125,4 @@ public class AdminShutdown implements IAdminCommandHandler
 	{
 		Shutdown.getInstance().abort(activeChar);
 	}
-	
 }

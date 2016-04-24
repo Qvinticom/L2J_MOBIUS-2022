@@ -55,7 +55,7 @@ public final class SummonDebuff extends AbstractEffect
 				skill.applyEffects(player, player);
 				return true;
 			}
-			else if (player.getEffectList().isAffectedBySkill(PRICE_OF_SUMMONING_LUMI))
+			if (player.getEffectList().isAffectedBySkill(PRICE_OF_SUMMONING_LUMI))
 			{
 				final Skill skill = SkillData.getInstance().getSkill(PRICE_OF_SUMMONING_LUMI, 1);
 				skill.applyEffects(player, player);

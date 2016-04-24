@@ -55,13 +55,10 @@ public class ShortCuts implements IRestorable
 	{
 		Shortcut sc = _shortCuts.get(slot + (page * MAX_SHORTCUTS_PER_BAR));
 		// Verify shortcut
-		if ((sc != null) && (sc.getType() == ShortcutType.ITEM))
+		if ((sc != null) && (sc.getType() == ShortcutType.ITEM) && (_owner.getInventory().getItemByObjectId(sc.getId()) == null))
 		{
-			if (_owner.getInventory().getItemByObjectId(sc.getId()) == null)
-			{
-				deleteShortCut(sc.getSlot(), sc.getPage());
-				sc = null;
-			}
+			deleteShortCut(sc.getSlot(), sc.getPage());
+			sc = null;
 		}
 		return sc;
 	}
@@ -78,8 +75,7 @@ public class ShortCuts implements IRestorable
 			}
 			shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
 		}
-		final Shortcut oldShortCut = _shortCuts.put(shortcut.getSlot() + (shortcut.getPage() * MAX_SHORTCUTS_PER_BAR), shortcut);
-		registerShortCutInDb(shortcut, oldShortCut);
+		registerShortCutInDb(shortcut, _shortCuts.put(shortcut.getSlot() + (shortcut.getPage() * MAX_SHORTCUTS_PER_BAR), shortcut));
 	}
 	
 	private void registerShortCutInDb(Shortcut shortcut, Shortcut oldShortCut)
@@ -123,33 +119,30 @@ public class ShortCuts implements IRestorable
 		{
 			final L2ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
 			
-			if ((item != null) && (item.getItemType() == EtcItemType.SHOT))
+			if ((item != null) && (item.getItemType() == EtcItemType.SHOT) && _owner.removeAutoSoulShot(item.getId()))
 			{
-				if (_owner.removeAutoSoulShot(item.getId()))
+				switch (item.getEtcItem().getDefaultAction())
 				{
-					switch (item.getEtcItem().getDefaultAction())
+					case SOULSHOT:
+					case FISHINGSHOT:
 					{
-						case SOULSHOT:
-						case FISHINGSHOT:
-						{
-							_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 0));
-							break;
-						}
-						case SPIRITSHOT:
-						{
-							_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 1));
-							break;
-						}
-						case SUMMON_SOULSHOT:
-						{
-							_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 2));
-							break;
-						}
-						case SUMMON_SPIRITSHOT:
-						{
-							_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 3));
-							break;
-						}
+						_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 0));
+						break;
+					}
+					case SPIRITSHOT:
+					{
+						_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 1));
+						break;
+					}
+					case SUMMON_SOULSHOT:
+					{
+						_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 2));
+						break;
+					}
+					case SUMMON_SPIRITSHOT:
+					{
+						_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 3));
+						break;
 					}
 				}
 			}
@@ -240,11 +233,7 @@ public class ShortCuts implements IRestorable
 				{
 					final int slot = rset.getInt("slot");
 					final int page = rset.getInt("page");
-					final int type = rset.getInt("type");
-					final int id = rset.getInt("shortcut_id");
-					final int level = rset.getInt("level");
-					
-					_shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[type], id, level, 1));
+					_shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[rset.getInt("type")], rset.getInt("shortcut_id"), rset.getInt("level"), 1));
 				}
 			}
 		}

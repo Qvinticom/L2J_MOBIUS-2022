@@ -50,5 +50,4 @@ public class OnCreatureZoneEnter implements IBaseEvent
 	{
 		return EventType.ON_CREATURE_ZONE_ENTER;
 	}
-	
 }

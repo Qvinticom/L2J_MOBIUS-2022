@@ -83,13 +83,7 @@ public class MinionList
 	 */
 	public final void spawnMinions(List<MinionHolder> minions)
 	{
-		if (_master.isAlikeDead())
-		{
-			return;
-		}
-		
-		// List<MinionHolder> minions = _master.getTemplate().getParameters().getMinionList("Privates");
-		if (minions == null)
+		if (_master.isAlikeDead() || (minions == null))
 		{
 			return;
 		}
@@ -119,22 +113,23 @@ public class MinionList
 	 */
 	public void deleteSpawnedMinions()
 	{
-		if (!_minionReferences.isEmpty())
+		if (_minionReferences.isEmpty())
 		{
-			for (L2MonsterInstance minion : _minionReferences)
+			return;
+		}
+		for (L2MonsterInstance minion : _minionReferences)
+		{
+			if (minion != null)
 			{
-				if (minion != null)
+				minion.setLeader(null);
+				minion.deleteMe();
+				if (_reusedMinionReferences != null)
 				{
-					minion.setLeader(null);
-					minion.deleteMe();
-					if (_reusedMinionReferences != null)
-					{
-						_reusedMinionReferences.add(minion);
-					}
+					_reusedMinionReferences.add(minion);
 				}
 			}
-			_minionReferences.clear();
 		}
+		_minionReferences.clear();
 	}
 	
 	/**
@@ -254,22 +249,8 @@ public class MinionList
 				int newX = Rnd.get(minRadius * 2, offset * 2); // x
 				int newY = Rnd.get(newX, offset * 2); // distance
 				newY = (int) Math.sqrt((newY * newY) - (newX * newX)); // y
-				if (newX > (offset + minRadius))
-				{
-					newX = (_master.getX() + newX) - offset;
-				}
-				else
-				{
-					newX = (_master.getX() - newX) + minRadius;
-				}
-				if (newY > (offset + minRadius))
-				{
-					newY = (_master.getY() + newY) - offset;
-				}
-				else
-				{
-					newY = (_master.getY() - newY) + minRadius;
-				}
+				newX = newX > (offset + minRadius) ? (_master.getX() + newX) - offset : (_master.getX() - newX) + minRadius;
+				newY = newY > (offset + minRadius) ? (_master.getY() + newY) - offset : (_master.getY() - newY) + minRadius;
 				
 				minion.teleToLocation(new Location(newX, newY, _master.getZ()));
 			}
@@ -312,20 +293,18 @@ public class MinionList
 		@Override
 		public void run()
 		{
-			if (!_master.isAlikeDead() && _master.isVisible())
+			if (_master.isAlikeDead() || !_master.isVisible() || _minion.isVisible())
 			{
-				// minion can be already spawned or deleted
-				if (!_minion.isVisible())
-				{
-					if (_reusedMinionReferences != null)
-					{
-						_reusedMinionReferences.remove(_minion);
-					}
-					
-					_minion.refreshID();
-					initializeNpcInstance(_master, _minion);
-				}
+				return;
 			}
+			
+			if (_reusedMinionReferences != null)
+			{
+				_reusedMinionReferences.remove(_minion);
+			}
+			
+			_minion.refreshID();
+			initializeNpcInstance(_master, _minion);
 		}
 	}
 	
@@ -348,11 +327,7 @@ public class MinionList
 	{
 		// Get the template of the Minion to spawn
 		final L2NpcTemplate minionTemplate = NpcData.getInstance().getTemplate(minionId);
-		if (minionTemplate == null)
-		{
-			return null;
-		}
-		return initializeNpcInstance(master, new L2MonsterInstance(minionTemplate));
+		return minionTemplate == null ? null : initializeNpcInstance(master, new L2MonsterInstance(minionTemplate));
 	}
 	
 	protected static final L2MonsterInstance initializeNpcInstance(L2MonsterInstance master, L2MonsterInstance minion)
@@ -378,22 +353,8 @@ public class MinionList
 		int newX = Rnd.get(minRadius * 2, offset * 2); // x
 		int newY = Rnd.get(newX, offset * 2); // distance
 		newY = (int) Math.sqrt((newY * newY) - (newX * newX)); // y
-		if (newX > (offset + minRadius))
-		{
-			newX = (master.getX() + newX) - offset;
-		}
-		else
-		{
-			newX = (master.getX() - newX) + minRadius;
-		}
-		if (newY > (offset + minRadius))
-		{
-			newY = (master.getY() + newY) - offset;
-		}
-		else
-		{
-			newY = (master.getY() - newY) + minRadius;
-		}
+		newX = newX > (offset + minRadius) ? (master.getX() + newX) - offset : (master.getX() - newX) + minRadius;
+		newY = newY > (offset + minRadius) ? (master.getY() + newY) - offset : (master.getY() - newY) + minRadius;
 		
 		minion.spawnMe(newX, newY, master.getZ());
 		

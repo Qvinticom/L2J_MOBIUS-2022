@@ -377,8 +377,7 @@ final class CastleChamberlain extends AbstractNpcAI
 		final List<Integer> fortList = FORTRESS.get(castleId);
 		for (int i = 0; i < numFort; i++)
 		{
-			final Fort fortress = FortManager.getInstance().getFortById(fortList.get(i));
-			if (fortress.getFortState() == 2)
+			if (FortManager.getInstance().getFortById(fortList.get(i)).getFortState() == 2)
 			{
 				return true;
 			}
@@ -989,12 +988,9 @@ final class CastleChamberlain extends AbstractNpcAI
 				{
 					final int locId = Integer.parseInt(st.nextToken());
 					final L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(locId);
-					if (list != null)
+					if ((list != null) && takeItems(player, list.getItemId(), list.getPrice()))
 					{
-						if (takeItems(player, list.getItemId(), list.getPrice()))
-						{
-							player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ());
-						}
+						player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ());
 					}
 				}
 				else
@@ -1118,10 +1114,9 @@ final class CastleChamberlain extends AbstractNpcAI
 					htmltext = "chamberlain-08.html";
 					break;
 				}
-				else if (npc.isMyLord(player))
+				if (npc.isMyLord(player))
 				{
 					final int cloakId = npc.getCastle().getSide() == CastleSide.DARK ? LORD_CLOAK_OF_DARK : LORD_CLOAK_OF_LIGHT;
-					
 					if (hasQuestItems(player, cloakId))
 					{
 						htmltext = "chamberlain-03.html";

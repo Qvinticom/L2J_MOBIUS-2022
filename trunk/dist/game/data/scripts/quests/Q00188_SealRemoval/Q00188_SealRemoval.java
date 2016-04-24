@@ -133,18 +133,15 @@ public final class Q00188_SealRemoval extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			if (npc.getId() == RESEARCHER_LORAIN)
+			if ((npc.getId() == RESEARCHER_LORAIN) && !hasQuestItems(player, LORAINES_CERTIFICATE))
 			{
-				if (!hasQuestItems(player, LORAINES_CERTIFICATE))
+				final QuestState q184 = player.getQuestState(Q00184_ArtOfPersuasion.class.getSimpleName());
+				final QuestState q185 = player.getQuestState(Q00185_NikolasCooperation.class.getSimpleName());
+				final QuestState q186 = player.getQuestState(Q00186_ContractExecution.class.getSimpleName());
+				final QuestState q187 = player.getQuestState(Q00187_NikolasHeart.class.getSimpleName());
+				if (((q184 != null) && q184.isCompleted()) || ((q185 != null) && q185.isCompleted() && (q186 == null) && (q187 == null)))
 				{
-					final QuestState q184 = player.getQuestState(Q00184_ArtOfPersuasion.class.getSimpleName());
-					final QuestState q185 = player.getQuestState(Q00185_NikolasCooperation.class.getSimpleName());
-					final QuestState q186 = player.getQuestState(Q00186_ContractExecution.class.getSimpleName());
-					final QuestState q187 = player.getQuestState(Q00187_NikolasHeart.class.getSimpleName());
-					if (((q184 != null) && q184.isCompleted()) || ((q185 != null) && q185.isCompleted() && (q186 == null) && (q187 == null)))
-					{
-						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30673-01.htm" : "30673-02.htm";
-					}
+					htmltext = (player.getLevel() >= MIN_LEVEL) ? "30673-01.htm" : "30673-02.htm";
 				}
 			}
 		}
@@ -179,12 +176,9 @@ public final class Q00188_SealRemoval extends Quest
 				}
 			}
 		}
-		else if (qs.isCompleted())
+		else if (qs.isCompleted() && (npc.getId() == RESEARCHER_LORAIN))
 		{
-			if (npc.getId() == RESEARCHER_LORAIN)
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-			}
+			htmltext = getAlreadyCompletedMsg(player);
 		}
 		return htmltext;
 	}

@@ -51,12 +51,7 @@ public final class RunAway extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (!info.getEffected().isAttackable())
-		{
-			return;
-		}
-		
-		if (Rnd.get(100) > _power)
+		if (!info.getEffected().isAttackable() || (Rnd.get(100) > _power))
 		{
 			return;
 		}

@@ -60,21 +60,19 @@ public class L2ClanHallZone extends L2ResidenceZone
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if (character.isPlayer())
+		if (!character.isPlayer())
 		{
-			// Set as in clan hall
-			character.setInsideZone(ZoneId.CLAN_HALL, true);
-			
-			final AuctionableHall clanHall = ClanHallManager.getInstance().getAuctionableHallById(getResidenceId());
-			if (clanHall == null)
-			{
-				return;
-			}
-			
-			// Send decoration packet
-			final AgitDecoInfo deco = new AgitDecoInfo(clanHall);
-			character.sendPacket(deco);
+			return;
 		}
+		// Set as in clan hall
+		character.setInsideZone(ZoneId.CLAN_HALL, true);
+		final AuctionableHall clanHall = ClanHallManager.getInstance().getAuctionableHallById(getResidenceId());
+		if (clanHall == null)
+		{
+			return;
+		}
+		// Send decoration packet
+		character.sendPacket(new AgitDecoInfo(clanHall));
 	}
 	
 	@Override

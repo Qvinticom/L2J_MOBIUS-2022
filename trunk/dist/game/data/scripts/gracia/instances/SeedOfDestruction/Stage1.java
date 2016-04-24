@@ -298,43 +298,30 @@ public final class Stage1 extends Quest
 										attrs = cd.getAttributes();
 										final SODSpawn spw = new SODSpawn();
 										spw.npcId = npcId;
-										
 										att = attrs.getNamedItem("x");
-										if (att != null)
-										{
-											spw.x = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.x = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("y");
-										if (att != null)
-										{
-											spw.y = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.y = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("z");
-										if (att != null)
-										{
-											spw.z = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.z = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("heading");
-										if (att != null)
-										{
-											spw.h = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.h = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("mustKill");
 										if (att != null)
 										{
@@ -353,25 +340,18 @@ public final class Stage1 extends Quest
 										final SODSpawn spw = new SODSpawn();
 										spw.npcId = npcId;
 										spw.isZone = true;
-										
 										att = attrs.getNamedItem("id");
-										if (att != null)
-										{
-											spw.zone = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.zone = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("count");
-										if (att != null)
-										{
-											spw.count = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.count = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("mustKill");
 										if (att != null)
 										{
@@ -425,24 +405,17 @@ public final class Stage1 extends Quest
 										attrs = cd.getAttributes();
 										int x, y;
 										att = attrs.getNamedItem("x");
-										if (att != null)
-										{
-											x = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										x = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("y");
-										if (att != null)
-										{
-											y = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
-										
+										y = Integer.parseInt(att.getNodeValue());
 										ter.add(x, y, minz, maxz, 0);
 									}
 								}
@@ -505,8 +478,7 @@ public final class Stage1 extends Quest
 				party.broadcastPacket(sm);
 				return false;
 			}
-			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
-			if (System.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 				sm.addPcName(partyMember);
@@ -834,24 +806,17 @@ public final class Stage1 extends Quest
 		if (!isSummon && (player != null))
 		{
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
-			if (tmpworld instanceof SOD1World)
+			if ((tmpworld instanceof SOD1World) && (((SOD1World) tmpworld).getStatus() == 7) && spawnState(((SOD1World) tmpworld)))
 			{
-				final SOD1World world = (SOD1World) tmpworld;
-				if (world.getStatus() == 7)
+				for (int objId : ((SOD1World) tmpworld).getAllowed())
 				{
-					if (spawnState(world))
+					final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
+					if (pl != null)
 					{
-						for (int objId : world.getAllowed())
-						{
-							final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
-							if (pl != null)
-							{
-								pl.showQuestMovie(5);
-							}
-						}
-						npc.deleteMe();
+						pl.showQuestMovie(5);
 					}
 				}
+				npc.deleteMe();
 			}
 		}
 		return null;
@@ -874,16 +839,10 @@ public final class Stage1 extends Quest
 				world.setStatus(4);
 				spawnFlaggedNPCs(world, 2);
 			}
-			else if ((world.getStatus() <= 8) && (npc.getId() == TIAT))
+			else if ((world.getStatus() <= 8) && (npc.getId() == TIAT) && (npc.getCurrentHp() < (npc.getMaxHp() / 2)) && spawnState(world))
 			{
-				if (npc.getCurrentHp() < (npc.getMaxHp() / 2))
-				{
-					if (spawnState(world))
-					{
-						startQuestTimer("TiatFullHp", 3000, npc, null);
-						setInstanceTimeRestrictions(world);
-					}
-				}
+				startQuestTimer("TiatFullHp", 3000, npc, null);
+				setInstanceTimeRestrictions(world);
 			}
 		}
 		return null;
@@ -922,8 +881,7 @@ public final class Stage1 extends Quest
 				{
 					world.deviceSpawnedMobCount = 0;
 					spawnFlaggedNPCs(world, 6);
-					final ExShowScreenMessage message3 = new ExShowScreenMessage(NpcStringId.ENEMIES_ARE_TRYING_TO_DESTROY_THE_FORTRESS_EVERYONE_DEFEND_THE_FORTRESS, 5, 1);
-					sendScreenMessage(world, message3);
+					sendScreenMessage(world, new ExShowScreenMessage(NpcStringId.ENEMIES_ARE_TRYING_TO_DESTROY_THE_FORTRESS_EVERYONE_DEFEND_THE_FORTRESS, 5, 1));
 				}
 				else
 				{
@@ -1061,7 +1019,6 @@ public final class Stage1 extends Quest
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(trap.getInstanceId());
 		if (tmpworld instanceof SOD1World)
 		{
-			final SOD1World world = (SOD1World) tmpworld;
 			switch (action)
 			{
 				case TRAP_TRIGGERED:
@@ -1070,14 +1027,14 @@ public final class Stage1 extends Quest
 					{
 						for (int npcId : TRAP_18771_NPCS)
 						{
-							addSpawn(npcId, trap.getX(), trap.getY(), trap.getZ(), trap.getHeading(), true, 0, true, world.getInstanceId());
+							addSpawn(npcId, trap.getX(), trap.getY(), trap.getZ(), trap.getHeading(), true, 0, true, ((SOD1World) tmpworld).getInstanceId());
 						}
 					}
 					else
 					{
 						for (int npcId : TRAP_OTHER_NPCS)
 						{
-							addSpawn(npcId, trap.getX(), trap.getY(), trap.getZ(), trap.getHeading(), true, 0, true, world.getInstanceId());
+							addSpawn(npcId, trap.getX(), trap.getY(), trap.getZ(), trap.getHeading(), true, 0, true, ((SOD1World) tmpworld).getInstanceId());
 						}
 					}
 					break;

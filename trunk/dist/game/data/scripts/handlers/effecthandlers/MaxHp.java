@@ -114,5 +114,4 @@ public final class MaxHp extends AbstractEffect
 			charStat.getActiveChar().removeStatsOwner(this);
 		}
 	}
-	
 }

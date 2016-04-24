@@ -132,8 +132,7 @@ public class Status extends Thread
 		
 		for (int i = 0; i < length; i++)
 		{
-			final int charSet = Rnd.nextInt(3);
-			switch (charSet)
+			switch (Rnd.nextInt(3))
 			{
 				case 0:
 				{

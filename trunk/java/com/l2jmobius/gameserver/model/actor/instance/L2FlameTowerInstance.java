@@ -62,8 +62,7 @@ public class L2FlameTowerInstance extends L2Tower
 	{
 		if ((_zoneList != null) && (_upgradeLevel != 0))
 		{
-			final int maxIndex = _upgradeLevel * 2;
-			for (int i = 0; i < maxIndex; i++)
+			for (int i = 0; i < (_upgradeLevel * 2); i++)
 			{
 				final L2ZoneType zone = ZoneManager.getInstance().getZoneById(_zoneList.get(i));
 				if (zone != null)

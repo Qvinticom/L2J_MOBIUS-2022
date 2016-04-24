@@ -185,26 +185,25 @@ public class ClanEntryManager
 	
 	public boolean addPlayerApplicationToClan(int clanId, PledgeApplicantInfo info)
 	{
-		if (!_playerLocked.containsKey(info.getPlayerId()))
+		if (_playerLocked.containsKey(info.getPlayerId()))
 		{
-			_applicantList.computeIfAbsent(clanId, k -> new ConcurrentHashMap<>()).put(info.getPlayerId(), info);
-			
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement(INSERT_APPLICANT))
-			{
-				statement.setInt(1, info.getPlayerId());
-				statement.setInt(2, info.getRequestClanId());
-				statement.setInt(3, info.getKarma());
-				statement.setString(4, info.getMessage());
-				statement.executeUpdate();
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, e.getMessage(), e);
-			}
-			return true;
+			return false;
 		}
-		return false;
+		_applicantList.computeIfAbsent(clanId, k -> new ConcurrentHashMap<>()).put(info.getPlayerId(), info);
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement(INSERT_APPLICANT))
+		{
+			statement.setInt(1, info.getPlayerId());
+			statement.setInt(2, info.getRequestClanId());
+			statement.setInt(3, info.getKarma());
+			statement.setString(4, info.getMessage());
+			statement.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		return true;
 	}
 	
 	public OptionalInt getClanIdForPlayerApplication(int playerId)
@@ -214,109 +213,108 @@ public class ClanEntryManager
 	
 	public boolean addToWaitingList(int playerId, PledgeWaitingInfo info)
 	{
-		if (!_playerLocked.containsKey(playerId))
+		if (_playerLocked.containsKey(playerId))
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement(INSERT_WAITING_LIST))
-			{
-				statement.setInt(1, info.getPlayerId());
-				statement.setInt(2, info.getKarma());
-				statement.executeUpdate();
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, e.getMessage(), e);
-			}
-			
-			return _waitingList.put(playerId, info) != null;
+			return false;
 		}
-		return false;
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement(INSERT_WAITING_LIST))
+		{
+			statement.setInt(1, info.getPlayerId());
+			statement.setInt(2, info.getKarma());
+			statement.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		return _waitingList.put(playerId, info) != null;
 	}
 	
 	public boolean removeFromWaitingList(int playerId)
 	{
-		if (_waitingList.containsKey(playerId))
+		if (!_waitingList.containsKey(playerId))
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement(DELETE_WAITING_LIST))
-			{
-				statement.setInt(1, playerId);
-				statement.executeUpdate();
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, e.getMessage(), e);
-			}
-			_waitingList.remove(playerId);
-			lockPlayer(playerId);
-			return true;
+			return false;
 		}
-		return false;
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement(DELETE_WAITING_LIST))
+		{
+			statement.setInt(1, playerId);
+			statement.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		_waitingList.remove(playerId);
+		lockPlayer(playerId);
+		return true;
 	}
 	
 	public boolean addToClanList(int clanId, PledgeRecruitInfo info)
 	{
-		if (!_clanList.containsKey(clanId) && !_clanLocked.containsKey(clanId))
+		if (_clanList.containsKey(clanId) || _clanLocked.containsKey(clanId))
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement(INSERT_CLAN_RECRUIT))
-			{
-				statement.setInt(1, info.getClanId());
-				statement.setInt(2, info.getKarma());
-				statement.setString(3, info.getInformation());
-				statement.setString(4, info.getDetailedInformation());
-				statement.executeUpdate();
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, e.getMessage(), e);
-			}
-			return _clanList.put(clanId, info) != null;
+			return false;
 		}
-		return false;
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement(INSERT_CLAN_RECRUIT))
+		{
+			statement.setInt(1, info.getClanId());
+			statement.setInt(2, info.getKarma());
+			statement.setString(3, info.getInformation());
+			statement.setString(4, info.getDetailedInformation());
+			statement.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		return _clanList.put(clanId, info) != null;
 	}
 	
 	public boolean updateClanList(int clanId, PledgeRecruitInfo info)
 	{
-		if (_clanList.containsKey(clanId) && !_clanLocked.containsKey(clanId))
+		if (!_clanList.containsKey(clanId) || _clanLocked.containsKey(clanId))
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement(UPDATE_CLAN_RECRUIT))
-			{
-				statement.setInt(1, info.getKarma());
-				statement.setString(2, info.getInformation());
-				statement.setString(3, info.getDetailedInformation());
-				statement.setInt(4, info.getClanId());
-				statement.executeUpdate();
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, e.getMessage(), e);
-			}
-			return _clanList.replace(clanId, info) != null;
+			return false;
 		}
-		return false;
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement(UPDATE_CLAN_RECRUIT))
+		{
+			statement.setInt(1, info.getKarma());
+			statement.setString(2, info.getInformation());
+			statement.setString(3, info.getDetailedInformation());
+			statement.setInt(4, info.getClanId());
+			statement.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		return _clanList.replace(clanId, info) != null;
 	}
 	
 	public boolean removeFromClanList(int clanId)
 	{
-		if (_clanList.containsKey(clanId))
+		if (!_clanList.containsKey(clanId))
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement(DELETE_CLAN_RECRUIT))
-			{
-				statement.setInt(1, clanId);
-				statement.executeUpdate();
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, e.getMessage(), e);
-			}
-			_clanList.remove(clanId);
-			lockClan(clanId);
-			return true;
+			return false;
 		}
-		return false;
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement(DELETE_CLAN_RECRUIT))
+		{
+			statement.setInt(1, clanId);
+			statement.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		_clanList.remove(clanId);
+		lockClan(clanId);
+		return true;
 	}
 	
 	public List<PledgeWaitingInfo> getSortedWaitingList(int levelMin, int levelMax, int role, int sortBy, boolean descending)

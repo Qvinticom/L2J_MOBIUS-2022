@@ -228,8 +228,7 @@ public class AutoSpawnHandler
 			_registeredSpawns.remove(spawnInst.getId());
 			
 			// Cancel the currently associated running scheduled task.
-			final ScheduledFuture<?> respawnTask = _runningSpawns.remove(spawnInst._objectId);
-			respawnTask.cancel(false);
+			_runningSpawns.remove(spawnInst._objectId).cancel(false);
 		}
 		catch (Exception e)
 		{
@@ -263,40 +262,29 @@ public class AutoSpawnHandler
 		
 		final int objectId = spawnInst._objectId;
 		
-		if (isSpawnRegistered(objectId))
+		if (!isSpawnRegistered(objectId))
 		{
-			ScheduledFuture<?> spawnTask = null;
-			
-			if (isActive)
-			{
-				final AutoSpawner rs = new AutoSpawner(objectId);
-				
-				if (spawnInst._desDelay > 0)
-				{
-					spawnTask = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(rs, spawnInst._initDelay, spawnInst._resDelay);
-				}
-				else
-				{
-					spawnTask = ThreadPoolManager.getInstance().scheduleEffect(rs, spawnInst._initDelay);
-				}
-				
-				_runningSpawns.put(objectId, spawnTask);
-			}
-			else
-			{
-				final AutoDespawner rd = new AutoDespawner(objectId);
-				spawnTask = _runningSpawns.remove(objectId);
-				
-				if (spawnTask != null)
-				{
-					spawnTask.cancel(false);
-				}
-				
-				ThreadPoolManager.getInstance().scheduleEffect(rd, 0);
-			}
-			
-			spawnInst.setSpawnActive(isActive);
+			return;
 		}
+		
+		ScheduledFuture<?> spawnTask = null;
+		if (isActive)
+		{
+			final AutoSpawner rs = new AutoSpawner(objectId);
+			spawnTask = spawnInst._desDelay > 0 ? ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(rs, spawnInst._initDelay, spawnInst._resDelay) : ThreadPoolManager.getInstance().scheduleEffect(rs, spawnInst._initDelay);
+			_runningSpawns.put(objectId, spawnTask);
+		}
+		else
+		{
+			final AutoDespawner rd = new AutoDespawner(objectId);
+			spawnTask = _runningSpawns.remove(objectId);
+			if (spawnTask != null)
+			{
+				spawnTask.cancel(false);
+			}
+			ThreadPoolManager.getInstance().scheduleEffect(rd, 0);
+		}
+		spawnInst.setSpawnActive(isActive);
 	}
 	
 	/**
@@ -326,13 +314,7 @@ public class AutoSpawnHandler
 	public final long getTimeToNextSpawn(AutoSpawnInstance spawnInst)
 	{
 		final int objectId = spawnInst.getObjectId();
-		
-		if (!isSpawnRegistered(objectId))
-		{
-			return -1;
-		}
-		
-		return (_runningSpawns.containsKey(objectId)) ? _runningSpawns.get(objectId).getDelay(TimeUnit.MILLISECONDS) : 0;
+		return !isSpawnRegistered(objectId) ? -1 : (_runningSpawns.containsKey(objectId)) ? _runningSpawns.get(objectId).getDelay(TimeUnit.MILLISECONDS) : 0;
 	}
 	
 	/**
@@ -496,22 +478,15 @@ public class AutoSpawnHandler
 					}
 				}
 				
-				if (npcInst != null)
+				if ((npcInst != null) && spawnInst.isBroadcasting())
 				{
-					final String nearestTown = MapRegionManager.getInstance().getClosestTownName(npcInst);
-					
-					// Announce to all players that the spawn has taken place, with the nearest town location.
-					if (spawnInst.isBroadcasting())
-					{
-						Broadcast.toAllOnlinePlayers("The " + npcInst.getName() + " has spawned near " + nearestTown + "!");
-					}
+					Broadcast.toAllOnlinePlayers("The " + npcInst.getName() + " has spawned near " + MapRegionManager.getInstance().getClosestTownName(npcInst) + "!");
 				}
 				
 				// If there is no despawn time, do not create a despawn task.
 				if (spawnInst.getDespawnDelay() > 0)
 				{
-					final AutoDespawner rd = new AutoDespawner(_objectId);
-					ThreadPoolManager.getInstance().scheduleAi(rd, spawnInst.getDespawnDelay() - 1000);
+					ThreadPoolManager.getInstance().scheduleAi((new AutoDespawner(_objectId)), spawnInst.getDespawnDelay() - 1000);
 				}
 			}
 			catch (Exception e)
@@ -722,12 +697,7 @@ public class AutoSpawnHandler
 		
 		public boolean addSpawnLocation(int[] spawnLoc)
 		{
-			if (spawnLoc.length != 3)
-			{
-				return false;
-			}
-			
-			return addSpawnLocation(spawnLoc[0], spawnLoc[1], spawnLoc[2], -1);
+			return (spawnLoc.length == 3) && addSpawnLocation(spawnLoc[0], spawnLoc[1], spawnLoc[2], -1);
 		}
 		
 		public Location removeSpawnLocation(int locIndex)

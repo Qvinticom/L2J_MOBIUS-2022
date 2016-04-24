@@ -90,21 +90,15 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 				return false;
 			}
 			
+			f.lastAccess = current;
 			if ((f.lastAccess + 1000) > current)
 			{
-				f.lastAccess = current;
-				
 				if (f.trys >= 3)
 				{
 					f.trys = -1;
 					return false;
 				}
-				
 				f.trys++;
-			}
-			else
-			{
-				f.lastAccess = current;
 			}
 		}
 		else
@@ -129,8 +123,7 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 				final Iterator<Entry<Integer, Flood>> it = _ipFloodMap.entrySet().iterator();
 				while (it.hasNext())
 				{
-					final Flood f = it.next().getValue();
-					if (f.lastAccess < reference)
+					if (it.next().getValue().lastAccess < reference)
 					{
 						it.remove();
 					}

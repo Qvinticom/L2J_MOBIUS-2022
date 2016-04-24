@@ -189,47 +189,20 @@ public class L2FortLogisticsInstance extends L2MerchantInstance
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
-		String filename;
-		
-		if (val == 0)
-		{
-			filename = "html/fortress/logistics.htm";
-		}
-		else
-		{
-			filename = "html/fortress/logistics-" + val + ".htm";
-		}
+		final String filename = val == 0 ? "html/fortress/logistics.htm" : "html/fortress/logistics-" + val + ".htm";
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(player.getHtmlPrefix(), filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcId%", String.valueOf(getId()));
-		if (getFort().getOwnerClan() != null)
-		{
-			html.replace("%clanname%", getFort().getOwnerClan().getName());
-		}
-		else
-		{
-			html.replace("%clanname%", "NPC");
-		}
+		html.replace("%clanname%", getFort().getOwnerClan() != null ? getFort().getOwnerClan().getName() : "NPC");
 		player.sendPacket(html);
 	}
 	
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		
-		if (val == 0)
-		{
-			pom = "logistics";
-		}
-		else
-		{
-			pom = "logistics-" + val;
-		}
-		
-		return "html/fortress/" + pom + ".htm";
+		return "html/fortress/" + (val == 0 ? "logistics" : "logistics-" + val) + ".htm";
 	}
 	
 	@Override

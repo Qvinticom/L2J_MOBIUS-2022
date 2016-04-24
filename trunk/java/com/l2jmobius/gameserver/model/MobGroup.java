@@ -76,9 +76,7 @@ public final class MobGroup
 	{
 		try
 		{
-			final L2ControllableMobAI mobGroupAI = (L2ControllableMobAI) getMobs().get(0).getAI();
-			
-			switch (mobGroupAI.getAlternateAI())
+			switch (((L2ControllableMobAI) getMobs().get(0).getAI()).getAlternateAI())
 			{
 				case L2ControllableMobAI.AI_NORMAL:
 				{
@@ -192,8 +190,7 @@ public final class MobGroup
 				final int y = player.getY() + Rnd.nextInt(50);
 				
 				mobInst.teleToLocation(new Location(x, y, player.getZ()), true);
-				final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-				ai.follow(player);
+				((L2ControllableMobAI) mobInst.getAI()).follow(player);
 			}
 		}
 	}
@@ -201,14 +198,7 @@ public final class MobGroup
 	public L2ControllableMobInstance getRandomMob()
 	{
 		removeDead();
-		
-		if (getActiveMobCount() == 0)
-		{
-			return null;
-		}
-		
-		final int choice = Rnd.nextInt(getActiveMobCount());
-		return getMobs().get(choice);
+		return getActiveMobCount() == 0 ? null : getMobs().get(Rnd.nextInt(getActiveMobCount()));
 	}
 	
 	public void unspawnGroup()
@@ -288,8 +278,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.forceAttack(target);
+			((L2ControllableMobAI) mobInst.getAI()).forceAttack(target);
 		}
 	}
 	
@@ -304,8 +293,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.stop();
+			((L2ControllableMobAI) mobInst.getAI()).stop();
 		}
 	}
 	
@@ -320,13 +308,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final int signX = (Rnd.nextInt(2) == 0) ? -1 : 1;
-			final int signY = (Rnd.nextInt(2) == 0) ? -1 : 1;
-			final int randX = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
-			final int randY = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
-			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.move(activeChar.getX() + (signX * randX), activeChar.getY() + (signY * randY), activeChar.getZ());
+			((L2ControllableMobAI) mobInst.getAI()).move(activeChar.getX() + (((Rnd.nextInt(2) == 0) ? -1 : 1) * Rnd.nextInt(MobGroupTable.RANDOM_RANGE)), activeChar.getY() + (((Rnd.nextInt(2) == 0) ? -1 : 1) * Rnd.nextInt(MobGroupTable.RANDOM_RANGE)), activeChar.getZ());
 		}
 	}
 	
@@ -341,8 +323,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.follow(character);
+			((L2ControllableMobAI) mobInst.getAI()).follow(character);
 		}
 	}
 	
@@ -357,8 +338,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.setAlternateAI(L2ControllableMobAI.AI_CAST);
+			((L2ControllableMobAI) mobInst.getAI()).setAlternateAI(L2ControllableMobAI.AI_CAST);
 		}
 	}
 	
@@ -373,8 +353,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.setNotMoving(enabled);
+			((L2ControllableMobAI) mobInst.getAI()).setNotMoving(enabled);
 		}
 	}
 	

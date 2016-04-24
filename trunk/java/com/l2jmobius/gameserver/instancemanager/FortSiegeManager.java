@@ -154,13 +154,7 @@ public final class FortSiegeManager
 				
 				try
 				{
-					final int x = Integer.parseInt(st.nextToken());
-					final int y = Integer.parseInt(st.nextToken());
-					final int z = Integer.parseInt(st.nextToken());
-					final int heading = Integer.parseInt(st.nextToken());
-					final int npc_id = Integer.parseInt(st.nextToken());
-					
-					commanderSpawns.add(new FortSiegeSpawn(fort.getResidenceId(), x, y, z, heading, npc_id, i));
+					commanderSpawns.add(new FortSiegeSpawn(fort.getResidenceId(), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), i));
 				}
 				catch (Exception e)
 				{
@@ -181,12 +175,7 @@ public final class FortSiegeManager
 				
 				try
 				{
-					final int x = Integer.parseInt(st.nextToken());
-					final int y = Integer.parseInt(st.nextToken());
-					final int z = Integer.parseInt(st.nextToken());
-					final int flag_id = Integer.parseInt(st.nextToken());
-					
-					flagSpawns.add(new CombatFlag(fort.getResidenceId(), x, y, z, 0, flag_id));
+					flagSpawns.add(new CombatFlag(fort.getResidenceId(), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), 0, Integer.parseInt(st.nextToken())));
 				}
 				catch (Exception e)
 				{
@@ -308,30 +297,18 @@ public final class FortSiegeManager
 		// here check if is siege is in progress
 		// here check if is siege is attacker
 		final Fort fort = FortManager.getInstance().getFort(player);
-		
-		if ((fort == null) || (fort.getResidenceId() <= 0))
+		if ((fort != null) && (fort.getResidenceId() > 0) && fort.getSiege().isInProgress() && (fort.getSiege().getAttackerClan(player.getClan()) != null))
 		{
-			player.sendPacket(sm);
-			return false;
+			return true;
 		}
-		else if (!fort.getSiege().isInProgress())
-		{
-			player.sendPacket(sm);
-			return false;
-		}
-		else if (fort.getSiege().getAttackerClan(player.getClan()) == null)
-		{
-			player.sendPacket(sm);
-			return false;
-		}
-		return true;
+		player.sendPacket(sm);
+		return false;
 	}
 	
 	public void dropCombatFlag(L2PcInstance player, int fortId)
 	{
 		final Fort fort = FortManager.getInstance().getFortById(fortId);
-		final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
-		for (CombatFlag cf : fcf)
+		for (CombatFlag cf : _flagList.get(fort.getResidenceId()))
 		{
 			if (cf.getPlayerObjectId() == player.getObjectId())
 			{

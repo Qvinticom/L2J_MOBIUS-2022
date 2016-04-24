@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.ai;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -67,16 +66,9 @@ public final class L2ControllableMobAI extends L2AttackableAI
 	
 	protected void thinkFollow()
 	{
-		final L2Attackable me = (L2Attackable) _actor;
-		
-		if (!Util.checkIfInRange(MobGroupTable.FOLLOW_RANGE, me, getForcedTarget(), true))
+		if (!Util.checkIfInRange(MobGroupTable.FOLLOW_RANGE, _actor, getForcedTarget(), true))
 		{
-			final int signX = (Rnd.nextInt(2) == 0) ? -1 : 1;
-			final int signY = (Rnd.nextInt(2) == 0) ? -1 : 1;
-			final int randX = Rnd.nextInt(MobGroupTable.FOLLOW_RANGE);
-			final int randY = Rnd.nextInt(MobGroupTable.FOLLOW_RANGE);
-			
-			moveTo(getForcedTarget().getX() + (signX * randX), getForcedTarget().getY() + (signY * randY), getForcedTarget().getZ());
+			moveTo(getForcedTarget().getX() + (((Rnd.nextInt(2) == 0) ? -1 : 1) * Rnd.nextInt(MobGroupTable.FOLLOW_RANGE)), getForcedTarget().getY() + (((Rnd.nextInt(2) == 0) ? -1 : 1) * Rnd.nextInt(MobGroupTable.FOLLOW_RANGE)), getForcedTarget().getZ());
 		}
 	}
 	
@@ -159,28 +151,28 @@ public final class L2ControllableMobAI extends L2AttackableAI
 		
 		npc.setTarget(getAttackTarget());
 		
-		if (!_actor.isMuted())
+		if (_actor.isMuted())
 		{
-			int max_range = 0;
-			// check distant skills
-			
-			for (Skill sk : _actor.getAllSkills())
-			{
-				if (Util.checkIfInRange(sk.getCastRange(), _actor, getAttackTarget(), true) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk)))
-				{
-					_actor.doCast(sk);
-					return;
-				}
-				
-				max_range = Math.max(max_range, sk.getCastRange());
-			}
-			
-			if (!isNotMoving())
-			{
-				moveToPawn(getAttackTarget(), max_range);
-			}
-			
 			return;
+		}
+		
+		int max_range = 0;
+		// check distant skills
+		
+		for (Skill sk : _actor.getAllSkills())
+		{
+			if (Util.checkIfInRange(sk.getCastRange(), _actor, getAttackTarget(), true) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk)))
+			{
+				_actor.doCast(sk);
+				return;
+			}
+			
+			max_range = Math.max(max_range, sk.getCastRange());
+		}
+		
+		if (!isNotMoving())
+		{
+			moveToPawn(getAttackTarget(), max_range);
 		}
 	}
 	
@@ -284,10 +276,8 @@ public final class L2ControllableMobAI extends L2AttackableAI
 			if (getAttackTarget() != null)
 			{
 				// stop hating
-				final L2Attackable npc = (L2Attackable) _actor;
-				npc.stopHating(getAttackTarget());
+				((L2Attackable) _actor).stopHating(getAttackTarget());
 			}
-			
 			setIntention(AI_INTENTION_ACTIVE);
 		}
 		else
@@ -295,21 +285,17 @@ public final class L2ControllableMobAI extends L2AttackableAI
 			// notify aggression
 			if (((L2Npc) _actor).getTemplate().getClans() != null)
 			{
-				final Collection<L2Object> objs = _actor.getKnownList().getKnownObjects().values();
-				for (L2Object obj : objs)
+				for (L2Object obj : _actor.getKnownList().getKnownObjects().values())
 				{
 					if (!(obj instanceof L2Npc))
 					{
 						continue;
 					}
-					
 					final L2Npc npc = (L2Npc) obj;
-					
 					if (!npc.isInMyClan((L2Npc) _actor))
 					{
 						continue;
 					}
-					
 					if (_actor.isInsideRadius(npc, npc.getTemplate().getClanHelpRange(), false, true) && (Math.abs(getAttackTarget().getZ() - npc.getZ()) < 200))
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, getAttackTarget(), 1);
@@ -343,16 +329,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 			}
 			
 			// Force mobs to attack anybody if confused.
-			L2Character hated;
-			
-			if (_actor.isConfused())
-			{
-				hated = findNextRndTarget();
-			}
-			else
-			{
-				hated = getAttackTarget();
-			}
+			final L2Character hated = _actor.isConfused() ? findNextRndTarget() : getAttackTarget();
 			
 			if (hated == null)
 			{
@@ -387,22 +364,15 @@ public final class L2ControllableMobAI extends L2AttackableAI
 	protected void thinkActive()
 	{
 		setAttackTarget(findNextRndTarget());
-		L2Character hated;
 		
-		if (_actor.isConfused())
+		final L2Character hated = _actor.isConfused() ? findNextRndTarget() : getAttackTarget();
+		if (hated == null)
 		{
-			hated = findNextRndTarget();
-		}
-		else
-		{
-			hated = getAttackTarget();
+			return;
 		}
 		
-		if (hated != null)
-		{
-			_actor.setRunning();
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, hated);
-		}
+		_actor.setRunning();
+		setIntention(CtrlIntention.AI_INTENTION_ATTACK, hated);
 	}
 	
 	private boolean checkAutoAttackCondition(L2Character target)
@@ -436,14 +406,10 @@ public final class L2ControllableMobAI extends L2AttackableAI
 			return false;
 		}
 		
-		// Check if the target is a L2Playable
-		if (target.isPlayable())
+		// Check if the target isn't in silent move mode
+		if (target.isPlayable() && ((L2Playable) target).isSilentMovingAffected())
 		{
-			// Check if the target isn't in silent move mode
-			if (((L2Playable) target).isSilentMovingAffected())
-			{
-				return false;
-			}
+			return false;
 		}
 		return me.isAggressive();
 	}
@@ -451,11 +417,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 	private L2Character findNextRndTarget()
 	{
 		final List<L2Character> potentialTarget = _actor.getKnownList().getKnownCharactersInRadius(getActiveChar().getAggroRange()).stream().filter(this::checkAutoAttackCondition).collect(Collectors.toList());
-		if (potentialTarget.isEmpty())
-		{
-			return null;
-		}
-		return potentialTarget.get(Rnd.nextInt(potentialTarget.size()));
+		return potentialTarget.isEmpty() ? null : potentialTarget.get(Rnd.nextInt(potentialTarget.size()));
 	}
 	
 	private L2ControllableMobInstance findNextGroupTarget()

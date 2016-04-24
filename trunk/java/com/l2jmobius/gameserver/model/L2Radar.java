@@ -102,8 +102,7 @@ public final class L2Radar
 			result = (prime * result) + _type;
 			result = (prime * result) + _x;
 			result = (prime * result) + _y;
-			result = (prime * result) + _z;
-			return result;
+			return result = (prime * result) + _z;
 		}
 		
 		@Override
@@ -118,11 +117,7 @@ public final class L2Radar
 				return false;
 			}
 			final RadarMarker other = (RadarMarker) obj;
-			if ((_type != other._type) || (_x != other._x) || (_y != other._y) || (_z != other._z))
-			{
-				return false;
-			}
-			return true;
+			return (_type == other._type) && (_x == other._x) && (_y == other._y) && (_z == other._z);
 		}
 	}
 }

@@ -61,7 +61,8 @@ public class RequestDivideAdenaStart extends L2GameClientPacket
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_AN_ALLIANCE_LEADER_OR_PARTY_LEADER);
 			return;
 		}
-		else if (!party.isLeader(player))
+		
+		if (!party.isLeader(player))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_A_PARTY_LEADER);
 			return;

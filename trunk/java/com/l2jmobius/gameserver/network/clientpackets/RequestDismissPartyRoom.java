@@ -63,5 +63,4 @@ public class RequestDismissPartyRoom extends L2GameClientPacket
 	{
 		return _C__D0_0A_REQUESTDISMISSPARTYROOM;
 	}
-	
 }

@@ -230,12 +230,9 @@ final class BeastFarm extends AbstractNpcAI
 	public void spawnNext(L2Npc npc, L2PcInstance player, int nextNpcId, int food)
 	{
 		// remove the feedinfo of the mob that got despawned, if any
-		if (FEED_INFO.containsKey(npc.getObjectId()))
+		if (FEED_INFO.containsKey(npc.getObjectId()) && (FEED_INFO.get(npc.getObjectId()) == player.getObjectId()))
 		{
-			if (FEED_INFO.get(npc.getObjectId()) == player.getObjectId())
-			{
-				FEED_INFO.remove(npc.getObjectId());
-			}
+			FEED_INFO.remove(npc.getObjectId());
 		}
 		// despawn the old mob
 		// TODO: same code? FIXED?
@@ -322,12 +319,7 @@ final class BeastFarm extends AbstractNpcAI
 		
 		// first gather some values on local variables
 		final int objectId = npc.getObjectId();
-		int growthLevel = 3; // if a mob is in FEEDABLE_BEASTS but not in _GrowthCapableMobs, then it's at max growth (3)
-		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))
-		{
-			growthLevel = GROWTH_CAPABLE_MONSTERS.get(npcId).getGrowthLevel();
-		}
-		
+		final int growthLevel = GROWTH_CAPABLE_MONSTERS.containsKey(npcId) ? GROWTH_CAPABLE_MONSTERS.get(npcId).getGrowthLevel() : 3; // if a mob is in FEEDABLE_BEASTS but not in _GrowthCapableMobs, then it's at max growth (3)
 		// prevent exploit which allows 2 players to simultaneously raise the same 0-growth beast
 		// If the mob is at 0th level (when it still listens to all feeders) lock it to the first feeder!
 		if ((growthLevel == 0) && FEED_INFO.containsKey(objectId))
@@ -364,7 +356,7 @@ final class BeastFarm extends AbstractNpcAI
 				}
 				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
-			else if ((growthLevel > 0) && (FEED_INFO.get(objectId) != caster.getObjectId()))
+			if ((growthLevel > 0) && (FEED_INFO.get(objectId) != caster.getObjectId()))
 			{
 				// check if this is the same player as the one who raised it from growth 0.
 				// if no, then do not allow a chance to raise the pet (food gets consumed but has no effect).

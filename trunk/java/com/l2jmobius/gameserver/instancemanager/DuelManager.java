@@ -112,8 +112,7 @@ public final class DuelManager
 		{
 			return;
 		}
-		final Duel duel = getDuel(player.getDuelId());
-		duel.doSurrender(player);
+		getDuel(player.getDuelId()).doSurrender(player);
 	}
 	
 	/**

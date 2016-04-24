@@ -303,43 +303,30 @@ public final class FinalEmperialTomb extends AbstractInstance
 										attrs = cd.getAttributes();
 										final FETSpawn spw = new FETSpawn();
 										spw.npcId = npcId;
-										
 										att = attrs.getNamedItem("x");
-										if (att != null)
-										{
-											spw.x = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.x = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("y");
-										if (att != null)
-										{
-											spw.y = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.y = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("z");
-										if (att != null)
-										{
-											spw.z = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.z = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("heading");
-										if (att != null)
-										{
-											spw.h = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.h = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("mustKill");
 										if (att != null)
 										{
@@ -358,25 +345,18 @@ public final class FinalEmperialTomb extends AbstractInstance
 										final FETSpawn spw = new FETSpawn();
 										spw.npcId = npcId;
 										spw.isZone = true;
-										
 										att = attrs.getNamedItem("id");
-										if (att != null)
-										{
-											spw.zone = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.zone = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("count");
-										if (att != null)
-										{
-											spw.count = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										spw.count = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("mustKill");
 										if (att != null)
 										{
@@ -430,24 +410,17 @@ public final class FinalEmperialTomb extends AbstractInstance
 										attrs = cd.getAttributes();
 										int x, y;
 										att = attrs.getNamedItem("x");
-										if (att != null)
-										{
-											x = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
+										x = Integer.parseInt(att.getNodeValue());
 										att = attrs.getNamedItem("y");
-										if (att != null)
-										{
-											y = Integer.parseInt(att.getNodeValue());
-										}
-										else
+										if (att == null)
 										{
 											continue;
 										}
-										
+										y = Integer.parseInt(att.getNodeValue());
 										ter.add(x, y, minz, maxz, 0);
 									}
 								}
@@ -491,19 +464,19 @@ public final class FinalEmperialTomb extends AbstractInstance
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL);
 			return false;
 		}
-		else if (channel.getLeader() != player)
+		if (channel.getLeader() != player)
 		{
 			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return false;
 		}
-		else if (player.getInventory().getItemByItemId(8073) == null)
+		if (player.getInventory().getItemByItemId(8073) == null)
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return false;
 		}
-		else if ((channel.getMemberCount() < MIN_PLAYERS) || (channel.getMemberCount() > MAX_PLAYERS))
+		if ((channel.getMemberCount() < MIN_PLAYERS) || (channel.getMemberCount() > MAX_PLAYERS))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT);
 			return false;
@@ -520,8 +493,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 				party.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED).addPcName(channelMember));
 				return false;
 			}
-			final Long reentertime = InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID);
-			if (System.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID))
 			{
 				party.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addPcName(channelMember));
 				return false;
@@ -1531,12 +1503,9 @@ public final class FinalEmperialTomb extends AbstractInstance
 			}
 			else if (world.getStatus() <= 2)
 			{
-				if (npc.getId() == HALL_KEEPER_CAPTAIN)
+				if ((npc.getId() == HALL_KEEPER_CAPTAIN) && (getRandom(100) < 5))
 				{
-					if (getRandom(100) < 5)
-					{
-						npc.dropItem(player, DEWDROP_OF_DESTRUCTION_ITEM_ID, 1);
-					}
+					npc.dropItem(player, DEWDROP_OF_DESTRUCTION_ITEM_ID, 1);
 				}
 				
 				if (checkKillProgress(npc, world))

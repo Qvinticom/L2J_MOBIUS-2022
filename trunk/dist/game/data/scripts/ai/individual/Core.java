@@ -63,20 +63,15 @@ final class Core extends AbstractNpcAI
 		
 		_firstAttacked = false;
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
-		final int status = GrandBossManager.getInstance().getBossStatus(CORE);
-		if (status == DEAD)
+		if (GrandBossManager.getInstance().getBossStatus(CORE) == DEAD)
 		{
-			// load the unlock date and time for Core from DB
 			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
-			// if Core is locked until a certain time, mark it so and start the unlock timer
-			// the unlock time has not yet expired.
 			if (temp > 0)
 			{
 				startQuestTimer("core_unlock", temp, null, null);
 			}
 			else
 			{
-				// the time has already expired while the server was offline. Immediately spawn Core.
 				final L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 				GrandBossManager.getInstance().setBossStatus(CORE, ALIVE);
 				spawnBoss(core);

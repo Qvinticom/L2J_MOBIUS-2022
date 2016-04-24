@@ -58,12 +58,8 @@ public class RequestDivideAdena extends L2GameClientPacket
 		{
 			return;
 		}
-		else if (request.getDistributor() != player)
-		{
-			cancelDistribution(request);
-			return;
-		}
-		else if (request.getAdenaObjectId() != _adenaObjId)
+		
+		if ((request.getDistributor() != player) || (request.getAdenaObjectId() != _adenaObjId))
 		{
 			cancelDistribution(request);
 			return;
@@ -86,7 +82,8 @@ public class RequestDivideAdena extends L2GameClientPacket
 			cancelDistribution(request);
 			return;
 		}
-		else if (!party.isLeader(player))
+		
+		if (!party.isLeader(player))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_A_PARTY_LEADER);
 			cancelDistribution(request);
@@ -108,13 +105,15 @@ public class RequestDivideAdena extends L2GameClientPacket
 			cancelDistribution(request);
 			return;
 		}
-		else if (targets.size() < request.getPlayers().size())
+		
+		if (targets.size() < request.getPlayers().size())
 		{
 			player.sendPacket(SystemMessageId.THE_DISTRIBUTION_PARTICIPANTS_HAVE_CHANGED_ADENA_DISTRIBUTION_HAS_BEEN_CANCELLED);
 			cancelDistribution(request);
 			return;
 		}
-		else if (player.getAdena() < _adenaCount)
+		
+		if (player.getAdena() < _adenaCount)
 		{
 			player.sendPacket(SystemMessageId.DISTRIBUTION_CANNOT_PROCEED_AS_THERE_IS_INSUFFICIENT_ADENA_FOR_DISTRIBUTION);
 			cancelDistribution(request);

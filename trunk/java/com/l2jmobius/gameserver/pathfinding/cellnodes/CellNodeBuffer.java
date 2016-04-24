@@ -176,43 +176,33 @@ public class CellNodeBuffer
 			nodeN = addNode(x, y - 1, z, false);
 		}
 		
-		if (Config.ADVANCED_DIAGONAL_STRATEGY)
+		if (!Config.ADVANCED_DIAGONAL_STRATEGY)
 		{
-			// SouthEast
-			if ((nodeE != null) && (nodeS != null))
-			{
-				if (nodeE.getLoc().canGoSouth() && nodeS.getLoc().canGoEast())
-				{
-					addNode(x + 1, y + 1, z, true);
-				}
-			}
-			
-			// SouthWest
-			if ((nodeS != null) && (nodeW != null))
-			{
-				if (nodeW.getLoc().canGoSouth() && nodeS.getLoc().canGoWest())
-				{
-					addNode(x - 1, y + 1, z, true);
-				}
-			}
-			
-			// NorthEast
-			if ((nodeN != null) && (nodeE != null))
-			{
-				if (nodeE.getLoc().canGoNorth() && nodeN.getLoc().canGoEast())
-				{
-					addNode(x + 1, y - 1, z, true);
-				}
-			}
-			
-			// NorthWest
-			if ((nodeN != null) && (nodeW != null))
-			{
-				if (nodeW.getLoc().canGoNorth() && nodeN.getLoc().canGoWest())
-				{
-					addNode(x - 1, y - 1, z, true);
-				}
-			}
+			return;
+		}
+		
+		// SouthEast
+		if ((nodeE != null) && (nodeS != null) && nodeE.getLoc().canGoSouth() && nodeS.getLoc().canGoEast())
+		{
+			addNode(x + 1, y + 1, z, true);
+		}
+		
+		// SouthWest
+		if ((nodeS != null) && (nodeW != null) && nodeW.getLoc().canGoSouth() && nodeS.getLoc().canGoWest())
+		{
+			addNode(x - 1, y + 1, z, true);
+		}
+		
+		// NorthEast
+		if ((nodeN != null) && (nodeE != null) && nodeE.getLoc().canGoNorth() && nodeN.getLoc().canGoEast())
+		{
+			addNode(x + 1, y - 1, z, true);
+		}
+		
+		// NorthWest
+		if ((nodeN != null) && (nodeW != null) && nodeW.getLoc().canGoNorth() && nodeN.getLoc().canGoWest())
+		{
+			addNode(x - 1, y - 1, z, true);
 		}
 	}
 	
@@ -323,21 +313,7 @@ public class CellNodeBuffer
 	private final boolean isHighWeight(int x, int y, int z)
 	{
 		final CellNode result = getNode(x, y, z);
-		if (result == null)
-		{
-			return true;
-		}
-		
-		if (!result.getLoc().canGoAll())
-		{
-			return true;
-		}
-		if (Math.abs(result.getLoc().getZ() - z) > 16)
-		{
-			return true;
-		}
-		
-		return false;
+		return (result == null) || !result.getLoc().canGoAll() || (Math.abs(result.getLoc().getZ() - z) > 16);
 	}
 	
 	private final double getCost(int x, int y, int z, float weight)

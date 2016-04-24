@@ -100,8 +100,7 @@ public class L2DecoyInstance extends L2Decoy
 			try
 			{
 				_Decoy.decTimeRemaining(1000);
-				final double newTimeRemaining = _Decoy.getTimeRemaining();
-				if (newTimeRemaining < 0)
+				if (_Decoy.getTimeRemaining() < 0)
 				{
 					_Decoy.unSummon(_activeChar);
 				}

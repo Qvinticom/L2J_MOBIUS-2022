@@ -44,23 +44,23 @@ public class LookingForFishTask implements Runnable
 	@Override
 	public void run()
 	{
-		if (_player != null)
+		if (_player == null)
 		{
-			if (System.currentTimeMillis() >= _endTaskTime)
-			{
-				_player.endFishing(false, true);
-				return;
-			}
-			if (_fishGroup == -1)
-			{
-				return;
-			}
-			final int check = Rnd.get(100);
-			if (_fishGutsCheck > check)
-			{
-				_player.stopLookingForFishTask();
-				_player.startFishCombat(_isNoob, _isUpperGrade);
-			}
+			return;
 		}
+		
+		if (System.currentTimeMillis() >= _endTaskTime)
+		{
+			_player.endFishing(false, true);
+			return;
+		}
+		
+		if ((_fishGroup == -1) || (_fishGutsCheck <= Rnd.get(100)))
+		{
+			return;
+		}
+		
+		_player.stopLookingForFishTask();
+		_player.startFishCombat(_isNoob, _isUpperGrade);
 	}
 }

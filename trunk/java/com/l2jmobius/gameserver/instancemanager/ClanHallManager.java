@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.entity.Auction;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.clanhall.AuctionableHall;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
@@ -95,8 +94,7 @@ public final class ClanHallManager
 				}
 				_freeClanHall.put(id, ch);
 				
-				final Auction auc = ClanHallAuctionManager.getInstance().getAuction(id);
-				if ((auc == null) && (lease > 0))
+				if ((ClanHallAuctionManager.getInstance().getAuction(id) == null) && (lease > 0))
 				{
 					ClanHallAuctionManager.getInstance().initNPC(id);
 				}
@@ -151,11 +149,7 @@ public final class ClanHallManager
 	 */
 	public final boolean isFree(int chId)
 	{
-		if (_freeClanHall.containsKey(chId))
-		{
-			return true;
-		}
-		return false;
+		return _freeClanHall.containsKey(chId);
 	}
 	
 	/**

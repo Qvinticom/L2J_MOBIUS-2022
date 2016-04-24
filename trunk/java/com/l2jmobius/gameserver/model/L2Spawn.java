@@ -146,10 +146,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			return;
 		}
 		
-		final String className = "com.l2jmobius.gameserver.model.actor.instance." + _template.getType() + "Instance";
-		
-		// Create the generic constructor of L2Npc managed by this L2Spawn
-		_constructor = Class.forName(className).asSubclass(L2Npc.class).getConstructor(L2NpcTemplate.class);
+		_constructor = Class.forName("com.l2jmobius.gameserver.model.actor.instance." + _template.getType() + "Instance").asSubclass(L2Npc.class).getConstructor(L2NpcTemplate.class);
 	}
 	
 	/**
@@ -618,12 +615,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 				final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 				final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 				
-				boolean isQuestMonster = false;
-				if ((mob.getTitle() != null) && mob.getTitle().contains("Quest"))
-				{
-					isQuestMonster = true;
-				}
-				
+				final boolean isQuestMonster = (mob.getTitle() != null) && mob.getTitle().contains("Quest");
 				if (mob.isMonster() && !isQuestMonster && !mob.isWalker() && !mob.isInsideZone(ZoneId.NO_BOOKMARK) && GeoData.getInstance().canSeeTarget(newlocx, newlocy, newlocz, randX, randY, newlocz) && (getInstanceId() == 0) && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(mob.getId()))
 				{
 					newlocx = randX;

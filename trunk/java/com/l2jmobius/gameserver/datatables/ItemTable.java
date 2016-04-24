@@ -188,12 +188,7 @@ public class ItemTable
 	 */
 	public L2Item getTemplate(int id)
 	{
-		if ((id >= _allTemplates.length) || (id < 0))
-		{
-			return null;
-		}
-		
-		return _allTemplates[id];
+		return (id >= _allTemplates.length) || (id < 0) ? null : _allTemplates[id];
 	}
 	
 	/**
@@ -218,11 +213,9 @@ public class ItemTable
 			ScheduledFuture<?> itemLootShedule;
 			if ((reference instanceof L2Attackable) && ((L2Attackable) reference).isRaid()) // loot privilege for raids
 			{
-				final L2Attackable raid = (L2Attackable) reference;
-				// if in CommandChannel and was killing a World/RaidBoss
-				if ((raid.getFirstCommandChannelAttacked() != null) && !Config.AUTO_LOOT_RAIDS)
+				if ((((L2Attackable) reference).getFirstCommandChannelAttacked() != null) && !Config.AUTO_LOOT_RAIDS)
 				{
-					item.setOwnerId(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
+					item.setOwnerId(((L2Attackable) reference).getFirstCommandChannelAttacked().getLeaderObjectId());
 					itemLootShedule = ThreadPoolManager.getInstance().scheduleGeneral(new ResetOwner(item), Config.LOOT_RAIDS_PRIVILEGE_INTERVAL);
 					item.setItemLootShedule(itemLootShedule);
 				}
@@ -249,40 +242,33 @@ public class ItemTable
 			item.setCount(count);
 		}
 		
-		if (Config.LOG_ITEMS && !process.equals("Reset"))
+		if (Config.LOG_ITEMS && !process.equals("Reset") && (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID)))))
 		{
-			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
+			final LogRecord record = new LogRecord(Level.INFO, "CREATE:" + process);
+			record.setLoggerName("item");
+			record.setParameters(new Object[]
 			{
-				final LogRecord record = new LogRecord(Level.INFO, "CREATE:" + process);
-				record.setLoggerName("item");
-				record.setParameters(new Object[]
-				{
-					item,
-					actor,
-					reference
-				});
-				LOGGER_ITEMS.log(record);
-			}
+				item,
+				actor,
+				reference
+			});
+			LOGGER_ITEMS.log(record);
 		}
 		
-		if (actor != null)
+		if ((actor != null) && actor.isGM())
 		{
-			if (actor.isGM())
+			String referenceName = "no-reference";
+			if (reference instanceof L2Object)
 			{
-				String referenceName = "no-reference";
-				if (reference instanceof L2Object)
-				{
-					referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
-				}
-				else if (reference instanceof String)
-				{
-					referenceName = (String) reference;
-				}
-				final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
-				if (Config.GMAUDIT)
-				{
-					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + itemId + " count: " + count + " name: " + item.getItemName() + " objId: " + item.getObjectId() + ")", targetName, "L2Object referencing this action is: " + referenceName);
-				}
+				referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+			}
+			else if (reference instanceof String)
+			{
+				referenceName = (String) reference;
+			}
+			if (Config.GMAUDIT)
+			{
+				GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + itemId + " count: " + count + " name: " + item.getItemName() + " objId: " + item.getObjectId() + ")", (actor.getTarget() != null ? actor.getTarget().getName() : "no-target"), "L2Object referencing this action is: " + referenceName);
 			}
 		}
 		
@@ -322,41 +308,34 @@ public class ItemTable
 			L2World.getInstance().removeObject(item);
 			IdFactory.getInstance().releaseId(item.getObjectId());
 			
-			if (Config.LOG_ITEMS)
+			if (Config.LOG_ITEMS && (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID)))))
 			{
-				if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
+				final LogRecord record = new LogRecord(Level.INFO, "DELETE:" + process);
+				record.setLoggerName("item");
+				record.setParameters(new Object[]
 				{
-					final LogRecord record = new LogRecord(Level.INFO, "DELETE:" + process);
-					record.setLoggerName("item");
-					record.setParameters(new Object[]
-					{
-						item,
-						"PrevCount(" + old + ")",
-						actor,
-						reference
-					});
-					LOGGER_ITEMS.log(record);
-				}
+					item,
+					"PrevCount(" + old + ")",
+					actor,
+					reference
+				});
+				LOGGER_ITEMS.log(record);
 			}
 			
-			if (actor != null)
+			if ((actor != null) && actor.isGM())
 			{
-				if (actor.isGM())
+				String referenceName = "no-reference";
+				if (reference instanceof L2Object)
 				{
-					String referenceName = "no-reference";
-					if (reference instanceof L2Object)
-					{
-						referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
-					}
-					else if (reference instanceof String)
-					{
-						referenceName = (String) reference;
-					}
-					final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
-					if (Config.GMAUDIT)
-					{
-						GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + item.getId() + " count: " + item.getCount() + " itemObjId: " + item.getObjectId() + ")", targetName, "L2Object referencing this action is: " + referenceName);
-					}
+					referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+				}
+				else if (reference instanceof String)
+				{
+					referenceName = (String) reference;
+				}
+				if (Config.GMAUDIT)
+				{
+					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + item.getId() + " count: " + item.getCount() + " itemObjId: " + item.getObjectId() + ")", (actor.getTarget() != null ? actor.getTarget().getName() : "no-target"), "L2Object referencing this action is: " + referenceName);
 				}
 			}
 			

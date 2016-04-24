@@ -339,8 +339,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 	{
 		if (TELEPORT_ZONES.containsKey(zone.getId()))
 		{
-			final Location teleLoc = TELEPORT_ZONES.get(zone.getId());
-			character.teleToLocation(teleLoc, false);
+			character.teleToLocation(TELEPORT_ZONES.get(zone.getId()), false);
 		}
 		return super.onEnterZone(character, zone);
 	}

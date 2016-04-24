@@ -77,84 +77,87 @@ public class MerchantPriceConfigTable implements InstanceListManager
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
 		final File file = new File(Config.DATAPACK_ROOT + "/" + MPCS_FILE);
-		if (file.exists())
+		if (!file.exists())
 		{
-			int defaultPriceConfigId;
-			final Document doc = factory.newDocumentBuilder().parse(file);
-			
-			Node n = doc.getDocumentElement();
-			final Node dpcNode = n.getAttributes().getNamedItem("defaultPriceConfig");
-			if (dpcNode == null)
-			{
-				throw new IllegalStateException("merchantPriceConfig must define an 'defaultPriceConfig'");
-			}
-			defaultPriceConfigId = Integer.parseInt(dpcNode.getNodeValue());
-			
-			MerchantPriceConfig mpc;
-			for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
-			{
-				mpc = parseMerchantPriceConfig(n);
-				if (mpc != null)
-				{
-					_mpcs.put(mpc.getId(), mpc);
-				}
-			}
-			
-			final MerchantPriceConfig defaultMpc = this.getMerchantPriceConfig(defaultPriceConfigId);
-			if (defaultMpc == null)
-			{
-				throw new IllegalStateException("'defaultPriceConfig' points to an non-loaded priceConfig");
-			}
-			_defaultMpc = defaultMpc;
+			return;
 		}
+		
+		int defaultPriceConfigId;
+		final Document doc = factory.newDocumentBuilder().parse(file);
+		
+		Node n = doc.getDocumentElement();
+		final Node dpcNode = n.getAttributes().getNamedItem("defaultPriceConfig");
+		if (dpcNode == null)
+		{
+			throw new IllegalStateException("merchantPriceConfig must define an 'defaultPriceConfig'");
+		}
+		defaultPriceConfigId = Integer.parseInt(dpcNode.getNodeValue());
+		
+		MerchantPriceConfig mpc;
+		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
+		{
+			mpc = parseMerchantPriceConfig(n);
+			if (mpc != null)
+			{
+				_mpcs.put(mpc.getId(), mpc);
+			}
+		}
+		
+		final MerchantPriceConfig defaultMpc = this.getMerchantPriceConfig(defaultPriceConfigId);
+		if (defaultMpc == null)
+		{
+			throw new IllegalStateException("'defaultPriceConfig' points to an non-loaded priceConfig");
+		}
+		_defaultMpc = defaultMpc;
 	}
 	
 	private MerchantPriceConfig parseMerchantPriceConfig(Node n)
 	{
-		if (n.getNodeName().equals("priceConfig"))
+		if (!n.getNodeName().equals("priceConfig"))
 		{
-			final int id;
-			final int baseTax;
-			int castleId = -1;
-			int zoneId = -1;
-			final String name;
-			
-			Node node = n.getAttributes().getNamedItem("id");
-			if (node == null)
-			{
-				throw new IllegalStateException("Must define the priceConfig 'id'");
-			}
-			id = Integer.parseInt(node.getNodeValue());
-			
-			node = n.getAttributes().getNamedItem("name");
-			if (node == null)
-			{
-				throw new IllegalStateException("Must define the priceConfig 'name'");
-			}
-			name = node.getNodeValue();
-			
-			node = n.getAttributes().getNamedItem("baseTax");
-			if (node == null)
-			{
-				throw new IllegalStateException("Must define the priceConfig 'baseTax'");
-			}
-			baseTax = Integer.parseInt(node.getNodeValue());
-			
-			node = n.getAttributes().getNamedItem("castleId");
-			if (node != null)
-			{
-				castleId = Integer.parseInt(node.getNodeValue());
-			}
-			
-			node = n.getAttributes().getNamedItem("zoneId");
-			if (node != null)
-			{
-				zoneId = Integer.parseInt(node.getNodeValue());
-			}
-			
-			return new MerchantPriceConfig(id, name, baseTax, castleId, zoneId);
+			return null;
 		}
-		return null;
+		
+		final int id;
+		final int baseTax;
+		int castleId = -1;
+		int zoneId = -1;
+		final String name;
+		
+		Node node = n.getAttributes().getNamedItem("id");
+		if (node == null)
+		{
+			throw new IllegalStateException("Must define the priceConfig 'id'");
+		}
+		id = Integer.parseInt(node.getNodeValue());
+		
+		node = n.getAttributes().getNamedItem("name");
+		if (node == null)
+		{
+			throw new IllegalStateException("Must define the priceConfig 'name'");
+		}
+		name = node.getNodeValue();
+		
+		node = n.getAttributes().getNamedItem("baseTax");
+		if (node == null)
+		{
+			throw new IllegalStateException("Must define the priceConfig 'baseTax'");
+		}
+		baseTax = Integer.parseInt(node.getNodeValue());
+		
+		node = n.getAttributes().getNamedItem("castleId");
+		if (node != null)
+		{
+			castleId = Integer.parseInt(node.getNodeValue());
+		}
+		
+		node = n.getAttributes().getNamedItem("zoneId");
+		if (node != null)
+		{
+			zoneId = Integer.parseInt(node.getNodeValue());
+		}
+		
+		return new MerchantPriceConfig(id, name, baseTax, castleId, zoneId);
 	}
 	
 	@Override

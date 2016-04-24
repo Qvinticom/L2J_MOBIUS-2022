@@ -69,21 +69,19 @@ public final class CubicAction implements Runnable
 			
 			if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(_cubic.getOwner()))
 			{
-				if (_cubic.getOwner().hasSummon())
-				{
-					for (L2Summon servitor : _cubic.getOwner().getServitors().values())
-					{
-						if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(servitor))
-						{
-							_cubic.stopAction();
-							return;
-						}
-					}
-				}
-				else
+				if (!_cubic.getOwner().hasSummon())
 				{
 					_cubic.stopAction();
 					return;
+				}
+				
+				for (L2Summon servitor : _cubic.getOwner().getServitors().values())
+				{
+					if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(servitor))
+					{
+						_cubic.stopAction();
+						return;
+					}
 				}
 			}
 			

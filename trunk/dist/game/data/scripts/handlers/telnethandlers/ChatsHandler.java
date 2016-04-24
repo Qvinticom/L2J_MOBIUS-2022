@@ -65,10 +65,9 @@ public class ChatsHandler implements ITelnetHandler
 				final String name = st.nextToken();
 				final String message = val.substring(name.length() + 1);
 				final L2PcInstance reciever = L2World.getInstance().getPlayer(name);
-				final CreatureSay cs = new CreatureSay(0, ChatType.WHISPER, "Telnet Priv", message);
 				if (reciever != null)
 				{
-					reciever.sendPacket(cs);
+					reciever.sendPacket(new CreatureSay(0, ChatType.WHISPER, "Telnet Priv", message));
 					_print.println("Telnet Priv->" + name + ": " + message);
 					_print.println("Message Sent!");
 				}

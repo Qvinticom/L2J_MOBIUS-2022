@@ -89,8 +89,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 			{
 				final Map<String, byte[]> classBytesCopy = new HashMap<>();
 				classBytesCopy.putAll(_classBytes);
-				final MemoryClassLoader loader = new MemoryClassLoader(classBytesCopy, _classPath, JavaScriptEngine.getParentLoader(ctx));
-				_class = JavaScriptEngine.parseMain(loader, ctx);
+				_class = JavaScriptEngine.parseMain(new MemoryClassLoader(classBytesCopy, _classPath, JavaScriptEngine.getParentLoader(ctx)), ctx);
 			}
 			return JavaScriptEngine.evalClass(_class, ctx);
 		}
@@ -111,8 +110,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	@Override
 	public Object eval(String str, ScriptContext ctx) throws ScriptException
 	{
-		final Class<?> clazz = parse(str, ctx);
-		return evalClass(clazz, ctx);
+		return evalClass(parse(str, ctx), ctx);
 	}
 	
 	@Override
@@ -153,26 +151,17 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		final String sourcePath = getSourcePath(ctx);
 		final String classPath = getClassPath(ctx);
 		
-		Writer err = ctx.getErrorWriter();
-		if (err == null)
-		{
-			err = new StringWriter();
-		}
+		final Writer err = ctx.getErrorWriter() == null ? new StringWriter() : ctx.getErrorWriter();
 		
 		final Map<String, byte[]> classBytes = compiler.compile(fileName, str, err, sourcePath, classPath);
 		
 		if (classBytes == null)
 		{
-			if (err instanceof StringWriter)
-			{
-				throw new ScriptException(((StringWriter) err).toString());
-			}
-			throw new ScriptException("compilation failed");
+			throw err instanceof StringWriter ? new ScriptException(((StringWriter) err).toString()) : new ScriptException("compilation failed");
 		}
 		
 		// create a ClassLoader to load classes from MemoryJavaFileManager
-		final MemoryClassLoader loader = new MemoryClassLoader(classBytes, classPath, getParentLoader(ctx));
-		return parseMain(loader, ctx);
+		return parseMain((new MemoryClassLoader(classBytes, classPath, getParentLoader(ctx))), ctx);
 	}
 	
 	protected static Class<?> parseMain(MemoryClassLoader loader, ScriptContext ctx) throws ScriptException
@@ -218,11 +207,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		// if class with "main" method, then
 		// return first class
 		final Iterator<Class<?>> itr = classes.iterator();
-		if (itr.hasNext())
-		{
-			return itr.next();
-		}
-		return null;
+		return itr.hasNext() ? itr.next() : null;
 	}
 	
 	private JavaCompiledScript compile(String str, ScriptContext ctx) throws ScriptException
@@ -231,20 +216,11 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		final String sourcePath = getSourcePath(ctx);
 		final String classPath = getClassPath(ctx);
 		
-		Writer err = ctx.getErrorWriter();
-		if (err == null)
-		{
-			err = new StringWriter();
-		}
-		
+		final Writer err = ctx.getErrorWriter() == null ? new StringWriter() : ctx.getErrorWriter();
 		final Map<String, byte[]> classBytes = compiler.compile(fileName, str, err, sourcePath, classPath);
 		if (classBytes == null)
 		{
-			if (err instanceof StringWriter)
-			{
-				throw new ScriptException(((StringWriter) err).toString());
-			}
-			throw new ScriptException("compilation failed");
+			throw err instanceof StringWriter ? new ScriptException(((StringWriter) err).toString()) : new ScriptException("compilation failed");
 		}
 		
 		return new JavaCompiledScript(this, classBytes, classPath);
@@ -255,14 +231,9 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		// find a public class with public static main method
 		for (Class<?> clazz : classes)
 		{
-			final int modifiers = clazz.getModifiers();
-			if (Modifier.isPublic(modifiers))
+			if (Modifier.isPublic(clazz.getModifiers()) && (findMainMethod(clazz) != null))
 			{
-				final Method mainMethod = findMainMethod(clazz);
-				if (mainMethod != null)
-				{
-					return clazz;
-				}
+				return clazz;
 			}
 		}
 		
@@ -270,8 +241,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		// has public static main method
 		for (Class<?> clazz : classes)
 		{
-			final Method mainMethod = findMainMethod(clazz);
-			if (mainMethod != null)
+			if (findMainMethod(clazz) != null)
 			{
 				return clazz;
 			}
@@ -326,11 +296,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	private static String getFileName(ScriptContext ctx)
 	{
 		final int scope = ctx.getAttributesScope("javax.script.filename");
-		if (scope != -1)
-		{
-			return ctx.getAttribute("javax.script.filename", scope).toString();
-		}
-		return "$unnamed.java";
+		return scope != -1 ? ctx.getAttribute("javax.script.filename", scope).toString() : "$unnamed.java";
 	}
 	
 	// for certain variables, we look for System properties. This is
@@ -359,14 +325,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	
 	private static String getSourcePath(ScriptContext ctx)
 	{
-		final int scope = ctx.getAttributesScope(SOURCEPATH);
-		if (scope != -1)
-		{
-			return ctx.getAttribute(SOURCEPATH).toString();
-		}
-		
-		// look for "com.sun.script.java.sourcepath"
-		return System.getProperty(SYSPROP_PREFIX + SOURCEPATH);
+		return ctx.getAttributesScope(SOURCEPATH) != -1 ? ctx.getAttribute(SOURCEPATH).toString() : System.getProperty(SYSPROP_PREFIX + SOURCEPATH);
 	}
 	
 	private static final String CLASSPATH = "classpath";
@@ -392,14 +351,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	
 	private static String getMainClassName(ScriptContext ctx)
 	{
-		final int scope = ctx.getAttributesScope(MAINCLASS);
-		if (scope != -1)
-		{
-			return ctx.getAttribute(MAINCLASS).toString();
-		}
-		
-		// look for "com.sun.script.java.mainClass"
-		return System.getProperty("com.sun.script.java.mainClass");
+		return ctx.getAttributesScope(MAINCLASS) != -1 ? ctx.getAttribute(MAINCLASS).toString() : System.getProperty("com.sun.script.java.mainClass");
 	}
 	
 	private static final String PARENTLOADER = "parentLoader";
@@ -456,13 +408,10 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 					mainMethod.setAccessible(true);
 				}
 				
-				// get "command line" args for the main method
-				final String args[] = getArguments(ctx);
-				
 				// call main method
 				mainMethod.invoke(null, new Object[]
 				{
-					args
+					getArguments(ctx)
 				});
 			}
 			
@@ -495,5 +444,4 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		}
 		return buf.toString();
 	}
-	
 }

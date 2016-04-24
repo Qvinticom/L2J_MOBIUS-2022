@@ -40,10 +40,6 @@ public class ConditionPlayerIsPvpFlagged extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		if (effector.getActingPlayer() == null)
-		{
-			return false;
-		}
-		return ((effector.getActingPlayer().getPvpFlag() > 0) == _val);
+		return (effector.getActingPlayer() != null) && ((effector.getActingPlayer().getPvpFlag() > 0) == _val);
 	}
 }

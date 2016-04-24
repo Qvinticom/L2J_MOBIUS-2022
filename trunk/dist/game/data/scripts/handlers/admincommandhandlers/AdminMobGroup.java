@@ -95,8 +95,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		{
 			if (activeChar.getTarget() instanceof L2Character)
 			{
-				final L2Character target = (L2Character) activeChar.getTarget();
-				attack(command, activeChar, target);
+				attack(command, activeChar, ((L2Character) activeChar.getTarget()));
 			}
 		}
 		else if (command.startsWith("admin_mobgroup_rnd"))
@@ -141,8 +140,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	 */
 	private void showMainPage(L2PcInstance activeChar, String command)
 	{
-		final String filename = "mobgroup.htm";
-		AdminHtml.showAdminHtml(activeChar, filename);
+		AdminHtml.showAdminHtml(activeChar, "mobgroup.htm");
 	}
 	
 	private void returnToChar(String command, L2PcInstance activeChar)

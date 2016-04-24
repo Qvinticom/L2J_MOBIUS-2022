@@ -202,12 +202,9 @@ public final class Q00189_ContractCompletion extends Quest
 				}
 			}
 		}
-		else if (qs.isCompleted())
+		else if (qs.isCompleted() && (npc.getId() == BLUEPRINT_SELLER_LUKA))
 		{
-			if (npc.getId() == BLUEPRINT_SELLER_LUKA)
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-			}
+			htmltext = getAlreadyCompletedMsg(player);
 		}
 		return htmltext;
 	}

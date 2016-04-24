@@ -216,8 +216,7 @@ public abstract class DocumentBase
 			else if ((condition != null) && (msgId != null))
 			{
 				condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-				final Node addName = n.getAttributes().getNamedItem("addName");
-				if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+				if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 				{
 					condition.addName();
 				}
@@ -270,16 +269,7 @@ public abstract class DocumentBase
 		}
 		
 		final String valueString = n.getAttributes().getNamedItem("val").getNodeValue();
-		double value;
-		if (valueString.charAt(0) == '#')
-		{
-			value = Double.parseDouble(getTableValue(valueString));
-		}
-		else
-		{
-			value = Double.parseDouble(valueString);
-		}
-		
+		final double value = valueString.charAt(0) == '#' ? Double.parseDouble(getTableValue(valueString)) : Double.parseDouble(valueString);
 		final Condition applayCond = parseCondition(n.getFirstChild(), template);
 		final FuncTemplate ft = new FuncTemplate(attachCond, applayCond, functionName, order, stat, value);
 		if (template instanceof L2Item)
@@ -675,8 +665,7 @@ public abstract class DocumentBase
 					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, template)));
+						array.add(Integer.decode(getValue(st.nextToken().trim(), template)));
 					}
 					cond = joinAnd(cond, new ConditionPlayerHasClanHall(array));
 					break;
@@ -751,8 +740,7 @@ public abstract class DocumentBase
 					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, template)));
+						array.add(Integer.decode(getValue(st.nextToken().trim(), template)));
 					}
 					cond = joinAnd(cond, new ConditionPlayerClassIdRestriction(array));
 					break;
@@ -774,8 +762,7 @@ public abstract class DocumentBase
 					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, template)));
+						array.add(Integer.decode(getValue(st.nextToken().trim(), template)));
 					}
 					cond = joinAnd(cond, new ConditionPlayerInstanceId(array));
 					break;
@@ -798,8 +785,7 @@ public abstract class DocumentBase
 					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, template)));
+						array.add(Integer.decode(getValue(st.nextToken().trim(), template)));
 					}
 					cond = joinAnd(cond, new ConditionPlayerHasPet(array));
 					break;
@@ -820,9 +806,7 @@ public abstract class DocumentBase
 						{
 							npcIds[index] = Integer.parseInt(getValue(ids[index], template));
 						}
-						final int radius = Integer.parseInt(st.nextToken());
-						final boolean val = Boolean.parseBoolean(st.nextToken());
-						cond = joinAnd(cond, new ConditionPlayerRangeFromNpc(npcIds, radius, val));
+						cond = joinAnd(cond, new ConditionPlayerRangeFromNpc(npcIds, Integer.parseInt(st.nextToken()), Boolean.parseBoolean(st.nextToken())));
 					}
 					break;
 				}
@@ -902,8 +886,7 @@ public abstract class DocumentBase
 					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, template)));
+						array.add(Integer.decode(getValue(st.nextToken().trim(), template)));
 					}
 					cond = joinAnd(cond, new ConditionPlayerInsideZoneId(array));
 					break;
@@ -1013,8 +996,7 @@ public abstract class DocumentBase
 					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, null)));
+						array.add(Integer.decode(getValue(st.nextToken().trim(), null)));
 					}
 					cond = joinAnd(cond, new ConditionTargetClassIdRestriction(array));
 					break;
@@ -1103,8 +1085,7 @@ public abstract class DocumentBase
 					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, null)));
+						array.add(Integer.decode(getValue(st.nextToken().trim(), null)));
 					}
 					cond = joinAnd(cond, new ConditionTargetNpcId(array));
 					break;
@@ -1222,11 +1203,7 @@ public abstract class DocumentBase
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ";");
 					final int id = Integer.parseInt(st.nextToken().trim());
 					final int slot = Integer.parseInt(st.nextToken().trim());
-					int enchant = 0;
-					if (st.hasMoreTokens())
-					{
-						enchant = Integer.parseInt(st.nextToken().trim());
-					}
+					final int enchant = st.hasMoreTokens() ? Integer.parseInt(st.nextToken().trim()) : 0;
 					cond = joinAnd(cond, new ConditionSlotItemId(slot, id, enchant));
 					break;
 				}
@@ -1255,18 +1232,15 @@ public abstract class DocumentBase
 			final Node a = attrs.item(i);
 			if ("skill".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionWithSkill(val));
+				cond = joinAnd(cond, new ConditionWithSkill(Boolean.parseBoolean(a.getNodeValue())));
 			}
 			if ("night".equalsIgnoreCase(a.getNodeName()))
 			{
-				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionGameTime(CheckGameTime.NIGHT, val));
+				cond = joinAnd(cond, new ConditionGameTime(CheckGameTime.NIGHT, Boolean.parseBoolean(a.getNodeValue())));
 			}
 			if ("chance".equalsIgnoreCase(a.getNodeName()))
 			{
-				final int val = Integer.decode(getValue(a.getNodeValue(), null));
-				cond = joinAnd(cond, new ConditionGameChance(val));
+				cond = joinAnd(cond, new ConditionGameChance(Integer.decode(getValue(a.getNodeValue(), null))));
 			}
 		}
 		if (cond == null)
@@ -1298,14 +1272,7 @@ public abstract class DocumentBase
 		final String name = n.getAttributes().getNamedItem("name").getNodeValue().trim();
 		final String value = n.getAttributes().getNamedItem("val").getNodeValue().trim();
 		final char ch = value.isEmpty() ? ' ' : value.charAt(0);
-		if ((ch == '#') || (ch == '-') || Character.isDigit(ch))
-		{
-			set.set(name, String.valueOf(getValue(value, level)));
-		}
-		else
-		{
-			set.set(name, value);
-		}
+		set.set(name, (ch == '#') || (ch == '-') || Character.isDigit(ch) ? String.valueOf(getValue(value, level)) : value);
 	}
 	
 	protected void setExtractableSkillData(StatsSet set, String value)

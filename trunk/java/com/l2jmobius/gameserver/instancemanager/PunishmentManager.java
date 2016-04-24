@@ -67,8 +67,6 @@ public final class PunishmentManager
 				final PunishmentAffect affect = PunishmentAffect.getByName(rset.getString("affect"));
 				final PunishmentType type = PunishmentType.getByName(rset.getString("type"));
 				final long expirationTime = rset.getLong("expiration");
-				final String reason = rset.getString("reason");
-				final String punishedBy = rset.getString("punishedBy");
 				if ((type != null) && (affect != null))
 				{
 					if ((expirationTime > 0) && (System.currentTimeMillis() > expirationTime)) // expired task.
@@ -78,7 +76,7 @@ public final class PunishmentManager
 					else
 					{
 						initiated++;
-						_tasks.get(affect).addPunishment(new PunishmentTask(id, key, affect, type, expirationTime, reason, punishedBy, true));
+						_tasks.get(affect).addPunishment(new PunishmentTask(id, key, affect, type, expirationTime, rset.getString("reason"), rset.getString("punishedBy"), true));
 					}
 				}
 			}
@@ -107,8 +105,7 @@ public final class PunishmentManager
 	
 	public boolean hasPunishment(Object key, PunishmentAffect affect, PunishmentType type)
 	{
-		final PunishmentHolder holder = _tasks.get(affect);
-		return holder.hasPunishment(String.valueOf(key), type);
+		return _tasks.get(affect).hasPunishment(String.valueOf(key), type);
 	}
 	
 	public long getPunishmentExpiration(Object key, PunishmentAffect affect, PunishmentType type)

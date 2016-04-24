@@ -61,10 +61,8 @@ public final class CpHeal extends AbstractEffect
 			return;
 		}
 		
-		double amount = _power;
-		
 		// Prevents overheal and negative amount
-		amount = Math.max(Math.min(amount, target.getMaxRecoverableCp() - target.getCurrentCp()), 0);
+		final double amount = Math.max(Math.min(_power, target.getMaxRecoverableCp() - target.getCurrentCp()), 0);
 		if (amount != 0)
 		{
 			target.setCurrentCp(amount + target.getCurrentCp());

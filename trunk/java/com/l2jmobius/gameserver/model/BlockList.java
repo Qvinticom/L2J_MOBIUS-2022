@@ -122,8 +122,7 @@ public class BlockList
 					{
 						continue;
 					}
-					final String memo = rs.getString("memo");
-					list.put(friendId, memo);
+					list.put(friendId, rs.getString("memo"));
 				}
 			}
 		}

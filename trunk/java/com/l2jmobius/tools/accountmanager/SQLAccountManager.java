@@ -191,10 +191,7 @@ public class SQLAccountManager
 			PreparedStatement ps = con.prepareStatement("REPLACE accounts(login, password, accessLevel) VALUES (?, ?, ?)"))
 		{
 			final MessageDigest md = MessageDigest.getInstance("SHA");
-			byte[] newPassword;
-			newPassword = password.getBytes("UTF-8");
-			newPassword = md.digest(newPassword);
-			
+			final byte[] newPassword = md.digest(password.getBytes("UTF-8"));
 			ps.setString(1, account);
 			ps.setString(2, Base64.getEncoder().encodeToString(newPassword));
 			ps.setString(3, level);

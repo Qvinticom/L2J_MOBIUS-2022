@@ -272,8 +272,7 @@ final class SupportUnitCaptain extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final int fortOwner = npc.getFort().getOwnerClan() == null ? 0 : npc.getFort().getOwnerClan().getId();
-		return ((player.getClan() != null) && (player.getClanId() == fortOwner)) ? "unitcaptain.html" : "unitcaptain-04.html";
+		return ((player.getClan() != null) && (player.getClanId() == (npc.getFort().getOwnerClan() == null ? 0 : npc.getFort().getOwnerClan().getId()))) ? "unitcaptain.html" : "unitcaptain-04.html";
 	}
 	
 	public static void main(String[] args)

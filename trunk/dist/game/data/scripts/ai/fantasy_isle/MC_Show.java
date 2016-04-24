@@ -308,8 +308,7 @@ final class MC_Show extends AbstractNpcAI
 		diff = hourDiff + minDiff;
 		if (Config.DEBUG)
 		{
-			final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-			_log.info("Fantasy Isle: MC show script starting at " + format.format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
+			_log.info("Fantasy Isle: MC show script starting at " + (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
 		}
 		// TODO startRepeatingQuestTimer("Start", diff, 14400000, null, null);
 		// missing option to provide different initial delay

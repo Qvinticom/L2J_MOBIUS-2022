@@ -94,25 +94,15 @@ public class ZoneNPoly extends L2ZoneForm
 	@Override
 	public void visualizeZone(int z)
 	{
-		final int[] _x = _p.xpoints;
-		final int[] _y = _p.ypoints;
-		
 		for (int i = 0; i < _p.npoints; i++)
 		{
-			int nextIndex = i + 1;
-			// ending point to first one
-			if (nextIndex == _x.length)
-			{
-				nextIndex = 0;
-			}
-			final int vx = _x[nextIndex] - _x[i];
-			final int vy = _y[nextIndex] - _y[i];
-			float lenght = (float) Math.sqrt((vx * vx) + (vy * vy));
-			lenght /= STEP;
+			final int nextIndex = (i + 1) == _p.xpoints.length ? 0 : i + 1;
+			final int vx = _p.xpoints[nextIndex] - _p.xpoints[i];
+			final int vy = _p.ypoints[nextIndex] - _p.ypoints[i];
+			final float lenght = (float) Math.sqrt((vx * vx) + (vy * vy)) / STEP;
 			for (int o = 1; o <= lenght; o++)
 			{
-				final float k = o / lenght;
-				dropDebugItem(Inventory.ADENA_ID, 1, (int) (_x[i] + (k * vx)), (int) (_y[i] + (k * vy)), z);
+				dropDebugItem(Inventory.ADENA_ID, 1, (int) (_p.xpoints[i] + ((o / lenght) * vx)), (int) (_p.ypoints[i] + ((o / lenght) * vy)), z);
 			}
 		}
 	}

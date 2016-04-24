@@ -203,8 +203,7 @@ public class LoginServerThread extends Thread
 						break;
 					}
 					
-					final int packetType = incoming[0] & 0xff;
-					switch (packetType)
+					switch (incoming[0] & 0xff)
 					{
 						case 0x00:
 						{
@@ -220,10 +219,7 @@ public class LoginServerThread extends Thread
 							
 							try
 							{
-								final KeyFactory kfac = KeyFactory.getInstance("RSA");
-								final BigInteger modulus = new BigInteger(init.getRSAKey());
-								final RSAPublicKeySpec kspec1 = new RSAPublicKeySpec(modulus, RSAKeyGenParameterSpec.F4);
-								publicKey = (RSAPublicKey) kfac.generatePublic(kspec1);
+								publicKey = (RSAPublicKey) KeyFactory.getInstance("RSA").generatePublic((new RSAPublicKeySpec(new BigInteger(init.getRSAKey()), RSAKeyGenParameterSpec.F4)));
 							}
 							catch (GeneralSecurityException e)
 							{
@@ -252,35 +248,10 @@ public class LoginServerThread extends Thread
 							Config.saveHexid(serverID, hexToString(_hexID));
 							_log.info("Registered on login as Server " + serverID + " : " + _serverName);
 							final ServerStatus st = new ServerStatus();
-							if (Config.SERVER_LIST_BRACKET)
-							{
-								st.addAttribute(ServerStatus.SERVER_LIST_SQUARE_BRACKET, ServerStatus.ON);
-							}
-							else
-							{
-								st.addAttribute(ServerStatus.SERVER_LIST_SQUARE_BRACKET, ServerStatus.OFF);
-							}
+							st.addAttribute(ServerStatus.SERVER_LIST_SQUARE_BRACKET, Config.SERVER_LIST_BRACKET ? ServerStatus.ON : ServerStatus.OFF);
 							st.addAttribute(ServerStatus.SERVER_TYPE, Config.SERVER_LIST_TYPE);
-							if (Config.SERVER_GMONLY)
-							{
-								st.addAttribute(ServerStatus.SERVER_LIST_STATUS, ServerStatus.STATUS_GM_ONLY);
-							}
-							else
-							{
-								st.addAttribute(ServerStatus.SERVER_LIST_STATUS, ServerStatus.STATUS_AUTO);
-							}
-							if (Config.SERVER_LIST_AGE == 15)
-							{
-								st.addAttribute(ServerStatus.SERVER_AGE, ServerStatus.SERVER_AGE_15);
-							}
-							else if (Config.SERVER_LIST_AGE == 18)
-							{
-								st.addAttribute(ServerStatus.SERVER_AGE, ServerStatus.SERVER_AGE_18);
-							}
-							else
-							{
-								st.addAttribute(ServerStatus.SERVER_AGE, ServerStatus.SERVER_AGE_ALL);
-							}
+							st.addAttribute(ServerStatus.SERVER_LIST_STATUS, Config.SERVER_GMONLY ? ServerStatus.STATUS_GM_ONLY : ServerStatus.STATUS_AUTO);
+							st.addAttribute(ServerStatus.SERVER_AGE, Config.SERVER_LIST_AGE == 15 ? ServerStatus.SERVER_AGE_15 : Config.SERVER_LIST_AGE == 18 ? ServerStatus.SERVER_AGE_18 : ServerStatus.SERVER_AGE_ALL);
 							sendPacket(st);
 							if (L2World.getInstance().getAllPlayersCount() > 0)
 							{
@@ -559,17 +530,18 @@ public class LoginServerThread extends Thread
 	public void doKickPlayer(String account)
 	{
 		final L2GameClient client = _accountsInGameServer.get(account);
-		if (client != null)
+		if (client == null)
 		{
-			final LogRecord record = new LogRecord(Level.WARNING, "Kicked by login");
-			record.setParameters(new Object[]
-			{
-				client
-			});
-			_logAccounting.log(record);
-			client.setAditionalClosePacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_LOGGED_IN_TO_TWO_PLACES_IF_YOU_SUSPECT_ACCOUNT_THEFT_WE_RECOMMEND_CHANGING_YOUR_PASSWORD_SCANNING_YOUR_COMPUTER_FOR_VIRUSES_AND_USING_AN_ANTI_VIRUS_SOFTWARE));
-			client.closeNow();
+			return;
 		}
+		final LogRecord record = new LogRecord(Level.WARNING, "Kicked by login");
+		record.setParameters(new Object[]
+		{
+			client
+		});
+		_logAccounting.log(record);
+		client.setAditionalClosePacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_LOGGED_IN_TO_TWO_PLACES_IF_YOU_SUSPECT_ACCOUNT_THEFT_WE_RECOMMEND_CHANGING_YOUR_PASSWORD_SCANNING_YOUR_COMPUTER_FOR_VIRUSES_AND_USING_AN_ANTI_VIRUS_SOFTWARE));
+		client.closeNow();
 	}
 	
 	/**

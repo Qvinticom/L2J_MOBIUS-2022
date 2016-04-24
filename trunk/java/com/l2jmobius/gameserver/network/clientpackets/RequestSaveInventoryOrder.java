@@ -40,14 +40,11 @@ public final class RequestSaveInventoryOrder extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		int sz = readD();
-		sz = Math.min(sz, LIMIT);
+		final int sz = Math.min(readD(), LIMIT);
 		_order = new ArrayList<>(sz);
 		for (int i = 0; i < sz; i++)
 		{
-			final int objectId = readD();
-			final int order = readD();
-			_order.add(new InventoryOrder(objectId, order));
+			_order.add(new InventoryOrder(readD(), readD()));
 		}
 	}
 	
@@ -55,16 +52,18 @@ public final class RequestSaveInventoryOrder extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player != null)
+		if (player == null)
 		{
-			final Inventory inventory = player.getInventory();
-			for (InventoryOrder order : _order)
+			return;
+		}
+		
+		final Inventory inventory = player.getInventory();
+		for (InventoryOrder order : _order)
+		{
+			final L2ItemInstance item = inventory.getItemByObjectId(order.objectID);
+			if ((item != null) && (item.getItemLocation() == ItemLocation.INVENTORY))
 			{
-				final L2ItemInstance item = inventory.getItemByObjectId(order.objectID);
-				if ((item != null) && (item.getItemLocation() == ItemLocation.INVENTORY))
-				{
-					item.setItemLocation(ItemLocation.INVENTORY, order.order);
-				}
+				item.setItemLocation(ItemLocation.INVENTORY, order.order);
 			}
 		}
 	}

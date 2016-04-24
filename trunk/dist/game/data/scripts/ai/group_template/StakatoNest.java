@@ -170,8 +170,7 @@ final class StakatoNest extends AbstractNpcAI
 			{
 				if (killer.isInParty())
 				{
-					final List<L2PcInstance> party = killer.getParty().getMembers();
-					for (L2PcInstance member : party)
+					for (L2PcInstance member : killer.getParty().getMembers())
 					{
 						giveCocoon(member, npc);
 					}

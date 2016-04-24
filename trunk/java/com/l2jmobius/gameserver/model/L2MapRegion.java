@@ -162,50 +162,22 @@ public class L2MapRegion
 	
 	public final Location getSpawnLoc()
 	{
-		if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED)
-		{
-			return _spawnLocs.get(Rnd.get(_spawnLocs.size()));
-		}
-		return _spawnLocs.get(0);
+		return Config.RANDOM_RESPAWN_IN_TOWN_ENABLED ? _spawnLocs.get(Rnd.get(_spawnLocs.size())) : _spawnLocs.get(0);
 	}
 	
 	public final Location getOtherSpawnLoc()
 	{
-		if (_otherSpawnLocs != null)
-		{
-			if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED)
-			{
-				return _otherSpawnLocs.get(Rnd.get(_otherSpawnLocs.size()));
-			}
-			return _otherSpawnLocs.get(0);
-		}
-		return getSpawnLoc();
+		return _otherSpawnLocs != null ? Config.RANDOM_RESPAWN_IN_TOWN_ENABLED ? _otherSpawnLocs.get(Rnd.get(_otherSpawnLocs.size())) : _otherSpawnLocs.get(0) : getSpawnLoc();
 	}
 	
 	public final Location getChaoticSpawnLoc()
 	{
-		if (_chaoticSpawnLocs != null)
-		{
-			if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED)
-			{
-				return _chaoticSpawnLocs.get(Rnd.get(_chaoticSpawnLocs.size()));
-			}
-			return _chaoticSpawnLocs.get(0);
-		}
-		return getSpawnLoc();
+		return _chaoticSpawnLocs != null ? Config.RANDOM_RESPAWN_IN_TOWN_ENABLED ? _chaoticSpawnLocs.get(Rnd.get(_chaoticSpawnLocs.size())) : _chaoticSpawnLocs.get(0) : getSpawnLoc();
 	}
 	
 	public final Location getBanishSpawnLoc()
 	{
-		if (_banishSpawnLocs != null)
-		{
-			if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED)
-			{
-				return _banishSpawnLocs.get(Rnd.get(_banishSpawnLocs.size()));
-			}
-			return _banishSpawnLocs.get(0);
-		}
-		return getSpawnLoc();
+		return _banishSpawnLocs != null ? Config.RANDOM_RESPAWN_IN_TOWN_ENABLED ? _banishSpawnLocs.get(Rnd.get(_banishSpawnLocs.size())) : _banishSpawnLocs.get(0) : getSpawnLoc();
 	}
 	
 	public final void addBannedRace(String race, String point)

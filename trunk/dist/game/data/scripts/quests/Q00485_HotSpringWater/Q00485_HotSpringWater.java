@@ -113,12 +113,9 @@ public class Q00485_HotSpringWater extends Quest
 				{
 					htmltext = "32327-05.html";
 				}
-				else if (qs.isCompleted())
+				else if (qs.isCompleted() && !qs.isNowAvailable())
 				{
-					if (!qs.isNowAvailable())
-					{
-						htmltext = "32327-07.html";
-					}
+					htmltext = "32327-07.html";
 				}
 				break;
 			}
@@ -142,12 +139,9 @@ public class Q00485_HotSpringWater extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, HOT_SPRINGS_WATER_SAMPLE, 1, 40, 0.2, true))
 		{
-			if (giveItemRandomly(killer, npc, HOT_SPRINGS_WATER_SAMPLE, 1, 40, 0.2, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

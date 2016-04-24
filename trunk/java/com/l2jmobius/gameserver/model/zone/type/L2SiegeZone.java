@@ -48,12 +48,7 @@ public class L2SiegeZone extends L2ZoneType
 	public L2SiegeZone(int id)
 	{
 		super(id);
-		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-		if (settings == null)
-		{
-			settings = new Settings();
-		}
-		setSettings(settings);
+		setSettings((ZoneManager.getSettings(getName()) == null ? new Settings() : ZoneManager.getSettings(getName())));
 	}
 	
 	public final class Settings extends AbstractZoneSettings
@@ -156,41 +151,45 @@ public class L2SiegeZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if (getSettings().isActiveSiege())
+		if (!getSettings().isActiveSiege())
 		{
-			character.setInsideZone(ZoneId.PVP, true);
-			character.setInsideZone(ZoneId.SIEGE, true);
-			character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
-			
-			if (character.isPlayer())
+			return;
+		}
+		
+		character.setInsideZone(ZoneId.PVP, true);
+		character.setInsideZone(ZoneId.SIEGE, true);
+		character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
+		
+		if (!character.isPlayer())
+		{
+			return;
+		}
+		
+		final L2PcInstance plyer = character.getActingPlayer();
+		if (plyer.isRegisteredOnThisSiegeField(getSettings().getSiegeableId()))
+		{
+			plyer.setIsInSiege(true); // in siege
+			if (getSettings().getSiege().giveFame() && (getSettings().getSiege().getFameFrequency() > 0))
 			{
-				final L2PcInstance plyer = character.getActingPlayer();
-				if (plyer.isRegisteredOnThisSiegeField(getSettings().getSiegeableId()))
-				{
-					plyer.setIsInSiege(true); // in siege
-					if (getSettings().getSiege().giveFame() && (getSettings().getSiege().getFameFrequency() > 0))
-					{
-						plyer.startFameTask(getSettings().getSiege().getFameFrequency() * 1000, getSettings().getSiege().getFameAmount());
-					}
-				}
-				
-				character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
-				if (!Config.ALLOW_WYVERN_DURING_SIEGE && (plyer.getMountType() == MountType.WYVERN))
-				{
-					plyer.sendPacket(SystemMessageId.THIS_AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_ATOP_OF_A_WYVERN_YOU_WILL_BE_DISMOUNTED_FROM_YOUR_WYVERN_IF_YOU_DO_NOT_LEAVE);
-					plyer.enteredNoLanding(DISMOUNT_DELAY);
-				}
-				
-				if (!Config.ALLOW_MOUNTS_DURING_SIEGE && (plyer.isMounted()))
-				{
-					plyer.dismount();
-				}
-				
-				if (!Config.ALLOW_MOUNTS_DURING_SIEGE && plyer.isTransformed() && plyer.getTransformation().isRiding())
-				{
-					plyer.untransform();
-				}
+				plyer.startFameTask(getSettings().getSiege().getFameFrequency() * 1000, getSettings().getSiege().getFameAmount());
 			}
+		}
+		
+		character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+		if (!Config.ALLOW_WYVERN_DURING_SIEGE && (plyer.getMountType() == MountType.WYVERN))
+		{
+			plyer.sendPacket(SystemMessageId.THIS_AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_ATOP_OF_A_WYVERN_YOU_WILL_BE_DISMOUNTED_FROM_YOUR_WYVERN_IF_YOU_DO_NOT_LEAVE);
+			plyer.enteredNoLanding(DISMOUNT_DELAY);
+		}
+		
+		if (!Config.ALLOW_MOUNTS_DURING_SIEGE && (plyer.isMounted()))
+		{
+			plyer.dismount();
+		}
+		
+		if (!Config.ALLOW_MOUNTS_DURING_SIEGE && plyer.isTransformed() && plyer.getTransformation().isRiding())
+		{
+			plyer.untransform();
 		}
 	}
 	
@@ -200,68 +199,66 @@ public class L2SiegeZone extends L2ZoneType
 		character.setInsideZone(ZoneId.PVP, false);
 		character.setInsideZone(ZoneId.SIEGE, false);
 		character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
-		if (getSettings().isActiveSiege())
+		if (getSettings().isActiveSiege() && character.isPlayer())
 		{
-			if (character.isPlayer())
+			final L2PcInstance player = character.getActingPlayer();
+			character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+			if (player.getMountType() == MountType.WYVERN)
 			{
-				final L2PcInstance player = character.getActingPlayer();
-				character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
-				if (player.getMountType() == MountType.WYVERN)
-				{
-					player.exitedNoLanding();
-				}
-				// Set pvp flag
-				if (player.getPvpFlag() == 0)
-				{
-					player.startPvPFlag();
-				}
+				player.exitedNoLanding();
+			}
+			// Set pvp flag
+			if (player.getPvpFlag() == 0)
+			{
+				player.startPvPFlag();
 			}
 		}
-		if (character.isPlayer())
+		if (!character.isPlayer())
 		{
-			final L2PcInstance activeChar = character.getActingPlayer();
-			activeChar.stopFameTask();
-			activeChar.setIsInSiege(false);
-			
-			if ((getSettings().getSiege() instanceof FortSiege) && (activeChar.getInventory().getItemByItemId(9819) != null))
-			{
-				// drop combat flag
-				final Fort fort = FortManager.getInstance().getFortById(getSettings().getSiegeableId());
-				if (fort != null)
-				{
-					FortSiegeManager.getInstance().dropCombatFlag(activeChar, fort.getResidenceId());
-				}
-				else
-				{
-					final int slot = activeChar.getInventory().getSlotFromItem(activeChar.getInventory().getItemByItemId(9819));
-					activeChar.getInventory().unEquipItemInBodySlot(slot);
-					activeChar.destroyItem("CombatFlag", activeChar.getInventory().getItemByItemId(9819), null, true);
-				}
-			}
+			return;
+		}
+		
+		final L2PcInstance activeChar = character.getActingPlayer();
+		activeChar.stopFameTask();
+		activeChar.setIsInSiege(false);
+		
+		if (!(getSettings().getSiege() instanceof FortSiege) || (activeChar.getInventory().getItemByItemId(9819) == null))
+		{
+			return;
+		}
+		
+		final Fort fort = FortManager.getInstance().getFortById(getSettings().getSiegeableId());
+		if (fort != null)
+		{
+			FortSiegeManager.getInstance().dropCombatFlag(activeChar, fort.getResidenceId());
+		}
+		else
+		{
+			final int slot = activeChar.getInventory().getSlotFromItem(activeChar.getInventory().getItemByItemId(9819));
+			activeChar.getInventory().unEquipItemInBodySlot(slot);
+			activeChar.destroyItem("CombatFlag", activeChar.getInventory().getItemByItemId(9819), null, true);
 		}
 	}
 	
 	@Override
 	public void onDieInside(L2Character character)
 	{
-		if (getSettings().isActiveSiege())
+		if (!getSettings().isActiveSiege() || !character.isPlayer() || !character.getActingPlayer().isRegisteredOnThisSiegeField(getSettings().getSiegeableId()))
 		{
-			// debuff participants only if they die inside siege zone
-			if (character.isPlayer() && character.getActingPlayer().isRegisteredOnThisSiegeField(getSettings().getSiegeableId()))
-			{
-				int lvl = 1;
-				final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(5660);
-				if (info != null)
-				{
-					lvl = Math.min(lvl + info.getSkill().getLevel(), 5);
-				}
-				
-				final Skill skill = SkillData.getInstance().getSkill(5660, lvl);
-				if (skill != null)
-				{
-					skill.applyEffects(character, character);
-				}
-			}
+			return;
+		}
+		
+		int lvl = 1;
+		final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(5660);
+		if (info != null)
+		{
+			lvl = Math.min(lvl + info.getSkill().getLevel(), 5);
+		}
+		
+		final Skill skill = SkillData.getInstance().getSkill(5660, lvl);
+		if (skill != null)
+		{
+			skill.applyEffects(character, character);
 		}
 	}
 	
@@ -346,15 +343,13 @@ public class L2SiegeZone extends L2ZoneType
 	 */
 	public void banishForeigners(int owningClanId)
 	{
-		final TeleportWhereType type = TeleportWhereType.TOWN;
 		for (L2PcInstance temp : getPlayersInside())
 		{
 			if (temp.getClanId() == owningClanId)
 			{
 				continue;
 			}
-			
-			temp.teleToLocation(type);
+			temp.teleToLocation(TeleportWhereType.TOWN);
 		}
 	}
 }

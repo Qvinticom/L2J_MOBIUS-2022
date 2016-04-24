@@ -240,13 +240,7 @@ public final class PetitionManager
 	
 	public boolean isPetitionInProcess(int petitionId)
 	{
-		if (!isValidPetition(petitionId))
-		{
-			return false;
-		}
-		
-		final Petition currPetition = getPendingPetitions().get(petitionId);
-		return (currPetition.getState() == PetitionState.IN_PROCESS);
+		return isValidPetition(petitionId) && (getPendingPetitions().get(petitionId).getState() == PetitionState.IN_PROCESS);
 	}
 	
 	public boolean isPlayerInConsultation(L2PcInstance player)
@@ -255,16 +249,10 @@ public final class PetitionManager
 		{
 			for (Petition currPetition : getPendingPetitions().values())
 			{
-				if (currPetition == null)
+				if ((currPetition == null) || (currPetition.getState() != PetitionState.IN_PROCESS))
 				{
 					continue;
 				}
-				
-				if (currPetition.getState() != PetitionState.IN_PROCESS)
-				{
-					continue;
-				}
-				
 				if (((currPetition.getPetitioner() != null) && (currPetition.getPetitioner().getObjectId() == player.getObjectId())) || ((currPetition.getResponder() != null) && (currPetition.getResponder().getObjectId() == player.getObjectId())))
 				{
 					return true;
@@ -430,12 +418,7 @@ public final class PetitionManager
 	
 	public void viewPetition(L2PcInstance activeChar, int petitionId)
 	{
-		if (!activeChar.isGM())
-		{
-			return;
-		}
-		
-		if (!isValidPetition(petitionId))
+		if (!activeChar.isGM() || !isValidPetition(petitionId))
 		{
 			return;
 		}

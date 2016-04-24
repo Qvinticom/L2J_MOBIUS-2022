@@ -55,32 +55,28 @@ public final class GiveRecommendation extends AbstractEffect
 	public void onStart(BuffInfo info)
 	{
 		final L2PcInstance target = info.getEffected() instanceof L2PcInstance ? (L2PcInstance) info.getEffected() : null;
-		if (target != null)
+		if (target == null)
 		{
-			int recommendationsGiven = _amount;
+			return;
+		}
+		
+		final int recommendationsGiven = (target.getRecomHave() + _amount) >= 255 ? 255 - target.getRecomHave() : _amount;
+		if (recommendationsGiven > 0)
+		{
+			target.setRecomHave(target.getRecomHave() + recommendationsGiven);
 			
-			if ((target.getRecomHave() + _amount) >= 255)
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATION_S);
+			sm.addInt(recommendationsGiven);
+			target.sendPacket(sm);
+			target.sendPacket(new UserInfo(target));
+			target.sendPacket(new ExVoteSystemInfo(target));
+		}
+		else
+		{
+			final L2PcInstance player = info.getEffector() instanceof L2PcInstance ? (L2PcInstance) info.getEffector() : null;
+			if (player != null)
 			{
-				recommendationsGiven = 255 - target.getRecomHave();
-			}
-			
-			if (recommendationsGiven > 0)
-			{
-				target.setRecomHave(target.getRecomHave() + recommendationsGiven);
-				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATION_S);
-				sm.addInt(recommendationsGiven);
-				target.sendPacket(sm);
-				target.sendPacket(new UserInfo(target));
-				target.sendPacket(new ExVoteSystemInfo(target));
-			}
-			else
-			{
-				final L2PcInstance player = info.getEffector() instanceof L2PcInstance ? (L2PcInstance) info.getEffector() : null;
-				if (player != null)
-				{
-					player.sendPacket(SystemMessageId.NOTHING_HAPPENED);
-				}
+				player.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 			}
 		}
 	}

@@ -35,7 +35,6 @@ public class ConditionPlayerImmobile extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		final boolean isImmobile = !effector.isMovementDisabled();
-		return _val == isImmobile;
+		return _val == !effector.isMovementDisabled();
 	}
 }

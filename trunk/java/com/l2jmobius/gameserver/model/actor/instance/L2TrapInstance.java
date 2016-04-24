@@ -427,15 +427,17 @@ public final class L2TrapInstance extends L2Npc
 			_owner = null;
 		}
 		
-		if (isVisible() && !isDead())
+		if (!isVisible() || isDead())
 		{
-			if (getWorldRegion() != null)
-			{
-				getWorldRegion().removeFromZones(this);
-			}
-			
-			deleteMe();
+			return;
 		}
+		
+		if (getWorldRegion() != null)
+		{
+			getWorldRegion().removeFromZones(this);
+		}
+		
+		deleteMe();
 	}
 	
 	@Override

@@ -141,13 +141,10 @@ public class Q00509_AClansFame extends Quest
 		if ((qs != null) && qs.isStarted())
 		{
 			final int raid = qs.getInt("raid");
-			if (REWARD_POINTS.containsKey(raid))
+			if (REWARD_POINTS.containsKey(raid) && (npc.getId() == REWARD_POINTS.get(raid).get(0)) && !hasQuestItems(player, REWARD_POINTS.get(raid).get(1)))
 			{
-				if ((npc.getId() == REWARD_POINTS.get(raid).get(0)) && !hasQuestItems(player, REWARD_POINTS.get(raid).get(1)))
-				{
-					rewardItems(player, REWARD_POINTS.get(raid).get(1), 1);
-					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				rewardItems(player, REWARD_POINTS.get(raid).get(1), 1);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return null;

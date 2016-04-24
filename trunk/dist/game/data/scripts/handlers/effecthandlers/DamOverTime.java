@@ -81,7 +81,7 @@ public final class DamOverTime extends AbstractEffect
 			info.getEffected().sendPacket(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY);
 			return false;
 		}
-		else if (_charge != 0)
+		if (_charge != 0)
 		{
 			info.getEffected().getActingPlayer().increaseCharges(1, _charge);
 		}

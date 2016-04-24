@@ -132,32 +132,9 @@ public final class L2WorldRegion
 		
 		for (L2ZoneType e : getZones())
 		{
-			if (e instanceof L2PeaceZone)
+			if ((e instanceof L2PeaceZone) && (e.isInsideZone(x, up, z) || e.isInsideZone(x, down, z) || e.isInsideZone(left, y, z) || e.isInsideZone(right, y, z) || e.isInsideZone(x, y, z)))
 			{
-				if (e.isInsideZone(x, up, z))
-				{
-					return false;
-				}
-				
-				if (e.isInsideZone(x, down, z))
-				{
-					return false;
-				}
-				
-				if (e.isInsideZone(left, y, z))
-				{
-					return false;
-				}
-				
-				if (e.isInsideZone(right, y, z))
-				{
-					return false;
-				}
-				
-				if (e.isInsideZone(x, y, z))
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 		return true;
@@ -332,14 +309,7 @@ public final class L2WorldRegion
 		
 		// TODO
 		// turn the geodata on or off to match the region's activation.
-		if (value)
-		{
-			_log.fine("Starting Grid " + _tileX + "," + _tileY);
-		}
-		else
-		{
-			_log.fine("Stoping Grid " + _tileX + "," + _tileY);
-		}
+		_log.fine(value ? "Starting Grid " + _tileX + "," + _tileY : "Stoping Grid " + _tileX + "," + _tileY);
 	}
 	
 	/**

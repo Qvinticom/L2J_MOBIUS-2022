@@ -195,9 +195,7 @@ public class Q10782_LettersFromTheQueen_ForsakenPlains extends Quest implements 
 			return;
 		}
 		final L2PcInstance player = event.getActiveChar();
-		final int oldLevel = event.getOldLevel();
-		final int newLevel = event.getNewLevel();
-		if ((oldLevel == (newLevel - 1)) && (player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() == Race.ERTHEIA))
+		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() == Race.ERTHEIA))
 		{
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)

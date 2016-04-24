@@ -552,8 +552,7 @@ public final class CrystalCaverns extends AbstractInstance
 				party.broadcastPacket(sm);
 				return false;
 			}
-			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
-			if (System.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 				sm.addPcName(partyMember);
@@ -880,13 +879,9 @@ public final class CrystalCaverns extends AbstractInstance
 		if (npc.getId() == ORACLE_GUIDE_1)
 		{
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof CCWorld)
+			if ((tmpworld instanceof CCWorld) && (((CCWorld) tmpworld).getStatus() == 0) && ((CCWorld) tmpworld).oracle.contains(npc))
 			{
-				final CCWorld world = (CCWorld) tmpworld;
-				if ((world.getStatus() == 0) && world.oracle.contains(npc))
-				{
-					return "32281.htm"; // TODO: Missing HTML.
-				}
+				return "32281.htm";
 			}
 			npc.showChatWindow(player);
 			return null;
@@ -1102,13 +1097,10 @@ public final class CrystalCaverns extends AbstractInstance
 						world.copys.add(copy);
 					}
 				}
-				else if ((nowHp < (maxHp * 0.15)) && !world.isUsedInvulSkill)
+				else if ((nowHp < (maxHp * 0.15)) && !world.isUsedInvulSkill && ((rand > 994) || (nowHp < (maxHp * 0.1))))
 				{
-					if ((rand > 994) || (nowHp < (maxHp * 0.1)))
-					{
-						world.isUsedInvulSkill = true;
-						npc.setIsInvul(true);
-					}
+					world.isUsedInvulSkill = true;
+					npc.setIsInvul(true);
 				}
 			}
 		}
@@ -1977,15 +1969,14 @@ public final class CrystalCaverns extends AbstractInstance
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(trap.getInstanceId());
 		if (tmpworld instanceof CCWorld)
 		{
-			final CCWorld world = (CCWorld) tmpworld;
 			switch (action)
 			{
 				case TRAP_DISARMED:
 				{
 					if (trap.getId() == DOOR_OPENING_TRAP[0])
 					{
-						openDoor(24220001, world.getInstanceId());
-						runEmeraldRooms(world, ROOM1_SPAWNS, 1);
+						openDoor(24220001, ((CCWorld) tmpworld).getInstanceId());
+						runEmeraldRooms(((CCWorld) tmpworld), ROOM1_SPAWNS, 1);
 					}
 					break;
 				}

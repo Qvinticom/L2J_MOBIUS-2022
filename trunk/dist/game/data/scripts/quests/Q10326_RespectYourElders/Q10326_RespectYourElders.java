@@ -95,7 +95,6 @@ public class Q10326_RespectYourElders extends Quest
 					addExpAndSp(player, 6700, 5);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
 				break;
 			}

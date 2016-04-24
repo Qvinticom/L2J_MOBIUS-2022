@@ -212,12 +212,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 	@Override
 	public void storeEffect(boolean storeEffects)
 	{
-		if (!Config.SUMMON_STORE_SKILL_COOLTIME)
-		{
-			return;
-		}
-		
-		if ((getOwner() == null) || getOwner().isInOlympiadMode())
+		if (!Config.SUMMON_STORE_SKILL_COOLTIME || (getOwner() == null) || getOwner().isInOlympiadMode())
 		{
 			return;
 		}
@@ -382,31 +377,19 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 	@Override
 	public byte getAttackElement()
 	{
-		if (getOwner() != null)
-		{
-			return getOwner().getAttackElement();
-		}
-		return super.getAttackElement();
+		return getOwner() != null ? getOwner().getAttackElement() : super.getAttackElement();
 	}
 	
 	@Override
 	public int getAttackElementValue(byte attackAttribute)
 	{
-		if (getOwner() != null)
-		{
-			return (getOwner().getAttackElementValue(attackAttribute));
-		}
-		return super.getAttackElementValue(attackAttribute);
+		return getOwner() != null ? getOwner().getAttackElementValue(attackAttribute) : super.getAttackElementValue(attackAttribute);
 	}
 	
 	@Override
 	public int getDefenseElementValue(byte defenseAttribute)
 	{
-		if (getOwner() != null)
-		{
-			return (getOwner().getDefenseElementValue(defenseAttribute));
-		}
-		return super.getDefenseElementValue(defenseAttribute);
+		return getOwner() != null ? getOwner().getDefenseElementValue(defenseAttribute) : super.getDefenseElementValue(defenseAttribute);
 	}
 	
 	@Override

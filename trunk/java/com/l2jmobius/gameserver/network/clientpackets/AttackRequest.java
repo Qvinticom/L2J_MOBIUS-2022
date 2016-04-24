@@ -76,16 +76,7 @@ public final class AttackRequest extends L2GameClientPacket
 		}
 		
 		// avoid using expensive operations if not needed
-		final L2Object target;
-		if (activeChar.getTargetId() == _objectId)
-		{
-			target = activeChar.getTarget();
-		}
-		else
-		{
-			target = L2World.getInstance().findObject(_objectId);
-		}
-		
+		final L2Object target = activeChar.getTargetId() == _objectId ? activeChar.getTarget() : L2World.getInstance().findObject(_objectId);
 		if (target == null)
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -100,14 +91,14 @@ public final class AttackRequest extends L2GameClientPacket
 		
 		// Players can't attack objects in the other instances
 		// except from multiverse
-		else if ((target.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1))
+		if ((target.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1))
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Only GMs can directly attack invisible characters
-		else if (!target.isVisibleFor(activeChar))
+		if (!target.isVisibleFor(activeChar))
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

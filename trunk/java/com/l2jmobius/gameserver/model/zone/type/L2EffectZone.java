@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.TaskZoneSettings;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -56,12 +55,7 @@ public class L2EffectZone extends L2ZoneType
 		setTargetType(InstanceType.L2Playable); // default only playabale
 		_bypassConditions = false;
 		_isShowDangerIcon = true;
-		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-		if (settings == null)
-		{
-			settings = new TaskZoneSettings();
-		}
-		setSettings(settings);
+		setSettings((ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName())));
 	}
 	
 	@Override
@@ -133,28 +127,27 @@ public class L2EffectZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if (_skills != null)
+		if ((_skills != null) && (getSettings().getTask() == null))
 		{
-			if (getSettings().getTask() == null)
+			synchronized (this)
 			{
-				synchronized (this)
+				if (getSettings().getTask() == null)
 				{
-					if (getSettings().getTask() == null)
-					{
-						getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
-					}
+					getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
 				}
 			}
 		}
-		if (character.isPlayer())
+		if (!character.isPlayer())
 		{
-			character.setInsideZone(ZoneId.ALTERED, true);
-			if (_isShowDangerIcon)
-			{
-				character.setInsideZone(ZoneId.DANGER_AREA, true);
-				character.sendPacket(new EtcStatusUpdate(character.getActingPlayer()));
-			}
+			return;
 		}
+		character.setInsideZone(ZoneId.ALTERED, true);
+		if (!_isShowDangerIcon)
+		{
+			return;
+		}
+		character.setInsideZone(ZoneId.DANGER_AREA, true);
+		character.sendPacket(new EtcStatusUpdate(character.getActingPlayer()));
 	}
 	
 	@Override
@@ -227,11 +220,7 @@ public class L2EffectZone extends L2ZoneType
 	
 	public int getSkillLevel(int skillId)
 	{
-		if ((_skills == null) || !_skills.containsKey(skillId))
-		{
-			return 0;
-		}
-		return _skills.get(skillId);
+		return (_skills == null) || !_skills.containsKey(skillId) ? 0 : _skills.get(skillId);
 	}
 	
 	private final class ApplySkill implements Runnable
@@ -251,20 +240,14 @@ public class L2EffectZone extends L2ZoneType
 			{
 				for (L2Character temp : getCharactersInside())
 				{
-					if ((temp != null) && !temp.isDead())
+					if ((temp != null) && !temp.isDead() && (Rnd.get(100) < getChance()))
 					{
-						if (Rnd.get(100) < getChance())
+						for (Entry<Integer, Integer> e : _skills.entrySet())
 						{
-							for (Entry<Integer, Integer> e : _skills.entrySet())
+							final Skill skill = getSkill(e.getKey(), e.getValue());
+							if ((skill != null) && (_bypassConditions || skill.checkCondition(temp, temp, false)) && !temp.isAffectedBySkill(e.getKey()))
 							{
-								final Skill skill = getSkill(e.getKey(), e.getValue());
-								if ((skill != null) && (_bypassConditions || skill.checkCondition(temp, temp, false)))
-								{
-									if (!temp.isAffectedBySkill(e.getKey()))
-									{
-										skill.applyEffects(temp, temp);
-									}
-								}
+								skill.applyEffects(temp, temp);
 							}
 						}
 					}

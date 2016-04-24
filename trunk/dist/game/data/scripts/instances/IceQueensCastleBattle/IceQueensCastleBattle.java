@@ -525,8 +525,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 							knight.getSpawn().setLocation(loc);
 							world.spawnedMobs.add(knight);
 							
-							final int time = (world.isHardCore ? getRandom(5, 10) : getRandom(15, 20)) * 1000;
-							startQuestTimer("ICE_RUPTURE", time, knight, null);
+							startQuestTimer("ICE_RUPTURE", ((world.isHardCore ? getRandom(5, 10) : getRandom(15, 20)) * 1000), knight, null);
 						}
 						break;
 					}
@@ -755,21 +754,19 @@ public final class IceQueensCastleBattle extends AbstractInstance
 		
 		if (tmpworld instanceof IQCNBWorld)
 		{
-			final IQCNBWorld world = (IQCNBWorld) tmpworld;
-			
 			if (npc.getId() == SUPP_JINIA)
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return null;
 			}
-			else if (npc.getId() == SUPP_KEGOR)
+			if (npc.getId() == SUPP_KEGOR)
 			{
-				if (world.isSupportActive)
+				if (!((IQCNBWorld) tmpworld).isSupportActive)
 				{
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					return null;
+					return "18851.html";
 				}
-				return "18851.html";
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				return null;
 			}
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -803,13 +800,10 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					}
 					else
 					{
-						if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow())
+						if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow() && !npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
 						{
-							if (!npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
-							{
-								npc.setTarget(attacker);
-								npc.doCast(ANTI_STRIDER.getSkill());
-							}
+							npc.setTarget(attacker);
+							npc.doCast(ANTI_STRIDER.getSkill());
 						}
 						
 						final L2Character mostHated = ((L2Attackable) npc).getMostHated();
@@ -853,13 +847,10 @@ public final class IceQueensCastleBattle extends AbstractInstance
 								}
 							}
 						}
-						else if (getRandom(10000) < 1500)
+						else if ((getRandom(10000) < 1500) && !npc.isAffectedBySkill(SELF_NOVA.getSkillId()) && npc.checkDoCastConditions(SELF_NOVA.getSkill()) && !npc.isCastingNow())
 						{
-							if (!npc.isAffectedBySkill(SELF_NOVA.getSkillId()) && npc.checkDoCastConditions(SELF_NOVA.getSkill()) && !npc.isCastingNow())
-							{
-								npc.setTarget(npc);
-								npc.doCast(SELF_NOVA.getSkill());
-							}
+							npc.setTarget(npc);
+							npc.doCast(SELF_NOVA.getSkill());
 						}
 					}
 					break;
@@ -888,13 +879,10 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						startQuestTimer("SPAWN_SUPPORT", 27000, world.controller, null);
 					}
 					
-					if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow())
+					if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow() && !npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
 					{
-						if (!npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
-						{
-							npc.setTarget(attacker);
-							npc.doCast(ANTI_STRIDER.getSkill());
-						}
+						npc.setTarget(attacker);
+						npc.doCast(ANTI_STRIDER.getSkill());
 					}
 					
 					final L2Character mostHated = ((L2Attackable) npc).getMostHated();
@@ -946,13 +934,10 @@ public final class IceQueensCastleBattle extends AbstractInstance
 							npc.doCast(SELF_NOVA.getSkill());
 						}
 					}
-					else if (getRandom(10000) < 1333)
+					else if ((getRandom(10000) < 1333) && !npc.isAffectedBySkill(REFLECT_MAGIC.getSkillId()) && npc.checkDoCastConditions(REFLECT_MAGIC.getSkill()) && !npc.isCastingNow())
 					{
-						if (!npc.isAffectedBySkill(REFLECT_MAGIC.getSkillId()) && npc.checkDoCastConditions(REFLECT_MAGIC.getSkill()) && !npc.isCastingNow())
-						{
-							npc.setTarget(npc);
-							npc.doCast(REFLECT_MAGIC.getSkill());
-						}
+						npc.setTarget(npc);
+						npc.doCast(REFLECT_MAGIC.getSkill());
 					}
 					break;
 				}
@@ -1083,8 +1068,6 @@ public final class IceQueensCastleBattle extends AbstractInstance
 		
 		if (tmpworld instanceof IQCNBWorld)
 		{
-			final IQCNBWorld world = (IQCNBWorld) tmpworld;
-			
 			switch (npc.getId())
 			{
 				case GLACIER:
@@ -1093,16 +1076,16 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					{
 						if (getRandom(100) < 75)
 						{
-							final L2Attackable breath = (L2Attackable) addSpawn(BREATH, npc.getLocation(), false, 0, false, world.getInstanceId());
+							final L2Attackable breath = (L2Attackable) addSpawn(BREATH, npc.getLocation(), false, 0, false, ((IQCNBWorld) tmpworld).getInstanceId());
 							if (player != null)
 							{
 								addAttackDesire(breath, player);
 							}
 							else
 							{
-								manageRandomAttack(world, breath);
+								manageRandomAttack(((IQCNBWorld) tmpworld), breath);
 							}
-							world.spawnedMobs.add(breath);
+							((IQCNBWorld) tmpworld).spawnedMobs.add(breath);
 							startQuestTimer("BLIZZARD", 20000, breath, null);
 						}
 						notifyEvent("SUICIDE", npc, null);
@@ -1185,8 +1168,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					
 					if (spawnedBy != null)
 					{
-						final int time = (world.isHardCore ? getRandom(30, 60) : getRandom(50, 60)) * 1000;
-						startQuestTimer("SPAWN_KNIGHT", time, spawnedBy, null);
+						startQuestTimer("SPAWN_KNIGHT", ((world.isHardCore ? getRandom(30, 60) : getRandom(50, 60)) * 1000), spawnedBy, null);
 					}
 					world.spawnedMobs.remove(npc);
 					break;
@@ -1265,28 +1247,26 @@ public final class IceQueensCastleBattle extends AbstractInstance
 	{
 		final L2Party party = player.getParty();
 		final L2CommandChannel channel = party != null ? party.getCommandChannel() : null;
-		
 		if (player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
 		{
 			return true;
 		}
-		
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 			return false;
 		}
-		else if (channel == null)
+		if (channel == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL);
 			return false;
 		}
-		else if (player != channel.getLeader())
+		if (player != channel.getLeader())
 		{
 			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return false;
 		}
-		else if ((channel.getMemberCount() < MIN_PLAYERS) || (channel.getMemberCount() > MAX_PLAYERS))
+		if ((channel.getMemberCount() < MIN_PLAYERS) || (channel.getMemberCount() > MAX_PLAYERS))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT);
 			return false;
@@ -1300,21 +1280,14 @@ public final class IceQueensCastleBattle extends AbstractInstance
 				party.broadcastPacket(sm);
 				return false;
 			}
-			else if (!Util.checkIfInRange(1000, player, channelMember, true))
+			if (!Util.checkIfInRange(1000, player, channelMember, true))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(channelMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
-			else if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID_EASY))
-			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
-				sm.addPcName(channelMember);
-				party.broadcastPacket(sm);
-				return false;
-			}
-			else if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID_HARD))
+			if ((System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID_EASY)) || (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID_HARD)))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 				sm.addPcName(channelMember);

@@ -159,28 +159,12 @@ public class Q10360_CertificationOfFate extends Quest
 					{
 						case HUMAN:
 						{
-							if (player.getClassId().isMage())
-							{
-								qs.setCond(9);
-								
-							}
-							else
-							{
-								qs.setCond(8);
-							}
+							qs.setCond(player.getClassId().isMage() ? 9 : 8);
 							break;
 						}
 						case ELF:
 						{
-							if (player.getClassId().isMage())
-							{
-								qs.setCond(11);
-								
-							}
-							else
-							{
-								qs.setCond(10);
-							}
+							qs.setCond(player.getClassId().isMage() ? 11 : 10);
 							break;
 						}
 						case DARK_ELF:
@@ -425,7 +409,7 @@ public class Q10360_CertificationOfFate extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
+		String htmltext = getNoQuestMsg(player);
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -438,10 +422,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30289-01.htm";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case RAINS:
@@ -449,10 +429,6 @@ public class Q10360_CertificationOfFate extends Quest
 						if (player.getClassId().getParent() == ClassId.FIGHTER)
 						{
 							htmltext = "30288-01.htm";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -462,10 +438,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30155-01.htm";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case ESRANDELL:
@@ -473,10 +445,6 @@ public class Q10360_CertificationOfFate extends Quest
 						if (player.getClassId().getParent() == ClassId.ELVEN_MAGE)
 						{
 							htmltext = "30158-01.htm";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -486,10 +454,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30297-01.htm";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case DRIKUS:
@@ -497,10 +461,6 @@ public class Q10360_CertificationOfFate extends Quest
 						if ((player.getRace() == Race.ORC) && (player.getClassId().level() == 1))
 						{
 							htmltext = "30505-01.htm";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -510,10 +470,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30504-01.htm";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case GERSHWIN:
@@ -521,10 +477,6 @@ public class Q10360_CertificationOfFate extends Quest
 						if ((player.getRace() == Race.KAMAEL) && (player.getClassId().level() == 1))
 						{
 							htmltext = "32196-01.htm";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -567,10 +519,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30289-03.html";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case RAINS:
@@ -605,10 +553,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30288-03.html";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case ELLENIA:
@@ -638,10 +582,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30155-03.html";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case ESRANDELL:
@@ -670,10 +610,6 @@ public class Q10360_CertificationOfFate extends Quest
 						else if (qs.isCond(1))
 						{
 							htmltext = "30158-03.html";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -714,10 +650,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30297-03.html";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case DRIKUS:
@@ -752,10 +684,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "30505-03.html";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case MENDIO:
@@ -784,10 +712,6 @@ public class Q10360_CertificationOfFate extends Quest
 						else if (qs.isCond(1))
 						{
 							htmltext = "30504-03.html";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -818,10 +742,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "32196-03.html";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case RENFAD:
@@ -833,10 +753,6 @@ public class Q10360_CertificationOfFate extends Quest
 						else if (qs.isCond(2))
 						{
 							htmltext = "33524-04.html";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -850,10 +766,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "33516-03.html";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case SCHUAZEN:
@@ -866,10 +778,6 @@ public class Q10360_CertificationOfFate extends Quest
 						{
 							htmltext = "33517-03.html";
 						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
 						break;
 					}
 					case SELON:
@@ -881,10 +789,6 @@ public class Q10360_CertificationOfFate extends Quest
 						else if (qs.getCond() > 7)
 						{
 							htmltext = "33518-05.html";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}

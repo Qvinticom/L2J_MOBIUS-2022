@@ -50,16 +50,17 @@ public class ScriptExecutor
 	public void execSqlBatch(File dir, boolean skipErrors)
 	{
 		final File[] files = dir.listFiles(new SQLFilter());
-		if (files != null)
+		if (files == null)
 		{
-			Arrays.sort(files);
-			_frame.setProgressIndeterminate(false);
-			_frame.setProgressMaximum(files.length - 1);
-			for (int i = 0; i < files.length; i++)
-			{
-				_frame.setProgressValue(i);
-				execSqlFile(files[i], skipErrors);
-			}
+			return;
+		}
+		Arrays.sort(files);
+		_frame.setProgressIndeterminate(false);
+		_frame.setProgressMaximum(files.length - 1);
+		for (int i = 0; i < files.length; i++)
+		{
+			_frame.setProgressValue(i);
+			execSqlFile(files[i], skipErrors);
 		}
 	}
 	
@@ -118,8 +119,7 @@ public class ScriptExecutor
 						"Abort"
 					};
 					
-					final int n = JOptionPane.showOptionDialog(null, "MySQL Error: " + e.getMessage(), "Script Error", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
-					if (n == 1)
+					if (JOptionPane.showOptionDialog(null, "MySQL Error: " + e.getMessage(), "Script Error", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]) == 1)
 					{
 						System.exit(0);
 					}

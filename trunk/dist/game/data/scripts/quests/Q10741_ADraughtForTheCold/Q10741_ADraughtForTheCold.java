@@ -108,14 +108,7 @@ public class Q10741_ADraughtForTheCold extends Quest
 		{
 			case SIVANTHE:
 			{
-				if (qs.isStarted())
-				{
-					htmltext = "33951-04.html";
-				}
-				else
-				{
-					htmltext = "33951-01.htm";
-				}
+				htmltext = qs.isStarted() ? "33951-04.html" : "33951-01.htm";
 				break;
 			}
 			case LEIRA:

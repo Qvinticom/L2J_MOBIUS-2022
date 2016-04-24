@@ -64,9 +64,9 @@ public class ZoneCuboid extends L2ZoneForm
 		final int _x2 = _r.x + _r.width;
 		final int _y1 = _r.y;
 		final int _y2 = _r.y + _r.height;
-		double test, shortestDist = Math.pow(_x1 - x, 2) + Math.pow(_y1 - y, 2);
+		double test = Math.pow(_x1 - x, 2) + Math.pow(_y2 - y, 2);
+		double shortestDist = Math.pow(_x1 - x, 2) + Math.pow(_y1 - y, 2);
 		
-		test = Math.pow(_x1 - x, 2) + Math.pow(_y2 - y, 2);
 		if (test < shortestDist)
 		{
 			shortestDist = test;

@@ -64,11 +64,7 @@ public final class RequestJoinAlly extends L2GameClientPacket
 		
 		final L2PcInstance target = ob;
 		final L2Clan clan = activeChar.getClan();
-		if (!clan.checkAllyJoinCondition(activeChar, target))
-		{
-			return;
-		}
-		if (!activeChar.getRequest().setRequest(target, this))
+		if (!clan.checkAllyJoinCondition(activeChar, target) || !activeChar.getRequest().setRequest(target, this))
 		{
 			return;
 		}

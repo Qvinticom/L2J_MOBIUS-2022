@@ -298,12 +298,9 @@ public final class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 					}
 					case LIGHT_OF_DAWN:
 					{
-						if (qs.isCond(3))
+						if (qs.isCond(3) && hasQuestItems(player, IDENTITY_CARD))
 						{
-							if (hasQuestItems(player, IDENTITY_CARD))
-							{
-								htmltext = "31001-07.html";
-							}
+							htmltext = "31001-07.html";
 						}
 						break;
 					}

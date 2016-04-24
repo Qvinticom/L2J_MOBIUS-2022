@@ -42,15 +42,12 @@ public class AreaSummon implements ITargetTypeHandler
 			return EMPTY_TARGET_LIST;
 		}
 		
-		if (onlyFirst)
+		if (onlyFirst && activeChar.hasSummon())
 		{
-			if (activeChar.hasSummon())
+			return new L2Character[]
 			{
-				return new L2Character[]
-				{
-					activeChar.getServitors().values().stream().findFirst().orElse(activeChar.getPet())
-				};
-			}
+				activeChar.getServitors().values().stream().findFirst().orElse(activeChar.getPet())
+			};
 		}
 		
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
@@ -87,12 +84,7 @@ public class AreaSummon implements ITargetTypeHandler
 			targetList.add(obj);
 		}
 		
-		if (targetList.isEmpty())
-		{
-			return EMPTY_TARGET_LIST;
-		}
-		
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.isEmpty() ? EMPTY_TARGET_LIST : targetList.toArray(new L2Character[targetList.size()]);
 	}
 	
 	@Override

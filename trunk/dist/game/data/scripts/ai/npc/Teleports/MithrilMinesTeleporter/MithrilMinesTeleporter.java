@@ -55,8 +55,7 @@ final class MithrilMinesTeleporter extends AbstractNpcAI
 		final int index = Integer.parseInt(event) - 1;
 		if (LOCS.length > index)
 		{
-			final Location loc = LOCS[index];
-			player.teleToLocation(loc, false);
+			player.teleToLocation(LOCS[index], false);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

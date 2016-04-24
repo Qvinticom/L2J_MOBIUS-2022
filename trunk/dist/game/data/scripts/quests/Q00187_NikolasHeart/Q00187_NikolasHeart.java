@@ -167,12 +167,9 @@ public final class Q00187_NikolasHeart extends Quest
 				}
 			}
 		}
-		else if (qs.isCompleted())
+		else if (qs.isCompleted() && (npc.getId() == RESEARCHER_LORAIN))
 		{
-			if (npc.getId() == RESEARCHER_LORAIN)
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-			}
+			htmltext = getAlreadyCompletedMsg(player);
 		}
 		return htmltext;
 	}

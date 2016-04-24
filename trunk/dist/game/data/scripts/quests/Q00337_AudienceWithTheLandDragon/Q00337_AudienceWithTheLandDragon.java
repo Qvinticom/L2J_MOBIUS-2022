@@ -555,16 +555,16 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 		{
 			return null;
 		}
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		for (int[] npcInfo : DROP_ON_ATTACK)
 		{
 			if (npcInfo[0] == npcId)
 			{
-				double percentHp = ((npc.getCurrentHp() + damage) * 100.0D) / npc.getMaxHp();
+				final double percentHp = ((npc.getCurrentHp() + damage) * 100.0D) / npc.getMaxHp();
 				
 				if (percentHp < 33.0D)
 				{
-					int itemId = npcInfo[3];
+					final int itemId = npcInfo[3];
 					if (!hasQuestItems(attacker, itemId))
 					{
 						giveItems(attacker, itemId, 1);
@@ -595,7 +595,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 					{
 						for (int i = 0; i < npcInfo[4]; i++)
 						{
-							L2Npc mob = addSpawn(npcInfo[5], npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), npc.getHeading(), true, 60000L, false);
+							final L2Npc mob = addSpawn(npcInfo[5], npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), npc.getHeading(), true, 60000L, false);
 							mob.setRunning();
 							((L2Attackable) mob).addDamageHate(attacker, 0, 500);
 							mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -639,7 +639,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		QuestState qs = player.getQuestState(getName());
+		final QuestState qs = player.getQuestState(getName());
 		if ((qs == null) || (qs.getState() != State.STARTED))
 		{
 			return null;
@@ -664,7 +664,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 						{
 							break;
 						}
-						int itemId = npcInfo[4];
+						final int itemId = npcInfo[4];
 						if (!hasQuestItems(player, itemId))
 						{
 							giveItems(player, itemId, 1);
@@ -677,29 +677,23 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 			}
 			case BLOOD_QUEEN:
 			{
-				if (qs.isCond(1) && (getRandom(100) < 70))
+				if (qs.isCond(1) && (getRandom(100) < 70) && (qs.getInt("drop1") == 1) && (!hasQuestItems(player, REMAINS_OF_SACRIFIED)))
 				{
-					if ((qs.getInt("drop1") == 1) && (!hasQuestItems(player, REMAINS_OF_SACRIFIED)))
+					for (int i = 0; i < 10; i++)
 					{
-						for (int i = 0; i < 10; i++)
-						{
-							addSpawn(SACRIFICE_OF_THE_SACRIFICED, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), npc.getHeading(), true, 60000L, false);
-						}
+						addSpawn(SACRIFICE_OF_THE_SACRIFICED, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), npc.getHeading(), true, 60000L, false);
 					}
 				}
 				break;
 			}
 			case HARIT_LIZARDMAN_SHAMAN:
 			{
-				if (qs.isCond(1) && (getRandom(100) < 70))
+				if (qs.isCond(1) && (getRandom(100) < 70) && (qs.getInt("drop2") == 1) && (!hasQuestItems(player, TOTEM_OF_LAND_DRAGON)))
 				{
-					if ((qs.getInt("drop2") == 1) && (!hasQuestItems(player, TOTEM_OF_LAND_DRAGON)))
+					for (int i = 0; i < 3; i++)
 					{
-						for (int i = 0; i < 3; i++)
-						{
-							final L2Npc mob1 = addSpawn(HARIT_LIZARDMAN_ZEALOT, npc.getX() + getRandom(-50, 50), npc.getY() + getRandom(-50, 50), npc.getZ(), npc.getHeading(), true, 60000L, false);
-							addAttackDesire(mob1, qs.getPlayer());
-						}
+						final L2Npc mob1 = addSpawn(HARIT_LIZARDMAN_ZEALOT, npc.getX() + getRandom(-50, 50), npc.getY() + getRandom(-50, 50), npc.getZ(), npc.getHeading(), true, 60000L, false);
+						addAttackDesire(mob1, qs.getPlayer());
 					}
 				}
 				break;
@@ -707,12 +701,9 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 			case CAVE_MAIDEN:
 			case CAVE_KEEPER:
 			{
-				if (qs.isCond(4) && (getRandom(100) < 50))
+				if (qs.isCond(4) && (getRandom(100) < 50) && !hasQuestItems(player, THIRD_FRAGMENT_OF_ABYSS_JEWEL))
 				{
-					if (!hasQuestItems(player, THIRD_FRAGMENT_OF_ABYSS_JEWEL))
-					{
-						addSpawn(ABYSSAL_JEWEL_3, npc.getX() + getRandom(-50, 50), npc.getY() + getRandom(-50, 50), npc.getZ(), npc.getHeading(), true, 60000L, false);
-					}
+					addSpawn(ABYSSAL_JEWEL_3, npc.getX() + getRandom(-50, 50), npc.getY() + getRandom(-50, 50), npc.getZ(), npc.getHeading(), true, 60000L, false);
 				}
 				break;
 			}

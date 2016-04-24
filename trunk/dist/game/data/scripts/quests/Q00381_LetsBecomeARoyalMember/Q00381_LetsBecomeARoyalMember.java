@@ -122,13 +122,9 @@ public final class Q00381_LetsBecomeARoyalMember extends Quest
 						qs.exitQuest(false, true);
 						htmltext = "30232-06.html";
 					}
-					else if (hasAlbum || hasCoin)
-					{
-						htmltext = "30232-05.html";
-					}
 					else
 					{
-						htmltext = "30232-04.html";
+						htmltext = hasAlbum || hasCoin ? "30232-05.html" : "30232-04.html";
 					}
 				}
 				else

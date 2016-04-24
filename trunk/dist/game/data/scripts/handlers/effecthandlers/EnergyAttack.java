@@ -87,8 +87,7 @@ public final class EnergyAttack extends AbstractEffect
 		
 		if (!_ignoreShieldDefence)
 		{
-			final byte shield = Formulas.calcShldUse(attacker, target, skill, true);
-			switch (shield)
+			switch (Formulas.calcShldUse(attacker, target, skill, true))
 			{
 				case Formulas.SHIELD_DEFENSE_FAILED:
 				{

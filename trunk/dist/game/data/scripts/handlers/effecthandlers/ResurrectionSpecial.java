@@ -71,8 +71,7 @@ public final class ResurrectionSpecial extends AbstractEffect
 		}
 		if (info.getEffected().isPet())
 		{
-			final L2PetInstance pet = (L2PetInstance) info.getEffected();
-			info.getEffected().getActingPlayer().reviveRequest(pet.getActingPlayer(), skill, true, _power);
+			info.getEffected().getActingPlayer().reviveRequest(((L2PetInstance) info.getEffected()).getActingPlayer(), skill, true, _power);
 		}
 	}
 }

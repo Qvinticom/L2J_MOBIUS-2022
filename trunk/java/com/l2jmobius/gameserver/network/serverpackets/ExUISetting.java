@@ -46,22 +46,19 @@ public class ExUISetting extends L2GameServerPacket
 			size++;
 			if (_uiSettings.getCategories().containsKey(category))
 			{
-				final List<Integer> catElList1 = _uiSettings.getCategories().get(category);
-				size = size + catElList1.size();
+				size = size + _uiSettings.getCategories().get(category).size();
 			}
 			category++;
 			size++;
 			if (_uiSettings.getCategories().containsKey(category))
 			{
-				final List<Integer> catElList2 = _uiSettings.getCategories().get(category);
-				size = size + catElList2.size();
+				size = size + _uiSettings.getCategories().get(category).size();
 			}
 			category++;
 			size = size + 4;
 			if (_uiSettings.getKeys().containsKey(i))
 			{
-				final List<ActionKey> keyElList = _uiSettings.getKeys().get(i);
-				size = size + (keyElList.size() * 20);
+				size = size + (_uiSettings.getKeys().get(i).size() * 20);
 			}
 		}
 		buffsize = size;

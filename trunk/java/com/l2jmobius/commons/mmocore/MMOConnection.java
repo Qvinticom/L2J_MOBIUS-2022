@@ -161,23 +161,20 @@ public class MMOConnection<T extends MMOClient<?>>
 			
 			final int remaining = temp.remaining();
 			_primaryWriteBuffer.flip();
-			final int limit = _primaryWriteBuffer.limit();
-			
 			if (remaining >= _primaryWriteBuffer.remaining())
 			{
 				temp.put(_primaryWriteBuffer);
 				_selectorThread.recycleBuffer(_primaryWriteBuffer);
-				_primaryWriteBuffer = temp;
 			}
 			else
 			{
 				_primaryWriteBuffer.limit(remaining);
 				temp.put(_primaryWriteBuffer);
-				_primaryWriteBuffer.limit(limit);
+				_primaryWriteBuffer.limit(_primaryWriteBuffer.limit());
 				_primaryWriteBuffer.compact();
 				_secondaryWriteBuffer = _primaryWriteBuffer;
-				_primaryWriteBuffer = temp;
 			}
+			_primaryWriteBuffer = temp;
 		}
 	}
 	

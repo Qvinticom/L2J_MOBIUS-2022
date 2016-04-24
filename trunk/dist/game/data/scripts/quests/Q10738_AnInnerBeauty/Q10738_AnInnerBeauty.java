@@ -95,12 +95,7 @@ public class Q10738_AnInnerBeauty extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		
-		if (qs.isCompleted())
-		{
-			htmltext = getAlreadyCompletedMsg(player);
-		}
+		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
 		
 		if (npc.getId() == GRAKON)
 		{
@@ -113,12 +108,9 @@ public class Q10738_AnInnerBeauty extends Quest
 				htmltext = "33947-04.html";
 			}
 		}
-		else if (npc.getId() == EVNA)
+		else if ((npc.getId() == EVNA) && qs.isStarted())
 		{
-			if (qs.isStarted())
-			{
-				htmltext = "33935-01.html";
-			}
+			htmltext = "33935-01.html";
 		}
 		return htmltext;
 	}

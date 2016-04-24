@@ -172,14 +172,7 @@ public class L2PetInstance extends L2Summon
 					stopFeed();
 					return;
 				}
-				else if (getCurrentFed() > getFeedConsume())
-				{
-					setCurrentFed(getCurrentFed() - getFeedConsume());
-				}
-				else
-				{
-					setCurrentFed(0);
-				}
+				setCurrentFed(getCurrentFed() > getFeedConsume() ? getCurrentFed() - getFeedConsume() : 0);
 				
 				broadcastStatusUpdate();
 				
@@ -238,12 +231,7 @@ public class L2PetInstance extends L2Summon
 		
 		private int getFeedConsume()
 		{
-			// if pet is attacking
-			if (isAttackingNow())
-			{
-				return getPetLevelData().getPetFeedBattle();
-			}
-			return getPetLevelData().getPetFeedNormal();
+			return isAttackingNow() ? getPetLevelData().getPetFeedBattle() : getPetLevelData().getPetFeedNormal();
 		}
 	}
 	
@@ -346,13 +334,7 @@ public class L2PetInstance extends L2Summon
 	public L2Weapon getActiveWeaponItem()
 	{
 		final L2ItemInstance weapon = getActiveWeaponInstance();
-		
-		if (weapon == null)
-		{
-			return null;
-		}
-		
-		return (L2Weapon) weapon.getItem();
+		return weapon == null ? null : (L2Weapon) weapon.getItem();
 	}
 	
 	@Override
@@ -406,19 +388,19 @@ public class L2PetInstance extends L2Summon
 		
 		if (sendMessage)
 		{
+			final SystemMessage sm;
 			if (count > 1)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sm.addLong(count);
-				sendPacket(sm);
 			}
 			else
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 				sm.addItemName(item.getId());
-				sendPacket(sm);
 			}
+			sendPacket(sm);
 		}
 		return true;
 	}
@@ -453,19 +435,19 @@ public class L2PetInstance extends L2Summon
 		
 		if (sendMessage)
 		{
+			final SystemMessage sm;
 			if (count > 1)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sm.addLong(count);
-				sendPacket(sm);
 			}
 			else
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 				sm.addItemName(item.getId());
-				sendPacket(sm);
 			}
+			sendPacket(sm);
 		}
 		
 		return true;
@@ -501,7 +483,7 @@ public class L2PetInstance extends L2Summon
 			sendPacket(smsg);
 			return;
 		}
-		else if (FortSiegeManager.getInstance().isCombat(target.getId()))
+		if (FortSiegeManager.getInstance().isCombat(target.getId()))
 		{
 			return;
 		}
@@ -601,35 +583,30 @@ public class L2PetInstance extends L2Summon
 				smsg.addItemName(target);
 				sendPacket(smsg);
 			}
-			else if (target.getCount() > 1)
-			{
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S2_S1_S);
-				smsg.addLong(target.getCount());
-				smsg.addItemName(target);
-				sendPacket(smsg);
-			}
 			else
 			{
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1);
-				smsg.addItemName(target);
+				if (target.getCount() > 1)
+				{
+					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S2_S1_S);
+					smsg.addLong(target.getCount());
+				}
+				else
+				{
+					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1);
+				}
 				sendPacket(smsg);
+				smsg.addItemName(target);
 			}
-			
-			// If owner is in party and it isnt finders keepers, distribute the item instead of stealing it -.-
 			if (getOwner().isInParty() && (getOwner().getParty().getDistributionType() != PartyDistributionType.FINDERS_KEEPERS))
 			{
 				getOwner().getParty().distributeItem(getOwner(), target);
 			}
 			else
 			{
-				final L2ItemInstance item = getInventory().addItem("Pickup", target, getOwner(), this);
-				// sendPacket(new PetItemList(getInventory().getItems()));
-				sendPacket(new PetInventoryUpdate(item));
+				sendPacket(new PetInventoryUpdate(getInventory().addItem("Pickup", target, getOwner(), this)));
 			}
 		}
-		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		
 		if (follow)
 		{
 			followOwner();
@@ -824,15 +801,16 @@ public class L2PetInstance extends L2Summon
 	{
 		dropit = getInventory().dropItem("Drop", dropit.getObjectId(), dropit.getCount(), getOwner(), this);
 		
-		if (dropit != null)
+		if (dropit == null)
 		{
-			if (protect)
-			{
-				dropit.getDropProtection().protect(getOwner());
-			}
-			_logPet.finer("Item id to drop: " + dropit.getId() + " amount: " + dropit.getCount());
-			dropit.dropMe(this, getX(), getY(), getZ() + 100);
+			return;
 		}
+		if (protect)
+		{
+			dropit.getDropProtection().protect(getOwner());
+		}
+		_logPet.finer("Item id to drop: " + dropit.getId() + " amount: " + dropit.getCount());
+		dropit.dropMe(this, getX(), getY(), getZ() + 100);
 	}
 	
 	public void dropItemHere(L2ItemInstance dropit)
@@ -942,16 +920,7 @@ public class L2PetInstance extends L2Summon
 			_restoreSummon = false;
 		}
 		
-		String req;
-		if (!isRespawned())
-		{
-			req = "INSERT INTO pets (name,level,curHp,curMp,exp,sp,fed,ownerId,restore,item_obj_id) VALUES (?,?,?,?,?,?,?,?,?,?)";
-		}
-		else
-		{
-			req = "UPDATE pets SET name=?,level=?,curHp=?,curMp=?,exp=?,sp=?,fed=?,ownerId=?,restore=? WHERE item_obj_id = ?";
-		}
-		
+		final String req = !isRespawned() ? "INSERT INTO pets (name,level,curHp,curMp,exp,sp,fed,ownerId,restore,item_obj_id) VALUES (?,?,?,?,?,?,?,?,?,?)" : "UPDATE pets SET name=?,level=?,curHp=?,curMp=?,exp=?,sp=?,fed=?,ownerId=?,restore=? WHERE item_obj_id = ?";
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(req))
 		{
@@ -1025,24 +994,7 @@ public class L2PetInstance extends L2Summon
 					}
 					
 					final Skill skill = info.getSkill();
-					// Do not save heals.
-					if (skill.getAbnormalType() == AbnormalType.LIFE_FORCE_OTHERS)
-					{
-						continue;
-					}
-					
-					if (skill.isToggle())
-					{
-						continue;
-					}
-					
-					// Dances and songs are not kept in retail.
-					if (skill.isDance() && !Config.ALT_STORE_DANCES)
-					{
-						continue;
-					}
-					
-					if (storedSkills.contains(skill.getReuseHashCode()))
+					if ((skill.getAbnormalType() == AbnormalType.LIFE_FORCE_OTHERS) || skill.isToggle() || (skill.isDance() && !Config.ALT_STORE_DANCES) || storedSkills.contains(skill.getReuseHashCode()))
 					{
 						continue;
 					}
@@ -1111,11 +1063,12 @@ public class L2PetInstance extends L2Summon
 	
 	public synchronized void stopFeed()
 	{
-		if (_feedTask != null)
+		if (_feedTask == null)
 		{
-			_feedTask.cancel(false);
-			_feedTask = null;
+			return;
 		}
+		_feedTask.cancel(false);
+		_feedTask = null;
 	}
 	
 	public synchronized void startFeed()
@@ -1318,32 +1271,20 @@ public class L2PetInstance extends L2Summon
 	public final int getWeapon()
 	{
 		final L2ItemInstance weapon = getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-		if (weapon != null)
-		{
-			return weapon.getId();
-		}
-		return 0;
+		return weapon != null ? weapon.getId() : 0;
 	}
 	
 	@Override
 	public final int getArmor()
 	{
 		final L2ItemInstance weapon = getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST);
-		if (weapon != null)
-		{
-			return weapon.getId();
-		}
-		return 0;
+		return weapon != null ? weapon.getId() : 0;
 	}
 	
 	public final int getJewel()
 	{
 		final L2ItemInstance weapon = getInventory().getPaperdollItem(Inventory.PAPERDOLL_NECK);
-		if (weapon != null)
-		{
-			return weapon.getId();
-		}
-		return 0;
+		return weapon != null ? weapon.getId() : 0;
 	}
 	
 	@Override

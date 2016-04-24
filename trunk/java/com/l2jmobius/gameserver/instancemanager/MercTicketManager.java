@@ -239,11 +239,7 @@ public final class MercTicketManager
 				count++;
 			}
 		}
-		if (count >= limit)
-		{
-			return true;
-		}
-		return false;
+		return count >= limit;
 	}
 	
 	/**
@@ -272,11 +268,7 @@ public final class MercTicketManager
 				count++;
 			}
 		}
-		if (count >= limit)
-		{
-			return true;
-		}
-		return false;
+		return count >= limit;
 	}
 	
 	public int getMaxAllowedMerc(int castleId)
@@ -347,17 +339,17 @@ public final class MercTicketManager
 	private void spawnMercenary(int npcId, int x, int y, int z, int despawnDelay)
 	{
 		final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
-		if (template != null)
+		if (template == null)
 		{
-			final L2DefenderInstance npc = new L2DefenderInstance(template);
-			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
-			npc.setDecayed(false);
-			npc.spawnMe(x, y, (z + 20));
-			
-			if (despawnDelay > 0)
-			{
-				npc.scheduleDespawn(despawnDelay);
-			}
+			return;
+		}
+		final L2DefenderInstance npc = new L2DefenderInstance(template);
+		npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
+		npc.setDecayed(false);
+		npc.spawnMe(x, y, (z + 20));
+		if (despawnDelay > 0)
+		{
+			npc.scheduleDespawn(despawnDelay);
 		}
 	}
 	

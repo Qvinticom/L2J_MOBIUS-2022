@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -227,8 +226,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				final Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-				for (L2PcInstance player : plrs)
+				for (L2PcInstance player : activeChar.getKnownList().getKnownPlayers().values())
 				{
 					if (!player.isGM())
 					{
@@ -246,8 +244,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				final Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-				for (L2PcInstance player : plrs)
+				for (L2PcInstance player : activeChar.getKnownList().getKnownPlayers().values())
 				{
 					player.stopAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
 					player.setIsParalyzed(false);
@@ -363,8 +360,7 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.stopSkillEffects((val == 0) && sendMessage, 7029);
 				if ((val >= 1) && (val <= 4))
 				{
-					final Skill gmSpeedSkill = SkillData.getInstance().getSkill(7029, val);
-					activeChar.doSimultaneousCast(gmSpeedSkill);
+					activeChar.doSimultaneousCast(SkillData.getInstance().getSkill(7029, val));
 				}
 			}
 			catch (Exception e)
@@ -386,8 +382,7 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.teleToLocation(activeChar.getLocation());
 				final CharInfo info1 = new CharInfo(activeChar);
 				activeChar.broadcastPacket(info1);
-				final UserInfo info2 = new UserInfo(activeChar);
-				activeChar.sendPacket(info2);
+				activeChar.sendPacket(new UserInfo(activeChar));
 			}
 			catch (Exception e)
 			{
@@ -401,15 +396,13 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 			final CharInfo info1 = new CharInfo(activeChar);
 			activeChar.broadcastPacket(info1);
-			final UserInfo info2 = new UserInfo(activeChar);
-			activeChar.sendPacket(info2);
+			activeChar.sendPacket(new UserInfo(activeChar));
 		}
 		else if (command.equals("admin_clearteams"))
 		{
 			try
 			{
-				final Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-				for (L2PcInstance player : plrs)
+				for (L2PcInstance player : activeChar.getKnownList().getKnownPlayers().values())
 				{
 					player.setTeam(Team.NONE);
 					player.broadcastUserInfo();
@@ -430,9 +423,7 @@ public class AdminEffects implements IAdminCommandHandler
 					radius = Integer.parseInt(st.nextToken());
 				}
 				final Team team = Team.valueOf(val.toUpperCase());
-				final Collection<L2Character> plrs = activeChar.getKnownList().getKnownCharactersInRadius(radius);
-				
-				for (L2Character player : plrs)
+				for (L2Character player : activeChar.getKnownList().getKnownCharactersInRadius(radius))
 				{
 					player.setTeam(team);
 				}
@@ -648,9 +639,7 @@ public class AdminEffects implements IAdminCommandHandler
 			final L2Npc npc = (L2Npc) target;
 			try
 			{
-				final String type = st.nextToken();
-				final int diplayeffect = Integer.parseInt(type);
-				npc.setDisplayEffect(diplayeffect);
+				npc.setDisplayEffect(Integer.parseInt(st.nextToken()));
 			}
 			catch (Exception e)
 			{
@@ -709,8 +698,7 @@ public class AdminEffects implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 					return false;
 				}
-				final L2Character character = (L2Character) target;
-				character.broadcastPacket(new SocialAction(character.getObjectId(), action));
+				((L2Character) target).broadcastPacket(new SocialAction(((L2Character) target).getObjectId(), action));
 			}
 			else
 			{
@@ -781,11 +769,6 @@ public class AdminEffects implements IAdminCommandHandler
 	
 	private void showMainPage(L2PcInstance activeChar, String command)
 	{
-		String filename = "effects_menu";
-		if (command.contains("social"))
-		{
-			filename = "social";
-		}
-		AdminHtml.showAdminHtml(activeChar, filename + ".htm");
+		AdminHtml.showAdminHtml(activeChar, (command.contains("social") ? "social" : "effects_menu") + ".htm");
 	}
 }

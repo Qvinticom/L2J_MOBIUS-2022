@@ -115,12 +115,7 @@ public class Q10735_ASpecialPower extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		
-		if (qs.isCompleted())
-		{
-			htmltext = getAlreadyCompletedMsg(player);
-		}
+		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
@@ -251,22 +246,19 @@ public class Q10735_ASpecialPower extends Quest
 					}
 				}
 			}
-			else if (npc.getId() == RATEL)
+			else if ((npc.getId() == RATEL) && (cond == 6))
 			{
-				if (cond == 6)
+				final int value = qs.getMemoStateEx(KILL_COUNT_ID) + 1;
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if (value >= 2)
 				{
-					final int value = qs.getMemoStateEx(KILL_COUNT_ID) + 1;
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					if (value >= 2)
-					{
-						qs.setCond(cond + 1, true);
-						qs.setMemoStateEx(KILL_COUNT_ID, 0);
-						showOnScreenMsg(killer, NpcStringId.TALK_TO_AYANTHE_TO_LEAVE_THE_TRAINING_GROUNDS, ExShowScreenMessage.TOP_CENTER, 4500);
-					}
-					else
-					{
-						qs.setMemoStateEx(KILL_COUNT_ID, value);
-					}
+					qs.setCond(cond + 1, true);
+					qs.setMemoStateEx(KILL_COUNT_ID, 0);
+					showOnScreenMsg(killer, NpcStringId.TALK_TO_AYANTHE_TO_LEAVE_THE_TRAINING_GROUNDS, ExShowScreenMessage.TOP_CENTER, 4500);
+				}
+				else
+				{
+					qs.setMemoStateEx(KILL_COUNT_ID, value);
 				}
 			}
 		}

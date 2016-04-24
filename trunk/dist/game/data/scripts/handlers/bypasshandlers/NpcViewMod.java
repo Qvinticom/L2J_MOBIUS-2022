@@ -114,8 +114,7 @@ public class NpcViewMod implements IBypassHandler
 					{
 						return false;
 					}
-					final int page = st.hasMoreElements() ? Integer.parseInt(st.nextToken()) : 0;
-					sendNpcDropList(activeChar, npc, dropListScope, page);
+					sendNpcDropList(activeChar, npc, dropListScope, (st.hasMoreElements() ? Integer.parseInt(st.nextToken()) : 0));
 				}
 				catch (NumberFormatException e)
 				{

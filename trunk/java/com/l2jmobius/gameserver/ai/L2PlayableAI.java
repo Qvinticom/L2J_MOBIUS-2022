@@ -116,5 +116,4 @@ public abstract class L2PlayableAI extends L2CharacterAI
 		}
 		super.onIntentionCast(skill, target);
 	}
-	
 }

@@ -100,15 +100,8 @@ public class ItemInfo
 		// Get the enchant level of the L2ItemInstance
 		_enchant = item.getEnchantLevel();
 		
-		// Get the augmentation boni
-		if (item.isAugmented())
-		{
-			_augmentation = item.getAugmentation().getAugmentationId();
-		}
-		else
-		{
-			_augmentation = 0;
-		}
+		// Get the augmentation bonus
+		_augmentation = item.isAugmented() ? item.getAugmentation().getAugmentationId() : 0;
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -182,14 +175,7 @@ public class ItemInfo
 		_enchant = item.getEnchant();
 		
 		// Get the augmentation boni
-		if (item.isAugmented())
-		{
-			_augmentation = item.getAugmentation().getAugmentationId();
-		}
-		else
-		{
-			_augmentation = 0;
-		}
+		_augmentation = item.isAugmented() ? item.getAugmentation().getAugmentationId() : 0;
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -279,14 +265,7 @@ public class ItemInfo
 		_enchant = item.getEnchantLevel();
 		
 		// Get the augmentation boni
-		if (item.isAugmented())
-		{
-			_augmentation = item.getAugmentationId();
-		}
-		else
-		{
-			_augmentation = 0;
-		}
+		_augmentation = item.isAugmented() ? item.getAugmentationId() : 0;
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();

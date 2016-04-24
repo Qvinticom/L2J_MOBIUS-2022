@@ -159,12 +159,9 @@ public class Q10770_InSearchOfTheGrail extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, SHINING_MYSTERIOUS, 1, 30, 0.5, true))
 		{
-			if (giveItemRandomly(killer, npc, SHINING_MYSTERIOUS, 1, 30, 0.5, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

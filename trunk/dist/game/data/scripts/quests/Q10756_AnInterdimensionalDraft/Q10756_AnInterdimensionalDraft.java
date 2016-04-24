@@ -94,12 +94,7 @@ public class Q10756_AnInterdimensionalDraft extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		
-		if (qs.isCompleted())
-		{
-			htmltext = getAlreadyCompletedMsg(player);
-		}
+		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
 		
 		if (qs.isCreated())
 		{
@@ -136,13 +131,9 @@ public class Q10756_AnInterdimensionalDraft extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, UNWORLDLY_WIND, 1, 30, 1.0, true))
 		{
-			if (giveItemRandomly(killer, npc, UNWORLDLY_WIND, 1, 30, 1.0, true))
-			{
-				qs.setCond(2);
-			}
+			qs.setCond(2);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

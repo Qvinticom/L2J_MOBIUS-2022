@@ -48,12 +48,7 @@ public class ConditionPlayerCanTakeFort extends Condition
 		}
 		
 		final L2PcInstance player = effector.getActingPlayer();
-		boolean canTakeFort = true;
-		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || !player.isClanLeader())
-		{
-			canTakeFort = false;
-		}
-		
+		boolean canTakeFort = !player.isAlikeDead() && !player.isCursedWeaponEquipped() && player.isClanLeader();
 		final Fort fort = FortManager.getInstance().getFort(player);
 		final SystemMessage sm;
 		if ((fort == null) || (fort.getResidenceId() <= 0) || !fort.getSiege().isInProgress() || (fort.getSiege().getAttackerClan(player.getClan()) == null))

@@ -73,21 +73,17 @@ public class GuardKnownList extends AttackableKnownList
 				}
 			}
 		}
-		else if ((Config.GUARD_ATTACK_AGGRO_MOB && getActiveChar().isInActiveRegion()) && object.isMonster())
+		else if ((Config.GUARD_ATTACK_AGGRO_MOB && getActiveChar().isInActiveRegion()) && object.isMonster() && ((L2MonsterInstance) object).isAggressive())
 		{
-			// Check if the object added is an aggressive L2MonsterInstance
-			if (((L2MonsterInstance) object).isAggressive())
+			if (Config.DEBUG)
 			{
-				if (Config.DEBUG)
-				{
-					_log.fine(getActiveChar().getObjectId() + ": Aggressive mob " + object.getObjectId() + " entered scan range");
-				}
-				
-				// Set the L2GuardInstance Intention to AI_INTENTION_ACTIVE
-				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-				{
-					getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
-				}
+				_log.fine(getActiveChar().getObjectId() + ": Aggressive mob " + object.getObjectId() + " entered scan range");
+			}
+			
+			// Set the L2GuardInstance Intention to AI_INTENTION_ACTIVE
+			if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
+			{
+				getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 			}
 		}
 		
@@ -103,13 +99,9 @@ public class GuardKnownList extends AttackableKnownList
 		}
 		
 		// Check if the aggression list of this guard is empty.
-		if (getActiveChar().getAggroList().isEmpty())
+		if (getActiveChar().getAggroList().isEmpty() && getActiveChar().hasAI() && !getActiveChar().isWalker())
 		{
-			// Set the L2GuardInstance to AI_INTENTION_IDLE
-			if (getActiveChar().hasAI() && !getActiveChar().isWalker())
-			{
-				getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
-			}
+			getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
 		}
 		
 		return true;

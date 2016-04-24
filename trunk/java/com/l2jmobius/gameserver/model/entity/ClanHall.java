@@ -157,12 +157,7 @@ public abstract class ClanHall
 					}
 					if ((ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= _fee) || !_cwh)
 					{
-						int fee = _fee;
-						if (getEndTime() == -1)
-						{
-							fee = _tempFee;
-						}
-						
+						final int fee = getEndTime() == -1 ? _tempFee : _fee;
 						setEndTime(System.currentTimeMillis() + getRate());
 						dbSave();
 						if (_cwh)
@@ -212,17 +207,19 @@ public abstract class ClanHall
 		_location = set.getString("location");
 		_functions = new ConcurrentHashMap<>();
 		
-		if (_ownerId > 0)
+		if (_ownerId <= 0)
 		{
-			final L2Clan clan = ClanTable.getInstance().getClan(_ownerId);
-			if (clan != null)
-			{
-				clan.setHideoutId(getId());
-			}
-			else
-			{
-				free();
-			}
+			return;
+		}
+		
+		final L2Clan clan = ClanTable.getInstance().getClan(_ownerId);
+		if (clan != null)
+		{
+			clan.setHideoutId(getId());
+		}
+		else
+		{
+			free();
 		}
 	}
 	
@@ -483,17 +480,9 @@ public abstract class ClanHall
 	
 	public boolean updateFunctions(L2PcInstance player, int type, int lvl, int lease, long rate, boolean addNew)
 	{
-		if (player == null)
+		if ((player == null) || ((lease > 0) && !player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true)))
 		{
 			return false;
-		}
-		
-		if (lease > 0)
-		{
-			if (!player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true))
-			{
-				return false;
-			}
 		}
 		if (addNew)
 		{
@@ -507,8 +496,7 @@ public abstract class ClanHall
 			}
 			else
 			{
-				final int diffLease = lease - _functions.get(type).getLease();
-				if (diffLease > 0)
+				if ((lease - _functions.get(type).getLease()) > 0)
 				{
 					_functions.remove(type);
 					_functions.put(type, new ClanHallFunction(type, lvl, lease, 0, rate, -1, false));

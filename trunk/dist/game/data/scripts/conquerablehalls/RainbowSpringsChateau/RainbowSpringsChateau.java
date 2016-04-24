@@ -22,7 +22,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -75,56 +74,58 @@ final class RainbowSpringsChateau extends ClanHallSiegeEngine
 			}
 			
 			int spotLeft = 4;
-			if (_rainbow.getOwnerId() > 0)
+			if (_rainbow.getOwnerId() <= 0)
 			{
-				final L2Clan owner = ClanTable.getInstance().getClan(_rainbow.getOwnerId());
-				if (owner != null)
+				return;
+			}
+			
+			final L2Clan owner = ClanTable.getInstance().getClan(_rainbow.getOwnerId());
+			if (owner != null)
+			{
+				_rainbow.free();
+				owner.setHideoutId(0);
+				_acceptedClans.add(owner);
+				--spotLeft;
+			}
+			
+			for (int i = 0; i < spotLeft; i++)
+			{
+				long counter = 0;
+				L2Clan clan = null;
+				for (int clanId : _warDecreesCount.keySet())
 				{
-					_rainbow.free();
-					owner.setHideoutId(0);
-					_acceptedClans.add(owner);
-					--spotLeft;
-				}
-				
-				for (int i = 0; i < spotLeft; i++)
-				{
-					long counter = 0;
-					L2Clan clan = null;
-					for (int clanId : _warDecreesCount.keySet())
+					final L2Clan actingClan = ClanTable.getInstance().getClan(clanId);
+					if ((actingClan == null) || (actingClan.getDissolvingExpiryTime() > 0))
 					{
-						final L2Clan actingClan = ClanTable.getInstance().getClan(clanId);
-						if ((actingClan == null) || (actingClan.getDissolvingExpiryTime() > 0))
-						{
-							_warDecreesCount.remove(clanId);
-							continue;
-						}
-						
-						final long count = _warDecreesCount.get(clanId);
-						if (count > counter)
-						{
-							counter = count;
-							clan = actingClan;
-						}
+						_warDecreesCount.remove(clanId);
+						continue;
 					}
-					if ((clan != null) && (_acceptedClans.size() < 4))
+					
+					final long count = _warDecreesCount.get(clanId);
+					if (count > counter)
 					{
-						_acceptedClans.add(clan);
-						final L2PcInstance leader = clan.getLeader().getPlayerInstance();
-						if (leader != null)
-						{
-							leader.sendMessage("Your clan has been accepted to join the RainBow Srpings Chateau siege!");
-						}
+						counter = count;
+						clan = actingClan;
 					}
 				}
-				if (_acceptedClans.size() >= 2)
+				if ((clan != null) && (_acceptedClans.size() < 4))
 				{
-					_nextSiege = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeStart(), 3600000);
-					_rainbow.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
+					_acceptedClans.add(clan);
+					final L2PcInstance leader = clan.getLeader().getPlayerInstance();
+					if (leader != null)
+					{
+						leader.sendMessage("Your clan has been accepted to join the RainBow Srpings Chateau siege!");
+					}
 				}
-				else
-				{
-					Broadcast.toAllOnlinePlayers("Rainbow Springs Chateau siege aborted due lack of population");
-				}
+			}
+			if (_acceptedClans.size() >= 2)
+			{
+				_nextSiege = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeStart(), 3600000);
+				_rainbow.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
+			}
+			else
+			{
+				Broadcast.toAllOnlinePlayers("Rainbow Springs Chateau siege aborted due lack of population");
 			}
 		}
 	}
@@ -194,8 +195,7 @@ final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		{
 			for (int arenaId : ARENA_ZONES)
 			{
-				final Collection<L2Character> chars = ZoneManager.getInstance().getZoneById(arenaId).getCharactersInside();
-				for (L2Character chr : chars)
+				for (L2Character chr : ZoneManager.getInstance().getZoneById(arenaId).getCharactersInside())
 				{
 					if (chr != null)
 					{
@@ -285,18 +285,20 @@ final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		loadAttackers();
 		
 		_rainbow = CHSiegeManager.getInstance().getSiegableHall(RAINBOW_SPRINGS);
-		if (_rainbow != null)
+		if (_rainbow == null)
 		{
-			final long delay = _rainbow.getNextSiegeTime();
-			if (delay > -1)
-			{
-				setRegistrationEndString(delay - 3600000);
-				_nextSiege = ThreadPoolManager.getInstance().scheduleGeneral(new SetFinalAttackers(), delay);
-			}
-			else
-			{
-				_log.warning("CHSiegeManager: No Date setted for RainBow Springs Chateau Clan hall siege!. SIEGE CANCELED!");
-			}
+			return;
+		}
+		
+		final long delay = _rainbow.getNextSiegeTime();
+		if (delay > -1)
+		{
+			setRegistrationEndString(delay - 3600000);
+			_nextSiege = ThreadPoolManager.getInstance().scheduleGeneral(new SetFinalAttackers(), delay);
+		}
+		else
+		{
+			_log.warning("CHSiegeManager: No Date setted for RainBow Springs Chateau Clan hall siege!. SIEGE CANCELED!");
 		}
 	}
 	
@@ -317,35 +319,20 @@ final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 		else if (npcId == CARETAKER)
 		{
-			if (_rainbow.isInSiege())
+			html = _rainbow.isInSiege() ? "game_manager003.htm" : "game_manager001.htm";
+		}
+		else if (Util.contains(YETIS, npcId) && _rainbow.isInSiege())
+		{
+			if (!player.isClanLeader())
 			{
-				html = "game_manager003.htm";
+				html = "no_clan_leader.htm";
 			}
 			else
 			{
-				html = "game_manager001.htm";
-			}
-		}
-		else if (Util.contains(YETIS, npcId))
-		{
-			// TODO: Review.
-			if (_rainbow.isInSiege())
-			{
-				if (!player.isClanLeader())
+				final L2Clan clan = player.getClan();
+				if (_acceptedClans.contains(clan) && (npcId == YETIS[_acceptedClans.indexOf(clan)]))
 				{
-					html = "no_clan_leader.htm";
-				}
-				else
-				{
-					final L2Clan clan = player.getClan();
-					if (_acceptedClans.contains(clan))
-					{
-						final int index = _acceptedClans.indexOf(clan);
-						if (npcId == YETIS[index])
-						{
-							html = "yeti_main.htm";
-						}
-					}
+					html = "yeti_main.htm";
 				}
 			}
 		}
@@ -769,8 +756,7 @@ final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static void reduceGourdHp(int index, L2PcInstance player)
 	{
-		final L2Spawn gourd = _gourds[index];
-		gourd.getLastSpawn().reduceCurrentHp(1000, player, null);
+		_gourds[index].getLastSpawn().reduceCurrentHp(1000, player, null);
 	}
 	
 	private static void increaseGourdHp(int index)
@@ -789,8 +775,7 @@ final class RainbowSpringsChateau extends ClanHallSiegeEngine
 				continue;
 			}
 			
-			final Collection<L2Character> chars = ZoneManager.getInstance().getZoneById(id).getCharactersInside();
-			for (L2Character chr : chars)
+			for (L2Character chr : ZoneManager.getInstance().getZoneById(id).getCharactersInside())
 			{
 				if (chr != null)
 				{
@@ -813,17 +798,14 @@ final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 		
 		final int randomPos = getRandom(length);
-		final String message = _textPassages[randomPos];
-		
-		if (_usedTextPassages.containsKey(message))
+		if (_usedTextPassages.containsKey(_textPassages[randomPos]))
 		{
 			shoutRandomText(npc);
 		}
 		else
 		{
-			_usedTextPassages.put(message, new ArrayList<L2Clan>());
-			final NpcSay say = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), message);
-			npc.broadcastPacket(say);
+			_usedTextPassages.put(_textPassages[randomPos], new ArrayList<L2Clan>());
+			npc.broadcastPacket((new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), _textPassages[randomPos])));
 		}
 	}
 	

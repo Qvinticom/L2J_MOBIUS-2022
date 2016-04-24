@@ -50,8 +50,7 @@ public class AdminHeal implements IAdminCommandHandler
 		{
 			try
 			{
-				final String healTarget = command.substring(11);
-				handleHeal(activeChar, healTarget);
+				handleHeal(activeChar, command.substring(11));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{

@@ -468,12 +468,7 @@ public final class QuestState
 	 */
 	public String get(String var)
 	{
-		if (_vars == null)
-		{
-			return null;
-		}
-		
-		return _vars.get(var);
+		return _vars == null ? null : _vars.get(var);
 	}
 	
 	/**
@@ -538,11 +533,7 @@ public final class QuestState
 	 */
 	public int getCond()
 	{
-		if (isStarted())
-		{
-			return getInt("cond");
-		}
-		return 0;
+		return isStarted() ? getInt("cond") : 0;
 	}
 	
 	/**
@@ -592,11 +583,7 @@ public final class QuestState
 	 */
 	public int getMemoState()
 	{
-		if (isStarted())
-		{
-			return getInt("memoState");
-		}
-		return 0;
+		return isStarted() ? getInt("memoState") : 0;
 	}
 	
 	public boolean isMemoState(int memoState)
@@ -611,11 +598,7 @@ public final class QuestState
 	 */
 	public int getMemoStateEx(int slot)
 	{
-		if (isStarted())
-		{
-			return getInt("memoStateEx" + slot);
-		}
-		return 0;
+		return isStarted() ? getInt("memoStateEx" + slot) : 0;
 	}
 	
 	/**

@@ -61,11 +61,7 @@ public class TopicBBSManager extends BaseBBSManager
 	public int getMaxID(Forum f)
 	{
 		final Integer i = _maxId.get(f);
-		if (i == null)
-		{
-			return 0;
-		}
-		return i;
+		return i == null ? 0 : i;
 	}
 	
 	public Topic getTopicByID(int idf)
@@ -147,20 +143,8 @@ public class TopicBBSManager extends BaseBBSManager
 			st.nextToken();
 			st.nextToken();
 			final int idf = Integer.parseInt(st.nextToken());
-			String index = null;
-			if (st.hasMoreTokens())
-			{
-				index = st.nextToken();
-			}
-			int ind = 0;
-			if (index == null)
-			{
-				ind = 1;
-			}
-			else
-			{
-				ind = Integer.parseInt(index);
-			}
+			final String index = st.hasMoreTokens() ? st.nextToken() : null;
+			final int ind = index == null ? 1 : Integer.parseInt(index);
 			showTopics(ForumsBBSManager.getInstance().getForumByID(idf), activeChar, ind, idf);
 		}
 		else if (command.startsWith("_bbstopics;crea"))
@@ -261,12 +245,9 @@ public class TopicBBSManager extends BaseBBSManager
 				break;
 			}
 			final Topic t = forum.getTopic(j);
-			if (t != null)
+			if ((t != null) && (i++ >= (12 * (index - 1))))
 			{
-				if (i++ >= (12 * (index - 1)))
-				{
-					StringUtil.append(html, "<table border=0 cellspacing=0 cellpadding=5 WIDTH=610><tr><td FIXWIDTH=5></td><td FIXWIDTH=415><a action=\"bypass _bbsposts;read;", String.valueOf(forum.getID()), ";", String.valueOf(t.getID()), "\">", t.getName(), "</a></td><td FIXWIDTH=120 align=center></td><td FIXWIDTH=70 align=center>", dateFormat.format(new Date(t.getDate())), "</td></tr></table><img src=\"L2UI.Squaregray\" width=\"610\" height=\"1\">");
-				}
+				StringUtil.append(html, "<table border=0 cellspacing=0 cellpadding=5 WIDTH=610><tr><td FIXWIDTH=5></td><td FIXWIDTH=415><a action=\"bypass _bbsposts;read;", String.valueOf(forum.getID()), ";", String.valueOf(t.getID()), "\">", t.getName(), "</a></td><td FIXWIDTH=120 align=center></td><td FIXWIDTH=70 align=center>", dateFormat.format(new Date(t.getDate())), "</td></tr></table><img src=\"L2UI.Squaregray\" width=\"610\" height=\"1\">");
 			}
 		}
 		
@@ -281,8 +262,7 @@ public class TopicBBSManager extends BaseBBSManager
 			StringUtil.append(html, "<td><button action=\"bypass _bbstopics;read;", String.valueOf(forum.getID()), ";", String.valueOf(index - 1), "\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16 ></td>");
 		}
 		
-		int nbp;
-		nbp = forum.getTopicSize() / 8;
+		int nbp = forum.getTopicSize() / 8;
 		if ((nbp * 8) != ClanTable.getInstance().getClanCount())
 		{
 			nbp++;

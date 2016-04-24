@@ -39,10 +39,6 @@ public class ConditionPlayerSubclass extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		if (effector.getActingPlayer() == null)
-		{
-			return true;
-		}
-		return effector.getActingPlayer().isSubClassActive() == _val;
+		return (effector.getActingPlayer() == null) || (effector.getActingPlayer().isSubClassActive() == _val);
 	}
 }

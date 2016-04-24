@@ -45,13 +45,13 @@ public class RequestNewEnchantPushOne extends L2GameClientPacket
 		{
 			return;
 		}
-		else if (activeChar.isInStoreMode())
+		if (activeChar.isInStoreMode())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
-		else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
+		if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
 			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);

@@ -194,12 +194,9 @@ public final class Q00039_RedEyedInvaders extends Quest
 			case MALE_LIZARDMAN:
 			{
 				final QuestState qs = getRandomPartyMemberState(killer, 2, 3, npc);
-				if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_NECKLACE_A.getId(), 1, LIZ_NECKLACE_A.getCount(), 0.5, true))
+				if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_NECKLACE_A.getId(), 1, LIZ_NECKLACE_A.getCount(), 0.5, true) && hasItem(qs.getPlayer(), LIZ_NECKLACE_B))
 				{
-					if (hasItem(qs.getPlayer(), LIZ_NECKLACE_B))
-					{
-						qs.setCond(3);
-					}
+					qs.setCond(3);
 				}
 				break;
 			}
@@ -208,23 +205,17 @@ public final class Q00039_RedEyedInvaders extends Quest
 				if (getRandomBoolean())
 				{
 					final QuestState qs = getRandomPartyMemberState(killer, 2, 3, npc);
-					if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_NECKLACE_A.getId(), 1, LIZ_NECKLACE_A.getCount(), 0.5, true))
+					if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_NECKLACE_A.getId(), 1, LIZ_NECKLACE_A.getCount(), 0.5, true) && hasItem(qs.getPlayer(), LIZ_NECKLACE_B))
 					{
-						if (hasItem(qs.getPlayer(), LIZ_NECKLACE_B))
-						{
-							qs.setCond(3);
-						}
+						qs.setCond(3);
 					}
 				}
 				else
 				{
 					final QuestState qs = getRandomPartyMemberState(killer, 4, 3, npc);
-					if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_PERFUME.getId(), 1, LIZ_PERFUME.getCount(), 0.25, true))
+					if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_PERFUME.getId(), 1, LIZ_PERFUME.getCount(), 0.25, true) && hasItem(qs.getPlayer(), LIZ_GEM))
 					{
-						if (hasItem(qs.getPlayer(), LIZ_GEM))
-						{
-							qs.setCond(5);
-						}
+						qs.setCond(5);
 					}
 				}
 				break;
@@ -234,23 +225,17 @@ public final class Q00039_RedEyedInvaders extends Quest
 				if (getRandomBoolean())
 				{
 					final QuestState qs = getRandomPartyMemberState(killer, 2, 3, npc);
-					if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_NECKLACE_B.getId(), 1, LIZ_NECKLACE_B.getCount(), 0.5, true))
+					if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_NECKLACE_B.getId(), 1, LIZ_NECKLACE_B.getCount(), 0.5, true) && hasItem(qs.getPlayer(), LIZ_NECKLACE_A))
 					{
-						if (hasItem(qs.getPlayer(), LIZ_NECKLACE_A))
-						{
-							qs.setCond(3);
-						}
+						qs.setCond(3);
 					}
 				}
 				else
 				{
 					final QuestState qs = getRandomPartyMemberState(killer, 4, 3, npc);
-					if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_PERFUME.getId(), 1, LIZ_PERFUME.getCount(), 0.3, true))
+					if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_PERFUME.getId(), 1, LIZ_PERFUME.getCount(), 0.3, true) && hasItem(qs.getPlayer(), LIZ_GEM))
 					{
-						if (hasItem(qs.getPlayer(), LIZ_GEM))
-						{
-							qs.setCond(5);
-						}
+						qs.setCond(5);
 					}
 				}
 				break;
@@ -258,12 +243,9 @@ public final class Q00039_RedEyedInvaders extends Quest
 			case GIANT_ARANE:
 			{
 				final QuestState qs = getRandomPartyMemberState(killer, 4, 3, npc);
-				if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_GEM.getId(), 1, LIZ_GEM.getCount(), 0.3, true))
+				if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, LIZ_GEM.getId(), 1, LIZ_GEM.getCount(), 0.3, true) && hasItem(qs.getPlayer(), LIZ_PERFUME))
 				{
-					if (hasItem(qs.getPlayer(), LIZ_PERFUME))
-					{
-						qs.setCond(5);
-					}
+					qs.setCond(5);
 				}
 				break;
 			}

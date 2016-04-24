@@ -131,8 +131,7 @@ public class DailyMissionData implements IXmlReader
 						}
 						else
 						{
-							final String[] s = att.getNodeValue().split(",");
-							for (String element : s)
+							for (String element : att.getNodeValue().split(","))
 							{
 								classesList.add(Integer.parseInt(element));
 							}
@@ -142,9 +141,7 @@ public class DailyMissionData implements IXmlReader
 						{
 							if ("reward".equalsIgnoreCase(c.getNodeName()))
 							{
-								final int itemId = Integer.parseInt(c.getAttributes().getNamedItem("item").getNodeValue());
-								final int itemCount = Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue());
-								rewards.put(itemId, itemCount);
+								rewards.put(Integer.parseInt(c.getAttributes().getNamedItem("item").getNodeValue()), Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue()));
 							}
 						}
 						

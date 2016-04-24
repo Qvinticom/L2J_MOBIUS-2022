@@ -72,12 +72,7 @@ public class ExResponseCommissionList extends AbstractItemPacket
 				writeD((int) Instant.now().getEpochSecond());
 				writeD(_chunkId);
 				
-				int chunkSize = _items.size() - _listIndexStart;
-				if (chunkSize > MAX_CHUNK_SIZE)
-				{
-					chunkSize = MAX_CHUNK_SIZE;
-				}
-				
+				final int chunkSize = (_items.size() - _listIndexStart) > MAX_CHUNK_SIZE ? MAX_CHUNK_SIZE : _items.size() - _listIndexStart;
 				writeD(chunkSize);
 				for (int i = _listIndexStart; i < (_listIndexStart + chunkSize); i++)
 				{

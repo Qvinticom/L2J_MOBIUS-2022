@@ -57,12 +57,7 @@ public final class RequestRecipeShopMakeItem extends L2GameClientPacket
 		}
 		
 		final L2PcInstance manufacturer = L2World.getInstance().getPlayer(_id);
-		if (manufacturer == null)
-		{
-			return;
-		}
-		
-		if ((manufacturer.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1))
+		if ((manufacturer == null) || ((manufacturer.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1)))
 		{
 			return;
 		}

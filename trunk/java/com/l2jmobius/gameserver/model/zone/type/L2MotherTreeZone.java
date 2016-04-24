@@ -66,28 +66,30 @@ public class L2MotherTreeZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if (character.isPlayer())
+		if (!character.isPlayer())
 		{
-			final L2PcInstance player = character.getActingPlayer();
-			character.setInsideZone(ZoneId.MOTHER_TREE, true);
-			if (_enterMsg != 0)
-			{
-				player.sendPacket(SystemMessage.getSystemMessage(_enterMsg));
-			}
+			return;
+		}
+		final L2PcInstance player = character.getActingPlayer();
+		character.setInsideZone(ZoneId.MOTHER_TREE, true);
+		if (_enterMsg != 0)
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(_enterMsg));
 		}
 	}
 	
 	@Override
 	protected void onExit(L2Character character)
 	{
-		if (character.isPlayer())
+		if (!character.isPlayer())
 		{
-			final L2PcInstance player = character.getActingPlayer();
-			player.setInsideZone(ZoneId.MOTHER_TREE, false);
-			if (_leaveMsg != 0)
-			{
-				player.sendPacket(SystemMessage.getSystemMessage(_leaveMsg));
-			}
+			return;
+		}
+		final L2PcInstance player = character.getActingPlayer();
+		player.setInsideZone(ZoneId.MOTHER_TREE, false);
+		if (_leaveMsg != 0)
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(_leaveMsg));
 		}
 	}
 	

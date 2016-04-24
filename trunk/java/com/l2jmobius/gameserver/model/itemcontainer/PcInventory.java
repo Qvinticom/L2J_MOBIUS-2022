@@ -142,15 +142,7 @@ public class PcInventory extends Inventory
 		final List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
-			if (item == null)
-			{
-				continue;
-			}
-			if ((!allowAdena && (item.getId() == ADENA_ID)))
-			{
-				continue;
-			}
-			if ((!allowAncientAdena && (item.getId() == ANCIENT_ADENA_ID)))
+			if ((item == null) || (!allowAdena && (item.getId() == ADENA_ID)) || (!allowAncientAdena && (item.getId() == ANCIENT_ADENA_ID)))
 			{
 				continue;
 			}
@@ -187,15 +179,7 @@ public class PcInventory extends Inventory
 		final List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
-			if (item == null)
-			{
-				continue;
-			}
-			if ((!allowAdena && (item.getId() == ADENA_ID)))
-			{
-				continue;
-			}
-			if ((!allowAncientAdena && (item.getId() == ANCIENT_ADENA_ID)))
+			if ((item == null) || (!allowAdena && (item.getId() == ADENA_ID)) || (!allowAncientAdena && (item.getId() == ANCIENT_ADENA_ID)))
 			{
 				continue;
 			}
@@ -381,17 +365,14 @@ public class PcInventory extends Inventory
 		boolean notAllEquipped = false;
 		for (L2ItemInstance adjItem : getItemsByItemId(item.getItem().getId()))
 		{
-			if (adjItem.isEquipable())
-			{
-				if (!adjItem.isEquipped())
-				{
-					notAllEquipped |= true;
-				}
-			}
-			else
+			if (!adjItem.isEquipable())
 			{
 				notAllEquipped |= true;
 				break;
+			}
+			if (!adjItem.isEquipped())
+			{
+				notAllEquipped |= true;
 			}
 		}
 		if (notAllEquipped)
@@ -451,11 +432,7 @@ public class PcInventory extends Inventory
 	 */
 	public boolean reduceAdena(String process, long count, L2PcInstance actor, Object reference)
 	{
-		if (count > 0)
-		{
-			return destroyItemByItemId(process, ADENA_ID, count, actor, reference) != null;
-		}
-		return false;
+		return (count > 0) && (destroyItemByItemId(process, ADENA_ID, count, actor, reference) != null);
 	}
 	
 	/**
@@ -468,11 +445,7 @@ public class PcInventory extends Inventory
 	 */
 	public boolean reduceBeautyTickets(String process, long count, L2PcInstance actor, Object reference)
 	{
-		if (count > 0)
-		{
-			return destroyItemByItemId(process, BEAUTY_TICKET_ID, count, actor, reference) != null;
-		}
-		return false;
+		return (count > 0) && (destroyItemByItemId(process, BEAUTY_TICKET_ID, count, actor, reference) != null);
 	}
 	
 	/**
@@ -500,11 +473,7 @@ public class PcInventory extends Inventory
 	 */
 	public boolean reduceAncientAdena(String process, long count, L2PcInstance actor, Object reference)
 	{
-		if (count > 0)
-		{
-			return destroyItemByItemId(process, ANCIENT_ADENA_ID, count, actor, reference) != null;
-		}
-		return false;
+		return (count > 0) && (destroyItemByItemId(process, ANCIENT_ADENA_ID, count, actor, reference) != null);
 	}
 	
 	/**
@@ -719,11 +688,7 @@ public class PcInventory extends Inventory
 	public L2ItemInstance destroyItem(String process, int objectId, long count, L2PcInstance actor, Object reference)
 	{
 		final L2ItemInstance item = getItemByObjectId(objectId);
-		if (item == null)
-		{
-			return null;
-		}
-		return this.destroyItem(process, item, count, actor, reference);
+		return item == null ? null : this.destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**
@@ -739,11 +704,7 @@ public class PcInventory extends Inventory
 	public L2ItemInstance destroyItemByItemId(String process, int itemId, long count, L2PcInstance actor, Object reference)
 	{
 		final L2ItemInstance item = getItemByItemId(itemId);
-		if (item == null)
-		{
-			return null;
-		}
-		return this.destroyItem(process, item, count, actor, reference);
+		return item == null ? null : this.destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**
@@ -976,22 +937,14 @@ public class PcInventory extends Inventory
 	
 	public boolean validateCapacity(long slots, boolean questItem)
 	{
-		if (!questItem)
-		{
-			return (((_items.size() - _questSlots) + slots) <= _owner.getInventoryLimit());
-		}
-		return (_questSlots + slots) <= _owner.getQuestInventoryLimit();
+		return !questItem ? ((_items.size() - _questSlots) + slots) <= _owner.getInventoryLimit() : (_questSlots + slots) <= _owner.getQuestInventoryLimit();
 	}
 	
 	@Override
 	public boolean validateWeight(long weight)
 	{
 		// Disable weight check for GMs.
-		if (_owner.isGM() && _owner.getDietMode() && _owner.getAccessLevel().allowTransaction())
-		{
-			return true;
-		}
-		return ((_totalWeight + weight) <= _owner.getMaxLoad());
+		return (_owner.isGM() && _owner.getDietMode() && _owner.getAccessLevel().allowTransaction()) || ((_totalWeight + weight) <= _owner.getMaxLoad());
 	}
 	
 	/**
@@ -1065,11 +1018,7 @@ public class PcInventory extends Inventory
 	 */
 	public boolean canManipulateWithItemId(int itemId)
 	{
-		if (((_blockMode == 0) && Util.contains(_blockItems, itemId)) || ((_blockMode == 1) && !Util.contains(_blockItems, itemId)))
-		{
-			return false;
-		}
-		return true;
+		return ((_blockMode != 0) || !Util.contains(_blockItems, itemId)) && ((_blockMode != 1) || Util.contains(_blockItems, itemId));
 	}
 	
 	@Override
@@ -1087,11 +1036,7 @@ public class PcInventory extends Inventory
 	
 	public int getSize(boolean quest)
 	{
-		if (quest)
-		{
-			return _questSlots;
-		}
-		return getSize() - _questSlots;
+		return quest ? _questSlots : getSize() - _questSlots;
 	}
 	
 	@Override

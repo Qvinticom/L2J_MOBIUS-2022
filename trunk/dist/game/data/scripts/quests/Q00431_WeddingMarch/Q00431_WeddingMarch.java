@@ -86,20 +86,16 @@ public class Q00431_WeddingMarch extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance member = getRandomPartyMember(player, 1);
-		if (member != null)
+		if ((member != null) && getRandomBoolean())
 		{
-			final QuestState qs = getQuestState(member, false);
-			if (getRandomBoolean())
+			giveItems(member, SILVER_CRYSTAL, 1);
+			if (getQuestItemsCount(member, SILVER_CRYSTAL) >= CRYSTAL_COUNT)
 			{
-				giveItems(member, SILVER_CRYSTAL, 1);
-				if (getQuestItemsCount(member, SILVER_CRYSTAL) >= CRYSTAL_COUNT)
-				{
-					qs.setCond(2, true);
-				}
-				else
-				{
-					playSound(member, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				getQuestState(member, false).setCond(2, true);
+			}
+			else
+			{
+				playSound(member, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isSummon);

@@ -200,12 +200,7 @@ public final class CastleManager implements InstanceListManager
 	
 	public int getCircletByCastleId(int castleId)
 	{
-		if ((castleId > 0) && (castleId < 10))
-		{
-			return _castleCirclets[castleId];
-		}
-		
-		return 0;
+		return (castleId > 0) && (castleId < 10) ? _castleCirclets[castleId] : 0;
 	}
 	
 	// remove this castle's circlets from the clan
@@ -223,44 +218,47 @@ public final class CastleManager implements InstanceListManager
 		{
 			return;
 		}
+		
 		final L2PcInstance player = member.getPlayerInstance();
 		final int circletId = getCircletByCastleId(castleId);
 		
-		if (circletId != 0)
+		if (circletId == 0)
 		{
-			// online-player circlet removal
-			if (player != null)
+			return;
+		}
+		
+		// online-player circlet removal
+		if (player != null)
+		{
+			try
 			{
-				try
+				final L2ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
+				if (circlet != null)
 				{
-					final L2ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
-					if (circlet != null)
+					if (circlet.isEquipped())
 					{
-						if (circlet.isEquipped())
-						{
-							player.getInventory().unEquipItemInSlot(circlet.getLocationSlot());
-						}
-						player.destroyItemByItemId("CastleCircletRemoval", circletId, 1, player, true);
+						player.getInventory().unEquipItemInSlot(circlet.getLocationSlot());
 					}
-					return;
+					player.destroyItemByItemId("CastleCircletRemoval", circletId, 1, player, true);
 				}
-				catch (NullPointerException e)
-				{
-					// continue removing offline
-				}
+				return;
 			}
-			// else offline-player circlet removal
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE owner_id = ? and item_id = ?"))
+			catch (NullPointerException e)
 			{
-				ps.setInt(1, member.getObjectId());
-				ps.setInt(2, circletId);
-				ps.execute();
+				// continue removing offline
 			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, "Failed to remove castle circlets offline for player " + member.getName() + ": " + e.getMessage(), e);
-			}
+		}
+		// else offline-player circlet removal
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE owner_id = ? and item_id = ?"))
+		{
+			ps.setInt(1, member.getObjectId());
+			ps.setInt(2, circletId);
+			ps.execute();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, "Failed to remove castle circlets offline for player " + member.getName() + ": " + e.getMessage(), e);
 		}
 	}
 	

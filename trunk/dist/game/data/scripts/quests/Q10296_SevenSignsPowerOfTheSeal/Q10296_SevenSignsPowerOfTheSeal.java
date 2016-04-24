@@ -196,23 +196,17 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 			}
 			case Wood:
 			{
-				if (qs.isStarted())
+				if (qs.isStarted() && qs.isCond(5))
 				{
-					if (qs.isCond(5))
-					{
-						htmltext = "32593-01.html";
-					}
+					htmltext = "32593-01.html";
 				}
 				break;
 			}
 			case Franz:
 			{
-				if (qs.isStarted())
+				if (qs.isStarted() && qs.isCond(5))
 				{
-					if (qs.isCond(5))
-					{
-						htmltext = "32597-01.html";
-					}
+					htmltext = "32597-01.html";
 				}
 				break;
 			}

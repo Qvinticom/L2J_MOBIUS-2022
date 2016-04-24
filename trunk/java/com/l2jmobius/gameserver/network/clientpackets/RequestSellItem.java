@@ -141,13 +141,10 @@ public final class RequestSellItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (merchant != null)
+		if ((merchant != null) && !buyList.isNpcAllowed(merchant.getId()))
 		{
-			if (!buyList.isNpcAllowed(merchant.getId()))
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		long totalPrice = 0;

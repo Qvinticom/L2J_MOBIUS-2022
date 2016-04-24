@@ -39,10 +39,6 @@ public class ConditionPlayerIsClanLeader extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		if (effector.getActingPlayer() == null)
-		{
-			return false;
-		}
-		return (effector.getActingPlayer().isClanLeader() == _val);
+		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().isClanLeader() == _val);
 	}
 }

@@ -39,12 +39,7 @@ public final class RequestRecipeItemMakeSelf extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if (!getClient().getFloodProtectors().getManufacture().tryPerformAction("RecipeMakeSelf"))
+		if ((activeChar == null) || !getClient().getFloodProtectors().getManufacture().tryPerformAction("RecipeMakeSelf"))
 		{
 			return;
 		}

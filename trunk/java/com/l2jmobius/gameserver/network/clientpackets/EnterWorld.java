@@ -171,12 +171,9 @@ public class EnterWorld extends L2GameClientPacket
 			}
 		}
 		
-		if (Config.DEBUG)
+		if (Config.DEBUG && (L2World.getInstance().findObject(activeChar.getObjectId()) != null))
 		{
-			if (L2World.getInstance().findObject(activeChar.getObjectId()) != null)
-			{
-				_log.warning("User already exists in Object ID map! User " + activeChar.getName() + " is a character clone.");
-			}
+			_log.warning("User already exists in Object ID map! User " + activeChar.getName() + " is a character clone.");
 		}
 		
 		// Apply special GM properties to the GM when entering
@@ -334,12 +331,9 @@ public class EnterWorld extends L2GameClientPacket
 			notifySponsorOrApprentice(activeChar);
 			
 			final AuctionableHall clanHall = ClanHallManager.getInstance().getClanHallByOwner(clan);
-			if (clanHall != null)
+			if ((clanHall != null) && !clanHall.getPaid())
 			{
-				if (!clanHall.getPaid())
-				{
-					activeChar.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
-				}
+				activeChar.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
 			}
 			
 			for (Siege siege : SiegeManager.getInstance().getSieges())
@@ -601,12 +595,9 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.destroyItem("Akamanah", activeChar.getInventory().getItemByItemId(8689), null, true);
 		}
 		
-		if (Config.ALLOW_MAIL)
+		if (Config.ALLOW_MAIL && MailManager.getInstance().hasUnreadPost(activeChar))
 		{
-			if (MailManager.getInstance().hasUnreadPost(activeChar))
-			{
-				sendPacket(ExNoticePostArrived.valueOf(false));
-			}
+			sendPacket(ExNoticePostArrived.valueOf(false));
 		}
 		
 		TvTEvent.onLogin(activeChar);
@@ -712,16 +703,18 @@ public class EnterWorld extends L2GameClientPacket
 	private void notifyClanMembers(L2PcInstance activeChar)
 	{
 		final L2Clan clan = activeChar.getClan();
-		if (clan != null)
+		if (clan == null)
 		{
-			clan.getClanMember(activeChar.getObjectId()).setPlayerInstance(activeChar);
-			
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
-			msg.addString(activeChar.getName());
-			clan.broadcastToOtherOnlineMembers(msg, activeChar);
-			clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(activeChar), activeChar);
-			clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
+			return;
 		}
+		
+		clan.getClanMember(activeChar.getObjectId()).setPlayerInstance(activeChar);
+		
+		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
+		msg.addString(activeChar.getName());
+		clan.broadcastToOtherOnlineMembers(msg, activeChar);
+		clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(activeChar), activeChar);
+		clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 	}
 	
 	/**

@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.util;
 
 import java.io.File;
-import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
@@ -92,8 +91,7 @@ public final class Util
 	
 	public static final double convertHeadingToDegree(int clientHeading)
 	{
-		final double degree = clientHeading / 182.044444444;
-		return degree;
+		return clientHeading / 182.044444444;
 	}
 	
 	public static final int convertDegreeToClientHeading(double degree)
@@ -223,11 +221,7 @@ public final class Util
 	 */
 	public static boolean checkIfInRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis)
 	{
-		if ((obj1 == null) || (obj2 == null))
-		{
-			return false;
-		}
-		if (obj1.getInstanceId() != obj2.getInstanceId())
+		if ((obj1 == null) || (obj2 == null) || (obj1.getInstanceId() != obj2.getInstanceId()))
 		{
 			return false;
 		}
@@ -236,11 +230,7 @@ public final class Util
 			return true; // not limited
 		}
 		
-		int rad = 0;
-		if (obj1 instanceof L2Character)
-		{
-			rad += ((L2Character) obj1).getTemplate().getCollisionRadius();
-		}
+		int rad = obj1 instanceof L2Character ? 0 + ((L2Character) obj1).getTemplate().getCollisionRadius() : 0;
 		if (obj2 instanceof L2Character)
 		{
 			rad += ((L2Character) obj2).getTemplate().getCollisionRadius();
@@ -280,12 +270,12 @@ public final class Util
 		final int dx = obj1.getX() - obj2.getX();
 		final int dy = obj1.getY() - obj2.getY();
 		
-		if (includeZAxis)
+		if (!includeZAxis)
 		{
-			final int dz = obj1.getZ() - obj2.getZ();
-			return ((dx * dx) + (dy * dy) + (dz * dz)) <= (radius * radius);
+			return ((dx * dx) + (dy * dy)) <= (radius * radius);
 		}
-		return ((dx * dx) + (dy * dy)) <= (radius * radius);
+		final int dz = obj1.getZ() - obj2.getZ();
+		return ((dx * dx) + (dy * dy) + (dz * dz)) <= (radius * radius);
 	}
 	
 	/**
@@ -409,8 +399,7 @@ public final class Util
 	 */
 	public static String formatDouble(double val, String format)
 	{
-		final DecimalFormat formatter = new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH));
-		return formatter.format(val);
+		return (new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH))).format(val);
 	}
 	
 	/**
@@ -421,12 +410,7 @@ public final class Util
 	 */
 	public static String formatDate(Date date, String format)
 	{
-		if (date == null)
-		{
-			return null;
-		}
-		final DateFormat dateFormat = new SimpleDateFormat(format);
-		return dateFormat.format(date);
+		return date == null ? null : (new SimpleDateFormat(format)).format(date);
 	}
 	
 	/**
@@ -467,17 +451,12 @@ public final class Util
 	public static File[] getDatapackFiles(String dirname, String extention)
 	{
 		final File dir = new File(Config.DATAPACK_ROOT, "/" + dirname);
-		if (!dir.exists())
-		{
-			return null;
-		}
-		return dir.listFiles(new ExtFilter(extention));
+		return !dir.exists() ? null : dir.listFiles(new ExtFilter(extention));
 	}
 	
 	public static String getDateString(Date date)
 	{
-		final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		return dateFormat.format(date.getTime());
+		return (new SimpleDateFormat("yyyy-MM-dd")).format(date.getTime());
 	}
 	
 	private static final void buildHtmlBypassCache(L2PcInstance player, HtmlActionScope scope, String html)
@@ -496,16 +475,7 @@ public final class Util
 			}
 			
 			final int hParamPos = htmlLower.indexOf("-h ", bypassStartEnd);
-			String bypass;
-			if ((hParamPos != -1) && (hParamPos < bypassEnd))
-			{
-				bypass = html.substring(hParamPos + 3, bypassEnd).trim();
-			}
-			else
-			{
-				bypass = html.substring(bypassStartEnd, bypassEnd).trim();
-			}
-			
+			String bypass = (hParamPos != -1) && (hParamPos < bypassEnd) ? html.substring(hParamPos + 3, bypassEnd).trim() : html.substring(bypassStartEnd, bypassEnd).trim();
 			final int firstParameterStart = bypass.indexOf(AbstractHtmlPacket.VAR_PARAM_START_CHAR);
 			if (firstParameterStart != -1)
 			{
@@ -744,17 +714,7 @@ public final class Util
 	public static boolean isInsideRangeOfObjectId(L2Object obj, int targetObjId, int radius)
 	{
 		final L2Object target = obj.getKnownList().getKnownObjects().get(targetObjId);
-		if (target == null)
-		{
-			return false;
-		}
-		
-		if (obj.calculateDistance(target, false, false) > radius)
-		{
-			return false;
-		}
-		
-		return true;
+		return (target != null) && (obj.calculateDistance(target, false, false) <= radius);
 	}
 	
 	public static int min(int value1, int value2, int... values)
@@ -1007,8 +967,7 @@ public final class Util
 	{
 		try
 		{
-			final String value = st.nextToken().trim();
-			return Integer.parseInt(value);
+			return Integer.parseInt(st.nextToken().trim());
 		}
 		catch (Exception e)
 		{

@@ -118,27 +118,19 @@ public class L2DefenderInstance extends L2Attackable
 	@Override
 	public void returnHome()
 	{
-		if (getWalkSpeed() <= 0)
+		if ((getWalkSpeed() <= 0) || (getSpawn() == null) || isInsideRadius(getSpawn(), 40, false, false))
 		{
 			return;
 		}
-		if (getSpawn() == null)
+		if (Config.DEBUG)
 		{
-			return;
+			_log.info(getObjectId() + ": moving home");
 		}
-		if (!isInsideRadius(getSpawn(), 40, false, false))
+		setisReturningToSpawnPoint(true);
+		clearAggroList();
+		if (hasAI())
 		{
-			if (Config.DEBUG)
-			{
-				_log.info(getObjectId() + ": moving home");
-			}
-			setisReturningToSpawnPoint(true);
-			clearAggroList();
-			
-			if (hasAI())
-			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
-			}
+			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
 		}
 	}
 	
@@ -181,20 +173,14 @@ public class L2DefenderInstance extends L2Attackable
 		}
 		else if (interact)
 		{
-			if (isAutoAttackable(player) && !isAlikeDead())
+			if (isAutoAttackable(player) && !isAlikeDead() && (Math.abs(player.getZ() - getZ()) < 600)) // this max heigth difference might need some tweaking
 			{
-				if (Math.abs(player.getZ() - getZ()) < 600) // this max heigth difference might need some tweaking
-				{
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
-				}
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 			}
-			if (!isAutoAttackable(player))
+			if (!isAutoAttackable(player) && !canInteract(player))
 			{
-				if (!canInteract(player))
-				{
-					// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
-				}
+				// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
 			}
 		}
 		// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet

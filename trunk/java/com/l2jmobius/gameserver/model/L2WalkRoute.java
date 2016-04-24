@@ -34,7 +34,7 @@ public class L2WalkRoute
 		_name = name;
 		_nodeList = route;
 		_repeatType = repeatType;
-		_repeatWalk = ((_repeatType >= 0) && (_repeatType <= 2)) ? repeat : false;
+		_repeatWalk = (_repeatType >= 0) && (_repeatType <= 2) && repeat;
 	}
 	
 	public String getName()

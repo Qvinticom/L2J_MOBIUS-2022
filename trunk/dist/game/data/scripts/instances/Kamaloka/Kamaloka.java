@@ -1188,14 +1188,7 @@ public final class Kamaloka extends AbstractInstance
 		{
 			if (mob != null)
 			{
-				if (STEALTH_SHAMAN)
-				{
-					addKillId(mob[1]);
-				}
-				else
-				{
-					addKillId(mob[0]);
-				}
+				addKillId(STEALTH_SHAMAN ? mob[1] : mob[0]);
 			}
 		}
 		for (int[] mob : SECOND_ROOM)
@@ -1402,14 +1395,12 @@ public final class Kamaloka extends AbstractInstance
 		spawnKama((KamaWorld) world);
 		
 		// and finally teleport party into instance
-		final L2Party party = player.getParty();
-		for (L2PcInstance partyMember : party.getMembers())
+		for (L2PcInstance partyMember : player.getParty().getMembers())
 		{
 			world.addAllowed(partyMember.getObjectId());
 			removeBuffs(partyMember);
 			teleportPlayer(partyMember, TELEPORTS[index], instanceId);
 		}
-		return;
 	}
 	
 	/**
@@ -1595,15 +1586,7 @@ public final class Kamaloka extends AbstractInstance
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getId() == TELEPORTER)
-		{
-			if (player.isInParty() && player.getParty().isLeader(player))
-			{
-				return "32496.htm";
-			}
-			return "32496-no.htm";
-		}
-		return "";
+		return player.isInParty() && player.getParty().isLeader(player) ? "32496.htm" : "32496-no.htm";
 	}
 	
 	@Override
@@ -1616,39 +1599,31 @@ public final class Kamaloka extends AbstractInstance
 			final int objectId = npc.getObjectId();
 			
 			// first room was spawned ?
-			if (world.firstRoom != null)
+			// is shaman killed ?
+			if ((world.firstRoom != null) && (world.shaman != 0) && (world.shaman == objectId))
 			{
-				// is shaman killed ?
-				if ((world.shaman != 0) && (world.shaman == objectId))
+				world.shaman = 0;
+				// stop respawn of the minions
+				for (L2Spawn spawn : world.firstRoom)
 				{
-					world.shaman = 0;
-					// stop respawn of the minions
-					for (L2Spawn spawn : world.firstRoom)
+					if (spawn != null)
 					{
-						if (spawn != null)
-						{
-							spawn.stopRespawn();
-						}
+						spawn.stopRespawn();
 					}
-					world.firstRoom.clear();
-					world.firstRoom = null;
-					
-					if (world.boss != null)
-					{
-						final int skillId = FIRST_ROOM[world.index][2];
-						final int skillLvl = FIRST_ROOM[world.index][3];
-						if ((skillId != 0) && (skillLvl != 0))
-						{
-							final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
-							if (skill != null)
-							{
-								skill.applyEffects(world.boss, world.boss);
-							}
-						}
-					}
-					
-					return super.onKill(npc, player, isSummon);
 				}
+				world.firstRoom.clear();
+				world.firstRoom = null;
+				
+				if ((world.boss != null) && (FIRST_ROOM[world.index][2] != 0) && (FIRST_ROOM[world.index][3] != 0))
+				{
+					final Skill skill = SkillData.getInstance().getSkill(FIRST_ROOM[world.index][2], FIRST_ROOM[world.index][3]);
+					if (skill != null)
+					{
+						skill.applyEffects(world.boss, world.boss);
+					}
+				}
+				
+				return super.onKill(npc, player, isSummon);
 			}
 			
 			// second room was spawned ?
@@ -1674,17 +1649,12 @@ public final class Kamaloka extends AbstractInstance
 					world.secondRoom.clear();
 					world.secondRoom = null;
 					
-					if (world.boss != null)
+					if ((world.boss != null) && (SECOND_ROOM[world.index][1] != 0) && (SECOND_ROOM[world.index][2] != 0))
 					{
-						final int skillId = SECOND_ROOM[world.index][1];
-						final int skillLvl = SECOND_ROOM[world.index][2];
-						if ((skillId != 0) && (skillLvl != 0))
+						final Skill skill = SkillData.getInstance().getSkill(SECOND_ROOM[world.index][1], SECOND_ROOM[world.index][2]);
+						if (skill != null)
 						{
-							final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
-							if (skill != null)
-							{
-								skill.applyEffects(world.boss, world.boss);
-							}
+							skill.applyEffects(world.boss, world.boss);
 						}
 					}
 					
@@ -1697,17 +1667,12 @@ public final class Kamaloka extends AbstractInstance
 			{
 				world.miniBoss = 0;
 				
-				if (world.boss != null)
+				if ((world.boss != null) && (MINIBOSS[world.index][4] != 0) && (MINIBOSS[world.index][5] != 0))
 				{
-					final int skillId = MINIBOSS[world.index][4];
-					final int skillLvl = MINIBOSS[world.index][5];
-					if ((skillId != 0) && (skillLvl != 0))
+					final Skill skill = SkillData.getInstance().getSkill(MINIBOSS[world.index][4], MINIBOSS[world.index][5]);
+					if (skill != null)
 					{
-						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
-						if (skill != null)
-						{
-							skill.applyEffects(world.boss, world.boss);
-						}
+						skill.applyEffects(world.boss, world.boss);
 					}
 				}
 				

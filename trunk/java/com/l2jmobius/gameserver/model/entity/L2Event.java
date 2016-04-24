@@ -109,15 +109,7 @@ public class L2Event
 		}
 		
 		sortByValue(tmp);
-		
-		// If the map size is less than "n", n will be as much as the map size
-		if (tmp.size() <= n)
-		{
-			return new ArrayList<>(tmp.keySet());
-		}
-		
-		final List<L2PcInstance> toReturn = new ArrayList<>(tmp.keySet());
-		return toReturn.subList(1, n);
+		return tmp.size() <= n ? new ArrayList<>(tmp.keySet()) : (new ArrayList<>(tmp.keySet())).subList(1, n);
 	}
 	
 	public static void showEventHtml(L2PcInstance player, String objectid)

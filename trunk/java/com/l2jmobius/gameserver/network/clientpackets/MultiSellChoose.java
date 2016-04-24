@@ -104,13 +104,10 @@ public class MultiSellChoose extends L2GameClientPacket
 			return;
 		}
 		
-		if (!player.isGM() && (npc != null) && !list.isNpcAllowed(-1))
+		if (!player.isGM() && (npc != null) && !list.isNpcAllowed(-1) && (!player.isInsideRadius(npc, INTERACTION_DISTANCE, true, false) || (player.getInstanceId() != npc.getInstanceId())))
 		{
-			if (!player.isInsideRadius(npc, INTERACTION_DISTANCE, true, false) || (player.getInstanceId() != npc.getInstanceId()))
-			{
-				player.setMultiSell(null);
-				return;
-			}
+			player.setMultiSell(null);
+			return;
 		}
 		
 		for (Entry entry : list.getEntries())
@@ -451,7 +448,6 @@ public class MultiSellChoose extends L2GameClientPacket
 							sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 							sm.addItemName(e.getItemId());
 							sm.addLong(e.getItemCount() * _amount);
-							player.sendPacket(sm);
 						}
 						else
 						{
@@ -459,15 +455,14 @@ public class MultiSellChoose extends L2GameClientPacket
 							{
 								sm = SystemMessage.getSystemMessage(SystemMessageId.ACQUIRED_S1_S2);
 								sm.addLong(e.getEnchantLevel());
-								sm.addItemName(e.getItemId());
 							}
 							else
 							{
 								sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-								sm.addItemName(e.getItemId());
 							}
-							player.sendPacket(sm);
+							sm.addItemName(e.getItemId());
 						}
+						player.sendPacket(sm);
 					}
 					
 					if (matched)

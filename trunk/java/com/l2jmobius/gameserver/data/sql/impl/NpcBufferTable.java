@@ -184,11 +184,7 @@ public class NpcBufferTable
 	public NpcBufferData getSkillInfo(int npcId, int buffGroup)
 	{
 		final NpcBufferSkills skills = _buffers.get(npcId);
-		if (skills != null)
-		{
-			return skills.getSkillGroupInfo(buffGroup);
-		}
-		return null;
+		return skills != null ? skills.getSkillGroupInfo(buffGroup) : null;
 	}
 	
 	public static NpcBufferTable getInstance()

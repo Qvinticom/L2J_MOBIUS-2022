@@ -508,28 +508,25 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 				}
 			}
 		}
-		else if (enchantLevel > 0)
-		{
-			switch (_type2)
-			{
-				case TYPE2_SHIELD_ARMOR:
-				case TYPE2_ACCESSORY:
-				{
-					return _crystalCount + (getCrystalType().getCrystalEnchantBonusArmor() * enchantLevel);
-				}
-				case TYPE2_WEAPON:
-				{
-					return _crystalCount + (getCrystalType().getCrystalEnchantBonusWeapon() * enchantLevel);
-				}
-				default:
-				{
-					return _crystalCount;
-				}
-			}
-		}
-		else
+		if (enchantLevel <= 0)
 		{
 			return _crystalCount;
+		}
+		switch (_type2)
+		{
+			case TYPE2_SHIELD_ARMOR:
+			case TYPE2_ACCESSORY:
+			{
+				return _crystalCount + (getCrystalType().getCrystalEnchantBonusArmor() * enchantLevel);
+			}
+			case TYPE2_WEAPON:
+			{
+				return _crystalCount + (getCrystalType().getCrystalEnchantBonusWeapon() * enchantLevel);
+			}
+			default:
+			{
+				return _crystalCount;
+			}
 		}
 	}
 	

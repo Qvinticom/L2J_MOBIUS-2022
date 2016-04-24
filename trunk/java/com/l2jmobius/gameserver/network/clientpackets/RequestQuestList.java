@@ -35,8 +35,7 @@ public final class RequestQuestList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final QuestList ql = new QuestList();
-		sendPacket(ql);
+		sendPacket(new QuestList());
 	}
 	
 	@Override

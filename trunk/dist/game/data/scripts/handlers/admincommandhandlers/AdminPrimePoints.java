@@ -123,23 +123,17 @@ public final class AdminPrimePoints implements IAdminCommandHandler
 						
 						if (range <= 0)
 						{
-							final int count = increaseForAll(L2World.getInstance().getPlayers(), value);
-							activeChar.sendMessage("You increased NCoin(s) of all online players (" + count + ") by " + value + ".");
+							activeChar.sendMessage("You increased NCoin(s) of all online players (" + increaseForAll(L2World.getInstance().getPlayers(), value) + ") by " + value + ".");
 						}
 						else if (range > 0)
 						{
-							final int count = increaseForAll(activeChar.getKnownList().getKnownPlayers().values(), value);
-							activeChar.sendMessage("You increased NCoin(s) of all players (" + count + ") in range " + range + " by " + value + ".");
+							activeChar.sendMessage("You increased NCoin(s) of all players (" + increaseForAll(activeChar.getKnownList().getKnownPlayers().values(), value) + ") in range " + range + " by " + value + ".");
 						}
 						break;
 					}
 				}
-				showMenuHtml(activeChar);
 			}
-			else
-			{
-				showMenuHtml(activeChar);
-			}
+			showMenuHtml(activeChar);
 		}
 		return true;
 	}

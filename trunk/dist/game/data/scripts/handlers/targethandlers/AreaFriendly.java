@@ -93,11 +93,7 @@ public class AreaFriendly implements ITargetTypeHandler
 			Collections.sort(targetList, CHAR_COMPARATOR);
 		}
 		
-		if (targetList.isEmpty())
-		{
-			return EMPTY_TARGET_LIST;
-		}
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.isEmpty() ? EMPTY_TARGET_LIST : targetList.toArray(new L2Character[targetList.size()]);
 	}
 	
 	private boolean checkTarget(L2PcInstance activeChar, L2Character target)

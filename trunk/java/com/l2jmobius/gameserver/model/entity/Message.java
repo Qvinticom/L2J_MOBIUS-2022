@@ -85,13 +85,14 @@ public class Message
 		_itemId = rset.getInt("itemId");
 		_enchantLvl = rset.getInt("enchantLvl");
 		final String elemental = rset.getString("elementals");
-		if (elemental != null)
+		if (elemental == null)
 		{
-			final String[] elemDef = elemental.split(";");
-			for (int i = 0; i < 6; i++)
-			{
-				_elementals[i] = Integer.parseInt(elemDef[i]);
-			}
+			return;
+		}
+		final String[] elemDef = elemental.split(";");
+		for (int i = 0; i < 6; i++)
+		{
+			_elementals[i] = Integer.parseInt(elemDef[i]);
 		}
 	}
 	
@@ -209,8 +210,7 @@ public class Message
 		}
 		else if (mailType == MailType.COMMISSION_ITEM_RETURNED)
 		{
-			final Mail attachement = createAttachments();
-			attachement.addItem("CommissionReturnItem", item, null, null);
+			createAttachments().addItem("CommissionReturnItem", item, null, null);
 		}
 	}
 	
@@ -325,11 +325,12 @@ public class Message
 	
 	public final void markAsRead()
 	{
-		if (_unread)
+		if (!_unread)
 		{
-			_unread = false;
-			MailManager.getInstance().markAsReadInDb(_messageId);
+			return;
 		}
+		_unread = false;
+		MailManager.getInstance().markAsReadInDb(_messageId);
 	}
 	
 	public final boolean isDeletedBySender()
@@ -339,17 +340,18 @@ public class Message
 	
 	public final void setDeletedBySender()
 	{
-		if (!_deletedBySender)
+		if (_deletedBySender)
 		{
-			_deletedBySender = true;
-			if (_deletedByReceiver)
-			{
-				MailManager.getInstance().deleteMessageInDb(_messageId);
-			}
-			else
-			{
-				MailManager.getInstance().markAsDeletedBySenderInDb(_messageId);
-			}
+			return;
+		}
+		_deletedBySender = true;
+		if (_deletedByReceiver)
+		{
+			MailManager.getInstance().deleteMessageInDb(_messageId);
+		}
+		else
+		{
+			MailManager.getInstance().markAsDeletedBySenderInDb(_messageId);
 		}
 	}
 	
@@ -360,17 +362,18 @@ public class Message
 	
 	public final void setDeletedByReceiver()
 	{
-		if (!_deletedByReceiver)
+		if (_deletedByReceiver)
 		{
-			_deletedByReceiver = true;
-			if (_deletedBySender)
-			{
-				MailManager.getInstance().deleteMessageInDb(_messageId);
-			}
-			else
-			{
-				MailManager.getInstance().markAsDeletedByReceiverInDb(_messageId);
-			}
+			return;
+		}
+		_deletedByReceiver = true;
+		if (_deletedBySender)
+		{
+			MailManager.getInstance().deleteMessageInDb(_messageId);
+		}
+		else
+		{
+			MailManager.getInstance().markAsDeletedByReceiverInDb(_messageId);
 		}
 	}
 	
@@ -432,15 +435,16 @@ public class Message
 	
 	public final synchronized void removeAttachments()
 	{
-		if (_attachments != null)
+		if (_attachments == null)
 		{
-			_attachments = null;
-			_hasAttachments = false;
-			MailManager.getInstance().removeAttachmentsInDb(_messageId);
-			if (_unloadTask != null)
-			{
-				_unloadTask.cancel(false);
-			}
+			return;
+		}
+		_attachments = null;
+		_hasAttachments = false;
+		MailManager.getInstance().removeAttachmentsInDb(_messageId);
+		if (_unloadTask != null)
+		{
+			_unloadTask.cancel(false);
 		}
 	}
 	
@@ -459,11 +463,12 @@ public class Message
 	
 	protected final synchronized void unloadAttachments()
 	{
-		if (_attachments != null)
+		if (_attachments == null)
 		{
-			_attachments.deleteMe();
-			_attachments = null;
+			return;
 		}
+		_attachments.deleteMe();
+		_attachments = null;
 	}
 	
 	static class AttachmentsUnloadTask implements Runnable
@@ -478,11 +483,12 @@ public class Message
 		@Override
 		public void run()
 		{
-			if (_msg != null)
+			if (_msg == null)
 			{
-				_msg.unloadAttachments();
-				_msg = null;
+				return;
 			}
+			_msg.unloadAttachments();
+			_msg = null;
 		}
 	}
 }

@@ -58,7 +58,7 @@ public final class RequestStartPledgeWar extends L2GameClientPacket
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		else if (!player.hasClanPrivilege(ClanPrivilege.CL_PLEDGE_WAR))
+		if (!player.hasClanPrivilege(ClanPrivilege.CL_PLEDGE_WAR))
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -72,19 +72,19 @@ public final class RequestStartPledgeWar extends L2GameClientPacket
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		else if ((_clan.getAllyId() == clan.getAllyId()) && (_clan.getAllyId() != 0))
+		if ((_clan.getAllyId() == clan.getAllyId()) && (_clan.getAllyId() != 0))
 		{
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_DECLARATION_OF_CLAN_WAR_AGAINST_AN_ALLIED_CLAN_CAN_T_BE_MADE));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		else if ((clan.getLevel() < 3) || (clan.getMembersCount() < Config.ALT_CLAN_MEMBERS_FOR_WAR))
+		if ((clan.getLevel() < 3) || (clan.getMembersCount() < Config.ALT_CLAN_MEMBERS_FOR_WAR))
 		{
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_WAR_CAN_ONLY_BE_DECLARED_IF_THE_CLAN_IS_LEVEL_5_OR_ABOVE_AND_THE_NUMBER_OF_CLAN_MEMBERS_IS_FIFTEEN_OR_GREATER));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		else if (_clan.isAtWarWith(clan.getId()))
+		if (_clan.isAtWarWith(clan.getId()))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ALREADY_BEEN_AT_WAR_WITH_THE_S1_CLAN_5_DAYS_MUST_PASS_BEFORE_YOU_CAN_DECLARE_WAR_AGAIN);
 			sm.addString(clan.getName());

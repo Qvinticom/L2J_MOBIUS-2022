@@ -73,34 +73,36 @@ public final class MagicalAttack extends AbstractEffect
 		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
 		int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
 		
-		if (damage > 0)
+		if (damage <= 0)
 		{
-			// reduce damage if target has maxdamage buff
-			final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
-			if (maxDamage > 0)
-			{
-				damage = (int) maxDamage;
-			}
-			
-			// Manage attack or cast break of the target (calculating rate, sending message...)
-			if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
-			{
-				target.breakAttack();
-				target.breakCast();
-			}
-			
-			// Shield Deflect Magic: Reflect all damage on caster.
-			if (target.getStat().calcStat(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, info.getSkill()) > Rnd.get(100))
-			{
-				activeChar.reduceCurrentHp(damage, target, info.getSkill());
-				activeChar.notifyDamageReceived(damage, target, info.getSkill(), mcrit, false);
-			}
-			else
-			{
-				target.reduceCurrentHp(damage, activeChar, info.getSkill());
-				target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit, false);
-				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
-			}
+			return;
+		}
+		
+		// reduce damage if target has maxdamage buff
+		final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+		if (maxDamage > 0)
+		{
+			damage = (int) maxDamage;
+		}
+		
+		// Manage attack or cast break of the target (calculating rate, sending message...)
+		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
+		{
+			target.breakAttack();
+			target.breakCast();
+		}
+		
+		// Shield Deflect Magic: Reflect all damage on caster.
+		if (target.getStat().calcStat(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, info.getSkill()) > Rnd.get(100))
+		{
+			activeChar.reduceCurrentHp(damage, target, info.getSkill());
+			activeChar.notifyDamageReceived(damage, target, info.getSkill(), mcrit, false);
+		}
+		else
+		{
+			target.reduceCurrentHp(damage, activeChar, info.getSkill());
+			target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit, false);
+			activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 		}
 	}
 }

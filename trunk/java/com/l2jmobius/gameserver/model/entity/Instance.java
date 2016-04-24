@@ -236,11 +236,12 @@ public final class Instance
 	public void removePlayer(Integer objectId)
 	{
 		_players.remove(objectId);
-		if (_players.isEmpty() && (_emptyDestroyTime >= 0))
+		if (!_players.isEmpty() || (_emptyDestroyTime < 0))
 		{
-			_lastLeft = System.currentTimeMillis();
-			setDuration((int) (_instanceEndTime - System.currentTimeMillis() - 500));
+			return;
 		}
+		_lastLeft = System.currentTimeMillis();
+		setDuration((int) (_instanceEndTime - System.currentTimeMillis() - 500));
 	}
 	
 	public void addNpc(L2Npc npc)
@@ -490,8 +491,7 @@ public final class Instance
 		{
 			_allowRandomWalk = Boolean.parseBoolean(a.getNodeValue());
 		}
-		final Node first = n.getFirstChild();
-		for (n = first; n != null; n = n.getNextSibling())
+		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			switch (n.getNodeName().toLowerCase())
 			{
@@ -566,9 +566,7 @@ public final class Instance
 								if ("set".equalsIgnoreCase(bean.getNodeName()))
 								{
 									final NamedNodeMap attrs = bean.getAttributes();
-									final String setname = attrs.getNamedItem("name").getNodeValue();
-									final String value = attrs.getNamedItem("val").getNodeValue();
-									set.set(setname, value);
+									set.set(attrs.getNamedItem("name").getNodeValue(), attrs.getNamedItem("val").getNodeValue());
 								}
 							}
 							addDoor(doorId, set);
@@ -688,10 +686,7 @@ public final class Instance
 						{
 							try
 							{
-								final int x = Integer.parseInt(loc.getAttributes().getNamedItem("x").getNodeValue());
-								final int y = Integer.parseInt(loc.getAttributes().getNamedItem("y").getNodeValue());
-								final int z = Integer.parseInt(loc.getAttributes().getNamedItem("z").getNodeValue());
-								_enterLocations.add(new Location(x, y, z));
+								_enterLocations.add(new Location(Integer.parseInt(loc.getAttributes().getNamedItem("x").getNodeValue()), Integer.parseInt(loc.getAttributes().getNamedItem("y").getNodeValue()), Integer.parseInt(loc.getAttributes().getNamedItem("z").getNodeValue())));
 							}
 							catch (Exception e)
 							{

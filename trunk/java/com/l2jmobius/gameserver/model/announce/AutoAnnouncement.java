@@ -166,19 +166,18 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 	@Override
 	public void run()
 	{
-		if ((_currentState == -1) || (_currentState > 0))
+		if ((_currentState != -1) && (_currentState <= 0))
 		{
-			for (String content : getContent().split(Config.EOL))
-			{
-				Broadcast.toAllOnlinePlayers(content, (getType() == AnnouncementType.AUTO_CRITICAL));
-			}
-			
-			if (_currentState != -1)
-			{
-				_currentState--;
-			}
-			
-			_task = ThreadPoolManager.getInstance().scheduleGeneral(this, _delay);
+			return;
 		}
+		for (String content : getContent().split(Config.EOL))
+		{
+			Broadcast.toAllOnlinePlayers(content, (getType() == AnnouncementType.AUTO_CRITICAL));
+		}
+		if (_currentState != -1)
+		{
+			_currentState--;
+		}
+		_task = ThreadPoolManager.getInstance().scheduleGeneral(this, _delay);
 	}
 }

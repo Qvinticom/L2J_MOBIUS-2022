@@ -1129,8 +1129,7 @@ public final class BlowfishEngine
 	 */
 	private void processTable(int xl, int xr, int[] table)
 	{
-		final int size = table.length;
-		for (int s = 0; s < size; s += 2)
+		for (int s = 0; s < table.length; s += 2)
 		{
 			xl ^= P[0];
 			xr ^= func(xl) ^ P[1];

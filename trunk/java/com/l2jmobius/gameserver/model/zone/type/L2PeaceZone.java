@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model.zone.type;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 
@@ -36,15 +35,11 @@ public class L2PeaceZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if (character.isPlayer())
+		// PVP possible during siege, now for siege participants only
+		// Could also check if this town is in siege, or if any siege is going on
+		if (character.isPlayer() && (character.getActingPlayer().getSiegeState() != 0) && (Config.PEACE_ZONE_MODE == 1))
 		{
-			final L2PcInstance player = character.getActingPlayer();
-			// PVP possible during siege, now for siege participants only
-			// Could also check if this town is in siege, or if any siege is going on
-			if ((player.getSiegeState() != 0) && (Config.PEACE_ZONE_MODE == 1))
-			{
-				return;
-			}
+			return;
 		}
 		
 		if (Config.PEACE_ZONE_MODE != 2)

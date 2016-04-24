@@ -70,10 +70,9 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	@Override
 	protected void onIntentionActive()
 	{
-		final L2Summon summon = (L2Summon) _actor;
 		if (_startFollow)
 		{
-			setIntention(AI_INTENTION_FOLLOW, summon.getOwner());
+			setIntention(AI_INTENTION_FOLLOW, ((L2Summon) _actor).getOwner());
 		}
 		else
 		{
@@ -138,11 +137,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	
 	private void thinkPickUp()
 	{
-		if (checkTargetLost(getTarget()))
-		{
-			return;
-		}
-		if (maybeMoveToPawn(getTarget(), 36))
+		if (checkTargetLost(getTarget()) || maybeMoveToPawn(getTarget(), 36))
 		{
 			return;
 		}
@@ -152,11 +147,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	
 	private void thinkInteract()
 	{
-		if (checkTargetLost(getTarget()))
-		{
-			return;
-		}
-		if (maybeMoveToPawn(getTarget(), 36))
+		if (checkTargetLost(getTarget()) || maybeMoveToPawn(getTarget(), 36))
 		{
 			return;
 		}
@@ -245,23 +236,23 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	@Override
 	public void run()
 	{
-		if (_startAvoid)
+		if (!_startAvoid)
 		{
-			_startAvoid = false;
-			
-			if (!_clientMoving && !_actor.isDead() && !_actor.isMovementDisabled())
-			{
-				final int ownerX = ((L2Summon) _actor).getOwner().getX();
-				final int ownerY = ((L2Summon) _actor).getOwner().getY();
-				final double angle = Math.toRadians(Rnd.get(-90, 90)) + Math.atan2(ownerY - _actor.getY(), ownerX - _actor.getX());
-				
-				final int targetX = ownerX + (int) (AVOID_RADIUS * Math.cos(angle));
-				final int targetY = ownerY + (int) (AVOID_RADIUS * Math.sin(angle));
-				if (GeoData.getInstance().canMove(_actor.getX(), _actor.getY(), _actor.getZ(), targetX, targetY, _actor.getZ(), _actor.getInstanceId()))
-				{
-					moveTo(targetX, targetY, _actor.getZ());
-				}
-			}
+			return;
+		}
+		_startAvoid = false;
+		if (_clientMoving || _actor.isDead() || _actor.isMovementDisabled())
+		{
+			return;
+		}
+		final int ownerX = ((L2Summon) _actor).getOwner().getX();
+		final int ownerY = ((L2Summon) _actor).getOwner().getY();
+		final double angle = Math.toRadians(Rnd.get(-90, 90)) + Math.atan2(ownerY - _actor.getY(), ownerX - _actor.getX());
+		final int targetX = ownerX + (int) (AVOID_RADIUS * Math.cos(angle));
+		final int targetY = ownerY + (int) (AVOID_RADIUS * Math.sin(angle));
+		if (GeoData.getInstance().canMove(_actor.getX(), _actor.getY(), _actor.getZ(), targetX, targetY, _actor.getZ(), _actor.getInstanceId()))
+		{
+			moveTo(targetX, targetY, _actor.getZ());
 		}
 	}
 	

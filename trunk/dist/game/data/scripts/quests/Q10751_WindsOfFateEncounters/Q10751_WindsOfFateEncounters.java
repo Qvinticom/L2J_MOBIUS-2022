@@ -254,14 +254,7 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 				{
 					case NAVARI:
 					{
-						if (player.getClassId().isMage())
-						{
-							htmltext = "33931-m.htm";
-						}
-						else
-						{
-							htmltext = "33931-f.htm";
-						}
+						htmltext = player.getClassId().isMage() ? "33931-m.htm" : "33931-f.htm";
 						break;
 					}
 					case AYANTHE:

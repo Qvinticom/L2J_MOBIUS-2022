@@ -314,12 +314,9 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 					qs = player.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName());
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "32784-01.htm" : "32784-07.htm";
 				}
-				else if (qs.isStarted())
+				else if (qs.isStarted() && qs.isCond(1))
 				{
-					if (qs.isCond(1))
-					{
-						htmltext = "32784-06.html";
-					}
+					htmltext = "32784-06.html";
 				}
 				break;
 			}

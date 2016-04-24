@@ -47,20 +47,13 @@ public final class CannotMoveAnymoreInVehicle extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if ((player == null) || !player.isInBoat() || (player.getBoat().getObjectId() != _boatId))
 		{
 			return;
 		}
-		if (player.isInBoat())
-		{
-			if (player.getBoat().getObjectId() == _boatId)
-			{
-				player.setInVehiclePosition(new Location(_x, _y, _z));
-				player.setHeading(_heading);
-				final StopMoveInVehicle msg = new StopMoveInVehicle(player, _boatId);
-				player.broadcastPacket(msg);
-			}
-		}
+		player.setInVehiclePosition(new Location(_x, _y, _z));
+		player.setHeading(_heading);
+		player.broadcastPacket((new StopMoveInVehicle(player, _boatId)));
 	}
 	
 	@Override

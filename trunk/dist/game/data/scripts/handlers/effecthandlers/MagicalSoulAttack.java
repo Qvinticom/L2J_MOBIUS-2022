@@ -74,9 +74,7 @@ public final class MagicalSoulAttack extends AbstractEffect
 		
 		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 		{
-			// Souls Formula (each soul increase +4%)
-			final int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount();
-			damage *= 1 + (chargedSouls * 0.04);
+			damage *= 1 + (((activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount()) * 0.04);
 		}
 		
 		if (damage > 0)

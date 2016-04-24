@@ -34,16 +34,6 @@ public class L2TrainerInstance extends L2NpcInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		if (val == 0)
-		{
-			pom = "" + npcId;
-		}
-		else
-		{
-			pom = npcId + "-" + val;
-		}
-		
-		return "html/trainer/" + pom + ".htm";
+		return "html/trainer/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
 	}
 }

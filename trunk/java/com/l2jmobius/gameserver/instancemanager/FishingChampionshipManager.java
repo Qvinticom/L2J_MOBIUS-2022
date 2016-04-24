@@ -211,42 +211,22 @@ public class FishingChampionshipManager
 	
 	public String getWinnerName(int par)
 	{
-		if (_winPlayersName.size() >= par)
-		{
-			return _winPlayersName.get(par - 1);
-		}
-		
-		return "None";
+		return _winPlayersName.size() >= par ? _winPlayersName.get(par - 1) : "None";
 	}
 	
 	public String getCurrentName(int par)
 	{
-		if (_playersName.size() >= par)
-		{
-			return _playersName.get(par - 1);
-		}
-		
-		return "None";
+		return _playersName.size() >= par ? _playersName.get(par - 1) : "None";
 	}
 	
 	public String getFishLength(int par)
 	{
-		if (_winFishLength.size() >= par)
-		{
-			return _winFishLength.get(par - 1);
-		}
-		
-		return "0";
+		return _winFishLength.size() >= par ? _winFishLength.get(par - 1) : "0";
 	}
 	
 	public String getCurrentFishLength(int par)
 	{
-		if (_fishLength.size() >= par)
-		{
-			return _fishLength.get(par - 1);
-		}
-		
-		return "0";
+		return _fishLength.size() >= par ? _fishLength.get(par - 1) : "0";
 	}
 	
 	public boolean isWinner(String playerName)
@@ -265,54 +245,51 @@ public class FishingChampionshipManager
 	{
 		for (Fisher fisher : _winPlayers)
 		{
-			if (fisher.getName().equalsIgnoreCase(pl.getName()))
+			if (fisher.getName().equalsIgnoreCase(pl.getName()) && (fisher.getRewardType() != 2))
 			{
-				if (fisher.getRewardType() != 2)
+				int rewardCnt = 0;
+				for (int x = 0; x < _winPlayersName.size(); x++)
 				{
-					int rewardCnt = 0;
-					for (int x = 0; x < _winPlayersName.size(); x++)
+					if (_winPlayersName.get(x).equalsIgnoreCase(pl.getName()))
 					{
-						if (_winPlayersName.get(x).equalsIgnoreCase(pl.getName()))
+						switch (x)
 						{
-							switch (x)
+							case 0:
 							{
-								case 0:
-								{
-									rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_1;
-									break;
-								}
-								case 1:
-								{
-									rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_2;
-									break;
-								}
-								case 2:
-								{
-									rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_3;
-									break;
-								}
-								case 3:
-								{
-									rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_4;
-									break;
-								}
-								case 4:
-								{
-									rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_5;
-									break;
-								}
+								rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_1;
+								break;
+							}
+							case 1:
+							{
+								rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_2;
+								break;
+							}
+							case 2:
+							{
+								rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_3;
+								break;
+							}
+							case 3:
+							{
+								rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_4;
+								break;
+							}
+							case 4:
+							{
+								rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_5;
+								break;
 							}
 						}
 					}
-					fisher.setRewardType(2);
-					if (rewardCnt > 0)
-					{
-						pl.addItem("fishing_reward", Config.ALT_FISH_CHAMPIONSHIP_REWARD_ITEM, rewardCnt, null, true);
-						
-						final NpcHtmlMessage html = new NpcHtmlMessage();
-						html.setFile(pl.getHtmlPrefix(), "html/fisherman/championship/fish_event_reward001.htm");
-						pl.sendPacket(html);
-					}
+				}
+				fisher.setRewardType(2);
+				if (rewardCnt > 0)
+				{
+					pl.addItem("fishing_reward", Config.ALT_FISH_CHAMPIONSHIP_REWARD_ITEM, rewardCnt, null, true);
+					
+					final NpcHtmlMessage html = new NpcHtmlMessage();
+					html.setFile(pl.getHtmlPrefix(), "html/fisherman/championship/fish_event_reward001.htm");
+					pl.sendPacket(html);
 				}
 			}
 		}

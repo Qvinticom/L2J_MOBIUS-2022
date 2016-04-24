@@ -40,39 +40,32 @@ public class PartyNotMe implements ITargetTypeHandler
 		final int radius = skill.getAffectRange();
 		if (activeChar.getParty() != null)
 		{
-			final List<L2PcInstance> partyList = activeChar.getParty().getMembers();
-			for (L2PcInstance partyMember : partyList)
+			for (L2PcInstance partyMember : activeChar.getParty().getMembers())
 			{
-				if (partyMember == activeChar)
+				if ((partyMember == activeChar) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, activeChar, partyMember, true))
 				{
 					continue;
 				}
-				else if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, activeChar, partyMember, true))
+				
+				if (Skill.addPet(activeChar, partyMember, radius, false))
 				{
-					continue;
+					targetList.add(partyMember.getPet());
 				}
-				else
+				
+				partyMember.getServitors().values().forEach(s ->
 				{
-					if (Skill.addPet(activeChar, partyMember, radius, false))
+					if (Skill.addCharacter(activeChar, s, radius, false))
 					{
-						targetList.add(partyMember.getPet());
+						targetList.add(s);
 					}
-					
-					partyMember.getServitors().values().forEach(s ->
-					{
-						if (Skill.addCharacter(activeChar, s, radius, false))
-						{
-							targetList.add(s);
-						}
-					});
-					
-					if (Skill.addCharacter(activeChar, partyMember, radius, false))
-					{
-						targetList.add(partyMember);
-					}
-					
+				});
+				
+				if (Skill.addCharacter(activeChar, partyMember, radius, false))
+				{
 					targetList.add(partyMember);
 				}
+				
+				targetList.add(partyMember);
 			}
 		}
 		return targetList.toArray(new L2Character[targetList.size()]);

@@ -142,18 +142,20 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 	
 	public void setFoodType(int foodItemId)
 	{
-		if (foodItemId > 0)
+		if (foodItemId <= 0)
 		{
-			_foodSkillId = foodItemId;
-			
-			// start the duration checks
-			// start the buff tasks
-			if (_durationCheckTask != null)
-			{
-				_durationCheckTask.cancel(true);
-			}
-			_durationCheckTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
+			return;
 		}
+		
+		_foodSkillId = foodItemId;
+		
+		// start the duration checks
+		// start the buff tasks
+		if (_durationCheckTask != null)
+		{
+			_durationCheckTask.cancel(true);
+		}
+		_durationCheckTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
 	}
 	
 	@Override
@@ -370,17 +372,9 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		// for lower HP ranges, heal or recharge the owner with 1 skill use per attack.
 		else if (HPRatio < 0.5)
 		{
-			int chance = 1;
-			if (HPRatio < 0.25)
-			{
-				chance = 2;
-			}
-			
-			// if the owner has a lot of HP, then debuff the enemy with a random debuff among the available skills
 			for (Skill skill : getTemplate().getSkills().values())
 			{
-				// if the skill is a buff, check if the owner has it already [ owner.getEffect(L2Skill skill) ]
-				if ((Rnd.get(5) < chance) && skill.hasEffectType(L2EffectType.CPHEAL, L2EffectType.HEAL, L2EffectType.MANAHEAL_BY_LEVEL, L2EffectType.MANAHEAL_PERCENT))
+				if ((Rnd.get(5) < (HPRatio < 0.25 ? 2 : 1)) && skill.hasEffectType(L2EffectType.CPHEAL, L2EffectType.HEAL, L2EffectType.MANAHEAL_BY_LEVEL, L2EffectType.MANAHEAL_PERCENT))
 				{
 					sitCastAndFollow(skill, _owner);
 				}

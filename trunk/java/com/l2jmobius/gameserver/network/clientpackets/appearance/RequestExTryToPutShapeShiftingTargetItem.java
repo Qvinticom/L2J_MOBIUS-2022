@@ -66,55 +66,18 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		final PcInventory inventory = player.getInventory();
 		final L2ItemInstance targetItem = inventory.getItemByObjectId(_targetItemObjId);
 		L2ItemInstance stone = request.getAppearanceStone();
-		
-		if ((targetItem == null) || (stone == null))
+		if ((targetItem == null) || (stone == null) || !targetItem.isAppearanceable() || ((targetItem.getItemLocation() != ItemLocation.INVENTORY) && (targetItem.getItemLocation() != ItemLocation.PAPERDOLL)) || ((stone = inventory.getItemByObjectId(stone.getObjectId())) == null))
 		{
 			player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
-		
-		if (!targetItem.isAppearanceable())
-		{
-			player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
-		}
-		
-		if ((targetItem.getItemLocation() != ItemLocation.INVENTORY) && (targetItem.getItemLocation() != ItemLocation.PAPERDOLL))
-		{
-			player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
-		}
-		
-		if ((stone = inventory.getItemByObjectId(stone.getObjectId())) == null)
-		{
-			player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
-		}
-		
 		final AppearanceStone appearanceStone = AppearanceItemData.getInstance().getStone(stone.getId());
-		if (appearanceStone == null)
+		if ((appearanceStone == null) || ((appearanceStone.getType() != AppearanceType.RESTORE) && (targetItem.getVisualId() > 0)) || ((appearanceStone.getType() == AppearanceType.RESTORE) && (targetItem.getVisualId() == 0)))
 		{
 			player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
-		}
-		
-		if (((appearanceStone.getType() != AppearanceType.RESTORE) && (targetItem.getVisualId() > 0)) || ((appearanceStone.getType() == AppearanceType.RESTORE) && (targetItem.getVisualId() == 0)))
-		{
-			player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
-		}
-		
-		// TODO: Handle hair accessory!
-		// if (!targetItem.isEtcItem() && (targetItem.getItem().getCrystalType() == CrystalType.NONE))
-		{
-			// player.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_OR_RESTORE_NOGRADE_ITEMS);
-			// return;
 		}
 		
 		if (!appearanceStone.getCrystalTypes().isEmpty() && !appearanceStone.getCrystalTypes().contains(targetItem.getItem().getCrystalType()))
@@ -131,30 +94,12 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
-		
-		if (!appearanceStone.getTargetTypes().contains(AppearanceTargetType.ALL))
+		if (!appearanceStone.getTargetTypes().contains(AppearanceTargetType.ALL) && ((targetItem.isWeapon() && !appearanceStone.getTargetTypes().contains(AppearanceTargetType.WEAPON)) || (targetItem.isArmor() && !appearanceStone.getTargetTypes().contains(AppearanceTargetType.ARMOR) && !appearanceStone.getTargetTypes().contains(AppearanceTargetType.ACCESSORY)) || (targetItem.isArmor() && !appearanceStone.getBodyParts().isEmpty() && !appearanceStone.getBodyParts().contains(targetItem.getItem().getBodyPart()))))
 		{
-			if (targetItem.isWeapon() && !appearanceStone.getTargetTypes().contains(AppearanceTargetType.WEAPON))
-			{
-				player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-				player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-				player.removeRequest(ShapeShiftingItemRequest.class);
-				return;
-			}
-			else if (targetItem.isArmor() && !appearanceStone.getTargetTypes().contains(AppearanceTargetType.ARMOR) && !appearanceStone.getTargetTypes().contains(AppearanceTargetType.ACCESSORY))
-			{
-				player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-				player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-				player.removeRequest(ShapeShiftingItemRequest.class);
-				return;
-			}
-			else if (targetItem.isArmor() && !appearanceStone.getBodyParts().isEmpty() && !appearanceStone.getBodyParts().contains(targetItem.getItem().getBodyPart()))
-			{
-				player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-				player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-				player.removeRequest(ShapeShiftingItemRequest.class);
-				return;
-			}
+			player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
+			player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
+			player.removeRequest(ShapeShiftingItemRequest.class);
+			return;
 		}
 		
 		if (appearanceStone.getWeaponType() != WeaponType.NONE)

@@ -100,12 +100,7 @@ public class Q10740_NeverForget extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		
-		if (qs.isCompleted())
-		{
-			htmltext = getAlreadyCompletedMsg(player);
-		}
+		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
@@ -170,12 +165,9 @@ public class Q10740_NeverForget extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, UNNAMED_RELICS, 1, 20, 1.0, true))
 		{
-			if (giveItemRandomly(killer, npc, UNNAMED_RELICS, 1, 20, 1.0, true))
-			{
-				qs.setCond(2);
-			}
+			qs.setCond(2);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

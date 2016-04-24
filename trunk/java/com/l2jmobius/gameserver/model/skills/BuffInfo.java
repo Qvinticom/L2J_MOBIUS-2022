@@ -285,9 +285,7 @@ public final class BuffInfo
 			{
 				// The task for the effect ticks.
 				final EffectTickTask effectTask = new EffectTickTask(this, effect);
-				final ScheduledFuture<?> scheduledFuture = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO);
-				// Adds the task for ticking.
-				addTask(effect, new EffectTaskInfo(effectTask, scheduledFuture));
+				addTask(effect, new EffectTaskInfo(effectTask, ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO)));
 			}
 			
 			// Add stats.
@@ -303,23 +301,18 @@ public final class BuffInfo
 	 */
 	public void onTick(AbstractEffect effect, int tickCount)
 	{
-		boolean continueForever = false;
-		// If the effect is in use, allow it to affect the effected.
-		if (_isInUse)
+		final boolean continueForever = _isInUse && effect.onActionTime(this);
+		if (continueForever || !_skill.isToggle())
 		{
-			// Callback for on action time event.
-			continueForever = effect.onActionTime(this);
+			return;
 		}
-		
-		if (!continueForever && _skill.isToggle())
+		final EffectTaskInfo task = getEffectTask(effect);
+		if (task == null)
 		{
-			final EffectTaskInfo task = getEffectTask(effect);
-			if (task != null)
-			{
-				task.getScheduledFuture().cancel(true); // Don't allow to finish current run.
-				_effected.getEffectList().stopSkillEffects(true, getSkill()); // Remove the buff from the effect list.
-			}
+			return;
 		}
+		task.getScheduledFuture().cancel(true); // Don't allow to finish current run.
+		_effected.getEffectList().stopSkillEffects(true, getSkill());
 	}
 	
 	public void finishEffects()

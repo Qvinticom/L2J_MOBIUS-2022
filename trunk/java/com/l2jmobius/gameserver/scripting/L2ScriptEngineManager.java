@@ -114,67 +114,65 @@ public final class L2ScriptEngineManager
 			return;
 		}
 		
-		if (list.isFile())
+		if (!list.isFile())
 		{
-			try (FileInputStream fis = new FileInputStream(list);
-				InputStreamReader isr = new InputStreamReader(fis);
-				LineNumberReader lnr = new LineNumberReader(isr))
+			throw new IllegalArgumentException("Argument must be an file containing a list of scripts to be loaded");
+		}
+		
+		try (FileInputStream fis = new FileInputStream(list);
+			InputStreamReader isr = new InputStreamReader(fis);
+			LineNumberReader lnr = new LineNumberReader(isr))
+		{
+			String line;
+			while ((line = lnr.readLine()) != null)
 			{
-				String line;
-				while ((line = lnr.readLine()) != null)
+				if (Config.ALT_DEV_NO_HANDLERS && line.contains("MasterHandler.java"))
 				{
-					if (Config.ALT_DEV_NO_HANDLERS && line.contains("MasterHandler.java"))
+					continue;
+				}
+				
+				final String[] parts = line.trim().split("#");
+				
+				if ((parts.length > 0) && !parts[0].isEmpty() && (parts[0].charAt(0) != '#'))
+				{
+					line = parts[0];
+					
+					if (line.endsWith("/**"))
 					{
-						continue;
+						line = line.substring(0, line.length() - 3);
+					}
+					else if (line.endsWith("/*"))
+					{
+						line = line.substring(0, line.length() - 2);
 					}
 					
-					final String[] parts = line.trim().split("#");
+					final File file = new File(SCRIPT_FOLDER, line);
 					
-					if ((parts.length > 0) && !parts[0].isEmpty() && (parts[0].charAt(0) != '#'))
+					if (file.isDirectory() && parts[0].endsWith("/**"))
 					{
-						line = parts[0];
-						
-						if (line.endsWith("/**"))
+						executeAllScriptsInDirectory(file, true, 32);
+					}
+					else if (file.isDirectory() && parts[0].endsWith("/*"))
+					{
+						executeAllScriptsInDirectory(file);
+					}
+					else if (file.isFile())
+					{
+						try
 						{
-							line = line.substring(0, line.length() - 3);
+							executeScript(file);
 						}
-						else if (line.endsWith("/*"))
+						catch (ScriptException e)
 						{
-							line = line.substring(0, line.length() - 2);
+							reportScriptFileError(file, e);
 						}
-						
-						final File file = new File(SCRIPT_FOLDER, line);
-						
-						if (file.isDirectory() && parts[0].endsWith("/**"))
-						{
-							executeAllScriptsInDirectory(file, true, 32);
-						}
-						else if (file.isDirectory() && parts[0].endsWith("/*"))
-						{
-							executeAllScriptsInDirectory(file);
-						}
-						else if (file.isFile())
-						{
-							try
-							{
-								executeScript(file);
-							}
-							catch (ScriptException e)
-							{
-								reportScriptFileError(file, e);
-							}
-						}
-						else
-						{
-							_log.warning("Failed loading: (" + file.getCanonicalPath() + ") @ " + list.getName() + ":" + lnr.getLineNumber() + " - Reason: doesnt exists or is not a file.");
-						}
+					}
+					else
+					{
+						_log.warning("Failed loading: (" + file.getCanonicalPath() + ") @ " + list.getName() + ":" + lnr.getLineNumber() + " - Reason: doesnt exists or is not a file.");
 					}
 				}
 			}
-		}
-		else
-		{
-			throw new IllegalArgumentException("Argument must be an file containing a list of scripts to be loaded");
 		}
 	}
 	
@@ -190,51 +188,49 @@ public final class L2ScriptEngineManager
 	
 	private void executeAllScriptsInDirectory(File dir, boolean recurseDown, int maxDepth, int currentDepth)
 	{
-		if (dir.isDirectory())
-		{
-			final File[] files = dir.listFiles();
-			if (files == null)
-			{
-				return;
-			}
-			
-			for (File file : files)
-			{
-				if (file.isDirectory() && recurseDown && (maxDepth > currentDepth))
-				{
-					if (VERBOSE_LOADING)
-					{
-						_log.info("Entering folder: " + file.getName());
-					}
-					executeAllScriptsInDirectory(file, recurseDown, maxDepth, currentDepth + 1);
-				}
-				else if (file.isFile())
-				{
-					try
-					{
-						final String name = file.getName();
-						final int lastIndex = name.lastIndexOf('.');
-						String extension;
-						if (lastIndex != -1)
-						{
-							extension = name.substring(lastIndex + 1);
-							final ScriptEngine engine = getEngineByExtension(extension);
-							if (engine != null)
-							{
-								executeScript(engine, file);
-							}
-						}
-					}
-					catch (ScriptException e)
-					{
-						reportScriptFileError(file, e);
-					}
-				}
-			}
-		}
-		else
+		if (!dir.isDirectory())
 		{
 			throw new IllegalArgumentException("The argument directory either doesnt exists or is not an directory.");
+		}
+		
+		final File[] files = dir.listFiles();
+		if (files == null)
+		{
+			return;
+		}
+		
+		for (File file : files)
+		{
+			if (file.isDirectory() && recurseDown && (maxDepth > currentDepth))
+			{
+				if (VERBOSE_LOADING)
+				{
+					_log.info("Entering folder: " + file.getName());
+				}
+				executeAllScriptsInDirectory(file, recurseDown, maxDepth, currentDepth + 1);
+			}
+			else if (file.isFile())
+			{
+				try
+				{
+					final String name = file.getName();
+					final int lastIndex = name.lastIndexOf('.');
+					String extension;
+					if (lastIndex != -1)
+					{
+						extension = name.substring(lastIndex + 1);
+						final ScriptEngine engine = getEngineByExtension(extension);
+						if (engine != null)
+						{
+							executeScript(engine, file);
+						}
+					}
+				}
+				catch (ScriptException e)
+				{
+					reportScriptFileError(file, e);
+				}
+			}
 		}
 	}
 	
@@ -243,15 +239,11 @@ public final class L2ScriptEngineManager
 		final String name = file.getName();
 		final int lastIndex = name.lastIndexOf('.');
 		String extension;
-		if (lastIndex != -1)
-		{
-			extension = name.substring(lastIndex + 1);
-		}
-		else
+		if (lastIndex == -1)
 		{
 			throw new ScriptException("Script file (" + name + ") doesnt has an extension that identifies the ScriptEngine to be used.");
 		}
-		
+		extension = name.substring(lastIndex + 1);
 		final ScriptEngine engine = getEngineByExtension(extension);
 		if (engine == null)
 		{
@@ -309,12 +301,7 @@ public final class L2ScriptEngineManager
 	{
 		final String path = script.getAbsolutePath();
 		final String scpPath = SCRIPT_FOLDER.getAbsolutePath();
-		if (path.startsWith(scpPath))
-		{
-			final int idx = path.lastIndexOf('.');
-			return path.substring(scpPath.length() + 1, idx);
-		}
-		return null;
+		return path.startsWith(scpPath) ? path.substring(scpPath.length() + 1, path.lastIndexOf('.')) : null;
 	}
 	
 	public ScriptContext getScriptContext(ScriptEngine engine)
@@ -324,13 +311,13 @@ public final class L2ScriptEngineManager
 	
 	public Object eval(ScriptEngine engine, String script, ScriptContext context) throws ScriptException
 	{
-		if ((engine instanceof Compilable) && ATTEMPT_COMPILATION)
+		if (!(engine instanceof Compilable) || !ATTEMPT_COMPILATION)
 		{
-			final Compilable eng = (Compilable) engine;
-			final CompiledScript cs = eng.compile(script);
-			return context != null ? cs.eval(context) : cs.eval();
+			return context != null ? engine.eval(script, context) : engine.eval(script);
 		}
-		return context != null ? engine.eval(script, context) : engine.eval(script);
+		final Compilable eng = (Compilable) engine;
+		final CompiledScript cs = eng.compile(script);
+		return context != null ? cs.eval(context) : cs.eval();
 	}
 	
 	public Object eval(ScriptEngine engine, String script) throws ScriptException
@@ -341,10 +328,9 @@ public final class L2ScriptEngineManager
 	public void reportScriptFileError(File script, ScriptException e)
 	{
 		final String dir = script.getParent();
-		final String name = script.getName() + ".error.log";
 		if (dir != null)
 		{
-			final File file = new File(dir + "/" + name);
+			final File file = new File(dir + "/" + script.getName() + ".error.log");
 			try (FileOutputStream fos = new FileOutputStream(file))
 			{
 				final String errorHeader = "Error on: " + file.getCanonicalPath() + Config.EOL + "Line: " + e.getLineNumber() + " - Column: " + e.getColumnNumber() + Config.EOL + Config.EOL;

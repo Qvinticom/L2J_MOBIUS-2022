@@ -19,7 +19,6 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
@@ -89,8 +88,7 @@ public final class Backstab extends AbstractEffect
 		
 		if (activeChar.isPlayer())
 		{
-			final L2PcInstance activePlayer = activeChar.getActingPlayer();
-			activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
+			activeChar.getActingPlayer().sendDamageMessage(target, (int) damage, false, true, false);
 		}
 		
 		// Check if damage should be reflected

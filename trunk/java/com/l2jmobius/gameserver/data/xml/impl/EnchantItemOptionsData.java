@@ -96,11 +96,7 @@ public class EnchantItemOptionsData implements IXmlReader
 	 */
 	public EnchantOptions getOptions(int itemId, int enchantLevel)
 	{
-		if (!_data.containsKey(itemId) || !_data.get(itemId).containsKey(enchantLevel))
-		{
-			return null;
-		}
-		return _data.get(itemId).get(enchantLevel);
+		return !_data.containsKey(itemId) || !_data.get(itemId).containsKey(enchantLevel) ? null : _data.get(itemId).get(enchantLevel);
 	}
 	
 	/**

@@ -136,23 +136,17 @@ public final class RequestDropItem extends L2GameClientPacket
 		}
 		
 		// Cannot discard item that the skill is consuming
-		if (activeChar.isCastingNow())
+		if (activeChar.isCastingNow() && (activeChar.getCurrentSkill() != null) && (activeChar.getCurrentSkill().getSkill().getItemConsumeId() == item.getId()))
 		{
-			if ((activeChar.getCurrentSkill() != null) && (activeChar.getCurrentSkill().getSkill().getItemConsumeId() == item.getId()))
-			{
-				activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-				return;
-			}
+			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+			return;
 		}
 		
 		// Cannot discard item that the skill is consuming
-		if (activeChar.isCastingSimultaneouslyNow())
+		if (activeChar.isCastingSimultaneouslyNow() && (activeChar.getLastSimultaneousSkillCast() != null) && (activeChar.getLastSimultaneousSkillCast().getItemConsumeId() == item.getId()))
 		{
-			if ((activeChar.getLastSimultaneousSkillCast() != null) && (activeChar.getLastSimultaneousSkillCast().getItemConsumeId() == item.getId()))
-			{
-				activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-				return;
-			}
+			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+			return;
 		}
 		
 		if ((L2Item.TYPE2_QUEST == item.getItem().getType2()) && !activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS))
@@ -198,8 +192,7 @@ public final class RequestDropItem extends L2GameClientPacket
 			activeChar.sendPacket(iu);
 			activeChar.broadcastUserInfo();
 			
-			final ItemList il = new ItemList(activeChar, true);
-			activeChar.sendPacket(il);
+			activeChar.sendPacket((new ItemList(activeChar, true)));
 		}
 		
 		final L2ItemInstance dropedItem = activeChar.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);

@@ -120,8 +120,7 @@ public class JumpManager
 				_log.log(Level.WARNING, "Could not parse JumpTrack.xml file: " + e.getMessage(), e);
 				return;
 			}
-			final Node root = doc.getFirstChild();
-			for (Node t = root.getFirstChild(); t != null; t = t.getNextSibling())
+			for (Node t = doc.getFirstChild().getFirstChild(); t != null; t = t.getNextSibling())
 			{
 				if (t.getNodeName().equals("track"))
 				{
@@ -148,11 +147,7 @@ public class JumpManager
 								if (j.getNodeName().equals("jumpLoc"))
 								{
 									final NamedNodeMap attrs = j.getAttributes();
-									final int next = Integer.parseInt(attrs.getNamedItem("next").getNodeValue());
-									final int x = Integer.parseInt(attrs.getNamedItem("x").getNodeValue());
-									final int y = Integer.parseInt(attrs.getNamedItem("y").getNodeValue());
-									final int z = Integer.parseInt(attrs.getNamedItem("z").getNodeValue());
-									jw.add(new JumpNode(x, y, z, next));
+									jw.add(new JumpNode(Integer.parseInt(attrs.getNamedItem("x").getNodeValue()), Integer.parseInt(attrs.getNamedItem("y").getNodeValue()), Integer.parseInt(attrs.getNamedItem("z").getNodeValue()), Integer.parseInt(attrs.getNamedItem("next").getNodeValue())));
 								}
 							}
 							track.put(wayId, jw);
@@ -185,11 +180,7 @@ public class JumpManager
 	public JumpWay getJumpWay(int trackId, int wayId)
 	{
 		final Track t = _tracks.get(trackId);
-		if (t != null)
-		{
-			return t.get(wayId);
-		}
-		return null;
+		return t != null ? t.get(wayId) : null;
 	}
 	
 	public void StartJump(L2PcInstance player)

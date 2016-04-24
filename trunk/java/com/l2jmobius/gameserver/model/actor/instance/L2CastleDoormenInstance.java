@@ -83,12 +83,9 @@ public class L2CastleDoormenInstance extends L2DoormenInstance
 					return true;
 				}
 			}
-			else if (getCastle() != null)
+			else if ((getCastle() != null) && (player.getClanId() == getCastle().getOwnerId()))
 			{
-				if (player.getClanId() == getCastle().getOwnerId())
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		return false;
@@ -98,10 +95,6 @@ public class L2CastleDoormenInstance extends L2DoormenInstance
 	protected final boolean isUnderSiege()
 	{
 		final SiegableHall hall = getConquerableHall();
-		if (hall != null)
-		{
-			return hall.isInSiege();
-		}
-		return getCastle().getZone().isActive();
+		return hall != null ? hall.isInSiege() : getCastle().getZone().isActive();
 	}
 }

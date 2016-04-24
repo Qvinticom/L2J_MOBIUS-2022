@@ -408,7 +408,6 @@ public class Lottery
 				sm.addInt(getId());
 				sm.addLong(getPrize());
 				sm.addLong(count1);
-				Broadcast.toAllOnlinePlayers(sm);
 			}
 			else
 			{
@@ -416,8 +415,8 @@ public class Lottery
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PRIZE_AMOUNT_FOR_LUCKY_LOTTERY_S1_IS_S2_ADENA_THERE_WAS_NO_FIRST_PRIZE_WINNER_IN_THIS_DRAWING_THEREFORE_THE_JACKPOT_WILL_BE_ADDED_TO_THE_NEXT_DRAWING);
 				sm.addInt(getId());
 				sm.addLong(getPrize());
-				Broadcast.toAllOnlinePlayers(sm);
 			}
+			Broadcast.toAllOnlinePlayers(sm);
 			
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(UPDATE_LOTTERY))

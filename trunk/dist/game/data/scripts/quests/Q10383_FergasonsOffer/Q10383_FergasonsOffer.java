@@ -153,12 +153,9 @@ public class Q10383_FergasonsOffer extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(2) && qs.isStarted())
+		if ((qs != null) && qs.isCond(2) && qs.isStarted() && giveItemRandomly(killer, npc, UNSTABLE_PETRA, 1, 20, 0.75, true))
 		{
-			if (giveItemRandomly(killer, npc, UNSTABLE_PETRA, 1, 20, 0.75, true))
-			{
-				qs.setCond(3);
-			}
+			qs.setCond(3);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

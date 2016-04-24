@@ -282,11 +282,7 @@ public final class UseItem extends L2GameClientPacket
 			
 			if (activeChar.isCastingNow() || activeChar.isCastingSimultaneouslyNow())
 			{
-				// Creating next action class.
-				final NextAction nextAction = new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> activeChar.useEquippableItem(item, true));
-				
-				// Binding next action to AI.
-				activeChar.getAI().setNextAction(nextAction);
+				activeChar.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> activeChar.useEquippableItem(item, true)));
 			}
 			else if (activeChar.isAttackingNow())
 			{
@@ -326,13 +322,10 @@ public final class UseItem extends L2GameClientPacket
 			
 			// Item reuse time should be added if the item is successfully used.
 			// Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate;
-			if (handler.useItem(activeChar, item, _ctrlPressed))
+			if (handler.useItem(activeChar, item, _ctrlPressed) && (reuseDelay > 0))
 			{
-				if (reuseDelay > 0)
-				{
-					activeChar.addTimeStampItem(item, reuseDelay);
-					sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuseDelay, reuseDelay);
-				}
+				activeChar.addTimeStampItem(item, reuseDelay);
+				sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuseDelay, reuseDelay);
 			}
 		}
 	}

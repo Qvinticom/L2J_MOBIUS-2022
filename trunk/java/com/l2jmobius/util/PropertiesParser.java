@@ -214,12 +214,12 @@ public final class PropertiesParser
 	public String getString(String key, String defaultValue)
 	{
 		final String value = getValue(key);
-		if (value == null)
+		if (value != null)
 		{
-			_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
-			return defaultValue;
+			return value;
 		}
-		return value;
+		_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
+		return defaultValue;
 	}
 	
 	public <T extends Enum<T>> T getEnum(String key, Class<T> clazz, T defaultValue)

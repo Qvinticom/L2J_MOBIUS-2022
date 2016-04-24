@@ -46,14 +46,7 @@ public class ExFlyMove extends L2GameServerPacket
 		writeH(0xe8);
 		writeD(_objId);
 		
-		if (_jw.size() == 1)
-		{
-			writeD(2);
-		}
-		else
-		{
-			writeD(0);
-		}
+		writeD(_jw.size() == 1 ? 2 : 0);
 		writeD(0);
 		writeD(_trackId);
 		

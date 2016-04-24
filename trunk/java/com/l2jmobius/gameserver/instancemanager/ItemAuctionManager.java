@@ -102,8 +102,7 @@ public final class ItemAuctionManager
 								throw new Exception("Dublicated instanceId " + instanceId);
 							}
 							
-							final ItemAuctionInstance instance = new ItemAuctionInstance(instanceId, _auctionIds, nb);
-							_managerInstances.put(instanceId, instance);
+							_managerInstances.put(instanceId, (new ItemAuctionInstance(instanceId, _auctionIds, nb)));
 						}
 					}
 				}

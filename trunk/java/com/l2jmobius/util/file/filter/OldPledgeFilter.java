@@ -29,10 +29,6 @@ public class OldPledgeFilter implements FileFilter
 	@Override
 	public boolean accept(File f)
 	{
-		if ((f == null) || !f.isFile())
-		{
-			return false;
-		}
-		return f.getName().startsWith("Pledge_");
+		return (f != null) && f.isFile() && f.getName().startsWith("Pledge_");
 	}
 }

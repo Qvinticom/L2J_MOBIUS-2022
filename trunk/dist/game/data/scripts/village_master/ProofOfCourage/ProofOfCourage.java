@@ -60,7 +60,7 @@ final class ProofOfCourage extends AbstractNpcAI
 		{
 			return npc.getId() + "-noclass.html";
 		}
-		else if (!CLASSLIST.get(npc.getId()).contains(talker.getClassId()))
+		if (!CLASSLIST.get(npc.getId()).contains(talker.getClassId()))
 		{
 			return npc.getId() + "-no.html";
 		}

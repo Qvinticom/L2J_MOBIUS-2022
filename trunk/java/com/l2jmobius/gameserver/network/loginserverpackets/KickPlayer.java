@@ -38,5 +38,4 @@ public class KickPlayer extends BaseRecievePacket
 	{
 		return _account;
 	}
-	
 }

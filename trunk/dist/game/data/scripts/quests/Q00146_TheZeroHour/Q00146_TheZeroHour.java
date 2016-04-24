@@ -66,14 +66,10 @@ public class Q00146_TheZeroHour extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
-		if (partyMember != null)
+		if ((partyMember != null) && !hasQuestItems(partyMember, FANG))
 		{
-			final QuestState qs = getQuestState(partyMember, false);
-			if (!hasQuestItems(partyMember, FANG))
-			{
-				giveItems(partyMember, FANG, 1);
-				qs.setCond(2, true);
-			}
+			giveItems(partyMember, FANG, 1);
+			getQuestState(partyMember, false).setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

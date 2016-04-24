@@ -115,8 +115,7 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 		if (!BANDIT_STRONGHOLD.isWaitingBattle())
 		{
 			htmltext = getHtm(player.getHtmlPrefix(), "35437-09.html");
-			final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			htmltext = htmltext.replaceAll("%nextSiege%", sdf.format(BANDIT_STRONGHOLD.getSiegeDate().getTime()));
+			htmltext = htmltext.replaceAll("%nextSiege%", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(BANDIT_STRONGHOLD.getSiegeDate().getTime()));
 		}
 		else if ((clan == null) || (clan.getLevel() < 4))
 		{
@@ -139,8 +138,7 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 					if (!BANDIT_STRONGHOLD.isWaitingBattle())
 					{
 						htmltext = getHtm(player.getHtmlPrefix(), "35437-03.html");
-						final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-						htmltext = htmltext.replaceAll("%nextSiege%", sdf.format(BANDIT_STRONGHOLD.getSiegeDate().getTime()));
+						htmltext = htmltext.replaceAll("%nextSiege%", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(BANDIT_STRONGHOLD.getSiegeDate().getTime()));
 					}
 					else
 					{

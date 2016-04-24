@@ -51,8 +51,7 @@ public class AdminPremium implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(19);
-				addPremiumStatus(activeChar, 1, val);
+				addPremiumStatus(activeChar, 1, command.substring(19));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -63,8 +62,7 @@ public class AdminPremium implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(19);
-				addPremiumStatus(activeChar, 2, val);
+				addPremiumStatus(activeChar, 2, command.substring(19));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -75,8 +73,7 @@ public class AdminPremium implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(19);
-				addPremiumStatus(activeChar, 3, val);
+				addPremiumStatus(activeChar, 3, command.substring(19));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -87,8 +84,7 @@ public class AdminPremium implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(19);
-				viewPremiumInfo(activeChar, val);
+				viewPremiumInfo(activeChar, command.substring(19));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -99,8 +95,7 @@ public class AdminPremium implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(21);
-				removePremium(activeChar, val);
+				removePremium(activeChar, command.substring(21));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -124,18 +119,14 @@ public class AdminPremium implements IAdminCommandHandler
 		
 		// TODO: Add check if account exists XD
 		PremiumManager.getInstance().updatePremiumData(months, accountName);
-		final SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm");
-		final long endDate = PremiumManager.getInstance().getPremiumEndDate(accountName);
-		admin.sendMessage("Account " + accountName + " will now have premium status until " + String.valueOf(format.format(endDate)) + ".");
+		admin.sendMessage("Account " + accountName + " will now have premium status until " + String.valueOf(new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(accountName))) + ".");
 	}
 	
 	private void viewPremiumInfo(L2PcInstance admin, String accountName)
 	{
 		if (PremiumManager.getInstance().getPremiumEndDate(accountName) > 0)
 		{
-			final SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm");
-			final long endDate = PremiumManager.getInstance().getPremiumEndDate(accountName);
-			admin.sendMessage("Account " + accountName + " has premium status until " + String.valueOf(format.format(endDate)) + ".");
+			admin.sendMessage("Account " + accountName + " has premium status until " + String.valueOf(new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(accountName))) + ".");
 		}
 		else
 		{

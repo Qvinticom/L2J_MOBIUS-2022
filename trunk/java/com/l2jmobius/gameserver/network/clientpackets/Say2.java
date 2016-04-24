@@ -164,13 +164,10 @@ public final class Say2 extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isJailed() && Config.JAIL_DISABLE_CHAT)
+		if (activeChar.isJailed() && Config.JAIL_DISABLE_CHAT && ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE)))
 		{
-			if ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE))
-			{
-				activeChar.sendMessage("You can not chat with players outside of the jail.");
-				return;
-			}
+			activeChar.sendMessage("You can not chat with players outside of the jail.");
+			return;
 		}
 		
 		if ((chatType == ChatType.PETITION_PLAYER) && activeChar.isGM())
@@ -203,12 +200,9 @@ public final class Say2 extends L2GameClientPacket
 			_logChat.log(record);
 		}
 		
-		if (_text.indexOf(8) >= 0)
+		if ((_text.indexOf(8) >= 0) && !parseAndPublishItem(activeChar))
 		{
-			if (!parseAndPublishItem(activeChar))
-			{
-				return;
-			}
+			return;
 		}
 		
 		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(activeChar, L2World.getInstance().getPlayer(_target), _text, chatType), ChatFilterReturn.class);

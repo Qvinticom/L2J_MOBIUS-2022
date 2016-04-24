@@ -216,12 +216,7 @@ public final class InitialShortcutData implements IXmlReader
 	private Shortcut createShortcut(int pageId, Node b)
 	{
 		final NamedNodeMap attrs = b.getAttributes();
-		final int slotId = parseInteger(attrs, "slotId");
-		final ShortcutType shortcutType = parseEnum(attrs, ShortcutType.class, "shortcutType");
-		final int shortcutId = parseInteger(attrs, "shortcutId");
-		final int shortcutLevel = parseInteger(attrs, "shortcutLevel", 0);
-		final int characterType = parseInteger(attrs, "characterType", 0);
-		return new Shortcut(slotId, pageId, shortcutType, shortcutId, shortcutLevel, characterType);
+		return new Shortcut(parseInteger(attrs, "slotId"), pageId, parseEnum(attrs, ShortcutType.class, "shortcutType"), parseInteger(attrs, "shortcutId"), parseInteger(attrs, "shortcutLevel", 0), parseInteger(attrs, "characterType", 0));
 	}
 	
 	/**

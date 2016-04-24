@@ -41,10 +41,6 @@ public class ConditionTargetNpcId extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		if ((effected != null) && (effected.isNpc() || effected.isDoor()))
-		{
-			return _npcIds.contains(effected.getId());
-		}
-		return false;
+		return (effected != null) && (effected.isNpc() || effected.isDoor()) && _npcIds.contains(effected.getId());
 	}
 }

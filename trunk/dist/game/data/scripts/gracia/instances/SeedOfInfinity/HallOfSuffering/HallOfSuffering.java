@@ -232,8 +232,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 				party.broadcastPacket(sm);
 				return false;
 			}
-			final long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
-			if (System.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 				sm.addPcName(partyMember);
@@ -457,9 +456,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 	
 	private String getPtLeaderText(L2PcInstance player, HSWorld world)
 	{
-		String htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/scripts/gracia/instances/SeedOfInfinity/HallOfSuffering/32530-10.htm");
-		htmltext = htmltext.replaceAll("%ptLeader%", String.valueOf(world.ptLeaderName));
-		return htmltext;
+		return HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/scripts/gracia/instances/SeedOfInfinity/HallOfSuffering/32530-10.htm").replaceAll("%ptLeader%", String.valueOf(world.ptLeaderName));
 	}
 	
 	@Override
@@ -619,20 +616,17 @@ public final class HallOfSuffering extends AbstractNpcAI
 					runTwins(world);
 				}
 			}
-			else if ((world.getStatus() == 6) && ((npc.getId() == KLODEKUS) || (npc.getId() == KLANIKUS)))
+			else if ((world.getStatus() == 6) && ((npc.getId() == KLODEKUS) || (npc.getId() == KLANIKUS)) && world.klanikus.isDead() && world.klodekus.isDead())
 			{
-				if (world.klanikus.isDead() && world.klodekus.isDead())
-				{
-					world.incStatus();
-					// instance end
-					calcRewardItemId(world);
-					world.klanikus = null;
-					world.klodekus = null;
-					cancelQuestTimers("ressurectTwin");
-					cancelQuestTimers("spawnBossGuards");
-					cancelQuestTimers("isTwinSeparated");
-					addSpawn(TEPIOS, TEPIOS_SPAWN, false, 0, false, world.getInstanceId());
-				}
+				world.incStatus();
+				// instance end
+				calcRewardItemId(world);
+				world.klanikus = null;
+				world.klodekus = null;
+				cancelQuestTimers("ressurectTwin");
+				cancelQuestTimers("spawnBossGuards");
+				cancelQuestTimers("isTwinSeparated");
+				addSpawn(TEPIOS, TEPIOS_SPAWN, false, 0, false, world.getInstanceId());
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

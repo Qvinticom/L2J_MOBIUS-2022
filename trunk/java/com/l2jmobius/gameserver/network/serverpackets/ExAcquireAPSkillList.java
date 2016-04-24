@@ -44,12 +44,9 @@ public class ExAcquireAPSkillList extends L2GameServerPacket
 		for (L2SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
 		{
 			final Skill knownSkill = activeChar.getKnownSkill(sk.getSkillId());
-			if (knownSkill != null)
+			if ((knownSkill != null) && (knownSkill.getLevel() == sk.getSkillLevel()))
 			{
-				if (knownSkill.getLevel() == sk.getSkillLevel())
-				{
-					_skills.add(knownSkill);
-				}
+				_skills.add(knownSkill);
 			}
 		}
 		_enable = !activeChar.isSubClassActive() && (activeChar.getLevel() >= 99) && activeChar.isNoble();

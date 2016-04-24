@@ -605,21 +605,15 @@ final class AteliaStatus extends AbstractNpcAI
 		final int chance = getRandom(1000);
 		if (Util.contains(ATELIA_CURSE, npc.getId()))
 		{
-			if (!npc.isCastingNow())
+			if (!npc.isCastingNow() && (chance <= 20))
 			{
-				if (chance <= 20)
-				{
-					npc.setTarget(attacker);
-					npc.doCast(ATELIA_POISON[getRandom(ATELIA_POISON.length)].getSkill());
-				}
+				npc.setTarget(attacker);
+				npc.doCast(ATELIA_POISON[getRandom(ATELIA_POISON.length)].getSkill());
 			}
 		}
-		else if (Util.contains(FLOOR_MOBS, npc.getId()))
+		else if (Util.contains(FLOOR_MOBS, npc.getId()) && (chance > 90))
 		{
-			if (chance > 90)
-			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, ATELIA_MSG[getRandom(1)], attacker.getName());
-			}
+			broadcastNpcSay(npc, ChatType.NPC_GENERAL, ATELIA_MSG[getRandom(1)], attacker.getName());
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

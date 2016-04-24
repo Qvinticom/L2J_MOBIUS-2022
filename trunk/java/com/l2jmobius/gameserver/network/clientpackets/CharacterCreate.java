@@ -167,7 +167,7 @@ public final class CharacterCreate extends L2GameClientPacket
 				sendPacket(new CharCreateFail(CharCreateFail.REASON_TOO_MANY_CHARACTERS));
 				return;
 			}
-			else if (CharNameTable.getInstance().doesCharNameExist(_name))
+			if (CharNameTable.getInstance().doesCharNameExist(_name))
 			{
 				if (Config.DEBUG)
 				{
@@ -258,9 +258,7 @@ public final class CharacterCreate extends L2GameClientPacket
 					break;
 				}
 			}
-			
-			final PcAppearance app = new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0);
-			newChar = L2PcInstance.create(template, getClient().getAccountName(), _name, app);
+			newChar = L2PcInstance.create(template, getClient().getAccountName(), _name, (new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0)));
 		}
 		
 		// HP and MP are at maximum and CP is zero by default.

@@ -642,19 +642,12 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				final int[] zoneTeleport = NOEXIT_ZONES.get(zone.getId());
 				if (zoneTeleport != null)
 				{
-					final Collection<L2Character> knowns = character.getKnownList().getKnownCharactersInRadius(700);
-					for (L2Character npcs : knowns)
+					for (L2Character npcs : character.getKnownList().getKnownCharactersInRadius(700))
 					{
-						if (!(npcs instanceof L2Npc))
+						if (!(npcs instanceof L2Npc) || npcs.isDead())
 						{
 							continue;
 						}
-						
-						if (npcs.isDead())
-						{
-							continue;
-						}
-						
 						teleportPlayer(character.getActingPlayer(), zoneTeleport, world.getInstanceId());
 						break;
 					}
@@ -680,18 +673,12 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		final Collection<L2Character> knowns = npc.getKnownList().getKnownCharactersInRadius(700);
 		for (L2Character npcs : knowns)
 		{
-			if (!(npcs instanceof L2Npc))
-			{
-				continue;
-			}
-			
-			if (npcs.isDead())
+			if (!(npcs instanceof L2Npc) || npcs.isDead())
 			{
 				continue;
 			}
 			
 			final L2Npc knownNpc = (L2Npc) npcs;
-			
 			switch (npc.getId())
 			{
 				case VARKA_SILENOS_FOOTMAN:
@@ -742,18 +729,12 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		// We didnt find any mob on the first row alive, so despawn the second row mobs.
 		for (L2Character npcs : knowns)
 		{
-			if (!(npcs instanceof L2Npc))
-			{
-				continue;
-			}
-			
-			if (npcs.isDead())
+			if (!(npcs instanceof L2Npc) || npcs.isDead())
 			{
 				continue;
 			}
 			
 			final L2Npc knownNpc = (L2Npc) npcs;
-			
 			switch (npc.getId())
 			{
 				case VARKA_SILENOS_FOOTMAN:
@@ -861,7 +842,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		npc.setTarget(player);
 		npc.doCast(SkillData.getInstance().getSkill(skillId, level));
 		buff_counter--;
-		return;
 	}
 	
 	private static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
@@ -882,12 +862,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return;
 			}
-			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-			if (inst != null)
+			if (InstanceManager.getInstance().getInstance(world.getInstanceId()) != null)
 			{
-				// Check max summon levels.
 				checkMaxSummonLevel(player);
-				
 				teleportPlayer(player, TELEPORT, world.getInstanceId());
 			}
 		}
@@ -913,12 +890,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	private final void checkMaxSummonLevel(L2PcInstance player)
 	{
 		final L2Summon pet = player.getPet();
-		if (pet instanceof L2PetInstance)
+		if ((pet instanceof L2PetInstance) && (pet.getLevel() > MAX_SUMMON_LEVEL))
 		{
-			if (pet.getLevel() > MAX_SUMMON_LEVEL)
-			{
-				pet.unSummon(player);
-			}
+			pet.unSummon(player);
 		}
 	}
 }

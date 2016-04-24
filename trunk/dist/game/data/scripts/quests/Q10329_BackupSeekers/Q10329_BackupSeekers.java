@@ -125,7 +125,6 @@ public class Q10329_BackupSeekers extends Quest
 					addExpAndSp(player, 16900, 5);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
 				break;
 			}
@@ -200,7 +199,6 @@ public class Q10329_BackupSeekers extends Quest
 					npc.getVariables().set("MOVE_INDEX", 0);
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.YOU_MUST_BE_THE_ONE_KAKAI_TALKED_ABOUT));
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.YOU_SHOULD_RIDE_KUKURI_TO_GO_TO_YE_SAGIRA));
-					break;
 				}
 				else if (qs.isMemoState(2))
 				{
@@ -211,7 +209,6 @@ public class Q10329_BackupSeekers extends Quest
 					npc.getVariables().set("MOVE_INDEX", 0);
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.OPEN_YOUR_MAP_WHEN_YOU_ARRIVE_AT_YE_SAGIRA));
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.IT_S_HARD_TO_TELL_WHERE_YOU_ARE_AT_WITHOUT_A_MAP_IN_YE_SAGIRA));
-					break;
 				}
 				break;
 			}

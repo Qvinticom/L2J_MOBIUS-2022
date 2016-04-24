@@ -184,11 +184,7 @@ public class Q10363_RequestOfTheSeeker extends Quest
 	@Override
 	public String onSocialActionSee(L2Npc npc, L2PcInstance caster, int actionId)
 	{
-		if ((caster == null) || (npc == null))
-		{
-			return super.onSocialActionSee(npc, caster, actionId);
-		}
-		if ((caster.getTarget() == null) || !caster.getTarget().isNpc())
+		if ((caster == null) || (npc == null) || (caster.getTarget() == null) || !caster.getTarget().isNpc())
 		{
 			return super.onSocialActionSee(npc, caster, actionId);
 		}
@@ -200,7 +196,6 @@ public class Q10363_RequestOfTheSeeker extends Quest
 			if (distance > distanceLimit)
 			{
 				showOnScreenMsg(caster, NpcStringId.YOU_ARE_TOO_FAR_FROM_THE_CORPSE_TO_SHOW_YOUR_CONDOLENCES, ExShowScreenMessage.TOP_CENTER, 10000);
-				npc.deleteMe();
 			}
 			else if (qs != null)
 			{
@@ -210,41 +205,35 @@ public class Q10363_RequestOfTheSeeker extends Quest
 					{
 						showOnScreenMsg(caster, NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_ONE_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
 						qs.setCond(2, true);
-						npc.deleteMe();
 						break;
 					}
 					case 2:
 					{
 						showOnScreenMsg(caster, NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_SECOND_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
 						qs.setCond(3, true);
-						npc.deleteMe();
 						break;
 					}
 					case 3:
 					{
 						showOnScreenMsg(caster, NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_THIRD_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
 						qs.setCond(4, true);
-						npc.deleteMe();
 						break;
 					}
 					case 4:
 					{
 						showOnScreenMsg(caster, NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_FOURTH_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
 						qs.setCond(5, true);
-						npc.deleteMe();
 						break;
 					}
 					case 5:
 					{
 						showOnScreenMsg(caster, NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_FIFTH_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
 						qs.setCond(6, true);
-						npc.deleteMe();
 						break;
 					}
 					default:
 					{
 						showOnScreenMsg(caster, NpcStringId.GRUDGE_OF_YE_SAGIRA_VICTIMS_HAVE_BEEN_RELIEVED_WITH_YOUR_TEARS, ExShowScreenMessage.TOP_CENTER, 10000);
-						npc.deleteMe();
 						break;
 					}
 				}
@@ -260,12 +249,10 @@ public class Q10363_RequestOfTheSeeker extends Quest
 			if (distance > distanceLimit)
 			{
 				showOnScreenMsg(caster, NpcStringId.YOU_ARE_TOO_FAR_FROM_THE_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
-				npc.deleteMe();
 			}
 			else if ((qs == null) || (qs.getState() != State.STARTED))
 			{
 				addSpawn(getRandom(1) == 0 ? CRAWLER : STALKER, npc.getLocation());
-				npc.deleteMe();
 			}
 			else
 			{
@@ -278,14 +265,13 @@ public class Q10363_RequestOfTheSeeker extends Quest
 				Spirit2.setCurrentHp(Spirit2.getMaxHp() / 2);
 				addAttackDesire(Spirit2, caster);
 				startQuestTimer("life_over", 20000, Spirit2, caster);
-				npc.deleteMe();
 			}
 		}
 		else
 		{
 			addSpawn(getRandom(1) == 0 ? CRAWLER : STALKER, ((L2Npc) caster.getTarget()).getLocation());
-			npc.deleteMe();
 		}
+		npc.deleteMe();
 		return super.onSocialActionSee(npc, caster, actionId);
 	}
 }

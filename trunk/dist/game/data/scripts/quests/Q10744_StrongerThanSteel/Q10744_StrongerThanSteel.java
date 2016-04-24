@@ -90,12 +90,7 @@ public class Q10744_StrongerThanSteel extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		
-		if (qs.isCompleted())
-		{
-			htmltext = getAlreadyCompletedMsg(player);
-		}
+		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{

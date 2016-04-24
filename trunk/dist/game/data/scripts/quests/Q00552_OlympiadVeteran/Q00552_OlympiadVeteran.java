@@ -130,50 +130,52 @@ public class Q00552_OlympiadVeteran extends Quest
 			}
 		}
 		
-		if (looser != null)
+		if (looser == null)
 		{
-			final L2PcInstance player = looser.getPlayer();
-			if (player == null)
+			return;
+		}
+		final L2PcInstance player = looser.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		final QuestState qs = getQuestState(player, false);
+		if ((qs == null) || !qs.isStarted())
+		{
+			return;
+		}
+		int matches;
+		switch (type)
+		{
+			case CLASSED:
 			{
-				return;
-			}
-			final QuestState qs = getQuestState(player, false);
-			if ((qs != null) && qs.isStarted())
-			{
-				int matches;
-				switch (type)
+				matches = qs.getInt("classed") + 1;
+				qs.set("classed", String.valueOf(matches));
+				if (matches == 5)
 				{
-					case CLASSED:
-					{
-						matches = qs.getInt("classed") + 1;
-						qs.set("classed", String.valueOf(matches));
-						if (matches == 5)
-						{
-							giveItems(player, CLASS_BATTLE_CERTIFICATE, 1);
-						}
-						break;
-					}
-					case NON_CLASSED:
-					{
-						matches = qs.getInt("nonclassed") + 1;
-						qs.set("nonclassed", String.valueOf(matches));
-						if (matches == 5)
-						{
-							giveItems(player, CLASS_FREE_BATTLE_CERTIFICATE, 1);
-						}
-						break;
-					}
-					case TEAMS:
-					{
-						matches = qs.getInt("teams") + 1;
-						qs.set("teams", String.valueOf(matches));
-						if (matches == 5)
-						{
-							giveItems(player, TEAM_EVENT_CERTIFICATE, 1);
-						}
-						break;
-					}
+					giveItems(player, CLASS_BATTLE_CERTIFICATE, 1);
 				}
+				break;
+			}
+			case NON_CLASSED:
+			{
+				matches = qs.getInt("nonclassed") + 1;
+				qs.set("nonclassed", String.valueOf(matches));
+				if (matches == 5)
+				{
+					giveItems(player, CLASS_FREE_BATTLE_CERTIFICATE, 1);
+				}
+				break;
+			}
+			case TEAMS:
+			{
+				matches = qs.getInt("teams") + 1;
+				qs.set("teams", String.valueOf(matches));
+				if (matches == 5)
+				{
+					giveItems(player, TEAM_EVENT_CERTIFICATE, 1);
+				}
+				break;
 			}
 		}
 	}

@@ -68,8 +68,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					final int grandBossId = Integer.parseInt(st.nextToken());
-					manageHtml(activeChar, grandBossId);
+					manageHtml(activeChar, Integer.parseInt(st.nextToken()));
 				}
 				else
 				{
@@ -138,9 +137,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					final int grandBossId = Integer.parseInt(st.nextToken());
-					
-					switch (grandBossId)
+					switch (Integer.parseInt(st.nextToken()))
 					{
 						case ANTHARAS:
 						{

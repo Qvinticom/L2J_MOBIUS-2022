@@ -165,15 +165,9 @@ public final class IceQueensCastle extends AbstractInstance
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		
-		if ((tmpworld != null) && (tmpworld instanceof IQCWorld))
+		if ((tmpworld != null) && (tmpworld instanceof IQCWorld) && (skill == ETHERNAL_BLIZZARD.getSkill()) && (((IQCWorld) tmpworld).player != null))
 		{
-			final IQCWorld world = (IQCWorld) tmpworld;
-			
-			if ((skill == ETHERNAL_BLIZZARD.getSkill()) && (world.player != null))
-			{
-				startQuestTimer("TIMER_SCENE_21", 1000, npc, world.player);
-			}
+			startQuestTimer("TIMER_SCENE_21", 1000, npc, ((IQCWorld) tmpworld).player);
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}

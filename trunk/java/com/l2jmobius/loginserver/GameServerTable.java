@@ -277,11 +277,7 @@ public final class GameServerTable implements IXmlReader
 	 */
 	private String hexToString(byte[] hex)
 	{
-		if (hex == null)
-		{
-			return "null";
-		}
-		return new BigInteger(hex).toString(16);
+		return hex == null ? "null" : new BigInteger(hex).toString(16);
 	}
 	
 	/**
@@ -458,11 +454,7 @@ public final class GameServerTable implements IXmlReader
 		 */
 		public int getCurrentPlayerCount()
 		{
-			if (_gst == null)
-			{
-				return 0;
-			}
-			return _gst.getPlayerCount();
+			return _gst == null ? 0 : _gst.getPlayerCount();
 		}
 		
 		/**

@@ -307,17 +307,19 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 		public void run()
 		{
 			int fuel = getFuel();
-			if (fuel > 0)
+			if (fuel <= 0)
 			{
-				fuel -= 10;
-				if (fuel < 0)
-				{
-					fuel = 0;
-				}
-				
-				setFuel(fuel);
-				updateAbnormalVisualEffects();
+				return;
 			}
+			
+			fuel -= 10;
+			if (fuel < 0)
+			{
+				fuel = 0;
+			}
+			
+			setFuel(fuel);
+			updateAbnormalVisualEffects();
 		}
 	}
 	

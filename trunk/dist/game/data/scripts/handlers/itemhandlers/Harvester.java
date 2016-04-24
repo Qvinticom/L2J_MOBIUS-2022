@@ -39,7 +39,7 @@ public final class Harvester implements IItemHandler
 		{
 			return false;
 		}
-		else if (!playable.isPlayer())
+		if (!playable.isPlayer())
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;

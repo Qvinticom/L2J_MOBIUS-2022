@@ -139,8 +139,7 @@ public class ListenerTest extends AbstractNpcAI
 		// Make sure a player killed this monster.
 		if ((event.getAttacker() != null) && event.getAttacker().isPlayable() && event.getTarget().isAttackable())
 		{
-			final L2Attackable monster = (L2Attackable) event.getTarget();
-			monster.dropItem(event.getAttacker().getActingPlayer(), new ItemHolder(57, Rnd.get(100, 1000)));
+			((L2Attackable) event.getTarget()).dropItem(event.getAttacker().getActingPlayer(), new ItemHolder(57, Rnd.get(100, 1000)));
 		}
 	}
 	

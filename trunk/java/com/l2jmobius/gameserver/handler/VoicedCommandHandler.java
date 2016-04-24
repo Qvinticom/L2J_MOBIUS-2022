@@ -34,8 +34,7 @@ public class VoicedCommandHandler implements IHandler<IVoicedCommandHandler, Str
 	@Override
 	public void registerHandler(IVoicedCommandHandler handler)
 	{
-		final String[] ids = handler.getVoicedCommandList();
-		for (String id : ids)
+		for (String id : handler.getVoicedCommandList())
 		{
 			_datatable.put(id, handler);
 		}
@@ -44,8 +43,7 @@ public class VoicedCommandHandler implements IHandler<IVoicedCommandHandler, Str
 	@Override
 	public synchronized void removeHandler(IVoicedCommandHandler handler)
 	{
-		final String[] ids = handler.getVoicedCommandList();
-		for (String id : ids)
+		for (String id : handler.getVoicedCommandList())
 		{
 			_datatable.remove(id);
 		}
@@ -54,12 +52,7 @@ public class VoicedCommandHandler implements IHandler<IVoicedCommandHandler, Str
 	@Override
 	public IVoicedCommandHandler getHandler(String voicedCommand)
 	{
-		String command = voicedCommand;
-		if (voicedCommand.contains(" "))
-		{
-			command = voicedCommand.substring(0, voicedCommand.indexOf(" "));
-		}
-		return _datatable.get(command);
+		return _datatable.get((voicedCommand.contains(" ") ? voicedCommand.substring(0, voicedCommand.indexOf(" ")) : voicedCommand));
 	}
 	
 	@Override

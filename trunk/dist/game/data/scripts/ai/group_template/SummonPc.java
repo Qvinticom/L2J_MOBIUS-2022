@@ -65,16 +65,9 @@ final class SummonPc extends AbstractNpcAI
 				doSummonPc(npc, attacker);
 			}
 		}
-		else if (distance > MIN_DISTANCE_MOST_HATED)
+		else if ((distance > MIN_DISTANCE_MOST_HATED) && (((L2Attackable) npc).getMostHated() != null) && (((((L2Attackable) npc).getMostHated() == attacker) && (chance < 50)) || (chance < 10)))
 		{
-			final L2Attackable monster = (L2Attackable) npc;
-			if (monster.getMostHated() != null)
-			{
-				if (((monster.getMostHated() == attacker) && (chance < 50)) || (chance < 10))
-				{
-					doSummonPc(npc, attacker);
-				}
-			}
+			doSummonPc(npc, attacker);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

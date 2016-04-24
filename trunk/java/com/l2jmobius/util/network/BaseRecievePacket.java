@@ -46,15 +46,12 @@ public abstract class BaseRecievePacket
 	
 	public int readC()
 	{
-		final int result = _decrypt[_off++] & 0xff;
-		return result;
+		return _decrypt[_off++] & 0xff;
 	}
 	
 	public int readH()
 	{
-		int result = _decrypt[_off++] & 0xff;
-		result |= (_decrypt[_off++] << 8) & 0xff00;
-		return result;
+		return (_decrypt[_off++] & 0xff) | ((_decrypt[_off++] << 8) & 0xff00);
 	}
 	
 	public double readF()

@@ -78,14 +78,7 @@ public final class Q00184_ArtOfPersuasion extends Quest
 			}
 			case "30621-03.htm":
 			{
-				if (player.getLevel() >= MIN_LEVEL)
-				{
-					htmltext = event;
-				}
-				else
-				{
-					htmltext = "30621-03a.htm";
-				}
+				htmltext = player.getLevel() >= MIN_LEVEL ? event : "30621-03a.htm";
 				break;
 			}
 			case "30621-04.htm":
@@ -146,14 +139,10 @@ public final class Q00184_ArtOfPersuasion extends Quest
 						htmltext = "30673-10.htm";
 						qs.exitQuest(false, true);
 					}
+					giveAdena(player, 72527, true);
 					if (player.getLevel() < MAX_LEVEL_FOR_EXP_SP)
 					{
-						giveAdena(player, 72527, true);
 						addExpAndSp(player, 203717, 14032);
-					}
-					else
-					{
-						giveAdena(player, 72527, true);
 					}
 				}
 				break;
@@ -276,12 +265,9 @@ public final class Q00184_ArtOfPersuasion extends Quest
 				}
 			}
 		}
-		else if (qs.isCompleted())
+		else if (qs.isCompleted() && (npc.getId() == MAESTRO_NIKOLA))
 		{
-			if (npc.getId() == MAESTRO_NIKOLA)
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-			}
+			htmltext = getAlreadyCompletedMsg(player);
 		}
 		return htmltext;
 	}

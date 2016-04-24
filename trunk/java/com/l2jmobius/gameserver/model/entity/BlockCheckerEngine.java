@@ -496,14 +496,7 @@ public final class BlockCheckerEngine
 					spawn.init();
 					final L2BlockInstance block = (L2BlockInstance) spawn.getLastSpawn();
 					// switch color
-					if ((random % 2) == 0)
-					{
-						block.setRed(true);
-					}
-					else
-					{
-						block.setRed(false);
-					}
+					block.setRed((random % 2) == 0);
 					
 					block.disableCoreAI(true);
 					_spawns.add(spawn);
@@ -542,9 +535,7 @@ public final class BlockCheckerEngine
 			_redPoints += _numOfBoxes / 2;
 			_bluePoints += _numOfBoxes / 2;
 			
-			final int timeLeft = (int) ((getStarterTime() - System.currentTimeMillis()) / 1000);
-			final ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, getBluePoints(), getRedPoints());
-			getHolder().broadCastPacketToTeam(changePoints);
+			getHolder().broadCastPacketToTeam((new ExCubeGameChangePoints((int) ((getStarterTime() - System.currentTimeMillis()) / 1000), getBluePoints(), getRedPoints())));
 		}
 	}
 	
@@ -622,7 +613,7 @@ public final class BlockCheckerEngine
 				return;
 			}
 			
-			_isRedWinner = _redPoints > _bluePoints ? true : false;
+			_isRedWinner = _redPoints > _bluePoints;
 			
 			if (_isRedWinner)
 			{
@@ -710,9 +701,7 @@ public final class BlockCheckerEngine
 		 */
 		private void rewardAsLooser(boolean isRed)
 		{
-			final Map<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
-			
-			for (Entry<L2PcInstance, Integer> entry : tempPoints.entrySet())
+			for (Entry<L2PcInstance, Integer> entry : (isRed ? _redTeamPoints : _blueTeamPoints).entrySet())
 			{
 				final L2PcInstance player = entry.getKey();
 				if ((player != null) && (entry.getValue() >= 10))
@@ -745,13 +734,11 @@ public final class BlockCheckerEngine
 				final PcInventory inv = player.getInventory();
 				if (inv.getItemByItemId(13787) != null)
 				{
-					final long count = inv.getInventoryItemCount(13787, 0);
-					inv.destroyItemByItemId("Handys Block Checker", 13787, count, player, player);
+					inv.destroyItemByItemId("Handys Block Checker", 13787, inv.getInventoryItemCount(13787, 0), player, player);
 				}
 				if (inv.getItemByItemId(13788) != null)
 				{
-					final long count = inv.getInventoryItemCount(13788, 0);
-					inv.destroyItemByItemId("Handys Block Checker", 13788, count, player, player);
+					inv.destroyItemByItemId("Handys Block Checker", 13788, inv.getInventoryItemCount(13788, 0), player, player);
 				}
 				broadcastRelationChanged(player);
 				// Teleport Back

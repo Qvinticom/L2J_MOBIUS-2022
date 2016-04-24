@@ -68,13 +68,7 @@ public final class RequestRestartPoint extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if (!activeChar.canRevive())
+		if ((activeChar == null) || !activeChar.canRevive())
 		{
 			return;
 		}
@@ -84,25 +78,22 @@ public final class RequestRestartPoint extends L2GameClientPacket
 			activeChar.stopFakeDeath(true);
 			return;
 		}
-		else if (!activeChar.isDead())
+		if (!activeChar.isDead())
 		{
 			_log.warning("Living player [" + activeChar.getName() + "] called RestartPointPacket! Ban this player!");
 			return;
 		}
 		
 		final Castle castle = CastleManager.getInstance().getCastle(activeChar.getX(), activeChar.getY(), activeChar.getZ());
-		if ((castle != null) && castle.getSiege().isInProgress())
+		if ((castle != null) && castle.getSiege().isInProgress() && (activeChar.getClan() != null) && castle.getSiege().checkIsAttacker(activeChar.getClan()))
 		{
-			if ((activeChar.getClan() != null) && castle.getSiege().checkIsAttacker(activeChar.getClan()))
+			// Schedule respawn delay for attacker
+			ThreadPoolManager.getInstance().scheduleGeneral(new DeathTask(activeChar), castle.getSiege().getAttackerRespawnDelay());
+			if (castle.getSiege().getAttackerRespawnDelay() > 0)
 			{
-				// Schedule respawn delay for attacker
-				ThreadPoolManager.getInstance().scheduleGeneral(new DeathTask(activeChar), castle.getSiege().getAttackerRespawnDelay());
-				if (castle.getSiege().getAttackerRespawnDelay() > 0)
-				{
-					activeChar.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");
-				}
-				return;
+				activeChar.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");
 			}
+			return;
 		}
 		
 		portPlayer(activeChar);

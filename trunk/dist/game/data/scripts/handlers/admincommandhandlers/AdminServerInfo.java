@@ -92,9 +92,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 		time -= TimeUnit.DAYS.toMillis(days);
 		final long hours = TimeUnit.MILLISECONDS.toHours(time);
 		time -= TimeUnit.HOURS.toMillis(hours);
-		final long minutes = TimeUnit.MILLISECONDS.toMinutes(time);
-		
-		return days + " Days, " + hours + " Hours, " + minutes + " Minutes";
+		return days + " Days, " + hours + " Hours, " + TimeUnit.MILLISECONDS.toMinutes(time) + " Minutes";
 	}
 	
 	private String buildTheardInfo(String category)

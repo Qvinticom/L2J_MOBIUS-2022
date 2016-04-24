@@ -96,7 +96,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				{
 					return getNoQuestMsg(player);
 				}
-				else if ((hekaton != null) && !hekaton.isDead())
+				if ((hekaton != null) && !hekaton.isDead())
 				{
 					return "32711-09.html";
 				}

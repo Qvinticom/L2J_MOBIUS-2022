@@ -47,7 +47,7 @@ public final class RequestDuelStart extends L2GameClientPacket
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
 		final L2PcInstance targetChar = L2World.getInstance().getPlayer(_player);
-		final boolean isPartyDuel = _partyDuel == 1 ? true : false;
+		final boolean isPartyDuel = _partyDuel == 1;
 		if ((activeChar == null) || (targetChar == null))
 		{
 			return;
@@ -73,11 +73,7 @@ public final class RequestDuelStart extends L2GameClientPacket
 			return;
 		}
 		// Check if duel is possible
-		if (!DuelManager.canDuel(activeChar, activeChar, isPartyDuel))
-		{
-			return;
-		}
-		if (!DuelManager.canDuel(activeChar, targetChar, isPartyDuel))
+		if (!DuelManager.canDuel(activeChar, activeChar, isPartyDuel) || !DuelManager.canDuel(activeChar, targetChar, isPartyDuel))
 		{
 			return;
 		}

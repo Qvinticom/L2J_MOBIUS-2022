@@ -24,7 +24,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.quest.QuestTimer;
 
 import ai.npc.AbstractNpcAI;
 
@@ -62,8 +61,7 @@ final class Anais extends AbstractNpcAI
 		if (pot < 4)
 		{
 			_current = npc;
-			final QuestTimer checkAround = getQuestTimer("CHECK", anais, null);
-			if (checkAround == null) // || !checkAround.getIsActive()
+			if (getQuestTimer("CHECK", anais, null) == null)
 			{
 				startQuestTimer("CHECK", 3000, anais, null);
 			}

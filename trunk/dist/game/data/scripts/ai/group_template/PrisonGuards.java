@@ -78,14 +78,11 @@ final class PrisonGuards extends AbstractNpcAI
 		{
 			if (player.isAffectedBySkill(TIMER))
 			{
-				if ((getRandom(100) < 10) && (npc.calculateDistance(player, true, false) < 100))
+				if ((getRandom(100) < 10) && (npc.calculateDistance(player, true, false) < 100) && (getQuestItemsCount(player, STAMP) <= 3) && npc.isScriptValue(0))
 				{
-					if ((getQuestItemsCount(player, STAMP) <= 3) && npc.isScriptValue(0))
-					{
-						giveItems(player, STAMP, 1);
-						npc.setScriptValue(1);
-						startQuestTimer("CLEAR_STATUS", 600000, npc, null);
-					}
+					giveItems(player, STAMP, 1);
+					npc.setScriptValue(1);
+					startQuestTimer("CLEAR_STATUS", 600000, npc, null);
 				}
 			}
 			else

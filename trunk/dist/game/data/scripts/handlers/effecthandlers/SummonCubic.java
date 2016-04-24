@@ -89,12 +89,7 @@ public final class SummonCubic extends AbstractEffect
 		// 8 at 101 (+1 Power)
 		// 12 at 130 (+30 Power)
 		// Because 12 is max 5115-5117 skills
-		int _cubicSkillLevel = info.getSkill().getLevel();
-		if (_cubicSkillLevel > 100)
-		{
-			_cubicSkillLevel = ((info.getSkill().getLevel() - 100) / 7) + 8;
-		}
-		
+		final int _cubicSkillLevel = info.getSkill().getLevel() > 100 ? ((info.getSkill().getLevel() - 100) / 7) + 8 : info.getSkill().getLevel();
 		// If cubic is already present, it's replaced.
 		final L2CubicInstance cubic = player.getCubicById(_cubicId);
 		if (cubic != null)

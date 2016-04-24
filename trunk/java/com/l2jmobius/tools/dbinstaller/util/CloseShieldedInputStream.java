@@ -115,11 +115,7 @@ public class CloseShieldedInputStream extends InputStream
 	@Override
 	public boolean markSupported()
 	{
-		if (_in == null)
-		{
-			return false;
-		}
-		return _in.markSupported();
+		return (_in != null) && _in.markSupported();
 	}
 	
 	/**

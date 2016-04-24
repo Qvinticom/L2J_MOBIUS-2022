@@ -37,29 +37,13 @@ public class L2PetManagerInstance extends L2MerchantInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		
-		if (val == 0)
-		{
-			pom = "" + npcId;
-		}
-		else
-		{
-			pom = npcId + "-" + val;
-		}
-		
-		return "html/petmanager/" + pom + ".htm";
+		return "html/petmanager/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
 	}
 	
 	@Override
 	public void showChatWindow(L2PcInstance player)
 	{
-		String filename = "html/petmanager/" + getId() + ".htm";
-		if ((getId() == 36478) && player.hasSummon())
-		{
-			filename = "html/petmanager/restore-unsummonpet.htm";
-		}
-		
+		final String filename = (getId() == 36478) && player.hasSummon() ? "html/petmanager/restore-unsummonpet.htm" : "html/petmanager/" + getId() + ".htm";
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(player.getHtmlPrefix(), filename);
 		if (Config.ALLOW_RENTPET && Config.LIST_PET_RENT_NPC.contains(getId()))
@@ -76,9 +60,7 @@ public class L2PetManagerInstance extends L2MerchantInstance
 	{
 		if (command.startsWith("exchange"))
 		{
-			final String[] params = command.split(" ");
-			final int val = Integer.parseInt(params[1]);
-			switch (val)
+			switch (Integer.parseInt(command.split(" ")[1]))
 			{
 				case 1:
 				{
@@ -196,12 +178,11 @@ public class L2PetManagerInstance extends L2MerchantInstance
 		{
 			player.addItem("", itemIdgive, 1, this, true);
 			html.setFile(player.getHtmlPrefix(), "html/petmanager/" + getId() + ".htm");
-			player.sendPacket(html);
 		}
 		else
 		{
 			html.setFile(player.getHtmlPrefix(), "html/petmanager/exchange_no.htm");
-			player.sendPacket(html);
 		}
+		player.sendPacket(html);
 	}
 }

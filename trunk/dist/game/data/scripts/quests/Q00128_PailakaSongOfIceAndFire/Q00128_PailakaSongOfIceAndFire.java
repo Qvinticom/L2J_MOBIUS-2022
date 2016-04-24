@@ -211,14 +211,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 					}
 					case State.STARTED:
 					{
-						if (qs.getCond() > 1)
-						{
-							htmltext = "32497-00.htm";
-						}
-						else
-						{
-							htmltext = "32497-03.htm";
-						}
+						htmltext = qs.getCond() > 1 ? "32497-00.htm" : "32497-03.htm";
 						break;
 					}
 					case State.COMPLETED:
@@ -236,14 +229,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 			}
 			case SINAI:
 			{
-				if (qs.getCond() > 1)
-				{
-					htmltext = "32500-00.htm";
-				}
-				else
-				{
-					htmltext = "32500-01.htm";
-				}
+				htmltext = qs.getCond() > 1 ? "32500-00.htm" : "32500-01.htm";
 				break;
 			}
 			case INSPECTOR:

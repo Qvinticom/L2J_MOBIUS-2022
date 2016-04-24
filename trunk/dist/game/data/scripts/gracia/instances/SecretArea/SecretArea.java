@@ -86,7 +86,7 @@ public final class SecretArea extends Quest
 			enterInstance(player);
 			return "32566-01.html";
 		}
-		else if ((npc.getId() == LELRIKIA) && event.equalsIgnoreCase("exit"))
+		if ((npc.getId() == LELRIKIA) && event.equalsIgnoreCase("exit"))
 		{
 			teleportPlayer(player, TELEPORTS[EXIT], 0);
 			return "32567-01.html";

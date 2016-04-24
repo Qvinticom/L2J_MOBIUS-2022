@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
@@ -85,75 +84,85 @@ public class EnchantItemBonusData implements IXmlReader
 			}
 		}
 		
-		if (!_armorHPBonuses.isEmpty())
+		if (_armorHPBonuses.isEmpty())
 		{
-			final ItemTable it = ItemTable.getInstance();
-			// Armors
-			final Collection<Integer> armorIds = it.getAllArmorsId();
-			for (Integer itemId : armorIds)
+			return;
+		}
+		
+		final ItemTable it = ItemTable.getInstance();
+		for (Integer itemId : it.getAllArmorsId())
+		{
+			final L2Item item = it.getTemplate(itemId);
+			if ((item != null) && (item.getCrystalType() != CrystalType.NONE))
 			{
-				final L2Item item = it.getTemplate(itemId);
-				if ((item != null) && (item.getCrystalType() != CrystalType.NONE))
+				switch (item.getBodyPart())
 				{
-					switch (item.getBodyPart())
+					case L2Item.SLOT_CHEST:
 					{
-						case L2Item.SLOT_CHEST:
-							if (item.getCrystalTypePlus() == CrystalType.R)
-							{
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPATK.getName(), -1, Stats.POWER_ATTACK, 0));
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTMATK.getName(), -1, Stats.MAGIC_ATTACK, 0));
-								break;
-							}
-							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
-							break;
-						case L2Item.SLOT_FEET:
-							if (item.getCrystalTypePlus() == CrystalType.R)
-							{
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTRUNSPD.getName(), -1, Stats.MOVE_SPEED, 0));
-								break;
-							}
-							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
-							break;
-						case L2Item.SLOT_GLOVES:
-							if (item.getCrystalTypePlus() == CrystalType.R)
-							{
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.ACCURACY_COMBAT, 0));
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.ACCURACY_MAGIC, 0));
-								break;
-							}
-							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
-							break;
-						case L2Item.SLOT_HEAD:
-							if (item.getCrystalTypePlus() == CrystalType.R)
-							{
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.EVASION_RATE, 0));
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.MAGIC_EVASION_RATE, 0));
-								break;
-							}
-							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
-							break;
-						case L2Item.SLOT_LEGS:
-							if (item.getCrystalTypePlus() == CrystalType.R)
-							{
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPMCRITRATE.getName(), -1, Stats.CRITICAL_RATE, 0));
-								item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPMCRITRATE.getName(), -1, Stats.MCRITICAL_RATE, 0));
-								break;
-							}
-							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
-							break;
-						case L2Item.SLOT_BACK:
-						case L2Item.SLOT_FULL_ARMOR:
-						case L2Item.SLOT_UNDERWEAR:
-						case L2Item.SLOT_L_HAND:
-						case L2Item.SLOT_BELT:
+						if (item.getCrystalTypePlus() == CrystalType.R)
 						{
-							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPATK.getName(), -1, Stats.POWER_ATTACK, 0));
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTMATK.getName(), -1, Stats.MAGIC_ATTACK, 0));
 							break;
 						}
-						default:
+						item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+						break;
+					}
+					case L2Item.SLOT_FEET:
+					{
+						if (item.getCrystalTypePlus() == CrystalType.R)
 						{
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTRUNSPD.getName(), -1, Stats.MOVE_SPEED, 0));
 							break;
 						}
+						item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+						break;
+					}
+					case L2Item.SLOT_GLOVES:
+					{
+						if (item.getCrystalTypePlus() == CrystalType.R)
+						{
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.ACCURACY_COMBAT, 0));
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.ACCURACY_MAGIC, 0));
+							break;
+						}
+						item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+						break;
+					}
+					case L2Item.SLOT_HEAD:
+					{
+						if (item.getCrystalTypePlus() == CrystalType.R)
+						{
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.EVASION_RATE, 0));
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTACCEVAS.getName(), -1, Stats.MAGIC_EVASION_RATE, 0));
+							break;
+						}
+						item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+						break;
+					}
+					case L2Item.SLOT_LEGS:
+					{
+						if (item.getCrystalTypePlus() == CrystalType.R)
+						{
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPMCRITRATE.getName(), -1, Stats.CRITICAL_RATE, 0));
+							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTPMCRITRATE.getName(), -1, Stats.MCRITICAL_RATE, 0));
+							break;
+						}
+						item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+						break;
+					}
+					case L2Item.SLOT_BACK:
+					case L2Item.SLOT_FULL_ARMOR:
+					case L2Item.SLOT_UNDERWEAR:
+					case L2Item.SLOT_L_HAND:
+					case L2Item.SLOT_BELT:
+					{
+						item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
+						break;
+					}
+					default:
+					{
+						break;
 					}
 				}
 			}
@@ -172,15 +181,9 @@ public class EnchantItemBonusData implements IXmlReader
 		{
 			return 0;
 		}
-		
-		double blessedArmorBonus = item.isBlessedItem() ? 1.5 : 1;
-		
+		final double blessedArmorBonus = item.isBlessedItem() ? 1.5 : 1;
 		final int bonus = values.get(Math.min(item.getOlyEnchantLevel(), values.size()) - 1);
-		if (item.getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR)
-		{
-			return (int) (bonus * FULL_ARMOR_MODIFIER * blessedArmorBonus);
-		}
-		return bonus;
+		return item.getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR ? (int) (bonus * FULL_ARMOR_MODIFIER * blessedArmorBonus) : bonus;
 	}
 	
 	/**

@@ -64,21 +64,23 @@ public final class SpawnTable implements IXmlReader
 	@Override
 	public void load()
 	{
-		if (!Config.ALT_DEV_NO_SPAWNS)
+		if (Config.ALT_DEV_NO_SPAWNS)
 		{
-			fillSpawnTable(false);
-			final int spawnCount = _spawnTable.size();
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + spawnCount + " npc spawns.");
-			if (Config.CUSTOM_SPAWNLIST_TABLE)
-			{
-				fillSpawnTable(true);
-				LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_spawnTable.size() - spawnCount) + " custom npc spawns.");
-			}
-			
-			// Load XML list
-			parseDatapackDirectory("spawnlist", false);
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _xmlSpawnCount + " npc spawns from XML.");
+			return;
 		}
+		
+		fillSpawnTable(false);
+		final int spawnCount = _spawnTable.size();
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + spawnCount + " npc spawns.");
+		if (Config.CUSTOM_SPAWNLIST_TABLE)
+		{
+			fillSpawnTable(true);
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_spawnTable.size() - spawnCount) + " custom npc spawns.");
+		}
+		
+		// Load XML list
+		parseDatapackDirectory("spawnlist", false);
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _xmlSpawnCount + " npc spawns from XML.");
 	}
 	
 	/**
@@ -89,19 +91,13 @@ public final class SpawnTable implements IXmlReader
 	private boolean checkTemplate(int npcId)
 	{
 		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
-		if (npcTemplate == null)
+		if (npcTemplate != null)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Data missing in NPC table for ID: " + npcId + ".");
-			return false;
+			return !npcTemplate.isType("L2SiegeGuard") && !npcTemplate.isType("L2RaidBoss") && (Config.ALLOW_CLASS_MASTERS || !npcTemplate.isType("L2ClassMaster"));
 		}
-		
-		if (npcTemplate.isType("L2SiegeGuard") || npcTemplate.isType("L2RaidBoss") || (!Config.ALLOW_CLASS_MASTERS && npcTemplate.isType("L2ClassMaster")))
-		{
-			// Don't spawn
-			return false;
-		}
-		
-		return true;
+		LOGGER.warning(getClass().getSimpleName() + ": Data missing in NPC table for ID: " + npcId + ".");
+		// Don't spawn
+		return false;
 	}
 	
 	@Override
@@ -413,27 +409,28 @@ public final class SpawnTable implements IXmlReader
 	{
 		addSpawn(spawn);
 		
-		if (storeInDb)
+		if (!storeInDb)
 		{
-			final String spawnTable = spawn.isCustom() && Config.CUSTOM_SPAWNLIST_TABLE ? "custom_spawnlist" : "spawnlist";
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement insert = con.prepareStatement("INSERT INTO " + spawnTable + "(count,npc_templateid,locx,locy,locz,heading,respawn_delay,respawn_random,loc_id) values(?,?,?,?,?,?,?,?,?)"))
-			{
-				insert.setInt(1, spawn.getAmount());
-				insert.setInt(2, spawn.getId());
-				insert.setInt(3, spawn.getX());
-				insert.setInt(4, spawn.getY());
-				insert.setInt(5, spawn.getZ());
-				insert.setInt(6, spawn.getHeading());
-				insert.setInt(7, spawn.getRespawnDelay() / 1000);
-				insert.setInt(8, spawn.getRespawnMaxDelay() - spawn.getRespawnMinDelay());
-				insert.setInt(9, spawn.getLocationId());
-				insert.execute();
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not store spawn in the DB:" + e.getMessage(), e);
-			}
+			return;
+		}
+		final String spawnTable = spawn.isCustom() && Config.CUSTOM_SPAWNLIST_TABLE ? "custom_spawnlist" : "spawnlist";
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement insert = con.prepareStatement("INSERT INTO " + spawnTable + "(count,npc_templateid,locx,locy,locz,heading,respawn_delay,respawn_random,loc_id) values(?,?,?,?,?,?,?,?,?)"))
+		{
+			insert.setInt(1, spawn.getAmount());
+			insert.setInt(2, spawn.getId());
+			insert.setInt(3, spawn.getX());
+			insert.setInt(4, spawn.getY());
+			insert.setInt(5, spawn.getZ());
+			insert.setInt(6, spawn.getHeading());
+			insert.setInt(7, spawn.getRespawnDelay() / 1000);
+			insert.setInt(8, spawn.getRespawnMaxDelay() - spawn.getRespawnMinDelay());
+			insert.setInt(9, spawn.getLocationId());
+			insert.execute();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not store spawn in the DB:" + e.getMessage(), e);
 		}
 	}
 	
@@ -485,16 +482,17 @@ public final class SpawnTable implements IXmlReader
 	private boolean removeSpawn(L2Spawn spawn)
 	{
 		final Set<L2Spawn> set = _spawnTable.get(spawn.getId());
-		if (set != null)
+		if (set == null)
 		{
-			final boolean removed = set.remove(spawn);
-			if (set.isEmpty())
-			{
-				_spawnTable.remove(spawn.getId());
-			}
-			return removed;
+			return false;
 		}
-		return false;
+		
+		final boolean removed = set.remove(spawn);
+		if (set.isEmpty())
+		{
+			_spawnTable.remove(spawn.getId());
+		}
+		return removed;
 	}
 	
 	/**

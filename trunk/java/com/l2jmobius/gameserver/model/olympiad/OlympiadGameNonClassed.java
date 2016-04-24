@@ -57,11 +57,6 @@ public class OlympiadGameNonClassed extends OlympiadGameNormal
 	protected static final OlympiadGameNonClassed createGame(int id, List<Integer> list)
 	{
 		final Participant[] opponents = OlympiadGameNormal.createListOfParticipants(list);
-		if (opponents == null)
-		{
-			return null;
-		}
-		
-		return new OlympiadGameNonClassed(id, opponents);
+		return opponents == null ? null : new OlympiadGameNonClassed(id, opponents);
 	}
 }

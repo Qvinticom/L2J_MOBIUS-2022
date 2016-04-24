@@ -364,36 +364,27 @@ public final class ItemAuction
 					break;
 				}
 				case EXTEND_BY_3_MIN:
-					if (Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID > 0)
+					if ((Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID > 0) && (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId()))
 					{
-						if (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId())
-						{
-							_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A;
-							_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-						}
+						_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A;
+						_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
 					}
 					break;
 				case EXTEND_BY_CONFIG_PHASE_A:
 				{
-					if (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId())
+					if ((getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId()) && (_scheduledAuctionEndingExtendState == ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B))
 					{
-						if (_scheduledAuctionEndingExtendState == ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B)
-						{
-							_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B;
-							_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-						}
+						_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B;
+						_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
 					}
 					break;
 				}
 				case EXTEND_BY_CONFIG_PHASE_B:
 				{
-					if (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId())
+					if ((getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId()) && (_scheduledAuctionEndingExtendState == ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A))
 					{
-						if (_scheduledAuctionEndingExtendState == ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A)
-						{
-							_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-							_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A;
-						}
+						_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
+						_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A;
 					}
 				}
 			}
@@ -510,12 +501,12 @@ public final class ItemAuction
 	
 	private final boolean reduceItemCount(L2PcInstance player, long count)
 	{
-		if (!player.reduceAdena("ItemAuction", count, player, true))
+		if (player.reduceAdena("ItemAuction", count, player, true))
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_FOR_THIS_BID);
-			return false;
+			return true;
 		}
-		return true;
+		player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_FOR_THIS_BID);
+		return false;
 	}
 	
 	private final void increaseItemCount(L2PcInstance player, long count)

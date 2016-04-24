@@ -41,10 +41,6 @@ public class ConditionPlayerIsOnSide extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		if ((effector == null) || !effector.isPlayer())
-		{
-			return false;
-		}
-		return effector.getActingPlayer().getPlayerSide() == _side;
+		return (effector != null) && effector.isPlayer() && (effector.getActingPlayer().getPlayerSide() == _side);
 	}
 }

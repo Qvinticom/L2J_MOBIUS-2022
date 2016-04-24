@@ -125,13 +125,9 @@ public class LongTimeEvent extends Quest
 			final String period = doc.getDocumentElement().getAttributes().getNamedItem("active").getNodeValue();
 			_eventPeriod = DateRange.parse(period, new SimpleDateFormat("dd MM yyyy", Locale.US));
 			
-			if (doc.getDocumentElement().getAttributes().getNamedItem("enableShrines") != null)
+			if ((doc.getDocumentElement().getAttributes().getNamedItem("enableShrines") != null) && doc.getDocumentElement().getAttributes().getNamedItem("enableShrines").getNodeValue().equalsIgnoreCase("true"))
 			{
-				final String enableShrines = doc.getDocumentElement().getAttributes().getNamedItem("enableShrines").getNodeValue();
-				if (enableShrines.equalsIgnoreCase("true"))
-				{
-					_enableShrines = true;
-				}
+				_enableShrines = true;
 			}
 			
 			if (doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod") != null)
@@ -158,8 +154,7 @@ public class LongTimeEvent extends Quest
 			
 			if (_eventPeriod.getStartDate().after(today) || _eventPeriod.isWithinRange(today))
 			{
-				final Node first = doc.getDocumentElement().getFirstChild();
-				for (Node n = first; n != null; n = n.getNextSibling())
+				for (Node n = doc.getDocumentElement().getFirstChild(); n != null; n = n.getNextSibling())
 				{
 					// Loading droplist
 					if (n.getNodeName().equalsIgnoreCase("droplist"))
@@ -174,12 +169,7 @@ public class LongTimeEvent extends Quest
 									final int minCount = Integer.parseInt(d.getAttributes().getNamedItem("min").getNodeValue());
 									final int maxCount = Integer.parseInt(d.getAttributes().getNamedItem("max").getNodeValue());
 									final String chance = d.getAttributes().getNamedItem("chance").getNodeValue();
-									int finalChance = 0;
-									
-									if (!chance.isEmpty() && chance.endsWith("%"))
-									{
-										finalChance = Integer.parseInt(chance.substring(0, chance.length() - 1)) * 10000;
-									}
+									final int finalChance = !chance.isEmpty() && chance.endsWith("%") ? Integer.parseInt(chance.substring(0, chance.length() - 1)) * 10000 : 0;
 									
 									if (ItemTable.getInstance().getTemplate(itemId) == null)
 									{
@@ -277,14 +267,11 @@ public class LongTimeEvent extends Quest
 	{
 		final long currentTime = System.currentTimeMillis();
 		// Add drop
-		if (_dropList != null)
+		if ((_dropList != null) && (currentTime < _dropPeriod.getEndDate().getTime()))
 		{
-			if (currentTime < _dropPeriod.getEndDate().getTime())
+			for (GeneralDropItem drop : _dropList)
 			{
-				for (GeneralDropItem drop : _dropList)
-				{
-					EventDroplist.getInstance().addGlobalDrop(drop.getItemId(), drop.getMin(), drop.getMax(), (int) drop.getChance(), _dropPeriod);
-				}
+				EventDroplist.getInstance().addGlobalDrop(drop.getItemId(), drop.getMin(), drop.getMax(), (int) drop.getChance(), _dropPeriod);
 			}
 		}
 		

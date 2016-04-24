@@ -350,11 +350,12 @@ public final class L2CubicInstance implements IIdentifiable
 	
 	public void cancelDisappear()
 	{
-		if (_disappearTask != null)
+		if (_disappearTask == null)
 		{
-			_disappearTask.cancel(true);
-			_disappearTask = null;
+			return;
 		}
+		_disappearTask.cancel(true);
+		_disappearTask = null;
 	}
 	
 	/** this sets the enemy target for a cubic */
@@ -431,12 +432,9 @@ public final class L2CubicInstance implements IIdentifiable
 							_target = PlayerA;
 						}
 					}
-					if ((_target == PlayerA) || (_target == PlayerB))
+					if (((_target == PlayerA) || (_target == PlayerB)) && (_target == ownerTarget))
 					{
-						if (_target == ownerTarget)
-						{
-							return;
-						}
+						return;
 					}
 					if (partyEnemy != null)
 					{
@@ -463,15 +461,12 @@ public final class L2CubicInstance implements IIdentifiable
 			// Olympiad targeting
 			if (_owner.isInOlympiadMode())
 			{
-				if (_owner.isOlympiadStart())
+				if (_owner.isOlympiadStart() && ownerTarget.isPlayable())
 				{
-					if (ownerTarget.isPlayable())
+					final L2PcInstance targetPlayer = ownerTarget.getActingPlayer();
+					if ((targetPlayer != null) && (targetPlayer.getOlympiadGameId() == _owner.getOlympiadGameId()) && (targetPlayer.getOlympiadSide() != _owner.getOlympiadSide()))
 					{
-						final L2PcInstance targetPlayer = ownerTarget.getActingPlayer();
-						if ((targetPlayer != null) && (targetPlayer.getOlympiadGameId() == _owner.getOlympiadGameId()) && (targetPlayer.getOlympiadSide() != _owner.getOlympiadSide()))
-						{
-							_target = (L2Character) ownerTarget;
-						}
+						_target = (L2Character) ownerTarget;
 					}
 				}
 				return;
@@ -527,12 +522,9 @@ public final class L2CubicInstance implements IIdentifiable
 							{
 								targetIt = false;
 							}
-							else if (_owner.getParty().getCommandChannel() != null)
+							else if ((_owner.getParty().getCommandChannel() != null) && _owner.getParty().getCommandChannel().getMembers().contains(enemy))
 							{
-								if (_owner.getParty().getCommandChannel().getMembers().contains(enemy))
-								{
-									targetIt = false;
-								}
+								targetIt = false;
 							}
 						}
 						if ((_owner.getClan() != null) && !_owner.isInsideZone(ZoneId.PVP))
@@ -541,12 +533,9 @@ public final class L2CubicInstance implements IIdentifiable
 							{
 								targetIt = false;
 							}
-							if ((_owner.getAllyId() > 0) && (enemy.getAllyId() > 0))
+							if ((_owner.getAllyId() > 0) && (enemy.getAllyId() > 0) && (_owner.getAllyId() == enemy.getAllyId()))
 							{
-								if (_owner.getAllyId() == enemy.getAllyId())
-								{
-									targetIt = false;
-								}
+								targetIt = false;
 							}
 						}
 						if ((enemy.getPvpFlag() == 0) && !enemy.isInsideZone(ZoneId.PVP))
@@ -814,16 +803,9 @@ public final class L2CubicInstance implements IIdentifiable
 	{
 		L2Character target = null;
 		double percentleft = 100.0;
-		L2Party party = _owner.getParty();
 		
 		// if owner is in a duel but not in a party duel, then it is the same as he does not have a party
-		if (_owner.isInDuel())
-		{
-			if (!DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
-			{
-				party = null;
-			}
-		}
+		final L2Party party = _owner.isInDuel() && !DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel() ? null : _owner.getParty();
 		
 		if ((party != null) && !_owner.isInOlympiadMode())
 		{
@@ -831,22 +813,10 @@ public final class L2CubicInstance implements IIdentifiable
 			// Get a list of Party Members
 			for (L2Character partyMember : party.getMembers())
 			{
-				if (!partyMember.isDead())
+				if (!partyMember.isDead() && isInCubicRange(_owner, partyMember) && (partyMember.getCurrentHp() < partyMember.getMaxHp()) && (percentleft > (partyMember.getCurrentHp() / partyMember.getMaxHp())))
 				{
-					// if party member not dead, check if he is in cast range of heal cubic
-					if (isInCubicRange(_owner, partyMember))
-					{
-						// member is in cubic casting range, check if he need heal and if he have
-						// the lowest HP
-						if (partyMember.getCurrentHp() < partyMember.getMaxHp())
-						{
-							if (percentleft > (partyMember.getCurrentHp() / partyMember.getMaxHp()))
-							{
-								percentleft = (partyMember.getCurrentHp() / partyMember.getMaxHp());
-								target = partyMember;
-							}
-						}
-					}
+					percentleft = (partyMember.getCurrentHp() / partyMember.getMaxHp());
+					target = partyMember;
 				}
 				final L2Summon pet = partyMember.getPet();
 				if (pet != null)
@@ -858,13 +828,10 @@ public final class L2CubicInstance implements IIdentifiable
 					
 					// member's pet is in cubic casting range, check if he need heal and if he have
 					// the lowest HP
-					if (pet.getCurrentHp() < pet.getMaxHp())
+					if ((pet.getCurrentHp() < pet.getMaxHp()) && (percentleft > (pet.getCurrentHp() / pet.getMaxHp())))
 					{
-						if (percentleft > (pet.getCurrentHp() / pet.getMaxHp()))
-						{
-							percentleft = (pet.getCurrentHp() / pet.getMaxHp());
-							target = pet;
-						}
+						percentleft = (pet.getCurrentHp() / pet.getMaxHp());
+						target = pet;
 					}
 				}
 				for (L2Summon s : partyMember.getServitors().values())
@@ -876,13 +843,10 @@ public final class L2CubicInstance implements IIdentifiable
 					
 					// member's pet is in cubic casting range, check if he need heal and if he have
 					// the lowest HP
-					if (s.getCurrentHp() < s.getMaxHp())
+					if ((s.getCurrentHp() < s.getMaxHp()) && (percentleft > (s.getCurrentHp() / s.getMaxHp())))
 					{
-						if (percentleft > (s.getCurrentHp() / s.getMaxHp()))
-						{
-							percentleft = (s.getCurrentHp() / s.getMaxHp());
-							target = s;
-						}
+						percentleft = (s.getCurrentHp() / s.getMaxHp());
+						target = s;
 					}
 				}
 			}
@@ -902,12 +866,9 @@ public final class L2CubicInstance implements IIdentifiable
 				}
 			}
 			final L2Summon pet = _owner.getPet();
-			if (pet != null)
+			if ((pet != null) && !pet.isDead() && (pet.getCurrentHp() < pet.getMaxHp()) && (percentleft > (pet.getCurrentHp() / pet.getMaxHp())) && isInCubicRange(_owner, pet))
 			{
-				if (!pet.isDead() && (pet.getCurrentHp() < pet.getMaxHp()) && (percentleft > (pet.getCurrentHp() / pet.getMaxHp())) && isInCubicRange(_owner, pet))
-				{
-					target = _owner.getPet();
-				}
+				target = _owner.getPet();
 			}
 		}
 		

@@ -266,19 +266,12 @@ public class Auction
 	 */
 	public synchronized void setBid(L2PcInstance bidder, long bid)
 	{
-		long requiredAdena = bid;
-		if (getHighestBidderName().equals(bidder.getClan().getLeaderName()))
+		final long requiredAdena = getHighestBidderName().equals(bidder.getClan().getLeaderName()) ? bid - getHighestBidderMaxBid() : bid;
+		if ((((getHighestBidderId() > 0) && (bid > getHighestBidderMaxBid())) || ((getHighestBidderId() == 0) && (bid >= getStartingBid()))) && takeItem(bidder, requiredAdena))
 		{
-			requiredAdena = bid - getHighestBidderMaxBid();
-		}
-		if (((getHighestBidderId() > 0) && (bid > getHighestBidderMaxBid())) || ((getHighestBidderId() == 0) && (bid >= getStartingBid())))
-		{
-			if (takeItem(bidder, requiredAdena))
-			{
-				updateInDB(bidder, bid);
-				bidder.getClan().setAuctionBiddedAt(_id, true);
-				return;
-			}
+			updateInDB(bidder, bid);
+			bidder.getClan().setAuctionBiddedAt(_id, true);
+			return;
 		}
 		if ((bid < getStartingBid()) || (bid <= getHighestBidderMaxBid()))
 		{

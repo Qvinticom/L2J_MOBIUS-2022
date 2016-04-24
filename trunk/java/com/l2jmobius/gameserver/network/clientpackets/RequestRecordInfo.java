@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.Collection;
-
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -45,8 +43,7 @@ public class RequestRecordInfo extends L2GameClientPacket
 		
 		activeChar.sendPacket(new UserInfo(activeChar));
 		
-		final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-		for (L2Object object : objs)
+		for (L2Object object : activeChar.getKnownList().getKnownObjects().values())
 		{
 			if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))
 			{
@@ -57,18 +54,9 @@ public class RequestRecordInfo extends L2GameClientPacket
 				if (!object.isVisibleFor(activeChar))
 				{
 					object.sendInfo(activeChar);
-					
-					if (object instanceof L2Character)
+					if ((object instanceof L2Character) && (((L2Character) object).getAI() != null))
 					{
-						// Update the state of the L2Character object client
-						// side by sending Server->Client packet
-						// MoveToPawn/CharMoveToLocation and AutoAttackStart to
-						// the L2PcInstance
-						final L2Character obj = (L2Character) object;
-						if (obj.getAI() != null)
-						{
-							obj.getAI().describeStateToPlayer(activeChar);
-						}
+						((L2Character) object).getAI().describeStateToPlayer(activeChar);
 					}
 				}
 			}

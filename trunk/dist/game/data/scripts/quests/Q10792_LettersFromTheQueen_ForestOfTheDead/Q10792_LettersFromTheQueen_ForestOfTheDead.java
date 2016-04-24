@@ -215,9 +215,7 @@ public class Q10792_LettersFromTheQueen_ForestOfTheDead extends Quest implements
 			return;
 		}
 		final L2PcInstance player = event.getActiveChar();
-		final int oldLevel = event.getOldLevel();
-		final int newLevel = event.getNewLevel();
-		if ((oldLevel == (newLevel - 1)) && (player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() == Race.ERTHEIA) && (player.getClassId() == ClassId.CLOUD_BREAKER))
+		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() == Race.ERTHEIA) && (player.getClassId() == ClassId.CLOUD_BREAKER))
 		{
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)

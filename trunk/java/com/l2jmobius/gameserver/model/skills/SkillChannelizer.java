@@ -120,14 +120,11 @@ public class SkillChannelizer implements Runnable
 	@Override
 	public void run()
 	{
-		if (!isChanneling())
+		if (!isChanneling() || (_skill == null))
 		{
 			return;
 		}
-		if (_skill == null)
-		{
-			return;
-		}
+		
 		try
 		{
 			if (_skill.getMpPerChanneling() > 0)

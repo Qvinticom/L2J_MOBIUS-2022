@@ -433,9 +433,7 @@ public class L2Npc extends L2Character
 	@Override
 	public void updateAbnormalVisualEffects()
 	{
-		// Send a Server->Client packet NpcInfo with state of abnormal effect to all L2PcInstance in the _KnownPlayers of the L2NpcInstance
-		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
+		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 		{
 			if ((player == null) || !isVisibleFor(player))
 			{
@@ -541,15 +539,13 @@ public class L2Npc extends L2Character
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		if (player.isLockedTarget() && (player.getLockedTarget() != this))
+		if (!player.isLockedTarget() || (player.getLockedTarget() == this))
 		{
-			player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return false;
+			return true;
 		}
-		// TODO: More checks...
-		
-		return true;
+		player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
+		player.sendPacket(ActionFailed.STATIC_PACKET);
+		return false;
 	}
 	
 	public boolean canInteract(L2PcInstance player)
@@ -647,13 +643,7 @@ public class L2Npc extends L2Character
 	public final Castle getCastle(long maxDistance)
 	{
 		final int index = CastleManager.getInstance().findNearestCastleIndex(this, maxDistance);
-		
-		if (index < 0)
-		{
-			return null;
-		}
-		
-		return CastleManager.getInstance().getCastles().get(index);
+		return index < 0 ? null : CastleManager.getInstance().getCastles().get(index);
 	}
 	
 	/**
@@ -676,12 +666,7 @@ public class L2Npc extends L2Character
 			}
 		}
 		
-		if (_fortIndex < 0)
-		{
-			return null;
-		}
-		
-		return FortManager.getInstance().getForts().get(_fortIndex);
+		return _fortIndex < 0 ? null : FortManager.getInstance().getForts().get(_fortIndex);
 	}
 	
 	/**
@@ -692,13 +677,7 @@ public class L2Npc extends L2Character
 	public final Fort getFort(long maxDistance)
 	{
 		final int index = FortManager.getInstance().findNearestFortIndex(this, maxDistance);
-		
-		if (index < 0)
-		{
-			return null;
-		}
-		
-		return FortManager.getInstance().getForts().get(index);
+		return index < 0 ? null : FortManager.getInstance().getForts().get(index);
 	}
 	
 	public final boolean getIsInTown()
@@ -776,12 +755,7 @@ public class L2Npc extends L2Character
 		// Get the weapon item equipped in the right hand of the L2NpcInstance
 		final L2Item item = ItemTable.getInstance().getTemplate(getTemplate().getRHandId());
 		
-		if (!(item instanceof L2Weapon))
-		{
-			return null;
-		}
-		
-		return (L2Weapon) item;
+		return !(item instanceof L2Weapon) ? null : (L2Weapon) item;
 	}
 	
 	/**
@@ -809,12 +783,7 @@ public class L2Npc extends L2Character
 		// Get the weapon item equipped in the right hand of the L2NpcInstance
 		final L2Item item = ItemTable.getInstance().getTemplate(getTemplate().getLHandId());
 		
-		if (!(item instanceof L2Weapon))
-		{
-			return null;
-		}
-		
-		return (L2Weapon) item;
+		return !(item instanceof L2Weapon) ? null : (L2Weapon) item;
 	}
 	
 	/**
@@ -842,16 +811,7 @@ public class L2Npc extends L2Character
 	 */
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		
-		if (val == 0)
-		{
-			pom = "" + npcId;
-		}
-		else
-		{
-			pom = npcId + "-" + val;
-		}
+		final String pom = val == 0 ? "" + npcId : npcId + "-" + val;
 		
 		final String temp = "html/default/" + pom + ".htm";
 		
@@ -889,13 +849,13 @@ public class L2Npc extends L2Character
 	private boolean showPkDenyChatWindow(L2PcInstance player, String type)
 	{
 		final String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/" + type + "/" + getId() + "-pk.htm");
-		if (html != null)
+		if (html == null)
 		{
-			insertObjectIdAndShowChatWindow(player, html);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return true;
+			return false;
 		}
-		return false;
+		insertObjectIdAndShowChatWindow(player, html);
+		player.sendPacket(ActionFailed.STATIC_PACKET);
+		return true;
 	}
 	
 	/**
@@ -965,14 +925,7 @@ public class L2Npc extends L2Character
 		{
 			case 31688:
 			{
-				if (player.isNoble())
-				{
-					filename = Olympiad.OLYMPIAD_HTML_PATH + "noble_main.htm";
-				}
-				else
-				{
-					filename = (getHtmlPath(npcId, val));
-				}
+				filename = player.isNoble() ? Olympiad.OLYMPIAD_HTML_PATH + "noble_main.htm" : getHtmlPath(npcId, val);
 				break;
 			}
 			case 31690:
@@ -981,38 +934,17 @@ public class L2Npc extends L2Character
 			case 31771:
 			case 31772:
 			{
-				if (player.isHero() || player.isNoble())
-				{
-					filename = Olympiad.OLYMPIAD_HTML_PATH + "hero_main.htm";
-				}
-				else
-				{
-					filename = (getHtmlPath(npcId, val));
-				}
+				filename = player.isHero() || player.isNoble() ? Olympiad.OLYMPIAD_HTML_PATH + "hero_main.htm" : getHtmlPath(npcId, val);
 				break;
 			}
 			case 36402:
 			{
-				if (player.getOlympiadBuffCount() > 0)
-				{
-					filename = (player.getOlympiadBuffCount() == Config.ALT_OLY_MAX_BUFFS ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
-				}
-				else
-				{
-					filename = Olympiad.OLYMPIAD_HTML_PATH + "olympiad_nobuffs.htm";
-				}
+				filename = player.getOlympiadBuffCount() > 0 ? player.getOlympiadBuffCount() == Config.ALT_OLY_MAX_BUFFS ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_nobuffs.htm";
 				break;
 			}
 			case 30298: // Blacksmith Pinter
 			{
-				if (player.isAcademyMember())
-				{
-					filename = (getHtmlPath(npcId, 1));
-				}
-				else
-				{
-					filename = (getHtmlPath(npcId, val));
-				}
+				filename = player.isAcademyMember() ? getHtmlPath(npcId, 1) : getHtmlPath(npcId, val);
 				break;
 			}
 			default:
@@ -1031,12 +963,9 @@ public class L2Npc extends L2Character
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(player.getHtmlPrefix(), filename);
 		
-		if (this instanceof L2MerchantInstance)
+		if ((this instanceof L2MerchantInstance) && Config.LIST_PET_RENT_NPC.contains(npcId))
 		{
-			if (Config.LIST_PET_RENT_NPC.contains(npcId))
-			{
-				html.replace("_Quest", "_RentPet\">Rent Pet</a><br><a action=\"bypass -h npc_%objectId%_Quest");
-			}
+			html.replace("_Quest", "_RentPet\">Rent Pet</a><br><a action=\"bypass -h npc_%objectId%_Quest");
 		}
 		
 		html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -1265,11 +1194,12 @@ public class L2Npc extends L2Character
 	
 	public void endDecayTask()
 	{
-		if (!isDecayed())
+		if (isDecayed())
 		{
-			DecayTaskManager.getInstance().cancel(this);
-			onDecay();
+			return;
 		}
+		DecayTaskManager.getInstance().cancel(this);
+		onDecay();
 	}
 	
 	public boolean isMob() // rather delete this check
@@ -1338,21 +1268,23 @@ public class L2Npc extends L2Character
 	@Override
 	public void sendInfo(L2PcInstance activeChar)
 	{
-		if (isVisibleFor(activeChar))
+		if (!isVisibleFor(activeChar))
 		{
-			if (Config.CHECK_KNOWN && activeChar.isGM())
-			{
-				activeChar.sendMessage("Added NPC: " + getName());
-			}
-			
-			if (getRunSpeed() == 0)
-			{
-				activeChar.sendPacket(new ServerObjectInfo(this, activeChar));
-			}
-			else
-			{
-				activeChar.sendPacket(new NpcInfo(this));
-			}
+			return;
+		}
+		
+		if (Config.CHECK_KNOWN && activeChar.isGM())
+		{
+			activeChar.sendMessage("Added NPC: " + getName());
+		}
+		
+		if (getRunSpeed() == 0)
+		{
+			activeChar.sendPacket(new ServerObjectInfo(this, activeChar));
+		}
+		else
+		{
+			activeChar.sendPacket(new NpcInfo(this));
 		}
 	}
 	
@@ -1423,11 +1355,12 @@ public class L2Npc extends L2Character
 	
 	public void setDisplayEffect(int val)
 	{
-		if (val != _displayEffect)
+		if (val == _displayEffect)
 		{
-			_displayEffect = val;
-			broadcastPacket(new ExChangeNpcState(getObjectId(), val));
+			return;
 		}
+		_displayEffect = val;
+		broadcastPacket(new ExChangeNpcState(getObjectId(), val));
 	}
 	
 	public int getDisplayEffect()
@@ -1484,37 +1417,27 @@ public class L2Npc extends L2Character
 	@Override
 	public void rechargeShots(boolean physical, boolean magic)
 	{
-		if ((_soulshotamount > 0) || (_spiritshotamount > 0))
+		if ((_soulshotamount <= 0) && (_spiritshotamount <= 0))
 		{
-			if (physical)
-			{
-				if (_soulshotamount == 0)
-				{
-					return;
-				}
-				else if (Rnd.get(100) > getSoulShotChance())
-				{
-					return;
-				}
-				_soulshotamount--;
-				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
-				setChargedShot(ShotType.SOULSHOTS, true);
-			}
-			if (magic)
-			{
-				if (_spiritshotamount == 0)
-				{
-					return;
-				}
-				else if (Rnd.get(100) > getSpiritShotChance())
-				{
-					return;
-				}
-				_spiritshotamount--;
-				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
-				setChargedShot(ShotType.SPIRITSHOTS, true);
-			}
+			return;
 		}
+		if (physical)
+		{
+			if ((_soulshotamount == 0) || (Rnd.get(100) > getSoulShotChance()))
+			{
+				return;
+			}
+			_soulshotamount--;
+			Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
+			setChargedShot(ShotType.SOULSHOTS, true);
+		}
+		if (!magic || (_spiritshotamount == 0) || (Rnd.get(100) > getSpiritShotChance()))
+		{
+			return;
+		}
+		_spiritshotamount--;
+		Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
+		setChargedShot(ShotType.SPIRITSHOTS, true);
 	}
 	
 	/**
@@ -1681,12 +1604,9 @@ public class L2Npc extends L2Character
 			item.dropMe(this, newX, newY, newZ);
 			
 			// Add drop to auto destroy item task.
-			if (!Config.LIST_PROTECTED_ITEMS.contains(itemId))
+			if (!Config.LIST_PROTECTED_ITEMS.contains(itemId) && (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getItem().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getItem().hasExImmediateEffect())))
 			{
-				if (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getItem().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getItem().hasExImmediateEffect()))
-				{
-					ItemsAutoDestroy.getInstance().addItem(item);
-				}
+				ItemsAutoDestroy.getInstance().addItem(item);
 			}
 			item.setProtected(false);
 			
@@ -1815,11 +1735,7 @@ public class L2Npc extends L2Character
 	 */
 	public final L2Npc getSummonedNpc(int objectId)
 	{
-		if (_summonedNpcs != null)
-		{
-			return _summonedNpcs.get(objectId);
-		}
-		return null;
+		return _summonedNpcs != null ? _summonedNpcs.get(objectId) : null;
 	}
 	
 	/**

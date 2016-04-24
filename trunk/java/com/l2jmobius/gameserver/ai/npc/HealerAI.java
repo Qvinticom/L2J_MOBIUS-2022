@@ -119,11 +119,7 @@ public final class HealerAI implements Runnable
 		// Out of combat follow logic.
 		if (!_guard.isInCombat())
 		{
-			final int moveToLocX = _player.getLocation().getX() + Rnd.get((_followRange * -1), _followRange);
-			final int moveToLocY = _player.getLocation().getY() + Rnd.get((_followRange * -1), _followRange);
-			final int moveToLocZ = _player.getLocation().getZ();
-			final Location moveToLocation = new Location(moveToLocX, moveToLocY, moveToLocZ);
-			_guard.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, moveToLocation);
+			_guard.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, (new Location((_player.getLocation().getX() + Rnd.get((_followRange * -1), _followRange)), (_player.getLocation().getY() + Rnd.get((_followRange * -1), _followRange)), _player.getLocation().getZ())));
 		}
 	}
 }

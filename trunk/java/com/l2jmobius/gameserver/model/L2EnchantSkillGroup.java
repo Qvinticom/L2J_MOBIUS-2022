@@ -95,11 +95,7 @@ public final class L2EnchantSkillGroup
 		
 		public byte getRate(L2PcInstance ply)
 		{
-			if (ply.getLevel() < 76)
-			{
-				return 0;
-			}
-			return _rate[ply.getLevel() - 76];
+			return ply.getLevel() < 76 ? 0 : _rate[ply.getLevel() - 76];
 		}
 	}
 }

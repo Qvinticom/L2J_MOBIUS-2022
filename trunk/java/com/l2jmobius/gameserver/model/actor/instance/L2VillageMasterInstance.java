@@ -70,18 +70,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		
-		if (val == 0)
-		{
-			pom = "" + npcId;
-		}
-		else
-		{
-			pom = npcId + "-" + val;
-		}
-		
-		return "html/villagemaster/" + pom + ".htm";
+		return "html/villagemaster/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
 	}
 	
 	@Override

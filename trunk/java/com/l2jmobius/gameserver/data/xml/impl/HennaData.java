@@ -130,9 +130,7 @@ public final class HennaData implements IXmlReader
 					{
 						if ("skill".equals(i.getNodeName()))
 						{
-							final int skillId = Integer.parseInt(i.getAttributes().getNamedItem("id").getNodeValue());
-							final int skillLevel = Integer.parseInt(i.getAttributes().getNamedItem("level").getNodeValue());
-							skills.add(new SkillHolder(skillId, skillLevel));
+							skills.add(new SkillHolder(Integer.parseInt(i.getAttributes().getNamedItem("id").getNodeValue()), Integer.parseInt(i.getAttributes().getNamedItem("level").getNodeValue())));
 						}
 					}
 					break;

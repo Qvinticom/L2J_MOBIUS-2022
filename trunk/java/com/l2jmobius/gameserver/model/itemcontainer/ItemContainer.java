@@ -236,8 +236,7 @@ public abstract class ItemContainer
 			item = olditem;
 			
 			// Updates database
-			final float adenaRate = Config.RATE_DROP_AMOUNT_MULTIPLIER.getOrDefault(Inventory.ADENA_ID, 1f);
-			if ((item.getId() == Inventory.ADENA_ID) && (count < (10000 * adenaRate)))
+			if ((item.getId() == Inventory.ADENA_ID) && (count < (10000 * Config.RATE_DROP_AMOUNT_MULTIPLIER.getOrDefault(Inventory.ADENA_ID, 1f))))
 			{
 				// Small adena changes won't be saved to database all the time
 				if ((GameTimeController.getInstance().getGameTicks() % 5) == 0)
@@ -288,8 +287,7 @@ public abstract class ItemContainer
 			item.setLastChange(L2ItemInstance.MODIFIED);
 			// Updates database
 			// If Adena drop rate is not present it will be x1.
-			final float adenaRate = Config.RATE_DROP_AMOUNT_MULTIPLIER.getOrDefault(Inventory.ADENA_ID, 1f);
-			if ((itemId == Inventory.ADENA_ID) && (count < (10000 * adenaRate)))
+			if ((itemId == Inventory.ADENA_ID) && (count < (10000 * Config.RATE_DROP_AMOUNT_MULTIPLIER.getOrDefault(Inventory.ADENA_ID, 1f))))
 			{
 				// Small adena changes won't be saved to database all the time
 				if ((GameTimeController.getInstance().getGameTicks() % 5) == 0)
@@ -441,12 +439,7 @@ public abstract class ItemContainer
 		
 		synchronized (item)
 		{
-			if (!_items.contains(item))
-			{
-				return null;
-			}
-			
-			if (count > item.getCount())
+			if (!_items.contains(item) || (count > item.getCount()))
 			{
 				return null;
 			}
@@ -484,12 +477,7 @@ public abstract class ItemContainer
 	public L2ItemInstance detachItem(String process, int itemObjectId, long count, ItemLocation newLocation, L2PcInstance actor, Object reference)
 	{
 		final L2ItemInstance itemInstance = getItemByObjectId(itemObjectId);
-		if (itemInstance == null)
-		{
-			return null;
-		}
-		
-		return detachItem(process, itemInstance, count, newLocation, actor, reference);
+		return itemInstance == null ? null : detachItem(process, itemInstance, count, newLocation, actor, reference);
 	}
 	
 	/**
@@ -529,8 +517,6 @@ public abstract class ItemContainer
 				{
 					item.updateDatabase();
 				}
-				
-				refreshWeight();
 			}
 			else
 			{
@@ -548,8 +534,8 @@ public abstract class ItemContainer
 				ItemTable.getInstance().destroyItem(process, item, actor, reference);
 				
 				item.updateDatabase();
-				refreshWeight();
 			}
+			refreshWeight();
 			item.deleteMe();
 		}
 		return item;
@@ -567,11 +553,7 @@ public abstract class ItemContainer
 	public L2ItemInstance destroyItem(String process, int objectId, long count, L2PcInstance actor, Object reference)
 	{
 		final L2ItemInstance item = getItemByObjectId(objectId);
-		if (item == null)
-		{
-			return null;
-		}
-		return this.destroyItem(process, item, count, actor, reference);
+		return item == null ? null : this.destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**
@@ -586,11 +568,7 @@ public abstract class ItemContainer
 	public L2ItemInstance destroyItemByItemId(String process, int itemId, long count, L2PcInstance actor, Object reference)
 	{
 		final L2ItemInstance item = getItemByItemId(itemId);
-		if (item == null)
-		{
-			return null;
-		}
-		return destroyItem(process, item, count, actor, reference);
+		return item == null ? null : destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**
@@ -723,12 +701,10 @@ public abstract class ItemContainer
 					
 					L2World.getInstance().storeObject(item);
 					
-					final L2PcInstance owner = getOwner() == null ? null : getOwner().getActingPlayer();
-					
 					// If stackable item is found in inventory just add to current quantity
 					if (item.isStackable() && (getItemByItemId(item.getId()) != null))
 					{
-						addItem("Restore", item, owner, null);
+						addItem("Restore", item, (getOwner() == null ? null : getOwner().getActingPlayer()), null);
 					}
 					else
 					{

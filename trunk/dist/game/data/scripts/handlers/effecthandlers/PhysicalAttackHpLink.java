@@ -80,12 +80,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 		
 		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 		// Physical damage critical rate is only affected by STR.
-		boolean crit = false;
-		if (skill.getBaseCritRate() > 0)
-		{
-			crit = Formulas.calcCrit(activeChar, target, skill);
-		}
-		
+		final boolean crit = (skill.getBaseCritRate() > 0) && Formulas.calcCrit(activeChar, target, skill);
 		int damage = 0;
 		final boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, ss);

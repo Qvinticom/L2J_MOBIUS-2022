@@ -73,8 +73,7 @@ public class ChangePassword extends BaseRecievePacket
 			{
 				final MessageDigest md = MessageDigest.getInstance("SHA");
 				
-				byte[] raw = curpass.getBytes("UTF-8");
-				raw = md.digest(raw);
+				final byte[] raw = md.digest(curpass.getBytes("UTF-8"));
 				final String curpassEnc = Base64.getEncoder().encodeToString(raw);
 				String pass = null;
 				int passUpdated = 0;
@@ -95,9 +94,7 @@ public class ChangePassword extends BaseRecievePacket
 				
 				if (curpassEnc.equals(pass))
 				{
-					byte[] password = newpass.getBytes("UTF-8");
-					password = md.digest(password);
-					
+					final byte[] password = md.digest(newpass.getBytes("UTF-8"));
 					// SQL connection
 					try (Connection con = DatabaseFactory.getInstance().getConnection();
 						PreparedStatement ps = con.prepareStatement("UPDATE accounts SET password=? WHERE login=?"))

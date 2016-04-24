@@ -311,11 +311,7 @@ public class GameServerThread extends Thread
 	 */
 	public boolean isAuthed()
 	{
-		if (getGameServerInfo() == null)
-		{
-			return false;
-		}
-		return getGameServerInfo().isAuthed();
+		return (getGameServerInfo() != null) && getGameServerInfo().isAuthed();
 	}
 	
 	public void setGameServerInfo(GameServerInfo gsi)
@@ -338,11 +334,7 @@ public class GameServerThread extends Thread
 	
 	public int getServerId()
 	{
-		if (getGameServerInfo() != null)
-		{
-			return getGameServerInfo().getId();
-		}
-		return -1;
+		return getGameServerInfo() != null ? getGameServerInfo().getId() : -1;
 	}
 	
 	public RSAPrivateKey getPrivateKey()

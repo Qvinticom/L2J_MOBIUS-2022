@@ -94,8 +94,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(20);
-				removeSkillsPage(activeChar, Integer.parseInt(val));
+				removeSkillsPage(activeChar, Integer.parseInt(command.substring(20)));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -109,8 +108,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(18);
-				AdminHtml.showAdminHtml(activeChar, "skills/" + val + ".htm");
+				AdminHtml.showAdminHtml(activeChar, "skills/" + command.substring(18) + ".htm");
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -120,8 +118,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(15);
-				adminAddSkill(activeChar, val);
+				adminAddSkill(activeChar, command.substring(15));
 			}
 			catch (Exception e)
 			{
@@ -132,9 +129,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				final String id = command.substring(19);
-				final int idval = Integer.parseInt(id);
-				adminRemoveSkill(activeChar, idval);
+				adminRemoveSkill(activeChar, Integer.parseInt(command.substring(19)));
 			}
 			catch (Exception e)
 			{
@@ -308,19 +303,13 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		
 		final int skillsStart = maxSkillsPerPage * page;
-		int skillsEnd = skills.length;
-		if ((skillsEnd - skillsStart) > maxSkillsPerPage)
-		{
-			skillsEnd = skillsStart + maxSkillsPerPage;
-		}
-		
+		final int skillsEnd = (skills.length - skillsStart) > maxSkillsPerPage ? skillsStart + maxSkillsPerPage : skills.length;
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		final StringBuilder replyMSG = StringUtil.startAppend(500 + (maxPages * 50) + (((skillsEnd - skillsStart) + 1) * 50), "<html><body><table width=260><tr><td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>Character Selection Menu</center></td><td width=40><button value=\"Back\" action=\"bypass -h admin_show_skills\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><br><center>Editing <font color=\"LEVEL\">", player.getName(), "</font></center><br><table width=270><tr><td>Lv: ", String.valueOf(player.getLevel()), " ", ClassListData.getInstance().getClass(player.getClassId()).getClientCode(), "</td></tr></table><br><table width=270><tr><td>Note: Dont forget that modifying players skills can</td></tr><tr><td>ruin the game...</td></tr></table><br><center>Click on the skill you wish to remove:</center><br><center><table width=270><tr>");
 		
 		for (int x = 0; x < maxPages; x++)
 		{
-			final int pagenr = x + 1;
-			StringUtil.append(replyMSG, "<td><a action=\"bypass -h admin_remove_skills ", String.valueOf(x), "\">Page ", String.valueOf(pagenr), "</a></td>");
+			StringUtil.append(replyMSG, "<td><a action=\"bypass -h admin_remove_skills ", String.valueOf(x), "\">Page ", String.valueOf((x + 1)), "</a></td>");
 		}
 		
 		replyMSG.append("</tr></table></center><br><table width=270><tr><td width=80>Name:</td><td width=60>Level:</td><td width=40>Id:</td></tr>");
@@ -448,20 +437,12 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		final L2PcInstance player = target.getActingPlayer();
 		final StringTokenizer st = new StringTokenizer(val);
-		if (st.countTokens() != 2)
-		{
-			showMainPage(activeChar);
-		}
-		else
+		if (st.countTokens() == 2)
 		{
 			Skill skill = null;
 			try
 			{
-				final String id = st.nextToken();
-				final String level = st.nextToken();
-				final int idval = Integer.parseInt(id);
-				final int levelval = Integer.parseInt(level);
-				skill = SkillData.getInstance().getSkill(idval, levelval);
+				skill = SkillData.getInstance().getSkill(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
 			}
 			catch (Exception e)
 			{
@@ -486,8 +467,8 @@ public class AdminSkill implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Error: there is no such skill.");
 			}
-			showMainPage(activeChar); // Back to start
 		}
+		showMainPage(activeChar); // Back to start
 	}
 	
 	/**

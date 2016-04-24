@@ -102,11 +102,12 @@ public class NpcKnownList extends CharKnownList
 	// Support for Walking monsters aggro
 	public void stopTrackingTask()
 	{
-		if (_trackingTask != null)
+		if (_trackingTask == null)
 		{
-			_trackingTask.cancel(true);
-			_trackingTask = null;
+			return;
 		}
+		_trackingTask.cancel(true);
+		_trackingTask = null;
 	}
 	
 	// Support for Walking monsters aggro

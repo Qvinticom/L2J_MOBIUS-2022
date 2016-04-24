@@ -142,12 +142,9 @@ public class StatusHandler implements ITelnetHandler
 			{
 				continue;
 			}
-			if (obj instanceof L2Character)
+			if ((obj instanceof L2Character) && ((L2Character) obj).hasAI())
 			{
-				if (((L2Character) obj).hasAI())
-				{
-					AICount++;
-				}
+				AICount++;
 			}
 			if (obj instanceof L2ItemInstance)
 			{

@@ -60,9 +60,7 @@ public final class CharacterDelete extends L2GameClientPacket
 		
 		try
 		{
-			final byte answer = getClient().markToDeleteChar(_charSlot);
-			
-			switch (answer)
+			switch (getClient().markToDeleteChar(_charSlot))
 			{
 				default:
 				case -1: // Error

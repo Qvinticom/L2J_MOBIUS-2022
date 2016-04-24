@@ -40,8 +40,7 @@ public class GameServerRegister extends BaseGameServerRegister
 		super();
 		load();
 		
-		final int size = GameServerTable.getInstance().getServerNames().size();
-		if (size == 0)
+		if (GameServerTable.getInstance().getServerNames().size() == 0)
 		{
 			System.out.println("No available names for GameServer, verify servername.xml file exists in the LoginServer folder.");
 			System.exit(1);
@@ -301,8 +300,7 @@ public class GameServerRegister extends BaseGameServerRegister
 		}
 		while (id == Integer.MIN_VALUE);
 		
-		final String name = GameServerTable.getInstance().getServerNameById(id);
-		if (name == null)
+		if (GameServerTable.getInstance().getServerNameById(id) == null)
 		{
 			System.out.printf("No name for ID: %d" + Config.EOL, id);
 		}
@@ -329,9 +327,7 @@ public class GameServerRegister extends BaseGameServerRegister
 	@Override
 	public void showError(String msg, Throwable t)
 	{
-		String title;
-		title = "Error";
 		msg += Config.EOL + "Reason: " + t.getLocalizedMessage();
-		System.out.println(title + ": " + msg);
+		System.out.println("Error: " + msg);
 	}
 }

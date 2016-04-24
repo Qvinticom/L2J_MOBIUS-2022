@@ -129,19 +129,15 @@ public final class MultisellData implements IXmlReader
 					{
 						if ("item".equalsIgnoreCase(d.getNodeName()))
 						{
-							final Entry e = parseEntry(d, entryId++, list);
-							list.getEntries().add(e);
+							list.getEntries().add(parseEntry(d, entryId++, list));
 						}
 						else if ("npcs".equalsIgnoreCase(d.getNodeName()))
 						{
 							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
 							{
-								if ("npc".equalsIgnoreCase(b.getNodeName()))
+								if ("npc".equalsIgnoreCase(b.getNodeName()) && Util.isDigit(b.getTextContent()))
 								{
-									if (Util.isDigit(b.getTextContent()))
-									{
-										list.allowNpc(Integer.parseInt(b.getTextContent()));
-									}
+									list.allowNpc(Integer.parseInt(b.getTextContent()));
 								}
 							}
 						}
@@ -281,12 +277,12 @@ public final class MultisellData implements IXmlReader
 		{
 			case PC_BANG_POINTS:
 			{
-				if (player.getPcBangPoints() < amount)
+				if (player.getPcBangPoints() >= amount)
 				{
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_PC_POINTS));
-					break;
+					return true;
 				}
-				return true;
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_PC_POINTS));
+				break;
 			}
 			case CLAN_REPUTATION:
 			{
@@ -300,12 +296,12 @@ public final class MultisellData implements IXmlReader
 					player.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED);
 					break;
 				}
-				if (player.getClan().getReputationScore() < amount)
+				if (player.getClan().getReputationScore() >= amount)
 				{
-					player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
-					break;
+					return true;
 				}
-				return true;
+				player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
+				break;
 			}
 			case FAME:
 			{
@@ -317,12 +313,12 @@ public final class MultisellData implements IXmlReader
 			}
 			case RAID_POINTS:
 			{
-				if (player.getRaidPoints() < amount)
+				if (player.getRaidPoints() >= amount)
 				{
-					player.sendPacket(SystemMessageId.NOT_ENOUGH_RAID_POINTS);
-					break;
+					return true;
 				}
-				return true;
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_RAID_POINTS);
+				break;
 			}
 		}
 		return false;

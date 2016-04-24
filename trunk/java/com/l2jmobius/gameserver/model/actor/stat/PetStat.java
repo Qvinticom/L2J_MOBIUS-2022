@@ -191,23 +191,13 @@ public class PetStat extends SummonStat
 	@Override
 	public double getPAtkSpd()
 	{
-		double val = super.getPAtkSpd();
-		if (getActiveChar().isHungry())
-		{
-			val = val / 2;
-		}
-		return val;
+		return getActiveChar().isHungry() ? super.getPAtkSpd() / 2 : super.getPAtkSpd();
 	}
 	
 	@Override
 	public int getMAtkSpd()
 	{
-		int val = super.getMAtkSpd();
-		if (getActiveChar().isHungry())
-		{
-			val = val / 2;
-		}
-		return val;
+		return getActiveChar().isHungry() ? super.getMAtkSpd() / 2 : super.getMAtkSpd();
 	}
 	
 	@Override

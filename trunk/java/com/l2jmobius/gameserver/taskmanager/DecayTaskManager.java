@@ -79,21 +79,16 @@ public final class DecayTaskManager
 	 */
 	public void add(L2Character character, long delay, TimeUnit timeUnit)
 	{
-		ScheduledFuture<?> decayTask = _decayExecutor.schedule(new DecayTask(character), delay, TimeUnit.SECONDS);
+		ScheduledFuture<?> decayTask = _decayTasks.put(character, _decayExecutor.schedule(new DecayTask(character), delay, TimeUnit.SECONDS));
 		
-		decayTask = _decayTasks.put(character, decayTask);
-		// if decay task already existed cancel it so we use the new time
+		if ((decayTask == null) || decayTask.cancel(false))
+		{
+			return;
+		}
+		decayTask = _decayTasks.remove(character);
 		if (decayTask != null)
 		{
-			if (!decayTask.cancel(false))
-			{
-				// old decay task was completed while canceling it remove and cancel the new one
-				decayTask = _decayTasks.remove(character);
-				if (decayTask != null)
-				{
-					decayTask.cancel(false);
-				}
-			}
+			decayTask.cancel(false);
 		}
 	}
 	

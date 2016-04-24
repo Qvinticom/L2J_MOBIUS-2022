@@ -51,5 +51,4 @@ public final class CommandChannelTimer implements Runnable
 			ThreadPoolManager.getInstance().scheduleGeneral(this, 10000); // 10sec
 		}
 	}
-	
 }

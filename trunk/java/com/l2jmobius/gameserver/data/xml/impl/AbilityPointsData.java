@@ -60,10 +60,7 @@ public final class AbilityPointsData implements IXmlReader
 					if ("points".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						final int from = parseInteger(attrs, "from");
-						final int to = parseInteger(attrs, "to");
-						final int costs = parseInteger(attrs, "costs");
-						_points.add(new RangeAbilityPointsHolder(from, to, costs));
+						_points.add(new RangeAbilityPointsHolder(parseInteger(attrs, "from"), parseInteger(attrs, "to"), parseInteger(attrs, "costs")));
 					}
 				}
 			}
@@ -86,18 +83,12 @@ public final class AbilityPointsData implements IXmlReader
 	{
 		points++; // for next point
 		final RangeAbilityPointsHolder holder = getHolder(points);
-		if (holder == null)
+		if (holder != null)
 		{
-			final RangeAbilityPointsHolder prevHolder = getHolder(points - 1);
-			if (prevHolder != null)
-			{
-				return prevHolder.getSP();
-			}
-			
-			// No data found
-			return points >= 13 ? 1_000_000_000 : points >= 9 ? 750_000_000 : points >= 5 ? 500_000_000 : 250_000_000;
+			return holder.getSP();
 		}
-		return holder.getSP();
+		final RangeAbilityPointsHolder prevHolder = getHolder(points - 1);
+		return prevHolder != null ? prevHolder.getSP() : points >= 13 ? 1_000_000_000 : points >= 9 ? 750_000_000 : points >= 5 ? 500_000_000 : 250_000_000;
 	}
 	
 	public static final AbilityPointsData getInstance()

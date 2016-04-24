@@ -30,8 +30,7 @@ public class ExLoginVitalityEffectInfo extends L2GameServerPacket
 	
 	public ExLoginVitalityEffectInfo(L2GameClient client)
 	{
-		final AccountVariables vars = new AccountVariables(client.getAccountName());
-		_points = vars.getInt(PcStat.VITALITY_VARIABLE, Config.STARTING_VITALITY_POINTS);
+		_points = (new AccountVariables(client.getAccountName())).getInt(PcStat.VITALITY_VARIABLE, Config.STARTING_VITALITY_POINTS);
 	}
 	
 	@Override

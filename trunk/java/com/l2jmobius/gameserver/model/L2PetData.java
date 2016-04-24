@@ -207,12 +207,9 @@ public class L2PetData
 				}
 				break;
 			}
-			else if (temp.getMinLevel() <= petLvl)
+			if ((temp.getMinLevel() <= petLvl) && (temp.getSkillLvl() > lvl))
 			{
-				if (temp.getSkillLvl() > lvl)
-				{
-					lvl = temp.getSkillLvl();
-				}
+				lvl = temp.getSkillLvl();
 			}
 		}
 		return lvl;

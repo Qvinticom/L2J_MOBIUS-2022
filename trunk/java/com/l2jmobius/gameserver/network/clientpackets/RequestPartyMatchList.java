@@ -99,18 +99,12 @@ public class RequestPartyMatchList extends L2GameClientPacket
 			{
 				for (L2PcInstance ptmember : _activeChar.getParty().getMembers())
 				{
-					if (ptmember == null)
-					{
-						continue;
-					}
-					if (ptmember == _activeChar)
+					if ((ptmember == null) || (ptmember == _activeChar))
 					{
 						continue;
 					}
 					
 					ptmember.setPartyRoom(_maxid);
-					// ptmember.setPartyMatching(1);
-					
 					_room.addMember(ptmember);
 				}
 			}

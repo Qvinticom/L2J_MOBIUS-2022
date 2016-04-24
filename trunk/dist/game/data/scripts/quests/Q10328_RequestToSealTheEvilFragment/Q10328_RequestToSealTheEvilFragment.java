@@ -81,7 +81,6 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 					addExpAndSp(player, 13000, 5);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
 				break;
 			}
@@ -102,7 +101,6 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 				if (npc.getId() == PANTHEON)
 				{
 					htmltext = "32972-01.htm";
-					break;
 				}
 				break;
 			}

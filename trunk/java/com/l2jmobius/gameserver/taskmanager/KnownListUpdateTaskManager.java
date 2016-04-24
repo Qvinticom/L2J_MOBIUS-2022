@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.taskmanager;
 
-import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
@@ -104,8 +103,7 @@ public class KnownListUpdateTaskManager
 	
 	public void updateRegion(L2WorldRegion region, boolean fullUpdate, boolean forgetObjects)
 	{
-		final Collection<L2Object> vObj = region.getVisibleObjects().values();
-		for (L2Object object : vObj) // and for all members in region
+		for (L2Object object : region.getVisibleObjects().values())
 		{
 			if ((object == null) || !object.isVisible())
 			{
@@ -124,8 +122,7 @@ public class KnownListUpdateTaskManager
 			{
 				if ((object instanceof L2Playable) || (aggro && regi.isActive()) || fullUpdate)
 				{
-					final Collection<L2Object> inrObj = regi.getVisibleObjects().values();
-					for (L2Object obj : inrObj)
+					for (L2Object obj : regi.getVisibleObjects().values())
 					{
 						if (obj != object)
 						{
@@ -133,18 +130,13 @@ public class KnownListUpdateTaskManager
 						}
 					}
 				}
-				else if (object instanceof L2Character)
+				else if ((object instanceof L2Character) && regi.isActive())
 				{
-					if (regi.isActive())
+					for (L2Object obj : regi.getVisibleObjects().values())
 					{
-						final Collection<L2Object> inrPls = regi.getVisibleObjects().values();
-						
-						for (L2Object obj : inrPls)
+						if (obj != object)
 						{
-							if (obj != object)
-							{
-								object.getKnownList().addKnownObject(obj);
-							}
+							object.getKnownList().addKnownObject(obj);
 						}
 					}
 				}

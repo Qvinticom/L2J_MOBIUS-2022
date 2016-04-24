@@ -40,8 +40,7 @@ public final class RequestRecipeItemMakeInfo extends L2GameClientPacket
 			return;
 		}
 		
-		final RecipeItemMakeInfo response = new RecipeItemMakeInfo(_id, player);
-		sendPacket(response);
+		sendPacket((new RecipeItemMakeInfo(_id, player)));
 	}
 	
 	@Override

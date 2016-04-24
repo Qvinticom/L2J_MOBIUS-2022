@@ -70,55 +70,51 @@ public final class CoupleManager
 	public final Couple getCouple(int coupleId)
 	{
 		final int index = getCoupleIndex(coupleId);
-		if (index >= 0)
-		{
-			return getCouples().get(index);
-		}
-		return null;
+		return index >= 0 ? getCouples().get(index) : null;
 	}
 	
 	public void createCouple(L2PcInstance player1, L2PcInstance player2)
 	{
-		if ((player1 != null) && (player2 != null))
+		if ((player1 == null) || (player2 == null) || (player1.getPartnerId() != 0) || (player2.getPartnerId() != 0))
 		{
-			if ((player1.getPartnerId() == 0) && (player2.getPartnerId() == 0))
-			{
-				final int player1id = player1.getObjectId();
-				final int player2id = player2.getObjectId();
-				
-				final Couple couple = new Couple(player1, player2);
-				getCouples().add(couple);
-				player1.setPartnerId(player2id);
-				player2.setPartnerId(player1id);
-				player1.setCoupleId(couple.getId());
-				player2.setCoupleId(couple.getId());
-			}
+			return;
 		}
+		
+		final int player1id = player1.getObjectId();
+		final int player2id = player2.getObjectId();
+		
+		final Couple couple = new Couple(player1, player2);
+		getCouples().add(couple);
+		player1.setPartnerId(player2id);
+		player2.setPartnerId(player1id);
+		player1.setCoupleId(couple.getId());
+		player2.setCoupleId(couple.getId());
 	}
 	
 	public void deleteCouple(int coupleId)
 	{
 		final int index = getCoupleIndex(coupleId);
 		final Couple couple = getCouples().get(index);
-		if (couple != null)
+		if (couple == null)
 		{
-			final L2PcInstance player1 = L2World.getInstance().getPlayer(couple.getPlayer1Id());
-			final L2PcInstance player2 = L2World.getInstance().getPlayer(couple.getPlayer2Id());
-			if (player1 != null)
-			{
-				player1.setPartnerId(0);
-				player1.setMarried(false);
-				player1.setCoupleId(0);
-			}
-			if (player2 != null)
-			{
-				player2.setPartnerId(0);
-				player2.setMarried(false);
-				player2.setCoupleId(0);
-			}
-			couple.divorce();
-			getCouples().remove(index);
+			return;
 		}
+		final L2PcInstance player1 = L2World.getInstance().getPlayer(couple.getPlayer1Id());
+		final L2PcInstance player2 = L2World.getInstance().getPlayer(couple.getPlayer2Id());
+		if (player1 != null)
+		{
+			player1.setPartnerId(0);
+			player1.setMarried(false);
+			player1.setCoupleId(0);
+		}
+		if (player2 != null)
+		{
+			player2.setPartnerId(0);
+			player2.setMarried(false);
+			player2.setCoupleId(0);
+		}
+		couple.divorce();
+		getCouples().remove(index);
 	}
 	
 	public final int getCoupleIndex(int coupleId)

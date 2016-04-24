@@ -37,11 +37,7 @@ public final class EndScenePlayer extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		if (_movieId == 0)
+		if ((activeChar == null) || (_movieId == 0))
 		{
 			return;
 		}

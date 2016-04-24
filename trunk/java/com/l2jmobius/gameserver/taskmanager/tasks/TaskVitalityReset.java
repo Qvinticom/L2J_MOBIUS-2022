@@ -47,26 +47,27 @@ public class TaskVitalityReset extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
-		final Calendar cal = Calendar.getInstance();
-		if (cal.get(Calendar.DAY_OF_WEEK) == Config.ALT_VITALITY_DATE_RESET)
+		if (Calendar.getInstance().get(Calendar.DAY_OF_WEEK) != Config.ALT_VITALITY_DATE_RESET)
 		{
-			for (L2PcInstance player : L2World.getInstance().getPlayers())
-			{
-				player.setVitalityPoints(PcStat.MAX_VITALITY_POINTS, false);
-			}
-			
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement st = con.prepareStatement("DELETE FROM account_gsdata WHERE var = ?"))
-			{
-				st.setString(1, PcStat.VITALITY_VARIABLE);
-				st.execute();
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, "", e);
-			}
-			_log.info(getClass().getSimpleName() + ": launched.");
+			return;
 		}
+		
+		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		{
+			player.setVitalityPoints(PcStat.MAX_VITALITY_POINTS, false);
+		}
+		
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement st = con.prepareStatement("DELETE FROM account_gsdata WHERE var = ?"))
+		{
+			st.setString(1, PcStat.VITALITY_VARIABLE);
+			st.execute();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, "", e);
+		}
+		_log.info(getClass().getSimpleName() + ": launched.");
 	}
 	
 	@Override

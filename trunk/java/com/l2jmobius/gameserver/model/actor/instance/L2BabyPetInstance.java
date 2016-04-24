@@ -93,12 +93,7 @@ public final class L2BabyPetInstance extends L2PetInstance
 			}
 			
 			final Skill skill = SkillData.getInstance().getSkill(id, lvl);
-			if (skill == null)
-			{
-				continue;
-			}
-			
-			if ((skill.getId() == BUFF_CONTROL) || (skill.getId() == AWAKENING))
+			if ((skill == null) || (skill.getId() == BUFF_CONTROL) || (skill.getId() == AWAKENING))
 			{
 				continue;
 			}
@@ -208,11 +203,12 @@ public final class L2BabyPetInstance extends L2PetInstance
 	
 	private final void stopCastTask()
 	{
-		if (_castTask != null)
+		if (_castTask == null)
 		{
-			_castTask.cancel(false);
-			_castTask = null;
+			return;
 		}
+		_castTask.cancel(false);
+		_castTask = null;
 	}
 	
 	protected void castSkill(Skill skill)
@@ -285,26 +281,20 @@ public final class L2BabyPetInstance extends L2PetInstance
 				if ((isImprovedBaby && (hpPercent < 0.3)) || (!isImprovedBaby && (hpPercent < 0.15)))
 				{
 					skill = _majorHeal.getSkill();
-					if (!_baby.isSkillDisabled(skill) && (Rnd.get(100) <= 75))
+					if (!_baby.isSkillDisabled(skill) && (Rnd.get(100) <= 75) && (_baby.getCurrentMp() >= skill.getMpConsume()))
 					{
-						if (_baby.getCurrentMp() >= skill.getMpConsume())
-						{
-							castSkill(skill);
-							return;
-						}
+						castSkill(skill);
+						return;
 					}
 				}
 				else if ((_majorHeal.getSkill() != _minorHeal.getSkill()) && ((isImprovedBaby && (hpPercent < 0.7)) || (!isImprovedBaby && (hpPercent < 0.8))))
 				{
 					// Cast _minorHeal only if it's different than _majorHeal, then pet has two heals available.
 					skill = _minorHeal.getSkill();
-					if (!_baby.isSkillDisabled(skill) && (Rnd.get(100) <= 25))
+					if (!_baby.isSkillDisabled(skill) && (Rnd.get(100) <= 25) && (_baby.getCurrentMp() >= skill.getMpConsume()))
 					{
-						if (_baby.getCurrentMp() >= skill.getMpConsume())
-						{
-							castSkill(skill);
-							return;
-						}
+						castSkill(skill);
+						return;
 					}
 				}
 			}
@@ -318,25 +308,15 @@ public final class L2BabyPetInstance extends L2PetInstance
 					for (SkillHolder buff : _buffs)
 					{
 						skill = buff.getSkill();
-						if (_baby.isSkillDisabled(skill))
-						{
-							continue;
-						}
-						
-						if (_baby.getCurrentMp() < skill.getMpConsume())
+						if (_baby.isSkillDisabled(skill) || (_baby.getCurrentMp() < skill.getMpConsume()))
 						{
 							continue;
 						}
 						
 						// If owner already have the buff, continue.
 						final BuffInfo buffInfo = owner.getEffectList().getBuffInfoByAbnormalType(skill.getAbnormalType());
-						if ((buffInfo != null) && (skill.getAbnormalLvl() <= buffInfo.getSkill().getAbnormalLvl()))
-						{
-							continue;
-						}
-						
-						// If owner have the buff blocked, continue.
-						if ((owner.getEffectList().getAllBlockedBuffSlots() != null) && owner.getEffectList().getAllBlockedBuffSlots().contains(skill.getAbnormalType()))
+						if (((buffInfo != null) && (skill.getAbnormalLvl() <= buffInfo.getSkill().getAbnormalLvl()))//
+							|| ((owner.getEffectList().getAllBlockedBuffSlots() != null) && owner.getEffectList().getAllBlockedBuffSlots().contains(skill.getAbnormalType())))
 						{
 							continue;
 						}

@@ -264,11 +264,7 @@ public final class Elementals
 	public static byte getItemElement(int itemId)
 	{
 		final ElementalItems item = TABLE.get(itemId);
-		if (item != null)
-		{
-			return item._element;
-		}
-		return NONE;
+		return item != null ? item._element : NONE;
 	}
 	
 	public static ElementalItems getItemElemental(int itemId)
@@ -279,11 +275,7 @@ public final class Elementals
 	public static int getMaxElementLevel(int itemId)
 	{
 		final ElementalItems item = TABLE.get(itemId);
-		if (item != null)
-		{
-			return item._type._maxLevel;
-		}
-		return -1;
+		return item != null ? item._type._maxLevel : -1;
 	}
 	
 	public static String getElementName(byte element)

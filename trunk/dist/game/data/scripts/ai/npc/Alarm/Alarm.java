@@ -76,22 +76,19 @@ final class Alarm extends AbstractNpcAI
 			}
 			case "RECORDER_CRUSHED":
 			{
-				if (npc0 != null)
+				if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 				{
-					if (npc0.getVariables().getBoolean("SPAWNED"))
+					npc0.getVariables().set("SPAWNED", false);
+					if (player0 != null)
 					{
-						npc0.getVariables().set("SPAWNED", false);
-						if (player0 != null)
+						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.RECORDER_CRUSHED);
+						if (verifyMemoState(player0, ART_OF_PERSUASION_ID, -1))
 						{
-							broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.RECORDER_CRUSHED);
-							if (verifyMemoState(player0, ART_OF_PERSUASION_ID, -1))
-							{
-								setMemoState(player0, ART_OF_PERSUASION_ID, 5);
-							}
-							else if (verifyMemoState(player0, NIKOLAS_COOPERATION_ID, -1))
-							{
-								setMemoState(player0, NIKOLAS_COOPERATION_ID, 5);
-							}
+							setMemoState(player0, ART_OF_PERSUASION_ID, 5);
+						}
+						else if (verifyMemoState(player0, NIKOLAS_COOPERATION_ID, -1))
+						{
+							setMemoState(player0, NIKOLAS_COOPERATION_ID, 5);
 						}
 					}
 				}
@@ -166,8 +163,7 @@ final class Alarm extends AbstractNpcAI
 			{
 				if (verifyMemoState(player, ART_OF_PERSUASION_ID, 3))
 				{
-					final int i0 = getMemoStateEx(player, ART_OF_PERSUASION_ID, 1);
-					if (i0 >= 3)
+					if (getMemoStateEx(player, ART_OF_PERSUASION_ID, 1) >= 3)
 					{
 						if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 						{
@@ -185,14 +181,12 @@ final class Alarm extends AbstractNpcAI
 				}
 				else if (verifyMemoState(player, NIKOLAS_COOPERATION_ID, 3))
 				{
-					final int i0 = getMemoStateEx(player, NIKOLAS_COOPERATION_ID, 1);
-					if (i0 >= 3)
+					if (getMemoStateEx(player, NIKOLAS_COOPERATION_ID, 1) >= 3)
 					{
 						if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 						{
 							npc0.getVariables().set("SPAWNED", false);
 						}
-						
 						npc.deleteMe();
 						setMemoState(player, NIKOLAS_COOPERATION_ID, 4);
 						htmltext = "32367-185_09.html";
@@ -215,8 +209,7 @@ final class Alarm extends AbstractNpcAI
 		String htmltext = getNoQuestMsg(talker);
 		if (verifyMemoState(talker, ART_OF_PERSUASION_ID, 3) || verifyMemoState(talker, NIKOLAS_COOPERATION_ID, 3))
 		{
-			final L2PcInstance player = npc.getVariables().getObject("player0", L2PcInstance.class);
-			if (player == talker)
+			if (npc.getVariables().getObject("player0", L2PcInstance.class) == talker)
 			{
 				htmltext = "32367-01.html";
 			}

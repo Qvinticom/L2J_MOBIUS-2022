@@ -46,10 +46,9 @@ public class AnnotationEventListener extends AbstractEventListener
 	{
 		try
 		{
-			final Object result = _callback.invoke(getOwner(), event);
 			if (_callback.getReturnType() == returnBackClass)
 			{
-				return returnBackClass.cast(result);
+				return returnBackClass.cast(_callback.invoke(getOwner(), event));
 			}
 		}
 		catch (Exception e)

@@ -52,12 +52,7 @@ public class MoveToLocationAirShip extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if (!activeChar.isInAirShip())
+		if ((activeChar == null) || !activeChar.isInAirShip())
 		{
 			return;
 		}

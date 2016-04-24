@@ -553,11 +553,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@SuppressWarnings("unchecked")
 	public final <T> T removeScript(Class<T> script)
 	{
-		if (_scripts == null)
-		{
-			return null;
-		}
-		return (T) _scripts.remove(script.getName());
+		return _scripts == null ? null : (T) _scripts.remove(script.getName());
 	}
 	
 	/**
@@ -568,11 +564,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@SuppressWarnings("unchecked")
 	public final <T> T getScript(Class<T> script)
 	{
-		if (_scripts == null)
-		{
-			return null;
-		}
-		return (T) _scripts.get(script.getName());
+		return _scripts == null ? null : (T) _scripts.get(script.getName());
 	}
 	
 	public void removeStatusListener(L2Character object)
@@ -629,15 +621,15 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		}
 		
 		final L2WorldRegion newRegion = L2World.getInstance().getRegion(getLocation());
-		if (newRegion != getWorldRegion())
+		if (newRegion == getWorldRegion())
 		{
-			getWorldRegion().removeVisibleObject(this);
-			
-			setWorldRegion(newRegion);
-			
-			// Add the L2Oject spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
-			getWorldRegion().addVisibleObject(this);
+			return;
 		}
+		
+		getWorldRegion().removeVisibleObject(this);
+		setWorldRegion(newRegion);
+		// Add the L2Oject spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
+		getWorldRegion().addVisibleObject(this);
 	}
 	
 	public final L2WorldRegion getWorldRegion()
@@ -971,13 +963,9 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			final DeleteObject deletePacket = new DeleteObject(this);
 			for (L2Object obj : getKnownList().getKnownObjects().values())
 			{
-				if ((obj != null) && obj.isPlayer())
+				if ((obj != null) && obj.isPlayer() && !isVisibleFor(obj.getActingPlayer()))
 				{
-					final L2PcInstance player = obj.getActingPlayer();
-					if (!isVisibleFor(player))
-					{
-						obj.sendPacket(deletePacket);
-					}
+					obj.sendPacket(deletePacket);
 				}
 			}
 		}

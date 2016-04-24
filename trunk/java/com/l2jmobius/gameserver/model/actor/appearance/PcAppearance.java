@@ -69,11 +69,7 @@ public class PcAppearance
 	 */
 	public final String getVisibleName()
 	{
-		if (_visibleName == null)
-		{
-			return getOwner().getName();
-		}
-		return _visibleName;
+		return _visibleName == null ? getOwner().getName() : _visibleName;
 	}
 	
 	/**
@@ -89,11 +85,7 @@ public class PcAppearance
 	 */
 	public final String getVisibleTitle()
 	{
-		if (_visibleTitle == null)
-		{
-			return getOwner().getTitle();
-		}
-		return _visibleTitle;
+		return _visibleTitle == null ? getOwner().getTitle() : _visibleTitle;
 	}
 	
 	public final byte getFace()
@@ -171,11 +163,7 @@ public class PcAppearance
 	
 	public int getNameColor()
 	{
-		if (_owner.getReputation() != 0)
-		{
-			return 0xFFFFFF; // Using 0xFFFFFF value in case _nameColor has changed.
-		}
-		return _nameColor;
+		return _owner.getReputation() != 0 ? 0xFFFFFF : _nameColor; // Using 0xFFFFFF value in case _nameColor has changed.
 	}
 	
 	public void setNameColor(int nameColor)

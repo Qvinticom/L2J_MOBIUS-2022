@@ -69,11 +69,7 @@ final class Zenya extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getLevel() < MIN_LEVEL)
-		{
-			return "32140-3.html";
-		}
-		return "32140.html";
+		return player.getLevel() < MIN_LEVEL ? "32140-3.html" : "32140.html";
 	}
 	
 	public static void main(String[] args)

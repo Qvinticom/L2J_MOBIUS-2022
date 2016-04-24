@@ -81,5 +81,4 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 	{
 		return _C__D0_27_REQUESTCONFIRMREFINERITEM;
 	}
-	
 }

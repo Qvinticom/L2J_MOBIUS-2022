@@ -152,8 +152,7 @@ public final class NightmareKamaloka extends AbstractInstance
 				party.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED).addPcName(member));
 				return false;
 			}
-			final Long reenterTime = InstanceManager.getInstance().getInstanceTime(member.getObjectId(), TEMPLATE_ID);
-			if (System.currentTimeMillis() < reenterTime)
+			if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(member.getObjectId(), TEMPLATE_ID))
 			{
 				party.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET));
 				return false;

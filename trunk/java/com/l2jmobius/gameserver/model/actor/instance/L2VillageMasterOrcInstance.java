@@ -34,11 +34,6 @@ public final class L2VillageMasterOrcInstance extends L2VillageMasterInstance
 	@Override
 	protected final boolean checkVillageMasterRace(PlayerClass pclass)
 	{
-		if (pclass == null)
-		{
-			return false;
-		}
-		
-		return pclass.isOfRace(Race.ORC);
+		return (pclass != null) && pclass.isOfRace(Race.ORC);
 	}
 }

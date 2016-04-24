@@ -84,9 +84,8 @@ public class LoginController
 		
 		_keyPairs = new ScrambledKeyPair[10];
 		
-		KeyPairGenerator keygen = null;
+		final KeyPairGenerator keygen = KeyPairGenerator.getInstance("RSA");
 		
-		keygen = KeyPairGenerator.getInstance("RSA");
 		final RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
 		keygen.initialize(spec);
 		
@@ -115,9 +114,7 @@ public class LoginController
 	 */
 	private void testCipher(RSAPrivateKey key) throws GeneralSecurityException
 	{
-		// avoid worst-case execution, KenM
-		final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
-		rsaCipher.init(Cipher.DECRYPT_MODE, key);
+		Cipher.getInstance("RSA/ECB/nopadding").init(Cipher.DECRYPT_MODE, key);
 	}
 	
 	private void generateBlowFishKeys()
@@ -144,9 +141,8 @@ public class LoginController
 	
 	public SessionKey assignSessionKeyToClient(String account, L2LoginClient client)
 	{
-		SessionKey key;
+		final SessionKey key = new SessionKey(Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt());
 		
-		key = new SessionKey(Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt());
 		_loginServerClients.put(account, client);
 		return key;
 	}
@@ -328,11 +324,7 @@ public class LoginController
 	public boolean isBannedAddress(InetAddress address) throws UnknownHostException
 	{
 		final String[] parts = address.getHostAddress().split("\\.");
-		Long bi = _bannedIps.get(address);
-		if (bi == null)
-		{
-			bi = _bannedIps.get(InetAddress.getByName(parts[0] + "." + parts[1] + "." + parts[2] + ".0"));
-		}
+		Long bi = _bannedIps.get(address) == null ? _bannedIps.get(InetAddress.getByName(parts[0] + "." + parts[1] + "." + parts[2] + ".0")) : _bannedIps.get(address);
 		if (bi == null)
 		{
 			bi = _bannedIps.get(InetAddress.getByName(parts[0] + "." + parts[1] + ".0.0"));
@@ -341,16 +333,16 @@ public class LoginController
 		{
 			bi = _bannedIps.get(InetAddress.getByName(parts[0] + ".0.0.0"));
 		}
-		if (bi != null)
+		if (bi == null)
 		{
-			if ((bi > 0) && (bi < System.currentTimeMillis()))
-			{
-				_bannedIps.remove(address);
-				_log.info("Removed expired ip address ban " + address.getHostAddress() + ".");
-				return false;
-			}
+			return false;
+		}
+		if ((bi <= 0) || (bi >= System.currentTimeMillis()))
+		{
 			return true;
 		}
+		_bannedIps.remove(address);
+		_log.info("Removed expired ip address ban " + address.getHostAddress() + ".");
 		return false;
 	}
 	
@@ -389,11 +381,7 @@ public class LoginController
 	public SessionKey getKeyForAccount(String account)
 	{
 		final L2LoginClient client = _loginServerClients.get(account);
-		if (client != null)
-		{
-			return client.getSessionKey();
-		}
-		return null;
+		return client != null ? client.getSessionKey() : null;
 	}
 	
 	public boolean isAccountInAnyGameServer(String account)
@@ -426,8 +414,7 @@ public class LoginController
 	
 	public void getCharactersOnAccount(String account)
 	{
-		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
-		for (GameServerInfo gsi : serverList)
+		for (GameServerInfo gsi : GameServerTable.getInstance().getRegisteredGameServers().values())
 		{
 			if (gsi.isAuthed())
 			{
@@ -445,27 +432,28 @@ public class LoginController
 	{
 		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
 		final int access = client.getAccessLevel();
-		if ((gsi != null) && gsi.isAuthed())
+		if ((gsi == null) || !gsi.isAuthed())
 		{
-			final boolean loginOk = ((gsi.getCurrentPlayerCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access > 0);
-			
-			if (loginOk && (client.getLastServer() != serverId))
-			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection();
-					PreparedStatement ps = con.prepareStatement(ACCOUNT_LAST_SERVER_UPDATE))
-				{
-					ps.setInt(1, serverId);
-					ps.setString(2, client.getAccount());
-					ps.executeUpdate();
-				}
-				catch (Exception e)
-				{
-					_log.log(Level.WARNING, "Could not set lastServer: " + e.getMessage(), e);
-				}
-			}
-			return loginOk;
+			return false;
 		}
-		return false;
+		
+		final boolean loginOk = ((gsi.getCurrentPlayerCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access > 0);
+		
+		if (loginOk && (client.getLastServer() != serverId))
+		{
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
+				PreparedStatement ps = con.prepareStatement(ACCOUNT_LAST_SERVER_UPDATE))
+			{
+				ps.setInt(1, serverId);
+				ps.setString(2, client.getAccount());
+				ps.executeUpdate();
+			}
+			catch (Exception e)
+			{
+				_log.log(Level.WARNING, "Could not set lastServer: " + e.getMessage(), e);
+			}
+		}
+		return loginOk;
 	}
 	
 	public void setAccountAccessLevel(String account, int banLevel)
@@ -561,7 +549,7 @@ public class LoginController
 						{
 							continue;
 						}
-						else if (type.equals("allow"))
+						if (type.equals("allow"))
 						{
 							ipWhiteList.add(InetAddress.getByName(ip));
 						}

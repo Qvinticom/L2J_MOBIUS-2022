@@ -662,8 +662,7 @@ public final class Q00386_StolenDignity extends Quest
 	 */
 	private int getBingoSelectCount(QuestState qs)
 	{
-		final String current = qs.get("selected");
-		return current.replaceAll("\\D", "").length();
+		return qs.get("selected").replaceAll("\\D", "").length();
 	}
 	
 	@Override

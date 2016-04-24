@@ -287,16 +287,11 @@ public class AdminAdmin implements IAdminCommandHandler
 				showConfigPage(activeChar);
 			}
 		}
-		else if (command.startsWith("admin_gmon"))
-		{
-			// nothing
-		}
 		else if (command.startsWith("admin_worldchat"))
 		{
 			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken(); // admin_worldchat
-			final String subCmd = st.hasMoreTokens() ? st.nextToken() : "";
-			switch (subCmd)
+			switch (st.hasMoreTokens() ? st.nextToken() : "")
 			{
 				case "shout":
 				{
@@ -371,6 +366,10 @@ public class AdminAdmin implements IAdminCommandHandler
 					break;
 				}
 			}
+		}
+		else if (command.startsWith("admin_gmon"))
+		{
+			// nothing
 		}
 		return true;
 	}

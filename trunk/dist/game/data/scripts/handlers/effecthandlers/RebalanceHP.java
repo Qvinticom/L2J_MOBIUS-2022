@@ -86,12 +86,11 @@ public final class RebalanceHP extends AbstractEffect
 			}
 		}
 		
-		final double percentHP = currentHPs / fullHP;
 		for (L2PcInstance member : party.getMembers())
 		{
 			if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
 			{
-				double newHP = member.getMaxHp() * percentHP;
+				double newHP = (member.getMaxHp() * currentHPs) / fullHP;
 				if (newHP > member.getCurrentHp()) // The target gets healed
 				{
 					// The heal will be blocked if the current hp passes the limit
@@ -104,14 +103,12 @@ public final class RebalanceHP extends AbstractEffect
 						newHP = member.getMaxRecoverableHp();
 					}
 				}
-				
 				member.setCurrentHp(newHP);
 			}
-			
 			final L2Summon summon = member.getPet();
 			if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
 			{
-				double newHP = summon.getMaxHp() * percentHP;
+				double newHP = (summon.getMaxHp() * currentHPs) / fullHP;
 				if (newHP > summon.getCurrentHp()) // The target gets healed
 				{
 					// The heal will be blocked if the current hp passes the limit
@@ -131,7 +128,7 @@ public final class RebalanceHP extends AbstractEffect
 			{
 				if (!servitors.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
 				{
-					double newHP = servitors.getMaxHp() * percentHP;
+					double newHP = (servitors.getMaxHp() * currentHPs) / fullHP;
 					if (newHP > servitors.getCurrentHp()) // The target gets healed
 					{
 						// The heal will be blocked if the current hp passes the limit

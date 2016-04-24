@@ -147,13 +147,10 @@ public final class Q00186_ContractExecution extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isMemoState(2) && Util.checkIfInRange(1500, npc, killer, false) && (getRandom(100) < MONSTERS.get(npc.getId())))
+		if ((qs != null) && qs.isMemoState(2) && Util.checkIfInRange(1500, npc, killer, false) && (getRandom(100) < MONSTERS.get(npc.getId())) && !hasQuestItems(killer, LETO_LIZARDMAN_ACCESSORY))
 		{
-			if (!hasQuestItems(killer, LETO_LIZARDMAN_ACCESSORY))
-			{
-				giveItems(killer, LETO_LIZARDMAN_ACCESSORY, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
+			giveItems(killer, LETO_LIZARDMAN_ACCESSORY, 1);
+			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -203,14 +200,7 @@ public final class Q00186_ContractExecution extends Quest
 				{
 					if (memoState == 2)
 					{
-						if (hasQuestItems(player, LETO_LIZARDMAN_ACCESSORY))
-						{
-							htmltext = "31437-02.html";
-						}
-						else
-						{
-							htmltext = "31437-01.html";
-						}
+						htmltext = hasQuestItems(player, LETO_LIZARDMAN_ACCESSORY) ? "31437-02.html" : "31437-01.html";
 					}
 					else if (memoState == 3)
 					{
@@ -220,12 +210,9 @@ public final class Q00186_ContractExecution extends Quest
 				}
 			}
 		}
-		else if (qs.isCompleted())
+		else if (qs.isCompleted() && (npc.getId() == RESEARCHER_LORAIN))
 		{
-			if (npc.getId() == RESEARCHER_LORAIN)
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-			}
+			htmltext = getAlreadyCompletedMsg(player);
 		}
 		return htmltext;
 	}

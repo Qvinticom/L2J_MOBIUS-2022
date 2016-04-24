@@ -48,5 +48,4 @@ public final class RequestUpdateBlockMemo extends L2GameClientPacket
 	{
 		return _C__D0_96_REQUESTUPDATEBLOCKMEMO;
 	}
-	
 }

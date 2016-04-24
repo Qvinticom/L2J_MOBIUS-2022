@@ -66,12 +66,9 @@ public class ValidatePosition extends L2GameClientPacket
 			_log.fine("server pos: " + realX + " " + realY + " " + realZ + " head " + activeChar.getHeading());
 		}
 		
-		if ((_x == 0) && (_y == 0))
+		if ((_x == 0) && (_y == 0) && (realX != 0))
 		{
-			if (realX != 0)
-			{
-				return;
-			}
+			return;
 		}
 		
 		int dx, dy, dz;
@@ -92,26 +89,10 @@ public class ValidatePosition extends L2GameClientPacket
 			}
 			return;
 		}
-		if (activeChar.isInAirShip())
-		{
-			// Zoey76: TODO: Implement or cleanup.
-			// if (Config.COORD_SYNCHRONIZE == 2)
-			// {
-			// dx = _x - activeChar.getInVehiclePosition().getX();
-			// dy = _y - activeChar.getInVehiclePosition().getY();
-			// dz = _z - activeChar.getInVehiclePosition().getZ();
-			// diffSq = ((dx * dx) + (dy * dy));
-			// if (diffSq > 250000)
-			// {
-			// sendPacket(new GetOnVehicle(activeChar.getObjectId(), _data, activeChar.getInBoatPosition()));
-			// }
-			// }
-			return;
-		}
 		
-		if (activeChar.isFalling(_z))
+		if (activeChar.isInAirShip() || activeChar.isFalling(_z))
 		{
-			return; // disable validations during fall to avoid "jumping"
+			return;
 		}
 		
 		dx = _x - realX;

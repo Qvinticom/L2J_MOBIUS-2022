@@ -304,13 +304,10 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 							lqs.set("flag", lqs.getInt("flag") + 1);
 							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
 						}
-						else if (lqs.getInt("flag") < 4)
+						else if ((lqs.getInt("flag") < 4) && (getRandom(4) == 0))
 						{
-							if (getRandom(4) == 0)
-							{
-								lqs.set("flag", lqs.getInt("flag") + 1);
-								npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
-							}
+							lqs.set("flag", lqs.getInt("flag") + 1);
+							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
 						}
 						arthea.setScriptValue(arthea.getScriptValue() + 1);
 					}

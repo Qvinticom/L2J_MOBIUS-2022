@@ -74,13 +74,7 @@ public final class CastleData implements IXmlReader
 									if ("npc".equals(npcNode.getNodeName()))
 									{
 										final NamedNodeMap np = npcNode.getAttributes();
-										final int npcId = parseInteger(np, "id");
-										final int x = parseInteger(np, "x");
-										final int y = parseInteger(np, "y");
-										final int z = parseInteger(np, "z");
-										final int heading = parseInteger(np, "heading");
-										
-										spawns.add(new CastleSpawnHolder(npcId, side, x, y, z, heading));
+										spawns.add(new CastleSpawnHolder(parseInteger(np, "id"), side, parseInteger(np, "x"), parseInteger(np, "y"), parseInteger(np, "z"), parseInteger(np, "heading")));
 									}
 								}
 							}

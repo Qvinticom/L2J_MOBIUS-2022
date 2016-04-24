@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor;
 
-import java.util.Collection;
-
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
@@ -57,9 +55,7 @@ public abstract class L2Decoy extends L2Character
 	@Override
 	public void updateAbnormalVisualEffects()
 	{
-		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
-		
-		for (L2PcInstance player : plrs)
+		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 		{
 			if (player != null)
 			{
@@ -130,16 +126,17 @@ public abstract class L2Decoy extends L2Character
 	
 	public synchronized void unSummon(L2PcInstance owner)
 	{
-		if (isVisible() && !isDead())
+		if (!isVisible() || isDead())
 		{
-			if (getWorldRegion() != null)
-			{
-				getWorldRegion().removeFromZones(this);
-			}
-			owner.setDecoy(null);
-			decayMe();
-			getKnownList().removeAllKnownObjects();
+			return;
 		}
+		if (getWorldRegion() != null)
+		{
+			getWorldRegion().removeFromZones(this);
+		}
+		owner.setDecoy(null);
+		decayMe();
+		getKnownList().removeAllKnownObjects();
 	}
 	
 	public final L2PcInstance getOwner()

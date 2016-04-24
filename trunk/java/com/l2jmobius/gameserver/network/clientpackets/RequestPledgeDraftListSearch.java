@@ -71,5 +71,4 @@ public class RequestPledgeDraftListSearch extends L2GameClientPacket
 	{
 		return _C__D0_DC_REQUESTPLEDGEDRAFTLISTSEARCH;
 	}
-	
 }

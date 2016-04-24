@@ -225,7 +225,7 @@ public final class HandysBlockCheckerManager
 		final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
 		synchronized (holder)
 		{
-			final boolean isRed = team == 0 ? true : false;
+			final boolean isRed = team == 0;
 			
 			holder.removePlayer(player, team);
 			holder.broadCastPacketToTeam(new ExCubeGameRemovePlayer(player, isRed));
@@ -255,29 +255,14 @@ public final class HandysBlockCheckerManager
 		synchronized (holder)
 		{
 			final boolean isFromRed = holder.getRedPlayers().contains(player);
-			
-			if (isFromRed && (holder.getBlueTeamSize() == 6))
+			if ((isFromRed && (holder.getBlueTeamSize() == 6)) || (!isFromRed && (holder.getRedTeamSize() == 6)))
 			{
 				player.sendMessage("The team is full");
 				return;
 			}
-			else if (!isFromRed && (holder.getRedTeamSize() == 6))
-			{
-				player.sendMessage("The team is full");
-				return;
-			}
-			
 			final int futureTeam = isFromRed ? 1 : 0;
 			holder.addPlayer(player, futureTeam);
-			
-			if (isFromRed)
-			{
-				holder.removePlayer(player, 0);
-			}
-			else
-			{
-				holder.removePlayer(player, 1);
-			}
+			holder.removePlayer(player, isFromRed ? 0 : 1);
 			holder.broadCastPacketToTeam(new ExCubeGameChangeTeam(player, isFromRed));
 		}
 	}
@@ -298,11 +283,7 @@ public final class HandysBlockCheckerManager
 	 */
 	public boolean arenaIsBeingUsed(int arenaId)
 	{
-		if ((arenaId < 0) || (arenaId > 3))
-		{
-			return false;
-		}
-		return _arenaStatus.get(arenaId);
+		return (arenaId >= 0) && (arenaId <= 3) && _arenaStatus.get(arenaId);
 	}
 	
 	/**
@@ -332,29 +313,29 @@ public final class HandysBlockCheckerManager
 		final int arena = player.getBlockCheckerArena();
 		final int team = getHolder(arena).getPlayerTeam(player);
 		HandysBlockCheckerManager.getInstance().removePlayer(player, arena, team);
-		if (player.getTeam() != Team.NONE)
+		if (player.getTeam() == Team.NONE)
 		{
-			player.stopAllEffects();
-			// Remove team aura
-			player.setTeam(Team.NONE);
-			
-			// Remove the event items
-			final PcInventory inv = player.getInventory();
-			
-			if (inv.getItemByItemId(13787) != null)
-			{
-				final long count = inv.getInventoryItemCount(13787, 0);
-				inv.destroyItemByItemId("Handys Block Checker", 13787, count, player, player);
-			}
-			if (inv.getItemByItemId(13788) != null)
-			{
-				final long count = inv.getInventoryItemCount(13788, 0);
-				inv.destroyItemByItemId("Handys Block Checker", 13788, count, player, player);
-			}
-			player.setInsideZone(ZoneId.PVP, false);
-			// Teleport Back
-			player.teleToLocation(-57478, -60367, -2370);
+			return;
 		}
+		
+		player.stopAllEffects();
+		// Remove team aura
+		player.setTeam(Team.NONE);
+		
+		// Remove the event items
+		final PcInventory inv = player.getInventory();
+		
+		if (inv.getItemByItemId(13787) != null)
+		{
+			inv.destroyItemByItemId("Handys Block Checker", 13787, inv.getInventoryItemCount(13787, 0), player, player);
+		}
+		if (inv.getItemByItemId(13788) != null)
+		{
+			inv.destroyItemByItemId("Handys Block Checker", 13788, inv.getInventoryItemCount(13788, 0), player, player);
+		}
+		player.setInsideZone(ZoneId.PVP, false);
+		// Teleport Back
+		player.teleToLocation(-57478, -60367, -2370);
 	}
 	
 	public void removePenalty(int objectId)

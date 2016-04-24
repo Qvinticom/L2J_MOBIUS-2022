@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSubChange;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.network.clientpackets.RequestAcquireSkill;
 
@@ -418,18 +417,18 @@ public final class Trandon extends AbstractNpcAI
 	{
 		final PlayerVariables vars = player.getVariables();
 		final String list = vars.getString(type, "");
-		if (!list.isEmpty())
+		if (list.isEmpty())
 		{
-			final String[] skills = list.split(";");
-			for (String skill : skills)
-			{
-				final String[] str = skill.split("-");
-				final Skill sk = SkillData.getInstance().getSkill(Integer.parseInt(str[0]), Integer.parseInt(str[1]));
-				player.removeSkill(sk);
-			}
-			vars.remove(type);
-			player.sendSkillList();
+			return;
 		}
+		final String[] skills = list.split(";");
+		for (String skill : skills)
+		{
+			final String[] str = skill.split("-");
+			player.removeSkill(SkillData.getInstance().getSkill(Integer.parseInt(str[0]), Integer.parseInt(str[1])));
+		}
+		vars.remove(type);
+		player.sendSkillList();
 	}
 	
 	private final void giveSkills(L2PcInstance player, String type)
@@ -437,12 +436,10 @@ public final class Trandon extends AbstractNpcAI
 		final String list = player.getVariables().getString(type, "");
 		if (!list.isEmpty())
 		{
-			final String[] skills = list.split(";");
-			for (String skill : skills)
+			for (String skill : list.split(";"))
 			{
 				final String[] str = skill.split("-");
-				final Skill sk = SkillData.getInstance().getSkill(Integer.parseInt(str[0]), Integer.parseInt(str[1]));
-				player.addSkill(sk, false);
+				player.addSkill(SkillData.getInstance().getSkill(Integer.parseInt(str[0]), Integer.parseInt(str[1])), false);
 			}
 		}
 	}

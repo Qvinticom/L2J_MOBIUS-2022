@@ -501,11 +501,7 @@ public class StatsSet implements IParserAdvUtils
 	public String getString(String key, String defaultValue)
 	{
 		final Object val = _set.get(key);
-		if (val == null)
-		{
-			return defaultValue;
-		}
-		return String.valueOf(val);
+		return val == null ? defaultValue : String.valueOf(val);
 	}
 	
 	@Override
@@ -523,11 +519,7 @@ public class StatsSet implements IParserAdvUtils
 	public Duration getDuration(String key, Duration defaultValue)
 	{
 		final Object val = _set.get(key);
-		if (val == null)
-		{
-			return defaultValue;
-		}
-		return TimeUtil.parseDuration(String.valueOf(val));
+		return val == null ? defaultValue : TimeUtil.parseDuration(String.valueOf(val));
 	}
 	
 	@Override
@@ -580,35 +572,20 @@ public class StatsSet implements IParserAdvUtils
 	public final <A> A getObject(String name, Class<A> type)
 	{
 		final Object obj = _set.get(name);
-		if ((obj == null) || !type.isAssignableFrom(obj.getClass()))
-		{
-			return null;
-		}
-		
-		return (A) obj;
+		return (obj == null) || !type.isAssignableFrom(obj.getClass()) ? null : (A) obj;
 	}
 	
 	public SkillHolder getSkillHolder(String key)
 	{
 		final Object obj = _set.get(key);
-		if ((obj == null) || !(obj instanceof SkillHolder))
-		{
-			return null;
-		}
-		
-		return (SkillHolder) obj;
+		return (obj == null) || !(obj instanceof SkillHolder) ? null : (SkillHolder) obj;
 	}
 	
 	@SuppressWarnings("unchecked")
 	public List<MinionHolder> getMinionList(String key)
 	{
 		final Object obj = _set.get(key);
-		if ((obj == null) || !(obj instanceof List<?>))
-		{
-			return Collections.emptyList();
-		}
-		
-		return (List<MinionHolder>) obj;
+		return (obj == null) || !(obj instanceof List<?>) ? Collections.emptyList() : (List<MinionHolder>) obj;
 	}
 	
 	public void set(String name, Object value)

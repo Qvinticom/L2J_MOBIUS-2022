@@ -173,12 +173,7 @@ public final class Evolve
 			return false;
 		}
 		
-		int oldpetlvl = item.getEnchantLevel();
-		if (oldpetlvl < petminlvl)
-		{
-			oldpetlvl = petminlvl;
-		}
-		
+		final int oldpetlvl = item.getEnchantLevel() < petminlvl ? petminlvl : item.getEnchantLevel();
 		final L2PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
 		if (oldData == null)
 		{

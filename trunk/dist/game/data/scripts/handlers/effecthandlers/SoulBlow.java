@@ -19,7 +19,6 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
@@ -75,8 +74,7 @@ public final class SoulBlow extends AbstractEffect
 		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 		{
 			// Souls Formula (each soul increase +4%)
-			final int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount();
-			damage *= 1 + (chargedSouls * 0.04);
+			damage *= 1 + (((activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount()) * 0.04);
 		}
 		
 		target.reduceCurrentHp(damage, activeChar, info.getSkill());
@@ -91,8 +89,7 @@ public final class SoulBlow extends AbstractEffect
 		
 		if (activeChar.isPlayer())
 		{
-			final L2PcInstance activePlayer = activeChar.getActingPlayer();
-			activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
+			activeChar.getActingPlayer().sendDamageMessage(target, (int) damage, false, true, false);
 		}
 		// Check if damage should be reflected
 		Formulas.calcDamageReflected(activeChar, target, info.getSkill(), true);

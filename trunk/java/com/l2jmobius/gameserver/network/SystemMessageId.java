@@ -15182,9 +15182,7 @@ public final class SystemMessageId
 	
 	private static final void buildFastLookupTable()
 	{
-		final Field[] fields = SystemMessageId.class.getDeclaredFields();
-		
-		for (Field field : fields)
+		for (Field field : SystemMessageId.class.getDeclaredFields())
 		{
 			final int mod = field.getModifiers();
 			if (Modifier.isStatic(mod) && Modifier.isPublic(mod) && field.getType().equals(SystemMessageId.class) && field.isAnnotationPresent(ClientString.class))

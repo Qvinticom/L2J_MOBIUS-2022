@@ -510,15 +510,7 @@ public class NpcData implements IXmlReader
 							parameters.putIfAbsent("Privates", _minionData._tempMinions.get(npcId));
 						}
 						
-						if (parameters != null)
-						{
-							// Using unmodifiable map parameters of template are not meant to be changed at runtime.
-							template.setParameters(new StatsSet(Collections.unmodifiableMap(parameters)));
-						}
-						else
-						{
-							template.setParameters(StatsSet.EMPTY_STATSET);
-						}
+						template.setParameters(parameters != null ? new StatsSet(Collections.unmodifiableMap(parameters)) : StatsSet.EMPTY_STATSET);
 						
 						if (skills != null)
 						{
@@ -645,12 +637,11 @@ public class NpcData implements IXmlReader
 	{
 		for (Node dropNode = dropListNode.getFirstChild(); dropNode != null; dropNode = dropNode.getNextSibling())
 		{
-			final NamedNodeMap attrs = dropNode.getAttributes();
 			switch (dropNode.getNodeName().toLowerCase())
 			{
 				case "group":
 				{
-					final GroupedGeneralDropItem dropItem = dropListScope.newGroupedDropItem(parseDouble(attrs, "chance"));
+					final GroupedGeneralDropItem dropItem = dropListScope.newGroupedDropItem(parseDouble(dropNode.getAttributes(), "chance"));
 					final List<IDropItem> groupedDropList = new ArrayList<>(2);
 					for (Node groupNode = dropNode.getFirstChild(); groupNode != null; groupNode = groupNode.getNextSibling())
 					{

@@ -67,39 +67,24 @@ public final class AntiFeedManager
 		}
 		
 		final L2PcInstance targetPlayer = target.getActingPlayer();
-		if (targetPlayer == null)
+		if ((targetPlayer == null) || ((Config.ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId()) && ((System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.ANTIFEED_INTERVAL)))
 		{
 			return false;
 		}
 		
-		if ((Config.ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId()))
+		if (!Config.ANTIFEED_DUALBOX || (attacker == null))
 		{
-			if ((System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.ANTIFEED_INTERVAL)
-			{
-				return false;
-			}
+			return true;
 		}
 		
-		if (Config.ANTIFEED_DUALBOX && (attacker != null))
+		final L2PcInstance attackerPlayer = attacker.getActingPlayer();
+		if (attackerPlayer == null)
 		{
-			final L2PcInstance attackerPlayer = attacker.getActingPlayer();
-			if (attackerPlayer == null)
-			{
-				return false;
-			}
-			
-			final L2GameClient targetClient = targetPlayer.getClient();
-			final L2GameClient attackerClient = attackerPlayer.getClient();
-			if ((targetClient == null) || (attackerClient == null) || targetClient.isDetached() || attackerClient.isDetached())
-			{
-				// unable to check ip address
-				return !Config.ANTIFEED_DISCONNECTED_AS_DUALBOX;
-			}
-			
-			return !targetClient.getConnectionAddress().equals(attackerClient.getConnectionAddress());
+			return false;
 		}
-		
-		return true;
+		final L2GameClient targetClient = targetPlayer.getClient();
+		final L2GameClient attackerClient = attackerPlayer.getClient();
+		return (targetClient == null) || (attackerClient == null) || targetClient.isDetached() || attackerClient.isDetached() ? !Config.ANTIFEED_DISCONNECTED_AS_DUALBOX : !targetClient.getConnectionAddress().equals(attackerClient.getConnectionAddress());
 	}
 	
 	/**
@@ -155,12 +140,12 @@ public final class AntiFeedManager
 		
 		final AtomicInteger connectionCount = event.computeIfAbsent(addrHash, k -> new AtomicInteger());
 		
-		if ((connectionCount.get() + 1) <= (max + Config.L2JMOD_DUALBOX_CHECK_WHITELIST.getOrDefault(addrHash, 0)))
+		if ((connectionCount.get() + 1) > (max + Config.L2JMOD_DUALBOX_CHECK_WHITELIST.getOrDefault(addrHash, 0)))
 		{
-			connectionCount.incrementAndGet();
-			return true;
+			return false;
 		}
-		return false;
+		connectionCount.incrementAndGet();
+		return true;
 	}
 	
 	/**
@@ -258,12 +243,7 @@ public final class AntiFeedManager
 		}
 		
 		final Integer addrHash = Integer.valueOf(client.getConnectionAddress().hashCode());
-		int limit = max;
-		if (Config.L2JMOD_DUALBOX_CHECK_WHITELIST.containsKey(addrHash))
-		{
-			limit += Config.L2JMOD_DUALBOX_CHECK_WHITELIST.get(addrHash);
-		}
-		return limit;
+		return Config.L2JMOD_DUALBOX_CHECK_WHITELIST.containsKey(addrHash) ? max + Config.L2JMOD_DUALBOX_CHECK_WHITELIST.get(addrHash) : max;
 	}
 	
 	public static final AntiFeedManager getInstance()

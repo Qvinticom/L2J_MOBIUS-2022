@@ -42,65 +42,19 @@ public class ZoneCylinder extends L2ZoneForm
 	@Override
 	public boolean isInsideZone(int x, int y, int z)
 	{
-		if (((Math.pow(_x - x, 2) + Math.pow(_y - y, 2)) > _radS) || (z < _z1) || (z > _z2))
-		{
-			return false;
-		}
-		return true;
+		return ((Math.pow(_x - x, 2) + Math.pow(_y - y, 2)) <= _radS) && (z >= _z1) && (z <= _z2);
 	}
 	
 	@Override
 	public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2)
 	{
-		// Circles point inside the rectangle?
-		if ((_x > ax1) && (_x < ax2) && (_y > ay1) && (_y < ay2))
-		{
-			return true;
-		}
-		
-		// Any point of the rectangle intersecting the Circle?
-		if ((Math.pow(ax1 - _x, 2) + Math.pow(ay1 - _y, 2)) < _radS)
-		{
-			return true;
-		}
-		if ((Math.pow(ax1 - _x, 2) + Math.pow(ay2 - _y, 2)) < _radS)
-		{
-			return true;
-		}
-		if ((Math.pow(ax2 - _x, 2) + Math.pow(ay1 - _y, 2)) < _radS)
-		{
-			return true;
-		}
-		if ((Math.pow(ax2 - _x, 2) + Math.pow(ay2 - _y, 2)) < _radS)
-		{
-			return true;
-		}
-		
-		// Collision on any side of the rectangle?
-		if ((_x > ax1) && (_x < ax2))
-		{
-			if (Math.abs(_y - ay2) < _rad)
-			{
-				return true;
-			}
-			if (Math.abs(_y - ay1) < _rad)
-			{
-				return true;
-			}
-		}
-		if ((_y > ay1) && (_y < ay2))
-		{
-			if (Math.abs(_x - ax2) < _rad)
-			{
-				return true;
-			}
-			if (Math.abs(_x - ax1) < _rad)
-			{
-				return true;
-			}
-		}
-		
-		return false;
+		return ((_x > ax1) && (_x < ax2) && (_y > ay1) && (_y < ay2)) || //
+			((Math.pow(ax1 - _x, 2) + Math.pow(ay1 - _y, 2)) < _radS) || //
+			((Math.pow(ax1 - _x, 2) + Math.pow(ay2 - _y, 2)) < _radS) || //
+			((Math.pow(ax2 - _x, 2) + Math.pow(ay1 - _y, 2)) < _radS) || //
+			((Math.pow(ax2 - _x, 2) + Math.pow(ay2 - _y, 2)) < _radS) || //
+			((_x > ax1) && (_x < ax2) && ((Math.abs(_y - ay2) < _rad) || (Math.abs(_y - ay1) < _rad))) || //
+			((_y > ay1) && (_y < ay2) && ((Math.abs(_x - ax2) < _rad) || (Math.abs(_x - ax1) < _rad)));
 	}
 	
 	@Override
@@ -129,19 +83,17 @@ public class ZoneCylinder extends L2ZoneForm
 		final double angle = (2 * Math.PI) / count;
 		for (int i = 0; i < count; i++)
 		{
-			final int x = (int) (Math.cos(angle * i) * _rad);
-			final int y = (int) (Math.sin(angle * i) * _rad);
-			dropDebugItem(Inventory.ADENA_ID, 1, _x + x, _y + y, z);
+			dropDebugItem(Inventory.ADENA_ID, 1, _x + (int) (Math.cos(angle * i) * _rad), _y + (int) (Math.sin(angle * i) * _rad), z);
 		}
 	}
 	
 	@Override
 	public int[] getRandomPoint()
 	{
-		double x, y, q, r;
+		double x, y;
+		final double q = Rnd.get() * 2 * Math.PI;
+		final double r = Math.sqrt(Rnd.get());
 		
-		q = Rnd.get() * 2 * Math.PI;
-		r = Math.sqrt(Rnd.get());
 		x = (_rad * r * Math.cos(q)) + _x;
 		y = (_rad * r * Math.sin(q)) + _y;
 		

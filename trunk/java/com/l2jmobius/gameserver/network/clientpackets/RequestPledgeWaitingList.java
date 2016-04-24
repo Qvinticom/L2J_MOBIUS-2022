@@ -52,5 +52,4 @@ public class RequestPledgeWaitingList extends L2GameClientPacket
 	{
 		return _C__D0_D9_REQUESTPLEDGEDWAITINGLIST;
 	}
-	
 }

@@ -61,5 +61,4 @@ public class ExShowCastleInfo extends L2GameServerPacket
 			writeD((int) (castle.getSiege().getSiegeDate().getTimeInMillis() / 1000));
 		}
 	}
-	
 }

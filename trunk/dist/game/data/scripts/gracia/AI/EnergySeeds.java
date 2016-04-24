@@ -735,9 +735,7 @@ public class EnergySeeds extends AbstractNpcAI
 				// if the AI is inactive, do not spawn the NPC
 				if (isSeedActive(_seedId))
 				{
-					// get a random NPC that should spawn at this location
-					final Integer spawnId = _spawnId; // the map uses "Integer", not "int"
-					_spawnedNpcs.put(addSpawn(_npcIds[getRandom(_npcIds.length)], _loc, false, 0), spawnId);
+					_spawnedNpcs.put(addSpawn(_npcIds[getRandom(_npcIds.length)], _loc, false, 0), _spawnId);
 				}
 			}, waitTime);
 		}

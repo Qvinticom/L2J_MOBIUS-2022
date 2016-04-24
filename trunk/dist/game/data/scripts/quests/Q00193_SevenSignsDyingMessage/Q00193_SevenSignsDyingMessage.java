@@ -289,14 +289,7 @@ public final class Q00193_SevenSignsDyingMessage extends Quest
 							}
 							case 4:
 							{
-								if (isBusy)
-								{
-									htmltext = "32569-13.html";
-								}
-								else
-								{
-									htmltext = "32569-08.html";
-								}
+								htmltext = isBusy ? "32569-13.html" : "32569-08.html";
 								break;
 							}
 							case 5:

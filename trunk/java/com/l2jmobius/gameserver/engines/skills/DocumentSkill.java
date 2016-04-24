@@ -553,8 +553,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						final Node addName = n.getAttributes().getNamedItem("addName");
-						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+						if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
 						}
@@ -611,8 +610,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						final Node addName = n.getAttributes().getNamedItem("addName");
-						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+						if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
 						}
@@ -673,8 +671,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							final Node addName = n.getAttributes().getNamedItem("addName");
-							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+							if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
 							}
@@ -731,8 +728,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						final Node addName = n.getAttributes().getNamedItem("addName");
-						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+						if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
 						}
@@ -793,8 +789,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							final Node addName = n.getAttributes().getNamedItem("addName");
-							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+							if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
 							}
@@ -847,8 +842,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						final Node addName = n.getAttributes().getNamedItem("addName");
-						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+						if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
 						}
@@ -909,8 +903,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							final Node addName = n.getAttributes().getNamedItem("addName");
-							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+							if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
 							}
@@ -967,8 +960,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						final Node addName = n.getAttributes().getNamedItem("addName");
-						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+						if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
 						}
@@ -1029,8 +1021,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							final Node addName = n.getAttributes().getNamedItem("addName");
-							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+							if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
 							}
@@ -1087,8 +1078,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						final Node addName = n.getAttributes().getNamedItem("addName");
-						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+						if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
 						}
@@ -1149,8 +1139,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							final Node addName = n.getAttributes().getNamedItem("addName");
-							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+							if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
 							}
@@ -1207,8 +1196,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						final Node addName = n.getAttributes().getNamedItem("addName");
-						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+						if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
 						}
@@ -1269,8 +1257,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							final Node addName = n.getAttributes().getNamedItem("addName");
-							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+							if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
 							}
@@ -1327,8 +1314,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						final Node addName = n.getAttributes().getNamedItem("addName");
-						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+						if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
 						}
@@ -1389,8 +1375,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							final Node addName = n.getAttributes().getNamedItem("addName");
-							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+							if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
 							}
@@ -1447,8 +1432,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						final Node addName = n.getAttributes().getNamedItem("addName");
-						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+						if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
 						}
@@ -1509,8 +1493,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							final Node addName = n.getAttributes().getNamedItem("addName");
-							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+							if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
 							}
@@ -1567,8 +1550,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						final Node addName = n.getAttributes().getNamedItem("addName");
-						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+						if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
 						}
@@ -1629,8 +1611,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							final Node addName = n.getAttributes().getNamedItem("addName");
-							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+							if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
 							}

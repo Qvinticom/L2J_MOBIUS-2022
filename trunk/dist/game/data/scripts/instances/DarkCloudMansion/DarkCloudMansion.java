@@ -302,9 +302,8 @@ public final class DarkCloudMansion extends AbstractInstance
 	{
 		world.setStatus(0);
 		final DMCRoom StartRoom = new DMCRoom();
-		DMCNpc thisnpc;
+		DMCNpc thisnpc = new DMCNpc();
 		
-		thisnpc = new DMCNpc();
 		thisnpc.npc = addSpawn(BM[0], 146817, 180335, -6117, 0, false, 0, false, world.getInstanceId());
 		StartRoom.npcList.add(thisnpc);
 		if (noRndWalk)
@@ -405,9 +404,8 @@ public final class DarkCloudMansion extends AbstractInstance
 	private void runFirstRoom(DMCWorld world)
 	{
 		final DMCRoom FirstRoom = new DMCRoom();
-		DMCNpc thisnpc;
+		DMCNpc thisnpc = new DMCNpc();
 		
-		thisnpc = new DMCNpc();
 		thisnpc.npc = addSpawn(HG[1], 147842, 179837, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
@@ -731,16 +729,13 @@ public final class DarkCloudMansion extends AbstractInstance
 		for (int i = 1; i < 7; i++)
 		{
 			// if there is a non zero value in the precedent step, the sequence is ok
-			if ((order[i] == 0) && (order[i - 1] != 0))
+			if ((order[i] == 0) && (order[i - 1] != 0) && (npcObj.order == i) && (npcObj.status == 0))
 			{
-				if ((npcObj.order == i) && (npcObj.status == 0))
-				{
-					order[i] = 1;
-					npcObj.status = 1;
-					npcObj.isDead = true;
-					npc.broadcastPacket(new MagicSkillUse(npc, npc, 5441, 1, 1, 0));
-					return;
-				}
+				order[i] = 1;
+				npcObj.status = 1;
+				npcObj.isDead = true;
+				npc.broadcastPacket(new MagicSkillUse(npc, npc, 5441, 1, 1, 0));
+				return;
 			}
 		}
 		
@@ -855,9 +850,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	private void removeMonoliths(DMCWorld world)
 	{
-		final DMCRoom SecondRoom = world.rooms.get("SecondRoom");
-		
-		for (DMCNpc mob : SecondRoom.npcList)
+		for (DMCNpc mob : world.rooms.get("SecondRoom").npcList)
 		{
 			mob.npc.decayMe();
 		}
@@ -962,38 +955,25 @@ public final class DarkCloudMansion extends AbstractInstance
 		if (tmpworld instanceof DMCWorld)
 		{
 			world = (DMCWorld) tmpworld;
-			if (world.getStatus() == 0)
+			if ((world.getStatus() == 0) && checkKillProgress(npc, world.rooms.get("StartRoom")))
 			{
-				if (checkKillProgress(npc, world.rooms.get("StartRoom")))
-				{
-					runHall(world);
-				}
+				runHall(world);
 			}
-			if (world.getStatus() == 1)
+			if ((world.getStatus() == 1) && checkKillProgress(npc, world.rooms.get("Hall")))
 			{
-				if (checkKillProgress(npc, world.rooms.get("Hall")))
-				{
-					runFirstRoom(world);
-				}
+				runFirstRoom(world);
 			}
-			if (world.getStatus() == 2)
+			if ((world.getStatus() == 2) && checkKillProgress(npc, world.rooms.get("FirstRoom")))
 			{
-				if (checkKillProgress(npc, world.rooms.get("FirstRoom")))
-				{
-					runHall2(world);
-				}
+				runHall2(world);
 			}
-			if (world.getStatus() == 3)
+			if ((world.getStatus() == 3) && checkKillProgress(npc, world.rooms.get("Hall")))
 			{
-				if (checkKillProgress(npc, world.rooms.get("Hall")))
-				{
-					runSecondRoom(world);
-				}
+				runSecondRoom(world);
 			}
 			if (world.getStatus() == 4)
 			{
-				final DMCRoom SecondRoom = world.rooms.get("SecondRoom");
-				for (DMCNpc mob : SecondRoom.npcList)
+				for (DMCNpc mob : world.rooms.get("SecondRoom").npcList)
 				{
 					if (mob.golem == npc)
 					{
@@ -1001,30 +981,21 @@ public final class DarkCloudMansion extends AbstractInstance
 					}
 				}
 			}
-			if (world.getStatus() == 5)
+			if ((world.getStatus() == 5) && checkKillProgress(npc, world.rooms.get("Hall")))
 			{
-				if (checkKillProgress(npc, world.rooms.get("Hall")))
-				{
-					runThirdRoom(world);
-				}
+				runThirdRoom(world);
 			}
-			if (world.getStatus() == 6)
+			if ((world.getStatus() == 6) && checkKillProgress(npc, world.rooms.get("ThirdRoom")))
 			{
-				if (checkKillProgress(npc, world.rooms.get("ThirdRoom")))
-				{
-					runForthRoom(world);
-				}
+				runForthRoom(world);
 			}
 			if (world.getStatus() == 7)
 			{
 				chkShadowColumn(world, npc);
 			}
-			if (world.getStatus() == 8)
+			if ((world.getStatus() == 8) && checkKillProgress(npc, world.rooms.get("ThirdRoom2")))
 			{
-				if (checkKillProgress(npc, world.rooms.get("ThirdRoom2")))
-				{
-					runFifthRoom(world);
-				}
+				runFifthRoom(world);
 			}
 			if (world.getStatus() == 9)
 			{
@@ -1044,15 +1015,11 @@ public final class DarkCloudMansion extends AbstractInstance
 			world = (DMCWorld) tmpworld;
 			if (world.getStatus() == 7)
 			{
-				final DMCRoom ForthRoom = world.rooms.get("ForthRoom");
-				for (DMCNpc mob : ForthRoom.npcList)
+				for (DMCNpc mob : world.rooms.get("ForthRoom").npcList)
 				{
-					if (mob.npc == npc)
+					if ((mob.npc == npc) && mob.npc.isInvul() && (getRandom(100) < 12))
 					{
-						if (mob.npc.isInvul() && (getRandom(100) < 12))
-						{
-							addSpawn(BM[getRandom(BM.length)], attacker.getX(), attacker.getY(), attacker.getZ(), 0, false, 0, false, world.getInstanceId());
-						}
+						addSpawn(BM[getRandom(BM.length)], attacker.getX(), attacker.getY(), attacker.getZ(), 0, false, 0, false, world.getInstanceId());
 					}
 				}
 			}

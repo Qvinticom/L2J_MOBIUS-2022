@@ -437,37 +437,34 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated() || qs.isCompleted())
 		{
-			if (npc.getId() == SIR_GUSTAV_ATHEBALDT)
+			if ((npc.getId() == SIR_GUSTAV_ATHEBALDT) && (lqs != null))
 			{
-				if (lqs != null)
+				if (player.isClanLeader())
 				{
-					if (player.isClanLeader())
+					final L2Clan clan = player.getClan();
+					if (clan != null)
 					{
-						final L2Clan clan = player.getClan();
-						if (clan != null)
+						if (clan.getLevel() < 4)
 						{
-							if (clan.getLevel() < 4)
-							{
-								htmltext = "30760-01.html";
-							}
-							else if (clan.getLevel() >= 5)
-							{
-								htmltext = "30760-02.html";
-							}
-							else if ((clan.getLevel() == 4) && hasQuestItems(player, SEAL_OF_ASPIRATION))
-							{
-								htmltext = "30760-03.html";
-							}
-							else if ((clan.getLevel() == 4) && !hasQuestItems(player, SEAL_OF_ASPIRATION))
-							{
-								htmltext = "30760-04.html";
-							}
+							htmltext = "30760-01.html";
+						}
+						else if (clan.getLevel() >= 5)
+						{
+							htmltext = "30760-02.html";
+						}
+						else if ((clan.getLevel() == 4) && hasQuestItems(player, SEAL_OF_ASPIRATION))
+						{
+							htmltext = "30760-03.html";
+						}
+						else if ((clan.getLevel() == 4) && !hasQuestItems(player, SEAL_OF_ASPIRATION))
+						{
+							htmltext = "30760-04.html";
 						}
 					}
-					else
-					{
-						htmltext = "30760-04t.html";
-					}
+				}
+				else
+				{
+					htmltext = "30760-04t.html";
 				}
 			}
 		}

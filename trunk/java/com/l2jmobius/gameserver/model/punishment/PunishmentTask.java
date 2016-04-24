@@ -165,14 +165,15 @@ public class PunishmentTask implements Runnable
 	 */
 	private void abortTask()
 	{
-		if (_task != null)
+		if (_task == null)
 		{
-			if (!_task.isCancelled() && !_task.isDone())
-			{
-				_task.cancel(false);
-			}
-			_task = null;
+			return;
 		}
+		if (!_task.isCancelled() && !_task.isDone())
+		{
+			_task.cancel(false);
+		}
+		_task = null;
 	}
 	
 	/**

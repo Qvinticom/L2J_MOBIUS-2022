@@ -247,8 +247,7 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 		
 		for (ItemChanceHolder holder : items)
 		{
-			final double rand = Rnd.nextDouble() * 100;
-			if (rand < holder.getChance())
+			if ((Rnd.nextDouble() * 100) < holder.getChance())
 			{
 				// add crystals
 				final L2ItemInstance createdItem = activeChar.getInventory().addItem("Crystalize", holder.getId(), holder.getCount(), activeChar, activeChar);

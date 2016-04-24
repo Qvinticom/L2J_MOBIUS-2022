@@ -187,12 +187,7 @@ public class UIKeysSettings
 				while (rs.next())
 				{
 					final int cat = rs.getInt("cat");
-					final int cmd = rs.getInt("cmd");
-					final int key = rs.getInt("key");
-					final int tgKey1 = rs.getInt("tgKey1");
-					final int tgKey2 = rs.getInt("tgKey2");
-					final int show = rs.getInt("show");
-					UIData.addKey(_storedKeys, cat, new ActionKey(cat, cmd, key, tgKey1, tgKey2, show));
+					UIData.addKey(_storedKeys, cat, new ActionKey(cat, rs.getInt("cmd"), rs.getInt("key"), rs.getInt("tgKey1"), rs.getInt("tgKey2"), rs.getInt("show")));
 				}
 			}
 		}

@@ -53,14 +53,8 @@ public final class AnswerJoinPartyRoom extends L2GameClientPacket
 		}
 		
 		final L2PcInstance partner = player.getActiveRequester();
-		if (partner == null)
-		{
-			// Partner hasn't been found, cancel the invitation
-			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
-			player.setActiveRequester(null);
-			return;
-		}
-		else if (L2World.getInstance().getPlayer(partner.getObjectId()) == null)
+		// Partner hasn't been found, cancel the invitation
+		if ((partner == null) || (L2World.getInstance().getPlayer(partner.getObjectId()) == null))
 		{
 			// Partner hasn't been found, cancel the invitation
 			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);

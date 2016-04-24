@@ -164,11 +164,7 @@ public class L2Party extends AbstractPlayerGroup
 				availableMembers.add(member);
 			}
 		}
-		if (!availableMembers.isEmpty())
-		{
-			return availableMembers.get(Rnd.get(availableMembers.size()));
-		}
-		return null;
+		return !availableMembers.isEmpty() ? availableMembers.get(Rnd.get(availableMembers.size())) : null;
 	}
 	
 	/**
@@ -475,110 +471,111 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	public void removePartyMember(L2PcInstance player, messageType type)
 	{
-		if (getMembers().contains(player))
+		if (!getMembers().contains(player))
 		{
-			final boolean isLeader = isLeader(player);
-			if (!_disbanding)
+			return;
+		}
+		
+		final boolean isLeader = isLeader(player);
+		if (!_disbanding && ((getMembers().size() == 2) || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && (type != messageType.Disconnected))))
+		{
 			{
-				if ((getMembers().size() == 2) || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && (type != messageType.Disconnected)))
-				{
-					disbandParty();
-					return;
-				}
+				disbandParty();
+				return;
 			}
-			
-			getMembers().remove(player);
-			recalculatePartyLevel();
-			
-			try
+		}
+		
+		getMembers().remove(player);
+		recalculatePartyLevel();
+		
+		try
+		{
+			// Channeling a player!
+			if (player.isChanneling() && (player.getSkillChannelizer().hasChannelized()))
 			{
-				// Channeling a player!
-				if (player.isChanneling() && (player.getSkillChannelizer().hasChannelized()))
-				{
-					player.abortCast();
-				}
-				else if (player.isChannelized())
-				{
-					player.getSkillChannelized().abortChannelization();
-				}
+				player.abortCast();
 			}
-			catch (Exception e)
+			else if (player.isChannelized())
 			{
-				_log.log(Level.WARNING, "", e);
+				player.getSkillChannelized().abortChannelization();
 			}
-			
-			SystemMessage msg;
-			if (type == messageType.Expelled)
-			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY);
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_WAS_EXPELLED_FROM_THE_PARTY);
-				msg.addString(player.getName());
-				broadcastPacket(msg);
-			}
-			else if ((type == messageType.Left) || (type == messageType.Disconnected))
-			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY);
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY);
-				msg.addString(player.getName());
-				broadcastPacket(msg);
-			}
-			
-			// UI update.
-			player.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET);
-			player.setParty(null);
-			broadcastPacket(new PartySmallWindowDelete(player));
-			final L2Summon pet = player.getPet();
-			if (pet != null)
-			{
-				broadcastPacket(new ExPartyPetWindowDelete(pet));
-			}
-			player.getServitors().values().forEach(s -> player.sendPacket(new ExPartyPetWindowDelete(s)));
-			
-			// Close the CCInfoWindow
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, "", e);
+		}
+		
+		SystemMessage msg;
+		if (type == messageType.Expelled)
+		{
+			player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY);
+			msg = SystemMessage.getSystemMessage(SystemMessageId.C1_WAS_EXPELLED_FROM_THE_PARTY);
+			msg.addString(player.getName());
+			broadcastPacket(msg);
+		}
+		else if ((type == messageType.Left) || (type == messageType.Disconnected))
+		{
+			player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY);
+			msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY);
+			msg.addString(player.getName());
+			broadcastPacket(msg);
+		}
+		
+		// UI update.
+		player.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET);
+		player.setParty(null);
+		broadcastPacket(new PartySmallWindowDelete(player));
+		final L2Summon pet = player.getPet();
+		if (pet != null)
+		{
+			broadcastPacket(new ExPartyPetWindowDelete(pet));
+		}
+		player.getServitors().values().forEach(s -> player.sendPacket(new ExPartyPetWindowDelete(s)));
+		
+		// Close the CCInfoWindow
+		if (isInCommandChannel())
+		{
+			player.sendPacket(new ExCloseMPCC());
+		}
+		if (isLeader && (getMembers().size() > 1) && (Config.ALT_LEAVE_PARTY_LEADER || (type == messageType.Disconnected)))
+		{
+			msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
+			msg.addString(getLeader().getName());
+			broadcastPacket(msg);
+			broadcastToPartyMembersNewLeader();
+		}
+		else if (getMembers().size() == 1)
+		{
 			if (isInCommandChannel())
 			{
-				player.sendPacket(new ExCloseMPCC());
+				// delete the whole command channel when the party who opened the channel is disbanded
+				if (getCommandChannel().getLeader().getObjectId() == getLeader().getObjectId())
+				{
+					getCommandChannel().disbandChannel();
+				}
+				else
+				{
+					getCommandChannel().removeParty(this);
+				}
 			}
-			if (isLeader && (getMembers().size() > 1) && (Config.ALT_LEAVE_PARTY_LEADER || (type == messageType.Disconnected)))
+			
+			if (getLeader() != null)
 			{
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
-				msg.addString(getLeader().getName());
-				broadcastPacket(msg);
-				broadcastToPartyMembersNewLeader();
+				getLeader().setParty(null);
 			}
-			else if (getMembers().size() == 1)
+			if (_changeDistributionTypeRequestTask != null)
 			{
-				if (isInCommandChannel())
-				{
-					// delete the whole command channel when the party who opened the channel is disbanded
-					if (getCommandChannel().getLeader().getObjectId() == getLeader().getObjectId())
-					{
-						getCommandChannel().disbandChannel();
-					}
-					else
-					{
-						getCommandChannel().removeParty(this);
-					}
-				}
-				
-				if (getLeader() != null)
-				{
-					getLeader().setParty(null);
-				}
-				if (_changeDistributionTypeRequestTask != null)
-				{
-					_changeDistributionTypeRequestTask.cancel(true);
-					_changeDistributionTypeRequestTask = null;
-				}
-				if (_positionBroadcastTask != null)
-				{
-					_positionBroadcastTask.cancel(false);
-					_positionBroadcastTask = null;
-				}
-				_members.clear();
+				_changeDistributionTypeRequestTask.cancel(true);
+				_changeDistributionTypeRequestTask = null;
 			}
-			applyTacticalSigns(player, true);
+			if (_positionBroadcastTask != null)
+			{
+				_positionBroadcastTask.cancel(false);
+				_positionBroadcastTask = null;
+			}
+			_members.clear();
 		}
+		applyTacticalSigns(player, true);
 	}
 	
 	/**
@@ -587,15 +584,17 @@ public class L2Party extends AbstractPlayerGroup
 	public void disbandParty()
 	{
 		_disbanding = true;
-		if (_members != null)
+		if (_members == null)
 		{
-			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
-			for (L2PcInstance member : _members)
+			return;
+		}
+		
+		broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
+		for (L2PcInstance member : _members)
+		{
+			if (member != null)
 			{
-				if (member != null)
-				{
-					removePartyMember(member, messageType.None);
-				}
+				removePartyMember(member, messageType.None);
 			}
 		}
 	}
@@ -641,8 +640,7 @@ public class L2Party extends AbstractPlayerGroup
 					}
 					if (player.isInPartyMatchRoom())
 					{
-						final PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
-						room.changeLeader(player);
+						PartyMatchRoomList.getInstance().getPlayerRoom(player).changeLeader(player);
 					}
 				}
 			}
@@ -687,25 +685,26 @@ public class L2Party extends AbstractPlayerGroup
 		final L2PcInstance target = getActualLooter(player, item.getId(), false, player);
 		target.addItem("Party", item, player, true);
 		
-		// Send messages to other party members about reward
-		if (item.getCount() > 0)
+		if (item.getCount() <= 0)
 		{
-			if (item.getCount() > 1)
-			{
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
-				msg.addString(target.getName());
-				msg.addItemName(item);
-				msg.addLong(item.getCount());
-				broadcastToPartyMembers(target, msg);
-			}
-			else
-			{
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
-				msg.addString(target.getName());
-				msg.addItemName(item);
-				broadcastToPartyMembers(target, msg);
-			}
+			return;
 		}
+		
+		final SystemMessage msg;
+		if (item.getCount() > 1)
+		{
+			msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
+			msg.addString(target.getName());
+			msg.addItemName(item);
+			msg.addLong(item.getCount());
+		}
+		else
+		{
+			msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
+			msg.addString(target.getName());
+			msg.addItemName(item);
+		}
+		broadcastToPartyMembers(target, msg);
 	}
 	
 	/**
@@ -728,25 +727,26 @@ public class L2Party extends AbstractPlayerGroup
 		
 		looter.addItem(spoil ? "Sweeper Party" : "Party", itemId, itemCount, target, true);
 		
-		// Send messages to other party members about reward
-		if (itemCount > 0)
+		if (itemCount <= 0)
 		{
-			if (itemCount > 1)
-			{
-				final SystemMessage msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_S_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
-				msg.addString(looter.getName());
-				msg.addItemName(itemId);
-				msg.addLong(itemCount);
-				broadcastToPartyMembers(looter, msg);
-			}
-			else
-			{
-				final SystemMessage msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
-				msg.addString(looter.getName());
-				msg.addItemName(itemId);
-				broadcastToPartyMembers(looter, msg);
-			}
+			return;
 		}
+		
+		final SystemMessage msg;
+		if (itemCount > 1)
+		{
+			msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_S_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
+			msg.addString(looter.getName());
+			msg.addItemName(itemId);
+			msg.addLong(itemCount);
+		}
+		else
+		{
+			msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
+			msg.addString(looter.getName());
+			msg.addItemName(itemId);
+		}
+		broadcastToPartyMembers(looter, msg);
 	}
 	
 	/**
@@ -937,8 +937,7 @@ public class L2Party extends AbstractPlayerGroup
 			
 			for (L2PcInstance member : members)
 			{
-				final int sqLevel = member.getLevel() * member.getLevel();
-				if ((sqLevel * 100) >= (sqLevelSum * Config.PARTY_XP_CUTOFF_PERCENT))
+				if ((member.getLevel() * member.getLevel() * 100) >= (sqLevelSum * Config.PARTY_XP_CUTOFF_PERCENT))
 				{
 					validMembers.add(member);
 				}
@@ -965,8 +964,7 @@ public class L2Party extends AbstractPlayerGroup
 			
 			for (L2PcInstance member : members)
 			{
-				final int sqLevel = member.getLevel() * member.getLevel();
-				if (sqLevel >= (sqLevelSum / (members.size() * members.size())))
+				if ((member.getLevel() * member.getLevel()) >= (sqLevelSum / (members.size() * members.size())))
 				{
 					validMembers.add(member);
 				}
@@ -1063,12 +1061,7 @@ public class L2Party extends AbstractPlayerGroup
 	
 	public synchronized void answerLootChangeRequest(L2PcInstance member, boolean answer)
 	{
-		if (_changeRequestDistributionType == null)
-		{
-			return;
-		}
-		
-		if (_changeDistributionTypeAnswers.contains(member.getObjectId()))
+		if ((_changeRequestDistributionType == null) || _changeDistributionTypeAnswers.contains(member.getObjectId()))
 		{
 			return;
 		}

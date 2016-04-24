@@ -34,12 +34,9 @@ public class ExChangeAttributeItemList extends AbstractItemPacket
 		_itemsList = new ArrayList<>();
 		for (L2ItemInstance item : player.getInventory().getItems())
 		{
-			if (item.isWeapon())
+			if (item.isWeapon() && (item.getAttackElementPower() > 0))
 			{
-				if (item.getAttackElementPower() > 0)
-				{
-					_itemsList.add(item);
-				}
+				_itemsList.add(item);
 			}
 		}
 		_itemOID = itemOID;

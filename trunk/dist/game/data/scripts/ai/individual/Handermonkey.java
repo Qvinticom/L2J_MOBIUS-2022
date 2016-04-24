@@ -45,9 +45,7 @@ final class Handermonkey extends AbstractNpcAI
 		{
 			if (getRandom(100) > 30)
 			{
-				final int locX = (npc.getSpawn().getX() - 70) + getRandom(100);
-				final int locY = (npc.getSpawn().getY() - 70) + getRandom(100);
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(locX, locY, npc.getZ(), 0));
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(((npc.getSpawn().getX() - 70) + getRandom(100)), ((npc.getSpawn().getY() - 70) + getRandom(100)), npc.getZ(), 0));
 			}
 			else
 			{

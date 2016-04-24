@@ -212,10 +212,9 @@ public final class ItemAuctionInstance
 	
 	public final void shutdown()
 	{
-		final ScheduledFuture<?> stateTask = _stateTask;
-		if (stateTask != null)
+		if (_stateTask != null)
 		{
-			stateTask.cancel(false);
+			_stateTask.cancel(false);
 		}
 	}
 	
@@ -291,15 +290,10 @@ public final class ItemAuctionInstance
 				
 				for (ItemAuction auction : auctions)
 				{
-					if (auction.getAuctionState() == ItemAuctionState.STARTED)
+					if ((auction.getAuctionState() == ItemAuctionState.STARTED) || (auction.getStartingTime() <= currentTime))
 					{
 						currentAuction = auction;
 						break;
-					}
-					else if (auction.getStartingTime() <= currentTime)
-					{
-						currentAuction = auction;
-						break; // only first
 					}
 				}
 				
@@ -355,13 +349,9 @@ public final class ItemAuctionInstance
 		final ArrayList<ItemAuction> stack = new ArrayList<>(auctions.size());
 		for (ItemAuction auction : getAuctions())
 		{
-			if (auction.getAuctionState() != ItemAuctionState.CREATED)
+			if ((auction.getAuctionState() != ItemAuctionState.CREATED) && (auction.getBidFor(bidderObjId) != null))
 			{
-				final ItemAuctionBid bid = auction.getBidFor(bidderObjId);
-				if (bid != null)
-				{
-					stack.add(auction);
-				}
+				stack.add(auction);
 			}
 		}
 		return stack.toArray(new ItemAuction[stack.size()]);
@@ -605,10 +595,7 @@ public final class ItemAuctionInstance
 				{
 					while (rs.next())
 					{
-						final int playerObjId = rs.getInt(1);
-						final long playerBid = rs.getLong(2);
-						final ItemAuctionBid bid = new ItemAuctionBid(playerObjId, playerBid);
-						auctionBids.add(bid);
+						auctionBids.add((new ItemAuctionBid(rs.getInt(1), rs.getLong(2))));
 					}
 				}
 			}

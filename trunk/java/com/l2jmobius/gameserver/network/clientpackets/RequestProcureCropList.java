@@ -136,7 +136,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 			return;
 		}
-		else if (!player.getInventory().validateCapacity(slots))
+		if (!player.getInventory().validateCapacity(slots))
 		{
 			player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 			return;

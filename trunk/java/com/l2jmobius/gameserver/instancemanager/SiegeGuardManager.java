@@ -145,7 +145,7 @@ public final class SiegeGuardManager
 		{
 			int hiredCount = 0;
 			final int hiredMax = MercTicketManager.getInstance().getMaxAllowedMerc(_castle.getResidenceId());
-			final boolean isHired = (getCastle().getOwnerId() > 0) ? true : false;
+			final boolean isHired = getCastle().getOwnerId() > 0;
 			loadSiegeGuard();
 			for (L2Spawn spawn : _siegeGuardSpawn)
 			{
@@ -195,14 +195,7 @@ public final class SiegeGuardManager
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
-			if (getCastle().getOwnerId() > 0)
-			{
-				ps.setInt(2, 1);
-			}
-			else
-			{
-				ps.setInt(2, 0);
-			}
+			ps.setInt(2, getCastle().getOwnerId() > 0 ? 1 : 0);
 			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())

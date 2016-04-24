@@ -45,11 +45,7 @@ public class SummonEffectsTable
 	private Map<Integer, Map<Integer, SummonEffect>> getServitorEffects(L2PcInstance owner)
 	{
 		final Map<Integer, Map<Integer, Map<Integer, SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
-		if (servitorMap == null)
-		{
-			return null;
-		}
-		return servitorMap.get(owner.getClassIndex());
+		return servitorMap == null ? null : servitorMap.get(owner.getClassIndex());
 	}
 	
 	private Map<Integer, SummonEffect> getServitorEffects(L2PcInstance owner, int referenceSkill)

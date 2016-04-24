@@ -77,13 +77,7 @@ public final class TriggerForce extends AbstractEffect
 	{
 		final L2PcInstance effector = info.getEffector().getActingPlayer();
 		final L2PcInstance effected = info.getEffected().getActingPlayer();
-		
-		if (effected.isDead() || (effector == null))
-		{
-			return;
-		}
-		
-		if (_skill.getSkillId() == 0)
+		if (effected.isDead() || (effector == null) || (_skill.getSkillId() == 0))
 		{
 			return;
 		}
@@ -240,20 +234,13 @@ public final class TriggerForce extends AbstractEffect
 					activeForces++;
 				}
 				
-				if ((activeForces < 4) || ((member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) == null) || (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) == null)))
+				if (((activeForces < 4) || ((member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) == null) || (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) == null))) && (member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY) != null))
 				{
-					if (member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY) != null)
-					{
-						member.getEffectList().remove(true, member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY));
-					}
+					member.getEffectList().remove(true, member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY));
 				}
-				if ((activeForces >= 4) && (member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) != null) && (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) != null))
+				if ((activeForces >= 4) && (member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) != null) && (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) != null) && (!member.getEffectList().isAffectedBySkill(PARTY_SOLIDARITY) || (member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY).getSkill().getLevel() != Math.min((activeForces - 3), 3))))
 				{
-					final BuffInfo skill = member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY);
-					if (!member.getEffectList().isAffectedBySkill(PARTY_SOLIDARITY) || (skill.getSkill().getLevel() != Math.min((activeForces - 3), 3)))
-					{
-						member.makeTriggerCast(SkillData.getInstance().getSkill(PARTY_SOLIDARITY, Math.min((activeForces - 3), 3)), member);
-					}
+					member.makeTriggerCast(SkillData.getInstance().getSkill(PARTY_SOLIDARITY, Math.min((activeForces - 3), 3)), member);
 				}
 			}
 		}

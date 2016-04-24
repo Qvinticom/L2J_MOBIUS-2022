@@ -223,22 +223,13 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 			final ItemChanceHolder item = MOBS_DROP_CHANCES.get(npc.getId());
 			if (item.getCount() == qs.getMemoState())
 			{
-				if (qs.isCond(4))
+				if (qs.isCond(4) && (giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 50, item.getChance(), true)))
 				{
-					if (giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 50, item.getChance(), true))
-					{
-						qs.setCond(5);
-					}
+					qs.setCond(5);
 				}
-				else if (qs.isCond(10))
+				else if (qs.isCond(10) && giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 10, item.getChance(), true) && (getQuestItemsCount(qs.getPlayer(), ORNITHOMINUS_CLAW) >= 10) && (getQuestItemsCount(qs.getPlayer(), DEINONYCHUS_BONE) >= 10) && (getQuestItemsCount(qs.getPlayer(), PACHYCEPHALOSAURUS_SKIN) >= 10))
 				{
-					if (giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 10, item.getChance(), true) //
-						&& (getQuestItemsCount(qs.getPlayer(), ORNITHOMINUS_CLAW) >= 10) //
-						&& (getQuestItemsCount(qs.getPlayer(), DEINONYCHUS_BONE) >= 10) //
-						&& (getQuestItemsCount(qs.getPlayer(), PACHYCEPHALOSAURUS_SKIN) >= 10))
-					{
-						qs.setCond(11);
-					}
+					qs.setCond(11);
 				}
 			}
 		}

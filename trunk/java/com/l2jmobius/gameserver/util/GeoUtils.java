@@ -43,10 +43,7 @@ public final class GeoUtils
 		
 		while (iter.next())
 		{
-			final int wx = GeoData.getInstance().getWorldX(iter.x());
-			final int wy = GeoData.getInstance().getWorldY(iter.y());
-			
-			prim.addPoint(Color.RED, wx, wy, z);
+			prim.addPoint(Color.RED, GeoData.getInstance().getWorldX(iter.x()), GeoData.getInstance().getWorldY(iter.y()), z);
 		}
 		player.sendPacket(prim);
 	}
@@ -93,11 +90,7 @@ public final class GeoUtils
 	
 	private static Color getDirectionColor(int x, int y, int z, int nswe)
 	{
-		if (GeoData.getInstance().checkNearestNswe(x, y, z, nswe))
-		{
-			return Color.GREEN;
-		}
-		return Color.RED;
+		return GeoData.getInstance().checkNearestNswe(x, y, z, nswe) ? Color.GREEN : Color.RED;
 	}
 	
 	public static void debugGrid(L2PcInstance player)

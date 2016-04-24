@@ -322,8 +322,7 @@ final class PrimevalIsle extends AbstractNpcAI
 				{
 					if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
 					{
-						final L2Attackable monster = (L2Attackable) characters;
-						addAttackDesire(monster, playable);
+						addAttackDesire(((L2Attackable) characters), playable);
 					}
 				}
 			}
@@ -424,21 +423,15 @@ final class PrimevalIsle extends AbstractNpcAI
 			
 			if (target != null)
 			{
-				if (getRandom(100) <= (probPhysicalSpecial1 * npc.getVariables().getInt("SKILL_MULTIPLER")))
+				if ((getRandom(100) <= (probPhysicalSpecial1 * npc.getVariables().getInt("SKILL_MULTIPLER"))) && !npc.isSkillDisabled(physicalSpecial1.getSkill()))
 				{
-					if (!npc.isSkillDisabled(physicalSpecial1.getSkill()))
-					{
-						npc.setTarget(target);
-						npc.doCast(physicalSpecial1.getSkill());
-					}
+					npc.setTarget(target);
+					npc.doCast(physicalSpecial1.getSkill());
 				}
-				if (getRandom(100) <= (probPhysicalSpecial2 * npc.getVariables().getInt("SKILL_MULTIPLER")))
+				if ((getRandom(100) <= (probPhysicalSpecial2 * npc.getVariables().getInt("SKILL_MULTIPLER"))) && !npc.isSkillDisabled(physicalSpecial2.getSkill()))
 				{
-					if (!npc.isSkillDisabled(physicalSpecial2.getSkill()))
-					{
-						npc.setTarget(target);
-						npc.doCast(physicalSpecial2.getSkill());
-					}
+					npc.setTarget(target);
+					npc.doCast(physicalSpecial2.getSkill());
 				}
 			}
 		}

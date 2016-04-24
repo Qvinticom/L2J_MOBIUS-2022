@@ -43,12 +43,7 @@ public final class RequestHennaEquip extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("HennaEquip"))
+		if ((activeChar == null) || !getClient().getFloodProtectors().getTransaction().tryPerformAction("HennaEquip"))
 		{
 			return;
 		}

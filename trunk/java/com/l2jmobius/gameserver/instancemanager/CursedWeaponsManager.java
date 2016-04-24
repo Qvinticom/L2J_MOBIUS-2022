@@ -31,7 +31,6 @@ import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
@@ -101,9 +100,7 @@ public final class CursedWeaponsManager
 				return;
 			}
 			
-			final Document doc = factory.newDocumentBuilder().parse(file);
-			
-			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
+			for (Node n = factory.newDocumentBuilder().parse(file).getFirstChild(); n != null; n = n.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n.getNodeName()))
 				{
@@ -306,23 +303,17 @@ public final class CursedWeaponsManager
 	
 	public void drop(int itemId, L2Character killer)
 	{
-		final CursedWeapon cw = _cursedWeapons.get(itemId);
-		
-		cw.dropIt(killer);
+		_cursedWeapons.get(itemId).dropIt(killer);
 	}
 	
 	public void increaseKills(int itemId)
 	{
-		final CursedWeapon cw = _cursedWeapons.get(itemId);
-		
-		cw.increaseKills();
+		_cursedWeapons.get(itemId).increaseKills();
 	}
 	
 	public int getLevel(int itemId)
 	{
-		final CursedWeapon cw = _cursedWeapons.get(itemId);
-		
-		return cw.getLevel();
+		return _cursedWeapons.get(itemId).getLevel();
 	}
 	
 	public static void announce(SystemMessage sm)

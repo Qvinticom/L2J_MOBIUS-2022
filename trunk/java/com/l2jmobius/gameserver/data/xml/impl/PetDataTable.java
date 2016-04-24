@@ -58,8 +58,7 @@ public final class PetDataTable implements IXmlReader
 	public void parseDocument(Document doc)
 	{
 		NamedNodeMap attrs;
-		final Node n = doc.getFirstChild();
-		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+		for (Node d = doc.getFirstChild().getFirstChild(); d != null; d = d.getNextSibling())
 		{
 			if (d.getNodeName().equals("pet"))
 			{
@@ -174,11 +173,7 @@ public final class PetDataTable implements IXmlReader
 	public L2PetLevelData getPetLevelData(int petId, int petLevel)
 	{
 		final L2PetData pd = getPetData(petId);
-		if (pd != null)
-		{
-			return pd.getPetLevelData(petLevel);
-		}
-		return null;
+		return pd != null ? pd.getPetLevelData(petLevel) : null;
 	}
 	
 	/**

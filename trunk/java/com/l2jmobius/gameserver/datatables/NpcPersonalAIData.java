@@ -46,16 +46,17 @@ public class NpcPersonalAIData
 	 */
 	public void storeData(L2Spawn spawnDat, Map<String, Integer> data)
 	{
-		if ((data != null) && !data.isEmpty())
+		if ((data == null) || data.isEmpty())
 		{
-			// check for spawn name. Since spawn name is key for AI Data, generate random name, if spawn name isn't specified
-			if (spawnDat.getName() == null)
-			{
-				spawnDat.setName(Long.toString(Rnd.nextLong()));
-			}
-			
-			_AIData.put(spawnDat.getName(), data);
+			return;
 		}
+		
+		if (spawnDat.getName() == null)
+		{
+			spawnDat.setName(Long.toString(Rnd.nextLong()));
+		}
+		
+		_AIData.put(spawnDat.getName(), data);
 	}
 	
 	/**
@@ -88,34 +89,36 @@ public class NpcPersonalAIData
 	 */
 	public void initializeNpcParameters(L2Npc npc, L2Spawn spawn, String spawnName)
 	{
-		if (_AIData.containsKey(spawnName))
+		if (!_AIData.containsKey(spawnName))
 		{
-			final Map<String, Integer> map = _AIData.get(spawnName);
-			
-			try
+			return;
+		}
+		
+		final Map<String, Integer> map = _AIData.get(spawnName);
+		
+		try
+		{
+			for (String key : map.keySet())
 			{
-				for (String key : map.keySet())
+				switch (key)
 				{
-					switch (key)
+					case "disableRandomAnimation":
 					{
-						case "disableRandomAnimation":
-						{
-							npc.setRandomAnimationEnabled((map.get(key) == 0));
-							break;
-						}
-						case "disableRandomWalk":
-						{
-							npc.setIsNoRndWalk((map.get(key) == 1));
-							spawn.setIsNoRndWalk((map.get(key) == 1));
-							break;
-						}
+						npc.setRandomAnimationEnabled((map.get(key) == 0));
+						break;
+					}
+					case "disableRandomWalk":
+					{
+						npc.setIsNoRndWalk((map.get(key) == 1));
+						spawn.setIsNoRndWalk((map.get(key) == 1));
+						break;
 					}
 				}
 			}
-			catch (Exception e)
-			{
-				// Do nothing
-			}
+		}
+		catch (Exception e)
+		{
+			// Do nothing
 		}
 	}
 	

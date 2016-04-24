@@ -71,12 +71,9 @@ final class Clan extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (LEADER_REQUIRED.containsKey(event))
+		if (LEADER_REQUIRED.containsKey(event) && !player.isClanLeader())
 		{
-			if (!player.isClanLeader())
-			{
-				return LEADER_REQUIRED.get(event);
-			}
+			return LEADER_REQUIRED.get(event);
 		}
 		return event;
 	}

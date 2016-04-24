@@ -60,14 +60,7 @@ public class MonRaceInfo extends L2GameServerPacket
 			writeD(120); // ?? unknown
 			for (int j = 0; j < 20; j++)
 			{
-				if (_unknown1 == 0)
-				{
-					writeC(_speeds[i][j]);
-				}
-				else
-				{
-					writeC(0x00);
-				}
+				writeC(_unknown1 == 0 ? _speeds[i][j] : 0x00);
 			}
 		}
 	}

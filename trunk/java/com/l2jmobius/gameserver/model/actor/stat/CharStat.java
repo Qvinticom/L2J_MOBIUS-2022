@@ -667,12 +667,9 @@ public class CharStat
 		}
 		double mpConsume = skill.getMpConsume();
 		final double nextDanceMpCost = Math.ceil(skill.getMpConsume() / 2.);
-		if (skill.isDance())
+		if (skill.isDance() && Config.DANCE_CONSUME_ADDITIONAL_MP && (_activeChar != null) && (_activeChar.getDanceCount() > 0))
 		{
-			if (Config.DANCE_CONSUME_ADDITIONAL_MP && (_activeChar != null) && (_activeChar.getDanceCount() > 0))
-			{
-				mpConsume += _activeChar.getDanceCount() * nextDanceMpCost;
-			}
+			mpConsume += _activeChar.getDanceCount() * nextDanceMpCost;
 		}
 		
 		mpConsume = calcStat(Stats.MP_CONSUME, mpConsume, null, skill);
@@ -681,14 +678,11 @@ public class CharStat
 		{
 			return (int) calcStat(Stats.DANCE_MP_CONSUME_RATE, mpConsume);
 		}
-		else if (skill.isMagic())
+		if (skill.isMagic())
 		{
 			return (int) calcStat(Stats.MAGICAL_MP_CONSUME_RATE, mpConsume);
 		}
-		else
-		{
-			return (int) calcStat(Stats.PHYSICAL_MP_CONSUME_RATE, mpConsume);
-		}
+		return (int) calcStat(Stats.PHYSICAL_MP_CONSUME_RATE, mpConsume);
 	}
 	
 	/**
@@ -697,12 +691,7 @@ public class CharStat
 	 */
 	public final int getMpInitialConsume(Skill skill)
 	{
-		if (skill == null)
-		{
-			return 1;
-		}
-		
-		return (int) calcStat(Stats.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
+		return skill == null ? 1 : (int) calcStat(Stats.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
 	}
 	
 	public byte getAttackElement()
@@ -879,11 +868,7 @@ public class CharStat
 	public int getMaxBuffCount()
 	{
 		final int extraSlots = _activeChar.getSkillLevel(DIVINE_INSPIRATION);
-		if (extraSlots > -1)
-		{
-			return _maxBuffCount + extraSlots;
-		}
-		return _maxBuffCount;
+		return extraSlots > -1 ? _maxBuffCount + extraSlots : _maxBuffCount;
 	}
 	
 	/**

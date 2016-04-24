@@ -25,7 +25,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.communitybbs.BB.Forum;
 import com.l2jmobius.gameserver.communitybbs.BB.Post;
-import com.l2jmobius.gameserver.communitybbs.BB.Post.CPost;
 import com.l2jmobius.gameserver.communitybbs.BB.Topic;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -69,21 +68,8 @@ public class PostBBSManager extends BaseBBSManager
 			st.nextToken();
 			final int idf = Integer.parseInt(st.nextToken());
 			final int idp = Integer.parseInt(st.nextToken());
-			String index = null;
-			if (st.hasMoreTokens())
-			{
-				index = st.nextToken();
-			}
-			int ind = 0;
-			if (index == null)
-			{
-				ind = 1;
-			}
-			else
-			{
-				ind = Integer.parseInt(index);
-			}
-			
+			final String index = st.hasMoreTokens() ? st.nextToken() : null;
+			final int ind = index == null ? 1 : Integer.parseInt(index);
 			showPost((TopicBBSManager.getInstance().getTopicByID(idp)), ForumsBBSManager.getInstance().getForumByID(idf), activeChar, ind);
 		}
 		else if (command.startsWith("_bbsposts;edit;"))
@@ -148,14 +134,7 @@ public class PostBBSManager extends BaseBBSManager
 	private void showMemoPost(Topic topic, L2PcInstance activeChar, Forum forum)
 	{
 		final Post p = getGPosttByTopic(topic);
-		final Locale locale = Locale.getDefault();
-		final DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
-		
-		String mes = p.getCPost(0).postTxt.replace(">", "&gt;");
-		mes = mes.replace("<", "&lt;");
-		
-		final String html = StringUtil.concat("<html><body><br><br><table border=0 width=610><tr><td width=10></td><td width=600 align=left><a action=\"bypass _bbshome\">HOME</a>&nbsp;>&nbsp;<a action=\"bypass _bbsmemo\">Memo Form</a></td></tr></table><img src=\"L2UI.squareblank\" width=\"1\" height=\"10\"><center><table border=0 cellspacing=0 cellpadding=0 bgcolor=333333><tr><td height=10></td></tr><tr><td fixWIDTH=55 align=right valign=top>&$413; : &nbsp;</td><td fixWIDTH=380 valign=top>", topic.getName(), "</td><td fixwidth=5></td><td fixwidth=50></td><td fixWIDTH=120></td></tr><tr><td height=10></td></tr><tr><td align=right><font color=\"AAAAAA\" >&$417; : &nbsp;</font></td><td><font color=\"AAAAAA\">", topic.getOwnerName() + "</font></td><td></td><td><font color=\"AAAAAA\">&$418; :</font></td><td><font color=\"AAAAAA\">", dateFormat.format(p.getCPost(0).postDate), "</font></td></tr><tr><td height=10></td></tr></table><br><table border=0 cellspacing=0 cellpadding=0><tr><td fixwidth=5></td><td FIXWIDTH=600 align=left>", mes, "</td><td fixqqwidth=5></td></tr></table><br><img src=\"L2UI.squareblank\" width=\"1\" height=\"5\"><img src=\"L2UI.squaregray\" width=\"610\" height=\"1\"><img src=\"L2UI.squareblank\" width=\"1\" height=\"5\"><table border=0 cellspacing=0 cellpadding=0 FIXWIDTH=610><tr><td width=50><button value=\"&$422;\" action=\"bypass _bbsmemo\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\"></td><td width=560 align=right><table border=0 cellspacing=0><tr><td FIXWIDTH=300></td><td><button value = \"&$424;\" action=\"bypass _bbsposts;edit;", String.valueOf(forum.getID()), ";", String.valueOf(topic.getID()), ";0\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td>&nbsp;<td><button value = \"&$425;\" action=\"bypass _bbstopics;del;", String.valueOf(forum.getID()), ";", String.valueOf(topic.getID()), "\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td>&nbsp;<td><button value = \"&$421;\" action=\"bypass _bbstopics;crea;", String.valueOf(forum.getID()), "\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td>&nbsp;</tr></table></td></tr></table><br><br><br></center></body></html>");
-		CommunityBoardHandler.separateAndSend(html, activeChar);
+		CommunityBoardHandler.separateAndSend(StringUtil.concat("<html><body><br><br><table border=0 width=610><tr><td width=10></td><td width=600 align=left><a action=\"bypass _bbshome\">HOME</a>&nbsp;>&nbsp;<a action=\"bypass _bbsmemo\">Memo Form</a></td></tr></table><img src=\"L2UI.squareblank\" width=\"1\" height=\"10\"><center><table border=0 cellspacing=0 cellpadding=0 bgcolor=333333><tr><td height=10></td></tr><tr><td fixWIDTH=55 align=right valign=top>&$413; : &nbsp;</td><td fixWIDTH=380 valign=top>", topic.getName(), "</td><td fixwidth=5></td><td fixwidth=50></td><td fixWIDTH=120></td></tr><tr><td height=10></td></tr><tr><td align=right><font color=\"AAAAAA\" >&$417; : &nbsp;</font></td><td><font color=\"AAAAAA\">", topic.getOwnerName() + "</font></td><td></td><td><font color=\"AAAAAA\">&$418; :</font></td><td><font color=\"AAAAAA\">", DateFormat.getDateInstance(DateFormat.FULL, Locale.getDefault()).format(p.getCPost(0).postDate), "</font></td></tr><tr><td height=10></td></tr></table><br><table border=0 cellspacing=0 cellpadding=0><tr><td fixwidth=5></td><td FIXWIDTH=600 align=left>", p.getCPost(0).postTxt.replace(">", "&gt;").replace("<", "&lt;"), "</td><td fixqqwidth=5></td></tr></table><br><img src=\"L2UI.squareblank\" width=\"1\" height=\"5\"><img src=\"L2UI.squaregray\" width=\"610\" height=\"1\"><img src=\"L2UI.squareblank\" width=\"1\" height=\"5\"><table border=0 cellspacing=0 cellpadding=0 FIXWIDTH=610><tr><td width=50><button value=\"&$422;\" action=\"bypass _bbsmemo\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\"></td><td width=560 align=right><table border=0 cellspacing=0><tr><td FIXWIDTH=300></td><td><button value = \"&$424;\" action=\"bypass _bbsposts;edit;", String.valueOf(forum.getID()), ";", String.valueOf(topic.getID()), ";0\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td>&nbsp;<td><button value = \"&$425;\" action=\"bypass _bbstopics;del;", String.valueOf(forum.getID()), ";", String.valueOf(topic.getID()), "\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td>&nbsp;<td><button value = \"&$421;\" action=\"bypass _bbstopics;crea;", String.valueOf(forum.getID()), "\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td>&nbsp;</tr></table></td></tr></table><br><br><br></center></body></html>"), activeChar);
 	}
 	
 	@Override
@@ -183,8 +162,7 @@ public class PostBBSManager extends BaseBBSManager
 				final Post p = getGPosttByTopic(t);
 				if (p != null)
 				{
-					final CPost cp = p.getCPost(idp);
-					if (cp == null)
+					if (p.getCPost(idp) == null)
 					{
 						CommunityBoardHandler.separateAndSend("<html><body><br><br><center>the post: " + idp + " does not exist !</center><br><br></body></html>", activeChar);
 					}

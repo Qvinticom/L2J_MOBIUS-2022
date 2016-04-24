@@ -79,9 +79,7 @@ public class AdminMenu implements IAdminCommandHandler
 		{
 			try
 			{
-				final String targetName = command.substring(23);
-				final L2PcInstance player = L2World.getInstance().getPlayer(targetName);
-				teleportCharacter(player, activeChar.getLocation(), activeChar, "Admin is teleporting you.");
+				teleportCharacter(L2World.getInstance().getPlayer(command.substring(23)), activeChar.getLocation(), activeChar, "Admin is teleporting you.");
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -194,8 +192,7 @@ public class AdminMenu implements IAdminCommandHandler
 					_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 					return false;
 				}
-				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
-				ach.useAdminCommand(subCommand + command.substring(14), activeChar);
+				AdminCommandHandler.getInstance().getHandler(subCommand).useAdminCommand(subCommand + command.substring(14), activeChar);
 			}
 			showMainPage(activeChar);
 		}
@@ -211,8 +208,7 @@ public class AdminMenu implements IAdminCommandHandler
 					_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 					return false;
 				}
-				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
-				ach.useAdminCommand(subCommand + command.substring(16), activeChar);
+				AdminCommandHandler.getInstance().getHandler(subCommand).useAdminCommand(subCommand + command.substring(16), activeChar);
 			}
 			showMainPage(activeChar);
 		}

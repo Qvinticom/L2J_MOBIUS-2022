@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.PackageSendableList;
 
 /**
@@ -37,8 +36,7 @@ public class RequestPackageSendableItemList extends L2GameClientPacket
 	@Override
 	public void runImpl()
 	{
-		final L2ItemInstance[] items = getClient().getActiveChar().getInventory().getAvailableItems(true, true, true);
-		sendPacket(new PackageSendableList(items, _objectID));
+		sendPacket(new PackageSendableList(getClient().getActiveChar().getInventory().getAvailableItems(true, true, true), _objectID));
 	}
 	
 	@Override

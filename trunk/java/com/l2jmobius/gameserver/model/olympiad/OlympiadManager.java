@@ -492,12 +492,7 @@ public class OlympiadManager
 			return false;
 		}
 		
-		if (isRegistered(noble, player, true))
-		{
-			return false;
-		}
-		
-		if (isInCompetition(noble, player, true))
+		if (isRegistered(noble, player, true) || isInCompetition(noble, player, true))
 		{
 			return false;
 		}

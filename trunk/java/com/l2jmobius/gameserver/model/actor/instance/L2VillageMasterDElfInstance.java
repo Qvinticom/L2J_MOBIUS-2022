@@ -34,11 +34,6 @@ public final class L2VillageMasterDElfInstance extends L2VillageMasterInstance
 	@Override
 	protected final boolean checkVillageMasterRace(PlayerClass pclass)
 	{
-		if (pclass == null)
-		{
-			return false;
-		}
-		
-		return pclass.isOfRace(Race.DARK_ELF);
+		return (pclass != null) && pclass.isOfRace(Race.DARK_ELF);
 	}
 }

@@ -356,133 +356,82 @@ public final class Q00662_AGameOfCards extends Quest
 						{
 							if ((i8 % 16) < 8)
 							{
-								if ((i8 % 8) < 4)
+								if (((i8 % 8) < 4) && (i2 == i3))
 								{
-									if (i2 == i3)
-									{
-										i6 = i6 + 10;
-										i8 = i8 + 4;
-									}
+									i6 = i6 + 10;
+									i8 = i8 + 4;
 								}
-								if ((i8 % 4) < 2)
+								if (((i8 % 4) < 2) && (i2 == i4))
 								{
-									if (i2 == i4)
-									{
-										i6 = i6 + 10;
-										i8 = i8 + 2;
-									}
+									i6 = i6 + 10;
+									i8 = i8 + 2;
 								}
-								if ((i8 % 2) < 1)
+								if (((i8 % 2) < 1) && (i2 == i5))
 								{
-									if (i2 == i5)
-									{
-										i6 = i6 + 10;
-										i8 = i8 + 1;
-									}
+									i6 = i6 + 10;
+									i8 = i8 + 1;
 								}
 							}
 						}
-						else if ((i6 % 10) == 0)
+						else if (((i6 % 10) == 0) && ((i8 % 16) < 8))
 						{
-							if ((i8 % 16) < 8)
+							if (((i8 % 8) < 4) && (i2 == i3))
 							{
-								if ((i8 % 8) < 4)
-								{
-									if (i2 == i3)
-									{
-										i6 = i6 + 1;
-										i8 = i8 + 4;
-									}
-								}
-								if ((i8 % 4) < 2)
-								{
-									if (i2 == i4)
-									{
-										i6 = i6 + 1;
-										i8 = i8 + 2;
-									}
-								}
-								if ((i8 % 2) < 1)
-								{
-									if (i2 == i5)
-									{
-										i6 = i6 + 1;
-										i8 = i8 + 1;
-									}
-								}
+								i6 = i6 + 1;
+								i8 = i8 + 4;
+							}
+							if (((i8 % 4) < 2) && (i2 == i4))
+							{
+								i6 = i6 + 1;
+								i8 = i8 + 2;
+							}
+							if (((i8 % 2) < 1) && (i2 == i5))
+							{
+								i6 = i6 + 1;
+								i8 = i8 + 1;
 							}
 						}
 						if ((i6 % 100) < 10)
 						{
 							if ((i8 % 8) < 4)
 							{
-								if ((i8 % 4) < 2)
+								if (((i8 % 4) < 2) && (i3 == i4))
 								{
-									if (i3 == i4)
-									{
-										i6 = i6 + 10;
-										i8 = i8 + 2;
-									}
+									i6 = i6 + 10;
+									i8 = i8 + 2;
 								}
-								if ((i8 % 2) < 1)
+								if (((i8 % 2) < 1) && (i3 == i5))
 								{
-									if (i3 == i5)
-									{
-										i6 = i6 + 10;
-										i8 = i8 + 1;
-									}
+									i6 = i6 + 10;
+									i8 = i8 + 1;
 								}
 							}
 						}
-						else if ((i6 % 10) == 0)
+						else if (((i6 % 10) == 0) && ((i8 % 8) < 4))
 						{
-							if ((i8 % 8) < 4)
+							if (((i8 % 4) < 2) && (i3 == i4))
 							{
-								if ((i8 % 4) < 2)
-								{
-									if (i3 == i4)
-									{
-										i6 = i6 + 1;
-										i8 = i8 + 2;
-									}
-								}
-								if ((i8 % 2) < 1)
-								{
-									if (i3 == i5)
-									{
-										i6 = i6 + 1;
-										i8 = i8 + 1;
-									}
-								}
+								i6 = i6 + 1;
+								i8 = i8 + 2;
+							}
+							if (((i8 % 2) < 1) && (i3 == i5))
+							{
+								i6 = i6 + 1;
+								i8 = i8 + 1;
 							}
 						}
 						if ((i6 % 100) < 10)
 						{
-							if ((i8 % 4) < 2)
+							if (((i8 % 4) < 2) && ((i8 % 2) < 1) && (i4 == i5))
 							{
-								if ((i8 % 2) < 1)
-								{
-									if (i4 == i5)
-									{
-										i6 = i6 + 10;
-										i8 = i8 + 1;
-									}
-								}
+								i6 = i6 + 10;
+								i8 = i8 + 1;
 							}
 						}
-						else if ((i6 % 10) == 0)
+						else if (((i6 % 10) == 0) && ((i8 % 4) < 2) && ((i8 % 2) < 1) && (i4 == i5))
 						{
-							if ((i8 % 4) < 2)
-							{
-								if ((i8 % 2) < 1)
-								{
-									if (i4 == i5)
-									{
-										i6 = i6 + 1;
-										i8 = i8 + 1;
-									}
-								}
-							}
+							i6 = i6 + 1;
+							i8 = i8 + 1;
 						}
 					}
 					
@@ -723,15 +672,12 @@ public final class Q00662_AGameOfCards extends Quest
 		}
 		
 		final L2PcInstance player = players.get(Rnd.get(players.size()));
-		if ((player != null) && Util.checkIfInRange(1500, npc, player, false))
+		if ((player != null) && Util.checkIfInRange(1500, npc, player, false) && (MONSTERS.get(npc.getId()) < getRandom(1000)))
 		{
-			if (MONSTERS.get(npc.getId()) < getRandom(1000))
+			final QuestState qs = getQuestState(player, false);
+			if (qs != null)
 			{
-				final QuestState qs = getQuestState(player, false);
-				if (qs != null)
-				{
-					giveItemRandomly(qs.getPlayer(), npc, RED_GEM, 1, 0, MONSTERS.get(npc.getId()), true);
-				}
+				giveItemRandomly(qs.getPlayer(), npc, RED_GEM, 1, 0, MONSTERS.get(npc.getId()), true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

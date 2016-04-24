@@ -42,7 +42,7 @@ public final class RequestRecipeShopManagePrev extends L2GameClientPacket
 		{
 			return;
 		}
-		else if (player.isAlikeDead() || (player.getTarget() == null) || !player.getTarget().isPlayer())
+		if (player.isAlikeDead() || (player.getTarget() == null) || !player.getTarget().isPlayer())
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;

@@ -137,8 +137,7 @@ final class Parade extends AbstractNpcAI
 		// final long diff = timeLeftMilli(8, 0, 0), cycle = 600000L;
 		// ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new Start(), 180000L, cycle);
 		
-		final SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm");
-		_log.info("Fantasy Isle: Parade starting at " + format.format(System.currentTimeMillis() + diff) + " and is scheduled each next " + (cycle / 3600000) + " hours.");
+		_log.info("Fantasy Isle: Parade starting at " + new SimpleDateFormat("yyyy/MM/dd HH:mm").format(System.currentTimeMillis() + diff) + " and is scheduled each next " + (cycle / 3600000) + " hours.");
 	}
 	
 	void load()
@@ -214,27 +213,28 @@ final class Parade extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			if (spawns.size() > 0)
+			if (spawns.size() <= 0)
 			{
-				for (L2Npc actor : spawns)
+				return;
+			}
+			for (L2Npc actor : spawns)
+			{
+				if (actor != null)
 				{
-					if (actor != null)
+					if (actor.calculateDistance(actor.getXdestination(), actor.getYdestination(), 0, false, true) < (100 * 100))
 					{
-						if (actor.calculateDistance(actor.getXdestination(), actor.getYdestination(), 0, false, true) < (100 * 100))
-						{
-							actor.deleteMe();
-							spawns.remove(actor);
-						}
-						else if (!actor.isMoving())
-						{
-							actor.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(actor.getXdestination(), actor.getYdestination(), actor.getZdestination(), actor.getHeading()));
-						}
+						actor.deleteMe();
+						spawns.remove(actor);
+					}
+					else if (!actor.isMoving())
+					{
+						actor.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(actor.getXdestination(), actor.getYdestination(), actor.getZdestination(), actor.getHeading()));
 					}
 				}
-				if (spawns.size() == 0)
-				{
-					deleteTask.cancel(false);
-				}
+			}
+			if (spawns.size() == 0)
+			{
+				deleteTask.cancel(false);
 			}
 		}
 	}

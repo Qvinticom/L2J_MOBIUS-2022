@@ -147,8 +147,7 @@ public final class ArenaParticipantsHolder
 		if (redSize > (blueSize + 1))
 		{
 			broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.TEAM_MEMBERS_WERE_MODIFIED_BECAUSE_THE_TEAMS_WERE_UNBALANCED));
-			final int needed = redSize - (blueSize + 1);
-			for (int i = 0; i < (needed + 1); i++)
+			for (int i = 0; i < ((redSize - (blueSize + 1)) + 1); i++)
 			{
 				final L2PcInstance plr = _redPlayers.get(i);
 				if (plr == null)
@@ -161,8 +160,7 @@ public final class ArenaParticipantsHolder
 		else if (blueSize > (redSize + 1))
 		{
 			broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.TEAM_MEMBERS_WERE_MODIFIED_BECAUSE_THE_TEAMS_WERE_UNBALANCED));
-			final int needed = blueSize - (redSize + 1);
-			for (int i = 0; i < (needed + 1); i++)
+			for (int i = 0; i < ((blueSize - (redSize + 1)) + 1); i++)
 			{
 				final L2PcInstance plr = _bluePlayers.get(i);
 				if (plr == null)

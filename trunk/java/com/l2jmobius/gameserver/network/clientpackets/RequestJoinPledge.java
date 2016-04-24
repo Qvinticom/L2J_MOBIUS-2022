@@ -62,12 +62,7 @@ public final class RequestJoinPledge extends L2GameClientPacket
 			return;
 		}
 		
-		if (!clan.checkClanJoinCondition(activeChar, target, _pledgeType))
-		{
-			return;
-		}
-		
-		if (!activeChar.getRequest().setRequest(target, this))
+		if (!clan.checkClanJoinCondition(activeChar, target, _pledgeType) || !activeChar.getRequest().setRequest(target, this))
 		{
 			return;
 		}

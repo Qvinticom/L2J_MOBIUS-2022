@@ -119,16 +119,18 @@ public class InstanceWorld
 	 */
 	public void onDeath(L2Character killer, L2Character victim)
 	{
-		if ((victim != null) && victim.isPlayer())
+		if ((victim == null) || !victim.isPlayer())
 		{
-			final Instance instance = InstanceManager.getInstance().getInstance(getInstanceId());
-			if (instance != null)
-			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTE_S_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
-				sm.addInt(instance.getEjectTime() / 60 / 1000);
-				victim.getActingPlayer().sendPacket(sm);
-				instance.addEjectDeadTask(victim.getActingPlayer());
-			}
+			return;
 		}
+		final Instance instance = InstanceManager.getInstance().getInstance(getInstanceId());
+		if (instance == null)
+		{
+			return;
+		}
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTE_S_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
+		sm.addInt(instance.getEjectTime() / 60 / 1000);
+		victim.getActingPlayer().sendPacket(sm);
+		instance.addEjectDeadTask(victim.getActingPlayer());
 	}
 }

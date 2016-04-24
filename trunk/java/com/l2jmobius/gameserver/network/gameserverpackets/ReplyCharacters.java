@@ -42,5 +42,4 @@ public class ReplyCharacters extends BaseSendablePacket
 	{
 		return getBytes();
 	}
-	
 }

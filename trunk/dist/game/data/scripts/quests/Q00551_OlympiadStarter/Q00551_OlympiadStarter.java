@@ -86,42 +86,44 @@ public class Q00551_OlympiadStarter extends Quest
 	@Override
 	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
 	{
-		if (loser != null)
+		if (loser == null)
 		{
-			final QuestState qs = getQuestState(loser, false);
-			if ((qs != null) && qs.isStarted())
+			return;
+		}
+		final QuestState qs = getQuestState(loser, false);
+		if ((qs == null) || !qs.isStarted())
+		{
+			return;
+		}
+		final int matches = qs.getInt("matches") + 1;
+		switch (matches)
+		{
+			case 3:
 			{
-				final int matches = qs.getInt("matches") + 1;
-				switch (matches)
+				if (!hasQuestItems(loser, CERT_3))
 				{
-					case 3:
-					{
-						if (!hasQuestItems(loser, CERT_3))
-						{
-							giveItems(loser, CERT_3, 1);
-						}
-						break;
-					}
-					case 5:
-					{
-						if (!hasQuestItems(loser, CERT_5))
-						{
-							giveItems(loser, CERT_5, 1);
-						}
-						break;
-					}
-					case 10:
-					{
-						if (!hasQuestItems(loser, CERT_10))
-						{
-							giveItems(loser, CERT_10, 1);
-						}
-						break;
-					}
+					giveItems(loser, CERT_3, 1);
 				}
-				qs.set("matches", String.valueOf(matches));
+				break;
+			}
+			case 5:
+			{
+				if (!hasQuestItems(loser, CERT_5))
+				{
+					giveItems(loser, CERT_5, 1);
+				}
+				break;
+			}
+			case 10:
+			{
+				if (!hasQuestItems(loser, CERT_10))
+				{
+					giveItems(loser, CERT_10, 1);
+				}
+				break;
 			}
 		}
+		qs.set("matches", String.valueOf(matches));
 	}
 	
 	@Override
@@ -169,47 +171,49 @@ public class Q00551_OlympiadStarter extends Quest
 			}
 		}
 		
-		if (looser != null)
+		if (looser == null)
 		{
-			final L2PcInstance player = looser.getPlayer();
-			if (player == null)
+			return;
+		}
+		final L2PcInstance player = looser.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		final QuestState qs = getQuestState(player, false);
+		if ((qs == null) || !qs.isStarted())
+		{
+			return;
+		}
+		final int matches = qs.getInt("matches") + 1;
+		switch (matches)
+		{
+			case 3:
 			{
-				return;
-			}
-			final QuestState qs = getQuestState(player, false);
-			if ((qs != null) && qs.isStarted())
-			{
-				final int matches = qs.getInt("matches") + 1;
-				switch (matches)
+				if (!hasQuestItems(player, CERT_3))
 				{
-					case 3:
-					{
-						if (!hasQuestItems(player, CERT_3))
-						{
-							giveItems(player, CERT_3, 1);
-						}
-						break;
-					}
-					case 5:
-					{
-						if (!hasQuestItems(player, CERT_5))
-						{
-							giveItems(player, CERT_5, 1);
-						}
-						break;
-					}
-					case 10:
-					{
-						if (!hasQuestItems(player, CERT_10))
-						{
-							giveItems(player, CERT_10, 1);
-						}
-						break;
-					}
+					giveItems(player, CERT_3, 1);
 				}
-				qs.set("matches", String.valueOf(matches));
+				break;
+			}
+			case 5:
+			{
+				if (!hasQuestItems(player, CERT_5))
+				{
+					giveItems(player, CERT_5, 1);
+				}
+				break;
+			}
+			case 10:
+			{
+				if (!hasQuestItems(player, CERT_10))
+				{
+					giveItems(player, CERT_10, 1);
+				}
+				break;
 			}
 		}
+		qs.set("matches", String.valueOf(matches));
 	}
 	
 	@Override

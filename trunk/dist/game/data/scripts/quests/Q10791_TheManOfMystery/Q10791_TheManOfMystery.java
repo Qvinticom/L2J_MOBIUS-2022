@@ -151,7 +151,7 @@ public class Q10791_TheManOfMystery extends Quest
 			}
 			for (int i1 = 0; i1 < 1; i1++)
 			{
-				L2Npc helper = addSpawn(KAIN_VAN_HALTER, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), npc.getHeading(), true, 300000, false);
+				final L2Npc helper = addSpawn(KAIN_VAN_HALTER, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), npc.getHeading(), true, 300000, false);
 				addAttackDesire(helper, npc);
 			}
 			npc.setScriptValue(1);

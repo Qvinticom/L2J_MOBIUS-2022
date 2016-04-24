@@ -151,19 +151,13 @@ final class FeedableBeasts extends AbstractNpcAI
 		
 		public Integer getMob(int spice, int mobType, int classType)
 		{
-			if (_spiceToMob.containsKey(spice))
-			{
-				return _spiceToMob.get(spice)[mobType][classType];
-			}
-			return null;
+			return _spiceToMob.containsKey(spice) ? _spiceToMob.get(spice)[mobType][classType] : null;
 		}
 		
 		public Integer getRandomMob(int spice)
 		{
-			int[][] temp;
-			temp = _spiceToMob.get(spice);
-			final int rand = getRandom(temp[0].length);
-			return temp[0][rand];
+			final int[][] temp = _spiceToMob.get(spice);
+			return temp[0][getRandom(temp[0].length)];
 		}
 		
 		public Integer getChance()
@@ -482,24 +476,20 @@ final class FeedableBeasts extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null))
+		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null) && MAD_COW_POLYMORPH.containsKey(npc.getId()))
 		{
-			if (MAD_COW_POLYMORPH.containsKey(npc.getId()))
+			// remove the feed info from the previous mob
+			if (FEED_INFO.get(npc.getObjectId()) == player.getObjectId())
 			{
-				// remove the feed info from the previous mob
-				if (FEED_INFO.get(npc.getObjectId()) == player.getObjectId())
-				{
-					FEED_INFO.remove(npc.getObjectId());
-				}
-				// despawn the mad cow
-				npc.deleteMe();
-				// spawn the new mob
-				final L2Attackable nextNpc = (L2Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getId()), npc);
-				
-				// register the player in the feedinfo for the mob that just spawned
-				FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
-				addAttackDesire(nextNpc, player);
+				FEED_INFO.remove(npc.getObjectId());
 			}
+			// despawn the mad cow
+			npc.deleteMe();
+			// spawn the new mob
+			final L2Attackable nextNpc = (L2Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getId()), npc);
+			// register the player in the feedinfo for the mob that just spawned
+			FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
+			addAttackDesire(nextNpc, player);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -524,12 +514,7 @@ final class FeedableBeasts extends AbstractNpcAI
 		
 		// first gather some values on local variables
 		final int objectId = npc.getObjectId();
-		int growthLevel = 3; // if a mob is in FEEDABLE_BEASTS but not in _GrowthCapableMobs, then it's at max growth (3)
-		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))
-		{
-			growthLevel = GROWTH_CAPABLE_MONSTERS.get(npcId).getGrowthLevel();
-		}
-		
+		final int growthLevel = GROWTH_CAPABLE_MONSTERS.containsKey(npcId) ? GROWTH_CAPABLE_MONSTERS.get(npcId).getGrowthLevel() : 3; // if a mob is in FEEDABLE_BEASTS but not in _GrowthCapableMobs, then it's at max growth (3)
 		// prevent exploit which allows 2 players to simultaneously raise the same 0-growth beast
 		// If the mob is at 0th level (when it still listens to all feeders) lock it to the first feeder!
 		if ((growthLevel == 0) && FEED_INFO.containsKey(objectId))

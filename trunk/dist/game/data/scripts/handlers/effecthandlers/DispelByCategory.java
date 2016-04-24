@@ -16,8 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.List;
-
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -64,8 +62,7 @@ public final class DispelByCategory extends AbstractEffect
 			return;
 		}
 		
-		final List<BuffInfo> canceled = Formulas.calcCancelStealEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max);
-		for (BuffInfo can : canceled)
+		for (BuffInfo can : Formulas.calcCancelStealEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max))
 		{
 			info.getEffected().getEffectList().stopSkillEffects(true, can.getSkill());
 		}

@@ -67,5 +67,4 @@ public class ItemLogFormatter extends Formatter
 		
 		return output.toString();
 	}
-	
 }

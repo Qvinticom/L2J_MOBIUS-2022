@@ -192,12 +192,7 @@ public final class Fort extends AbstractResidence
 					}
 					if ((getOwnerClan().getWarehouse().getAdena() >= _fee) || !_cwh)
 					{
-						int fee = _fee;
-						if (getEndTime() == -1)
-						{
-							fee = _tempFee;
-						}
-						
+						final int fee = getEndTime() == -1 ? _tempFee : _fee;
 						setEndTime(System.currentTimeMillis() + getRate());
 						dbSave();
 						if (_cwh)
@@ -391,12 +386,9 @@ public final class Fort extends AbstractResidence
 			try
 			{
 				final L2PcInstance oldleader = oldowner.getLeader().getPlayerInstance();
-				if (oldleader != null)
+				if ((oldleader != null) && (oldleader.getMountType() == MountType.WYVERN))
 				{
-					if (oldleader.getMountType() == MountType.WYVERN)
-					{
-						oldleader.dismount();
-					}
+					oldleader.dismount();
 				}
 			}
 			catch (Exception e)
@@ -448,23 +440,24 @@ public final class Fort extends AbstractResidence
 	public void removeOwner(boolean updateDB)
 	{
 		final L2Clan clan = getOwnerClan();
-		if (clan != null)
+		if (clan == null)
 		{
-			for (L2PcInstance member : clan.getOnlineMembers(0))
-			{
-				removeResidentialSkills(member);
-				member.sendSkillList();
-			}
-			clan.setFortId(0);
-			clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
-			setOwnerClan(null);
-			setSupplyLvL(0);
-			saveFortVariables();
-			removeAllFunctions();
-			if (updateDB)
-			{
-				updateOwnerInDB();
-			}
+			return;
+		}
+		for (L2PcInstance member : clan.getOnlineMembers(0))
+		{
+			removeResidentialSkills(member);
+			member.sendSkillList();
+		}
+		clan.setFortId(0);
+		clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
+		setOwnerClan(null);
+		setSupplyLvL(0);
+		saveFortVariables();
+		removeAllFunctions();
+		if (updateDB)
+		{
+			updateOwnerInDB();
 		}
 	}
 	
@@ -546,13 +539,12 @@ public final class Fort extends AbstractResidence
 	public void upgradeDoor(int doorId, int hp, int pDef, int mDef)
 	{
 		final L2DoorInstance door = getDoor(doorId);
-		if (door != null)
+		if (door == null)
 		{
-			door.setCurrentHp(door.getMaxHp() + hp);
-			
-			saveDoorUpgrade(doorId, hp, pDef, mDef);
 			return;
 		}
+		door.setCurrentHp(door.getMaxHp() + hp);
+		saveDoorUpgrade(doorId, hp, pDef, mDef);
 	}
 	
 	// This method loads fort
@@ -675,12 +667,9 @@ public final class Fort extends AbstractResidence
 		{
 			return false;
 		}
-		if (lease > 0)
+		if ((lease > 0) && !player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true))
 		{
-			if (!player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true))
-			{
-				return false;
-			}
+			return false;
 		}
 		if (addNew)
 		{
@@ -694,8 +683,7 @@ public final class Fort extends AbstractResidence
 			}
 			else
 			{
-				final int diffLease = lease - _function.get(type).getLease();
-				if (diffLease > 0)
+				if ((lease - _function.get(type).getLease()) > 0)
 				{
 					_function.remove(type);
 					_function.put(type, new FortFunction(type, lvl, lease, 0, rate, -1, false));
@@ -824,8 +812,7 @@ public final class Fort extends AbstractResidence
 			if (clan != null)
 			{
 				clan.setFortId(getResidenceId()); // Set has fort flag for new owner
-				SystemMessage sm;
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_VICTORIOUS_IN_THE_FORTRESS_BATTLE_OF_S2);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_VICTORIOUS_IN_THE_FORTRESS_BATTLE_OF_S2);
 				sm.addString(clan.getName());
 				sm.addCastleId(getResidenceId());
 				L2World.getInstance().getPlayers().forEach(p -> p.sendPacket(sm));
@@ -930,31 +917,17 @@ public final class Fort extends AbstractResidence
 	
 	public final int getOwnedTime()
 	{
-		if (_lastOwnedTime.getTimeInMillis() == 0)
-		{
-			return 0;
-		}
-		
-		return (int) ((System.currentTimeMillis() - _lastOwnedTime.getTimeInMillis()) / 1000);
+		return _lastOwnedTime.getTimeInMillis() == 0 ? 0 : (int) ((System.currentTimeMillis() - _lastOwnedTime.getTimeInMillis()) / 1000);
 	}
 	
 	public final int getTimeTillRebelArmy()
 	{
-		if (_lastOwnedTime.getTimeInMillis() == 0)
-		{
-			return 0;
-		}
-		
-		return (int) (((_lastOwnedTime.getTimeInMillis() + (Config.FS_MAX_OWN_TIME * 3600000L)) - System.currentTimeMillis()) / 1000L);
+		return _lastOwnedTime.getTimeInMillis() == 0 ? 0 : (int) (((_lastOwnedTime.getTimeInMillis() + (Config.FS_MAX_OWN_TIME * 3600000L)) - System.currentTimeMillis()) / 1000L);
 	}
 	
 	public final long getTimeTillNextFortUpdate()
 	{
-		if (_FortUpdater[0] == null)
-		{
-			return 0;
-		}
-		return _FortUpdater[0].getDelay(TimeUnit.SECONDS);
+		return _FortUpdater[0] == null ? 0 : _FortUpdater[0].getDelay(TimeUnit.SECONDS);
 	}
 	
 	public void updateClansReputation(L2Clan owner, boolean removePoints)

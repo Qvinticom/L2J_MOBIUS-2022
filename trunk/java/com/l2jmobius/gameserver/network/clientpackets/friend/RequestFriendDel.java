@@ -58,16 +58,7 @@ public final class RequestFriendDel extends L2GameClientPacket
 		}
 		
 		final int id = CharNameTable.getInstance().getIdByName(_name);
-		
-		if (id == -1)
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST);
-			sm.addString(_name);
-			activeChar.sendPacket(sm);
-			return;
-		}
-		
-		if (!activeChar.getFriendList().containsKey(id))
+		if ((id == -1) || !activeChar.getFriendList().containsKey(id))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST);
 			sm.addString(_name);

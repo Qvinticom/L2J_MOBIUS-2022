@@ -45,13 +45,9 @@ public final class Unsummon extends AbstractEffect
 	public boolean calcSuccess(BuffInfo info)
 	{
 		final int magicLevel = info.getSkill().getMagicLevel();
-		if ((magicLevel <= 0) || ((info.getEffected().getLevel() - 9) <= magicLevel))
+		if (((magicLevel <= 0) || ((info.getEffected().getLevel() - 9) <= magicLevel)) && ((_chance * Formulas.calcAttributeBonus(info.getEffector(), info.getEffected(), info.getSkill()) * Formulas.calcGeneralTraitBonus(info.getEffector(), info.getEffected(), info.getSkill().getTraitType(), false)) > (Rnd.nextDouble() * 100)))
 		{
-			final double chance = _chance * Formulas.calcAttributeBonus(info.getEffector(), info.getEffected(), info.getSkill()) * Formulas.calcGeneralTraitBonus(info.getEffector(), info.getEffected(), info.getSkill().getTraitType(), false);
-			if (chance > (Rnd.nextDouble() * 100))
-			{
-				return true;
-			}
+			return true;
 		}
 		return false;
 	}

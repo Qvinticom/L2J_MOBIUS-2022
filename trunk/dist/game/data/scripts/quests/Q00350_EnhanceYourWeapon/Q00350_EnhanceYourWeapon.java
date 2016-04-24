@@ -194,7 +194,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		{
 			return null;
 		}
-		else if ((caster == null) || caster.isDead())
+		if ((caster == null) || caster.isDead())
 		{
 			return null;
 		}
@@ -559,9 +559,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 									_log.severe("[EnhanceYourWeapon] Missing leveledItemId in Crystal List itemId: " + itemId + ", skipping");
 									continue;
 								}
-								final int leveledItemId = Integer.parseInt(attrs.getNamedItem("leveledItemId").getNodeValue());
-								
-								SOUL_CRYSTALS.put(itemId, new SoulCrystal(level, itemId, leveledItemId));
+								SOUL_CRYSTALS.put(itemId, new SoulCrystal(level, itemId, Integer.parseInt(attrs.getNamedItem("leveledItemId").getNodeValue())));
 							}
 						}
 					}

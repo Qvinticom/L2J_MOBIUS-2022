@@ -43,9 +43,7 @@ public class RequestAlchemyTryMixCube extends L2GameClientPacket
 		final int count = readD();
 		for (int i = 0; i < count; ++i)
 		{
-			final int itemObjectId = readD();
-			final long itemCount = readQ();
-			_items.put(itemObjectId, itemCount);
+			_items.put(readD(), readQ());
 		}
 	}
 	
@@ -96,23 +94,7 @@ public class RequestAlchemyTryMixCube extends L2GameClientPacket
 			final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(itemObjectId);
 			if (item != null)
 			{
-				if (item.getCount() < itemCount)
-				{
-					continue;
-				}
-				if (!item.isDestroyable())
-				{
-					continue;
-				}
-				if (item.getEnchantLevel() > 0)
-				{
-					continue;
-				}
-				if (item.isAugmented())
-				{
-					continue;
-				}
-				if (item.isShadowItem())
+				if ((item.getCount() < itemCount) || !item.isDestroyable() || (item.getEnchantLevel() > 0) || item.isAugmented() || item.isShadowItem())
 				{
 					continue;
 				}

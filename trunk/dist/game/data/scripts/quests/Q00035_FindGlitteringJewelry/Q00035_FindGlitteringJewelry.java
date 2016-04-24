@@ -117,20 +117,16 @@ public class Q00035_FindGlitteringJewelry extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance member = getRandomPartyMember(player, 2);
-		if (member != null)
+		if ((member != null) && getRandomBoolean())
 		{
-			final QuestState qs = getQuestState(member, false);
-			if (getRandomBoolean())
+			giveItems(player, ROUGH_JEWEL, 1);
+			if (getQuestItemsCount(player, ROUGH_JEWEL) >= JEWEL_COUNT)
 			{
-				giveItems(player, ROUGH_JEWEL, 1);
-				if (getQuestItemsCount(player, ROUGH_JEWEL) >= JEWEL_COUNT)
-				{
-					qs.setCond(3, true);
-				}
-				else
-				{
-					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				getQuestState(member, false).setCond(3, true);
+			}
+			else
+			{
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isSummon);

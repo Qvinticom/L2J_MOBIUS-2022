@@ -20,7 +20,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.PlayerAction;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
@@ -81,14 +80,13 @@ public final class DlgAnswer extends L2GameClientPacket
 					return;
 				}
 				final String command = cmd.split(" ")[0];
-				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
 				if (AdminData.getInstance().hasAccess(command, activeChar.getAccessLevel()))
 				{
 					if (Config.GMAUDIT)
 					{
 						GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", cmd, (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target"));
 					}
-					ach.useAdminCommand(cmd, activeChar);
+					AdminCommandHandler.getInstance().getHandler(command).useAdminCommand(cmd, activeChar);
 				}
 			}
 		}

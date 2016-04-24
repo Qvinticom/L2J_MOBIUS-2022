@@ -1098,11 +1098,7 @@ public final class Skill implements IIdentifiable
 	public L2Object getFirstOfTargetList(L2Character activeChar)
 	{
 		final L2Object[] targets = getTargetList(activeChar, true);
-		if (targets.length == 0)
-		{
-			return null;
-		}
-		return targets[0];
+		return targets.length == 0 ? null : targets[0];
 	}
 	
 	/**
@@ -1223,11 +1219,7 @@ public final class Skill implements IIdentifiable
 	public static final boolean addPet(L2Character caster, L2PcInstance owner, int radius, boolean isDead)
 	{
 		final L2Summon pet = owner.getPet();
-		if (pet == null)
-		{
-			return false;
-		}
-		return addCharacter(caster, pet, radius, isDead);
+		return (pet != null) && addCharacter(caster, pet, radius, isDead);
 	}
 	
 	public static final boolean addCharacter(L2Character caster, L2Character target, int radius, boolean isDead)
@@ -1311,12 +1303,9 @@ public final class Skill implements IIdentifiable
 							effect.onStart(info);
 						}
 					}
-					else if (addContinuousEffects)
+					else if (addContinuousEffects && effect.canStart(info))
 					{
-						if (effect.canStart(info))
-						{
-							info.addEffect(effect);
-						}
+						info.addEffect(effect);
 					}
 				}
 			}
@@ -1413,15 +1402,12 @@ public final class Skill implements IIdentifiable
 			}
 			
 			// Support for buff sharing feature including healing herbs.
-			if (effected.isPlayer() && effected.hasServitors() && !isTransformation() && (getAbnormalType() != AbnormalType.SUMMON_CONDITION))
+			if (effected.isPlayer() && effected.hasServitors() && !isTransformation() && (getAbnormalType() != AbnormalType.SUMMON_CONDITION) && ((addContinuousEffects && isContinuous() && !isDebuff()) || isRecoveryHerb()))
 			{
-				if ((addContinuousEffects && isContinuous() && !isDebuff()) || isRecoveryHerb())
+				effected.getServitors().values().forEach(s ->
 				{
-					effected.getServitors().values().forEach(s ->
-					{
-						applyEffects(effector, s, isRecoveryHerb(), 0);
-					});
-				}
+					applyEffects(effector, s, isRecoveryHerb(), 0);
+				});
 			}
 		}
 		
@@ -1807,27 +1793,29 @@ public final class Skill implements IIdentifiable
 	 */
 	private void parseAbnormalVisualEffect(String abnormalVisualEffects)
 	{
-		if (abnormalVisualEffects != null)
+		if (abnormalVisualEffects == null)
 		{
-			final String[] data = abnormalVisualEffects.split(";");
-			final Set<AbnormalVisualEffect> aves = new HashSet<>(1);
-			for (String aveString : data)
+			return;
+		}
+		
+		final String[] data = abnormalVisualEffects.split(";");
+		final Set<AbnormalVisualEffect> aves = new HashSet<>(1);
+		for (String aveString : data)
+		{
+			final AbnormalVisualEffect ave = AbnormalVisualEffect.findByName(aveString);
+			if (ave != null)
 			{
-				final AbnormalVisualEffect ave = AbnormalVisualEffect.findByName(aveString);
-				if (ave != null)
-				{
-					aves.add(ave);
-				}
-				else
-				{
-					_log.warning("Invalid AbnormalVisualEffect(" + aveString + ") found for Skill(" + this + ")");
-				}
+				aves.add(ave);
 			}
-			
-			if (!aves.isEmpty())
+			else
 			{
-				_abnormalVisualEffects = aves;
+				_log.warning("Invalid AbnormalVisualEffect(" + aveString + ") found for Skill(" + this + ")");
 			}
+		}
+		
+		if (!aves.isEmpty())
+		{
+			_abnormalVisualEffects = aves;
 		}
 	}
 	

@@ -123,12 +123,9 @@ public class Q00470_DivinityProtector extends Quest
 				{
 					htmltext = "32327-05.html";
 				}
-				else if (qs.isCompleted())
+				else if (qs.isCompleted() && !qs.isNowAvailable())
 				{
-					if (!qs.isNowAvailable())
-					{
-						htmltext = "32327-07.html";
-					}
+					htmltext = "32327-07.html";
 				}
 				break;
 			}
@@ -152,12 +149,9 @@ public class Q00470_DivinityProtector extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, REMNANT_ASH, 1, 20, 0.1, true))
 		{
-			if (giveItemRandomly(killer, npc, REMNANT_ASH, 1, 20, 0.1, true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

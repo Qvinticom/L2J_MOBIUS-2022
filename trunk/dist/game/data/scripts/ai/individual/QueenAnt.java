@@ -94,8 +94,7 @@ final class QueenAnt extends AbstractNpcAI
 		
 		_zone = GrandBossManager.getInstance().getZone(QUEEN_X, QUEEN_Y, QUEEN_Z);
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
-		final int status = GrandBossManager.getInstance().getBossStatus(QUEEN);
-		if (status == DEAD)
+		if (GrandBossManager.getInstance().getBossStatus(QUEEN) == DEAD)
 		{
 			// load the unlock date and time for queen ant from DB
 			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -121,7 +120,6 @@ final class QueenAnt extends AbstractNpcAI
 			final int heading = info.getInt("heading");
 			final int hp = info.getInt("currentHP");
 			final int mp = info.getInt("currentMP");
-			
 			final L2GrandBossInstance queen = (L2GrandBossInstance) addSpawn(QUEEN, loc_x, loc_y, loc_z, heading, false, 0);
 			queen.setCurrentHpMp(hp, mp);
 			spawnBoss(queen);
@@ -264,13 +262,10 @@ final class QueenAnt extends AbstractNpcAI
 			return super.onFactionCall(npc, caller, attacker, isSummon);
 		}
 		
-		if (!npc.isCastingNow() && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST))
+		if (!npc.isCastingNow() && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST) && (caller.getCurrentHp() < caller.getMaxHp()))
 		{
-			if (caller.getCurrentHp() < caller.getMaxHp())
-			{
-				npc.setTarget(caller);
-				((L2Attackable) npc).useMagic(HEAL1.getSkill());
-			}
+			npc.setTarget(caller);
+			((L2Attackable) npc).useMagic(HEAL1.getSkill());
 		}
 		return null;
 	}
@@ -341,8 +336,7 @@ final class QueenAnt extends AbstractNpcAI
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
 			// Calculate Min and Max respawn times randomly.
-			long respawnTime = Config.QUEEN_ANT_SPAWN_INTERVAL + getRandom(-Config.QUEEN_ANT_SPAWN_RANDOM, Config.QUEEN_ANT_SPAWN_RANDOM);
-			respawnTime *= 3600000;
+			final long respawnTime = (Config.QUEEN_ANT_SPAWN_INTERVAL + getRandom(-Config.QUEEN_ANT_SPAWN_RANDOM, Config.QUEEN_ANT_SPAWN_RANDOM)) * 3600000;
 			startQuestTimer("queen_unlock", respawnTime, null, null);
 			cancelQuestTimer("action", npc, null);
 			cancelQuestTimer("heal", null, null);
@@ -364,10 +358,9 @@ final class QueenAnt extends AbstractNpcAI
 		{
 			if (npcId == ROYAL)
 			{
-				final L2MonsterInstance mob = (L2MonsterInstance) npc;
-				if (mob.getLeader() != null)
+				if (((L2MonsterInstance) npc).getLeader() != null)
 				{
-					mob.getLeader().getMinionList().onMinionDie(mob, (280 + getRandom(40)) * 1000);
+					((L2MonsterInstance) npc).getLeader().getMinionList().onMinionDie(((L2MonsterInstance) npc), (280 + getRandom(40)) * 1000);
 				}
 			}
 			else if (npcId == NURSE)

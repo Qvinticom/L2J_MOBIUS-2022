@@ -115,15 +115,13 @@ public class Q10465_SoulFrostSword extends Quest
 		}
 		else if (qs.isCond(1))
 		{
+			if ((getQuestItemsCount(player, PRACTICE_SOUL_CRYSTAL) < 1) && (wpn.getId() == PRACTICE_STORMBRINGER))
 			{
-				if ((getQuestItemsCount(player, PRACTICE_SOUL_CRYSTAL) < 1) && (wpn.getId() == PRACTICE_STORMBRINGER))
-				{
-					htmltext = "30471-07.html";
-				}
-				else
-				{
-					htmltext = "30471-05.html";
-				}
+				htmltext = "30471-07.html";
+			}
+			else
+			{
+				htmltext = "30471-05.html";
 			}
 		}
 		else if (qs.isNowAvailable())

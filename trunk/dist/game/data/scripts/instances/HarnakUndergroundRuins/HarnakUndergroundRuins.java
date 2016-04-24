@@ -739,34 +739,31 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					}
 				}
 			}
-			else if (world.isStatus(3))
+			else if (world.isStatus(3) && (npc.getId() == HARNAKS_WRAITH))
 			{
-				if (npc.getId() == HARNAKS_WRAITH)
+				if (!world.harnakMessage1 && (((npc.getCurrentHp() / npc.getMaxHp()) * 100) > 80))
 				{
-					if (!world.harnakMessage1 && (((npc.getCurrentHp() / npc.getMaxHp()) * 100) > 80))
-					{
-						showOnScreenMsg(player, NpcStringId.FREE_ME_FROM_THIS_BINDING_OF_LIGHT, ExShowScreenMessage.TOP_CENTER, 5000);
-						world.harnakMessage1 = true;
-					}
-					else if (!world.harnakMessage2 && (((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 80))
-					{
-						showOnScreenMsg(player, NpcStringId.DESTROY_THE_GHOST_OF_HARNAK_THIS_CORRUPTED_CREATURE, ExShowScreenMessage.TOP_CENTER, 5000);
-						world.harnakMessage2 = true;
-					}
-					else if (!world.harnakMessage3 && (((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 60))
-					{
-						showOnScreenMsg(player, NpcStringId.FREE_ME_AND_I_PROMISE_YOU_THE_POWER_OF_GIANTS, ExShowScreenMessage.TOP_CENTER, 5000);
-						world.harnakMessage3 = true;
-					}
-					else if (((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 50)
-					{
-						world.incStatus();
-						player.sendPacket(new ExSendUIEvent(player, false, false, 60, 0, NpcStringId.REMAINING_TIME));
-						showOnScreenMsg(player, NpcStringId.NO_THE_SEAL_CONTROLS_HAVE_BEEN_EXPOSED_GUARDS_PROTECT_THE_SEAL_CONTROLS, ExShowScreenMessage.TOP_CENTER, 10000);
-						startQuestTimer("spawn_npc4", 1, npc, player);
-						cancelQuestTimer("fail_instance", null, player);
-						startQuestTimer("fail_instance", 60000, null, player);
-					}
+					showOnScreenMsg(player, NpcStringId.FREE_ME_FROM_THIS_BINDING_OF_LIGHT, ExShowScreenMessage.TOP_CENTER, 5000);
+					world.harnakMessage1 = true;
+				}
+				else if (!world.harnakMessage2 && (((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 80))
+				{
+					showOnScreenMsg(player, NpcStringId.DESTROY_THE_GHOST_OF_HARNAK_THIS_CORRUPTED_CREATURE, ExShowScreenMessage.TOP_CENTER, 5000);
+					world.harnakMessage2 = true;
+				}
+				else if (!world.harnakMessage3 && (((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 60))
+				{
+					showOnScreenMsg(player, NpcStringId.FREE_ME_AND_I_PROMISE_YOU_THE_POWER_OF_GIANTS, ExShowScreenMessage.TOP_CENTER, 5000);
+					world.harnakMessage3 = true;
+				}
+				else if (((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 50)
+				{
+					world.incStatus();
+					player.sendPacket(new ExSendUIEvent(player, false, false, 60, 0, NpcStringId.REMAINING_TIME));
+					showOnScreenMsg(player, NpcStringId.NO_THE_SEAL_CONTROLS_HAVE_BEEN_EXPOSED_GUARDS_PROTECT_THE_SEAL_CONTROLS, ExShowScreenMessage.TOP_CENTER, 10000);
+					startQuestTimer("spawn_npc4", 1, npc, player);
+					cancelQuestTimer("fail_instance", null, player);
+					startQuestTimer("fail_instance", 60000, null, player);
 				}
 			}
 		}

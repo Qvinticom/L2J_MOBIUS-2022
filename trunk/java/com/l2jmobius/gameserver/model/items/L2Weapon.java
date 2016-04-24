@@ -87,14 +87,7 @@ public final class L2Weapon extends L2Item
 		_mpConsume = set.getInt("mp_consume", 0);
 		_baseAttackRange = set.getInt("attack_range", 40);
 		final String[] damgeRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
-		if ((damgeRange.length > 1) && Util.isDigit(damgeRange[3]))
-		{
-			_baseAttackAngle = Integer.parseInt(damgeRange[3]);
-		}
-		else
-		{
-			_baseAttackAngle = 120;
-		}
+		_baseAttackAngle = (damgeRange.length > 1) && Util.isDigit(damgeRange[3]) ? Integer.parseInt(damgeRange[3]) : 120;
 		
 		final String[] reduced_soulshots = set.getString("reduced_soulshot", "").split(",");
 		_reducedSoulshotChance = (reduced_soulshots.length == 2) ? Integer.parseInt(reduced_soulshots[0]) : 0;
@@ -297,11 +290,7 @@ public final class L2Weapon extends L2Item
 	@Override
 	public Skill getEnchant4Skill()
 	{
-		if (_enchant4Skill == null)
-		{
-			return null;
-		}
-		return _enchant4Skill.getSkill();
+		return _enchant4Skill == null ? null : _enchant4Skill.getSkill();
 	}
 	
 	/**
@@ -348,13 +337,10 @@ public final class L2Weapon extends L2Item
 		}
 		
 		final Skill onCritSkill = _skillsOnCrit.getSkill();
-		if (_skillsOnCritCondition != null)
+		if ((_skillsOnCritCondition != null) && !_skillsOnCritCondition.test(caster, target, onCritSkill))
 		{
-			if (!_skillsOnCritCondition.test(caster, target, onCritSkill))
-			{
-				// Chance not met
-				return;
-			}
+			// Chance not met
+			return;
 		}
 		
 		if (!onCritSkill.checkCondition(caster, target, false))
@@ -402,13 +388,10 @@ public final class L2Weapon extends L2Item
 			return;
 		}
 		
-		if (_skillsOnMagicCondition != null)
+		if ((_skillsOnMagicCondition != null) && !_skillsOnMagicCondition.test(caster, target, onMagicSkill))
 		{
-			if (!_skillsOnMagicCondition.test(caster, target, onMagicSkill))
-			{
-				// Chance not met
-				return;
-			}
+			// Chance not met
+			return;
 		}
 		
 		if (!onMagicSkill.checkCondition(caster, target, false))

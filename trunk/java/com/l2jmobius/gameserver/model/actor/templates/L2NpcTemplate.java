@@ -512,8 +512,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	
 	public List<IDropItem> getDropList(DropListScope dropListScope)
 	{
-		final Map<DropListScope, List<IDropItem>> dropLists = _dropLists;
-		return dropLists != null ? dropLists.get(dropListScope) : null;
+		return _dropLists != null ? _dropLists.get(dropListScope) : null;
 	}
 	
 	public Collection<ItemHolder> calculateDrops(DropListScope dropListScope, L2Character victim, L2Character killer)
@@ -560,8 +559,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		if (clazz.isInterface())
 		{
 			// check if obj implements the clazz interface
-			final Class<?>[] interfaces = sub.getInterfaces();
-			for (Class<?> interface1 : interfaces)
+			for (Class<?> interface1 : sub.getInterfaces())
 			{
 				if (clazz.getName().equals(interface1.getName()))
 				{
@@ -599,8 +597,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	
 	public boolean canTeach(ClassId classId)
 	{
-		// If the player is on a third class, fetch the class teacher
-		// information for its parent class.
+		// If the player is on a third class, fetch the class teacher information for its parent class.
 		if (classId.level() == 3)
 		{
 			return _teachInfo.contains(classId.getParent());

@@ -194,10 +194,7 @@ public class Hero
 	{
 		final String format = String.format("%%0%dd", 2);
 		FightTime = FightTime / 1000;
-		final String seconds = String.format(format, FightTime % 60);
-		final String minutes = String.format(format, (FightTime % 3600) / 60);
-		final String time = minutes + ":" + seconds;
-		return time;
+		return String.format(format, (FightTime % 3600) / 60) + ":" + String.format(format, FightTime % 60);
 	}
 	
 	/**
@@ -791,16 +788,17 @@ public class Hero
 		
 		final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 		final List<StatsSet> list = HERO_DIARY.get(charId);
-		if ((list != null) && (template != null))
+		if ((list == null) || (template == null))
 		{
-			// Prepare new data
-			final StatsSet diaryEntry = new StatsSet();
-			final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
-			diaryEntry.set("date", date);
-			diaryEntry.set("action", template.getName() + " was defeated");
-			// Add to old list
-			list.add(diaryEntry);
+			return;
 		}
+		// Prepare new data
+		final StatsSet diaryEntry = new StatsSet();
+		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
+		diaryEntry.set("date", date);
+		diaryEntry.set("action", template.getName() + " was defeated");
+		// Add to old list
+		list.add(diaryEntry);
 	}
 	
 	public void setCastleTaken(int charId, int castleId)
@@ -809,16 +807,17 @@ public class Hero
 		
 		final Castle castle = CastleManager.getInstance().getCastleById(castleId);
 		final List<StatsSet> list = HERO_DIARY.get(charId);
-		if ((list != null) && (castle != null))
+		if ((list == null) || (castle == null))
 		{
-			// Prepare new data
-			final StatsSet diaryEntry = new StatsSet();
-			final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
-			diaryEntry.set("date", date);
-			diaryEntry.set("action", castle.getName() + " Castle was successfuly taken");
-			// Add to old list
-			list.add(diaryEntry);
+			return;
 		}
+		// Prepare new data
+		final StatsSet diaryEntry = new StatsSet();
+		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
+		diaryEntry.set("date", date);
+		diaryEntry.set("action", castle.getName() + " Castle was successfuly taken");
+		// Add to old list
+		list.add(diaryEntry);
 	}
 	
 	public void setDiaryData(int charId, int action, int param)

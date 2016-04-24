@@ -181,12 +181,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	protected static OlympiadGameTeams createGame(int id, List<List<Integer>> list)
 	{
 		final Participant[][] teams = createListOfParticipants(list);
-		if (teams == null)
-		{
-			return null;
-		}
-		
-		return new OlympiadGameTeams(id, teams[0], teams[1]);
+		return teams == null ? null : new OlympiadGameTeams(id, teams[0], teams[1]);
 	}
 	
 	@Override
@@ -505,24 +500,18 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		for (int i = _teamOneSize; --i >= 0;)
 		{
 			par = _teamOne[i];
-			if (!par.isDisconnected())
+			if (!par.isDisconnected() && (par.getPlayer() != null) && (par.getPlayer().getOlympiadGameId() == _stadiumID))
 			{
-				if ((par.getPlayer() != null) && (par.getPlayer().getOlympiadGameId() == _stadiumID))
-				{
-					teamOneLost &= par.getPlayer().isDead();
-				}
+				teamOneLost &= par.getPlayer().isDead();
 			}
 		}
 		
 		for (int i = _teamTwoSize; --i >= 0;)
 		{
 			par = _teamTwo[i];
-			if (!par.isDisconnected())
+			if (!par.isDisconnected() && (par.getPlayer() != null) && (par.getPlayer().getOlympiadGameId() == _stadiumID))
 			{
-				if ((par.getPlayer() != null) && (par.getPlayer().getOlympiadGameId() == _stadiumID))
-				{
-					teamTwoLost &= par.getPlayer().isDead();
-				}
+				teamTwoLost &= par.getPlayer().isDead();
 			}
 		}
 		
@@ -532,22 +521,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	@Override
 	protected final boolean checkBattleStatus()
 	{
-		if (_aborted)
-		{
-			return false;
-		}
-		
-		if (teamOneAllDisconnected())
-		{
-			return false;
-		}
-		
-		if (teamTwoAllDisconnected())
-		{
-			return false;
-		}
-		
-		return true;
+		return !_aborted && !teamOneAllDisconnected() && !teamTwoAllDisconnected();
 	}
 	
 	@Override
@@ -668,10 +642,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		}
 		
 		// Choose minimum sum
-		int min = Math.min(totalPointsTeamOne, totalPointsTeamTwo);
-		
-		// make sure all team members got same number of the points: round down to 3x
-		min = (min / MAX_TEAM_SIZE) * MAX_TEAM_SIZE;
+		final int min = (Math.min(totalPointsTeamOne, totalPointsTeamTwo) / MAX_TEAM_SIZE) * MAX_TEAM_SIZE;
 		
 		// calculating coefficients and trying to correct total number of points for each team
 		// due to rounding errors total points after correction will always be lower or equal

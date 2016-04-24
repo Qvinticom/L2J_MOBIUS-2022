@@ -41,12 +41,7 @@ public final class RequestInfoItemAuction extends L2GameClientPacket
 	protected final void runImpl()
 	{
 		final L2PcInstance activeChar = super.getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if (!getClient().getFloodProtectors().getItemAuction().tryPerformAction("RequestInfoItemAuction"))
+		if ((activeChar == null) || !getClient().getFloodProtectors().getItemAuction().tryPerformAction("RequestInfoItemAuction"))
 		{
 			return;
 		}

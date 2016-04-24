@@ -48,7 +48,6 @@ public final class RequestPrivateStoreManageSell extends L2GameClientPacket
 		if (player.isAlikeDead() || player.isInOlympiadMode())
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
 		}
 	}
 	

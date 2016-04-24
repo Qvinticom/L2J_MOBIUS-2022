@@ -50,8 +50,7 @@ public class ShiftTarget extends AbstractEffect
 				continue;
 			}
 			
-			final L2Attackable hater = (L2Attackable) obj;
-			hater.addDamageHate(info.getEffected(), 0, hater.getHating(info.getEffector()) + 1);
+			((L2Attackable) obj).addDamageHate(info.getEffected(), 0, ((L2Attackable) obj).getHating(info.getEffector()) + 1);
 		}
 	}
 }

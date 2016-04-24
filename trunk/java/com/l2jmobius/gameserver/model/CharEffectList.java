@@ -485,11 +485,7 @@ public final class CharEffectList
 	 */
 	public boolean removeBlockedBuffSlots(Set<AbnormalType> blockedBuffSlots)
 	{
-		if (_blockedBuffSlots != null)
-		{
-			return _blockedBuffSlots.removeAll(blockedBuffSlots);
-		}
-		return false;
+		return (_blockedBuffSlots != null) && _blockedBuffSlots.removeAll(blockedBuffSlots);
 	}
 	
 	/**
@@ -809,12 +805,13 @@ public final class CharEffectList
 	 */
 	public void stopAllToggles(boolean update)
 	{
-		if (hasToggles())
+		if (!hasToggles())
 		{
-			getToggles().forEach(b -> stopAndRemove(b, getToggles()));
-			// Update effect flags and icons.
-			updateEffectList(update);
+			return;
 		}
+		getToggles().forEach(b -> stopAndRemove(b, getToggles()));
+		// Update effect flags and icons.
+		updateEffectList(update);
 	}
 	
 	/**
@@ -823,12 +820,13 @@ public final class CharEffectList
 	 */
 	public void stopAllDances(boolean update)
 	{
-		if (hasDances())
+		if (!hasDances())
 		{
-			getDances().forEach(b -> stopAndRemove(b, getDances()));
-			// Update effect flags and icons.
-			updateEffectList(update);
+			return;
 		}
+		getDances().forEach(b -> stopAndRemove(b, getDances()));
+		// Update effect flags and icons.
+		updateEffectList(update);
 	}
 	
 	/**
@@ -837,12 +835,13 @@ public final class CharEffectList
 	 */
 	public void stopAllDebuffs(boolean update)
 	{
-		if (hasDebuffs())
+		if (!hasDebuffs())
 		{
-			getDebuffs().forEach(b -> stopAndRemove(b, getDebuffs()));
-			// Update effect flags and icons.
-			updateEffectList(update);
+			return;
 		}
+		getDebuffs().forEach(b -> stopAndRemove(b, getDebuffs()));
+		// Update effect flags and icons.
+		updateEffectList(update);
 	}
 	
 	/**
@@ -964,87 +963,88 @@ public final class CharEffectList
 	 */
 	public void stopEffectsOnAction()
 	{
-		if (_hasBuffsRemovedOnAnyAction)
+		if (!_hasBuffsRemovedOnAnyAction)
 		{
-			boolean update = false;
+			return;
+		}
+		
+		boolean update = false;
+		if (hasBuffs())
+		{
+			getBuffs().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getBuffs()));
+			update = true;
+		}
+		
+		if (hasTriggered())
+		{
+			getTriggered().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getTriggered()));
+			update = true;
+		}
+		
+		if (hasDebuffs())
+		{
+			getDebuffs().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getDebuffs()));
+			update = true;
+		}
+		
+		if (hasDances())
+		{
+			getDances().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getDances()));
+			update = true;
+		}
+		
+		if (hasToggles())
+		{
+			getToggles().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getToggles()));
+			update = true;
+		}
+		
+		// Update effect flags and icons.
+		updateEffectList(update);
+	}
+	
+	public void stopEffectsOnDamage(boolean awake)
+	{
+		if (!awake)
+		{
+			return;
+		}
+		
+		boolean update = false;
+		if (_hasBuffsRemovedOnDamage)
+		{
 			if (hasBuffs())
 			{
-				getBuffs().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getBuffs()));
+				getBuffs().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getBuffs()));
 				update = true;
 			}
 			
 			if (hasTriggered())
 			{
-				getTriggered().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getTriggered()));
-				update = true;
-			}
-			
-			if (hasDebuffs())
-			{
-				getDebuffs().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getDebuffs()));
+				getTriggered().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getTriggered()));
 				update = true;
 			}
 			
 			if (hasDances())
 			{
-				getDances().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getDances()));
+				getDances().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getDances()));
 				update = true;
 			}
 			
 			if (hasToggles())
 			{
-				getToggles().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getToggles()));
+				getToggles().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getToggles()));
 				update = true;
 			}
-			
-			// Update effect flags and icons.
-			updateEffectList(update);
 		}
-	}
-	
-	public void stopEffectsOnDamage(boolean awake)
-	{
-		if (awake)
+		
+		if (_hasDebuffsRemovedOnDamage && hasDebuffs())
 		{
-			boolean update = false;
-			if (_hasBuffsRemovedOnDamage)
-			{
-				if (hasBuffs())
-				{
-					getBuffs().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getBuffs()));
-					update = true;
-				}
-				
-				if (hasTriggered())
-				{
-					getTriggered().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getTriggered()));
-					update = true;
-				}
-				
-				if (hasDances())
-				{
-					getDances().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getDances()));
-					update = true;
-				}
-				
-				if (hasToggles())
-				{
-					getToggles().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getToggles()));
-					update = true;
-				}
-			}
-			
-			if (_hasDebuffsRemovedOnDamage)
-			{
-				if (hasDebuffs())
-				{
-					getDebuffs().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getDebuffs()));
-					update = true;
-				}
-			}
-			// Update effect flags and icons.
-			updateEffectList(update);
+			getDebuffs().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getDebuffs()));
+			update = true;
 		}
+		// Update effect flags and icons.
+		updateEffectList(update);
 	}
 	
 	/**
@@ -1347,18 +1347,12 @@ public final class CharEffectList
 					break;
 				}
 				
-				if (!bi.isInUse())
-				{
-					continue;
-				}
-				
-				if (bi.getSkill().getAbnormalType() == AbnormalType.SUMMON_CONDITION)
+				if (!bi.isInUse() || (bi.getSkill().getAbnormalType() == AbnormalType.SUMMON_CONDITION))
 				{
 					continue;
 				}
 				
 				stopAndRemove(bi, effects);
-				
 				buffsToRemove--;
 			}
 		}
@@ -1391,12 +1385,9 @@ public final class CharEffectList
 		}
 		
 		// Check if the previous call hasnt finished, if so, don't send packets uselessly again.
-		if (_effectIconsUpdate != null)
+		if ((_effectIconsUpdate != null) && !_effectIconsUpdate.isDone())
 		{
-			if (!_effectIconsUpdate.isDone())
-			{
-				return;
-			}
+			return;
 		}
 		// Schedule the icon update packets 500miliseconds ahead, so it can gather-up most of the changes.
 		_effectIconsUpdate = ThreadPoolManager.getInstance().scheduleGeneral(() ->
@@ -1501,13 +1492,9 @@ public final class CharEffectList
 					{
 						if (summonOwner.isInParty())
 						{
-							summonOwner.getParty().broadcastToPartyMembers(summonOwner, psSummon); // send to all member except summonOwner
-							summonOwner.sendPacket(ps); // now send to summonOwner
+							summonOwner.getParty().broadcastToPartyMembers(summonOwner, psSummon);
 						}
-						else
-						{
-							summonOwner.sendPacket(ps);
-						}
+						summonOwner.sendPacket(ps);
 					}
 				}
 				else if (_owner.isPlayer() && _owner.isInParty())

@@ -43,24 +43,25 @@ public class TaskClanLeaderApply extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
-		final Calendar cal = Calendar.getInstance();
-		if (cal.get(Calendar.DAY_OF_WEEK) == Config.ALT_CLAN_LEADER_DATE_CHANGE)
+		if (Calendar.getInstance().get(Calendar.DAY_OF_WEEK) != Config.ALT_CLAN_LEADER_DATE_CHANGE)
 		{
-			for (L2Clan clan : ClanTable.getInstance().getClans())
-			{
-				if (clan.getNewLeaderId() != 0)
-				{
-					final L2ClanMember member = clan.getClanMember(clan.getNewLeaderId());
-					if (member == null)
-					{
-						continue;
-					}
-					
-					clan.setNewLeader(member);
-				}
-			}
-			_log.info(getClass().getSimpleName() + ": launched.");
+			return;
 		}
+		
+		for (L2Clan clan : ClanTable.getInstance().getClans())
+		{
+			if (clan.getNewLeaderId() != 0)
+			{
+				final L2ClanMember member = clan.getClanMember(clan.getNewLeaderId());
+				if (member == null)
+				{
+					continue;
+				}
+				
+				clan.setNewLeader(member);
+			}
+		}
+		_log.info(getClass().getSimpleName() + ": launched.");
 	}
 	
 	@Override

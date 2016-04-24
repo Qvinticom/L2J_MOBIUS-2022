@@ -166,19 +166,14 @@ public class L2SiegeFlagInstance extends L2Npc
 	public void reduceCurrentHp(double damage, L2Character attacker, Skill skill)
 	{
 		super.reduceCurrentHp(damage, attacker, skill);
-		if (canTalk())
+		if (!canTalk() || (((getCastle() == null) || !getCastle().getSiege().isInProgress()) && ((getFort() == null) || !getFort().getSiege().isInProgress()) && ((getConquerableHall() == null) || !getConquerableHall().isInSiege())) || (_clan == null))
 		{
-			if (((getCastle() != null) && getCastle().getSiege().isInProgress()) || ((getFort() != null) && getFort().getSiege().isInProgress()) || ((getConquerableHall() != null) && getConquerableHall().isInSiege()))
-			{
-				if (_clan != null)
-				{
-					// send warning to owners of headquarters that theirs base is under attack
-					_clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_BASE_IS_BEING_ATTACKED));
-					setCanTalk(false);
-					ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleTalkTask(), 20000);
-				}
-			}
+			return;
 		}
+		
+		_clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_BASE_IS_BEING_ATTACKED));
+		setCanTalk(false);
+		ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleTalkTask(), 20000);
 	}
 	
 	private class ScheduleTalkTask implements Runnable

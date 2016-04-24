@@ -221,15 +221,7 @@ public class GeoData
 	 */
 	public boolean canSeeTarget(L2Object cha, L2Object target)
 	{
-		if (target == null)
-		{
-			return false;
-		}
-		if (target.isDoor())
-		{
-			return true;
-		}
-		return canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), cha.getInstanceId(), target.getX(), target.getY(), target.getZ(), target.getInstanceId());
+		return (target != null) && (target.isDoor() || canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), cha.getInstanceId(), target.getX(), target.getY(), target.getZ(), target.getInstanceId()));
 	}
 	
 	/**
@@ -257,11 +249,7 @@ public class GeoData
 	 */
 	public boolean canSeeTarget(int x, int y, int z, int instanceId, int tx, int ty, int tz, int tInstanceId)
 	{
-		if ((instanceId != tInstanceId))
-		{
-			return false;
-		}
-		return canSeeTarget(x, y, z, instanceId, tx, ty, tz);
+		return (instanceId == tInstanceId) && canSeeTarget(x, y, z, instanceId, tx, ty, tz);
 	}
 	
 	/**
@@ -277,15 +265,7 @@ public class GeoData
 	 */
 	public boolean canSeeTarget(int x, int y, int z, int instanceId, int tx, int ty, int tz)
 	{
-		if (DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz, instanceId, true))
-		{
-			return false;
-		}
-		if (WallData.getInstance().checkIfWallsBetween(x, y, z, tx, ty, tz))
-		{
-			return false;
-		}
-		return canSeeTarget(x, y, z, tx, ty, tz);
+		return !DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz, instanceId, true) && !WallData.getInstance().checkIfWallsBetween(x, y, z, tx, ty, tz) && canSeeTarget(x, y, z, tx, ty, tz);
 	}
 	
 	private int getLosGeoZ(int prevX, int prevY, int prevGeoZ, int curX, int curY, int nswe)
@@ -294,12 +274,7 @@ public class GeoData
 		{
 			throw new RuntimeException("Multiple directions!");
 		}
-		
-		if (checkNearestNsweAntiCornerCut(prevX, prevY, prevGeoZ, nswe))
-		{
-			return getNearestZ(curX, curY, prevGeoZ);
-		}
-		return getNextHigherZ(curX, curY, prevGeoZ);
+		return checkNearestNsweAntiCornerCut(prevX, prevY, prevGeoZ, nswe) ? getNearestZ(curX, curY, prevGeoZ) : getNextHigherZ(curX, curY, prevGeoZ);
 	}
 	
 	/**
@@ -325,12 +300,7 @@ public class GeoData
 		// fastpath
 		if ((geoX == tGeoX) && (geoY == tGeoY))
 		{
-			if (hasGeoPos(tGeoX, tGeoY))
-			{
-				return z == tz;
-			}
-			
-			return true;
+			return !hasGeoPos(tGeoX, tGeoY) || (z == tz);
 		}
 		
 		if (tz > z)
@@ -382,16 +352,7 @@ public class GeoData
 			{
 				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
 				curGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, curX, curY, nswe);
-				int maxHeight;
-				if (ptIndex < ELEVATED_SEE_OVER_DISTANCE)
-				{
-					maxHeight = z + MAX_SEE_OVER_HEIGHT;
-				}
-				else
-				{
-					maxHeight = beeCurZ + MAX_SEE_OVER_HEIGHT;
-				}
-				
+				final int maxHeight = ptIndex < ELEVATED_SEE_OVER_DISTANCE ? z + MAX_SEE_OVER_HEIGHT : beeCurZ + MAX_SEE_OVER_HEIGHT;
 				boolean canSeeThrough = false;
 				if (curGeoZ <= maxHeight)
 				{
@@ -471,11 +432,7 @@ public class GeoData
 		final int tGeoY = getGeoY(ty);
 		tz = getNearestZ(tGeoX, tGeoY, tz);
 		
-		if (DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz, instanceId, false))
-		{
-			return new Location(x, y, getHeight(x, y, z));
-		}
-		if (WallData.getInstance().checkIfWallsBetween(x, y, z, tx, ty, tz))
+		if (DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz, instanceId, false) || WallData.getInstance().checkIfWallsBetween(x, y, z, tx, ty, tz))
 		{
 			return new Location(x, y, getHeight(x, y, z));
 		}
@@ -492,29 +449,16 @@ public class GeoData
 			final int curX = pointIter.x();
 			final int curY = pointIter.y();
 			final int curZ = getNearestZ(curX, curY, prevZ);
-			
-			if (hasGeoPos(prevX, prevY))
+			if (hasGeoPos(prevX, prevY) && !checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, GeoUtils.computeNswe(prevX, prevY, curX, curY)))
 			{
-				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
-				if (!checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, nswe))
-				{
-					// can't move, return previous location
-					return new Location(getWorldX(prevX), getWorldY(prevY), prevZ);
-				}
+				// can't move, return previous location
+				return new Location(getWorldX(prevX), getWorldY(prevY), prevZ);
 			}
-			
 			prevX = curX;
 			prevY = curY;
 			prevZ = curZ;
 		}
-		
-		if (hasGeoPos(prevX, prevY) && (prevZ != tz))
-		{
-			// different floors, return start location
-			return new Location(x, y, z);
-		}
-		
-		return new Location(tx, ty, tz);
+		return hasGeoPos(prevX, prevY) && (prevZ != tz) ? new Location(x, y, z) : new Location(tx, ty, tz);
 	}
 	
 	/**
@@ -537,11 +481,7 @@ public class GeoData
 		final int tGeoY = getGeoY(toY);
 		toZ = getNearestZ(tGeoX, tGeoY, toZ);
 		
-		if (DoorData.getInstance().checkIfDoorsBetween(fromX, fromY, fromZ, toX, toY, toZ, instanceId, false))
-		{
-			return false;
-		}
-		if (WallData.getInstance().checkIfWallsBetween(fromX, fromY, fromZ, toX, toY, toZ))
+		if (DoorData.getInstance().checkIfDoorsBetween(fromX, fromY, fromZ, toX, toY, toZ, instanceId, false) || WallData.getInstance().checkIfWallsBetween(fromX, fromY, fromZ, toX, toY, toZ))
 		{
 			return false;
 		}
@@ -558,28 +498,17 @@ public class GeoData
 			final int curX = pointIter.x();
 			final int curY = pointIter.y();
 			final int curZ = getNearestZ(curX, curY, prevZ);
-			
-			if (hasGeoPos(prevX, prevY))
+			if (hasGeoPos(prevX, prevY) && !checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, GeoUtils.computeNswe(prevX, prevY, curX, curY)))
 			{
-				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
-				if (!checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, nswe))
 				{
 					return false;
 				}
 			}
-			
 			prevX = curX;
 			prevY = curY;
 			prevZ = curZ;
 		}
-		
-		if (hasGeoPos(prevX, prevY) && (prevZ != toZ))
-		{
-			// different floors
-			return false;
-		}
-		
-		return true;
+		return (!hasGeoPos(prevX, prevY) || (prevZ == toZ));
 	}
 	
 	public int traceTerrainZ(int x, int y, int z, int tx, int ty)
@@ -597,11 +526,7 @@ public class GeoData
 		
 		while (pointIter.next())
 		{
-			final int curX = pointIter.x();
-			final int curY = pointIter.y();
-			final int curZ = getNearestZ(curX, curY, prevZ);
-			
-			prevZ = curZ;
+			prevZ = getNearestZ(pointIter.x(), pointIter.y(), prevZ);
 		}
 		
 		return prevZ;

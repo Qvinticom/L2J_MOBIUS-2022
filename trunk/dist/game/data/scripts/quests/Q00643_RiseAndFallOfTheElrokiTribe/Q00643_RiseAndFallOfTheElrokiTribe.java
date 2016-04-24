@@ -204,24 +204,16 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		
-		if (Util.contains(MOBS2, npcId))
+		if (Util.contains(MOBS2, npcId) && (getRandom(1000) < (CHANCE_MOBS2 * Config.RATE_QUEST_DROP)))
 		{
-			final float chance = (CHANCE_MOBS2 * Config.RATE_QUEST_DROP);
-			if (getRandom(1000) < chance)
-			{
-				rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 1);
-				playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
+			rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 1);
+			playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		
-		if (npcId == DEINONYCHUS)
+		if ((npcId == DEINONYCHUS) && (getRandom(1000) < (CHANCE_DEINO * Config.RATE_QUEST_DROP)))
 		{
-			final float chance = (CHANCE_DEINO * Config.RATE_QUEST_DROP);
-			if (getRandom(1000) < chance)
-			{
-				rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 1);
-				playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
+			rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 1);
+			playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);
 	}

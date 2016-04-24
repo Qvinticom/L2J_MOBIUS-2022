@@ -41,11 +41,7 @@ public class L2DynamicZone extends L2ZoneType
 		_region = region;
 		_owner = owner;
 		_skill = skill;
-		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-		if (settings == null)
-		{
-			settings = new TaskZoneSettings();
-		}
+		final AbstractZoneSettings settings = ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName());
 		setSettings(settings);
 		
 		getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneral(() -> remove(), skill.getAbnormalTime() * 1000));

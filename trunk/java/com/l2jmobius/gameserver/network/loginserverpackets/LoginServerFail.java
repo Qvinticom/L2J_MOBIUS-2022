@@ -51,5 +51,4 @@ public class LoginServerFail extends BaseRecievePacket
 	{
 		return _reason;
 	}
-	
 }

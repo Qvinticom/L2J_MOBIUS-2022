@@ -55,19 +55,16 @@ public class FuncEnchant extends AbstractFunction
 			enchant = 3;
 		}
 		
-		if (effector.isPlayer())
+		if (effector.isPlayer() && effector.getActingPlayer().isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && ((enchant + overenchant) > Config.ALT_OLY_ENCHANT_LIMIT))
 		{
-			if (effector.getActingPlayer().isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && ((enchant + overenchant) > Config.ALT_OLY_ENCHANT_LIMIT))
+			if (Config.ALT_OLY_ENCHANT_LIMIT > 3)
 			{
-				if (Config.ALT_OLY_ENCHANT_LIMIT > 3)
-				{
-					overenchant = Config.ALT_OLY_ENCHANT_LIMIT - 3;
-				}
-				else
-				{
-					overenchant = 0;
-					enchant = Config.ALT_OLY_ENCHANT_LIMIT;
-				}
+				overenchant = Config.ALT_OLY_ENCHANT_LIMIT - 3;
+			}
+			else
+			{
+				overenchant = 0;
+				enchant = Config.ALT_OLY_ENCHANT_LIMIT;
 			}
 		}
 		

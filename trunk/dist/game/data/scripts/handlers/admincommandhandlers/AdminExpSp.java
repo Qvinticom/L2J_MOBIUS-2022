@@ -52,8 +52,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(16);
-				if (!adminAddExpSp(activeChar, val))
+				if (!adminAddExpSp(activeChar, command.substring(16)))
 				{
 					activeChar.sendMessage("Usage: //add_exp_sp exp sp");
 				}
@@ -67,8 +66,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		{
 			try
 			{
-				final String val = command.substring(19);
-				if (!adminRemoveExpSP(activeChar, val))
+				if (!adminRemoveExpSP(activeChar, command.substring(19)))
 				{
 					activeChar.sendMessage("Usage: //remove_exp_sp exp sp");
 				}

@@ -136,7 +136,7 @@ public final class MithrilMine extends AbstractInstance
 			{
 				return npc.isScriptValue(0) ? "18846.html" : "18846-01.html";
 			}
-			else if (qs.isMemoState(3))
+			if (qs.isMemoState(3))
 			{
 				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 				world.removeAllowed(player.getObjectId());

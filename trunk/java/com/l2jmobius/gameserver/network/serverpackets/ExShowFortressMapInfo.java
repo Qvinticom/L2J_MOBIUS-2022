@@ -54,14 +54,7 @@ public class ExShowFortressMapInfo extends L2GameServerPacket
 				{
 					for (FortSiegeSpawn spawn : commanders)
 					{
-						if (isSpawned(spawn.getId()))
-						{
-							writeD(0);
-						}
-						else
-						{
-							writeD(1);
-						}
+						writeD(isSpawned(spawn.getId()) ? 0 : 1);
 					}
 					break;
 				}
@@ -75,14 +68,7 @@ public class ExShowFortressMapInfo extends L2GameServerPacket
 						{
 							writeD(1); // TODO: control room emulated
 						}
-						if (isSpawned(spawn.getId()))
-						{
-							writeD(0);
-						}
-						else
-						{
-							writeD(1);
-						}
+						writeD(isSpawned(spawn.getId()) ? 0 : 1);
 					}
 					break;
 				}

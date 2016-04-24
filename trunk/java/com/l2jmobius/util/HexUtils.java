@@ -167,14 +167,7 @@ public class HexUtils
 		
 		for (int dataIdx = offset, charsIdx = dstOffset; dataIdx < (len + offset); ++dataIdx, ++charsIdx)
 		{
-			if ((data[dataIdx] > 0x1f) && (data[dataIdx] < 0x80))
-			{
-				dstAsciiChars[charsIdx] = (char) data[dataIdx];
-			}
-			else
-			{
-				dstAsciiChars[charsIdx] = '.';
-			}
+			dstAsciiChars[charsIdx] = (data[dataIdx] > 0x1f) && (data[dataIdx] < 0x80) ? (char) data[dataIdx] : '.';
 		}
 		
 		return dstAsciiChars;
@@ -245,9 +238,7 @@ public class HexUtils
 			}
 			else if (dataLen < _HEX_ED_BPL)
 			{
-				// last line which shows less than _HEX_ED_BPL bytes
-				final int lineHexDataEnd = lineHexDataStart + (dataLen * _HEX_ED_CPB);
-				Arrays.fill(textData, lineHexDataEnd, lineHexDataEnd + ((_HEX_ED_BPL - dataLen) * _HEX_ED_CPB) + 1, ' '); // spaces, for the last line if there are not _HEX_ED_BPL bytes
+				Arrays.fill(textData, (lineHexDataStart + (dataLen * _HEX_ED_CPB)), lineHexDataStart + (dataLen * _HEX_ED_CPB) + ((_HEX_ED_BPL - dataLen) * _HEX_ED_CPB) + 1, ' ');
 			}
 			else
 			{

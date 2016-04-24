@@ -44,5 +44,4 @@ public class HackingException extends Exception
 	{
 		return _connects;
 	}
-	
 }

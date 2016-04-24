@@ -174,12 +174,7 @@ public class Q00463_IMustBeaGenius extends Quest
 		if (qs.isCond(1))
 		{
 			boolean msg = false;
-			int number = MOBS.get(npc.getId()).getCount();
-			
-			if (MOBS.get(npc.getId()).getSpecialChance() == qs.getInt("chance"))
-			{
-				number = getRandom(100) + 1;
-			}
+			final int number = MOBS.get(npc.getId()).getSpecialChance() == qs.getInt("chance") ? getRandom(100) + 1 : MOBS.get(npc.getId()).getCount();
 			
 			if (number > 0)
 			{

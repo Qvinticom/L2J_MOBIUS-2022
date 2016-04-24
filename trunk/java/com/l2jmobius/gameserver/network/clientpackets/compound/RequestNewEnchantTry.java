@@ -47,13 +47,13 @@ public class RequestNewEnchantTry extends L2GameClientPacket
 		{
 			return;
 		}
-		else if (activeChar.isInStoreMode())
+		if (activeChar.isInStoreMode())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
-		else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
+		if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
 			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
@@ -77,31 +77,12 @@ public class RequestNewEnchantTry extends L2GameClientPacket
 			activeChar.removeRequest(request.getClass());
 			return;
 		}
-		
-		// Lets prevent using same item twice
-		if (itemOne.getObjectId() == itemTwo.getObjectId())
+		if ((itemOne.getObjectId() == itemTwo.getObjectId()) || (itemOne.getItem().getId() != itemTwo.getItem().getId()) || (itemOne.getItem().getCompoundItem() == 0) || (itemOne.getItem().getCompoundChance() == 0))
 		{
 			activeChar.sendPacket(new ExEnchantFail(itemOne.getItem().getId(), itemTwo.getItem().getId()));
 			activeChar.removeRequest(request.getClass());
 			return;
 		}
-		
-		// Combining only same items!
-		if (itemOne.getItem().getId() != itemTwo.getItem().getId())
-		{
-			activeChar.sendPacket(new ExEnchantFail(itemOne.getItem().getId(), itemTwo.getItem().getId()));
-			activeChar.removeRequest(request.getClass());
-			return;
-		}
-		
-		// Not implemented or not able to merge!
-		if ((itemOne.getItem().getCompoundItem() == 0) || (itemOne.getItem().getCompoundChance() == 0))
-		{
-			activeChar.sendPacket(new ExEnchantFail(itemOne.getItem().getId(), itemTwo.getItem().getId()));
-			activeChar.removeRequest(request.getClass());
-			return;
-		}
-		
 		final InventoryUpdate iu = new InventoryUpdate();
 		final double random = Rnd.nextDouble() * 100;
 		
@@ -110,11 +91,9 @@ public class RequestNewEnchantTry extends L2GameClientPacket
 		{
 			iu.addRemovedItem(itemOne);
 			iu.addRemovedItem(itemTwo);
-			
 			if (activeChar.destroyItem("Compound-Item-One", itemOne, null, true) && activeChar.destroyItem("Compound-Item-Two", itemTwo, null, true))
 			{
-				final L2ItemInstance item = activeChar.addItem("Compound-Result", itemOne.getItem().getCompoundItem(), 1, null, true);
-				activeChar.sendPacket(new ExEnchantSucess(item.getItem().getId()));
+				activeChar.sendPacket(new ExEnchantSucess(activeChar.addItem("Compound-Result", itemOne.getItem().getCompoundItem(), 1, null, true).getItem().getId()));
 			}
 		}
 		else

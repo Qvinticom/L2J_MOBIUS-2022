@@ -26,5 +26,4 @@ public class ChatFilter implements Filter
 	{
 		return "chat".equals(record.getLoggerName());
 	}
-	
 }

@@ -36,17 +36,19 @@ public class L2BoatAI extends L2VehicleAI
 	@Override
 	protected void moveTo(int x, int y, int z)
 	{
-		if (!_actor.isMovementDisabled())
+		if (_actor.isMovementDisabled())
 		{
-			if (!_clientMoving)
-			{
-				_actor.broadcastPacket(new VehicleStarted(getActor(), 1));
-			}
-			
-			_clientMoving = true;
-			_actor.moveToLocation(x, y, z, 0);
-			_actor.broadcastPacket(new VehicleDeparture(getActor()));
+			return;
 		}
+		
+		if (!_clientMoving)
+		{
+			_actor.broadcastPacket(new VehicleStarted(getActor(), 1));
+		}
+		
+		_clientMoving = true;
+		_actor.moveToLocation(x, y, z, 0);
+		_actor.broadcastPacket(new VehicleDeparture(getActor()));
 	}
 	
 	@Override

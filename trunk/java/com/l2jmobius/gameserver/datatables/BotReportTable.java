@@ -29,7 +29,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.Attributes;
@@ -75,32 +74,33 @@ public final class BotReportTable
 	
 	BotReportTable()
 	{
-		if (Config.BOTREPORT_ENABLE)
+		if (!Config.BOTREPORT_ENABLE)
 		{
-			_ipRegistry = new HashMap<>();
-			_charRegistry = new ConcurrentHashMap<>();
-			_reports = new ConcurrentHashMap<>();
-			_punishments = new ConcurrentHashMap<>();
-			
-			try
-			{
-				final File punishments = new File("./config/BotReportPunishments.xml");
-				if (!punishments.exists())
-				{
-					throw new FileNotFoundException(punishments.getName());
-				}
-				
-				final SAXParser parser = SAXParserFactory.newInstance().newSAXParser();
-				parser.parse(punishments, new PunishmentsLoader());
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.WARNING, "BotReportTable: Could not load punishments from /config/BotReportPunishments.xml", e);
-			}
-			
-			loadReportedCharData();
-			scheduleResetPointTask();
+			return;
 		}
+		
+		_ipRegistry = new HashMap<>();
+		_charRegistry = new ConcurrentHashMap<>();
+		_reports = new ConcurrentHashMap<>();
+		_punishments = new ConcurrentHashMap<>();
+		
+		try
+		{
+			final File punishments = new File("./config/BotReportPunishments.xml");
+			if (!punishments.exists())
+			{
+				throw new FileNotFoundException(punishments.getName());
+			}
+			
+			SAXParserFactory.newInstance().newSAXParser().parse(punishments, new PunishmentsLoader());
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "BotReportTable: Could not load punishments from /config/BotReportPunishments.xml", e);
+		}
+		
+		loadReportedCharData();
+		scheduleResetPointTask();
 	}
 	
 	/**
@@ -186,12 +186,11 @@ public final class BotReportTable
 			
 			for (Map.Entry<Integer, ReportedCharData> entrySet : _reports.entrySet())
 			{
-				final Map<Integer, Long> reportTable = entrySet.getValue()._reporters;
-				for (int reporterId : reportTable.keySet())
+				for (int reporterId : entrySet.getValue()._reporters.keySet())
 				{
 					ps.setInt(1, entrySet.getKey());
 					ps.setInt(2, reporterId);
-					ps.setLong(3, reportTable.get(reporterId));
+					ps.setLong(3, entrySet.getValue()._reporters.get(reporterId));
 					ps.execute();
 				}
 			}
@@ -360,17 +359,19 @@ public final class BotReportTable
 	 */
 	private void punishBot(L2PcInstance bot, PunishHolder ph)
 	{
-		if (ph != null)
+		if (ph == null)
 		{
-			ph._punish.applyEffects(bot, bot);
-			if (ph._systemMessageId > -1)
-			{
-				final SystemMessageId id = SystemMessageId.getSystemMessageId(ph._systemMessageId);
-				if (id != null)
-				{
-					bot.sendPacket(id);
-				}
-			}
+			return;
+		}
+		ph._punish.applyEffects(bot, bot);
+		if (ph._systemMessageId <= -1)
+		{
+			return;
+		}
+		final SystemMessageId id = SystemMessageId.getSystemMessageId(ph._systemMessageId);
+		if (id != null)
+		{
+			bot.sendPacket(id);
 		}
 	}
 	
@@ -461,11 +462,7 @@ public final class BotReportTable
 	 */
 	private static boolean timeHasPassed(Map<Integer, Long> map, int objectId)
 	{
-		if (map.containsKey(objectId))
-		{
-			return (System.currentTimeMillis() - map.get(objectId)) > Config.BOTREPORT_REPORT_DELAY;
-		}
-		return true;
+		return !map.containsKey(objectId) || ((System.currentTimeMillis() - map.get(objectId)) > Config.BOTREPORT_REPORT_DELAY);
 	}
 	
 	/**
@@ -562,32 +559,33 @@ public final class BotReportTable
 		@Override
 		public void startElement(String uri, String localName, String qName, Attributes attr)
 		{
-			if (qName.equals("punishment"))
+			if (!qName.equals("punishment"))
 			{
-				int reportCount = -1, skillId = -1, skillLevel = 1, sysMessage = -1;
-				try
+				return;
+			}
+			int reportCount = -1, skillId = -1, skillLevel = 1, sysMessage = -1;
+			try
+			{
+				reportCount = Integer.parseInt(attr.getValue("neededReportCount"));
+				skillId = Integer.parseInt(attr.getValue("skillId"));
+				final String level = attr.getValue("skillLevel");
+				final String systemMessageId = attr.getValue("sysMessageId");
+				if (level != null)
 				{
-					reportCount = Integer.parseInt(attr.getValue("neededReportCount"));
-					skillId = Integer.parseInt(attr.getValue("skillId"));
-					final String level = attr.getValue("skillLevel");
-					final String systemMessageId = attr.getValue("sysMessageId");
-					if (level != null)
-					{
-						skillLevel = Integer.parseInt(level);
-					}
-					
-					if (systemMessageId != null)
-					{
-						sysMessage = Integer.parseInt(systemMessageId);
-					}
-				}
-				catch (Exception e)
-				{
-					e.printStackTrace();
+					skillLevel = Integer.parseInt(level);
 				}
 				
-				addPunishment(reportCount, skillId, skillLevel, sysMessage);
+				if (systemMessageId != null)
+				{
+					sysMessage = Integer.parseInt(systemMessageId);
+				}
 			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+			
+			addPunishment(reportCount, skillId, skillLevel, sysMessage);
 		}
 	}
 	

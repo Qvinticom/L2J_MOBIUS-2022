@@ -2886,10 +2886,9 @@ public final class Config
 			{
 				for (int regionY = L2World.TILE_Y_MIN; regionY <= L2World.TILE_Y_MAX; regionY++)
 				{
-					final String key = regionX + "_" + regionY;
 					if (geoData.containskey(regionX + "_" + regionY))
 					{
-						GEODATA_REGIONS.put(key, geoData.getBoolean(key, false));
+						GEODATA_REGIONS.put((regionX + "_" + regionY), geoData.getBoolean((regionX + "_" + regionY), false));
 					}
 				}
 			}
@@ -3167,11 +3166,7 @@ public final class Config
 		
 		public boolean isAllowed(int job)
 		{
-			if ((_allowedClassChange == null) || !_allowedClassChange.containsKey(job))
-			{
-				return false;
-			}
-			return _allowedClassChange.get(job);
+			return (_allowedClassChange != null) && _allowedClassChange.containsKey(job) && _allowedClassChange.get(job);
 		}
 		
 		public List<ItemHolder> getRewardItems(int job)
@@ -3267,8 +3262,7 @@ public final class Config
 		public void load()
 		{
 			GameServer.printSection("Network Configuration");
-			final File f = new File(IP_CONFIG_FILE);
-			if (f.exists())
+			if ((new File(IP_CONFIG_FILE)).exists())
 			{
 				LOGGER.log(Level.INFO, "Using existing ipconfig.xml.");
 				parseFile(new File(IP_CONFIG_FILE));
@@ -3391,20 +3385,12 @@ public final class Config
 		
 		protected List<String> getSubnets()
 		{
-			if (_subnets.isEmpty())
-			{
-				return Arrays.asList("0.0.0.0/0");
-			}
-			return _subnets;
+			return _subnets.isEmpty() ? Arrays.asList("0.0.0.0/0") : _subnets;
 		}
 		
 		protected List<String> getHosts()
 		{
-			if (_hosts.isEmpty())
-			{
-				return Arrays.asList("127.0.0.1");
-			}
-			return _hosts;
+			return _hosts.isEmpty() ? Arrays.asList("127.0.0.1") : _hosts;
 		}
 	}
 }

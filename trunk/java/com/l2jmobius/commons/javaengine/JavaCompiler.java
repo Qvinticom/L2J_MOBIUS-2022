@@ -52,8 +52,7 @@ public class JavaCompiler
 	
 	public Map<String, byte[]> compile(String source, String fileName)
 	{
-		final PrintWriter err = new PrintWriter(System.err);
-		return compile(source, fileName, err, null, null);
+		return compile(source, fileName, new PrintWriter(System.err), null, null);
 	}
 	
 	public Map<String, byte[]> compile(String fileName, String source, Writer err)

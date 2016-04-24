@@ -71,40 +71,42 @@ public class ServerStatus extends BaseRecievePacket
 		super(decrypt);
 		
 		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(server.getServerId());
-		if (gsi != null)
+		if (gsi == null)
 		{
-			final int size = readD();
-			for (int i = 0; i < size; i++)
+			return;
+		}
+		
+		final int size = readD();
+		for (int i = 0; i < size; i++)
+		{
+			final int type = readD();
+			final int value = readD();
+			switch (type)
 			{
-				final int type = readD();
-				final int value = readD();
-				switch (type)
+				case SERVER_LIST_STATUS:
 				{
-					case SERVER_LIST_STATUS:
-					{
-						gsi.setStatus(value);
-						break;
-					}
-					case SERVER_LIST_SQUARE_BRACKET:
-					{
-						gsi.setShowingBrackets(value == ON);
-						break;
-					}
-					case MAX_PLAYERS:
-					{
-						gsi.setMaxPlayers(value);
-						break;
-					}
-					case SERVER_TYPE:
-					{
-						gsi.setServerType(value);
-						break;
-					}
-					case SERVER_AGE:
-					{
-						gsi.setAgeLimit(value);
-						break;
-					}
+					gsi.setStatus(value);
+					break;
+				}
+				case SERVER_LIST_SQUARE_BRACKET:
+				{
+					gsi.setShowingBrackets(value == ON);
+					break;
+				}
+				case MAX_PLAYERS:
+				{
+					gsi.setMaxPlayers(value);
+					break;
+				}
+				case SERVER_TYPE:
+				{
+					gsi.setServerType(value);
+					break;
+				}
+				case SERVER_AGE:
+				{
+					gsi.setAgeLimit(value);
+					break;
 				}
 			}
 		}

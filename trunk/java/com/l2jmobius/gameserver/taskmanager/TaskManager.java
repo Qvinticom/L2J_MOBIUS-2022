@@ -124,15 +124,7 @@ public final class TaskManager
 		@Override
 		public boolean equals(Object object)
 		{
-			if (this == object)
-			{
-				return true;
-			}
-			if (!(object instanceof ExecutedTask))
-			{
-				return false;
-			}
-			return id == ((ExecutedTask) object).id;
+			return (this == object) || ((object instanceof ExecutedTask) && (id == ((ExecutedTask) object).id));
 		}
 		
 		@Override
@@ -197,8 +189,7 @@ public final class TaskManager
 	
 	public void registerTask(Task task)
 	{
-		final int key = task.getName().hashCode();
-		_tasks.computeIfAbsent(key, k ->
+		_tasks.computeIfAbsent(task.getName().hashCode(), k ->
 		{
 			task.initializate();
 			return task;

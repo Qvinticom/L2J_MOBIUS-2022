@@ -375,12 +375,7 @@ public class L2SepulcherMonsterInstance extends L2MonsterInstance
 		@Override
 		public void run()
 		{
-			if (_activeChar.isDead())
-			{
-				return;
-			}
-			
-			if (!_activeChar.isVisible())
+			if (_activeChar.isDead() || !_activeChar.isVisible())
 			{
 				return;
 			}
@@ -401,12 +396,7 @@ public class L2SepulcherMonsterInstance extends L2MonsterInstance
 		@Override
 		public void run()
 		{
-			if (_activeChar.isDead())
-			{
-				return;
-			}
-			
-			if (!_activeChar.isVisible())
+			if (_activeChar.isDead() || !_activeChar.isVisible())
 			{
 				return;
 			}

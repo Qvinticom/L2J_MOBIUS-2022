@@ -38,12 +38,7 @@ public class RequestExAddContactToContactList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (!Config.ALLOW_MAIL)
-		{
-			return;
-		}
-		
-		if (_name == null)
+		if (!Config.ALLOW_MAIL || (_name == null))
 		{
 			return;
 		}
@@ -54,8 +49,7 @@ public class RequestExAddContactToContactList extends L2GameClientPacket
 			return;
 		}
 		
-		final boolean charAdded = activeChar.getContactList().add(_name);
-		activeChar.sendPacket(new ExConfirmAddingContact(_name, charAdded));
+		activeChar.sendPacket(new ExConfirmAddingContact(_name, activeChar.getContactList().add(_name)));
 	}
 	
 	@Override

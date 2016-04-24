@@ -610,13 +610,10 @@ final class Beleth extends AbstractNpcAI
 	{
 		if (!npc.isDead() && !npc.isCastingNow())
 		{
-			if (getRandom(100) < 40)
+			if ((getRandom(100) < 40) && !npc.getKnownList().getKnownPlayersInRadius(200).isEmpty())
 			{
-				if (!npc.getKnownList().getKnownPlayersInRadius(200).isEmpty())
-				{
-					npc.doCast(BLEED.getSkill());
-					return null;
-				}
+				npc.doCast(BLEED.getSkill());
+				return null;
 			}
 			npc.setTarget(player);
 			npc.doCast(FIREBALL.getSkill());
@@ -637,9 +634,7 @@ final class Beleth extends AbstractNpcAI
 				{
 					npc.setTarget(player);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-					final double speed = npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed();
-					final int time = (int) (((distance2 - 890) / speed) * 1000);
-					startQuestTimer("CAST", time, npc, null);
+					startQuestTimer("CAST", ((int) (((distance2 - 890) / (npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed())) * 1000)), npc, null);
 				}
 				else if (distance2 < 890)
 				{
@@ -648,13 +643,10 @@ final class Beleth extends AbstractNpcAI
 				}
 				return null;
 			}
-			if (getRandom(100) < 40)
+			if ((getRandom(100) < 40) && !npc.getKnownList().getKnownPlayersInRadius(200).isEmpty())
 			{
-				if (!npc.getKnownList().getKnownPlayersInRadius(200).isEmpty())
-				{
-					npc.doCast(LIGHTENING.getSkill());
-					return null;
-				}
+				npc.doCast(LIGHTENING.getSkill());
+				return null;
 			}
 			for (L2PcInstance plr : npc.getKnownList().getKnownPlayersInRadius(950))
 			{

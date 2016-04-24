@@ -89,8 +89,7 @@ final class Orfen extends AbstractNpcAI
 		_IsTeleported = false;
 		ZONE = GrandBossManager.getInstance().getZone(POS[0]);
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
-		final int status = GrandBossManager.getInstance().getBossStatus(ORFEN);
-		if (status == DEAD)
+		if (GrandBossManager.getInstance().getBossStatus(ORFEN) == DEAD)
 		{
 			// load the unlock date and time for Orfen from DB
 			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -309,13 +308,10 @@ final class Orfen extends AbstractNpcAI
 				npc.doCast(SkillData.getInstance().getSkill(4064, 1));
 			}
 		}
-		else if (npcId == RIBA_IREN)
+		else if ((npcId == RIBA_IREN) && !npc.isCastingNow() && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2.0)))
 		{
-			if (!npc.isCastingNow() && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2.0)))
-			{
-				npc.setTarget(attacker);
-				npc.doCast(SkillData.getInstance().getSkill(4516, 1));
-			}
+			npc.setTarget(attacker);
+			npc.doCast(SkillData.getInstance().getSkill(4516, 1));
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
@@ -328,8 +324,7 @@ final class Orfen extends AbstractNpcAI
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
 			// Calculate Min and Max respawn times randomly.
-			long respawnTime = Config.ORFEN_SPAWN_INTERVAL + getRandom(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM);
-			respawnTime *= 3600000;
+			final long respawnTime = (Config.ORFEN_SPAWN_INTERVAL + getRandom(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM)) * 3600000;
 			startQuestTimer("orfen_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
 			final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);

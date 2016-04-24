@@ -633,13 +633,10 @@ public final class Antharas extends AbstractNpcAI
 				attacker.teleToLocation(80464, 152294, -3534);
 			}
 			
-			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTH_ANTI_STRIDER.getSkillId()))
+			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTH_ANTI_STRIDER.getSkillId()) && npc.checkDoCastConditions(ANTH_ANTI_STRIDER.getSkill()))
 			{
-				if (npc.checkDoCastConditions(ANTH_ANTI_STRIDER.getSkill()))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(ANTH_ANTI_STRIDER.getSkill());
-				}
+				npc.setTarget(attacker);
+				npc.doCast(ANTH_ANTI_STRIDER.getSkill());
 			}
 			
 			if (skill == null)

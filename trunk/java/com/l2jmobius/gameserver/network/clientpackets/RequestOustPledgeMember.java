@@ -99,8 +99,7 @@ public final class RequestOustPledgeMember extends L2GameClientPacket
 		
 		if (member.isOnline())
 		{
-			final L2PcInstance player = member.getPlayerInstance();
-			player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
+			member.getPlayerInstance().sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
 		}
 	}
 	

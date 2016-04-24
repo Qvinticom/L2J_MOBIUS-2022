@@ -39,39 +39,41 @@ public class ChatPartyMatchRoom implements IChatHandler
 	@Override
 	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
 	{
-		if (activeChar.isInPartyMatchRoom())
+		if (!activeChar.isInPartyMatchRoom())
 		{
-			final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(activeChar);
-			if (_room != null)
+			return;
+		}
+		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(activeChar);
+		if (_room == null)
+		{
+			return;
+		}
+		if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
+		{
+			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
+			return;
+		}
+		
+		final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
+		for (L2PcInstance _member : _room.getPartyMembers())
+		{
+			if (Config.FACTION_SYSTEM_ENABLED)
 			{
-				if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
+				if (Config.FACTION_SPECIFIC_CHAT)
 				{
-					activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
-					return;
-				}
-				
-				final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-				for (L2PcInstance _member : _room.getPartyMembers())
-				{
-					if (Config.FACTION_SYSTEM_ENABLED)
-					{
-						if (Config.FACTION_SPECIFIC_CHAT)
-						{
-							if ((activeChar.isGood() && _member.isGood()) || (activeChar.isEvil() && _member.isEvil()))
-							{
-								_member.sendPacket(cs);
-							}
-						}
-						else
-						{
-							_member.sendPacket(cs);
-						}
-					}
-					else
+					if ((activeChar.isGood() && _member.isGood()) || (activeChar.isEvil() && _member.isEvil()))
 					{
 						_member.sendPacket(cs);
 					}
 				}
+				else
+				{
+					_member.sendPacket(cs);
+				}
+			}
+			else
+			{
+				_member.sendPacket(cs);
 			}
 		}
 	}

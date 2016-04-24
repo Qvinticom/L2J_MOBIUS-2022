@@ -124,8 +124,7 @@ public final class BeautyShopData implements IXmlReader
 											att = attrs.item(i);
 											set.set(att.getNodeName(), att.getNodeValue());
 										}
-										final BeautyItem face = new BeautyItem(set);
-										beautyData.addFace(face);
+										beautyData.addFace((new BeautyItem(set)));
 									}
 								}
 								
@@ -146,11 +145,7 @@ public final class BeautyShopData implements IXmlReader
 	
 	public BeautyData getBeautyData(Race race, Sex sex)
 	{
-		if (_beautyList.containsKey(race))
-		{
-			return _beautyList.get(race).get(sex);
-		}
-		return null;
+		return _beautyList.containsKey(race) ? _beautyList.get(race).get(sex) : null;
 	}
 	
 	public static BeautyShopData getInstance()

@@ -321,8 +321,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 					player.teleToLocation(player.getLocation(), true);
 					final CharInfo info1 = new CharInfo(player);
 					player.broadcastPacket(info1);
-					final UserInfo info2 = new UserInfo(player);
-					player.sendPacket(info2);
+					player.sendPacket(new UserInfo(player));
 				}
 				showEventControl(activeChar);
 			}
@@ -337,8 +336,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 						player.spawnMe(player.getX(), player.getY(), player.getZ());
 						final CharInfo info1 = new CharInfo(player);
 						player.broadcastPacket(info1);
-						final UserInfo info2 = new UserInfo(player);
-						player.sendPacket(info2);
+						player.sendPacket(new UserInfo(player));
 					}
 				}
 				showEventControl(activeChar);

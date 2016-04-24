@@ -21,7 +21,6 @@ import java.util.concurrent.Future;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.FishingMonstersData;
 import com.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.AbstractScript;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -157,8 +156,7 @@ public class L2Fishing implements Runnable
 				if (Rnd.get(100) <= fishingMonster.getProbability())
 				{
 					_fisher.sendPacket(SystemMessageId.YOU_VE_CAUGHT_GOLDEEN);
-					final L2Npc monster = AbstractScript.addSpawn(fishingMonster.getFishingMonsterId(), _fisher);
-					monster.setTarget(_fisher);
+					AbstractScript.addSpawn(fishingMonster.getFishingMonsterId(), _fisher).setTarget(_fisher);
 				}
 				else
 				{

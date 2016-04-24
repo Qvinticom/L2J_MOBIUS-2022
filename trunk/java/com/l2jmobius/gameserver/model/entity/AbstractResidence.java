@@ -50,8 +50,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	
 	protected void initResidentialSkills()
 	{
-		final List<L2SkillLearn> residentialSkills = SkillTreesData.getInstance().getAvailableResidentialSkills(getResidenceId());
-		for (L2SkillLearn s : residentialSkills)
+		for (L2SkillLearn s : SkillTreesData.getInstance().getAvailableResidentialSkills(getResidenceId()))
 		{
 			_residentialSkills.add(new SkillHolder(s.getSkillId(), s.getSkillLevel()));
 		}

@@ -68,13 +68,10 @@ final class BlackJudge extends AbstractNpcAI
 			{
 				if (player.getShilensBreathDebuffLevel() > 0)
 				{
-					final int cost = COSTS[level];
-					
-					if (player.getAdena() >= cost)
+					if (player.getAdena() >= COSTS[level])
 					{
-						takeItems(player, Inventory.ADENA_ID, cost);
+						takeItems(player, Inventory.ADENA_ID, COSTS[level]);
 						final int nextLv = player.getShilensBreathDebuffLevel() - 1;
-						
 						if (nextLv > 0)
 						{
 							final Skill skill = SkillData.getInstance().getSkill(CommonSkill.SHILENS_BREATH.getId(), nextLv);

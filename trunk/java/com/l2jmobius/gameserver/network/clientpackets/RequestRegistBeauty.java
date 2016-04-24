@@ -107,24 +107,18 @@ public class RequestRegistBeauty extends L2GameClientPacket
 			return;
 		}
 		
-		if (requiredAdena > 0)
+		if ((requiredAdena > 0) && !player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true))
 		{
-			if (!player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true))
-			{
-				player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));
-				player.sendPacket(new ExResponseBeautyList(player, ExResponseBeautyList.SHOW_FACESHAPE));
-				return;
-			}
+			player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));
+			player.sendPacket(new ExResponseBeautyList(player, ExResponseBeautyList.SHOW_FACESHAPE));
+			return;
 		}
 		
-		if (requiredBeautyShopTicket > 0)
+		if ((requiredBeautyShopTicket > 0) && !player.reduceBeautyTickets(getClass().getSimpleName(), requiredBeautyShopTicket, null, true))
 		{
-			if (!player.reduceBeautyTickets(getClass().getSimpleName(), requiredBeautyShopTicket, null, true))
-			{
-				player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));
-				player.sendPacket(new ExResponseBeautyList(player, ExResponseBeautyList.SHOW_FACESHAPE));
-				return;
-			}
+			player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));
+			player.sendPacket(new ExResponseBeautyList(player, ExResponseBeautyList.SHOW_FACESHAPE));
+			return;
 		}
 		
 		if (_hairId > 0)

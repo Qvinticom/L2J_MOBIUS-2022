@@ -73,8 +73,7 @@ public final class YeSagiraTeleporter extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerCreate(OnPlayerCreate event)
 	{
-		final L2PcInstance player = event.getActiveChar();
-		player.getVariables().set(MOVIE_VAR, true);
+		event.getActiveChar().getVariables().set(MOVIE_VAR, true);
 	}
 	
 	public static void main(String[] args)

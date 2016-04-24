@@ -64,12 +64,7 @@ public class RequestSaveKeyMapping extends L2GameClientPacket
 			final int cmdSize = readD();
 			for (int j = 0; j < cmdSize; j++)
 			{
-				final int cmd = readD();
-				final int key = readD();
-				final int tgKey1 = readD();
-				final int tgKey2 = readD();
-				final int show = readD();
-				UIData.addKey(_keyMap, i, new ActionKey(i, cmd, key, tgKey1, tgKey2, show));
+				UIData.addKey(_keyMap, i, new ActionKey(i, readD(), readD(), readD(), readD(), readD()));
 			}
 		}
 		readD();

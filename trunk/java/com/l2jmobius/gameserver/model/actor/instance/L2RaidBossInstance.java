@@ -127,12 +127,9 @@ public class L2RaidBossInstance extends L2MonsterInstance
 		final int spawnY = spawn.getY();
 		final int spawnZ = spawn.getZ();
 		
-		if (!isInCombat() && !isMovementDisabled())
+		if (!isInCombat() && !isMovementDisabled() && !isInsideRadius(spawnX, spawnY, spawnZ, Math.max(Config.MAX_DRIFT_RANGE, 200), true, false))
 		{
-			if (!isInsideRadius(spawnX, spawnY, spawnZ, Math.max(Config.MAX_DRIFT_RANGE, 200), true, false))
-			{
-				teleToLocation(spawnX, spawnY, spawnZ, false);
-			}
+			teleToLocation(spawnX, spawnY, spawnZ, false);
 		}
 	}
 	

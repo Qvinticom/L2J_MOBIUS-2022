@@ -79,18 +79,15 @@ public class Duel
 	public Duel(L2PcInstance playerA, L2PcInstance playerB, boolean partyDuel, int duelId)
 	{
 		_duelId = duelId;
+		_leaderA = playerA;
+		_leaderB = playerB;
 		if (partyDuel)
 		{
-			_leaderA = playerA;
-			_leaderB = playerB;
 			_teamA = new ArrayList<>(playerA.getParty().getMembers());
 			_teamB = new ArrayList<>(playerB.getParty().getMembers());
 		}
 		else
 		{
-			_leaderA = playerA;
-			_leaderB = playerB;
-			
 			_teamA = new ArrayList<>();
 			_teamB = new ArrayList<>();
 			
@@ -675,11 +672,7 @@ public class Duel
 		// got a duel surrender request?
 		if (_surrenderRequest != 0)
 		{
-			if (_surrenderRequest == 1)
-			{
-				return DuelResult.TEAM_1_SURRENDER;
-			}
-			return DuelResult.TEAM_2_SURRENDER;
+			return _surrenderRequest == 1 ? DuelResult.TEAM_1_SURRENDER : DuelResult.TEAM_2_SURRENDER;
 		}
 		// duel timed out
 		else if (getRemainingTime() <= 0)
@@ -795,8 +788,7 @@ public class Duel
 			}
 			if (teamdefeated)
 			{
-				final List<L2PcInstance> winners = (isInTeamA ? _teamB : _teamA);
-				for (L2PcInstance temp : winners)
+				for (L2PcInstance temp : isInTeamA ? _teamB : _teamA)
 				{
 					temp.setDuelState(DuelState.WINNER);
 				}

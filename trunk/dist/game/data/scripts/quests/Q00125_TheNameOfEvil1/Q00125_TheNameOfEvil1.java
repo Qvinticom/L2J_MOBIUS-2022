@@ -255,27 +255,16 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		final int npcId = npc.getId();
 		if (ORNITHOMIMUS.containsKey(npcId))
 		{
-			if (getQuestItemsCount(player, ORNITHOMIMUS_CLAW) < 2)
+			if ((getQuestItemsCount(player, ORNITHOMIMUS_CLAW) < 2) && (getRandom(1000) < (ORNITHOMIMUS.get(npcId) * Config.RATE_QUEST_DROP)))
 			{
-				final float chance = ORNITHOMIMUS.get(npcId) * Config.RATE_QUEST_DROP;
-				if (getRandom(1000) < chance)
-				{
-					giveItems(player, ORNITHOMIMUS_CLAW, 1);
-					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				giveItems(player, ORNITHOMIMUS_CLAW, 1);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
-		else if (DEINONYCHUS.containsKey(npcId))
+		else if (DEINONYCHUS.containsKey(npcId) && (getQuestItemsCount(player, DEINONYCHUS_BONE) < 2) && (getRandom(1000) < (DEINONYCHUS.get(npcId) * Config.RATE_QUEST_DROP)))
 		{
-			if (getQuestItemsCount(player, DEINONYCHUS_BONE) < 2)
-			{
-				final float chance = DEINONYCHUS.get(npcId) * Config.RATE_QUEST_DROP;
-				if (getRandom(1000) < chance)
-				{
-					giveItems(player, DEINONYCHUS_BONE, 1);
-					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
-			}
+			giveItems(player, DEINONYCHUS_BONE, 1);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		
 		if ((getQuestItemsCount(player, ORNITHOMIMUS_CLAW) == 2) && (getQuestItemsCount(player, DEINONYCHUS_BONE) == 2))

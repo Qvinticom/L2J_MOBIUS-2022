@@ -306,13 +306,7 @@ public class DebugHandler implements ITelnetHandler
 	
 	private long[] findDeadlockedThreads(ThreadMXBean mbean)
 	{
-		// JDK 1.5 only supports the findMonitorDeadlockedThreads()
-		// method, so you need to comment out the following three lines
-		if (mbean.isSynchronizerUsageSupported())
-		{
-			return mbean.findDeadlockedThreads();
-		}
-		return mbean.findMonitorDeadlockedThreads();
+		return mbean.isSynchronizerUsageSupported() ? mbean.findDeadlockedThreads() : mbean.findMonitorDeadlockedThreads();
 	}
 	
 	private Thread findMatchingThread(ThreadInfo inf)
@@ -354,12 +348,9 @@ public class DebugHandler implements ITelnetHandler
 			{
 				continue;
 			}
-			if (obj instanceof L2Character)
+			if ((obj instanceof L2Character) && ((L2Character) obj).hasAI())
 			{
-				if (((L2Character) obj).hasAI())
-				{
-					AICount++;
-				}
+				AICount++;
 			}
 			if (obj instanceof L2ItemInstance)
 			{

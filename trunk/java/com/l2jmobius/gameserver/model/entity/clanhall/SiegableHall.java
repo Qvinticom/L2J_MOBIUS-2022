@@ -211,12 +211,7 @@ public final class SiegableHall extends ClanHall
 	
 	public final boolean isRegistered(L2Clan clan)
 	{
-		if (getSiege() == null)
-		{
-			return false;
-		}
-		
-		return getSiege().checkIsAttacker(clan);
+		return (getSiege() != null) && getSiege().checkIsAttacker(clan);
 	}
 	
 	public SiegeStatus getSiegeStatus()

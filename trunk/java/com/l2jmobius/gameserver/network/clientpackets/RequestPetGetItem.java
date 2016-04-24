@@ -48,8 +48,7 @@ public final class RequestPetGetItem extends L2GameClientPacket
 			return;
 		}
 		
-		final int castleId = MercTicketManager.getInstance().getTicketCastleId(item.getId());
-		if (castleId > 0)
+		if (MercTicketManager.getInstance().getTicketCastleId(item.getId()) > 0)
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;

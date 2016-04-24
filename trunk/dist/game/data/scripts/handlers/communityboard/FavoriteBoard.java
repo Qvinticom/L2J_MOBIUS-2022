@@ -69,17 +69,14 @@ public class FavoriteBoard implements IParseBoardHandler
 				{
 					while (rs.next())
 					{
-						String link = list.replaceAll("%fav_bypass%", String.valueOf(rs.getString("favBypass")));
-						link = link.replaceAll("%fav_title%", rs.getString("favTitle"));
+						String link = list.replaceAll("%fav_bypass%", String.valueOf(rs.getString("favBypass"))).replaceAll("%fav_title%", rs.getString("favTitle"));
 						final SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 						link = link.replaceAll("%fav_add_date%", date.format(rs.getTimestamp("favAddDate")));
 						link = link.replaceAll("%fav_id%", String.valueOf(rs.getInt("favId")));
 						sb.append(link);
 					}
 				}
-				String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/favorite.html");
-				html = html.replaceAll("%fav_list%", sb.toString());
-				CommunityBoardHandler.separateAndSend(html, activeChar);
+				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/favorite.html").replaceAll("%fav_list%", sb.toString()), activeChar);
 			}
 			catch (Exception e)
 			{

@@ -52,8 +52,7 @@ public class FactionManager
 		{
 			while (rs.next())
 			{
-				final int id = rs.getInt(1);
-				_playerFactions.put(id, rs.getInt(2));
+				_playerFactions.put(rs.getInt(1), rs.getInt(2));
 			}
 		}
 		catch (SQLException e)
@@ -101,15 +100,7 @@ public class FactionManager
 	public final boolean isSameFaction(L2PcInstance player1, L2PcInstance player2)
 	{
 		// TODO: Maybe add support for multiple factions?
-		// if (getFactionByCharId(player1.getId()) == getFactionByCharId(player2.getId()))
-		// {
-		// return true;
-		// }
-		if ((player1.isGood() && player2.isGood()) || (player1.isEvil() && player2.isEvil()))
-		{
-			return true;
-		}
-		return false;
+		return (player1.isGood() && player2.isGood()) || (player1.isEvil() && player2.isEvil());
 	}
 	
 	public static FactionManager getInstance()

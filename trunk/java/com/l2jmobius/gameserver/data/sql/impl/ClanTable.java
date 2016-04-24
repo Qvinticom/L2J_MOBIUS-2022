@@ -256,14 +256,7 @@ public class ClanTable
 		}
 		
 		final L2ClanMember leaderMember = clan.getLeader();
-		if (leaderMember == null)
-		{
-			clan.getWarehouse().destroyAllItems("ClanRemove", null, null);
-		}
-		else
-		{
-			clan.getWarehouse().destroyAllItems("ClanRemove", clan.getLeader().getPlayerInstance(), null);
-		}
+		clan.getWarehouse().destroyAllItems("ClanRemove", leaderMember == null ? null : clan.getLeader().getPlayerInstance(), null);
 		
 		for (L2ClanMember member : clan.getMembers())
 		{
@@ -324,13 +317,9 @@ public class ClanTable
 			if (fortId != 0)
 			{
 				final Fort fort = FortManager.getInstance().getFortById(fortId);
-				if (fort != null)
+				if ((fort != null) && (clan == fort.getOwnerClan()))
 				{
-					final L2Clan owner = fort.getOwnerClan();
-					if (clan == owner)
-					{
-						fort.removeOwner(true);
-					}
+					fort.removeOwner(true);
 				}
 			}
 			
@@ -507,16 +496,13 @@ public class ClanTable
 		for (L2Clan clan : _clans.values())
 		{
 			final int allyId = clan.getAllyId();
-			if ((allyId != 0) && (clan.getId() != allyId))
+			if ((allyId != 0) && (clan.getId() != allyId) && !_clans.containsKey(allyId))
 			{
-				if (!_clans.containsKey(allyId))
-				{
-					clan.setAllyId(0);
-					clan.setAllyName(null);
-					clan.changeAllyCrest(0, true);
-					clan.updateClanInDB();
-					_log.info(getClass().getSimpleName() + ": Removed alliance from clan: " + clan);
-				}
+				clan.setAllyId(0);
+				clan.setAllyName(null);
+				clan.changeAllyCrest(0, true);
+				clan.updateClanInDB();
+				_log.info(getClass().getSimpleName() + ": Removed alliance from clan: " + clan);
 			}
 		}
 	}

@@ -165,14 +165,7 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 					}
 					case State.STARTED:
 					{
-						if (qs.getCond() > 1)
-						{
-							htmltext = "32498-08.htm";
-						}
-						else
-						{
-							htmltext = "32498-06.htm";
-						}
+						htmltext = qs.getCond() > 1 ? "32498-08.htm" : "32498-06.htm";
 						break;
 					}
 					case State.COMPLETED:
@@ -190,14 +183,7 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 			}
 			case SUPPORTER:
 			{
-				if (qs.getCond() > 2)
-				{
-					htmltext = "32501-04.htm";
-				}
-				else
-				{
-					htmltext = "32501-01.htm";
-				}
+				htmltext = qs.getCond() > 2 ? "32501-04.htm" : "32501-01.htm";
 				break;
 			}
 			case ADVENTURER1:

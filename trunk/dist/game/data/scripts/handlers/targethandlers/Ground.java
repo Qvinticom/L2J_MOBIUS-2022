@@ -63,12 +63,9 @@ public class Ground implements ITargetTypeHandler
 			}
 		}
 		
-		if (targetList.isEmpty())
+		if (targetList.isEmpty() && skill.hasEffectType(L2EffectType.SUMMON_NPC))
 		{
-			if (skill.hasEffectType(L2EffectType.SUMMON_NPC))
-			{
-				targetList.add(activeChar);
-			}
+			targetList.add(activeChar);
 		}
 		return targetList.isEmpty() ? EMPTY_TARGET_LIST : targetList.toArray(new L2Character[targetList.size()]);
 	}

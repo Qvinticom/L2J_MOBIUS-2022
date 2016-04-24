@@ -120,12 +120,9 @@ public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 				{
 					htmltext = "30484-01.htm";
 				}
-				else if (qs.isStarted())
+				else if (qs.isStarted() && qs.isCond(1))
 				{
-					if (qs.isCond(1))
-					{
-						htmltext = "30484-06.htm";
-					}
+					htmltext = "30484-06.htm";
 				}
 				if (qs.isCond(2))
 				{

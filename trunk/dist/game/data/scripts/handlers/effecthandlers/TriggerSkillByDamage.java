@@ -90,18 +90,15 @@ public final class TriggerSkillByDamage extends AbstractEffect
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		final L2Object[] targets = targetHandler.getTargetList(triggerSkill, event.getTarget(), false, event.getAttacker());
-		for (L2Object triggerTarget : targets)
+		for (L2Object triggerTarget : targetHandler.getTargetList(triggerSkill, event.getTarget(), false, event.getAttacker()))
 		{
 			if ((triggerTarget == null) || !triggerTarget.isCharacter())
 			{
 				continue;
 			}
-			
-			final L2Character targetChar = (L2Character) triggerTarget;
-			if (!targetChar.isInvul())
+			if (!((L2Character) triggerTarget).isInvul())
 			{
-				event.getTarget().makeTriggerCast(triggerSkill, targetChar);
+				event.getTarget().makeTriggerCast(triggerSkill, ((L2Character) triggerTarget));
 			}
 		}
 	}

@@ -40,12 +40,7 @@ public final class RequestRecipeBookDestroy extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy"))
+		if ((activeChar == null) || !getClient().getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy"))
 		{
 			return;
 		}

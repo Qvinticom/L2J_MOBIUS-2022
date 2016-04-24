@@ -161,11 +161,7 @@ public class EnchantSkillGroupsData implements IXmlReader
 	{
 		// there is enchantment for this skill and we have the required level of it
 		final L2EnchantSkillLearn esl = getSkillEnchantmentBySkillId(skill.getId());
-		if ((esl != null) && (skill.getLevel() >= esl.getBaseLevel()))
-		{
-			return esl;
-		}
-		return null;
+		return (esl != null) && (skill.getLevel() >= esl.getBaseLevel()) ? esl : null;
 	}
 	
 	/**

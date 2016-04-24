@@ -26,5 +26,4 @@ public class ErrorFilter implements Filter
 	{
 		return record.getThrown() != null;
 	}
-	
 }

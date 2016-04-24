@@ -115,14 +115,7 @@ public class Q10389_TheVoiceOfAuthority extends Quest
 			}
 			case State.CREATED:
 			{
-				if (player.getLevel() >= 97)
-				{
-					htmltext = "start.htm";
-				}
-				else
-				{
-					htmltext = "no_level.html";
-				}
+				htmltext = player.getLevel() >= 97 ? "start.htm" : "no_level.html";
 				break;
 			}
 			case State.STARTED:

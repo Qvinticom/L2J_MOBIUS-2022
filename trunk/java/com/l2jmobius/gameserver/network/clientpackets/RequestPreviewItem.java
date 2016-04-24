@@ -202,15 +202,9 @@ public final class RequestPreviewItem extends L2GameClientPacket
 					}
 				}
 			}
-			else if (template instanceof L2Armor)
+			else if ((template instanceof L2Armor) && (activeChar.getRace().ordinal() == 5) && ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC)))
 			{
-				if (activeChar.getRace().ordinal() == 5)
-				{
-					if ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC))
-					{
-						continue;
-					}
-				}
+				continue;
 			}
 			
 			if (itemList.containsKey(slot))

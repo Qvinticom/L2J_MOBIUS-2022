@@ -43,13 +43,9 @@ public class Aura implements ITargetTypeHandler
 			if (obj.isDoor() || obj.isAttackable() || obj.isPlayable())
 			{
 				// Stealth door targeting.
-				if (obj.isDoor())
+				if (obj.isDoor() && !((L2DoorInstance) obj).getTemplate().isStealth())
 				{
-					final L2DoorInstance door = (L2DoorInstance) obj;
-					if (!door.getTemplate().isStealth())
-					{
-						continue;
-					}
+					continue;
 				}
 				
 				if (!Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))

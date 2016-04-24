@@ -102,12 +102,7 @@ public final class PhysicalAttack extends AbstractEffect
 		final boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 		// Physical damage critical rate is only affected by STR.
-		boolean crit = false;
-		if (skill.getBaseCritRate() > 0)
-		{
-			crit = Formulas.calcCrit(activeChar, target, skill);
-		}
-		
+		final boolean crit = (skill.getBaseCritRate() > 0) && Formulas.calcCrit(activeChar, target, skill);
 		damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, ss);
 		
 		if (crit)
@@ -120,8 +115,7 @@ public final class PhysicalAttack extends AbstractEffect
 			StringTokenizer st = new StringTokenizer(_type1, ",");
 			while (st.hasMoreTokens())
 			{
-				final String item = st.nextToken().trim();
-				if (activeChar.getActiveWeaponItem().getItemType() == WeaponType.valueOf(item))
+				if (activeChar.getActiveWeaponItem().getItemType() == WeaponType.valueOf(st.nextToken().trim()))
 				{
 					damage *= _valueReduce;
 					break;
@@ -130,8 +124,7 @@ public final class PhysicalAttack extends AbstractEffect
 			st = new StringTokenizer(_type2, ",");
 			while (st.hasMoreTokens())
 			{
-				final String item = st.nextToken().trim();
-				if (activeChar.getActiveWeaponItem().getItemType() == WeaponType.valueOf(item))
+				if (activeChar.getActiveWeaponItem().getItemType() == WeaponType.valueOf(st.nextToken().trim()))
 				{
 					damage *= _valueIncrease;
 					break;

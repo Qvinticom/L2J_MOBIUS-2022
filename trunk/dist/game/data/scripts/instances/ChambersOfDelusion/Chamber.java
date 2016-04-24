@@ -108,12 +108,9 @@ abstract class Chamber extends AbstractInstance
 					for (int objId : inst.getPlayers())
 					{
 						final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
-						if ((pl != null) && pl.isOnline())
+						if ((pl != null) && pl.isOnline() && ((partyInside == null) || !pl.isInParty() || (partyInside != pl.getParty())))
 						{
-							if ((partyInside == null) || !pl.isInParty() || (partyInside != pl.getParty()))
-							{
-								exitInstance(pl);
-							}
+							exitInstance(pl);
 						}
 					}
 				}
@@ -241,17 +238,12 @@ abstract class Chamber extends AbstractInstance
 				return false;
 			}
 			
-			if (isBigChamber())
+			if (isBigChamber() && (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID)))
 			{
-				final long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
-				
-				if (System.currentTimeMillis() < reentertime)
-				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
-					sm.addPcName(partyMember);
-					party.broadcastPacket(sm);
-					return false;
-				}
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
+				sm.addPcName(partyMember);
+				party.broadcastPacket(sm);
+				return false;
 			}
 		}
 		
@@ -411,8 +403,7 @@ abstract class Chamber extends AbstractInstance
 		}
 		else
 		{
-			final CDWorld currentWorld = (CDWorld) world;
-			teleportPlayer(player, ROOM_ENTER_POINTS[currentWorld.currentRoom], world.getInstanceId());
+			teleportPlayer(player, ROOM_ENTER_POINTS[((CDWorld) world).currentRoom], world.getInstanceId());
 		}
 	}
 	
@@ -432,10 +423,7 @@ abstract class Chamber extends AbstractInstance
 			{
 				try
 				{
-					final int x = Integer.parseInt(coords[0]);
-					final int y = Integer.parseInt(coords[1]);
-					final int z = Integer.parseInt(coords[2]);
-					ret.setLocation(new Location(x, y, z));
+					ret.setLocation(new Location(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2])));
 				}
 				catch (Exception e)
 				{
@@ -511,12 +499,9 @@ abstract class Chamber extends AbstractInstance
 					inst.setEmptyDestroyTime(0);
 				}
 			}
-			else if (event.equals("look_party"))
+			else if (event.equals("look_party") && (player.getParty() != null) && (player.getParty() == world.getPartyInside()))
 			{
-				if ((player.getParty() != null) && (player.getParty() == world.getPartyInside()))
-				{
-					teleportPlayer(player, ROOM_ENTER_POINTS[world.currentRoom], world.getInstanceId(), false);
-				}
+				teleportPlayer(player, ROOM_ENTER_POINTS[world.currentRoom], world.getInstanceId(), false);
 			}
 		}
 		return htmltext;
@@ -622,19 +607,14 @@ abstract class Chamber extends AbstractInstance
 	{
 		final int npcId = npc.getId();
 		QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			qs = newQuestState(player);
 		}
 		
-		if (npcId == ENTRANCE_GATEKEEPER)
+		if ((npcId == ENTRANCE_GATEKEEPER) && checkConditions(player))
 		{
-			if (checkConditions(player))
-			{
-				final L2Party party = player.getParty();
-				enterInstance(player, new CDWorld(party), INSTANCE_TEMPLATE, INSTANCEID);
-			}
+			enterInstance(player, new CDWorld(player.getParty()), INSTANCE_TEMPLATE, INSTANCEID);
 		}
 		return "";
 	}

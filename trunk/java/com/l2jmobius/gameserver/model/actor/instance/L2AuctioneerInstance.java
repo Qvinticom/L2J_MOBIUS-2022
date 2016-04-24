@@ -76,12 +76,7 @@ public final class L2AuctioneerInstance extends L2Npc
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			final String actualCommand = st.nextToken(); // Get actual command
 			
-			String val = "";
-			if (st.countTokens() >= 1)
-			{
-				val = st.nextToken();
-			}
-			
+			final String val = st.countTokens() >= 1 ? st.nextToken() : "";
 			if (actualCommand.equalsIgnoreCase("auction"))
 			{
 				if (val.isEmpty())
@@ -95,12 +90,7 @@ public final class L2AuctioneerInstance extends L2Npc
 					try
 					{
 						final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-						long bid = 0;
-						if (st.countTokens() >= 1)
-						{
-							bid = Math.min(Long.parseLong(st.nextToken()), MAX_ADENA);
-						}
-						
+						final long bid = st.countTokens() >= 1 ? Math.min(Long.parseLong(st.nextToken()), MAX_ADENA) : 0;
 						final Auction a = new Auction(player.getClan().getHideoutId(), player.getClan(), days * 86400000L, bid, ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getName());
 						if (_pendingAuctions.get(a.getId()) != null)
 						{
@@ -215,13 +205,7 @@ public final class L2AuctioneerInstance extends L2Npc
 					final int auctionId = Integer.parseInt(val);
 					try
 					{
-						long bid = 0;
-						if (st.countTokens() >= 1)
-						{
-							bid = Math.min(Long.parseLong(st.nextToken()), MAX_ADENA);
-						}
-						
-						ClanHallAuctionManager.getInstance().getAuction(auctionId).setBid(player, bid);
+						ClanHallAuctionManager.getInstance().getAuction(auctionId).setBid(player, (st.countTokens() >= 1 ? Math.min(Long.parseLong(st.nextToken()), MAX_ADENA) : 0));
 					}
 					catch (Exception e)
 					{
@@ -325,21 +309,15 @@ public final class L2AuctioneerInstance extends L2Npc
 					{
 						continue;
 					}
-					
 					if (i > limit)
 					{
 						break;
 					}
-					else if (i < start)
+					i++;
+					if (i < start)
 					{
-						i++;
 						continue;
 					}
-					else
-					{
-						i++;
-					}
-					
 					items.append("<tr>");
 					items.append("<td>");
 					items.append(ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getLocation());

@@ -72,14 +72,10 @@ public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 		{
 			case "35627-06.html":
 			{
-				if (qs.isCreated())
+				if (qs.isCreated() && (clan != null) && (clan.getLevel() >= REQUIRED_CLAN_LEVEL) && (clan.getFortId() == 0) && player.isClanLeader() && (minutesToSiege > 0) && (minutesToSiege < MINUTES_TO_SIEGE))
 				{
-					if ((clan != null) && (clan.getLevel() >= REQUIRED_CLAN_LEVEL) && (clan.getFortId() == 0) //
-						&& player.isClanLeader() && (minutesToSiege > 0) && (minutesToSiege < MINUTES_TO_SIEGE))
-					{
-						qs.startQuest();
-						htmltext = event;
-					}
+					qs.startQuest();
+					htmltext = event;
 				}
 				break;
 			}
@@ -198,12 +194,7 @@ public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 	private static String getSiegeDate()
 	{
 		final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(ClanHallSiegeEngine.BEAST_FARM);
-		if (hall != null)
-		{
-			final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			return sdf.format(hall.getSiegeDate());
-		}
-		return "Error in date.";
+		return hall != null ? new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(hall.getSiegeDate()) : "Error in date.";
 	}
 	
 	/**
@@ -213,11 +204,7 @@ public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 	private static long getMinutesToSiege()
 	{
 		final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(ClanHallSiegeEngine.BEAST_FARM);
-		if (hall != null)
-		{
-			return (hall.getNextSiegeTime() - Calendar.getInstance().getTimeInMillis()) / 3600;
-		}
-		return -1;
+		return hall != null ? (hall.getNextSiegeTime() - Calendar.getInstance().getTimeInMillis()) / 3600 : -1;
 	}
 	
 	/**
@@ -232,23 +219,19 @@ public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 		if (clanLeader != null)
 		{
 			final QuestState qs655 = clanLeader.getQuestState(Q00655_AGrandPlanForTamingWildBeasts.class.getSimpleName());
-			if (qs655 != null)
+			if ((qs655 != null) && (getQuestItemsCount(clanLeader, CRYSTAL_OF_PURITY) < REQUIRED_CRYSTAL_COUNT) && Util.checkIfInRange(2000, clanLeader, npc, true))
 			{
-				if ((getQuestItemsCount(clanLeader, CRYSTAL_OF_PURITY) < REQUIRED_CRYSTAL_COUNT) && Util.checkIfInRange(2000, clanLeader, npc, true))
+				if (clanLeader.getLevel() >= REQUIRED_CLAN_LEVEL)
 				{
-					if (clanLeader.getLevel() >= REQUIRED_CLAN_LEVEL)
-					{
-						giveItems(clanLeader, CRYSTAL_OF_PURITY, 1);
-					}
-					
-					if (getQuestItemsCount(clanLeader, CRYSTAL_OF_PURITY) >= 9)
-					{
-						qs655.setCond(2, true);
-					}
-					else
-					{
-						playSound(clanLeader, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
+					giveItems(clanLeader, CRYSTAL_OF_PURITY, 1);
+				}
+				if (getQuestItemsCount(clanLeader, CRYSTAL_OF_PURITY) >= 9)
+				{
+					qs655.setCond(2, true);
+				}
+				else
+				{
+					playSound(clanLeader, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}

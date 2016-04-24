@@ -56,17 +56,7 @@ public final class AbsorberInfo implements IUniqueId
 	@Override
 	public final boolean equals(Object obj)
 	{
-		if (this == obj)
-		{
-			return true;
-		}
-		
-		if (obj instanceof AbsorberInfo)
-		{
-			return (((AbsorberInfo) obj).getObjectId() == _objectId);
-		}
-		
-		return false;
+		return (this == obj) || ((obj instanceof AbsorberInfo) && (((AbsorberInfo) obj).getObjectId() == _objectId));
 	}
 	
 	@Override

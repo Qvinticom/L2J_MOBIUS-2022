@@ -34,25 +34,25 @@ public class Summon implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		if (activeChar.hasSummon())
+		if (!activeChar.hasSummon())
 		{
-			if (!activeChar.hasPet() && activeChar.hasServitors())
-			{
-				return activeChar.getServitors().values().toArray(new L2Character[0]);
-			}
-			else if (activeChar.hasPet() && !activeChar.hasServitors())
-			{
-				return new L2Character[]
-				{
-					activeChar.getPet()
-				};
-			}
-			final List<L2Character> targets = new ArrayList<>(1 + activeChar.getServitors().size());
-			targets.add(activeChar.getPet());
-			targets.addAll(activeChar.getServitors().values());
-			return targets.toArray(new L2Character[0]);
+			return EMPTY_TARGET_LIST;
 		}
-		return EMPTY_TARGET_LIST;
+		if (!activeChar.hasPet() && activeChar.hasServitors())
+		{
+			return activeChar.getServitors().values().toArray(new L2Character[0]);
+		}
+		if (activeChar.hasPet() && !activeChar.hasServitors())
+		{
+			return new L2Character[]
+			{
+				activeChar.getPet()
+			};
+		}
+		final List<L2Character> targets = new ArrayList<>(1 + activeChar.getServitors().size());
+		targets.add(activeChar.getPet());
+		targets.addAll(activeChar.getServitors().values());
+		return targets.toArray(new L2Character[0]);
 	}
 	
 	@Override

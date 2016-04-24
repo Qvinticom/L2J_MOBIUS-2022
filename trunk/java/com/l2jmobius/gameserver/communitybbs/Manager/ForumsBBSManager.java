@@ -45,9 +45,7 @@ public class ForumsBBSManager extends BaseBBSManager
 		{
 			while (rs.next())
 			{
-				final int forumId = rs.getInt("forum_id");
-				final Forum f = new Forum(forumId, null);
-				addForum(f);
+				addForum((new Forum(rs.getInt("forum_id"), null)));
 			}
 		}
 		catch (Exception e)

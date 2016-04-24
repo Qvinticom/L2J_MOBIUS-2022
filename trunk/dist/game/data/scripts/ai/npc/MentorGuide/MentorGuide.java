@@ -124,9 +124,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 				{
 					if ("mentee".equalsIgnoreCase(d.getNodeName()))
 					{
-						final int level = parseInteger(d.getAttributes(), "level");
-						final int coins = parseInteger(d.getAttributes(), "coins");
-						MENTEE_COINS.put(level, coins);
+						MENTEE_COINS.put(parseInteger(d.getAttributes(), "level"), parseInteger(d.getAttributes(), "coins"));
 					}
 				}
 			}
@@ -164,8 +162,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 			final String[] params = event.split(" ");
 			if (Util.isDigit(params[1]))
 			{
-				final int objectId = Integer.valueOf(params[1]);
-				MentorManager.getInstance().getMentees(objectId).stream().filter(Objects::nonNull).filter(L2Mentee::isOnline).forEach(mentee ->
+				MentorManager.getInstance().getMentees(Integer.valueOf(params[1])).stream().filter(Objects::nonNull).filter(L2Mentee::isOnline).forEach(mentee ->
 				{
 					MentorManager.getInstance().cancelMentoringBuffs(mentee.getPlayerInstance());
 					mentee.sendPacket(new ExMentorList(mentee.getPlayerInstance()));
@@ -216,9 +213,9 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 	{
 		final L2PcInstance player = event.getMentee();
 		
+		final L2Mentee mentor = MentorManager.getInstance().getMentor(player.getObjectId());
 		if (event.isMenteeOnline())
 		{
-			final L2Mentee mentor = MentorManager.getInstance().getMentor(player.getObjectId());
 			if ((mentor != null) && mentor.isOnline())
 			{
 				//@formatter:off
@@ -246,25 +243,19 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 				
 				// Add the mentee skill
 				handleMenteeSkills(player);
-				
 				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_CONNECTED).addCharName(player));
 				mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
 			}
 			player.sendPacket(new ExMentorList(player));
 		}
-		else
+		else if ((mentor != null) && mentor.isOnline())
 		{
-			final L2Mentee mentor = MentorManager.getInstance().getMentor(player.getObjectId());
-			if ((mentor != null) && mentor.isOnline())
+			if (MentorManager.getInstance().isAllMenteesOffline(mentor.getObjectId(), player.getObjectId()))
 			{
-				if (MentorManager.getInstance().isAllMenteesOffline(mentor.getObjectId(), player.getObjectId()))
-				{
-					MentorManager.getInstance().cancelMentoringBuffs(mentor.getPlayerInstance());
-				}
-				
-				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_DISCONNECTED).addCharName(player));
-				mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
+				MentorManager.getInstance().cancelMentoringBuffs(mentor.getPlayerInstance());
 			}
+			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_DISCONNECTED).addCharName(player));
+			mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
 		}
 	}
 	
@@ -461,32 +452,29 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 	{
 		MentorManager.getInstance().cancelMentoringBuffs(player);
 		final L2Mentee mentor = MentorManager.getInstance().getMentor(player.getObjectId());
-		if (mentor != null)
+		if (mentor == null)
 		{
-			MentorManager.getInstance().setPenalty(mentor.getObjectId(), Config.MENTOR_PENALTY_FOR_MENTEE_COMPLETE);
-			MentorManager.getInstance().deleteMentor(mentor.getObjectId(), player.getObjectId());
-			
-			if (mentor.isOnline())
-			{
-				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_AWAKENED_AND_THE_MENTOR_MENTEE_RELATIONSHIP_HAS_ENDED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_ONE_DAY_AFTER_THE_MENTEE_S_GRADUATION).addPcName(player));
-				
-				if (MentorManager.getInstance().isAllMenteesOffline(mentor.getObjectId(), player.getObjectId()))
-				{
-					MentorManager.getInstance().cancelMentoringBuffs(mentor.getPlayerInstance());
-				}
-				mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
-			}
-			
-			// Remove the mentee skills
-			player.removeSkill(MENTEE_MENTOR_SUMMON.getSkill(), true);
-			
-			// Clear mentee status
-			player.sendPacket(new ExMentorList(player));
-			
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addPcName(player));
-			
-			sendMail(player, MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, MENTEE_CERT, 1);
+			return;
 		}
+		MentorManager.getInstance().setPenalty(mentor.getObjectId(), Config.MENTOR_PENALTY_FOR_MENTEE_COMPLETE);
+		MentorManager.getInstance().deleteMentor(mentor.getObjectId(), player.getObjectId());
+		if (mentor.isOnline())
+		{
+			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_AWAKENED_AND_THE_MENTOR_MENTEE_RELATIONSHIP_HAS_ENDED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_ONE_DAY_AFTER_THE_MENTEE_S_GRADUATION).addPcName(player));
+			if (MentorManager.getInstance().isAllMenteesOffline(mentor.getObjectId(), player.getObjectId()))
+			{
+				MentorManager.getInstance().cancelMentoringBuffs(mentor.getPlayerInstance());
+			}
+			mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
+		}
+		
+		// Remove the mentee skills
+		player.removeSkill(MENTEE_MENTOR_SUMMON.getSkill(), true);
+		
+		// Clear mentee status
+		player.sendPacket(new ExMentorList(player));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addPcName(player));
+		sendMail(player, MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, MENTEE_CERT, 1);
 	}
 	
 	/**

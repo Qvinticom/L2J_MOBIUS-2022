@@ -41,12 +41,7 @@ public final class RequestShortCutDel extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if ((_page > 10) || (_page < 0))
+		if ((activeChar == null) || (_page > 10) || (_page < 0))
 		{
 			return;
 		}

@@ -423,9 +423,7 @@ public final class Raina extends AbstractNpcAI
 	{
 		final L2PcInstance player = event.getTalker();
 		final L2Npc npc = event.getNpc();
-		final int ask = event.getAsk();
-		
-		switch (ask)
+		switch (event.getAsk())
 		{
 			case 0: // Add subclass confirm menu
 			{
@@ -658,9 +656,7 @@ public final class Raina extends AbstractNpcAI
 				
 				for (SubClass subList : player.getSubClasses().values())
 				{
-					final ClassId subId = ClassId.getClassId(subList.getClassId());
-					
-					if (subId.equalsOrChildOf(cid))
+					if (ClassId.getClassId(subList.getClassId()).equalsOrChildOf(cid))
 					{
 						availSubs.remove(cid);
 						break;
@@ -674,7 +670,7 @@ public final class Raina extends AbstractNpcAI
 	private boolean haveDoneQuest(L2PcInstance player)
 	{
 		final QuestState qs = player.getQuestState("Q10385_RedThreadOfFate"); // TODO: Replace with class name
-		return qs == null ? false : qs.isCompleted();
+		return (qs != null) && qs.isCompleted();
 	}
 	
 	/**

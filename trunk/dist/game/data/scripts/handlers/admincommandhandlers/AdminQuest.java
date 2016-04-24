@@ -76,8 +76,7 @@ public class AdminQuest implements IAdminCommandHandler
 				// try the first param as id
 				try
 				{
-					final int questId = Integer.parseInt(parts[1]);
-					if (QuestManager.getInstance().reload(questId))
+					if (QuestManager.getInstance().reload(Integer.parseInt(parts[1])))
 					{
 						activeChar.sendMessage("Quest Reloaded Successfully.");
 					}

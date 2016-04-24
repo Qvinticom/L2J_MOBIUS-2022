@@ -107,20 +107,16 @@ public class Q00036_MakeASewingKit extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance member = getRandomPartyMember(player, 1);
-		if (member != null)
+		if ((member != null) && getRandomBoolean())
 		{
-			final QuestState qs = getQuestState(member, false);
-			if (getRandomBoolean())
+			giveItems(player, ENCHANTED_IRON, 1);
+			if (getQuestItemsCount(player, ENCHANTED_IRON) >= IRON_COUNT)
 			{
-				giveItems(player, ENCHANTED_IRON, 1);
-				if (getQuestItemsCount(player, ENCHANTED_IRON) >= IRON_COUNT)
-				{
-					qs.setCond(2, true);
-				}
-				else
-				{
-					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				getQuestState(member, false).setCond(2, true);
+			}
+			else
+			{
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isSummon);

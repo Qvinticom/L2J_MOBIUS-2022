@@ -40,17 +40,6 @@ public class L2WarehouseInstance extends L2NpcInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		
-		if (val == 0)
-		{
-			pom = "" + npcId;
-		}
-		else
-		{
-			pom = npcId + "-" + val;
-		}
-		
-		return "html/warehouse/" + pom + ".htm";
+		return "html/warehouse/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
 	}
 }

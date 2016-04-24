@@ -75,11 +75,7 @@ final class HandysBlockCheckerEvent extends Quest
 			
 			player.sendPacket(tl);
 			
-			final int countBlue = holder.getBlueTeamSize();
-			final int countRed = holder.getRedTeamSize();
-			final int minMembers = Config.MIN_BLOCK_CHECKER_TEAM_MEMBERS;
-			
-			if ((countBlue >= minMembers) && (countRed >= minMembers))
+			if ((holder.getBlueTeamSize() >= Config.MIN_BLOCK_CHECKER_TEAM_MEMBERS) && (holder.getRedTeamSize() >= Config.MIN_BLOCK_CHECKER_TEAM_MEMBERS))
 			{
 				holder.updateEvent();
 				holder.broadCastPacketToTeam(new ExCubeGameRequestReady());

@@ -113,8 +113,7 @@ final class Venom extends AbstractNpcAI
 		
 		final long currentTime = System.currentTimeMillis();
 		final long startSiegeDate = CastleManager.getInstance().getCastleById(CASTLE).getSiegeDate().getTimeInMillis();
-		final long openingDungeonDate = startSiegeDate - (HOURS_BEFORE * 360000);
-		if ((currentTime > openingDungeonDate) && (currentTime < startSiegeDate))
+		if ((currentTime > (startSiegeDate - (HOURS_BEFORE * 360000))) && (currentTime < startSiegeDate))
 		{
 			_prisonIsOpen = true;
 		}

@@ -51,17 +51,6 @@ public class ItemFilter implements Filter
 		}
 		
 		final String[] messageList = record.getMessage().split(":");
-		if ((messageList.length < 2) || !EXCLUDE_PROCESS.contains(messageList[1]))
-		{
-			return true;
-		}
-		
-		final L2ItemInstance item = ((L2ItemInstance) record.getParameters()[0]);
-		if (!EXCLUDED_ITEM_TYPES.contains(item.getItemType()))
-		{
-			return true;
-		}
-		
-		return false;
+		return (messageList.length < 2) || !EXCLUDE_PROCESS.contains(messageList[1]) || !EXCLUDED_ITEM_TYPES.contains(((L2ItemInstance) record.getParameters()[0]).getItemType());
 	}
 }

@@ -149,16 +149,13 @@ public final class RequestEnchantItem extends L2GameClientPacket
 		}
 		
 		// attempting to destroy support if exist
-		if (support != null)
+		if ((support != null) && (activeChar.getInventory().destroyItem("Enchant", support.getObjectId(), 1, activeChar, item) == null))
 		{
-			if (activeChar.getInventory().destroyItem("Enchant", support.getObjectId(), 1, activeChar, item) == null)
-			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
-				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
-				activeChar.removeRequest(request.getClass());
-				activeChar.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
-				return;
-			}
+			activeChar.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
+			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
+			activeChar.removeRequest(request.getClass());
+			activeChar.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+			return;
 		}
 		
 		final InventoryUpdate iu = new InventoryUpdate();

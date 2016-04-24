@@ -131,13 +131,11 @@ public class L2PlayerAI extends L2PlayableAI
 		if (getIntention() == AI_INTENTION_CAST)
 		{
 			// run interrupted or next intention
-			
-			final IntentionCommand nextIntention = _nextIntention;
-			if (nextIntention != null)
+			if (_nextIntention != null)
 			{
-				if (nextIntention._crtlIntention != AI_INTENTION_CAST) // previous state shouldn't be casting
+				if (_nextIntention._crtlIntention != AI_INTENTION_CAST)
 				{
-					setIntention(nextIntention._crtlIntention, nextIntention._arg0, nextIntention._arg1);
+					setIntention(_nextIntention._crtlIntention, _nextIntention._arg0, _nextIntention._arg1);
 				}
 				else
 				{
@@ -155,16 +153,17 @@ public class L2PlayerAI extends L2PlayableAI
 	@Override
 	protected void onIntentionRest()
 	{
-		if (getIntention() != AI_INTENTION_REST)
+		if (getIntention() == AI_INTENTION_REST)
 		{
-			changeIntention(AI_INTENTION_REST, null, null);
-			setTarget(null);
-			if (getAttackTarget() != null)
-			{
-				setAttackTarget(null);
-			}
-			clientStopMoving(null);
+			return;
 		}
+		changeIntention(AI_INTENTION_REST, null, null);
+		setTarget(null);
+		if (getAttackTarget() != null)
+		{
+			setAttackTarget(null);
+		}
+		clientStopMoving(null);
 	}
 	
 	@Override
@@ -293,11 +292,7 @@ public class L2PlayerAI extends L2PlayableAI
 			return;
 		}
 		final L2Object target = getTarget();
-		if (checkTargetLost(target))
-		{
-			return;
-		}
-		if (maybeMoveToPawn(target, 36))
+		if (checkTargetLost(target) || maybeMoveToPawn(target, 36))
 		{
 			return;
 		}
@@ -312,11 +307,7 @@ public class L2PlayerAI extends L2PlayableAI
 			return;
 		}
 		final L2Object target = getTarget();
-		if (checkTargetLost(target))
-		{
-			return;
-		}
-		if (maybeMoveToPawn(target, 36))
+		if (checkTargetLost(target) || maybeMoveToPawn(target, 36))
 		{
 			return;
 		}

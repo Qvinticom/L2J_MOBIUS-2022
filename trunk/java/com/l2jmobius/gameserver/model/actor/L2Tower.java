@@ -65,13 +65,10 @@ public abstract class L2Tower extends L2Npc
 			// Set the target of the L2PcInstance player
 			player.setTarget(this);
 		}
-		else if (interact)
+		else if (interact && isAutoAttackable(player) && (Math.abs(player.getZ() - getZ()) < 100) && GeoData.getInstance().canSeeTarget(player, this))
 		{
-			if (isAutoAttackable(player) && (Math.abs(player.getZ() - getZ()) < 100) && GeoData.getInstance().canSeeTarget(player, this))
-			{
-				// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
-			}
+			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 		}
 		// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);

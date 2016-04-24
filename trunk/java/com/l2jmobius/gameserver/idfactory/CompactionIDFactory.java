@@ -88,11 +88,7 @@ public class CompactionIDFactory extends IdFactory
 			}
 		}
 		
-		int hole = id - _curOID;
-		if (hole > (N - idx))
-		{
-			hole = N - idx;
-		}
+		final int hole = (id - _curOID) > (N - idx) ? N - idx : id - _curOID;
 		for (int i = 1; i <= hole; i++)
 		{
 			id = tmp_obj_ids[N - i];

@@ -46,40 +46,29 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
+		if ((activeChar == null) || (_itemCount <= 0))
+		{
+			return;
+		}
 		
-		if (activeChar == null)
-		{
-			return;
-		}
-		else if (_itemCount <= 0)
-		{
-			return;
-		}
-		/*
-		 * else if (activeChar.getObjectId() != _charId) { Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Incorrect owner, Player: " + activeChar.getName(), Config.DEFAULT_PUNISH); return; }
-		 */
-		else if (activeChar.getPremiumItemList().isEmpty())
+		if (activeChar.getPremiumItemList().isEmpty())
 		{
 			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Player: " + activeChar.getName() + " try to get item with empty list!", Config.DEFAULT_PUNISH);
 			return;
 		}
-		else if ((activeChar.getWeightPenalty() >= 3) || !activeChar.isInventoryUnder90(false))
+		if ((activeChar.getWeightPenalty() >= 3) || !activeChar.isInventoryUnder90(false))
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_THE_DIMENSIONAL_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT);
 			return;
 		}
-		else if (activeChar.isProcessingTransaction())
+		if (activeChar.isProcessingTransaction())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_A_DIMENSIONAL_ITEM_DURING_AN_EXCHANGE);
 			return;
 		}
 		
 		final L2PremiumItem _item = activeChar.getPremiumItemList().get(_itemNum);
-		if (_item == null)
-		{
-			return;
-		}
-		else if (_item.getCount() < _itemCount)
+		if ((_item == null) || (_item.getCount() < _itemCount))
 		{
 			return;
 		}

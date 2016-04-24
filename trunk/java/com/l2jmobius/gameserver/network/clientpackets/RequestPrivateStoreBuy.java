@@ -116,13 +116,10 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.FACTION_SYSTEM_ENABLED)
+		if (Config.FACTION_SYSTEM_ENABLED && ((storePlayer.isEvil() && player.isGood()) || (storePlayer.isGood() && player.isEvil())))
 		{
-			if ((storePlayer.isEvil() && player.isGood()) || (storePlayer.isGood() && player.isEvil()))
-			{
-				player.sendMessage("You cant buy from different faction members.");
-				return;
-			}
+			player.sendMessage("You cant buy from different faction members.");
+			return;
 		}
 		
 		final TradeList storeList = storePlayer.getSellList();
@@ -138,14 +135,11 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 			return;
 		}
 		
-		if (storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL)
+		if ((storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL) && (storeList.getItemCount() > _items.size()))
 		{
-			if (storeList.getItemCount() > _items.size())
-			{
-				final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getActiveChar().getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
-				Util.handleIllegalPlayerAction(getClient().getActiveChar(), msgErr, Config.DEFAULT_PUNISH);
-				return;
-			}
+			final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getActiveChar().getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
+			Util.handleIllegalPlayerAction(getClient().getActiveChar(), msgErr, Config.DEFAULT_PUNISH);
+			return;
 		}
 		
 		final int result = storeList.privateStoreBuy(player, _items);

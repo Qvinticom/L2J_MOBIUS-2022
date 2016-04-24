@@ -619,14 +619,7 @@ public final class Q00120_PavelsLastResearch extends Quest
 			{
 				if (qs.isMemoState(10))
 				{
-					if (qs.isMemoStateEx(0, 10101))
-					{
-						html = "32042-13.html";
-					}
-					else
-					{
-						html = "32042-09.html";
-					}
+					html = qs.isMemoStateEx(0, 10101) ? "32042-13.html" : "32042-09.html";
 				}
 				break;
 			}
@@ -792,14 +785,7 @@ public final class Q00120_PavelsLastResearch extends Quest
 			{
 				if (qs.isMemoState(18))
 				{
-					if (qs.isMemoStateEx(0, 1111))
-					{
-						html = "32043-12.html";
-					}
-					else
-					{
-						html = "32043-11.html";
-					}
+					html = qs.isMemoStateEx(0, 1111) ? "32043-12.html" : "32043-11.html";
 				}
 				break;
 			}
@@ -824,14 +810,7 @@ public final class Q00120_PavelsLastResearch extends Quest
 			{
 				if (qs.isMemoState(18))
 				{
-					if (qs.getMemoStateEx(0) < 1000)
-					{
-						html = "32043-15.html";
-					}
-					else
-					{
-						html = "32043-18.html";
-					}
+					html = qs.getMemoStateEx(0) < 1000 ? "32043-15.html" : "32043-18.html";
 				}
 				break;
 			}
@@ -1023,14 +1002,7 @@ public final class Q00120_PavelsLastResearch extends Quest
 			{
 				if (qs.isMemoState(21))
 				{
-					if ((qs.getMemoStateEx(0) % 100) == 11)
-					{
-						html = "32044-10.html";
-					}
-					else
-					{
-						html = "32044-09.html";
-					}
+					html = (qs.getMemoStateEx(0) % 100) == 11 ? "32044-10.html" : "32044-09.html";
 				}
 				break;
 			}
@@ -1066,14 +1038,7 @@ public final class Q00120_PavelsLastResearch extends Quest
 			{
 				if (qs.isMemoState(21))
 				{
-					if ((qs.getMemoStateEx(0) / 100) == 1)
-					{
-						html = "32044-15.html";
-					}
-					else
-					{
-						html = "32044-14.html";
-					}
+					html = (qs.getMemoStateEx(0) / 100) == 1 ? "32044-15.html" : "32044-14.html";
 				}
 				break;
 			}
@@ -1164,14 +1129,7 @@ public final class Q00120_PavelsLastResearch extends Quest
 			{
 				if (qs.isCreated())
 				{
-					if (checkQ114(player))
-					{
-						html = "32046-01.htm";
-					}
-					else
-					{
-						html = "32046-02.htm";
-					}
+					html = checkQ114(player) ? "32046-01.htm" : "32046-02.htm";
 				}
 				else if (qs.isStarted())
 				{
@@ -1366,14 +1324,7 @@ public final class Q00120_PavelsLastResearch extends Quest
 					}
 					case 5:
 					{
-						if (qs.getMemoStateEx(0) > 0)
-						{
-							html = "32041-07.html";
-						}
-						else
-						{
-							html = "32041-08.html";
-						}
+						html = qs.getMemoStateEx(0) > 0 ? "32041-07.html" : "32041-08.html";
 						break;
 					}
 					case 6:
@@ -1440,14 +1391,7 @@ public final class Q00120_PavelsLastResearch extends Quest
 					}
 					case 10:
 					{
-						if (qs.isMemoStateEx(0, 10101))
-						{
-							html = "32042-13.html";
-						}
-						else
-						{
-							html = "32042-09.html";
-						}
+						html = qs.isMemoStateEx(0, 10101) ? "32042-13.html" : "32042-09.html";
 						break;
 					}
 					case 11:

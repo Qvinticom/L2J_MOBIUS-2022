@@ -48,8 +48,7 @@ public final class ComplexBlock implements IBlock
 	
 	private int _getCellHeight(int geoX, int geoY)
 	{
-		final short height = (short) (_getCellData(geoX, geoY) & 0x0FFF0);
-		return height >> 1;
+		return (short) (_getCellData(geoX, geoY) & 0x0FFF0) >> 1;
 	}
 	
 	@Override

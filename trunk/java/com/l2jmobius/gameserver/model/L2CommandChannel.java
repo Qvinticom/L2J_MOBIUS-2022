@@ -117,17 +117,18 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	 */
 	public void disbandChannel()
 	{
-		if (_parties != null)
+		if (_parties == null)
 		{
-			for (L2Party party : _parties)
-			{
-				if (party != null)
-				{
-					removeParty(party);
-				}
-			}
-			_parties.clear();
+			return;
 		}
+		for (L2Party party : _parties)
+		{
+			if (party != null)
+			{
+				removeParty(party);
+			}
+		}
+		_parties.clear();
 	}
 	
 	/**
@@ -194,11 +195,7 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	 */
 	public boolean meetRaidWarCondition(L2Object obj)
 	{
-		if (!((obj instanceof L2Character) && ((L2Character) obj).isRaid()))
-		{
-			return false;
-		}
-		return (getMemberCount() >= Config.LOOT_RAIDS_PRIVILEGE_CC_SIZE);
+		return (obj instanceof L2Character) && ((L2Character) obj).isRaid() && (getMemberCount() >= Config.LOOT_RAIDS_PRIVILEGE_CC_SIZE);
 	}
 	
 	/**

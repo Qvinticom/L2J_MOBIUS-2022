@@ -35,30 +35,32 @@ public final class TradeStart extends AbstractItemPacket
 		_partner = player.getActiveTradeList().getPartner();
 		_itemList = _activeChar.getInventory().getAvailableItems(true, (_activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && Config.GM_TRADE_RESTRICTED_ITEMS), false);
 		
-		if (_partner != null)
+		if (_partner == null)
 		{
-			if (player.getFriendList().containsKey(_partner.getObjectId()))
-			{
-				_mask |= 0x01;
-			}
-			if ((player.getClanId() > 0) && (_partner.getClanId() == _partner.getClanId()))
-			{
-				_mask |= 0x02;
-			}
-			if ((MentorManager.getInstance().getMentee(player.getObjectId(), _partner.getObjectId()) != null) || (MentorManager.getInstance().getMentee(_partner.getObjectId(), player.getObjectId()) != null))
-			{
-				_mask |= 0x04;
-			}
-			if ((player.getAllyId() > 0) && (player.getAllyId() == _partner.getAllyId()))
-			{
-				_mask |= 0x08;
-			}
-			
-			// Does not shows level
-			if (_partner.isGM())
-			{
-				_mask |= 0x10;
-			}
+			return;
+		}
+		
+		if (player.getFriendList().containsKey(_partner.getObjectId()))
+		{
+			_mask |= 0x01;
+		}
+		if ((player.getClanId() > 0) && (_partner.getClanId() == _partner.getClanId()))
+		{
+			_mask |= 0x02;
+		}
+		if ((MentorManager.getInstance().getMentee(player.getObjectId(), _partner.getObjectId()) != null) || (MentorManager.getInstance().getMentee(_partner.getObjectId(), player.getObjectId()) != null))
+		{
+			_mask |= 0x04;
+		}
+		if ((player.getAllyId() > 0) && (player.getAllyId() == _partner.getAllyId()))
+		{
+			_mask |= 0x08;
+		}
+		
+		// Does not shows level
+		if (_partner.isGM())
+		{
+			_mask |= 0x10;
 		}
 	}
 	

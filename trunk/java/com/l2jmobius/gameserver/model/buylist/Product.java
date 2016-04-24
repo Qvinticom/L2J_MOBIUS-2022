@@ -73,11 +73,7 @@ public final class Product
 	
 	public long getPrice()
 	{
-		if (_price < 0)
-		{
-			return getItem().getReferencePrice();
-		}
-		return _price;
+		return _price < 0 ? getItem().getReferencePrice() : _price;
 	}
 	
 	public long getRestockDelay()

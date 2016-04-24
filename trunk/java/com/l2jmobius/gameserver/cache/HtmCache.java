@@ -178,18 +178,8 @@ public class HtmCache
 	
 	private String getHtm(String path)
 	{
-		if ((path == null) || path.isEmpty())
-		{
-			return ""; // avoid possible NPE
-		}
-		
-		String content = _cache.get(path);
 		// TODO: Check why some files do not get in cache on server startup.
-		if (content == null)
-		{
-			content = loadFile(new File(Config.DATAPACK_ROOT, path));
-		}
-		return content;
+		return (path == null) || path.isEmpty() ? "" : _cache.get(path) == null ? loadFile(new File(Config.DATAPACK_ROOT, path)) : _cache.get(path);
 	}
 	
 	public boolean contains(String path)

@@ -285,79 +285,80 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 	
 	private final void readPacket(SelectionKey key, MMOConnection<T> con)
 	{
-		if (!con.isClosed())
+		if (con.isClosed())
 		{
-			ByteBuffer buf;
-			if ((buf = con.getReadBuffer()) == null)
-			{
-				buf = READ_BUFFER;
-			}
+			return;
+		}
+		ByteBuffer buf;
+		if ((buf = con.getReadBuffer()) == null)
+		{
+			buf = READ_BUFFER;
+		}
+		
+		// if we try to to do a read with no space in the buffer it will read 0 bytes going into infinite loop
+		if (buf.position() == buf.limit())
+		{
+			System.exit(0);
+		}
+		
+		int result = -2;
+		
+		try
+		{
+			result = con.read(buf);
+		}
+		catch (IOException e)
+		{
+			// error handling goes bellow
+		}
+		
+		if (result > 0)
+		{
+			buf.flip();
 			
-			// if we try to to do a read with no space in the buffer it will read 0 bytes going into infinite loop
-			if (buf.position() == buf.limit())
-			{
-				System.exit(0);
-			}
+			final T client = con.getClient();
 			
-			int result = -2;
-			
-			try
+			for (int i = 0; i < MAX_READ_PER_PASS; i++)
 			{
-				result = con.read(buf);
-			}
-			catch (IOException e)
-			{
-				// error handling goes bellow
-			}
-			
-			if (result > 0)
-			{
-				buf.flip();
-				
-				final T client = con.getClient();
-				
-				for (int i = 0; i < MAX_READ_PER_PASS; i++)
+				if (!tryReadPacket(key, client, buf, con))
 				{
-					if (!tryReadPacket(key, client, buf, con))
-					{
-						return;
-					}
-				}
-				
-				// only reachable if MAX_READ_PER_PASS has been reached
-				// check if there are some more bytes in buffer
-				// and allocate/compact to prevent content lose.
-				if (buf.remaining() > 0)
-				{
-					// did we use the READ_BUFFER ?
-					if (buf == READ_BUFFER)
-					{
-						// move the pending byte to the connections READ_BUFFER
-						allocateReadBuffer(con);
-					}
-					else
-					{
-						// move the first byte to the beginning :)
-						buf.compact();
-					}
+					return;
 				}
 			}
-			else
+			
+			// only reachable if MAX_READ_PER_PASS has been reached
+			// check if there are some more bytes in buffer
+			// and allocate/compact to prevent content lose.
+			if (buf.remaining() > 0)
 			{
-				switch (result)
+				// did we use the READ_BUFFER ?
+				if (buf == READ_BUFFER)
 				{
-					case 0:
-					case -1:
-					{
-						closeConnectionImpl(key, con);
-						break;
-					}
-					case -2:
-					{
-						con.getClient().onForcedDisconnection();
-						closeConnectionImpl(key, con);
-						break;
-					}
+					// move the pending byte to the connections READ_BUFFER
+					allocateReadBuffer(con);
+				}
+				else
+				{
+					// move the first byte to the beginning :)
+					buf.compact();
+				}
+			}
+		}
+		else
+		{
+			switch (result)
+			{
+				case 0:
+				case -1:
+				{
+					closeConnectionImpl(key, con);
+					break;
+				}
+				case -2:
+				{
+					con.getClient().onForcedDisconnection();
+					closeConnectionImpl(key, con);
+					break;
 				}
 			}
 		}
@@ -406,38 +407,35 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 						buf.position(pos + dataPending);
 					}
 					
-					// if we are done with this buffer
-					if (!buf.hasRemaining())
+					if (buf.hasRemaining())
 					{
-						if (buf != READ_BUFFER)
-						{
-							con.setReadBuffer(null);
-							recycleBuffer(buf);
-						}
-						else
-						{
-							READ_BUFFER.clear();
-						}
-						return false;
+						return true;
 					}
-					return true;
+					if (buf != READ_BUFFER)
+					{
+						con.setReadBuffer(null);
+						recycleBuffer(buf);
+					}
+					else
+					{
+						READ_BUFFER.clear();
+					}
+					return false;
 				}
 				
-				// we don`t have enough bytes for the dataPacket so we need
-				// to read
+				// we don`t have enough bytes for the dataPacket so we need to read
 				key.interestOps(key.interestOps() | SelectionKey.OP_READ);
 				
+				// move it`s position
+				buf.position(buf.position() - HEADER_SIZE);
 				// did we use the READ_BUFFER ?
 				if (buf == READ_BUFFER)
 				{
-					// move it`s position
-					buf.position(buf.position() - HEADER_SIZE);
 					// move the pending byte to the connections READ_BUFFER
 					allocateReadBuffer(con);
 				}
 				else
 				{
-					buf.position(buf.position() - HEADER_SIZE);
 					buf.compact();
 				}
 				return false;
@@ -453,31 +451,31 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 	
 	private final void parseClientPacket(int pos, ByteBuffer buf, int dataSize, T client)
 	{
-		final boolean ret = client.decrypt(buf, dataSize);
-		
-		if (ret && buf.hasRemaining())
+		if (!client.decrypt(buf, dataSize) || !buf.hasRemaining())
 		{
-			// apply limit
-			final int limit = buf.limit();
-			buf.limit(pos + dataSize);
-			final ReceivablePacket<T> cp = _packetHandler.handlePacket(buf, client);
-			
-			if (cp != null)
-			{
-				cp._buf = buf;
-				cp._sbuf = STRING_BUFFER;
-				cp._client = client;
-				
-				if (cp.read())
-				{
-					_executor.execute(cp);
-				}
-				
-				cp._buf = null;
-				cp._sbuf = null;
-			}
-			buf.limit(limit);
+			return;
 		}
+		
+		// apply limit
+		final int limit = buf.limit();
+		buf.limit(pos + dataSize);
+		final ReceivablePacket<T> cp = _packetHandler.handlePacket(buf, client);
+		
+		if (cp != null)
+		{
+			cp._buf = buf;
+			cp._sbuf = STRING_BUFFER;
+			cp._client = client;
+			
+			if (cp.read())
+			{
+				_executor.execute(cp);
+			}
+			
+			cp._buf = null;
+			cp._sbuf = null;
+		}
+		buf.limit(limit);
 	}
 	
 	private final void writeClosePacket(MMOConnection<T> con)
@@ -605,15 +603,12 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 				
 				WRITE_BUFFER.flip();
 				
-				if (DIRECT_WRITE_BUFFER.remaining() >= WRITE_BUFFER.limit())
-				{
-					DIRECT_WRITE_BUFFER.put(WRITE_BUFFER);
-				}
-				else
+				if (DIRECT_WRITE_BUFFER.remaining() < WRITE_BUFFER.limit())
 				{
 					con.createWriteBuffer(WRITE_BUFFER);
 					break;
 				}
+				DIRECT_WRITE_BUFFER.put(WRITE_BUFFER);
 			}
 		}
 		return hasPending;

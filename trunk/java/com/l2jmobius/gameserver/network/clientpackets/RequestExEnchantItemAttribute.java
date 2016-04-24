@@ -258,12 +258,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 			player.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_ELEMENTAL_POWER);
 		}
 		
-		int result = 0;
-		if (successfulAttempts == 0)
-		{
-			// Failed
-			result = 2;
-		}
+		final int result = successfulAttempts == 0 ? 2 : 0;
 		
 		// Stone must be removed
 		if (stone.getCount() == 0)

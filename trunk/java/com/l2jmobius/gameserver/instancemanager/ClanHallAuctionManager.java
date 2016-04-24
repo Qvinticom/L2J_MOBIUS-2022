@@ -117,11 +117,7 @@ public final class ClanHallAuctionManager
 	public final Auction getAuction(int auctionId)
 	{
 		final int index = getAuctionIndex(auctionId);
-		if (index >= 0)
-		{
-			return _auctions.get(index);
-		}
-		return null;
+		return index >= 0 ? _auctions.get(index) : null;
 	}
 	
 	public final int getAuctionIndex(int auctionId)

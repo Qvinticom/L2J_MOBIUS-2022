@@ -30,13 +30,7 @@ public abstract class PathFinding
 {
 	public static PathFinding getInstance()
 	{
-		if (Config.PATHFINDING == 1)
-		{
-			// Higher Memory Usage, Smaller Cpu Usage
-			return GeoPathFinding.getInstance();
-		}
-		// Cell pathfinding, calculated directly from geodata files
-		return CellPathFinding.getInstance();
+		return Config.PATHFINDING == 1 ? GeoPathFinding.getInstance() : CellPathFinding.getInstance();
 	}
 	
 	public abstract boolean pathNodesExist(short regionoffset);

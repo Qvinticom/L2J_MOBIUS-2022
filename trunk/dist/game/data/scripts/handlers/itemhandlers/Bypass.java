@@ -54,5 +54,4 @@ public class Bypass implements IItemHandler
 		}
 		return true;
 	}
-	
 }

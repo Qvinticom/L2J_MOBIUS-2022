@@ -53,8 +53,7 @@ public class PlayerHelp implements IBypassHandler
 			final NpcHtmlMessage html;
 			if (cmd.length > 1)
 			{
-				final int itemId = Integer.parseInt(cmd[1]);
-				html = new NpcHtmlMessage(0, itemId);
+				html = new NpcHtmlMessage(0, Integer.parseInt(cmd[1]));
 			}
 			else
 			{

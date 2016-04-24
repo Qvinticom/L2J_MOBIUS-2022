@@ -133,9 +133,7 @@ public final class GrandBossManager implements IStorable
 		{
 			while (rs.next())
 			{
-				final int id = rs.getInt("player_id");
-				final int zoneId = rs.getInt("zone");
-				zones.get(zoneId).add(id);
+				zones.get(rs.getInt("zone")).add(rs.getInt("player_id"));
 			}
 			_log.info(getClass().getSimpleName() + ": Initialized " + _zones.size() + " Grand Boss Zones");
 		}

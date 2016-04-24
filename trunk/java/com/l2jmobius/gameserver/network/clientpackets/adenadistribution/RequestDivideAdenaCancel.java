@@ -48,8 +48,7 @@ public class RequestDivideAdenaCancel extends L2GameClientPacket
 		
 		if (_cancel)
 		{
-			final AdenaDistributionRequest request = player.getRequest(AdenaDistributionRequest.class);
-			request.getPlayers().stream().filter(Objects::nonNull).forEach(p ->
+			player.getRequest(AdenaDistributionRequest.class).getPlayers().stream().filter(Objects::nonNull).forEach(p ->
 			{
 				p.sendPacket(SystemMessageId.ADENA_DISTRIBUTION_HAS_BEEN_CANCELLED);
 				p.sendPacket(ExDivideAdenaCancel.STATIC_PACKET);

@@ -121,12 +121,9 @@ public class Q00755_InNeedOfPetras extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1) && qs.isStarted())
+		if ((qs != null) && qs.isCond(1) && qs.isStarted() && giveItemRandomly(killer, npc, PETRA, 1, 50, 0.75, true))
 		{
-			if (giveItemRandomly(killer, npc, PETRA, 1, 50, 0.75, true))
-			{
-				qs.setCond(2);
-			}
+			qs.setCond(2);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

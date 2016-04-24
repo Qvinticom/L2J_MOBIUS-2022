@@ -62,14 +62,7 @@ public class Q00255_Tutorial extends Quest
 			}
 			case "start_newbie_tutorial":
 			{
-				if (player.getRace() == Race.ERTHEIA)
-				{
-					htmltext = "tutorial_01_ertheia.html";
-				}
-				else
-				{
-					htmltext = "tutorial_01.html";
-				}
+				htmltext = player.getRace() == Race.ERTHEIA ? "tutorial_01_ertheia.html" : "tutorial_01.html";
 				qs.exitQuest(false, false); // TODO: Continue with the tutorial.
 				break;
 			}

@@ -330,8 +330,7 @@ public class GeoPathFinding extends PathFinding
 				neighbors.add(newNode);
 			}
 		}
-		final GeoNode[] result = new GeoNode[neighbors.size()];
-		return neighbors.toArray(result);
+		return neighbors.toArray(new GeoNode[neighbors.size()]);
 	}
 	
 	// Private
@@ -410,9 +409,7 @@ public class GeoPathFinding extends PathFinding
 						return;
 					}
 					
-					final byte rx = Byte.parseByte(parts[0]);
-					final byte ry = Byte.parseByte(parts[1]);
-					LoadPathNodeFile(rx, ry);
+					LoadPathNodeFile(Byte.parseByte(parts[0]), Byte.parseByte(parts[1]));
 				});
 			//@formatter:on
 		}

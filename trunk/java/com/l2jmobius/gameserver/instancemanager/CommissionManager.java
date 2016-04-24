@@ -430,8 +430,7 @@ public final class CommissionManager
 	{
 		if ((_commissionItems.remove(commissionItem.getCommissionId()) != null) && deleteItemFromDB(commissionItem.getCommissionId()))
 		{
-			final Message mail = new Message(commissionItem.getItemInstance().getOwnerId(), commissionItem.getItemInstance(), MailType.COMMISSION_ITEM_RETURNED);
-			MailManager.getInstance().sendMessage(mail);
+			MailManager.getInstance().sendMessage(new Message(commissionItem.getItemInstance().getOwnerId(), commissionItem.getItemInstance(), MailType.COMMISSION_ITEM_RETURNED));
 		}
 	}
 	

@@ -57,5 +57,4 @@ public class RequestListPartyMatchingWaitingRoom extends L2GameClientPacket
 	{
 		return _C__D0_31_REQUESTLISTPARTYMATCHINGWAITINGROOM;
 	}
-	
 }

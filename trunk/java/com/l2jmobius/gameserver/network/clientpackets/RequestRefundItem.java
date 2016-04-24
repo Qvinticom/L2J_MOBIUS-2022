@@ -77,14 +77,7 @@ public final class RequestRefundItem extends L2GameClientPacket
 			player.sendMessage("You are using refund too fast.");
 			return;
 		}
-		
-		if (_items == null)
-		{
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (!player.hasRefund())
+		if ((_items == null) || !player.hasRefund())
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -197,8 +190,7 @@ public final class RequestRefundItem extends L2GameClientPacket
 		
 		for (int i = 0; i < _items.length; i++)
 		{
-			final L2ItemInstance item = player.getRefund().transferItem("Refund", objectIds[i], Long.MAX_VALUE, player.getInventory(), player, player.getLastFolkNPC());
-			if (item == null)
+			if (player.getRefund().transferItem("Refund", objectIds[i], Long.MAX_VALUE, player.getInventory(), player, player.getLastFolkNPC()) == null)
 			{
 				_log.warning("Error refunding object for char " + player.getName() + " (newitem == null)");
 				continue;

@@ -182,12 +182,9 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(player, 1, 3, npc);
-		if (qs != null)
+		if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, PRIME_MEAT, 1, PRIME_MEAT_COUNT, MOBS_MEAT.get(npc.getId()), true))
 		{
-			if (giveItemRandomly(qs.getPlayer(), npc, PRIME_MEAT, 1, PRIME_MEAT_COUNT, MOBS_MEAT.get(npc.getId()), true))
-			{
-				qs.setCond(2, true);
-			}
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -215,12 +212,9 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 					htmltext = "31537-04.html";
 				}
 			}
-			else if (qs.isCond(2))
+			else if (qs.isCond(2) && (getQuestItemsCount(player, PRIME_MEAT) >= PRIME_MEAT_COUNT))
 			{
-				if (getQuestItemsCount(player, PRIME_MEAT) >= PRIME_MEAT_COUNT)
-				{
-					htmltext = "31537-05.html";
-				}
+				htmltext = "31537-05.html";
 			}
 		}
 		return htmltext;

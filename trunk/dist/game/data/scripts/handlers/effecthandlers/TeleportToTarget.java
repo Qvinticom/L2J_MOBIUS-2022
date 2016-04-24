@@ -65,9 +65,8 @@ public final class TeleportToTarget extends AbstractEffect
 		
 		final int px = target.getX();
 		final int py = target.getY();
-		double ph = Util.convertHeadingToDegree(target.getHeading());
+		double ph = Util.convertHeadingToDegree(target.getHeading()) + 180;
 		
-		ph += 180;
 		if (ph > 360)
 		{
 			ph -= 360;

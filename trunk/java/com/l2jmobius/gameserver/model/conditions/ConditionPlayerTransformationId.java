@@ -43,14 +43,6 @@ public class ConditionPlayerTransformationId extends Condition
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
 		final L2PcInstance player = effector.getActingPlayer();
-		if (player == null)
-		{
-			return false;
-		}
-		if (_id == -1)
-		{
-			return player.isTransformed();
-		}
-		return player.getTransformationId() == _id;
+		return (player != null) && (_id == -1 ? player.isTransformed() : player.getTransformationId() == _id);
 	}
 }

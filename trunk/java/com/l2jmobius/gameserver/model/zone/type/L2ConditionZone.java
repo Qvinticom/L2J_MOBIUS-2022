@@ -53,32 +53,34 @@ public class L2ConditionZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if (character.isPlayer())
+		if (!character.isPlayer())
 		{
-			if (NO_BOOKMARK)
-			{
-				character.setInsideZone(ZoneId.NO_BOOKMARK, true);
-			}
-			if (NO_ITEM_DROP)
-			{
-				character.setInsideZone(ZoneId.NO_ITEM_DROP, true);
-			}
+			return;
+		}
+		if (NO_BOOKMARK)
+		{
+			character.setInsideZone(ZoneId.NO_BOOKMARK, true);
+		}
+		if (NO_ITEM_DROP)
+		{
+			character.setInsideZone(ZoneId.NO_ITEM_DROP, true);
 		}
 	}
 	
 	@Override
 	protected void onExit(L2Character character)
 	{
-		if (character.isPlayer())
+		if (!character.isPlayer())
 		{
-			if (NO_BOOKMARK)
-			{
-				character.setInsideZone(ZoneId.NO_BOOKMARK, false);
-			}
-			if (NO_ITEM_DROP)
-			{
-				character.setInsideZone(ZoneId.NO_ITEM_DROP, false);
-			}
+			return;
+		}
+		if (NO_BOOKMARK)
+		{
+			character.setInsideZone(ZoneId.NO_BOOKMARK, false);
+		}
+		if (NO_ITEM_DROP)
+		{
+			character.setInsideZone(ZoneId.NO_ITEM_DROP, false);
 		}
 	}
 }

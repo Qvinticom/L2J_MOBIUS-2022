@@ -32,12 +32,7 @@ public final class PcCafePointsManager
 	
 	public void givePcCafePoint(L2PcInstance player, long exp)
 	{
-		if (!Config.PC_BANG_ENABLED)
-		{
-			return;
-		}
-		
-		if (player.isInsideZone(ZoneId.PEACE) || player.isInsideZone(ZoneId.PVP) || player.isInsideZone(ZoneId.SIEGE) || (player.isOnlineInt() == 0) || player.isJailed())
+		if (!Config.PC_BANG_ENABLED || player.isInsideZone(ZoneId.PEACE) || player.isInsideZone(ZoneId.PVP) || player.isInsideZone(ZoneId.SIEGE) || (player.isOnlineInt() == 0) || player.isJailed())
 		{
 			return;
 		}
@@ -61,27 +56,29 @@ public final class PcCafePointsManager
 			points = 1; // minimum points
 		}
 		
-		SystemMessage message = null;
-		if (points > 0)
+		if (points <= 0)
 		{
-			if (Config.PC_BANG_ENABLE_DOUBLE_POINTS && (Rnd.get(100) < Config.PC_BANG_DOUBLE_POINTS_CHANCE))
-			{
-				points *= 2;
-				message = SystemMessage.getSystemMessage(SystemMessageId.DOUBLE_POINTS_YOU_EARNED_S1_PC_POINT_S);
-			}
-			else
-			{
-				message = SystemMessage.getSystemMessage(SystemMessageId.YOU_EARNED_S1_PC_POINT_S);
-			}
-			if ((player.getPcBangPoints() + points) > Config.PC_BANG_MAX_POINTS)
-			{
-				points = Config.PC_BANG_MAX_POINTS - player.getPcBangPoints();
-			}
-			message.addLong(points);
-			player.sendPacket(message);
-			player.setPcBangPoints(player.getPcBangPoints() + points);
-			player.sendPacket(new ExPCCafePointInfo(player.getPcBangPoints(), points, 1));
+			return;
 		}
+		
+		SystemMessage message = null;
+		if (Config.PC_BANG_ENABLE_DOUBLE_POINTS && (Rnd.get(100) < Config.PC_BANG_DOUBLE_POINTS_CHANCE))
+		{
+			points *= 2;
+			message = SystemMessage.getSystemMessage(SystemMessageId.DOUBLE_POINTS_YOU_EARNED_S1_PC_POINT_S);
+		}
+		else
+		{
+			message = SystemMessage.getSystemMessage(SystemMessageId.YOU_EARNED_S1_PC_POINT_S);
+		}
+		if ((player.getPcBangPoints() + points) > Config.PC_BANG_MAX_POINTS)
+		{
+			points = Config.PC_BANG_MAX_POINTS - player.getPcBangPoints();
+		}
+		message.addLong(points);
+		player.sendPacket(message);
+		player.setPcBangPoints(player.getPcBangPoints() + points);
+		player.sendPacket(new ExPCCafePointInfo(player.getPcBangPoints(), points, 1));
 	}
 	
 	/**

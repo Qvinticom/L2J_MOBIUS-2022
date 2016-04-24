@@ -56,23 +56,24 @@ public final class SoulEating extends AbstractEffect
 	private void onExperienceReceived(L2Playable playable, long exp)
 	{
 		// TODO: Verify logic.
-		if (playable.isPlayer() && (exp >= _expNeeded))
+		if (!playable.isPlayer() || (exp < _expNeeded))
 		{
-			final L2PcInstance player = playable.getActingPlayer();
-			final int maxSouls = (int) player.calcStat(Stats.MAX_SOULS, 0, null, null);
-			if (player.getChargedSouls() >= maxSouls)
-			{
-				playable.sendPacket(SystemMessageId.SOUL_CANNOT_BE_ABSORBED_ANYMORE);
-				return;
-			}
-			
-			player.increaseSouls(1);
-			
-			if ((player.getTarget() != null) && player.getTarget().isNpc())
-			{
-				final L2Npc npc = (L2Npc) playable.getTarget();
-				player.broadcastPacket(new ExSpawnEmitter(player, npc), 500);
-			}
+			return;
+		}
+		
+		final L2PcInstance player = playable.getActingPlayer();
+		final int maxSouls = (int) player.calcStat(Stats.MAX_SOULS, 0, null, null);
+		if (player.getChargedSouls() >= maxSouls)
+		{
+			playable.sendPacket(SystemMessageId.SOUL_CANNOT_BE_ABSORBED_ANYMORE);
+			return;
+		}
+		
+		player.increaseSouls(1);
+		
+		if ((player.getTarget() != null) && player.getTarget().isNpc())
+		{
+			player.broadcastPacket(new ExSpawnEmitter(player, (L2Npc) playable.getTarget()), 500);
 		}
 	}
 	

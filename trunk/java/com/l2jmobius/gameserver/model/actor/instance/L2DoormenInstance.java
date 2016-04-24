@@ -46,7 +46,7 @@ public class L2DoormenInstance extends L2NpcInstance
 			showChatWindow(player);
 			return;
 		}
-		else if (command.startsWith("open_doors"))
+		if (command.startsWith("open_doors"))
 		{
 			if (isOwnerClan(player))
 			{
@@ -61,7 +61,7 @@ public class L2DoormenInstance extends L2NpcInstance
 			}
 			return;
 		}
-		else if (command.startsWith("close_doors"))
+		if (command.startsWith("close_doors"))
 		{
 			if (isOwnerClan(player))
 			{
@@ -76,7 +76,7 @@ public class L2DoormenInstance extends L2NpcInstance
 			}
 			return;
 		}
-		else if (command.startsWith("tele"))
+		if (command.startsWith("tele"))
 		{
 			if (isOwnerClan(player))
 			{

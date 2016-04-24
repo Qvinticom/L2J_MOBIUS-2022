@@ -198,11 +198,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public QuestState getQuestState(L2PcInstance player, boolean initIfNone)
 	{
 		final QuestState qs = player.getQuestState(_name);
-		if ((qs != null) || !initIfNone)
-		{
-			return qs;
-		}
-		return newQuestState(player);
+		return (qs != null) || !initIfNone ? qs : newQuestState(player);
 	}
 	
 	/**
@@ -273,17 +269,18 @@ public class Quest extends AbstractScript implements IIdentifiable
 		final List<QuestTimer> timers = getQuestTimers().computeIfAbsent(name, k -> new ArrayList<>(1));
 		// if there exists a timer with this name, allow the timer only if the [npc, player] set is unique
 		// nulls act as wildcards
-		if (getQuestTimer(name, npc, player) == null)
+		if (getQuestTimer(name, npc, player) != null)
 		{
-			_writeLock.lock();
-			try
-			{
-				timers.add(new QuestTimer(this, name, time, npc, player, repeating));
-			}
-			finally
-			{
-				_writeLock.unlock();
-			}
+			return;
+		}
+		_writeLock.lock();
+		try
+		{
+			timers.add(new QuestTimer(this, name, time, npc, player, repeating));
+		}
+		finally
+		{
+			_writeLock.unlock();
 		}
 	}
 	
@@ -309,12 +306,9 @@ public class Quest extends AbstractScript implements IIdentifiable
 			{
 				for (QuestTimer timer : timers)
 				{
-					if (timer != null)
+					if ((timer != null) && timer.isMatch(this, name, npc, player))
 					{
-						if (timer.isMatch(this, name, npc, player))
-						{
-							return timer;
-						}
+						return timer;
 					}
 				}
 			}
@@ -338,24 +332,26 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		
 		final List<QuestTimer> timers = getQuestTimers().get(name);
-		if (timers != null)
+		if (timers == null)
 		{
-			_writeLock.lock();
-			try
+			return;
+		}
+		
+		_writeLock.lock();
+		try
+		{
+			for (QuestTimer timer : timers)
 			{
-				for (QuestTimer timer : timers)
+				if (timer != null)
 				{
-					if (timer != null)
-					{
-						timer.cancel();
-					}
+					timer.cancel();
 				}
-				timers.clear();
 			}
-			finally
-			{
-				_writeLock.unlock();
-			}
+			timers.clear();
+		}
+		finally
+		{
+			_writeLock.unlock();
 		}
 	}
 	
@@ -381,21 +377,23 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void removeQuestTimer(QuestTimer timer)
 	{
-		if ((timer != null) && (_questTimers != null))
+		if ((timer == null) || (_questTimers == null))
 		{
-			final List<QuestTimer> timers = getQuestTimers().get(timer.getName());
-			if (timers != null)
-			{
-				_writeLock.lock();
-				try
-				{
-					timers.remove(timer);
-				}
-				finally
-				{
-					_writeLock.unlock();
-				}
-			}
+			return;
+		}
+		final List<QuestTimer> timers = getQuestTimers().get(timer.getName());
+		if (timers == null)
+		{
+			return;
+		}
+		_writeLock.lock();
+		try
+		{
+			timers.remove(timer);
+		}
+		finally
+		{
+			_writeLock.unlock();
 		}
 	}
 	
@@ -718,12 +716,9 @@ public class Quest extends AbstractScript implements IIdentifiable
 		try
 		{
 			res = onItemEvent(item, player, event);
-			if (res != null)
+			if ((res != null) && (res.equalsIgnoreCase("true") || res.equalsIgnoreCase("false")))
 			{
-				if (res.equalsIgnoreCase("true") || res.equalsIgnoreCase("false"))
-				{
-					return;
-				}
+				return;
 			}
 		}
 		catch (Exception e)
@@ -824,11 +819,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public final void notifySeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
 	{
-		L2PcInstance player = null;
-		if (isSummon || creature.isPlayer())
-		{
-			player = creature.getActingPlayer();
-		}
+		final L2PcInstance player = isSummon || creature.isPlayer() ? creature.getActingPlayer() : null;
 		String res = null;
 		try
 		{
@@ -1448,12 +1439,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			_log.warning(getClass().getSimpleName() + ": " + t.getMessage());
 		}
-		if ((player != null) && player.getAccessLevel().isGm())
-		{
-			final String res = "<html><body><title>Script error</title>" + Util.getStackTrace(t) + "</body></html>";
-			return showResult(player, res);
-		}
-		return false;
+		return (player != null) && player.getAccessLevel().isGm() && showResult(player, ("<html><body><title>Script error</title>" + Util.getStackTrace(t) + "</body></html>"));
 	}
 	
 	/**
@@ -1800,11 +1786,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public static String getNoQuestMsg(L2PcInstance player)
 	{
 		final String result = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/noquest.htm");
-		if ((result != null) && (result.length() > 0))
-		{
-			return result;
-		}
-		return DEFAULT_NO_QUEST_MSG;
+		return (result != null) && (result.length() > 0) ? result : DEFAULT_NO_QUEST_MSG;
 	}
 	
 	/**
@@ -1814,11 +1796,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public static String getAlreadyCompletedMsg(L2PcInstance player)
 	{
 		final String result = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/alreadycompleted.htm");
-		if ((result != null) && (result.length() > 0))
-		{
-			return result;
-		}
-		return DEFAULT_ALREADY_COMPLETED_MSG;
+		return (result != null) && (result.length() > 0) ? result : DEFAULT_ALREADY_COMPLETED_MSG;
 	}
 	
 	/**
@@ -2324,11 +2302,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			return null;
 		}
 		final L2Party party = player.getParty();
-		if ((party == null) || (party.getMembers().isEmpty()))
-		{
-			return player;
-		}
-		return party.getMembers().get(Rnd.get(party.getMembers().size()));
+		return (party == null) || (party.getMembers().isEmpty()) ? player : party.getMembers().get(Rnd.get(party.getMembers().size()));
 	}
 	
 	/**
@@ -2374,22 +2348,13 @@ public class Quest extends AbstractScript implements IIdentifiable
 		if ((party == null) || (party.getMembers().isEmpty()))
 		{
 			temp = player.getQuestState(getName());
-			if ((temp != null) && temp.isSet(var) && temp.get(var).equalsIgnoreCase(value))
-			{
-				return player; // match
-			}
-			return null; // no match
+			return (temp != null) && temp.isSet(var) && temp.get(var).equalsIgnoreCase(value) ? player : null;
 		}
 		
 		// if the player is in a party, gather a list of all matching party members (possibly including this player)
 		final List<L2PcInstance> candidates = new ArrayList<>();
 		// get the target for enforcing distance limitations.
-		L2Object target = player.getTarget();
-		if (target == null)
-		{
-			target = player;
-		}
-		
+		final L2Object target = player.getTarget() == null ? player : player.getTarget();
 		for (L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember == null)
@@ -2402,13 +2367,8 @@ public class Quest extends AbstractScript implements IIdentifiable
 				candidates.add(partyMember);
 			}
 		}
-		// if there was no match, return null...
-		if (candidates.isEmpty())
-		{
-			return null;
-		}
 		// if a match was found from the party, return one of them at random.
-		return candidates.get(Rnd.get(candidates.size()));
+		return candidates.isEmpty() ? null : candidates.get(Rnd.get(candidates.size()));
 	}
 	
 	/**
@@ -2434,25 +2394,14 @@ public class Quest extends AbstractScript implements IIdentifiable
 		if ((party == null) || (party.getMembers().isEmpty()))
 		{
 			temp = player.getQuestState(getName());
-			if ((temp != null) && (temp.getState() == state))
-			{
-				return player; // match
-			}
-			
-			return null; // no match
+			return (temp != null) && (temp.getState() == state) ? player : null;
 		}
 		
-		// if the player is in a party, gather a list of all matching party members (possibly
-		// including this player)
+		// if the player is in a party, gather a list of all matching party members (possibly including this player)
 		final List<L2PcInstance> candidates = new ArrayList<>();
 		
 		// get the target for enforcing distance limitations.
-		L2Object target = player.getTarget();
-		if (target == null)
-		{
-			target = player;
-		}
-		
+		final L2Object target = player.getTarget() == null ? player : player.getTarget();
 		for (L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember == null)
@@ -2465,14 +2414,9 @@ public class Quest extends AbstractScript implements IIdentifiable
 				candidates.add(partyMember);
 			}
 		}
-		// if there was no match, return null...
-		if (candidates.isEmpty())
-		{
-			return null;
-		}
 		
 		// if a match was found from the party, return one of them at random.
-		return candidates.get(Rnd.get(candidates.size()));
+		return candidates.isEmpty() ? null : candidates.get(Rnd.get(candidates.size()));
 	}
 	
 	/**
@@ -2514,11 +2458,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 				}
 			}
 		}
-		if ((luckyPlayer != null) && checkDistanceToTarget(luckyPlayer, npc))
-		{
-			return luckyPlayer;
-		}
-		return null;
+		return (luckyPlayer != null) && checkDistanceToTarget(luckyPlayer, npc) ? luckyPlayer : null;
 	}
 	
 	/**
@@ -2553,15 +2493,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		QuestState qs = player.getQuestState(getName());
 		if (!player.isInParty())
 		{
-			if (!checkPartyMemberConditions(qs, condition, target))
-			{
-				return null;
-			}
-			if (!checkDistanceToTarget(player, target))
-			{
-				return null;
-			}
-			return qs;
+			return !checkPartyMemberConditions(qs, condition, target) || !checkDistanceToTarget(player, target) ? null : qs;
 		}
 		
 		final List<QuestState> candidates = new ArrayList<>();
@@ -2593,11 +2525,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		
 		qs = candidates.get(getRandom(candidates.size()));
-		if (!checkDistanceToTarget(qs.getPlayer(), target))
-		{
-			return null;
-		}
-		return qs;
+		return !checkDistanceToTarget(qs.getPlayer(), target) ? null : qs;
 	}
 	
 	private boolean checkPartyMemberConditions(QuestState qs, int condition, L2Npc npc)
@@ -2826,14 +2754,13 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	public void sendNpcLogList(L2PcInstance activeChar)
 	{
-		final QuestState qs = activeChar.getQuestState(getName());
-		
-		if (qs != null)
+		if (activeChar.getQuestState(getName()) == null)
 		{
-			final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
-			getNpcLogList(activeChar).forEach(packet::add);
-			activeChar.sendPacket(packet);
+			return;
 		}
+		final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
+		getNpcLogList(activeChar).forEach(packet::add);
+		activeChar.sendPacket(packet);
 	}
 	
 	/**

@@ -95,22 +95,17 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		}
 		
 		// Cannot discard item that the skill is consuming
-		if (activeChar.isCastingNow())
+		if (activeChar.isCastingNow() && (activeChar.getCurrentSkill() != null) && (activeChar.getCurrentSkill().getSkill().getItemConsumeId() == itemToRemove.getId()))
 		{
-			if ((activeChar.getCurrentSkill() != null) && (activeChar.getCurrentSkill().getSkill().getItemConsumeId() == itemToRemove.getId()))
-			{
-				activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-				return;
-			}
+			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+			return;
 		}
+		
 		// Cannot discard item that the skill is consuming
-		if (activeChar.isCastingSimultaneouslyNow())
+		if (activeChar.isCastingSimultaneouslyNow() && (activeChar.getLastSimultaneousSkillCast() != null) && (activeChar.getLastSimultaneousSkillCast().getItemConsumeId() == itemToRemove.getId()))
 		{
-			if ((activeChar.getLastSimultaneousSkillCast() != null) && (activeChar.getLastSimultaneousSkillCast().getItemConsumeId() == itemToRemove.getId()))
-			{
-				activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-				return;
-			}
+			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+			return;
 		}
 		
 		final int itemId = itemToRemove.getId();

@@ -427,35 +427,19 @@ public enum ClassId implements IIdentifiable
 		{
 			case HUMAN:
 			{
-				if (player.getClassId().isMage())
-				{
-					return 10;
-				}
-				return 0;
+				return player.getClassId().isMage() ? 10 : 0;
 			}
 			case ELF:
 			{
-				if (player.getClassId().isMage())
-				{
-					return 25;
-				}
-				return 18;
+				return player.getClassId().isMage() ? 25 : 18;
 			}
 			case DARK_ELF:
 			{
-				if (player.getClassId().isMage())
-				{
-					return 38;
-				}
-				return 31;
+				return player.getClassId().isMage() ? 38 : 31;
 			}
 			case ORC:
 			{
-				if (player.getClassId().isMage())
-				{
-					return 49;
-				}
-				return 44;
+				return player.getClassId().isMage() ? 49 : 44;
 			}
 			case DWARF:
 			{
@@ -463,19 +447,11 @@ public enum ClassId implements IIdentifiable
 			}
 			case KAMAEL:
 			{
-				if (player.getAppearance().getSex())
-				{
-					return 124;
-				}
-				return 123;
+				return player.getAppearance().getSex() ? 124 : 123;
 			}
 			case ERTHEIA:
 			{
-				if (player.getClassId().isMage())
-				{
-					return 183;
-				}
-				return 182;
+				return player.getClassId().isMage() ? 183 : 182;
 			}
 		}
 		return 0;

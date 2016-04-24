@@ -45,13 +45,12 @@ public class Unstuck implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
-		// Thanks nbd
 		if (!TvTEvent.onEscapeUse(activeChar.getObjectId()))
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		else if (activeChar.isJailed())
+		if (activeChar.isJailed())
 		{
 			activeChar.sendMessage("You cannot use this function while you are jailed.");
 			return false;

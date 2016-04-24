@@ -65,19 +65,8 @@ public final class RequestFriendList extends L2GameClientPacket
 			
 			friend = L2World.getInstance().getPlayer(friendName);
 			
-			if ((friend == null) || !friend.isOnline())
-			{
-				// (Currently: Offline)
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE);
-				sm.addString(friendName);
-			}
-			else
-			{
-				// (Currently: Online)
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_ONLINE);
-				sm.addString(friendName);
-			}
-			
+			sm = (friend == null) || !friend.isOnline() ? SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE) : SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_ONLINE);
+			sm.addString(friendName);
 			activeChar.sendPacket(sm);
 		}
 		

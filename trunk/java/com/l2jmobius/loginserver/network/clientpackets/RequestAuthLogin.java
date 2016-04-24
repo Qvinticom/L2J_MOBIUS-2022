@@ -26,7 +26,6 @@ import javax.crypto.Cipher;
 import com.l2jmobius.Config;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.LoginController;
-import com.l2jmobius.loginserver.LoginController.AuthLoginResult;
 import com.l2jmobius.loginserver.model.data.AccountInfo;
 import com.l2jmobius.loginserver.network.L2LoginClient;
 import com.l2jmobius.loginserver.network.L2LoginClient.LoginClientState;
@@ -149,8 +148,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			return;
 		}
 		
-		final AuthLoginResult result = lc.tryCheckinAccount(client, clientAddr, info);
-		switch (result)
+		switch (lc.tryCheckinAccount(client, clientAddr, info))
 		{
 			case AUTH_SUCCESS:
 			{

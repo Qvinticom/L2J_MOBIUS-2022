@@ -35,17 +35,6 @@ public class L2AdventurerInstance extends L2NpcInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		
-		if (val == 0)
-		{
-			pom = "" + npcId;
-		}
-		else
-		{
-			pom = npcId + "-" + val;
-		}
-		
-		return "html/adventurer_guildsman/" + pom + ".htm";
+		return "html/adventurer_guildsman/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
 	}
 }

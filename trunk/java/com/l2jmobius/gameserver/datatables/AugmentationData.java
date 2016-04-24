@@ -321,170 +321,77 @@ public class AugmentationData
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
-			
 			final File aFile = new File(Config.DATAPACK_ROOT + "/stats/augmentation/retailchances.xml");
-			if (aFile.exists())
-			{
-				Document aDoc = null;
-				
-				try
-				{
-					aDoc = factory.newDocumentBuilder().parse(aFile);
-				}
-				catch (Exception e)
-				{
-					e.printStackTrace();
-					return;
-				}
-				String aWeaponType = null;
-				int aStoneId = 0;
-				int aVariationId = 0;
-				int aCategoryChance = 0;
-				int aAugmentId = 0;
-				float aAugmentChance = 0;
-				
-				for (Node l = aDoc.getFirstChild(); l != null; l = l.getNextSibling())
-				{
-					if (l.getNodeName().equals("list"))
-					{
-						NamedNodeMap aNodeAttributes = null;
-						
-						for (Node n = l.getFirstChild(); n != null; n = n.getNextSibling())
-						{
-							if (n.getNodeName().equals("weapon"))
-							{
-								aNodeAttributes = n.getAttributes();
-								
-								aWeaponType = aNodeAttributes.getNamedItem("type").getNodeValue();
-								
-								for (Node c = n.getFirstChild(); c != null; c = c.getNextSibling())
-								{
-									if (c.getNodeName().equals("stone"))
-									{
-										aNodeAttributes = c.getAttributes();
-										
-										aStoneId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-										
-										for (Node v = c.getFirstChild(); v != null; v = v.getNextSibling())
-										{
-											if (v.getNodeName().equals("variation"))
-											{
-												aNodeAttributes = v.getAttributes();
-												
-												aVariationId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-												
-												for (Node j = v.getFirstChild(); j != null; j = j.getNextSibling())
-												{
-													if (j.getNodeName().equals("category"))
-													{
-														aNodeAttributes = j.getAttributes();
-														
-														aCategoryChance = Integer.parseInt(aNodeAttributes.getNamedItem("probability").getNodeValue());
-														
-														for (Node e = j.getFirstChild(); e != null; e = e.getNextSibling())
-														{
-															if (e.getNodeName().equals("augment"))
-															{
-																aNodeAttributes = e.getAttributes();
-																
-																aAugmentId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-																aAugmentChance = Float.parseFloat(aNodeAttributes.getNamedItem("chance").getNodeValue());
-																
-																_augmentationChances.add(new AugmentationChance(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			else
+			if (!aFile.exists())
 			{
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": ERROR The retailchances.xml data file is missing.");
 				return;
 			}
-		}
-		if (Config.RETAIL_LIKE_AUGMENTATION_ACCESSORY)
-		{
-			final DocumentBuilderFactory factory3 = DocumentBuilderFactory.newInstance();
-			factory3.setValidating(false);
-			factory3.setIgnoringComments(true);
-			
-			final File aFile3 = new File(Config.DATAPACK_ROOT + "/stats/augmentation/retailchances_accessory.xml");
-			if (aFile3.exists())
+			Document aDoc = null;
+			try
 			{
-				Document aDoc = null;
-				
-				try
+				aDoc = factory.newDocumentBuilder().parse(aFile);
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+				return;
+			}
+			String aWeaponType = null;
+			int aStoneId = 0;
+			int aVariationId = 0;
+			int aCategoryChance = 0;
+			int aAugmentId = 0;
+			float aAugmentChance = 0;
+			
+			for (Node l = aDoc.getFirstChild(); l != null; l = l.getNextSibling())
+			{
+				if (l.getNodeName().equals("list"))
 				{
-					aDoc = factory3.newDocumentBuilder().parse(aFile3);
-				}
-				catch (Exception e)
-				{
-					e.printStackTrace();
-					return;
-				}
-				String aWeaponType = null;
-				int aStoneId = 0;
-				int aVariationId = 0;
-				int aCategoryChance = 0;
-				int aAugmentId = 0;
-				float aAugmentChance = 0;
-				
-				for (Node l = aDoc.getFirstChild(); l != null; l = l.getNextSibling())
-				{
-					if (l.getNodeName().equals("list"))
+					NamedNodeMap aNodeAttributes = null;
+					
+					for (Node n = l.getFirstChild(); n != null; n = n.getNextSibling())
 					{
-						NamedNodeMap aNodeAttributes = null;
-						for (Node n = l.getFirstChild(); n != null; n = n.getNextSibling())
+						if (n.getNodeName().equals("weapon"))
 						{
-							if (n.getNodeName().equals("weapon"))
+							aNodeAttributes = n.getAttributes();
+							
+							aWeaponType = aNodeAttributes.getNamedItem("type").getNodeValue();
+							
+							for (Node c = n.getFirstChild(); c != null; c = c.getNextSibling())
 							{
-								aNodeAttributes = n.getAttributes();
-								
-								aWeaponType = aNodeAttributes.getNamedItem("type").getNodeValue();
-								
-								for (Node c = n.getFirstChild(); c != null; c = c.getNextSibling())
+								if (c.getNodeName().equals("stone"))
 								{
-									if (c.getNodeName().equals("stone"))
+									aNodeAttributes = c.getAttributes();
+									
+									aStoneId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
+									
+									for (Node v = c.getFirstChild(); v != null; v = v.getNextSibling())
 									{
-										aNodeAttributes = c.getAttributes();
-										
-										aStoneId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-										
-										for (Node v = c.getFirstChild(); v != null; v = v.getNextSibling())
+										if (v.getNodeName().equals("variation"))
 										{
-											if (v.getNodeName().equals("variation"))
+											aNodeAttributes = v.getAttributes();
+											
+											aVariationId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
+											
+											for (Node j = v.getFirstChild(); j != null; j = j.getNextSibling())
 											{
-												aNodeAttributes = v.getAttributes();
-												
-												aVariationId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-												
-												for (Node j = v.getFirstChild(); j != null; j = j.getNextSibling())
+												if (j.getNodeName().equals("category"))
 												{
-													if (j.getNodeName().equals("category"))
+													aNodeAttributes = j.getAttributes();
+													
+													aCategoryChance = Integer.parseInt(aNodeAttributes.getNamedItem("probability").getNodeValue());
+													
+													for (Node e = j.getFirstChild(); e != null; e = e.getNextSibling())
 													{
-														aNodeAttributes = j.getAttributes();
-														
-														aCategoryChance = Integer.parseInt(aNodeAttributes.getNamedItem("probability").getNodeValue());
-														
-														for (Node e = j.getFirstChild(); e != null; e = e.getNextSibling())
+														if (e.getNodeName().equals("augment"))
 														{
-															if (e.getNodeName().equals("augment"))
-															{
-																aNodeAttributes = e.getAttributes();
-																
-																aAugmentId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-																aAugmentChance = Float.parseFloat(aNodeAttributes.getNamedItem("chance").getNodeValue());
-																
-																_augmentationChancesAcc.add(new augmentationChanceAcc(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
-															}
+															aNodeAttributes = e.getAttributes();
+															
+															aAugmentId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
+															aAugmentChance = Float.parseFloat(aNodeAttributes.getNamedItem("chance").getNodeValue());
+															
+															_augmentationChances.add(new AugmentationChance(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
 														}
 													}
 												}
@@ -497,10 +404,94 @@ public class AugmentationData
 					}
 				}
 			}
-			else
+		}
+		if (!Config.RETAIL_LIKE_AUGMENTATION_ACCESSORY)
+		{
+			return;
+		}
+		final DocumentBuilderFactory factory3 = DocumentBuilderFactory.newInstance();
+		factory3.setValidating(false);
+		factory3.setIgnoringComments(true);
+		final File aFile3 = new File(Config.DATAPACK_ROOT + "/stats/augmentation/retailchances_accessory.xml");
+		if (!aFile3.exists())
+		{
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": ERROR The retailchances_accessory.xml data file is missing.");
+			return;
+		}
+		Document aDoc = null;
+		try
+		{
+			aDoc = factory3.newDocumentBuilder().parse(aFile3);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			return;
+		}
+		String aWeaponType = null;
+		int aStoneId = 0;
+		int aVariationId = 0;
+		int aCategoryChance = 0;
+		int aAugmentId = 0;
+		float aAugmentChance = 0;
+		
+		for (Node l = aDoc.getFirstChild(); l != null; l = l.getNextSibling())
+		{
+			if (l.getNodeName().equals("list"))
 			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": ERROR The retailchances_accessory.xml data file is missing.");
-				return;
+				NamedNodeMap aNodeAttributes = null;
+				for (Node n = l.getFirstChild(); n != null; n = n.getNextSibling())
+				{
+					if (n.getNodeName().equals("weapon"))
+					{
+						aNodeAttributes = n.getAttributes();
+						
+						aWeaponType = aNodeAttributes.getNamedItem("type").getNodeValue();
+						
+						for (Node c = n.getFirstChild(); c != null; c = c.getNextSibling())
+						{
+							if (c.getNodeName().equals("stone"))
+							{
+								aNodeAttributes = c.getAttributes();
+								
+								aStoneId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
+								
+								for (Node v = c.getFirstChild(); v != null; v = v.getNextSibling())
+								{
+									if (v.getNodeName().equals("variation"))
+									{
+										aNodeAttributes = v.getAttributes();
+										
+										aVariationId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
+										
+										for (Node j = v.getFirstChild(); j != null; j = j.getNextSibling())
+										{
+											if (j.getNodeName().equals("category"))
+											{
+												aNodeAttributes = j.getAttributes();
+												
+												aCategoryChance = Integer.parseInt(aNodeAttributes.getNamedItem("probability").getNodeValue());
+												
+												for (Node e = j.getFirstChild(); e != null; e = e.getNextSibling())
+												{
+													if (e.getNodeName().equals("augment"))
+													{
+														aNodeAttributes = e.getAttributes();
+														
+														aAugmentId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
+														aAugmentChance = Float.parseFloat(aNodeAttributes.getNamedItem("chance").getNodeValue());
+														
+														_augmentationChancesAcc.add(new augmentationChanceAcc(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -108,8 +107,7 @@ public class L2PcInstanceAction implements IActionHandler
 						}
 						else
 						{
-							final Location destination = GeoData.getInstance().moveCheck(activeChar, player);
-							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
+							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, GeoData.getInstance().moveCheck(activeChar, player));
 						}
 						activeChar.onActionRequest();
 					}
@@ -124,8 +122,7 @@ public class L2PcInstanceAction implements IActionHandler
 					}
 					else
 					{
-						final Location destination = GeoData.getInstance().moveCheck(activeChar, player);
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
+						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, GeoData.getInstance().moveCheck(activeChar, player));
 					}
 				}
 			}

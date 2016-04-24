@@ -638,11 +638,7 @@ public final class SkillTreesData implements IXmlReader
 				continue;
 			}
 			final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
-			if ((oldSkill != null) && (oldSkill.getLevel() == (skill.getSkillLevel() - 1)))
-			{
-				return true;
-			}
-			else if ((oldSkill == null) && (skill.getSkillLevel() == 1))
+			if (((oldSkill != null) && (oldSkill.getLevel() == (skill.getSkillLevel() - 1))) || ((oldSkill == null) && (skill.getSkillLevel() == 1)))
 			{
 				return true;
 			}
@@ -789,8 +785,7 @@ public final class SkillTreesData implements IXmlReader
 		{
 			for (L2SkillLearn s : learnable)
 			{
-				final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
-				holder.addSkill(sk);
+				holder.addSkill(SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));
 			}
 			
 			// Get new available skills, some skills depend of previous skills to be available.
@@ -908,9 +903,7 @@ public final class SkillTreesData implements IXmlReader
 		
 		for (L2SkillLearn skill : revelationSkills.values())
 		{
-			final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-			
-			if (oldSkill == null)
+			if (player.getSkills().get(skill.getSkillId()) == null)
 			{
 				result.add(skill);
 			}
@@ -1398,11 +1391,7 @@ public final class SkillTreesData implements IXmlReader
 	 */
 	public L2SkillLearn getTransferSkill(int id, int lvl, ClassId classId)
 	{
-		if (_transferSkillTrees.get(classId) != null)
-		{
-			return _transferSkillTrees.get(classId).get(SkillData.getSkillHashCode(id, lvl));
-		}
-		return null;
+		return _transferSkillTrees.get(classId) != null ? _transferSkillTrees.get(classId).get(SkillData.getSkillHashCode(id, lvl)) : null;
 	}
 	
 	/**
@@ -1497,12 +1486,9 @@ public final class SkillTreesData implements IXmlReader
 		{
 			for (L2SkillLearn s : skillTree.values())
 			{
-				if ((player.getLevel() < s.getGetLevel()) || (player.getDualClassLevel() < s.getDualClassLevel()))
+				if (((player.getLevel() < s.getGetLevel()) || (player.getDualClassLevel() < s.getDualClassLevel())) && ((minLevel == 0) || ((minLevel > s.getGetLevel()) && (minLevel > s.getDualClassLevel()))))
 				{
-					if ((minLevel == 0) || ((minLevel > s.getGetLevel()) && (minLevel > s.getDualClassLevel())))
-					{
-						minLevel = s.getGetLevel();
-					}
+					minLevel = s.getGetLevel();
 				}
 			}
 		}

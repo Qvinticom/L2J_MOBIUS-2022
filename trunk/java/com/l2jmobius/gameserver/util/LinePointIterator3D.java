@@ -75,7 +75,7 @@ public final class LinePointIterator3D
 			_first = false;
 			return true;
 		}
-		else if ((_dx >= _dy) && (_dx >= _dz))
+		if ((_dx >= _dy) && (_dx >= _dz))
 		{
 			if (_srcX != _dstX)
 			{

@@ -78,13 +78,9 @@ public final class RequestPetUseItem extends L2GameClientPacket
 		// If the item has reuse time and it has not passed.
 		// Message from reuse delay must come from item.
 		final int reuseDelay = item.getReuseDelay();
-		if (reuseDelay > 0)
+		if ((reuseDelay > 0) && (pet.getItemRemainingReuseTime(item.getObjectId()) > 0))
 		{
-			final long reuse = pet.getItemRemainingReuseTime(item.getObjectId());
-			if (reuse > 0)
-			{
-				return;
-			}
+			return;
 		}
 		
 		if (!item.isEquipped() && !item.getItem().checkCondition(pet, pet, true))

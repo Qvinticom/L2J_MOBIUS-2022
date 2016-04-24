@@ -16,8 +16,6 @@
  */
 package handlers.itemhandlers;
 
-import java.util.List;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.datatables.SkillData;
@@ -80,18 +78,11 @@ public class PetFood implements IItemHandler
 			else if (activeChar.isPlayer())
 			{
 				final L2PcInstance player = activeChar.getActingPlayer();
-				if (player.isMounted())
+				if (player.isMounted() && PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood().contains(Integer.valueOf(item.getId())) && player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 				{
-					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
-					if (foodIds.contains(Integer.valueOf(item.getId())))
-					{
-						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))
-						{
-							player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
-							player.setCurrentFeed(player.getCurrentFeed() + skill.getFeed());
-							return true;
-						}
-					}
+					player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
+					player.setCurrentFeed(player.getCurrentFeed() + skill.getFeed());
+					return true;
 				}
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addItemName(item);

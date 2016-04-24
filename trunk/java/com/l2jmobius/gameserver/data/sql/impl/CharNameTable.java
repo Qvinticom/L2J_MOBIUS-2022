@@ -52,21 +52,19 @@ public class CharNameTable
 	
 	public final void addName(L2PcInstance player)
 	{
-		if (player != null)
+		if (player == null)
 		{
-			addName(player.getObjectId(), player.getName());
-			_accessLevels.put(player.getObjectId(), player.getAccessLevel().getLevel());
+			return;
 		}
+		addName(player.getObjectId(), player.getName());
+		_accessLevels.put(player.getObjectId(), player.getAccessLevel().getLevel());
 	}
 	
 	private final void addName(int objectId, String name)
 	{
-		if (name != null)
+		if ((name != null) && !name.equals(_chars.get(objectId)))
 		{
-			if (!name.equals(_chars.get(objectId)))
-			{
-				_chars.put(objectId, name);
-			}
+			_chars.put(objectId, name);
 		}
 	}
 	
@@ -117,14 +115,14 @@ public class CharNameTable
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing char name: " + e.getMessage(), e);
 		}
 		
-		if (id > 0)
+		if (id <= 0)
 		{
-			_chars.put(id, name);
-			_accessLevels.put(id, accessLevel);
-			return id;
+			return -1; // not found
 		}
 		
-		return -1; // not found
+		_chars.put(id, name);
+		_accessLevels.put(id, accessLevel);
+		return id;
 	}
 	
 	public final String getNameById(int id)
@@ -170,12 +168,7 @@ public class CharNameTable
 	
 	public final int getAccessLevelById(int objectId)
 	{
-		if (getNameById(objectId) != null)
-		{
-			return _accessLevels.get(objectId);
-		}
-		
-		return 0;
+		return getNameById(objectId) != null ? _accessLevels.get(objectId) : 0;
 	}
 	
 	public synchronized boolean doesCharNameExist(String name)

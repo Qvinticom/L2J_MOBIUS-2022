@@ -202,12 +202,7 @@ public class L2Attackable extends L2Npc
 	 */
 	public void useMagic(Skill skill)
 	{
-		if ((skill == null) || isAlikeDead() || skill.isPassive() || isCastingNow() || isSkillDisabled(skill))
-		{
-			return;
-		}
-		
-		if ((getCurrentMp() < (getStat().getMpConsume(skill) + getStat().getMpInitialConsume(skill))) || (getCurrentHp() <= skill.getHpConsume()))
+		if ((skill == null) || isAlikeDead() || skill.isPassive() || isCastingNow() || isSkillDisabled(skill) || (getCurrentMp() < (getStat().getMpConsume(skill) + getStat().getMpInitialConsume(skill))) || (getCurrentHp() <= skill.getHpConsume()))
 		{
 			return;
 		}
@@ -351,8 +346,7 @@ public class L2Attackable extends L2Npc
 			final int hpRestore = (int) killer.getStat().calcStat(Stats.HP_RESTORE_ON_KILL, 0, null, null);
 			if (hpRestore > 0)
 			{
-				double amount = (killer.getMaxHp() * hpRestore) / 100;
-				amount = Math.max(Math.min(amount, killer.getMaxRecoverableHp() - killer.getCurrentHp()), 0);
+				final double amount = Math.max(Math.min(((killer.getMaxHp() * hpRestore) / 100), killer.getMaxRecoverableHp() - killer.getCurrentHp()), 0);
 				if (amount != 0)
 				{
 					killer.setCurrentHp(amount + killer.getCurrentHp());
@@ -366,8 +360,7 @@ public class L2Attackable extends L2Npc
 			final L2MonsterInstance mob = (L2MonsterInstance) this;
 			if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
 			{
-				final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(getId()) ? Config.MINIONS_RESPAWN_TIME.get(getId()) * 1000 : -1;
-				mob.getLeader().getMinionList().onMinionDie(mob, respawnTime);
+				mob.getLeader().getMinionList().onMinionDie(mob, (Config.MINIONS_RESPAWN_TIME.containsKey(getId()) ? Config.MINIONS_RESPAWN_TIME.get(getId()) * 1000 : -1));
 			}
 			
 			if (mob.hasMinions())
@@ -571,14 +564,7 @@ public class L2Attackable extends L2Npc
 									
 									if (partyPlayer.getLevel() > partyLvl)
 									{
-										if (attackerParty.isInCommandChannel())
-										{
-											partyLvl = attackerParty.getCommandChannel().getLevel();
-										}
-										else
-										{
-											partyLvl = partyPlayer.getLevel();
-										}
+										partyLvl = attackerParty.isInCommandChannel() ? attackerParty.getCommandChannel().getLevel() : partyPlayer.getLevel();
 									}
 								}
 								rewards.remove(partyPlayer); // Remove the L2PcInstance from the L2Attackable rewards
@@ -592,14 +578,7 @@ public class L2Attackable extends L2Npc
 									rewardedMembers.add(partyPlayer);
 									if (partyPlayer.getLevel() > partyLvl)
 									{
-										if (attackerParty.isInCommandChannel())
-										{
-											partyLvl = attackerParty.getCommandChannel().getLevel();
-										}
-										else
-										{
-											partyLvl = partyPlayer.getLevel();
-										}
+										partyLvl = attackerParty.isInCommandChannel() ? attackerParty.getCommandChannel().getLevel() : partyPlayer.getLevel();
 									}
 								}
 							}
@@ -1037,32 +1016,34 @@ public class L2Attackable extends L2Npc
 		}
 		
 		// Apply Special Item drop with random(rnd) quantity(qty) for champions.
-		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && ((Config.L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE > 0) || (Config.L2JMOD_CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE > 0)))
+		if (!Config.L2JMOD_CHAMPION_ENABLE || !isChampion() || ((Config.L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE <= 0) && (Config.L2JMOD_CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE <= 0)))
 		{
-			int champqty = Rnd.get(Config.L2JMOD_CHAMPION_REWARD_QTY);
-			final ItemHolder item = new ItemHolder(Config.L2JMOD_CHAMPION_REWARD_ID, ++champqty);
-			
-			if ((player.getLevel() <= getLevel()) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE))
+			return;
+		}
+		
+		int champqty = Rnd.get(Config.L2JMOD_CHAMPION_REWARD_QTY);
+		final ItemHolder item = new ItemHolder(Config.L2JMOD_CHAMPION_REWARD_ID, ++champqty);
+		
+		if ((player.getLevel() <= getLevel()) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE))
+		{
+			if (Config.AUTO_LOOT || isFlying())
 			{
-				if (Config.AUTO_LOOT || isFlying())
-				{
-					player.addItem("ChampionLoot", item.getId(), item.getCount(), this, true); // Give the item(s) to the L2PcInstance that has killed the L2Attackable
-				}
-				else
-				{
-					dropItem(player, item);
-				}
+				player.addItem("ChampionLoot", item.getId(), item.getCount(), this, true); // Give the item(s) to the L2PcInstance that has killed the L2Attackable
 			}
-			else if ((player.getLevel() > getLevel()) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE))
+			else
 			{
-				if (Config.AUTO_LOOT || isFlying())
-				{
-					player.addItem("ChampionLoot", item.getId(), item.getCount(), this, true); // Give the item(s) to the L2PcInstance that has killed the L2Attackable
-				}
-				else
-				{
-					dropItem(player, item);
-				}
+				dropItem(player, item);
+			}
+		}
+		else if ((player.getLevel() > getLevel()) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE))
+		{
+			if (Config.AUTO_LOOT || isFlying())
+			{
+				player.addItem("ChampionLoot", item.getId(), item.getCount(), this, true); // Give the item(s) to the L2PcInstance that has killed the L2Attackable
+			}
+			else
+			{
+				dropItem(player, item);
 			}
 		}
 	}
@@ -1091,12 +1072,7 @@ public class L2Attackable extends L2Npc
 		final L2PcInstance player = lastAttacker.getActingPlayer();
 		
 		// Don't drop anything if the last attacker or owner isn't L2PcInstance
-		if (player == null)
-		{
-			return;
-		}
-		
-		if ((player.getLevel() - getLevel()) > 9)
+		if ((player == null) || ((player.getLevel() - getLevel()) > 9))
 		{
 			return;
 		}
@@ -1202,15 +1178,15 @@ public class L2Attackable extends L2Npc
 	 */
 	public boolean isOldCorpse(L2PcInstance attacker, int remainingTime, boolean sendMessage)
 	{
-		if (isDead() && (DecayTaskManager.getInstance().getRemainingTime(this) < remainingTime))
+		if (!isDead() || (DecayTaskManager.getInstance().getRemainingTime(this) >= remainingTime))
 		{
-			if (sendMessage && (attacker != null))
-			{
-				attacker.sendPacket(SystemMessageId.THE_CORPSE_IS_TOO_OLD_THE_SKILL_CANNOT_BE_USED);
-			}
-			return true;
+			return false;
 		}
-		return false;
+		if (sendMessage && (attacker != null))
+		{
+			attacker.sendPacket(SystemMessageId.THE_CORPSE_IS_TOO_OLD_THE_SKILL_CANNOT_BE_USED);
+		}
+		return true;
 	}
 	
 	/**
@@ -1220,15 +1196,15 @@ public class L2Attackable extends L2Npc
 	 */
 	public boolean checkSpoilOwner(L2PcInstance sweeper, boolean sendMessage)
 	{
-		if ((sweeper.getObjectId() != getSpoilerObjectId()) && !sweeper.isInLooterParty(getSpoilerObjectId()))
+		if ((sweeper.getObjectId() == getSpoilerObjectId()) || sweeper.isInLooterParty(getSpoilerObjectId()))
 		{
-			if (sendMessage)
-			{
-				sweeper.sendPacket(SystemMessageId.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER);
-			}
-			return false;
+			return true;
 		}
-		return true;
+		if (sendMessage)
+		{
+			sweeper.sendPacket(SystemMessageId.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER);
+		}
+		return false;
 	}
 	
 	/**
@@ -1407,13 +1383,7 @@ public class L2Attackable extends L2Npc
 			overhitPercentage = 25;
 		}
 		
-		// Get the overhit exp bonus according to the above over-hit damage percentage
-		// (1/1 basis - 13% of over-hit damage, 13% of extra exp is given, and so on...)
-		final double overhitExp = ((overhitPercentage / 100) * normalExp);
-		
-		// Return the rounded ammount of exp points to be added to the player's normal exp reward
-		final long bonusOverhit = Math.round(overhitExp);
-		return bonusOverhit;
+		return Math.round(((overhitPercentage / 100) * normalExp));
 	}
 	
 	/**
@@ -1448,12 +1418,9 @@ public class L2Attackable extends L2Npc
 		setWalking();
 		
 		// check the region where this mob is, do not activate the AI if region is inactive.
-		if (!isInActiveRegion())
+		if (!isInActiveRegion() && hasAI())
 		{
-			if (hasAI())
-			{
-				getAI().stopAITask();
-			}
+			getAI().stopAITask();
 		}
 	}
 	
@@ -1490,66 +1457,67 @@ public class L2Attackable extends L2Npc
 	 */
 	public final void setSeeded(L2PcInstance seeder)
 	{
-		if ((_seed != null) && (_seederObjId == seeder.getObjectId()))
+		if ((_seed == null) || (_seederObjId != seeder.getObjectId()))
 		{
-			_seeded = true;
-			
-			int count = 1;
-			for (int skillId : getTemplate().getSkills().keySet())
+			return;
+		}
+		
+		_seeded = true;
+		int count = 1;
+		for (int skillId : getTemplate().getSkills().keySet())
+		{
+			switch (skillId)
 			{
-				switch (skillId)
+				case 4303: // Strong type x2
 				{
-					case 4303: // Strong type x2
-					{
-						count *= 2;
-						break;
-					}
-					case 4304: // Strong type x3
-					{
-						count *= 3;
-						break;
-					}
-					case 4305: // Strong type x4
-					{
-						count *= 4;
-						break;
-					}
-					case 4306: // Strong type x5
-					{
-						count *= 5;
-						break;
-					}
-					case 4307: // Strong type x6
-					{
-						count *= 6;
-						break;
-					}
-					case 4308: // Strong type x7
-					{
-						count *= 7;
-						break;
-					}
-					case 4309: // Strong type x8
-					{
-						count *= 8;
-						break;
-					}
-					case 4310: // Strong type x9
-					{
-						count *= 9;
-						break;
-					}
+					count *= 2;
+					break;
+				}
+				case 4304: // Strong type x3
+				{
+					count *= 3;
+					break;
+				}
+				case 4305: // Strong type x4
+				{
+					count *= 4;
+					break;
+				}
+				case 4306: // Strong type x5
+				{
+					count *= 5;
+					break;
+				}
+				case 4307: // Strong type x6
+				{
+					count *= 6;
+					break;
+				}
+				case 4308: // Strong type x7
+				{
+					count *= 7;
+					break;
+				}
+				case 4309: // Strong type x8
+				{
+					count *= 8;
+					break;
+				}
+				case 4310: // Strong type x9
+				{
+					count *= 9;
+					break;
 				}
 			}
-			
-			// hi-lvl mobs bonus
-			final int diff = getLevel() - _seed.getLevel() - 5;
-			if (diff > 0)
-			{
-				count += diff;
-			}
-			_harvestItem.set(new ItemHolder(_seed.getCropId(), count * Config.RATE_DROP_MANOR));
 		}
+		
+		// hi-lvl mobs bonus
+		final int diff = getLevel() - _seed.getLevel() - 5;
+		if (diff > 0)
+		{
+			count += diff;
+		}
+		_harvestItem.set(new ItemHolder(_seed.getCropId(), count * Config.RATE_DROP_MANOR));
 	}
 	
 	/**
@@ -1559,11 +1527,12 @@ public class L2Attackable extends L2Npc
 	 */
 	public final void setSeeded(L2Seed seed, L2PcInstance seeder)
 	{
-		if (!_seeded)
+		if (_seeded)
 		{
-			_seed = seed;
-			_seederObjId = seeder.getObjectId();
+			return;
 		}
+		_seed = seed;
+		_seederObjId = seeder.getObjectId();
 	}
 	
 	public final int getSeederId()
@@ -1655,13 +1624,9 @@ public class L2Attackable extends L2Npc
 		}
 		
 		final float divider = (getLevel() > 0) && (getExpReward() > 0) ? (getTemplate().getBaseHpMax() * 9 * getLevel() * getLevel()) / (100 * getExpReward()) : 0;
-		if (divider == 0)
-		{
-			return 0;
-		}
 		
 		// negative value - vitality will be consumed
-		return (int) (-Math.min(damage, getMaxHp()) / divider);
+		return divider == 0 ? 0 : (int) (-Math.min(damage, getMaxHp()) / divider);
 	}
 	
 	/*
@@ -1669,12 +1634,7 @@ public class L2Attackable extends L2Npc
 	 */
 	public boolean useVitalityRate()
 	{
-		if (isChampion() && !Config.L2JMOD_CHAMPION_ENABLE_VITALITY)
-		{
-			return false;
-		}
-		
-		return true;
+		return (!isChampion() || Config.L2JMOD_CHAMPION_ENABLE_VITALITY);
 	}
 	
 	/** Return True if the L2Character is RaidBoss or his minion. */

@@ -88,107 +88,102 @@ public class CharacterSelect extends L2GameClientPacket
 		
 		// We should always be able to acquire the lock
 		// But if we can't lock then nothing should be done (i.e. repeated packet)
-		if (client.getActiveCharLock().tryLock())
+		if (!client.getActiveCharLock().tryLock())
 		{
-			try
+			return;
+		}
+		
+		try
+		{
+			// should always be null
+			// but if not then this is repeated packet and nothing should be done here
+			if (client.getActiveChar() == null)
 			{
-				// should always be null
-				// but if not then this is repeated packet and nothing should be done here
-				if (client.getActiveChar() == null)
+				final CharSelectInfoPackage info = client.getCharSelection(_charSlot);
+				if (info == null)
 				{
-					final CharSelectInfoPackage info = client.getCharSelection(_charSlot);
-					if (info == null)
-					{
-						return;
-					}
-					
-					// Banned?
-					if (PunishmentManager.getInstance().hasPunishment(info.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.BAN) || PunishmentManager.getInstance().hasPunishment(client.getAccountName(), PunishmentAffect.ACCOUNT, PunishmentType.BAN) || PunishmentManager.getInstance().hasPunishment(client.getConnectionAddress().getHostAddress(), PunishmentAffect.IP, PunishmentType.BAN))
-					{
-						client.close(ServerClose.STATIC_PACKET);
-						return;
-					}
-					
-					// Selected character is banned (compatibility with previous versions).
-					if (info.getAccessLevel() < 0)
-					{
-						client.close(ServerClose.STATIC_PACKET);
-						return;
-					}
-					
-					if ((Config.L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddClient(AntiFeedManager.GAME_ID, client, Config.L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP))
+					return;
+				}
+				
+				// Banned?
+				if (PunishmentManager.getInstance().hasPunishment(info.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.BAN) || PunishmentManager.getInstance().hasPunishment(client.getAccountName(), PunishmentAffect.ACCOUNT, PunishmentType.BAN) || PunishmentManager.getInstance().hasPunishment(client.getConnectionAddress().getHostAddress(), PunishmentAffect.IP, PunishmentType.BAN) || (info.getAccessLevel() < 0))
+				{
+					client.close(ServerClose.STATIC_PACKET);
+					return;
+				}
+				
+				if ((Config.L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddClient(AntiFeedManager.GAME_ID, client, Config.L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP))
+				{
+					final NpcHtmlMessage msg = new NpcHtmlMessage();
+					msg.setFile(info.getHtmlPrefix(), "html/mods/IPRestriction.htm");
+					msg.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(client, Config.L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP)));
+					client.sendPacket(msg);
+					return;
+				}
+				
+				if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_BALANCE_ONLINE_PLAYERS)
+				{
+					if (info.isGood() && (L2World.getInstance().getAllGoodPlayersCount() >= ((L2World.getInstance().getAllEvilPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
 					{
 						final NpcHtmlMessage msg = new NpcHtmlMessage();
-						msg.setFile(info.getHtmlPrefix(), "html/mods/IPRestriction.htm");
-						msg.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(client, Config.L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP)));
+						msg.setFile(info.getHtmlPrefix(), "html/mods/Faction/ExceededOnlineLimit.htm");
+						msg.replace("%more%", Config.FACTION_GOOD_TEAM_NAME);
+						msg.replace("%less%", Config.FACTION_EVIL_TEAM_NAME);
 						client.sendPacket(msg);
 						return;
 					}
-					
-					if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_BALANCE_ONLINE_PLAYERS)
+					if (info.isEvil() && (L2World.getInstance().getAllEvilPlayersCount() >= ((L2World.getInstance().getAllGoodPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
 					{
-						if (info.isGood() && (L2World.getInstance().getAllGoodPlayersCount() >= ((L2World.getInstance().getAllEvilPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
-						{
-							final NpcHtmlMessage msg = new NpcHtmlMessage();
-							msg.setFile(info.getHtmlPrefix(), "html/mods/Faction/ExceededOnlineLimit.htm");
-							msg.replace("%more%", Config.FACTION_GOOD_TEAM_NAME);
-							msg.replace("%less%", Config.FACTION_EVIL_TEAM_NAME);
-							client.sendPacket(msg);
-							return;
-						}
-						if (info.isEvil() && (L2World.getInstance().getAllEvilPlayersCount() >= ((L2World.getInstance().getAllGoodPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
-						{
-							final NpcHtmlMessage msg = new NpcHtmlMessage();
-							msg.setFile(info.getHtmlPrefix(), "html/mods/Faction/ExceededOnlineLimit.htm");
-							msg.replace("%more%", Config.FACTION_EVIL_TEAM_NAME);
-							msg.replace("%less%", Config.FACTION_GOOD_TEAM_NAME);
-							client.sendPacket(msg);
-							return;
-						}
-					}
-					
-					// The L2PcInstance must be created here, so that it can be attached to the L2GameClient
-					if (Config.DEBUG)
-					{
-						_log.fine("selected slot:" + _charSlot);
-					}
-					
-					// load up character from disk
-					final L2PcInstance cha = client.loadCharFromDisk(_charSlot);
-					if (cha == null)
-					{
-						return; // handled in L2GameClient
-					}
-					L2World.getInstance().addPlayerToWorld(cha);
-					CharNameTable.getInstance().addName(cha);
-					
-					cha.setClient(client);
-					client.setActiveChar(cha);
-					cha.setOnlineStatus(true, true);
-					
-					final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), getClient()), Containers.Players(), TerminateReturn.class);
-					if ((terminate != null) && terminate.terminate())
-					{
-						cha.deleteMe();
+						final NpcHtmlMessage msg = new NpcHtmlMessage();
+						msg.setFile(info.getHtmlPrefix(), "html/mods/Faction/ExceededOnlineLimit.htm");
+						msg.replace("%more%", Config.FACTION_EVIL_TEAM_NAME);
+						msg.replace("%less%", Config.FACTION_GOOD_TEAM_NAME);
+						client.sendPacket(msg);
 						return;
 					}
-					
-					client.setState(GameClientState.IN_GAME);
-					sendPacket(new CharSelected(cha, client.getSessionId().playOkID1));
 				}
+				
+				// The L2PcInstance must be created here, so that it can be attached to the L2GameClient
+				if (Config.DEBUG)
+				{
+					_log.fine("selected slot:" + _charSlot);
+				}
+				
+				// load up character from disk
+				final L2PcInstance cha = client.loadCharFromDisk(_charSlot);
+				if (cha == null)
+				{
+					return; // handled in L2GameClient
+				}
+				L2World.getInstance().addPlayerToWorld(cha);
+				CharNameTable.getInstance().addName(cha);
+				
+				cha.setClient(client);
+				client.setActiveChar(cha);
+				cha.setOnlineStatus(true, true);
+				
+				final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), getClient()), Containers.Players(), TerminateReturn.class);
+				if ((terminate != null) && terminate.terminate())
+				{
+					cha.deleteMe();
+					return;
+				}
+				
+				client.setState(GameClientState.IN_GAME);
+				sendPacket(new CharSelected(cha, client.getSessionId().playOkID1));
 			}
-			finally
-			{
-				client.getActiveCharLock().unlock();
-			}
-			
-			final LogRecord record = new LogRecord(Level.INFO, "Logged in");
-			record.setParameters(new Object[]
-			{
-				client
-			});
-			_logAccounting.log(record);
 		}
+		finally
+		{
+			client.getActiveCharLock().unlock();
+		}
+		
+		final LogRecord record = new LogRecord(Level.INFO, "Logged in");
+		record.setParameters(new Object[]
+		{
+			client
+		});
+		_logAccounting.log(record);
 	}
 	
 	@Override

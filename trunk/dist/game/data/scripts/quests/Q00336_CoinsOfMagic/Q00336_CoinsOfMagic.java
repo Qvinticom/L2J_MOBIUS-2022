@@ -229,11 +229,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 			{
 				if (qs.isCreated())
 				{
-					if (player.getLevel() < 40)
-					{
-						return "30232-01.htm";
-					}
-					return "30232-02.htm";
+					return player.getLevel() < 40 ? "30232-01.htm" : "30232-02.htm";
 				}
 				if (qs.isStarted())
 				{
@@ -1100,14 +1096,11 @@ public final class Q00336_CoinsOfMagic extends Quest
 			case HARIT_LIZARDM_MATRIARCH:
 			{
 				final QuestState qs = getRandomPlayerFromPartyCoin(killer, npc, 2);
-				if (qs != null)
+				if ((qs != null) && (getRandom(1000) < 63))
 				{
-					if (getRandom(1000) < 63)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_KALDIS_GOLD_DRAGON, 1, 0, 1, true);
-						qs.setCond(3);
-						qs.showQuestionMark(336);
-					}
+					giveItemRandomly(qs.getPlayer(), npc, Q_KALDIS_GOLD_DRAGON, 1, 0, 1, true);
+					qs.setCond(3);
+					qs.showQuestionMark(336);
 				}
 				return super.onKill(npc, killer, isSummon);
 			}
@@ -1631,7 +1624,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 			qs.set(PARAM_1, 0);
 			return npcId + "-20.html";
 		}
-		else if (qs.getInt(WEIGHT_POINT) == 0)
+		if (qs.getInt(WEIGHT_POINT) == 0)
 		{
 			switch (qs.getInt(PARAM_1))
 			{

@@ -97,8 +97,7 @@ public class AdminZone implements IAdminCommandHandler
 			}
 			else
 			{
-				final int zoneId = Integer.parseInt(next);
-				ZoneManager.getInstance().getZoneById(zoneId).visualizeZone(activeChar.getZ());
+				ZoneManager.getInstance().getZoneById(Integer.parseInt(next)).visualizeZone(activeChar.getZ());
 			}
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_visual_clear"))

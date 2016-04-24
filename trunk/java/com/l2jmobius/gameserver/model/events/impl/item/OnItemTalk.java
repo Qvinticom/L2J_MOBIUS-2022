@@ -50,5 +50,4 @@ public class OnItemTalk implements IBaseEvent
 	{
 		return EventType.ON_ITEM_TALK;
 	}
-	
 }

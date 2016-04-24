@@ -231,15 +231,15 @@ public final class Q00511_AwlUnderFoot extends Quest
 		{
 			return "FortressWarden-01.htm";
 		}
-		else if (fortress.getFortState() == 0)
+		if (fortress.getFortState() == 0)
 		{
 			return "FortressWarden-02a.htm";
 		}
-		else if (fortress.getFortState() == 2)
+		if (fortress.getFortState() == 2)
 		{
 			return "FortressWarden-02b.htm";
 		}
-		else if (isEnter && (dungeon.getReEnterTime() > System.currentTimeMillis()))
+		if (isEnter && (dungeon.getReEnterTime() > System.currentTimeMillis()))
 		{
 			return "FortressWarden-07.htm";
 		}
@@ -375,7 +375,6 @@ public final class Q00511_AwlUnderFoot extends Quest
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof FAUWorld)
 		{
-			final FAUWorld world = (FAUWorld) tmpworld;
 			if (Util.contains(RAIDS3, npc.getId()))
 			{
 				if (player.getParty() != null)
@@ -389,15 +388,14 @@ public final class Q00511_AwlUnderFoot extends Quest
 				{
 					rewardPlayer(player);
 				}
-				
-				final Instance instanceObj = InstanceManager.getInstance().getInstance(world.getInstanceId());
+				final Instance instanceObj = InstanceManager.getInstance().getInstance(((FAUWorld) tmpworld).getInstanceId());
 				instanceObj.setDuration(360000);
 				instanceObj.removeNpcs();
 			}
 			else
 			{
-				world.incStatus();
-				ThreadPoolManager.getInstance().scheduleGeneral(new spawnRaid(world), RAID_SPAWN_DELAY);
+				((FAUWorld) tmpworld).incStatus();
+				ThreadPoolManager.getInstance().scheduleGeneral(new spawnRaid((FAUWorld) tmpworld), RAID_SPAWN_DELAY);
 			}
 		}
 		return null;
@@ -413,7 +411,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		{
 			return ret;
 		}
-		else if (qs != null)
+		if (qs != null)
 		{
 			final int npcId = npc.getId();
 			int cond = 0;

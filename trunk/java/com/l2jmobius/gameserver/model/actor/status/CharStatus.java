@@ -312,9 +312,7 @@ public class CharStatus
 	
 	public final void setCurrentHpMp(double newHp, double newMp)
 	{
-		boolean hpOrMpWasChanged = setCurrentHp(newHp, false);
-		hpOrMpWasChanged |= setCurrentMp(newMp, false);
-		if (hpOrMpWasChanged)
+		if (setCurrentHp(newHp, false) | setCurrentMp(newMp, false))
 		{
 			getActiveChar().broadcastStatusUpdate();
 		}

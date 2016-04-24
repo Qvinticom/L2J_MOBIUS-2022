@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.util;
 
-import java.util.Collection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -50,8 +49,7 @@ public final class Broadcast
 	 */
 	public static void toPlayersTargettingMyself(L2Character character, L2GameServerPacket mov)
 	{
-		final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
+		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
 		{
 			if (player.getTarget() != character)
 			{
@@ -73,8 +71,7 @@ public final class Broadcast
 	 */
 	public static void toKnownPlayers(L2Character character, L2GameServerPacket mov)
 	{
-		final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
+		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
 		{
 			if (player == null)
 			{
@@ -132,8 +129,7 @@ public final class Broadcast
 			radius = 1500;
 		}
 		
-		final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
+		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
 		{
 			if (character.isInsideRadius(player, radius, false, false))
 			{
@@ -173,8 +169,7 @@ public final class Broadcast
 			character.sendPacket(mov);
 		}
 		
-		final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
+		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
 		{
 			if ((player != null) && Util.checkIfInRange(radius, character, player, false))
 			{

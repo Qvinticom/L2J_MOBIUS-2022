@@ -71,12 +71,7 @@ public class L2ResidenceHallTeleportZone extends L2ResidenceTeleportZone
 		@Override
 		public void run()
 		{
-			int index = 0;
-			if (getSpawns().size() > 1)
-			{
-				index = Rnd.get(getSpawns().size());
-			}
-			
+			final int index = getSpawns().size() > 1 ? Rnd.get(getSpawns().size()) : 0;
 			final Location loc = getSpawns().get(index);
 			if (loc == null)
 			{

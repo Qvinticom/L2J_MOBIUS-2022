@@ -58,5 +58,4 @@ public class OnTrapAction implements IBaseEvent
 	{
 		return EventType.ON_TRAP_ACTION;
 	}
-	
 }

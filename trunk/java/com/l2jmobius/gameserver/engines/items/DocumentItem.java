@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.engines.items;
 
 import java.io.File;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
@@ -98,12 +97,7 @@ public final class DocumentItem extends DocumentBase
 		final int itemId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 		final String className = n.getAttributes().getNamedItem("type").getNodeValue();
 		final String itemName = n.getAttributes().getNamedItem("name").getNodeValue();
-		String additionalName = null;
-		if (n.getAttributes().getNamedItem("additionalName") != null)
-		{
-			additionalName = n.getAttributes().getNamedItem("additionalName").getNodeValue();
-		}
-		
+		final String additionalName = n.getAttributes().getNamedItem("additionalName") != null ? n.getAttributes().getNamedItem("additionalName").getNodeValue() : null;
 		_currentItem.id = itemId;
 		_currentItem.name = itemName;
 		_currentItem.type = className;
@@ -149,8 +143,7 @@ public final class DocumentItem extends DocumentBase
 				else if ((condition != null) && (msgId != null))
 				{
 					condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-					final Node addName = n.getAttributes().getNamedItem("addName");
-					if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+					if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 					{
 						condition.addName();
 					}
@@ -170,8 +163,7 @@ public final class DocumentItem extends DocumentBase
 		}
 		try
 		{
-			final Constructor<?> c = Class.forName("com.l2jmobius.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
-			_currentItem.item = (L2Item) c.newInstance(_currentItem.set);
+			_currentItem.item = (L2Item) Class.forName("com.l2jmobius.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class).newInstance(_currentItem.set);
 		}
 		catch (Exception e)
 		{

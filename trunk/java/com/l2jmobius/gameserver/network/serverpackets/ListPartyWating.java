@@ -64,14 +64,7 @@ public class ListPartyWating extends L2GameServerPacket
 		final int size = _rooms.size();
 		
 		writeC(0x9c);
-		if (size > 0)
-		{
-			writeD(0x01);
-		}
-		else
-		{
-			writeD(0x00);
-		}
+		writeD(size > 0 ? 0x01 : 0x00);
 		
 		writeD(_rooms.size());
 		for (PartyMatchRoom room : _rooms)

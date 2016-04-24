@@ -82,27 +82,13 @@ public final class L2EnchantSkillLearn
 	
 	public int getMinSkillLevel(int level)
 	{
-		if ((level % 1000) == 1)
-		{
-			return _baseLvl;
-		}
-		return level - 1;
+		return (level % 1000) == 1 ? _baseLvl : level - 1;
 	}
 	
 	public boolean isMaxEnchant(int level)
 	{
 		final int enchantType = getEnchantRoute(level);
-		if ((enchantType < 1) || !_enchantRoutes.containsKey(enchantType))
-		{
-			return false;
-		}
-		final int index = getEnchantIndex(level);
-		
-		if ((index + 1) >= EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType)).getEnchantGroupDetails().size())
-		{
-			return true;
-		}
-		return false;
+		return (enchantType >= 1) && _enchantRoutes.containsKey(enchantType) && ((getEnchantIndex(level) + 1) >= EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType)).getEnchantGroupDetails().size());
 	}
 	
 	public EnchantSkillHolder getEnchantSkillHolder(int level)

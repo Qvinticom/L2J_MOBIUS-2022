@@ -83,8 +83,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			}
 			case "admin_announces":
 			{
-				final String subCmd = st.hasMoreTokens() ? st.nextToken() : "";
-				switch (subCmd)
+				switch (st.hasMoreTokens() ? st.nextToken() : "")
 				{
 					case "add":
 					{

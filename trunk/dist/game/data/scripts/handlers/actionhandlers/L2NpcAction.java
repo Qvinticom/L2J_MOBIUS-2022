@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.L2Event;
@@ -88,8 +87,7 @@ public class L2NpcAction implements IActionHandler
 				}
 				else
 				{
-					final Location destination = GeoData.getInstance().moveCheck(activeChar, target);
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
+					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, GeoData.getInstance().moveCheck(activeChar, target));
 				}
 			}
 			else if (!target.isAutoAttackable(activeChar))

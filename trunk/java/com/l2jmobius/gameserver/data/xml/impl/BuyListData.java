@@ -153,8 +153,7 @@ public final class BuyListData implements IXmlReader
 							{
 								if ("npc".equalsIgnoreCase(npcs_node.getNodeName()))
 								{
-									final int npcId = Integer.parseInt(npcs_node.getTextContent());
-									buyList.addAllowedNpc(npcId);
+									buyList.addAllowedNpc(Integer.parseInt(npcs_node.getTextContent()));
 								}
 							}
 						}

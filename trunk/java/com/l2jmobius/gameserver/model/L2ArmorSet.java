@@ -292,12 +292,7 @@ public final class L2ArmorSet
 	
 	public boolean containShield(int shield_id)
 	{
-		if (_shield.isEmpty())
-		{
-			return false;
-		}
-		
-		return _shield.contains(Integer.valueOf(shield_id));
+		return !_shield.isEmpty() && _shield.contains(Integer.valueOf(shield_id));
 	}
 	
 	public List<SkillHolder> getShieldSkills()
@@ -334,12 +329,9 @@ public final class L2ArmorSet
 		for (int armorSlot : ARMORSET_SLOTS)
 		{
 			final L2ItemInstance itemPart = inv.getPaperdollItem(armorSlot);
-			if (itemPart != null)
+			if ((itemPart != null) && (enchantLevel > itemPart.getEnchantLevel()))
 			{
-				if (enchantLevel > itemPart.getEnchantLevel())
-				{
-					enchantLevel = itemPart.getEnchantLevel();
-				}
+				enchantLevel = itemPart.getEnchantLevel();
 			}
 		}
 		if (enchantLevel == Byte.MAX_VALUE)

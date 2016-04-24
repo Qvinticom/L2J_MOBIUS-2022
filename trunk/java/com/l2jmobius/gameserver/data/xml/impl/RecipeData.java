@@ -161,9 +161,7 @@ public class RecipeData implements IXmlReader
 							}
 							else if ("ingredient".equalsIgnoreCase(c.getNodeName()))
 							{
-								final int ingId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
-								final int ingCount = Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue());
-								recipePartList.add(new L2RecipeInstance(ingId, ingCount));
+								recipePartList.add(new L2RecipeInstance(Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue()), Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue())));
 							}
 							else if ("production".equalsIgnoreCase(c.getNodeName()))
 							{

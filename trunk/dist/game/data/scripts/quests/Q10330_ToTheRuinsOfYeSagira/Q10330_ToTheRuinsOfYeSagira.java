@@ -89,7 +89,6 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 					addExpAndSp(player, 23000, 5);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
 				break;
 			}

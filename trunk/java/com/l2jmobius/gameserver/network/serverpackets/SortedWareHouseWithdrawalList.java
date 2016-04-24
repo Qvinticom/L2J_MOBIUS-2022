@@ -477,14 +477,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if (item.isWeapon() || (item.getItem().getType2() == L2Item.TYPE2_WEAPON) || (item.isEtcItem() && (item.getItemType() == EtcItemType.ARROW)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -504,14 +501,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if (item.isArmor() || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -531,14 +525,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if (item.isEtcItem() || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -558,14 +549,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.MATERIAL)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -585,14 +573,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.RECIPE)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -612,14 +597,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -639,14 +621,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -666,14 +645,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() == EtcItemType.SCROLL) || (item.getEtcItem().getItemType() == EtcItemType.SHOT))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -693,14 +669,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SHOT)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -720,14 +693,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SCROLL)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -747,14 +717,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SEED)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -774,14 +741,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() != EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != EtcItemType.SHOT))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (list.size() < MAX_SORT_LIST_ITEMS)
-				{
-					list.add(new L2WarehouseItem(item));
-				}
-				else
+				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
 					continue;
 				}
+				list.add(new L2WarehouseItem(item));
 			}
 		}
 		return list;
@@ -798,14 +762,11 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		final List<L2WarehouseItem> list = new ArrayList<>();
 		for (L2ItemInstance item : _items)
 		{
-			if (list.size() < MAX_SORT_LIST_ITEMS)
-			{
-				list.add(new L2WarehouseItem(item));
-			}
-			else
+			if (list.size() >= MAX_SORT_LIST_ITEMS)
 			{
 				continue;
 			}
+			list.add(new L2WarehouseItem(item));
 		}
 		return list;
 	}

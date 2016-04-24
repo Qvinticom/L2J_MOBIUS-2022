@@ -211,11 +211,7 @@ public class RaidBossSpawnManager
 	 */
 	public void addNewSpawn(L2Spawn spawnDat, long respawnTime, double currentHP, double currentMP, boolean storeInDb)
 	{
-		if (spawnDat == null)
-		{
-			return;
-		}
-		if (_spawns.containsKey(spawnDat.getId()))
+		if ((spawnDat == null) || _spawns.containsKey(spawnDat.getId()))
 		{
 			return;
 		}
@@ -227,17 +223,7 @@ public class RaidBossSpawnManager
 		
 		if ((respawnTime == 0L) || (time > respawnTime))
 		{
-			L2RaidBossInstance raidboss = null;
-			
-			if (bossId == 25328)
-			{
-				raidboss = DayNightSpawnManager.getInstance().handleBoss(spawnDat);
-			}
-			else
-			{
-				raidboss = (L2RaidBossInstance) spawnDat.doSpawn();
-			}
-			
+			final L2RaidBossInstance raidboss = bossId == 25328 ? DayNightSpawnManager.getInstance().handleBoss(spawnDat) : (L2RaidBossInstance) spawnDat.doSpawn();
 			if (raidboss != null)
 			{
 				raidboss.setCurrentHp(currentHP);
@@ -256,8 +242,7 @@ public class RaidBossSpawnManager
 		}
 		else
 		{
-			final long spawnTime = respawnTime - Calendar.getInstance().getTimeInMillis();
-			_schedules.put(bossId, ThreadPoolManager.getInstance().scheduleGeneral(new SpawnSchedule(bossId), spawnTime));
+			_schedules.put(bossId, ThreadPoolManager.getInstance().scheduleGeneral(new SpawnSchedule(bossId), (respawnTime - Calendar.getInstance().getTimeInMillis())));
 		}
 		
 		_spawns.put(bossId, spawnDat);
@@ -314,8 +299,7 @@ public class RaidBossSpawnManager
 		
 		if (_schedules.containsKey(bossId))
 		{
-			final ScheduledFuture<?> f = _schedules.remove(bossId);
-			f.cancel(true);
+			_schedules.remove(bossId).cancel(true);
 		}
 		
 		if (_storedInfo.containsKey(bossId))
@@ -432,8 +416,7 @@ public class RaidBossSpawnManager
 		
 		if (_bosses == null)
 		{
-			msg += "None";
-			return msg;
+			return msg += "None";
 		}
 		
 		if (_bosses.containsKey(bossId))
@@ -537,8 +520,7 @@ public class RaidBossSpawnManager
 		{
 			for (Integer bossId : _schedules.keySet())
 			{
-				final ScheduledFuture<?> f = _schedules.get(bossId);
-				f.cancel(true);
+				_schedules.get(bossId).cancel(true);
 			}
 			_schedules.clear();
 		}

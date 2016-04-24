@@ -264,8 +264,7 @@ public final class Q10285_MeetingSirra extends Quest
 					{
 						if (qs.isMemoState(1))
 						{
-							final int state = qs.getInt("ex");
-							switch (state)
+							switch (qs.getInt("ex"))
 							{
 								case 0:
 								{
@@ -305,8 +304,7 @@ public final class Q10285_MeetingSirra extends Quest
 					{
 						if (qs.isMemoState(1))
 						{
-							final int state = qs.getInt("ex");
-							switch (state)
+							switch (qs.getInt("ex"))
 							{
 								case 1:
 								{

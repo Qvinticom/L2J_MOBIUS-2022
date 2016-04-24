@@ -110,8 +110,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 			final int npcId = npc.getId();
 			if (MOBS1.containsKey(npcId))
 			{
-				final int itemCount = ((getRandom(1000) < MOBS1.get(npcId)) ? 3 : 2);
-				giveItemRandomly(qs.getPlayer(), npc, TITAN_ANCIENT_BOOK, itemCount, 0, 1.0, true);
+				giveItemRandomly(qs.getPlayer(), npc, TITAN_ANCIENT_BOOK, ((getRandom(1000) < MOBS1.get(npcId)) ? 3 : 2), 0, 1.0, true);
 			}
 			else
 			{

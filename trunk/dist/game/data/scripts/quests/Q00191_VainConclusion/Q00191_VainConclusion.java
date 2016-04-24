@@ -207,12 +207,9 @@ public final class Q00191_VainConclusion extends Quest
 				}
 			}
 		}
-		else if (qs.isCompleted())
+		else if (qs.isCompleted() && (npc.getId() == DOROTHY_LOCKSMITH))
 		{
-			if (npc.getId() == DOROTHY_LOCKSMITH)
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-			}
+			htmltext = getAlreadyCompletedMsg(player);
 		}
 		return htmltext;
 	}

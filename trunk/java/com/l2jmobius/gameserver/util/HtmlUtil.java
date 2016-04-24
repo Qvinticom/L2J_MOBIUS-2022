@@ -220,12 +220,7 @@ public class HtmlUtil
 			page = pages - 1;
 		}
 		
-		int start = 0;
-		if (page > 0)
-		{
-			start = elementsPerPage * page;
-		}
-		
+		final int start = page > 0 ? elementsPerPage * page : 0;
 		final StringBuilder sb = new StringBuilder();
 		int i = 0;
 		for (T element : elements)

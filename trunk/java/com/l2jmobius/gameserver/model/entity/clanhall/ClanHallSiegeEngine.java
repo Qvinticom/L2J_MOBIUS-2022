@@ -100,8 +100,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 				while (rset.next())
 				{
 					final int id = rset.getInt("attacker_id");
-					final L2SiegeClan clan = new L2SiegeClan(id, SiegeClanType.ATTACKER);
-					_attackers.put(id, clan);
+					_attackers.put(id, (new L2SiegeClan(id, SiegeClanType.ATTACKER)));
 				}
 			}
 		}
@@ -142,32 +141,33 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	
 	public final void loadGuards()
 	{
-		if (_guards == null)
+		if (_guards != null)
 		{
-			_guards = new ArrayList<>();
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement ps = con.prepareStatement(SQL_LOAD_GUARDS))
+			return;
+		}
+		_guards = new ArrayList<>();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(SQL_LOAD_GUARDS))
+		{
+			ps.setInt(1, _hall.getId());
+			try (ResultSet rset = ps.executeQuery())
 			{
-				ps.setInt(1, _hall.getId());
-				try (ResultSet rset = ps.executeQuery())
+				while (rset.next())
 				{
-					while (rset.next())
-					{
-						final L2Spawn spawn = new L2Spawn(rset.getInt("npcId"));
-						spawn.setX(rset.getInt("x"));
-						spawn.setY(rset.getInt("y"));
-						spawn.setZ(rset.getInt("z"));
-						spawn.setHeading(rset.getInt("heading"));
-						spawn.setRespawnDelay(rset.getInt("respawnDelay"));
-						spawn.setAmount(1);
-						_guards.add(spawn);
-					}
+					final L2Spawn spawn = new L2Spawn(rset.getInt("npcId"));
+					spawn.setX(rset.getInt("x"));
+					spawn.setY(rset.getInt("y"));
+					spawn.setZ(rset.getInt("z"));
+					spawn.setHeading(rset.getInt("heading"));
+					spawn.setRespawnDelay(rset.getInt("respawnDelay"));
+					spawn.setAmount(1);
+					_guards.add(spawn);
 				}
 			}
-			catch (Exception e)
-			{
-				_log.warning(getName() + ": Couldnt load siege guards!");
-			}
+		}
+		catch (Exception e)
+		{
+			_log.warning(getName() + ": Couldnt load siege guards!");
 		}
 	}
 	
@@ -214,12 +214,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	@Override
 	public boolean checkIsAttacker(L2Clan clan)
 	{
-		if (clan == null)
-		{
-			return false;
-		}
-		
-		return _attackers.containsKey(clan.getId());
+		return (clan != null) && _attackers.containsKey(clan.getId());
 	}
 	
 	@Override
@@ -355,15 +350,13 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 			winner.setHideoutId(_hall.getId());
 			finalMsg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_S1_IS_VICTORIOUS_OVER_S2_S_CASTLE_SIEGE);
 			finalMsg.addString(winner.getName());
-			finalMsg.addString(_hall.getName());
-			Broadcast.toAllOnlinePlayers(finalMsg);
 		}
 		else
 		{
 			finalMsg = SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW);
-			finalMsg.addString(_hall.getName());
-			Broadcast.toAllOnlinePlayers(finalMsg);
 		}
+		Broadcast.toAllOnlinePlayers(finalMsg);
+		finalMsg.addString(_hall.getName());
 		_missionAccomplished = false;
 		
 		_hall.updateSiegeZone(false);

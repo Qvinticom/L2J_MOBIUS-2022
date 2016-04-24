@@ -152,15 +152,7 @@ public class L2ClanMember
 	 */
 	public boolean isOnline()
 	{
-		if ((_player == null) || !_player.isOnline())
-		{
-			return false;
-		}
-		if (_player.isInOfflineMode())
-		{
-			return false;
-		}
-		return true;
+		return (_player != null) && _player.isOnline() && !_player.isInOfflineMode();
 	}
 	
 	/**
@@ -169,11 +161,7 @@ public class L2ClanMember
 	 */
 	public int getClassId()
 	{
-		if (_player != null)
-		{
-			return _player.getClassId().getId();
-		}
-		return _classId;
+		return _player != null ? _player.getClassId().getId() : _classId;
 	}
 	
 	/**
@@ -182,11 +170,7 @@ public class L2ClanMember
 	 */
 	public int getLevel()
 	{
-		if (_player != null)
-		{
-			return _player.getLevel();
-		}
-		return _level;
+		return _player != null ? _player.getLevel() : _level;
 	}
 	
 	/**
@@ -195,11 +179,7 @@ public class L2ClanMember
 	 */
 	public String getName()
 	{
-		if (_player != null)
-		{
-			return _player.getName();
-		}
-		return _name;
+		return _player != null ? _player.getName() : _name;
 	}
 	
 	/**
@@ -208,11 +188,7 @@ public class L2ClanMember
 	 */
 	public int getObjectId()
 	{
-		if (_player != null)
-		{
-			return _player.getObjectId();
-		}
-		return _objectId;
+		return _player != null ? _player.getObjectId() : _objectId;
 	}
 	
 	/**
@@ -221,11 +197,7 @@ public class L2ClanMember
 	 */
 	public String getTitle()
 	{
-		if (_player != null)
-		{
-			return _player.getTitle();
-		}
-		return _title;
+		return _player != null ? _player.getTitle() : _title;
 	}
 	
 	/**
@@ -234,11 +206,7 @@ public class L2ClanMember
 	 */
 	public int getPledgeType()
 	{
-		if (_player != null)
-		{
-			return _player.getPledgeType();
-		}
-		return _pledgeType;
+		return _player != null ? _player.getPledgeType() : _pledgeType;
 	}
 	
 	/**
@@ -283,11 +251,7 @@ public class L2ClanMember
 	 */
 	public int getPowerGrade()
 	{
-		if (_player != null)
-		{
-			return _player.getPowerGrade();
-		}
-		return _powerGrade;
+		return _player != null ? _player.getPowerGrade() : _powerGrade;
 	}
 	
 	/**
@@ -343,11 +307,7 @@ public class L2ClanMember
 	 */
 	public int getRaceOrdinal()
 	{
-		if (_player != null)
-		{
-			return _player.getRace().ordinal();
-		}
-		return _raceOrdinal;
+		return _player != null ? _player.getRace().ordinal() : _raceOrdinal;
 	}
 	
 	/**
@@ -356,11 +316,7 @@ public class L2ClanMember
 	 */
 	public boolean getSex()
 	{
-		if (_player != null)
-		{
-			return _player.getAppearance().getSex();
-		}
-		return _sex;
+		return _player != null ? _player.getAppearance().getSex() : _sex;
 	}
 	
 	/**
@@ -369,11 +325,7 @@ public class L2ClanMember
 	 */
 	public int getSponsor()
 	{
-		if (_player != null)
-		{
-			return _player.getSponsor();
-		}
-		return _sponsor;
+		return _player != null ? _player.getSponsor() : _sponsor;
 	}
 	
 	/**
@@ -382,11 +334,7 @@ public class L2ClanMember
 	 */
 	public int getApprentice()
 	{
-		if (_player != null)
-		{
-			return _player.getApprentice();
-		}
-		return _apprentice;
+		return _player != null ? _player.getApprentice() : _apprentice;
 	}
 	
 	/**

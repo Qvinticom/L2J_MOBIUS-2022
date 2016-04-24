@@ -51,5 +51,4 @@ public class AuthResponse extends BaseRecievePacket
 	{
 		return _serverName;
 	}
-	
 }

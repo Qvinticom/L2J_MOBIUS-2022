@@ -110,17 +110,17 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 		{
 			return false;
 		}
-		else if (!mentee.isOnline())
+		if (!mentee.isOnline())
 		{
 			mentor.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			return false;
 		}
-		else if (!mentor.isInCategory(CategoryType.AWAKEN_GROUP))
+		if (!mentor.isInCategory(CategoryType.AWAKEN_GROUP))
 		{
 			mentor.sendPacket(SystemMessageId.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR);
 			return false;
 		}
-		else if (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) > System.currentTimeMillis())
+		if (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) > System.currentTimeMillis())
 		{
 			long remainingTime = (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) - System.currentTimeMillis()) / 1000;
 			final int days = (int) (remainingTime / 86400);
@@ -135,17 +135,17 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 			mentor.sendPacket(msg);
 			return false;
 		}
-		else if (mentor.getObjectId() == mentee.getObjectId())
+		if (mentor.getObjectId() == mentee.getObjectId())
 		{
 			mentor.sendPacket(SystemMessageId.YOU_CANNOT_BECOME_YOUR_OWN_MENTEE);
 			return false;
 		}
-		else if (mentee.getLevel() >= 86)
+		if (mentee.getLevel() >= 86)
 		{
 			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_ABOVE_LEVEL_85_AND_CANNOT_BECOME_A_MENTEE).addCharName(mentee));
 			return false;
 		}
-		else if (mentee.isSubClassActive())
+		if (mentee.isSubClassActive())
 		{
 			mentor.sendPacket(SystemMessageId.INVITATION_CAN_OCCUR_ONLY_WHEN_THE_MENTEE_IS_IN_MAIN_CLASS_STATUS);
 			return false;
@@ -156,12 +156,13 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 		// mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_HAVE_THE_ITEM_NEEDED_TO_BECOME_A_MENTEE).addCharName(mentee));
 		// return false;
 		// }
-		else if ((MentorManager.getInstance().getMentees(mentor.getObjectId()) != null) && (MentorManager.getInstance().getMentees(mentor.getObjectId()).size() >= 3))
+		
+		if ((MentorManager.getInstance().getMentees(mentor.getObjectId()) != null) && (MentorManager.getInstance().getMentees(mentor.getObjectId()).size() >= 3))
 		{
 			mentor.sendPacket(SystemMessageId.A_MENTOR_CAN_HAVE_UP_TO_3_MENTEES_AT_THE_SAME_TIME);
 			return false;
 		}
-		else if (mentee.isMentee())
+		if (mentee.isMentee())
 		{
 			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_HAS_A_MENTOR).addCharName(mentee));
 			return false;

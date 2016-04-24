@@ -65,7 +65,7 @@ public final class LinePointIterator
 			_first = false;
 			return true;
 		}
-		else if (_dx >= _dy)
+		if (_dx >= _dy)
 		{
 			if (_srcX != _dstX)
 			{

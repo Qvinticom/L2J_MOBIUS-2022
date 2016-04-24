@@ -36,7 +36,6 @@ public class ConditionPlayerIsInCombat extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		final boolean isInCombat = !AttackStanceTaskManager.getInstance().hasAttackStanceTask(effector);
-		return _val == isInCombat;
+		return _val == !AttackStanceTaskManager.getInstance().hasAttackStanceTask(effector);
 	}
 }

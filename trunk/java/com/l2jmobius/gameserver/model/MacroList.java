@@ -68,7 +68,6 @@ public class MacroList implements IRestorable
 				macro.setId(_macroId++);
 			}
 			_macroses.put(macro.getId(), macro);
-			registerMacroInDb(macro);
 		}
 		else
 		{
@@ -78,8 +77,8 @@ public class MacroList implements IRestorable
 			{
 				deleteMacroFromDb(old);
 			}
-			registerMacroInDb(macro);
 		}
+		registerMacroInDb(macro);
 		_owner.sendPacket(new SendMacroList(1, macro, updateType));
 	}
 	
@@ -200,15 +199,7 @@ public class MacroList implements IRestorable
 						{
 							continue;
 						}
-						final MacroType type = MacroType.values()[Integer.parseInt(st.nextToken())];
-						final int d1 = Integer.parseInt(st.nextToken());
-						final int d2 = Integer.parseInt(st.nextToken());
-						String cmd = "";
-						if (st.hasMoreTokens())
-						{
-							cmd = st.nextToken();
-						}
-						commands.add(new MacroCmd(commands.size(), type, d1, d2, cmd));
+						commands.add(new MacroCmd(commands.size(), MacroType.values()[Integer.parseInt(st.nextToken())], Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), (st.hasMoreTokens() ? st.nextToken() : "")));
 					}
 					_macroses.put(id, new Macro(id, icon, name, descr, acronym, commands));
 				}

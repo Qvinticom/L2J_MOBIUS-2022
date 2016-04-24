@@ -548,5 +548,4 @@ public class L2RaceManagerInstance extends L2Npc
 			}
 		}
 	}
-	
 }

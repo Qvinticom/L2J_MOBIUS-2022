@@ -235,11 +235,12 @@ public final class Forum
 	
 	public void vload()
 	{
-		if (!_loaded)
+		if (_loaded)
 		{
-			load();
-			getChildren();
-			_loaded = true;
+			return;
 		}
+		load();
+		getChildren();
+		_loaded = true;
 	}
 }

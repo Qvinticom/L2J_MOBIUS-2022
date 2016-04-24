@@ -58,7 +58,6 @@ public final class ChatGeneral implements IChatHandler
 			{
 				command = st.nextToken().substring(1);
 				params = text.substring(command.length() + 2);
-				vch = VoicedCommandHandler.getInstance().getHandler(command);
 			}
 			else
 			{
@@ -67,8 +66,8 @@ public final class ChatGeneral implements IChatHandler
 				{
 					_log.info("Command: " + command);
 				}
-				vch = VoicedCommandHandler.getInstance().getHandler(command);
 			}
+			vch = VoicedCommandHandler.getInstance().getHandler(command);
 			if (vch != null)
 			{
 				vch.useVoicedCommand(command, activeChar, params);

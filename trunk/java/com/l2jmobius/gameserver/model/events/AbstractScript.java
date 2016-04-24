@@ -202,8 +202,7 @@ public abstract class AbstractScript implements INamable
 				{
 					if (annotation instanceof Id)
 					{
-						final Id npc = (Id) annotation;
-						for (int id : npc.value())
+						for (int id : ((Id) annotation).value())
 						{
 							ids.add(id);
 						}
@@ -235,15 +234,13 @@ public abstract class AbstractScript implements INamable
 					}
 					else if (annotation instanceof Ranges)
 					{
-						final Ranges ranges = (Ranges) annotation;
-						for (Range range : ranges.value())
+						for (Range range : ((Ranges) annotation).value())
 						{
 							if (range.from() > range.to())
 							{
 								_log.log(Level.WARNING, getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
 								continue;
 							}
-							
 							for (int id = range.from(); id <= range.to(); id++)
 							{
 								ids.add(id);
@@ -266,8 +263,7 @@ public abstract class AbstractScript implements INamable
 						
 						for (int level = range.from(); level <= range.to(); level++)
 						{
-							final List<L2NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
-							templates.forEach(template -> ids.add(template.getId()));
+							NpcData.getInstance().getAllOfLevel(level).forEach(template -> ids.add(template.getId()));
 						}
 					}
 					else if (annotation instanceof NpcLevelRanges)
@@ -295,8 +291,7 @@ public abstract class AbstractScript implements INamable
 					}
 					else if (annotation instanceof Priority)
 					{
-						final Priority p = (Priority) annotation;
-						priority = p.value();
+						priority = ((Priority) annotation).value();
 					}
 				}
 				
@@ -2131,30 +2126,29 @@ public abstract class AbstractScript implements INamable
 	private static void sendItemGetMessage(L2PcInstance player, L2ItemInstance item, long count)
 	{
 		// If item for reward is gold, send message of gold reward to client
+		final SystemMessage smsg;
 		if (item.getId() == Inventory.ADENA_ID)
 		{
-			final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
+			smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
 			smsg.addLong(count);
-			player.sendPacket(smsg);
 		}
 		// Otherwise, send message of object reward to client
 		else
 		{
 			if (count > 1)
 			{
-				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 				smsg.addItemName(item);
 				smsg.addLong(count);
-				player.sendPacket(smsg);
 			}
 			else
 			{
-				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 				smsg.addItemName(item);
-				player.sendPacket(smsg);
 			}
 		}
 		// send packets
+		player.sendPacket(smsg);
 		player.sendPacket(new ExUserInfoInvenWeight(player));
 		player.sendPacket(new ExAdenaInvenCount(player));
 	}
@@ -2332,8 +2326,7 @@ public abstract class AbstractScript implements INamable
 			}
 			
 			// Give the item to player
-			final L2ItemInstance item = player.addItem("Quest", itemId, amountToGive, npc, true);
-			if (item != null)
+			if (player.addItem("Quest", itemId, amountToGive, npc, true) != null)
 			{
 				// limit reached (if there is no limit, this block doesn't execute)
 				if ((currentCount + amountToGive) == limit)
@@ -2910,11 +2903,7 @@ public abstract class AbstractScript implements INamable
 	 */
 	protected static boolean takeItem(L2PcInstance player, ItemHolder holder)
 	{
-		if (holder == null)
-		{
-			return false;
-		}
-		return takeItems(player, holder.getId(), holder.getCount());
+		return (holder != null) && takeItems(player, holder.getId(), holder.getCount());
 	}
 	
 	/**

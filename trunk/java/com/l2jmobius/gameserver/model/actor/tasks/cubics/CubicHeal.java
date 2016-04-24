@@ -127,15 +127,12 @@ public class CubicHeal implements Runnable
 					{
 						_cubic.cubicTargetForHeal();
 						final L2Character target = _cubic.getTarget();
-						if ((target != null) && !target.isDead())
+						if ((target != null) && !target.isDead() && ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower()))
 						{
-							if ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower())
-							{
-								skill.activateSkill(_cubic.getOwner(), target);
-								_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
-								// The cubic has done an action, increase the current count
-								_currentCount.incrementAndGet();
-							}
+							skill.activateSkill(_cubic.getOwner(), target);
+							_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
+							// The cubic has done an action, increase the current count
+							_currentCount.incrementAndGet();
 						}
 						break;
 					}
@@ -143,15 +140,12 @@ public class CubicHeal implements Runnable
 					case L2CubicInstance.SKILL_MIND_CUBIC_GREAT_RECHARGE:
 					{
 						final L2Character owner = _cubic.getOwner();
-						if ((owner != null) && !owner.isDead())
+						if ((owner != null) && !owner.isDead() && ((owner.getMaxMp() - owner.getCurrentMp()) > skill.getPower()))
 						{
-							if ((owner.getMaxMp() - owner.getCurrentMp()) > skill.getPower())
-							{
-								skill.activateSkill(owner, owner);
-								owner.broadcastPacket(new MagicSkillUse(owner, owner, skill.getId(), skill.getLevel(), 0, 0));
-								// The cubic has done an action, increase the current count
-								_currentCount.incrementAndGet();
-							}
+							skill.activateSkill(owner, owner);
+							owner.broadcastPacket(new MagicSkillUse(owner, owner, skill.getId(), skill.getLevel(), 0, 0));
+							// The cubic has done an action, increase the current count
+							_currentCount.incrementAndGet();
 						}
 						break;
 					}
@@ -160,15 +154,12 @@ public class CubicHeal implements Runnable
 					case L2CubicInstance.SKILL_BUFF_CUBIC_GREAT_HEAL:
 					{
 						final L2Character _owner = _cubic.getOwner();
-						if ((_owner != null) && !_owner.isDead())
+						if ((_owner != null) && !_owner.isDead() && ((_owner.getMaxHp() - _owner.getCurrentHp()) > skill.getPower()))
 						{
-							if ((_owner.getMaxHp() - _owner.getCurrentHp()) > skill.getPower())
-							{
-								skill.activateSkill(_owner, _owner);
-								_owner.broadcastPacket(new MagicSkillUse(_owner, _owner, skill.getId(), skill.getLevel(), 0, 0));
-								// The cubic has done an action, increase the current count
-								_currentCount.incrementAndGet();
-							}
+							skill.activateSkill(_owner, _owner);
+							_owner.broadcastPacket(new MagicSkillUse(_owner, _owner, skill.getId(), skill.getLevel(), 0, 0));
+							// The cubic has done an action, increase the current count
+							_currentCount.incrementAndGet();
 						}
 						break;
 					}

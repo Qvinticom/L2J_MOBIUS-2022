@@ -75,17 +75,10 @@ public class PcBody implements ITargetTypeHandler
 			{
 				boolean condGood = true;
 				
-				if (skill.hasEffectType(L2EffectType.RESURRECTION))
+				if (skill.hasEffectType(L2EffectType.RESURRECTION) && (targetPlayer != null) && targetPlayer.isInsideZone(ZoneId.SIEGE) && !targetPlayer.isInSiege())
 				{
-					if (targetPlayer != null)
-					{
-						// check target is not in a active siege zone
-						if (targetPlayer.isInsideZone(ZoneId.SIEGE) && !targetPlayer.isInSiege())
-						{
-							condGood = false;
-							activeChar.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
-						}
-					}
+					condGood = false;
+					activeChar.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
 				}
 				
 				if (condGood)

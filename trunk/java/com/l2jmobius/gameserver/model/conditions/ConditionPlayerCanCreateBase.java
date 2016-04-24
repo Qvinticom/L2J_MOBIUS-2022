@@ -52,12 +52,7 @@ public class ConditionPlayerCanCreateBase extends Condition
 		}
 		
 		final L2PcInstance player = effector.getActingPlayer();
-		boolean canCreateBase = true;
-		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || (player.getClan() == null))
-		{
-			canCreateBase = false;
-		}
-		
+		boolean canCreateBase = !player.isAlikeDead() && !player.isCursedWeaponEquipped() && (player.getClan() != null);
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		final Fort fort = FortManager.getInstance().getFort(player);
 		final SystemMessage sm;

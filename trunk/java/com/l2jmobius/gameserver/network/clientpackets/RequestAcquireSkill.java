@@ -136,8 +136,7 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 				return;
 			}
 			
-			final int tmpLv = (prevSkillLevel == -1) ? 0 : prevSkillLevel;
-			if (tmpLv != (_level - 1))
+			if (((prevSkillLevel == -1) ? 0 : prevSkillLevel) != (_level - 1))
 			{
 				// The previous level skill has not been learned.
 				activeChar.sendPacket(SystemMessageId.THE_PREVIOUS_LEVEL_SKILL_HAS_NOT_BEEN_LEARNED);
@@ -227,14 +226,12 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 					clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
 					
 					activeChar.sendPacket(new AcquireSkillDone());
-					
-					L2VillageMasterInstance.showPledgeSkillList(activeChar);
 				}
 				else
 				{
 					activeChar.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION);
-					L2VillageMasterInstance.showPledgeSkillList(activeChar);
 				}
+				L2VillageMasterInstance.showPledgeSkillList(activeChar);
 				break;
 			}
 			case SUBPLEDGE:
@@ -552,103 +549,100 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 	 */
 	private boolean checkPlayerSkill(L2PcInstance player, L2Npc trainer, L2SkillLearn s)
 	{
-		if (s != null)
+		if ((s != null) && (s.getSkillId() == _id) && (s.getSkillLevel() == _level))
 		{
-			if ((s.getSkillId() == _id) && (s.getSkillLevel() == _level))
+			// Hack check.
+			if (s.getGetLevel() > player.getLevel())
 			{
-				// Hack check.
-				if (s.getGetLevel() > player.getLevel())
-				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_SKILL_LEVEL_REQUIREMENTS);
-					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + ", level " + player.getLevel() + " is requesting skill Id: " + _id + " level " + _level + " without having minimum required level, " + s.getGetLevel() + "!", IllegalActionPunishmentType.NONE);
-					return false;
-				}
-				
-				// First it checks that the skill require SP and the player has enough SP to learn it.
-				final int levelUpSp = s.getCalculatedLevelUpSp(player.getClassId(), player.getLearningClass());
-				if ((levelUpSp > 0) && (levelUpSp > player.getSp()))
-				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
-					showSkillList(trainer, player);
-					return false;
-				}
-				
-				if (!Config.DIVINE_SP_BOOK_NEEDED && (_id == CommonSkill.DIVINE_INSPIRATION.getId()))
-				{
-					return true;
-				}
-				
-				// Check for required skills.
-				if (!s.getPreReqSkills().isEmpty())
-				{
-					for (SkillHolder skill : s.getPreReqSkills())
-					{
-						if (player.getSkillLevel(skill.getSkillId()) != skill.getSkillLvl())
-						{
-							if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId())
-							{
-								player.sendPacket(SystemMessageId.YOU_MUST_LEARN_THE_ONYX_BEAST_SKILL_BEFORE_YOU_CAN_LEARN_FURTHER_SKILLS);
-							}
-							else
-							{
-								player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
-							}
-							return false;
-						}
-					}
-				}
-				
-				// Check for required items.
-				if (!s.getRequiredItems().isEmpty())
-				{
-					// Then checks that the player has all the items
-					long reqItemCount = 0;
-					for (ItemHolder item : s.getRequiredItems())
-					{
-						reqItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
-						if (reqItemCount < item.getCount())
-						{
-							// Player doesn't have required item.
-							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
-							showSkillList(trainer, player);
-							return false;
-						}
-					}
-					// If the player has all required items, they are consumed.
-					for (ItemHolder itemIdCount : s.getRequiredItems())
-					{
-						if (!player.destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer, true))
-						{
-							Util.handleIllegalPlayerAction(player, "Somehow player " + player.getName() + ", level " + player.getLevel() + " lose required item Id: " + itemIdCount.getId() + " to learn skill while learning skill Id: " + _id + " level " + _level + "!", IllegalActionPunishmentType.NONE);
-						}
-					}
-				}
-				
-				if (!s.getRemoveSkills().isEmpty())
-				{
-					s.getRemoveSkills().forEach(skillId ->
-					{
-						if (player.getSkillLevel(skillId) > 0)
-						{
-							final Skill skillToRemove = player.getKnownSkill(skillId);
-							if (skillToRemove != null)
-							{
-								player.removeSkill(skillToRemove, true);
-							}
-						}
-					});
-				}
-				
-				// If the player has SP and all required items then consume SP.
-				if (levelUpSp > 0)
-				{
-					player.setSp(player.getSp() - levelUpSp);
-					final UserInfo ui = new UserInfo(player);
-					ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
-					player.sendPacket(ui);
-				}
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_SKILL_LEVEL_REQUIREMENTS);
+				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + ", level " + player.getLevel() + " is requesting skill Id: " + _id + " level " + _level + " without having minimum required level, " + s.getGetLevel() + "!", IllegalActionPunishmentType.NONE);
+				return false;
+			}
+			
+			// First it checks that the skill require SP and the player has enough SP to learn it.
+			final int levelUpSp = s.getCalculatedLevelUpSp(player.getClassId(), player.getLearningClass());
+			if ((levelUpSp > 0) && (levelUpSp > player.getSp()))
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
+				showSkillList(trainer, player);
+				return false;
+			}
+			
+			if (!Config.DIVINE_SP_BOOK_NEEDED && (_id == CommonSkill.DIVINE_INSPIRATION.getId()))
+			{
 				return true;
 			}
+			
+			// Check for required skills.
+			if (!s.getPreReqSkills().isEmpty())
+			{
+				for (SkillHolder skill : s.getPreReqSkills())
+				{
+					if (player.getSkillLevel(skill.getSkillId()) != skill.getSkillLvl())
+					{
+						if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId())
+						{
+							player.sendPacket(SystemMessageId.YOU_MUST_LEARN_THE_ONYX_BEAST_SKILL_BEFORE_YOU_CAN_LEARN_FURTHER_SKILLS);
+						}
+						else
+						{
+							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+						}
+						return false;
+					}
+				}
+			}
+			
+			// Check for required items.
+			if (!s.getRequiredItems().isEmpty())
+			{
+				// Then checks that the player has all the items
+				long reqItemCount = 0;
+				for (ItemHolder item : s.getRequiredItems())
+				{
+					reqItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
+					if (reqItemCount < item.getCount())
+					{
+						// Player doesn't have required item.
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+						showSkillList(trainer, player);
+						return false;
+					}
+				}
+				// If the player has all required items, they are consumed.
+				for (ItemHolder itemIdCount : s.getRequiredItems())
+				{
+					if (!player.destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer, true))
+					{
+						Util.handleIllegalPlayerAction(player, "Somehow player " + player.getName() + ", level " + player.getLevel() + " lose required item Id: " + itemIdCount.getId() + " to learn skill while learning skill Id: " + _id + " level " + _level + "!", IllegalActionPunishmentType.NONE);
+					}
+				}
+			}
+			
+			if (!s.getRemoveSkills().isEmpty())
+			{
+				s.getRemoveSkills().forEach(skillId ->
+				{
+					if (player.getSkillLevel(skillId) > 0)
+					{
+						final Skill skillToRemove = player.getKnownSkill(skillId);
+						if (skillToRemove != null)
+						{
+							player.removeSkill(skillToRemove, true);
+						}
+					}
+				});
+			}
+			
+			// If the player has SP and all required items then consume SP.
+			if (levelUpSp > 0)
+			{
+				player.setSp(player.getSp() - levelUpSp);
+				final UserInfo ui = new UserInfo(player);
+				ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
+				player.sendPacket(ui);
+			}
+			return true;
 		}
 		return false;
 	}

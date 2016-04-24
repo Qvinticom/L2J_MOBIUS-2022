@@ -116,28 +116,21 @@ public final class TriggerSkillByAttack extends AbstractEffect
 			return;
 		}
 		
-		if (_allowWeapons > 0)
+		if ((_allowWeapons > 0) && ((event.getAttacker().getActiveWeaponItem() == null) || ((event.getAttacker().getActiveWeaponItem().getItemType().mask() & _allowWeapons) == 0)))
 		{
-			if ((event.getAttacker().getActiveWeaponItem() == null) || ((event.getAttacker().getActiveWeaponItem().getItemType().mask() & _allowWeapons) == 0))
-			{
-				return;
-			}
+			return;
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		final L2Object[] targets = targetHandler.getTargetList(triggerSkill, event.getAttacker(), false, event.getTarget());
-		
-		for (L2Object triggerTarget : targets)
+		for (L2Object triggerTarget : targetHandler.getTargetList(triggerSkill, event.getAttacker(), false, event.getTarget()))
 		{
 			if ((triggerTarget == null) || !triggerTarget.isCharacter())
 			{
 				continue;
 			}
-			
-			final L2Character targetChar = (L2Character) triggerTarget;
-			if (!targetChar.isInvul())
+			if (!((L2Character) triggerTarget).isInvul())
 			{
-				event.getAttacker().makeTriggerCast(triggerSkill, targetChar);
+				event.getAttacker().makeTriggerCast(triggerSkill, ((L2Character) triggerTarget));
 			}
 		}
 	}

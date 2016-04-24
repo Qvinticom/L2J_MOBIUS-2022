@@ -46,9 +46,7 @@ public class TvTEventTeleporter implements Runnable
 		_coordinates = coordinates;
 		_adminRemove = adminRemove;
 		
-		final long delay = (TvTEvent.isStarted() ? Config.TVT_EVENT_RESPAWN_TELEPORT_DELAY : Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY) * 1000;
-		
-		ThreadPoolManager.getInstance().scheduleGeneral(this, fastSchedule ? 0 : delay);
+		ThreadPoolManager.getInstance().scheduleGeneral(this, fastSchedule ? 0 : (TvTEvent.isStarted() ? Config.TVT_EVENT_RESPAWN_TELEPORT_DELAY : Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY) * 1000);
 	}
 	
 	/**

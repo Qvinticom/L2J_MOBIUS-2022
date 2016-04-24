@@ -68,27 +68,27 @@ public final class ChatWhisper implements IChatHandler
 				activeChar.sendMessage("Player is in jail.");
 				return;
 			}
-			else if (receiver.isChatBanned())
+			if (receiver.isChatBanned())
 			{
 				activeChar.sendPacket(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
 				return;
 			}
-			else if ((receiver.getClient() == null) || receiver.getClient().isDetached())
+			if ((receiver.getClient() == null) || receiver.getClient().isDetached())
 			{
 				activeChar.sendMessage("Player is in offline mode.");
 				return;
 			}
-			else if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_SPECIFIC_CHAT && ((activeChar.isGood() && receiver.isEvil()) || (activeChar.isEvil() && receiver.isGood())))
+			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_SPECIFIC_CHAT && ((activeChar.isGood() && receiver.isEvil()) || (activeChar.isEvil() && receiver.isGood())))
 			{
 				activeChar.sendMessage("Player belongs to the opposing faction.");
 				return;
 			}
-			else if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.getWhisperers().contains(receiver.getObjectId()) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
+			if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.getWhisperers().contains(receiver.getObjectId()) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 			{
 				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLAYERS_CAN_RESPOND_TO_A_WHISPER_BUT_CANNOT_INITIATE_A_WHISPER_UNTIL_LV_S1).addInt(Config.MINIMUM_CHAT_LEVEL));
 				return;
 			}
-			else if (!BlockList.isBlocked(receiver, activeChar))
+			if (!BlockList.isBlocked(receiver, activeChar))
 			{
 				// Allow reciever to send PMs to this char, which is in silence mode.
 				if (Config.SILENCE_MODE_EXCLUDE && activeChar.isSilenceMode())

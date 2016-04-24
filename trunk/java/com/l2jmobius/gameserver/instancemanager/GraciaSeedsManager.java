@@ -144,23 +144,24 @@ public final class GraciaSeedsManager
 	
 	public void increaseSoDTiatKilled()
 	{
-		if (_SoDState == 1)
+		if (_SoDState != 1)
 		{
-			_SoDTiatKilled++;
-			if (_SoDTiatKilled >= Config.SOD_TIAT_KILL_COUNT)
-			{
-				setSoDState(2, false);
-			}
-			saveData(SODTYPE);
-			final Quest esQuest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
-			if (esQuest == null)
-			{
-				_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
-			}
-			else
-			{
-				esQuest.notifyEvent("StartSoDAi", null, null);
-			}
+			return;
+		}
+		_SoDTiatKilled++;
+		if (_SoDTiatKilled >= Config.SOD_TIAT_KILL_COUNT)
+		{
+			setSoDState(2, false);
+		}
+		saveData(SODTYPE);
+		final Quest esQuest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
+		if (esQuest == null)
+		{
+			_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+		}
+		else
+		{
+			esQuest.notifyEvent("StartSoDAi", null, null);
 		}
 	}
 	

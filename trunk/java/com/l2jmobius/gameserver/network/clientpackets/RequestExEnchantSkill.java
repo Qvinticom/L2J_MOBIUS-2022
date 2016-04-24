@@ -364,8 +364,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			}
 			else
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
-				player.sendPacket(sm);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
 			}
 		}
 		else if (_type == 2) // untrain
@@ -414,13 +413,10 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			if (player.getSp() >= requiredSp)
 			{
 				final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
-				if (Config.ES_SP_BOOK_NEEDED)
+				if (Config.ES_SP_BOOK_NEEDED && (spb == null))
 				{
-					if (spb == null)
-					{
-						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_SKILL_ROUTE_CHANGE);
-						return;
-					}
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_SKILL_ROUTE_CHANGE);
+					return;
 				}
 				
 				if (player.getInventory().getAdena() < requireditems)
@@ -429,8 +425,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 					return;
 				}
 				
-				boolean check;
-				check = player.getStat().removeExpAndSp(0, requiredSp, false);
+				boolean check = player.getStat().removeExpAndSp(0, requiredSp, false);
 				if (Config.ES_SP_BOOK_NEEDED)
 				{
 					check &= player.destroyItem("Consume", spb.getObjectId(), 1, player, true);
@@ -503,8 +498,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			}
 			else
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
-				player.sendPacket(sm);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
 			}
 		}
 		else if (_type == 4) // 100% enchant

@@ -57,12 +57,7 @@ public final class TrapRemove extends AbstractEffect
 	public void onStart(BuffInfo info)
 	{
 		final L2Character target = info.getEffected();
-		if (!target.isTrap())
-		{
-			return;
-		}
-		
-		if (target.isAlikeDead())
+		if (!target.isTrap() || target.isAlikeDead())
 		{
 			return;
 		}

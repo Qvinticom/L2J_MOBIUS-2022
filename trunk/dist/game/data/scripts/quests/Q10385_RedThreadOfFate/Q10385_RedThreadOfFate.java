@@ -379,11 +379,7 @@ public class Q10385_RedThreadOfFate extends Quest
 	@Override
 	public String onSocialActionSee(L2Npc npc, L2PcInstance caster, int actionId)
 	{
-		if ((caster == null) || (npc == null))
-		{
-			return super.onSocialActionSee(npc, caster, actionId);
-		}
-		if ((caster.getTarget() == null) || !caster.getTarget().isNpc())
+		if ((caster == null) || (npc == null) || (caster.getTarget() == null) || !caster.getTarget().isNpc())
 		{
 			return super.onSocialActionSee(npc, caster, actionId);
 		}

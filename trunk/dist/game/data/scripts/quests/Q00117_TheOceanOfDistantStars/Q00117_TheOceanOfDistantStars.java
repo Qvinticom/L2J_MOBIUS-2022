@@ -333,14 +333,7 @@ public final class Q00117_TheOceanOfDistantStars extends Quest
 						}
 						case 7:
 						{
-							if (hasQuestItems(player, BOOK_OF_GREY_STAR))
-							{
-								htmltext = "32052-06.html";
-							}
-							else
-							{
-								htmltext = "32052-08.html";
-							}
+							htmltext = hasQuestItems(player, BOOK_OF_GREY_STAR) ? "32052-06.html" : "32052-08.html";
 							break;
 						}
 						case 8:

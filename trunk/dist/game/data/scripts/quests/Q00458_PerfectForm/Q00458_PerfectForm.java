@@ -188,13 +188,11 @@ public class Q00458_PerfectForm extends Quest
 					final int overhitsConsecutive = qs.getInt("overhitsConsecutive");
 					if (overhitsConsecutive >= 20)
 					{
-						final int rnd = getRandom(ICARUS_WEAPON_RECIPES.length);
-						rewardItems(player, ICARUS_WEAPON_RECIPES[rnd], 1);
+						rewardItems(player, ICARUS_WEAPON_RECIPES[getRandom(ICARUS_WEAPON_RECIPES.length)], 1);
 					}
 					else if (overhitsConsecutive >= 7)
 					{
-						final int rnd = getRandom(ICARUS_WEAPON_PIECES.length);
-						rewardItems(player, ICARUS_WEAPON_PIECES[rnd], 5);
+						rewardItems(player, ICARUS_WEAPON_PIECES[getRandom(ICARUS_WEAPON_PIECES.length)], 5);
 					}
 					else
 					{
@@ -251,8 +249,7 @@ public class Q00458_PerfectForm extends Quest
 					{
 						qs.set("overhitsCritical", String.valueOf(qs.getInt("overhitsCritical") + 1)); // memoStateEx 2
 					}
-					final int overhitsConsecutive = qs.getInt("overhitsConsecutive") + 1;
-					qs.set("overhitsConsecutive", String.valueOf(overhitsConsecutive)); // memoStateEx 3
+					qs.set("overhitsConsecutive", String.valueOf((qs.getInt("overhitsConsecutive") + 1))); // memoStateEx 3
 					/*
 					 * Retail logic (makes for a long/messy string in database): int i0 = overhitsConsecutive % 100; int i1 = overhitsConsecutive - (i0 * 100); if (i0 < i1) { st.set("overhitsConsecutive", String.valueOf((i1 * 100) + i1)); }
 					 */

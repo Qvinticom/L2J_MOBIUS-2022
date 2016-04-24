@@ -580,13 +580,9 @@ public abstract class AbstractAI implements Ctrl
 					}
 					sendPacket = false;
 				}
-				else if (_actor.isOnGeodataPath())
+				else if (_actor.isOnGeodataPath() && (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10)))
 				{
-					// minimum time to calculate new route is 2 seconds
-					if (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10))
-					{
-						return;
-					}
+					return;
 				}
 			}
 			
@@ -678,18 +674,20 @@ public abstract class AbstractAI implements Ctrl
 		
 		_clientMovingToPawnOffset = 0;
 		
-		if (_clientMoving || (loc != null))
+		if (!_clientMoving && (loc == null))
 		{
-			_clientMoving = false;
-			
-			// Send a Server->Client packet StopMove to the actor and all L2PcInstance in its _knownPlayers
-			_actor.broadcastPacket(new StopMove(_actor));
-			
-			if (loc != null)
-			{
-				// Send a Server->Client packet StopRotation to the actor and all L2PcInstance in its _knownPlayers
-				_actor.broadcastPacket(new StopRotation(_actor.getObjectId(), loc.getHeading(), 0));
-			}
+			return;
+		}
+		
+		_clientMoving = false;
+		
+		// Send a Server->Client packet StopMove to the actor and all L2PcInstance in its _knownPlayers
+		_actor.broadcastPacket(new StopMove(_actor));
+		
+		if (loc != null)
+		{
+			// Send a Server->Client packet StopRotation to the actor and all L2PcInstance in its _knownPlayers
+			_actor.broadcastPacket(new StopRotation(_actor.getObjectId(), loc.getHeading(), 0));
 		}
 	}
 	
@@ -814,20 +812,17 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	public void describeStateToPlayer(L2PcInstance player)
 	{
-		if (getActor().isVisibleFor(player))
+		if (getActor().isVisibleFor(player) && _clientMoving)
 		{
-			if (_clientMoving)
+			if ((_clientMovingToPawnOffset != 0) && (_followTarget != null))
 			{
-				if ((_clientMovingToPawnOffset != 0) && (_followTarget != null))
-				{
-					// Send a Server->Client packet MoveToPawn to the actor and all L2PcInstance in its _knownPlayers
-					player.sendPacket(new MoveToPawn(_actor, _followTarget, _clientMovingToPawnOffset));
-				}
-				else
-				{
-					// Send a Server->Client packet CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
-					player.sendPacket(new MoveToLocation(_actor));
-				}
+				// Send a Server->Client packet MoveToPawn to the actor and all L2PcInstance in its _knownPlayers
+				player.sendPacket(new MoveToPawn(_actor, _followTarget, _clientMovingToPawnOffset));
+			}
+			else
+			{
+				// Send a Server->Client packet CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
+				player.sendPacket(new MoveToLocation(_actor));
 			}
 		}
 	}

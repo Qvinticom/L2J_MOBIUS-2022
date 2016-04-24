@@ -220,24 +220,21 @@ public final class Valakas extends AbstractNpcAI
 			else if (event.equalsIgnoreCase("regen_task"))
 			{
 				// Inactivity task - 15min
-				if (GrandBossManager.getInstance().getBossStatus(VALAKAS) == FIGHTING)
+				if ((GrandBossManager.getInstance().getBossStatus(VALAKAS) == FIGHTING) && ((_timeTracker + 900000) < System.currentTimeMillis()))
 				{
-					if ((_timeTracker + 900000) < System.currentTimeMillis())
-					{
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-						npc.teleToLocation(VALAKAS_REGENERATION_LOC);
-						
-						GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
-						npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
-						
-						// Drop all players from the zone.
-						ZONE.oustAllPlayers();
-						
-						// Cancel skill_task and regen_task.
-						cancelQuestTimer("regen_task", npc, null);
-						cancelQuestTimer("skill_task", npc, null);
-						return null;
-					}
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+					npc.teleToLocation(VALAKAS_REGENERATION_LOC);
+					
+					GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
+					npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
+					
+					// Drop all players from the zone.
+					ZONE.oustAllPlayers();
+					
+					// Cancel skill_task and regen_task.
+					cancelQuestTimer("regen_task", npc, null);
+					cancelQuestTimer("skill_task", npc, null);
+					return null;
 				}
 				
 				// Verify if "Valakas Regeneration" skill is active.
@@ -403,14 +400,10 @@ public final class Valakas extends AbstractNpcAI
 		}
 		
 		// Debuff strider-mounted players.
-		if (attacker.getMountType() == MountType.STRIDER)
+		if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(4258))
 		{
-			final Skill skill = SkillData.getInstance().getSkill(4258, 1);
-			if (!attacker.isAffectedBySkill(4258))
-			{
-				npc.setTarget(attacker);
-				npc.doCast(skill);
-			}
+			npc.setTarget(attacker);
+			npc.doCast(SkillData.getInstance().getSkill(4258, 1));
 		}
 		_timeTracker = System.currentTimeMillis();
 		
@@ -439,9 +432,7 @@ public final class Valakas extends AbstractNpcAI
 		
 		GrandBossManager.getInstance().setBossStatus(VALAKAS, DEAD);
 		// Calculate Min and Max respawn times randomly.
-		long respawnTime = Config.VALAKAS_SPAWN_INTERVAL + getRandom(-Config.VALAKAS_SPAWN_RANDOM, Config.VALAKAS_SPAWN_RANDOM);
-		respawnTime *= 3600000;
-		
+		final long respawnTime = (Config.VALAKAS_SPAWN_INTERVAL + getRandom(-Config.VALAKAS_SPAWN_RANDOM, Config.VALAKAS_SPAWN_RANDOM)) * 3600000;
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);

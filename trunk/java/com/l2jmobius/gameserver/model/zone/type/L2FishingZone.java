@@ -52,13 +52,9 @@ public class L2FishingZone extends L2ZoneType
 			character.setInsideZone(ZoneId.FISHING, true);
 		}
 		
-		if (character.isPlayer())
+		if (character.isPlayer() && !_task.containsKey(((L2PcInstance) character).getObjectId()))
 		{
-			final L2PcInstance plr = (L2PcInstance) character;
-			if (!_task.containsKey(plr.getObjectId()))
-			{
-				_task.put(plr.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new fishingAvailable(plr), 500, 2000));
-			}
+			_task.put(((L2PcInstance) character).getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new fishingAvailable((L2PcInstance) character), 500, 2000));
 		}
 	}
 	

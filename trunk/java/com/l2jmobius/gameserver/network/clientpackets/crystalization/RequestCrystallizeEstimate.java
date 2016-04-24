@@ -85,13 +85,7 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		}
 		
 		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
-		if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem())
-		{
-			sendActionFailed();
-			return;
-		}
-		
-		if (item.isHeroItem())
+		if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem() || item.isHeroItem())
 		{
 			sendActionFailed();
 			return;

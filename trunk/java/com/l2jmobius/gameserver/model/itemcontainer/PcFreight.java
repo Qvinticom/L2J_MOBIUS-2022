@@ -69,8 +69,7 @@ public class PcFreight extends ItemContainer
 	@Override
 	public boolean validateCapacity(long slots)
 	{
-		final int curSlots = _owner == null ? Config.ALT_FREIGHT_SLOTS : Config.ALT_FREIGHT_SLOTS + (int) _owner.getStat().calcStat(Stats.FREIGHT_LIM, 0, null, null);
-		return ((getSize() + slots) <= curSlots);
+		return ((getSize() + slots) <= (_owner == null ? Config.ALT_FREIGHT_SLOTS : Config.ALT_FREIGHT_SLOTS + (int) _owner.getStat().calcStat(Stats.FREIGHT_LIM, 0, null, null)));
 	}
 	
 	@Override

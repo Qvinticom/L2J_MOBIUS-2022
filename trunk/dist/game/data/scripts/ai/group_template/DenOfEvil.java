@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.type.L2EffectZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -109,9 +108,7 @@ final class DenOfEvil extends AbstractNpcAI
 	
 	private int getSkillIdByNpcId(int npcId)
 	{
-		int diff = npcId - EYE_IDS[0];
-		diff *= 2;
-		return SKILL_ID + diff;
+		return SKILL_ID + ((npcId - EYE_IDS[0]) * 2);
 	}
 	
 	@Override
@@ -211,22 +208,13 @@ final class DenOfEvil extends AbstractNpcAI
 				}
 				if (character.isPlayable())
 				{
-					final Skill skill = SkillData.getInstance().getSkill(6149, 1);
-					skill.applyEffects(character, character);
+					SkillData.getInstance().getSkill(6149, 1).applyEffects(character, character);
 				}
 				else
 				{
-					if (character.doDie(null)) // mobs die
+					if (character.doDie(null) && character.isNpc() && Util.contains(EYE_IDS, ((L2Npc) character).getId())) // mobs die
 					{
-						if (character.isNpc())
-						{
-							// respawn eye
-							final L2Npc npc = (L2Npc) character;
-							if (Util.contains(EYE_IDS, npc.getId()))
-							{
-								ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(npc.getLocation()), 15000);
-							}
-						}
+						ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(((L2Npc) character).getLocation()), 15000);
 					}
 				}
 			}

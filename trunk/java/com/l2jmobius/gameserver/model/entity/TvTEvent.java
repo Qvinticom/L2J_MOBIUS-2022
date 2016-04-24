@@ -672,12 +672,9 @@ public class TvTEvent
 	 */
 	public static void onLogout(L2PcInstance playerInstance)
 	{
-		if ((playerInstance != null) && (isStarting() || isStarted() || isParticipating()))
+		if ((playerInstance != null) && (isStarting() || isStarted() || isParticipating()) && removeParticipant(playerInstance.getObjectId()))
 		{
-			if (removeParticipant(playerInstance.getObjectId()))
-			{
-				playerInstance.setXYZInvisible((Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[0] + Rnd.get(101)) - 50, (Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[1] + Rnd.get(101)) - 50, Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[2]);
-			}
+			playerInstance.setXYZInvisible((Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[0] + Rnd.get(101)) - 50, (Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[1] + Rnd.get(101)) - 50, Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[2]);
 		}
 	}
 	
@@ -937,12 +934,9 @@ public class TvTEvent
 			return false;
 		}
 		// players in the different teams ?
-		if (getParticipantTeamId(sourcePlayerId) != getParticipantTeamId(targetPlayerId))
+		if ((getParticipantTeamId(sourcePlayerId) != getParticipantTeamId(targetPlayerId)) && !skill.isBad())
 		{
-			if (!skill.isBad())
-			{
-				return false;
-			}
+			return false;
 		}
 		return true;
 	}
@@ -1109,12 +1103,7 @@ public class TvTEvent
 	 */
 	public static boolean isPlayerParticipant(int playerObjectId)
 	{
-		if (!isParticipating() && !isStarting() && !isStarted())
-		{
-			return false;
-		}
-		
-		return _teams[0].containsPlayer(playerObjectId) || _teams[1].containsPlayer(playerObjectId);
+		return (isParticipating() || isStarting() || isStarted()) && (_teams[0].containsPlayer(playerObjectId) || _teams[1].containsPlayer(playerObjectId));
 	}
 	
 	/**
@@ -1124,12 +1113,7 @@ public class TvTEvent
 	 */
 	public static int getParticipatedPlayersCount()
 	{
-		if (!isParticipating() && !isStarting() && !isStarted())
-		{
-			return 0;
-		}
-		
-		return _teams[0].getParticipatedPlayerCount() + _teams[1].getParticipatedPlayerCount();
+		return !isParticipating() && !isStarting() && !isStarted() ? 0 : _teams[0].getParticipatedPlayerCount() + _teams[1].getParticipatedPlayerCount();
 	}
 	
 	/**

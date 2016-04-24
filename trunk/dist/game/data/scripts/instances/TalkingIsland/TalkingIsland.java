@@ -256,8 +256,7 @@ public class TalkingIsland extends AbstractInstance
 		final QuestState qs = player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
 		if ((qs != null) && qs.isCond(19))
 		{
-			final Skill npcDefault = NPC_TREE.getSkill();
-			castSkill(npc, player, npcDefault);
+			castSkill(npc, player, NPC_TREE.getSkill());
 		}
 		{
 			enterInstance(player, new TIWorld(), "TalkingIsland.xml", TEMPLATE_ID);

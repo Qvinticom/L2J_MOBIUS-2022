@@ -55,18 +55,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		
-		if (val == 0)
-		{
-			pom = "" + npcId;
-		}
-		else
-		{
-			pom = npcId + "-" + val;
-		}
-		
-		return "html/classmaster/" + pom + ".htm";
+		return "html/classmaster/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
 	}
 	
 	@Override
@@ -155,8 +144,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		
 		try
 		{
-			final int val = Integer.parseInt(request.substring(21));
-			checkAndChangeClass(player, val);
+			checkAndChangeClass(player, Integer.parseInt(request.substring(21)));
 		}
 		catch (NumberFormatException e)
 		{
@@ -182,12 +170,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		}
 		
 		final ClassId classId = player.getClassId();
-		if (getMinLevel(classId.level(), player) > player.getLevel())
-		{
-			return;
-		}
-		
-		if (!Config.CLASS_MASTER_SETTINGS.isAllowed(classId.level() + 1))
+		if ((getMinLevel(classId.level(), player) > player.getLevel()) || !Config.CLASS_MASTER_SETTINGS.isAllowed(classId.level() + 1))
 		{
 			return;
 		}
@@ -356,9 +339,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			return;
 		}
 		
-		String msg = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/classmaster/tutorialtemplate.htm");
-		msg = msg.replaceAll("%name%", ClassListData.getInstance().getClass(currentClassId).getEscapedClientCode());
-		
+		String msg = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/classmaster/tutorialtemplate.htm").replaceAll("%name%", ClassListData.getInstance().getClass(currentClassId).getEscapedClientCode());
 		final StringBuilder menu = new StringBuilder(100);
 		for (ClassId cid : ClassId.values())
 		{
@@ -380,12 +361,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	private static final boolean checkAndChangeClass(L2PcInstance player, int val)
 	{
 		final ClassId currentClassId = player.getClassId();
-		if ((getMinLevel(currentClassId.level(), player) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE)
-		{
-			return false;
-		}
-		
-		if (!validateClassId(currentClassId, val))
+		if (((getMinLevel(currentClassId.level(), player) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE) || !validateClassId(currentClassId, val))
 		{
 			return false;
 		}

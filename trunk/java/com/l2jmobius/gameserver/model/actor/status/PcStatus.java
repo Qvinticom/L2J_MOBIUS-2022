@@ -46,14 +46,7 @@ public class PcStatus extends PlayableStatus
 	@Override
 	public final void reduceCp(int value)
 	{
-		if (getCurrentCp() > value)
-		{
-			setCurrentCp(getCurrentCp() - value);
-		}
-		else
-		{
-			setCurrentCp(0);
-		}
+		setCurrentCp(getCurrentCp() > value ? getCurrentCp() - value : 0);
 	}
 	
 	@Override
@@ -101,12 +94,9 @@ public class PcStatus extends PlayableStatus
 				getActiveChar().standUp();
 			}
 			
-			if (!isDOT)
+			if (!isDOT && getActiveChar().isStunned() && (Rnd.get(10) == 0))
 			{
-				if (getActiveChar().isStunned() && (Rnd.get(10) == 0))
-				{
-					getActiveChar().stopStunning(true);
-				}
+				getActiveChar().stopStunning(true);
 			}
 		}
 		
@@ -185,10 +175,8 @@ public class PcStatus extends PlayableStatus
 			final L2PcInstance caster = getActiveChar().getTransferingDamageTo();
 			if ((caster != null) && (getActiveChar().getParty() != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster))
 			{
-				int transferDmg = 0;
+				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, (((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100));
 				
-				transferDmg = ((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100;
-				transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
 				if (transferDmg > 0)
 				{
 					int membersInRange = 0;
@@ -294,39 +282,41 @@ public class PcStatus extends PlayableStatus
 			setCurrentHp(value);
 		}
 		
-		if ((getActiveChar().getCurrentHp() < 0.5) && !isHPConsumption && getActiveChar().isMortal())
+		if ((getActiveChar().getCurrentHp() >= 0.5) || isHPConsumption || !getActiveChar().isMortal())
 		{
-			getActiveChar().abortAttack();
-			getActiveChar().abortCast();
-			
-			if (getActiveChar().isInOlympiadMode())
-			{
-				stopHpMpRegeneration();
-				getActiveChar().setIsDead(true);
-				getActiveChar().setIsPendingRevive(true);
-				final L2Summon pet = getActiveChar().getPet();
-				if (pet != null)
-				{
-					pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
-				}
-				getActiveChar().getServitors().values().forEach(s -> s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null));
-				return;
-			}
-			
-			if ((attacker != null) && (attacker.isPlayer()))
-			{
-				final int hpRestore = (int) attacker.getStat().calcStat(Stats.HP_RESTORE_ON_KILL, 0, null, null);
-				if (hpRestore > 0)
-				{
-					final double amount = Math.max(Math.min((attacker.getMaxHp() * hpRestore) / 100, attacker.getMaxRecoverableHp() - attacker.getCurrentHp()), 0);
-					if (amount != 0)
-					{
-						attacker.setCurrentHp(amount + attacker.getCurrentHp());
-					}
-				}
-			}
-			getActiveChar().doDie(attacker);
+			return;
 		}
+		
+		getActiveChar().abortAttack();
+		getActiveChar().abortCast();
+		
+		if (getActiveChar().isInOlympiadMode())
+		{
+			stopHpMpRegeneration();
+			getActiveChar().setIsDead(true);
+			getActiveChar().setIsPendingRevive(true);
+			final L2Summon pet = getActiveChar().getPet();
+			if (pet != null)
+			{
+				pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
+			}
+			getActiveChar().getServitors().values().forEach(s -> s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null));
+			return;
+		}
+		
+		if ((attacker != null) && (attacker.isPlayer()))
+		{
+			final int hpRestore = (int) attacker.getStat().calcStat(Stats.HP_RESTORE_ON_KILL, 0, null, null);
+			if (hpRestore > 0)
+			{
+				final double amount = Math.max(Math.min((attacker.getMaxHp() * hpRestore) / 100, attacker.getMaxRecoverableHp() - attacker.getCurrentHp()), 0);
+				if (amount != 0)
+				{
+					attacker.setCurrentHp(amount + attacker.getCurrentHp());
+				}
+			}
+		}
+		getActiveChar().doDie(attacker);
 	}
 	
 	@Override

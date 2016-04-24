@@ -50,11 +50,7 @@ public final class QuestManager extends ScriptManager<Quest>
 	public boolean reload(String questFolder)
 	{
 		final Quest q = getQuest(questFolder);
-		if (q == null)
-		{
-			return false;
-		}
-		return q.reload();
+		return (q != null) && q.reload();
 	}
 	
 	/**
@@ -65,11 +61,7 @@ public final class QuestManager extends ScriptManager<Quest>
 	public boolean reload(int questId)
 	{
 		final Quest q = getQuest(questId);
-		if (q == null)
-		{
-			return false;
-		}
-		return q.reload();
+		return (q != null) && q.reload();
 	}
 	
 	/**
@@ -146,11 +138,7 @@ public final class QuestManager extends ScriptManager<Quest>
 	 */
 	public Quest getQuest(String name)
 	{
-		if (_quests.containsKey(name))
-		{
-			return _quests.get(name);
-		}
-		return _scripts.get(name);
+		return _quests.containsKey(name) ? _quests.get(name) : _scripts.get(name);
 	}
 	
 	/**
@@ -199,8 +187,7 @@ public final class QuestManager extends ScriptManager<Quest>
 		
 		if (Config.ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS)
 		{
-			final String questName = quest.getName().contains("_") ? quest.getName().substring(quest.getName().indexOf('_') + 1) : quest.getName();
-			_log.info("Loaded quest " + Util.splitWords(questName) + ".");
+			_log.info("Loaded quest " + Util.splitWords((quest.getName().contains("_") ? quest.getName().substring(quest.getName().indexOf('_') + 1) : quest.getName())) + ".");
 		}
 	}
 	
@@ -216,7 +203,7 @@ public final class QuestManager extends ScriptManager<Quest>
 			_quests.remove(script.getName());
 			return true;
 		}
-		else if (_scripts.containsKey(script.getName()))
+		if (_scripts.containsKey(script.getName()))
 		{
 			_scripts.remove(script.getName());
 			return true;

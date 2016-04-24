@@ -124,15 +124,11 @@ public final class RequestActionUse extends L2GameClientPacket
 		}
 		
 		// Don't allow to do some action if player is transformed
-		if (activeChar.isTransformed())
+		if (activeChar.isTransformed() && !(Arrays.binarySearch((activeChar.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST), _actionId) >= 0))
 		{
-			final int[] allowedActions = activeChar.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
-			if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0))
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				_log.warning("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation());
-				return;
-			}
+			sendPacket(ActionFailed.STATIC_PACKET);
+			_log.warning("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation());
+			return;
 		}
 		
 		final L2Summon pet = activeChar.getPet();
@@ -148,12 +144,7 @@ public final class RequestActionUse extends L2GameClientPacket
 				}
 				else
 				{
-					// Sit when arrive using next action.
-					// Creating next action class.
-					final NextAction nextAction = new NextAction(CtrlEvent.EVT_ARRIVED, CtrlIntention.AI_INTENTION_MOVE_TO, () -> useSit(activeChar, target));
-					
-					// Binding next action to AI.
-					activeChar.getAI().setNextAction(nextAction);
+					activeChar.getAI().setNextAction((new NextAction(CtrlEvent.EVT_ARRIVED, CtrlIntention.AI_INTENTION_MOVE_TO, () -> useSit(activeChar, target))));
 				}
 				break;
 			}
@@ -184,12 +175,9 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 16: // Attack (Pets)
 			{
-				if (validateSummon(pet, true))
+				if (validateSummon(pet, true) && pet.canAttack(_ctrlPressed))
 				{
-					if (pet.canAttack(_ctrlPressed))
-					{
-						pet.doAttack();
-					}
+					pet.doAttack();
 				}
 				break;
 			}
@@ -246,12 +234,9 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 22: // Attack (Servitors)
 			{
-				if (validateSummon(servitor, false))
+				if (validateSummon(servitor, false) && servitor.canAttack(_ctrlPressed))
 				{
-					if (servitor.canAttack(_ctrlPressed))
-					{
-						servitor.doAttack();
-					}
+					servitor.doAttack();
 				}
 				break;
 			}
@@ -394,25 +379,19 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 53: // Move to target (Servitors)
 			{
-				if (validateSummon(servitor, false))
+				if (validateSummon(servitor, false) && (target != null) && (servitor != target) && !servitor.isMovementDisabled())
 				{
-					if ((target != null) && (servitor != target) && !servitor.isMovementDisabled())
-					{
-						servitor.setFollowStatus(false);
-						servitor.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
-					}
+					servitor.setFollowStatus(false);
+					servitor.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
 				}
 				break;
 			}
 			case 54: // Move to target (Pets)
 			{
-				if (validateSummon(pet, true))
+				if (validateSummon(pet, true) && (target != null) && (pet != target) && !pet.isMovementDisabled())
 				{
-					if ((target != null) && (pet != target) && !pet.isMovementDisabled())
-					{
-						pet.setFollowStatus(false);
-						pet.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
-					}
+					pet.setFollowStatus(false);
+					pet.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
 				}
 				break;
 			}
@@ -435,23 +414,17 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 67: // Steer
 			{
-				if (activeChar.isInAirShip())
+				if (activeChar.isInAirShip() && activeChar.getAirShip().setCaptain(activeChar))
 				{
-					if (activeChar.getAirShip().setCaptain(activeChar))
-					{
-						activeChar.broadcastUserInfo();
-					}
+					activeChar.broadcastUserInfo();
 				}
 				break;
 			}
 			case 68: // Cancel Control
 			{
-				if (activeChar.isInAirShip() && activeChar.getAirShip().isCaptain(activeChar))
+				if (activeChar.isInAirShip() && activeChar.getAirShip().isCaptain(activeChar) && activeChar.getAirShip().setCaptain(null))
 				{
-					if (activeChar.getAirShip().setCaptain(null))
-					{
-						activeChar.broadcastUserInfo();
-					}
+					activeChar.broadcastUserInfo();
 				}
 				break;
 			}
@@ -953,12 +926,9 @@ public final class RequestActionUse extends L2GameClientPacket
 			{
 				activeChar.getServitors().values().forEach(s ->
 				{
-					if (validateSummon(s, false))
+					if (validateSummon(s, false) && s.canAttack(_ctrlPressed))
 					{
-						if (s.canAttack(_ctrlPressed))
-						{
-							s.doAttack();
-						}
+						s.doAttack();
 					}
 				});
 				break;
@@ -967,13 +937,10 @@ public final class RequestActionUse extends L2GameClientPacket
 			{
 				activeChar.getServitors().values().forEach(s ->
 				{
-					if (validateSummon(s, false))
+					if (validateSummon(s, false) && (target != null) && (s != target) && !s.isMovementDisabled())
 					{
-						if ((target != null) && (s != target) && !s.isMovementDisabled())
-						{
-							s.setFollowStatus(false);
-							s.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
-						}
+						s.setFollowStatus(false);
+						s.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
 					}
 				});
 				break;
@@ -1427,12 +1394,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		if (pet)
 		{
 			final L2Summon summon = activeChar.getPet();
-			if (!validateSummon(summon, pet))
-			{
-				return;
-			}
-			
-			if (!canControl(summon))
+			if (!validateSummon(summon, pet) || !canControl(summon))
 			{
 				return;
 			}
@@ -1487,13 +1449,10 @@ public final class RequestActionUse extends L2GameClientPacket
 			return;
 		}
 		
-		if (summon instanceof L2BabyPetInstance)
+		if ((summon instanceof L2BabyPetInstance) && !((L2BabyPetInstance) summon).isInSupportMode())
 		{
-			if (!((L2BabyPetInstance) summon).isInSupportMode())
-			{
-				sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
-				return;
-			}
+			sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
+			return;
 		}
 		final Skill skill = summon.getTemplate().getParameters().getSkillHolder(skillName).getSkill();
 		
@@ -1511,22 +1470,16 @@ public final class RequestActionUse extends L2GameClientPacket
 	
 	private boolean canControl(L2Summon summon)
 	{
-		if (summon instanceof L2BabyPetInstance)
+		if ((summon instanceof L2BabyPetInstance) && !((L2BabyPetInstance) summon).isInSupportMode())
 		{
-			if (!((L2BabyPetInstance) summon).isInSupportMode())
-			{
-				sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
-				return false;
-			}
+			sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
+			return false;
 		}
 		
-		if (summon.isPet())
+		if (summon.isPet() && ((summon.getLevel() - getActiveChar().getLevel()) > 20))
 		{
-			if ((summon.getLevel() - getActiveChar().getLevel()) > 20)
-			{
-				sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
-				return false;
-			}
+			sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
+			return false;
 		}
 		return true;
 	}

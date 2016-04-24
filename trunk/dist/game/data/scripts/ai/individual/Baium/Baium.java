@@ -484,13 +484,10 @@ public final class Baium extends AbstractNpcAI
 		
 		if (npc.getId() == BAIUM)
 		{
-			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()))
+			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
 			{
-				if (!npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(ANTI_STRIDER.getSkill());
-				}
+				npc.setTarget(attacker);
+				npc.doCast(ANTI_STRIDER.getSkill());
 			}
 			
 			if (skill == null)

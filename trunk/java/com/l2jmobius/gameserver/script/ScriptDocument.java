@@ -21,7 +21,6 @@ import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -45,18 +44,11 @@ public class ScriptDocument
 		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		try
 		{
-			final DocumentBuilder builder = factory.newDocumentBuilder();
-			_document = builder.parse(input);
+			_document = factory.newDocumentBuilder().parse(input);
 		}
 		catch (SAXException sxe)
 		{
-			// Error generated during parsing)
-			Exception x = sxe;
-			if (sxe.getException() != null)
-			{
-				x = sxe.getException();
-			}
-			_log.warning(getClass().getSimpleName() + ": " + x.getMessage());
+			_log.warning(getClass().getSimpleName() + ": " + (sxe.getException() != null ? sxe.getException() : sxe).getMessage());
 		}
 		catch (ParserConfigurationException pce)
 		{
@@ -88,5 +80,4 @@ public class ScriptDocument
 	{
 		return _name;
 	}
-	
 }

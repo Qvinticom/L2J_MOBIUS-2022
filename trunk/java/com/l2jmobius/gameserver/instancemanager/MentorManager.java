@@ -146,15 +146,13 @@ public class MentorManager
 	public void setPenalty(int mentorId, long penalty)
 	{
 		final L2PcInstance player = L2World.getInstance().getPlayer(mentorId);
-		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
-		vars.set("Mentor-Penalty-" + mentorId, String.valueOf(System.currentTimeMillis() + penalty));
+		(player != null ? player.getVariables() : new PlayerVariables(mentorId)).set("Mentor-Penalty-" + mentorId, String.valueOf(System.currentTimeMillis() + penalty));
 	}
 	
 	public long getMentorPenalty(int mentorId)
 	{
 		final L2PcInstance player = L2World.getInstance().getPlayer(mentorId);
-		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
-		return vars.getLong("Mentor-Penalty-" + mentorId, 0);
+		return (player != null ? player.getVariables() : new PlayerVariables(mentorId)).getLong("Mentor-Penalty-" + mentorId, 0);
 	}
 	
 	/**
@@ -213,11 +211,7 @@ public class MentorManager
 	
 	public Collection<L2Mentee> getMentees(int mentorId)
 	{
-		if (_menteeData.containsKey(mentorId))
-		{
-			return _menteeData.get(mentorId).values();
-		}
-		return Collections.emptyList();
+		return _menteeData.containsKey(mentorId) ? _menteeData.get(mentorId).values() : Collections.emptyList();
 	}
 	
 	/**
@@ -227,11 +221,7 @@ public class MentorManager
 	 */
 	public L2Mentee getMentee(int mentorId, int menteeId)
 	{
-		if (_menteeData.containsKey(mentorId))
-		{
-			return _menteeData.get(mentorId).get(menteeId);
-		}
-		return null;
+		return _menteeData.containsKey(mentorId) ? _menteeData.get(mentorId).get(menteeId) : null;
 	}
 	
 	public boolean isAllMenteesOffline(int menteorId, int menteeId)
@@ -239,13 +229,10 @@ public class MentorManager
 		boolean isAllMenteesOffline = true;
 		for (L2Mentee men : getMentees(menteorId))
 		{
-			if (men.isOnline() && (men.getObjectId() != menteeId))
+			if (men.isOnline() && (men.getObjectId() != menteeId) && isAllMenteesOffline)
 			{
-				if (isAllMenteesOffline)
-				{
-					isAllMenteesOffline = false;
-					break;
-				}
+				isAllMenteesOffline = false;
+				break;
 			}
 		}
 		return isAllMenteesOffline;

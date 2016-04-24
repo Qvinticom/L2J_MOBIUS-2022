@@ -92,7 +92,7 @@ public class PremiumManager
 		{
 			if (player.getAccountNamePlayer().equalsIgnoreCase(accountName))
 			{
-				player.setPremiumStatus(getPremiumEndDate(accountName) > 0 ? true : false);
+				player.setPremiumStatus(getPremiumEndDate(accountName) > 0);
 			}
 		}
 	}

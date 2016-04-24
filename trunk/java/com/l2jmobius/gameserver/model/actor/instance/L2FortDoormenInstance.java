@@ -86,14 +86,7 @@ public class L2FortDoormenInstance extends L2DoormenInstance
 	@Override
 	protected final boolean isOwnerClan(L2PcInstance player)
 	{
-		if ((player.getClan() != null) && (getFort() != null) && (getFort().getOwnerClan() != null))
-		{
-			if (player.getClanId() == getFort().getOwnerClan().getId())
-			{
-				return true;
-			}
-		}
-		return false;
+		return (player.getClan() != null) && (getFort() != null) && (getFort().getOwnerClan() != null) && (player.getClanId() == getFort().getOwnerClan().getId());
 	}
 	
 	@Override

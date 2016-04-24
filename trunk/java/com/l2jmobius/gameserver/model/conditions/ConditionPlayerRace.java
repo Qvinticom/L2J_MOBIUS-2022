@@ -42,10 +42,6 @@ public class ConditionPlayerRace extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		if ((effector == null) || !effector.isPlayer())
-		{
-			return false;
-		}
-		return Util.contains(_races, effector.getActingPlayer().getRace());
+		return (effector != null) && effector.isPlayer() && Util.contains(_races, effector.getActingPlayer().getRace());
 	}
 }

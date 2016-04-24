@@ -132,13 +132,7 @@ public abstract class L2Vehicle extends L2Character
 				final VehiclePathPoint point = _currentPath[_runState];
 				if (!isMovementDisabled())
 				{
-					if (point.getMoveSpeed() == 0)
-					{
-						point.setHeading(point.getRotationSpeed());
-						teleToLocation(point, false);
-						_currentPath = null;
-					}
-					else
+					if (point.getMoveSpeed() != 0)
 					{
 						if (point.getMoveSpeed() > 0)
 						{
@@ -171,6 +165,9 @@ public abstract class L2Vehicle extends L2Character
 						GameTimeController.getInstance().registerMovingObject(this);
 						return true;
 					}
+					point.setHeading(point.getRotationSpeed());
+					teleToLocation(point, false);
+					_currentPath = null;
 				}
 			}
 			else
@@ -241,13 +238,7 @@ public abstract class L2Vehicle extends L2Character
 	
 	public boolean addPassenger(L2PcInstance player)
 	{
-		if ((player == null) || _passengers.contains(player))
-		{
-			return false;
-		}
-		
-		// already in other vehicle
-		if ((player.getVehicle() != null) && (player.getVehicle() != this))
+		if ((player == null) || _passengers.contains(player) || ((player.getVehicle() != null) && (player.getVehicle() != this)))
 		{
 			return false;
 		}
@@ -299,33 +290,35 @@ public abstract class L2Vehicle extends L2Character
 	public void payForRide(int itemId, int count, int oustX, int oustY, int oustZ)
 	{
 		final Collection<L2PcInstance> passengers = getKnownList().getKnownPlayersInRadius(1000);
-		if ((passengers != null) && !passengers.isEmpty())
+		if ((passengers == null) || passengers.isEmpty())
 		{
-			L2ItemInstance ticket;
-			InventoryUpdate iu;
-			for (L2PcInstance player : passengers)
+			return;
+		}
+		
+		L2ItemInstance ticket;
+		InventoryUpdate iu;
+		for (L2PcInstance player : passengers)
+		{
+			if (player == null)
 			{
-				if (player == null)
+				continue;
+			}
+			if (player.isInBoat() && (player.getBoat() == this))
+			{
+				if (itemId > 0)
 				{
-					continue;
-				}
-				if (player.isInBoat() && (player.getBoat() == this))
-				{
-					if (itemId > 0)
+					ticket = player.getInventory().getItemByItemId(itemId);
+					if ((ticket == null) || (player.getInventory().destroyItem("Boat", ticket, count, player, this) == null))
 					{
-						ticket = player.getInventory().getItemByItemId(itemId);
-						if ((ticket == null) || (player.getInventory().destroyItem("Boat", ticket, count, player, this) == null))
-						{
-							player.sendPacket(SystemMessageId.YOU_DO_NOT_POSSESS_THE_CORRECT_TICKET_TO_BOARD_THE_BOAT);
-							player.teleToLocation(new Location(oustX, oustY, oustZ), true);
-							continue;
-						}
-						iu = new InventoryUpdate();
-						iu.addModifiedItem(ticket);
-						player.sendPacket(iu);
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_POSSESS_THE_CORRECT_TICKET_TO_BOARD_THE_BOAT);
+						player.teleToLocation(new Location(oustX, oustY, oustZ), true);
+						continue;
 					}
-					addPassenger(player);
+					iu = new InventoryUpdate();
+					iu.addModifiedItem(ticket);
+					player.sendPacket(iu);
 				}
+				addPassenger(player);
 			}
 		}
 	}

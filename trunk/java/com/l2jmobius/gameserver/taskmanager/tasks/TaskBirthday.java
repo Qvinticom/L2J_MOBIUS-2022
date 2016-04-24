@@ -51,10 +51,7 @@ public class TaskBirthday extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
-		// TODO(Zoey76): Fix first run.
-		final int birthdayGiftCount = giveBirthdayGifts(task.getLastActivation());
-		
-		_log.info("BirthdayManager: " + birthdayGiftCount + " gifts sent.");
+		_log.info("BirthdayManager: " + giveBirthdayGifts(task.getLastActivation()) + " gifts sent.");
 	}
 	
 	private int giveBirthdayGifts(long lastActivation)
@@ -68,10 +65,7 @@ public class TaskBirthday extends Task
 			{
 				while (rs.next())
 				{
-					String text = Config.ALT_BIRTHDAY_MAIL_TEXT;
-					text = text.replaceAll("$c1", rs.getString("char_name"));
-					text = text.replaceAll("$s1", Integer.toString(rs.getInt("age")));
-					
+					final String text = Config.ALT_BIRTHDAY_MAIL_TEXT.replaceAll("$c1", rs.getString("char_name")).replaceAll("$s1", Integer.toString(rs.getInt("age")));
 					final Message msg = new Message(rs.getInt("charId"), Config.ALT_BIRTHDAY_MAIL_SUBJECT, text, MailType.BIRTHDAY);
 					msg.createAttachments().addItem("Birthday", Config.ALT_BIRTHDAY_GIFT, 1, null, null);
 					MailManager.getInstance().sendMessage(msg);

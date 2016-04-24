@@ -24,7 +24,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.TaskZoneSettings;
 
@@ -60,12 +59,7 @@ public class L2DamageZone extends L2ZoneType
 		_castle = null;
 		
 		setTargetType(InstanceType.L2Playable); // default only playabale
-		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-		if (settings == null)
-		{
-			settings = new TaskZoneSettings();
-		}
-		setSettings(settings);
+		setSettings((ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName())));
 	}
 	
 	@Override
@@ -106,23 +100,22 @@ public class L2DamageZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if ((getSettings().getTask() == null) && ((_damageHPPerSec != 0) || (_damageMPPerSec != 0)))
+		if ((getSettings().getTask() != null) || ((_damageHPPerSec == 0) && (_damageMPPerSec == 0)))
 		{
-			final L2PcInstance player = character.getActingPlayer();
-			if (getCastle() != null) // Castle zone
+			return;
+		}
+		
+		final L2PcInstance player = character.getActingPlayer();
+		if ((getCastle() != null) && !(getCastle().getSiege().isInProgress() && (player != null) && (player.getSiegeState() != 2)))
+		{
+			return;
+		}
+		
+		synchronized (this)
+		{
+			if (getSettings().getTask() == null)
 			{
-				if (!(getCastle().getSiege().isInProgress() && (player != null) && (player.getSiegeState() != 2))) // Siege and no defender
-				{
-					return;
-				}
-			}
-			
-			synchronized (this)
-			{
-				if (getSettings().getTask() == null)
-				{
-					getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
-				}
+				getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
 			}
 		}
 	}

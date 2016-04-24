@@ -177,8 +177,7 @@ final class Wedding extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final String htmltext = getHtm(player.getHtmlPrefix(), "Start.html");
-		return htmltext.replaceAll("%fee%", String.valueOf(Config.L2JMOD_WEDDING_PRICE));
+		return getHtm(player.getHtmlPrefix(), "Start.html").replaceAll("%fee%", String.valueOf(Config.L2JMOD_WEDDING_PRICE));
 	}
 	
 	private String sendHtml(L2PcInstance player, String fileName, String regex, String replacement)

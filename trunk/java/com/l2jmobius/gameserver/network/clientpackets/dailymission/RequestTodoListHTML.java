@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.dailymission;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
 
 /**
@@ -39,11 +38,6 @@ public class RequestTodoListHTML extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
-		{
-			return;
-		}
 	}
 	
 	@Override

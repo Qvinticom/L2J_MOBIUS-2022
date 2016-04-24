@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.List;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -60,10 +58,8 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 			return false;
 		}
 		
-		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(((L2PcInstance) attacker).getClan()));
-		
 		// Attackable during siege by all except defenders
-		return (isFort);
+		return ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(((L2PcInstance) attacker).getClan()));
 	}
 	
 	@Override
@@ -102,19 +98,19 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 	@Override
 	public void returnHome()
 	{
-		if (!isInsideRadius(getSpawn(), 200, false, false))
+		if (isInsideRadius(getSpawn(), 200, false, false))
 		{
-			if (Config.DEBUG)
-			{
-				_log.info(getObjectId() + ": moving home");
-			}
-			setisReturningToSpawnPoint(true);
-			clearAggroList();
-			
-			if (hasAI())
-			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
-			}
+			return;
+		}
+		if (Config.DEBUG)
+		{
+			_log.info(getObjectId() + ": moving home");
+		}
+		setisReturningToSpawnPoint(true);
+		clearAggroList();
+		if (hasAI())
+		{
+			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
 		}
 	}
 	
@@ -124,8 +120,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 		final L2Spawn spawn = getSpawn();
 		if ((spawn != null) && canTalk())
 		{
-			final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
-			for (FortSiegeSpawn spawn2 : commanders)
+			for (FortSiegeSpawn spawn2 : FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId()))
 			{
 				if (spawn2.getId() == spawn.getId())
 				{
@@ -159,7 +154,6 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 						{
 							ns.addStringParameter(attacker.getName());
 						}
-						
 						broadcastPacket(ns);
 						setCanTalk(false);
 						ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleTalkTask(), 10000);

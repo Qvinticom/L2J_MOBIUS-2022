@@ -211,13 +211,9 @@ public class Q10364_ObligationsOfTheSeeker extends Quest
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
-			if (getQuestItemsCount(qs.getPlayer(), DIRTY_PIECE_OF_PAPER) < (DPP_REQUIRED - 1))
+			giveItems(qs.getPlayer(), DIRTY_PIECE_OF_PAPER, 1);
+			if (getQuestItemsCount(qs.getPlayer(), DIRTY_PIECE_OF_PAPER) >= (DPP_REQUIRED - 1))
 			{
-				giveItems(qs.getPlayer(), DIRTY_PIECE_OF_PAPER, 1);
-			}
-			else
-			{
-				giveItems(qs.getPlayer(), DIRTY_PIECE_OF_PAPER, 1);
 				qs.setCond(3, true);
 				showOnScreenMsg(qs.getPlayer(), NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_4, ExShowScreenMessage.TOP_CENTER, 10000);
 			}

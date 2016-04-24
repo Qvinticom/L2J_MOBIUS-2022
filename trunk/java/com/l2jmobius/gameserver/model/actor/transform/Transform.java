@@ -204,146 +204,144 @@ public final class Transform implements IIdentifiable
 	public void onTransform(L2PcInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
-		if (template != null)
+		if (template == null)
 		{
-			// Start flying.
-			if (isFlying())
+			return;
+		}
+		
+		// Start flying.
+		if (isFlying())
+		{
+			player.setIsFlying(true);
+		}
+		
+		if (getName() != null)
+		{
+			player.getAppearance().setVisibleName(getName());
+		}
+		if (getTitle() != null)
+		{
+			player.getAppearance().setVisibleTitle(getTitle());
+		}
+		
+		// Set inventory blocks if needed.
+		if (!template.getAdditionalItems().isEmpty())
+		{
+			final List<Integer> allowed = new ArrayList<>();
+			final List<Integer> notAllowed = new ArrayList<>();
+			for (AdditionalItemHolder holder : template.getAdditionalItems())
 			{
-				player.setIsFlying(true);
-			}
-			
-			if (getName() != null)
-			{
-				player.getAppearance().setVisibleName(getName());
-			}
-			if (getTitle() != null)
-			{
-				player.getAppearance().setVisibleTitle(getTitle());
-			}
-			
-			// Set inventory blocks if needed.
-			if (!template.getAdditionalItems().isEmpty())
-			{
-				final List<Integer> allowed = new ArrayList<>();
-				final List<Integer> notAllowed = new ArrayList<>();
-				for (AdditionalItemHolder holder : template.getAdditionalItems())
+				if (holder.isAllowedToUse())
 				{
-					if (holder.isAllowedToUse())
-					{
-						allowed.add(holder.getId());
-					}
-					else
-					{
-						notAllowed.add(holder.getId());
-					}
+					allowed.add(holder.getId());
 				}
-				
-				if (!allowed.isEmpty())
+				else
 				{
-					final int[] items = new int[allowed.size()];
-					for (int i = 0; i < items.length; i++)
-					{
-						items[i] = allowed.get(i);
-					}
-					player.getInventory().setInventoryBlock(items, 1);
-				}
-				
-				if (!notAllowed.isEmpty())
-				{
-					final int[] items = new int[notAllowed.size()];
-					for (int i = 0; i < items.length; i++)
-					{
-						items[i] = notAllowed.get(i);
-					}
-					player.getInventory().setInventoryBlock(items, 2);
+					notAllowed.add(holder.getId());
 				}
 			}
 			
-			// Send basic action list.
-			if (template.hasBasicActionList())
+			if (!allowed.isEmpty())
 			{
-				player.sendPacket(template.getBasicActionList());
+				final int[] items = new int[allowed.size()];
+				for (int i = 0; i < items.length; i++)
+				{
+					items[i] = allowed.get(i);
+				}
+				player.getInventory().setInventoryBlock(items, 1);
 			}
+			
+			if (!notAllowed.isEmpty())
+			{
+				final int[] items = new int[notAllowed.size()];
+				for (int i = 0; i < items.length; i++)
+				{
+					items[i] = notAllowed.get(i);
+				}
+				player.getInventory().setInventoryBlock(items, 2);
+			}
+		}
+		
+		// Send basic action list.
+		if (template.hasBasicActionList())
+		{
+			player.sendPacket(template.getBasicActionList());
 		}
 	}
 	
 	public void onUntransform(L2PcInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
-		if (template != null)
+		if (template == null)
 		{
-			// Stop flying.
-			if (isFlying())
-			{
-				player.setIsFlying(false);
-			}
-			
-			if (getName() != null)
-			{
-				player.getAppearance().setVisibleName(null);
-			}
-			if (getTitle() != null)
-			{
-				player.getAppearance().setVisibleTitle(null);
-			}
-			
-			// Remove common skills.
-			if (!template.getSkills().isEmpty())
-			{
-				for (SkillHolder holder : template.getSkills())
-				{
-					final Skill skill = holder.getSkill();
-					if (!SkillTreesData.getInstance().isSkillAllowed(player, skill))
-					{
-						player.removeSkill(skill, false, skill.isPassive());
-					}
-				}
-			}
-			
-			// Remove skills depending on level.
-			if (!template.getAdditionalSkills().isEmpty())
-			{
-				for (AdditionalSkillHolder holder : template.getAdditionalSkills())
-				{
-					final Skill skill = holder.getSkill();
-					if ((player.getLevel() >= holder.getMinLevel()) && !SkillTreesData.getInstance().isSkillAllowed(player, skill))
-					{
-						player.removeSkill(skill, false, skill.isPassive());
-					}
-				}
-			}
-			
-			// Remove transformation skills.
-			player.removeAllTransformSkills();
-			
-			// Remove inventory blocks if needed.
-			if (!template.getAdditionalItems().isEmpty())
-			{
-				player.getInventory().unblock();
-			}
-			
-			player.sendPacket(ExBasicActionList.STATIC_PACKET);
+			return;
 		}
+		
+		// Stop flying.
+		if (isFlying())
+		{
+			player.setIsFlying(false);
+		}
+		
+		if (getName() != null)
+		{
+			player.getAppearance().setVisibleName(null);
+		}
+		if (getTitle() != null)
+		{
+			player.getAppearance().setVisibleTitle(null);
+		}
+		
+		// Remove common skills.
+		if (!template.getSkills().isEmpty())
+		{
+			for (SkillHolder holder : template.getSkills())
+			{
+				final Skill skill = holder.getSkill();
+				if (!SkillTreesData.getInstance().isSkillAllowed(player, skill))
+				{
+					player.removeSkill(skill, false, skill.isPassive());
+				}
+			}
+		}
+		
+		// Remove skills depending on level.
+		if (!template.getAdditionalSkills().isEmpty())
+		{
+			for (AdditionalSkillHolder holder : template.getAdditionalSkills())
+			{
+				final Skill skill = holder.getSkill();
+				if ((player.getLevel() >= holder.getMinLevel()) && !SkillTreesData.getInstance().isSkillAllowed(player, skill))
+				{
+					player.removeSkill(skill, false, skill.isPassive());
+				}
+			}
+		}
+		
+		// Remove transformation skills.
+		player.removeAllTransformSkills();
+		
+		// Remove inventory blocks if needed.
+		if (!template.getAdditionalItems().isEmpty())
+		{
+			player.getInventory().unblock();
+		}
+		
+		player.sendPacket(ExBasicActionList.STATIC_PACKET);
 	}
 	
 	public void onLevelUp(L2PcInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
-		if (template != null)
+		// Add skills depending on level.
+		if ((template != null) && !template.getAdditionalSkills().isEmpty())
 		{
-			// Add skills depending on level.
-			if (!template.getAdditionalSkills().isEmpty())
+			for (AdditionalSkillHolder holder : template.getAdditionalSkills())
 			{
-				for (AdditionalSkillHolder holder : template.getAdditionalSkills())
+				if ((player.getLevel() >= holder.getMinLevel()) && (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLvl()))
 				{
-					if (player.getLevel() >= holder.getMinLevel())
-					{
-						if (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLvl())
-						{
-							player.addSkill(holder.getSkill(), false);
-							player.addTransformSkill(holder.getSkill());
-						}
-					}
+					player.addSkill(holder.getSkill(), false);
+					player.addTransformSkill(holder.getSkill());
 				}
 			}
 		}
@@ -373,11 +371,7 @@ public final class Transform implements IIdentifiable
 	public int getBaseDefBySlot(L2PcInstance player, int slot)
 	{
 		final TransformTemplate template = getTemplate(player);
-		if (template != null)
-		{
-			return template.getDefense(slot);
-		}
-		return player.getTemplate().getBaseDefBySlot(slot);
+		return template != null ? template.getDefense(slot) : player.getTemplate().getBaseDefBySlot(slot);
 	}
 	
 	/**

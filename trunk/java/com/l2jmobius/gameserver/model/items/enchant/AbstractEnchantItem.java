@@ -76,7 +76,7 @@ public abstract class AbstractEnchantItem
 		{
 			throw new NullPointerException();
 		}
-		else if (!Util.contains(ENCHANT_TYPES, getItem().getItemType()))
+		if (!Util.contains(ENCHANT_TYPES, getItem().getItemType()))
 		{
 			throw new IllegalAccessError();
 		}
@@ -205,14 +205,6 @@ public abstract class AbstractEnchantItem
 	 */
 	private final boolean isValidItemType(int type2)
 	{
-		if (type2 == L2Item.TYPE2_WEAPON)
-		{
-			return isWeapon();
-		}
-		else if ((type2 == L2Item.TYPE2_SHIELD_ARMOR) || (type2 == L2Item.TYPE2_ACCESSORY))
-		{
-			return !isWeapon();
-		}
-		return false;
+		return type2 == L2Item.TYPE2_WEAPON ? isWeapon() : ((type2 == L2Item.TYPE2_SHIELD_ARMOR) || (type2 == L2Item.TYPE2_ACCESSORY)) && !isWeapon();
 	}
 }

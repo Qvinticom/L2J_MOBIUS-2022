@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.zone.type;
 
-import java.util.Collection;
-
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -53,9 +51,7 @@ public class L2WaterZone extends L2ZoneType
 		}
 		else if (character.isNpc())
 		{
-			final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
-			
-			for (L2PcInstance player : plrs)
+			for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
 			{
 				if (character.getRunSpeed() == 0)
 				{
@@ -81,8 +77,7 @@ public class L2WaterZone extends L2ZoneType
 		}
 		else if (character.isNpc())
 		{
-			final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
-			for (L2PcInstance player : plrs)
+			for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
 			{
 				if (character.getRunSpeed() == 0)
 				{

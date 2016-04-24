@@ -106,16 +106,8 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			}
 		}
 		
-		L2NpcTemplate npc1 = null;
-		if (mid1 != 0)
-		{
-			npc1 = NpcData.getInstance().getTemplate(mid1);
-		}
-		L2NpcTemplate npc2 = null;
-		if (mid2 != 0)
-		{
-			npc2 = NpcData.getInstance().getTemplate(mid2);
-		}
+		final L2NpcTemplate npc1 = mid1 != 0 ? NpcData.getInstance().getTemplate(mid1) : null;
+		final L2NpcTemplate npc2 = mid2 != 0 ? NpcData.getInstance().getTemplate(mid2) : null;
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		

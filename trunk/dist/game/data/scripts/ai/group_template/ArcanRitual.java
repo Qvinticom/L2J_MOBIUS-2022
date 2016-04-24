@@ -224,8 +224,7 @@ final class ArcanRitual extends Quest
 			player.sendPacket(trigger);
 			if (message)
 			{
-				final L2GameServerPacket sm = new ExShowScreenMessage(NpcStringId.DARK_POWER_SEEPS_OUT_FROM_THE_MIDDLE_OF_THE_TOWN, ExShowScreenMessage.TOP_CENTER, 5000);
-				player.sendPacket(sm);
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.DARK_POWER_SEEPS_OUT_FROM_THE_MIDDLE_OF_THE_TOWN, ExShowScreenMessage.TOP_CENTER, 5000));
 			}
 		}
 	}

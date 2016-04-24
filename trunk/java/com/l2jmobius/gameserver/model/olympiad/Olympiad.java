@@ -656,8 +656,7 @@ public class Olympiad extends ListenersContainer
 			resetWeeklyMatches();
 			_log.info("Olympiad System: Reset weekly matches to nobles");
 			
-			final Calendar nextChange = Calendar.getInstance();
-			_nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
+			_nextWeeklyChange = Calendar.getInstance().getTimeInMillis() + WEEKLY_PERIOD;
 		}, getMillisToWeekChange(), WEEKLY_PERIOD);
 	}
 	
@@ -1086,17 +1085,12 @@ public class Olympiad extends ListenersContainer
 		{
 			noble.set(POINTS, 0);
 		}
-		points *= Config.ALT_OLY_GP_PER_POINT;
-		return points;
+		return points *= Config.ALT_OLY_GP_PER_POINT;
 	}
 	
 	public int getNoblePoints(int objId)
 	{
-		if (!NOBLES.containsKey(objId))
-		{
-			return 0;
-		}
-		return NOBLES.get(objId).getInt(POINTS);
+		return !NOBLES.containsKey(objId) ? 0 : NOBLES.get(objId).getInt(POINTS);
 	}
 	
 	public int getLastNobleOlympiadPoints(int objId)
@@ -1123,29 +1117,17 @@ public class Olympiad extends ListenersContainer
 	
 	public int getCompetitionDone(int objId)
 	{
-		if (!NOBLES.containsKey(objId))
-		{
-			return 0;
-		}
-		return NOBLES.get(objId).getInt(COMP_DONE);
+		return NOBLES.containsKey(objId) ? NOBLES.get(objId).getInt(COMP_DONE) : 0;
 	}
 	
 	public int getCompetitionWon(int objId)
 	{
-		if (!NOBLES.containsKey(objId))
-		{
-			return 0;
-		}
-		return NOBLES.get(objId).getInt(COMP_WON);
+		return NOBLES.containsKey(objId) ? NOBLES.get(objId).getInt(COMP_WON) : 0;
 	}
 	
 	public int getCompetitionLost(int objId)
 	{
-		if (!NOBLES.containsKey(objId))
-		{
-			return 0;
-		}
-		return NOBLES.get(objId).getInt(COMP_LOST);
+		return NOBLES.containsKey(objId) ? NOBLES.get(objId).getInt(COMP_LOST) : 0;
 	}
 	
 	/**
@@ -1155,11 +1137,7 @@ public class Olympiad extends ListenersContainer
 	 */
 	public int getCompetitionDoneWeek(int objId)
 	{
-		if (!NOBLES.containsKey(objId))
-		{
-			return 0;
-		}
-		return NOBLES.get(objId).getInt(COMP_DONE_WEEK);
+		return NOBLES.containsKey(objId) ? NOBLES.get(objId).getInt(COMP_DONE_WEEK) : 0;
 	}
 	
 	/**
@@ -1169,11 +1147,7 @@ public class Olympiad extends ListenersContainer
 	 */
 	public int getCompetitionDoneWeekClassed(int objId)
 	{
-		if (!NOBLES.containsKey(objId))
-		{
-			return 0;
-		}
-		return NOBLES.get(objId).getInt(COMP_DONE_WEEK_CLASSED);
+		return NOBLES.containsKey(objId) ? NOBLES.get(objId).getInt(COMP_DONE_WEEK_CLASSED) : 0;
 	}
 	
 	/**
@@ -1183,11 +1157,7 @@ public class Olympiad extends ListenersContainer
 	 */
 	public int getCompetitionDoneWeekNonClassed(int objId)
 	{
-		if (!NOBLES.containsKey(objId))
-		{
-			return 0;
-		}
-		return NOBLES.get(objId).getInt(COMP_DONE_WEEK_NON_CLASSED);
+		return NOBLES.containsKey(objId) ? NOBLES.get(objId).getInt(COMP_DONE_WEEK_NON_CLASSED) : 0;
 	}
 	
 	/**
@@ -1197,11 +1167,7 @@ public class Olympiad extends ListenersContainer
 	 */
 	public int getCompetitionDoneWeekTeam(int objId)
 	{
-		if (!NOBLES.containsKey(objId))
-		{
-			return 0;
-		}
-		return NOBLES.get(objId).getInt(COMP_DONE_WEEK_TEAM);
+		return NOBLES.containsKey(objId) ? NOBLES.get(objId).getInt(COMP_DONE_WEEK_TEAM) : 0;
 	}
 	
 	/**

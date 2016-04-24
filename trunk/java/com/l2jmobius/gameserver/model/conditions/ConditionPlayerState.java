@@ -51,11 +51,7 @@ public class ConditionPlayerState extends Condition
 		{
 			case RESTING:
 			{
-				if (player != null)
-				{
-					return (player.isSitting() == _required);
-				}
-				return !_required;
+				return player != null ? player.isSitting() == _required : !_required;
 			}
 			case MOVING:
 			{
@@ -67,11 +63,7 @@ public class ConditionPlayerState extends Condition
 			}
 			case STANDING:
 			{
-				if (player != null)
-				{
-					return (_required != (player.isSitting() || player.isMoving()));
-				}
-				return (_required != character.isMoving());
+				return player != null ? _required != (player.isSitting() || player.isMoving()) : _required != character.isMoving();
 			}
 			case FLYING:
 			{
@@ -87,19 +79,11 @@ public class ConditionPlayerState extends Condition
 			}
 			case CHAOTIC:
 			{
-				if (player != null)
-				{
-					return ((player.getReputation() < 0) == _required);
-				}
-				return !_required;
+				return player != null ? (player.getReputation() < 0) == _required : !_required;
 			}
 			case OLYMPIAD:
 			{
-				if (player != null)
-				{
-					return (player.isInOlympiadMode() == _required);
-				}
-				return !_required;
+				return player != null ? player.isInOlympiadMode() == _required : !_required;
 			}
 		}
 		return !_required;

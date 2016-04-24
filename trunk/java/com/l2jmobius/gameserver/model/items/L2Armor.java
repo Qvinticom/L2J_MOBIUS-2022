@@ -59,29 +59,32 @@ public final class L2Armor extends L2Item
 		}
 		
 		final String skill = set.getString("enchant4_skill", null);
-		if (skill != null)
+		if (skill == null)
 		{
-			final String[] info = skill.split("-");
-			
-			if ((info != null) && (info.length == 2))
-			{
-				int id = 0;
-				int level = 0;
-				try
-				{
-					id = Integer.parseInt(info[0]);
-					level = Integer.parseInt(info[1]);
-				}
-				catch (Exception nfe)
-				{
-					// Incorrect syntax, don't add new skill
-					_log.info(StringUtil.concat("> Couldnt parse ", skill, " in armor enchant skills! item ", toString()));
-				}
-				if ((id > 0) && (level > 0))
-				{
-					_enchant4Skill = new SkillHolder(id, level);
-				}
-			}
+			return;
+		}
+		
+		final String[] info = skill.split("-");
+		if ((info == null) || (info.length != 2))
+		{
+			return;
+		}
+		
+		int id = 0;
+		int level = 0;
+		try
+		{
+			id = Integer.parseInt(info[0]);
+			level = Integer.parseInt(info[1]);
+		}
+		catch (Exception nfe)
+		{
+			// Incorrect syntax, don't add new skill
+			_log.info(StringUtil.concat("> Couldnt parse ", skill, " in armor enchant skills! item ", toString()));
+		}
+		if ((id > 0) && (level > 0))
+		{
+			_enchant4Skill = new SkillHolder(id, level);
 		}
 	}
 	
@@ -109,10 +112,6 @@ public final class L2Armor extends L2Item
 	@Override
 	public Skill getEnchant4Skill()
 	{
-		if (_enchant4Skill == null)
-		{
-			return null;
-		}
-		return _enchant4Skill.getSkill();
+		return _enchant4Skill == null ? null : _enchant4Skill.getSkill();
 	}
 }

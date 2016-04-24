@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
 /**
  * Winds Of Fate: Encroaching Shadows (10472)
- * @author Joker, Staway
+ * @author Joker, Stayway
  */
 public class Q10472_WindsOfFate_EncroachingShadows extends Quest
 {
@@ -438,8 +438,7 @@ public class Q10472_WindsOfFate_EncroachingShadows extends Quest
 			{
 				if (qs.isCond(19))
 				{
-					final String html = getHtm(player.getHtmlPrefix(), "33491-01.html");
-					return html.replace("%name%", player.getName());
+					return getHtm(player.getHtmlPrefix(), "33491-01.html").replace("%name%", player.getName());
 					
 				}
 			}
@@ -447,8 +446,7 @@ public class Q10472_WindsOfFate_EncroachingShadows extends Quest
 			{
 				if (qs.isCond(18))
 				{
-					final String html = getHtm(player.getHtmlPrefix(), "33933-01.html");
-					return html.replace("%name%", player.getName());
+					return getHtm(player.getHtmlPrefix(), "33933-01.html").replace("%name%", player.getName());
 				}
 				if (qs.isCond(19))
 				{
@@ -558,12 +556,9 @@ public class Q10472_WindsOfFate_EncroachingShadows extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs != null) && qs.isCond(4))
+		if ((qs != null) && qs.isCond(4) && giveItemRandomly(killer, npc, DARK_FRAGMENT, 1, 50, 1.0, true))
 		{
-			if (giveItemRandomly(killer, npc, DARK_FRAGMENT, 1, 50, 1.0, true))
-			{
-				qs.setCond(5);
-			}
+			qs.setCond(5);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

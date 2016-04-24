@@ -49,12 +49,7 @@ public class ConditionPlayerCanCreateOutpost extends Condition
 		}
 		
 		final L2PcInstance player = effector.getActingPlayer();
-		boolean canCreateOutpost = true;
-		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || (player.getClan() == null))
-		{
-			canCreateOutpost = false;
-		}
-		
+		boolean canCreateOutpost = !player.isAlikeDead() && !player.isCursedWeaponEquipped() && (player.getClan() != null);
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		final Fort fort = FortManager.getInstance().getFort(player);
 		if ((castle == null) && (fort == null))

@@ -95,8 +95,7 @@ public final class HomeBoard implements IParseBoardHandler
 			final String path = command.replace("_bbstop;", "");
 			if ((path.length() > 0) && path.endsWith(".html"))
 			{
-				final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/" + customPath + path);
-				CommunityBoardHandler.separateAndSend(html, activeChar);
+				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/" + customPath + path), activeChar);
 			}
 		}
 		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_MULTISELLS && command.startsWith("_bbsmultisell"))
@@ -162,8 +161,7 @@ public final class HomeBoard implements IParseBoardHandler
 					SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(activeChar.getPet(), activeChar.getPet());
 				}
 			}
-			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/Custom/" + page + ".html");
-			CommunityBoardHandler.separateAndSend(html, activeChar);
+			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/Custom/" + page + ".html"), activeChar);
 		}
 		return false;
 	}

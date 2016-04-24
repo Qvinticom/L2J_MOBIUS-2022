@@ -35,10 +35,12 @@ public class StandUpTask implements Runnable
 	@Override
 	public void run()
 	{
-		if (_player != null)
+		if (_player == null)
 		{
-			_player.setIsSitting(false);
-			_player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			return;
 		}
+		
+		_player.setIsSitting(false);
+		_player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 }

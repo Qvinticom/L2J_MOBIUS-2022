@@ -47,26 +47,13 @@ public final class Detection extends AbstractEffect
 		{
 			return;
 		}
-		
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		final L2PcInstance target = info.getEffected().getActingPlayer();
-		
-		if (target.isInvisible())
+		if (!target.isInvisible() || player.isInPartyWith(target) || player.isInClanWith(target) || player.isInAllyWith(target))
 		{
-			if (player.isInPartyWith(target))
-			{
-				return;
-			}
-			if (player.isInClanWith(target))
-			{
-				return;
-			}
-			if (player.isInAllyWith(target))
-			{
-				return;
-			}
-			// Remove Hide.
-			target.getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
+			return;
 		}
+		// Remove Hide.
+		target.getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
 	}
 }

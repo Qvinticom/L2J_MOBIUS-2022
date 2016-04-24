@@ -89,13 +89,7 @@ public class Q00492_TombRaiders extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		
-		if (qs.isCompleted())
-		{
-			htmltext = getAlreadyCompletedMsg(player);
-		}
-		
+		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
 		if ((npc.getId() == ZENYA) && !player.isSubClassActive() && !player.isDualClassActive() && (player.getClassId().level() == 4))
 		{
 			return "noClass.html";
@@ -142,13 +136,9 @@ public class Q00492_TombRaiders extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, RELICS_OF_THE_EMPIRE, 1, 50, 0.30, true))
 		{
-			if (giveItemRandomly(killer, npc, RELICS_OF_THE_EMPIRE, 1, 50, 0.30, true))
-			{
-				qs.setCond(2);
-			}
+			qs.setCond(2);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

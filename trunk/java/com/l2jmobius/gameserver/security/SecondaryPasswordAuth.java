@@ -226,19 +226,12 @@ public class SecondaryPasswordAuth
 	
 	public boolean passwordExist()
 	{
-		return _password == null ? false : true;
+		return _password != null;
 	}
 	
 	public void openDialog()
 	{
-		if (passwordExist())
-		{
-			_activeClient.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_PROMPT));
-		}
-		else
-		{
-			_activeClient.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_NEW));
-		}
+		_activeClient.sendPacket(passwordExist() ? new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_PROMPT) : new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_NEW));
 	}
 	
 	public boolean isAuthed()
@@ -250,10 +243,7 @@ public class SecondaryPasswordAuth
 	{
 		try
 		{
-			final MessageDigest md = MessageDigest.getInstance("SHA");
-			final byte[] raw = password.getBytes("UTF-8");
-			final byte[] hash = md.digest(raw);
-			return Base64.getEncoder().encodeToString(hash);
+			return Base64.getEncoder().encodeToString(MessageDigest.getInstance("SHA").digest(password.getBytes("UTF-8")));
 		}
 		catch (NoSuchAlgorithmException e)
 		{
@@ -268,16 +258,6 @@ public class SecondaryPasswordAuth
 	
 	private boolean validatePassword(String password)
 	{
-		if (!Util.isDigit(password))
-		{
-			return false;
-		}
-		
-		if ((password.length() < 6) || (password.length() > 8))
-		{
-			return false;
-		}
-		
-		return !SecondaryAuthData.getInstance().isForbiddenPassword(password);
+		return Util.isDigit(password) && (password.length() >= 6) && (password.length() <= 8) && !SecondaryAuthData.getInstance().isForbiddenPassword(password);
 	}
 }

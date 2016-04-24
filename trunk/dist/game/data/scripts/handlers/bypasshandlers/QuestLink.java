@@ -219,19 +219,12 @@ public class QuestLink implements IBypassHandler
 				return;
 			}
 			
-			if (qs == null)
+			if ((qs == null) && (q.getId() >= 1) && (q.getId() < 20000) && (player.getAllActiveQuests().size() >= MAX_QUEST_COUNT))
 			{
-				if ((q.getId() >= 1) && (q.getId() < 20000))
-				{
-					// Too many ongoing quests.
-					if (player.getAllActiveQuests().size() >= MAX_QUEST_COUNT)
-					{
-						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-						html.setFile(player.getHtmlPrefix(), "html/fullquest.html");
-						player.sendPacket(html);
-						return;
-					}
-				}
+				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+				html.setFile(player.getHtmlPrefix(), "html/fullquest.html");
+				player.sendPacket(html);
+				return;
 			}
 			
 			q.notifyTalk(npc, player);

@@ -43,10 +43,7 @@ public class DateRange
 		{
 			try
 			{
-				final Date start = format.parse(date[0]);
-				final Date end = format.parse(date[1]);
-				
-				return new DateRange(start, end);
+				return new DateRange(format.parse(date[0]), format.parse(date[1]));
 			}
 			catch (ParseException e)
 			{

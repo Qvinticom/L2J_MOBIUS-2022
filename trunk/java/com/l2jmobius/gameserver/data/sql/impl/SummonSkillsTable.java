@@ -110,12 +110,9 @@ public class SummonSkillsTable
 				}
 				break;
 			}
-			else if (temp.getMinLevel() <= cha.getLevel())
+			if ((temp.getMinLevel() <= cha.getLevel()) && (temp.getLevel() > lvl))
 			{
-				if (temp.getLevel() > lvl)
-				{
-					lvl = temp.getLevel();
-				}
+				lvl = temp.getLevel();
 			}
 		}
 		return lvl;

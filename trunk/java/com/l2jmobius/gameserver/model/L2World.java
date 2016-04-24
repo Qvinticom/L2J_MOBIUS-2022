@@ -374,12 +374,7 @@ public final class L2World
 	 */
 	public void removeVisibleObject(L2Object object, L2WorldRegion oldWorldRegion)
 	{
-		if (object == null)
-		{
-			return;
-		}
-		
-		if (oldWorldRegion == null)
+		if ((object == null) || (oldWorldRegion == null))
 		{
 			return;
 		}
@@ -428,13 +423,9 @@ public final class L2World
 			// Go through visible objects of the selected region
 			for (L2Object _object : regi.getVisibleObjects().values())
 			{
-				if ((_object == null) || _object.equals(object))
+				if ((_object == null) || _object.equals(object) || !_object.isVisible())
 				{
-					continue; // skip our own character
-				}
-				else if (!_object.isVisible())
-				{
-					continue; // skip dying objects
+					continue;
 				}
 				result.add(_object);
 			}
@@ -542,22 +533,12 @@ public final class L2World
 		final List<L2Playable> result = new LinkedList<>();
 		for (L2WorldRegion regi : reg.getSurroundingRegions())
 		{
-			// Create an Iterator to go through the visible L2Object of the L2WorldRegion
-			final Map<Integer, L2Playable> _allpls = regi.getVisiblePlayable();
-			final Collection<L2Playable> _playables = _allpls.values();
-			// Go through visible object of the selected region
-			for (L2Playable _object : _playables)
+			for (L2Playable _object : regi.getVisiblePlayable().values())
 			{
-				if ((_object == null) || _object.equals(object))
+				if ((_object == null) || _object.equals(object) || !_object.isVisible())
 				{
-					continue; // skip our own character
+					continue;
 				}
-				
-				if (!_object.isVisible())
-				{
-					continue; // skip dying objects
-				}
-				
 				result.add(_object);
 			}
 		}

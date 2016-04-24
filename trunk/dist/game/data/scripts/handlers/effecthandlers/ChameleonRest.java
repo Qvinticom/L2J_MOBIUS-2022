@@ -54,17 +54,9 @@ public final class ChameleonRest extends AbstractEffect
 	@Override
 	public boolean onActionTime(BuffInfo info)
 	{
-		if (info.getEffected().isDead())
+		if (info.getEffected().isDead() || (info.getEffected().isPlayer() && !info.getEffected().getActingPlayer().isSitting()))
 		{
 			return false;
-		}
-		
-		if (info.getEffected().isPlayer())
-		{
-			if (!info.getEffected().getActingPlayer().isSitting())
-			{
-				return false;
-			}
 		}
 		
 		final double manaDam = _power * getTicksMultiplier();

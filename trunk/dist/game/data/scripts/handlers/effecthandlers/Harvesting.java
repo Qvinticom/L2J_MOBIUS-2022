@@ -90,15 +90,14 @@ public final class Harvesting extends AbstractEffect
 						{
 							sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S2);
 							sm.addString(player.getName());
-							sm.addItemName(item.getId());
 						}
 						else
 						{
 							sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S3_S2_S);
 							sm.addString(player.getName());
 							sm.addLong(item.getCount());
-							sm.addItemName(item.getId());
 						}
+						sm.addItemName(item.getId());
 						player.getParty().broadcastToPartyMembers(player, sm);
 					}
 				}
@@ -127,12 +126,7 @@ public final class Harvesting extends AbstractEffect
 		
 		// apply penalty, target <=> player levels
 		// 5% penalty for each level
-		int basicSuccess = 100;
-		if (diff > 5)
-		{
-			basicSuccess -= (diff - 5) * 5;
-		}
-		
+		int basicSuccess = diff > 5 ? 100 - ((diff - 5) * 5) : 100;
 		// success rate can't be less than 1%
 		if (basicSuccess < 1)
 		{

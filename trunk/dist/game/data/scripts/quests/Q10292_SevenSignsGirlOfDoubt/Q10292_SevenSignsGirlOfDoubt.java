@@ -285,14 +285,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 					}
 					case 5:
 					{
-						if (isBusy)
-						{
-							htmltext = "32784-17.html";
-						}
-						else
-						{
-							htmltext = "32784-07.html";
-						}
+						htmltext = isBusy ? "32784-17.html" : "32784-07.html";
 						break;
 					}
 					case 6:

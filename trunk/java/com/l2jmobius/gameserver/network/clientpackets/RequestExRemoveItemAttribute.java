@@ -55,13 +55,7 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 		}
 		
 		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_objectId);
-		
-		if (targetItem == null)
-		{
-			return;
-		}
-		
-		if ((targetItem.getElementals() == null) || (targetItem.getElemental(_element) == null))
+		if ((targetItem == null) || (targetItem.getElementals() == null) || (targetItem.getElemental(_element) == null))
 		{
 			return;
 		}

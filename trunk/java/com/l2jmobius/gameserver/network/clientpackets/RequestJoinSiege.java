@@ -94,23 +94,25 @@ public final class RequestJoinSiege extends L2GameClientPacket
 		}
 		
 		final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(_castleId);
-		if (hall != null)
+		if (hall == null)
 		{
-			if (_isJoining == 1)
-			{
-				if (System.currentTimeMillis() < clan.getDissolvingExpiryTime())
-				{
-					activeChar.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
-					return;
-				}
-				CHSiegeManager.getInstance().registerClan(clan, hall, activeChar);
-			}
-			else
-			{
-				CHSiegeManager.getInstance().unRegisterClan(clan, hall);
-			}
-			activeChar.sendPacket(new SiegeInfo(hall));
+			return;
 		}
+		
+		if (_isJoining == 1)
+		{
+			if (System.currentTimeMillis() < clan.getDissolvingExpiryTime())
+			{
+				activeChar.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
+				return;
+			}
+			CHSiegeManager.getInstance().registerClan(clan, hall, activeChar);
+		}
+		else
+		{
+			CHSiegeManager.getInstance().unRegisterClan(clan, hall);
+		}
+		activeChar.sendPacket(new SiegeInfo(hall));
 	}
 	
 	@Override

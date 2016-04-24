@@ -47,12 +47,9 @@ public class L2ArenaZone extends L2ZoneType
 	@Override
 	protected void onExit(L2Character character)
 	{
-		if (character instanceof L2PcInstance)
+		if ((character instanceof L2PcInstance) && !character.isInsideZone(ZoneId.PVP))
 		{
-			if (!character.isInsideZone(ZoneId.PVP))
-			{
-				character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
-			}
+			character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 		}
 		
 		character.setInsideZone(ZoneId.PVP, false);

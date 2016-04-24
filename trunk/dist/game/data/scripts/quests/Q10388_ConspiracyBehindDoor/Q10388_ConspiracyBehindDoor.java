@@ -103,14 +103,7 @@ public class Q10388_ConspiracyBehindDoor extends Quest
 			{
 				if (npcId == ELIA)
 				{
-					if (player.getLevel() >= 97)
-					{
-						htmltext = "start.htm";
-					}
-					else
-					{
-						htmltext = "nolvl.html";
-					}
+					htmltext = player.getLevel() >= 97 ? "start.htm" : "nolvl.html";
 				}
 				break;
 			}

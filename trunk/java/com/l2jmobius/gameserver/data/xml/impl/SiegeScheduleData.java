@@ -49,11 +49,12 @@ public class SiegeScheduleData implements IXmlReader
 		_scheduleData.clear();
 		parseDatapackFile("../config/SiegeSchedule.xml");
 		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _scheduleData.size() + " siege schedulers.");
-		if (_scheduleData.isEmpty())
+		if (!_scheduleData.isEmpty())
 		{
-			_scheduleData.add(new SiegeScheduleDate(new StatsSet()));
-			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Emergency Loaded: " + _scheduleData.size() + " default siege schedulers.");
+			return;
 		}
+		_scheduleData.add(new SiegeScheduleDate(new StatsSet()));
+		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Emergency Loaded: " + _scheduleData.size() + " default siege schedulers.");
 	}
 	
 	@Override
@@ -76,12 +77,9 @@ public class SiegeScheduleData implements IXmlReader
 								final Node node = attrs.item(i);
 								final String key = node.getNodeName();
 								String val = node.getNodeValue();
-								if ("day".equals(key))
+								if ("day".equals(key) && !Util.isDigit(val))
 								{
-									if (!Util.isDigit(val))
-									{
-										val = Integer.toString(getValueForField(val));
-									}
+									val = Integer.toString(getValueForField(val));
 								}
 								set.set(key, val);
 							}
@@ -121,5 +119,4 @@ public class SiegeScheduleData implements IXmlReader
 	{
 		protected static final SiegeScheduleData _instance = new SiegeScheduleData();
 	}
-	
 }

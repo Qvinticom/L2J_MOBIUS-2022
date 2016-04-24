@@ -54,7 +54,6 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.holders.CastleSpawnHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.type.L2CastleZone;
 import com.l2jmobius.gameserver.model.zone.type.L2ResidenceTeleportZone;
 import com.l2jmobius.gameserver.model.zone.type.L2SiegeZone;
@@ -163,14 +162,7 @@ public final class Castle extends AbstractResidence
 				return;
 			}
 			final long currentTime = System.currentTimeMillis();
-			if (_endDate > currentTime)
-			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(cwh), _endDate - currentTime);
-			}
-			else
-			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(cwh), 0);
-			}
+			ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(cwh), _endDate > currentTime ? _endDate - currentTime : 0);
 		}
 		
 		private class FunctionTask implements Runnable
@@ -191,12 +183,7 @@ public final class Castle extends AbstractResidence
 					}
 					if ((ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= _fee) || !_cwh)
 					{
-						int fee = _fee;
-						if (getEndTime() == -1)
-						{
-							fee = _tempFee;
-						}
-						
+						final int fee = getEndTime() == -1 ? _tempFee : _fee;
 						setEndTime(System.currentTimeMillis() + getRate());
 						dbSave();
 						if (_cwh)
@@ -510,12 +497,9 @@ public final class Castle extends AbstractResidence
 				try
 				{
 					final L2PcInstance oldleader = oldOwner.getLeader().getPlayerInstance();
-					if (oldleader != null)
+					if ((oldleader != null) && (oldleader.getMountType() == MountType.WYVERN))
 					{
-						if (oldleader.getMountType() == MountType.WYVERN)
-						{
-							oldleader.dismount();
-						}
+						oldleader.dismount();
 					}
 				}
 				catch (Exception e)
@@ -709,16 +693,9 @@ public final class Castle extends AbstractResidence
 	
 	public boolean updateFunctions(L2PcInstance player, int type, int lvl, int lease, long rate, boolean addNew)
 	{
-		if (player == null)
+		if ((player == null) || ((lease > 0) && !player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true)))
 		{
 			return false;
-		}
-		if (lease > 0)
-		{
-			if (!player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true))
-			{
-				return false;
-			}
 		}
 		if (addNew)
 		{
@@ -732,8 +709,7 @@ public final class Castle extends AbstractResidence
 			}
 			else
 			{
-				final int diffLease = lease - _function.get(type).getLease();
-				if (diffLease > 0)
+				if ((lease - _function.get(type).getLease()) > 0)
 				{
 					_function.remove(type);
 					_function.put(type, new CastleFunction(type, lvl, lease, 0, rate, -1, false));
@@ -988,11 +964,12 @@ public final class Castle extends AbstractResidence
 	
 	public final void setShowNpcCrest(boolean showNpcCrest)
 	{
-		if (_showNpcCrest != showNpcCrest)
+		if (_showNpcCrest == showNpcCrest)
 		{
-			_showNpcCrest = showNpcCrest;
-			updateShowNpcCrest();
+			return;
 		}
+		_showNpcCrest = showNpcCrest;
+		updateShowNpcCrest();
 	}
 	
 	public void updateClansReputation()
@@ -1149,8 +1126,7 @@ public final class Castle extends AbstractResidence
 	public void giveResidentialSkills(L2PcInstance player)
 	{
 		super.giveResidentialSkills(player);
-		final Skill skill = getSide() == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill();
-		player.addSkill(skill);
+		player.addSkill((getSide() == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill()));
 	}
 	
 	@Override

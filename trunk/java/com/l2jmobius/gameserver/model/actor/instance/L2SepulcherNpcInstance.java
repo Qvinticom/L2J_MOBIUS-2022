@@ -261,17 +261,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		String pom = "";
-		if (val == 0)
-		{
-			pom = "" + npcId;
-		}
-		else
-		{
-			pom = npcId + "-" + val;
-		}
-		
-		return HTML_FILE_PATH + pom + ".htm";
+		return HTML_FILE_PATH + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
 	}
 	
 	@Override

@@ -81,8 +81,7 @@ public final class WalkingManager implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		final Node n = doc.getFirstChild();
-		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+		for (Node d = doc.getFirstChild().getFirstChild(); d != null; d = d.getNextSibling())
 		{
 			if (d.getNodeName().equals("route"))
 			{
@@ -199,31 +198,14 @@ public final class WalkingManager implements IXmlReader
 	 */
 	public boolean isOnWalk(L2Npc npc)
 	{
-		L2MonsterInstance monster = null;
-		
-		if (npc.isMonster())
-		{
-			if (((L2MonsterInstance) npc).getLeader() == null)
-			{
-				monster = (L2MonsterInstance) npc;
-			}
-			else
-			{
-				monster = ((L2MonsterInstance) npc).getLeader();
-			}
-		}
-		
+		final L2MonsterInstance monster = npc.isMonster() ? ((L2MonsterInstance) npc).getLeader() == null ? (L2MonsterInstance) npc : ((L2MonsterInstance) npc).getLeader() : null;
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
 			return false;
 		}
 		
 		final WalkInfo walk = monster != null ? _activeRoutes.get(monster.getObjectId()) : _activeRoutes.get(npc.getObjectId());
-		if (walk.isStoppedByAttack() || walk.isSuspended())
-		{
-			return false;
-		}
-		return true;
+		return !walk.isStoppedByAttack() && !walk.isSuspended();
 	}
 	
 	public L2WalkRoute getRoute(String route)
@@ -344,11 +326,12 @@ public final class WalkingManager implements IXmlReader
 	public synchronized void cancelMoving(L2Npc npc)
 	{
 		final WalkInfo walk = _activeRoutes.remove(npc.getObjectId());
-		if (walk != null)
+		if (walk == null)
 		{
-			walk.getWalkCheckTask().cancel(true);
-			npc.getKnownList().stopTrackingTask();
+			return;
 		}
+		walk.getWalkCheckTask().cancel(true);
+		npc.getKnownList().stopTrackingTask();
 	}
 	
 	/**
@@ -358,12 +341,13 @@ public final class WalkingManager implements IXmlReader
 	public void resumeMoving(L2Npc npc)
 	{
 		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-		if (walk != null)
+		if (walk == null)
 		{
-			walk.setSuspended(false);
-			walk.setStoppedByAttack(false);
-			startMoving(npc, walk.getRoute().getName());
+			return;
 		}
+		walk.setSuspended(false);
+		walk.setStoppedByAttack(false);
+		startMoving(npc, walk.getRoute().getName());
 	}
 	
 	/**
@@ -374,19 +358,7 @@ public final class WalkingManager implements IXmlReader
 	 */
 	public void stopMoving(L2Npc npc, boolean suspend, boolean stoppedByAttack)
 	{
-		L2MonsterInstance monster = null;
-		
-		if (npc.isMonster())
-		{
-			if (((L2MonsterInstance) npc).getLeader() == null)
-			{
-				monster = (L2MonsterInstance) npc;
-			}
-			else
-			{
-				monster = ((L2MonsterInstance) npc).getLeader();
-			}
-		}
+		final L2MonsterInstance monster = npc.isMonster() ? ((L2MonsterInstance) npc).getLeader() == null ? (L2MonsterInstance) npc : ((L2MonsterInstance) npc).getLeader() : null;
 		
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
@@ -416,41 +388,46 @@ public final class WalkingManager implements IXmlReader
 	 */
 	public void onArrived(L2Npc npc)
 	{
-		if (_activeRoutes.containsKey(npc.getObjectId()))
+		if (!_activeRoutes.containsKey(npc.getObjectId()))
 		{
-			// Notify quest
-			EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveNodeArrived(npc), npc);
-			
-			final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-			
-			// Opposite should not happen... but happens sometime
-			if ((walk.getCurrentNodeId() >= 0) && (walk.getCurrentNodeId() < walk.getRoute().getNodesCount()))
-			{
-				final L2NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
-				if (npc.isInsideRadius(node, 10, false, false))
-				{
-					npc.sendDebugMessage("Route '" + walk.getRoute().getName() + "', arrived to node " + walk.getCurrentNodeId());
-					npc.sendDebugMessage("Done in " + ((System.currentTimeMillis() - walk.getLastAction()) / 1000) + " s");
-					walk.calculateNextNode(npc);
-					walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
-					
-					if (node.getNpcString() != null)
-					{
-						Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, node.getNpcString()));
-					}
-					else if (!node.getChatText().isEmpty())
-					{
-						Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, node.getChatText()));
-					}
-					
-					if (npc.isDebug())
-					{
-						walk.setLastAction(System.currentTimeMillis());
-					}
-					ThreadPoolManager.getInstance().scheduleGeneral(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000L));
-				}
-			}
+			return;
 		}
+		
+		// Notify quest
+		EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveNodeArrived(npc), npc);
+		
+		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
+		// Opposite should not happen... but happens sometime
+		if ((walk.getCurrentNodeId() < 0) || (walk.getCurrentNodeId() >= walk.getRoute().getNodesCount()))
+		{
+			return;
+		}
+		
+		final L2NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
+		if (!npc.isInsideRadius(node, 10, false, false))
+		{
+			return;
+		}
+		
+		npc.sendDebugMessage("Route '" + walk.getRoute().getName() + "', arrived to node " + walk.getCurrentNodeId());
+		npc.sendDebugMessage("Done in " + ((System.currentTimeMillis() - walk.getLastAction()) / 1000) + " s");
+		walk.calculateNextNode(npc);
+		walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
+		
+		if (node.getNpcString() != null)
+		{
+			Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, node.getNpcString()));
+		}
+		else if (!node.getChatText().isEmpty())
+		{
+			Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, node.getChatText()));
+		}
+		
+		if (npc.isDebug())
+		{
+			walk.setLastAction(System.currentTimeMillis());
+		}
+		ThreadPoolManager.getInstance().scheduleGeneral(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000L));
 	}
 	
 	/**

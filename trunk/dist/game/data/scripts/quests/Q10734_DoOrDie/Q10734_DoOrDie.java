@@ -90,14 +90,7 @@ public class Q10734_DoOrDie extends Quest
 			}
 			case "other_buffs":
 			{
-				if (player.isMageClass())
-				{
-					htmltext = "33950-03.html";
-				}
-				else
-				{
-					htmltext = "33950-05.html";
-				}
+				htmltext = player.isMageClass() ? "33950-03.html" : "33950-05.html";
 				
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_002_Guide_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				break;
@@ -144,12 +137,7 @@ public class Q10734_DoOrDie extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		
-		if (qs.isCompleted())
-		{
-			htmltext = getAlreadyCompletedMsg(player);
-		}
+		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
@@ -159,14 +147,7 @@ public class Q10734_DoOrDie extends Quest
 				{
 					case 0:
 					{
-						if (!player.isMageClass())
-						{
-							htmltext = "33943-01.htm";
-						}
-						else
-						{
-							htmltext = "33943-08.html";
-						}
+						htmltext = !player.isMageClass() ? "33943-01.htm" : "33943-08.html";
 						break;
 					}
 					case 1:
@@ -206,14 +187,7 @@ public class Q10734_DoOrDie extends Quest
 				{
 					case 0:
 					{
-						if (player.isMageClass())
-						{
-							htmltext = "33942-01.htm";
-						}
-						else
-						{
-							htmltext = "33942-08.html";
-						}
+						htmltext = player.isMageClass() ? "33942-01.htm" : "33942-08.html";
 						break;
 					}
 					case 1:
@@ -259,14 +233,7 @@ public class Q10734_DoOrDie extends Quest
 					}
 					case 6:
 					{
-						if (player.isMageClass())
-						{
-							htmltext = "33950-06.html";
-						}
-						else
-						{
-							htmltext = "33950-04.html";
-						}
+						htmltext = player.isMageClass() ? "33950-06.html" : "33950-04.html";
 						break;
 					}
 				}
@@ -286,25 +253,11 @@ public class Q10734_DoOrDie extends Quest
 		
 		if (qs.isCond(1))
 		{
-			if (killer.isMageClass())
-			{
-				qs.setCond(2, true);
-			}
-			else
-			{
-				qs.setCond(3, true);
-			}
+			qs.setCond(killer.isMageClass() ? 2 : 3, true);
 		}
 		else if (qs.isCond(6))
 		{
-			if (killer.isMageClass())
-			{
-				qs.setCond(7, true);
-			}
-			else
-			{
-				qs.setCond(8, true);
-			}
+			qs.setCond(killer.isMageClass() ? 7 : 8, true);
 		}
 		
 		return super.onKill(npc, killer, isSummon);
