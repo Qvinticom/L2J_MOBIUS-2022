@@ -119,28 +119,50 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 			}
 			case S:
 			{
-				price = 480000;
+				if (item.getCrystalCount() <= 2052)
+				{
+					price = 480000;
+				}
+				else
+				{
+					price = 920000;
+				}
 				break;
 			}
 			case S80:
 			case S84:
 			{
-				price = 920000;
+				if (item.getCrystalCount() <= 4965)
+				{
+					price = 920000;
+				}
+				else if (item.getCrystalCount() <= 7050)
+				{
+					price = 2800000;
+				}
+				else if (item.getCrystalCount() <= 8233)
+				{
+					price = 2800000;
+				}
+				else
+				{
+					price = 3200000;
+				}
 				break;
 			}
 			case R:
 			{
-				price = 1840000;
+				price = 3492800;
 				break;
 			}
 			case R95:
 			{
-				price = 3680000;
+				price = 2943200;
 				break;
 			}
 			case R99:
 			{
-				price = 7360000;
+				price = 6485800;
 				break;
 			}
 			default:

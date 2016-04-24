@@ -84,6 +84,7 @@ public class AugmentationData
 	private final List<List<Integer>> _blueSkills = new ArrayList<>();
 	private final List<List<Integer>> _purpleSkills = new ArrayList<>();
 	private final List<List<Integer>> _redSkills = new ArrayList<>();
+	private final List<List<Integer>> _yellowSkills = new ArrayList<>();
 	
 	private final List<AugmentationChance> _augmentationChances = new ArrayList<>();
 	private final List<augmentationChanceAcc> _augmentationChancesAcc = new ArrayList<>();
@@ -97,6 +98,7 @@ public class AugmentationData
 			_blueSkills.add(new ArrayList<Integer>());
 			_purpleSkills.add(new ArrayList<Integer>());
 			_redSkills.add(new ArrayList<Integer>());
+			_yellowSkills.add(new ArrayList<Integer>());
 		}
 		
 		load();
@@ -275,12 +277,7 @@ public class AugmentationData
 										type = attrs.getNamedItem("val").getNodeValue();
 									}
 								}
-								if (skillId == 0)
-								{
-									badAugmantData++;
-									continue;
-								}
-								else if (skillLvL == 0)
+								if ((skillId == 0) || (skillLvL == 0))
 								{
 									badAugmantData++;
 									continue;

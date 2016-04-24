@@ -420,9 +420,13 @@
 		<!-- Mineral with mysterious power. Can be augmented to high-grade and used by characters of level 85 or higher. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
+		<cond msgId="113">
+			<player level="85" />
+		</cond>
 	</item>
 	<item id="36732" name="Recipe: Requiem Shaper (60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for making a Requiem Shaper. Requires Create Item (Lv. 11). Success rate is 60%. Has a very low chance of obtaining a Blessed item upon success. -->
