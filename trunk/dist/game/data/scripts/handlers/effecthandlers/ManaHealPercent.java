@@ -63,7 +63,7 @@ public final class ManaHealPercent extends AbstractEffect
 		
 		double amount = 0;
 		final double power = _power;
-		final boolean full = (power == 100.0);
+		final boolean full = power == 100.0;
 		
 		amount = full ? target.getMaxMp() : (target.getMaxMp() * power) / 100.0;
 		// Prevents overheal and negative amount

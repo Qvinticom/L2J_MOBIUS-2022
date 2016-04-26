@@ -207,7 +207,7 @@ public class HexUtils
 		else
 		{
 			numLines = (len / _HEX_ED_BPL) + 1;
-			textData = new char[(lineLength * numLines) - (_HEX_ED_BPL - (lenBplMod)) - _NEW_LINE_CHARS.length];
+			textData = new char[(lineLength * numLines) - (_HEX_ED_BPL - lenBplMod) - _NEW_LINE_CHARS.length];
 		}
 		
 		// performance penalty, only doing space filling in the loop is faster
@@ -238,7 +238,7 @@ public class HexUtils
 			}
 			else if (dataLen < _HEX_ED_BPL)
 			{
-				Arrays.fill(textData, (lineHexDataStart + (dataLen * _HEX_ED_CPB)), lineHexDataStart + (dataLen * _HEX_ED_CPB) + ((_HEX_ED_BPL - dataLen) * _HEX_ED_CPB) + 1, ' ');
+				Arrays.fill(textData, lineHexDataStart + (dataLen * _HEX_ED_CPB), lineHexDataStart + (dataLen * _HEX_ED_CPB) + ((_HEX_ED_BPL - dataLen) * _HEX_ED_CPB) + 1, ' ');
 			}
 			else
 			{

@@ -45,7 +45,7 @@ public abstract class L2PlayableAI extends L2CharacterAI
 	{
 		if (target instanceof L2Playable)
 		{
-			if (target.getActingPlayer().isProtectionBlessingAffected() && ((_actor.getActingPlayer().getLevel() - target.getActingPlayer().getLevel()) >= 10) && (_actor.getActingPlayer().getReputation() < 0) && !(target.isInsideZone(ZoneId.PVP)))
+			if (target.getActingPlayer().isProtectionBlessingAffected() && ((_actor.getActingPlayer().getLevel() - target.getActingPlayer().getLevel()) >= 10) && (_actor.getActingPlayer().getReputation() < 0) && !target.isInsideZone(ZoneId.PVP))
 			{
 				// If attacker have karma and have level >= 10 than his target and target have
 				// Newbie Protection Buff,
@@ -54,7 +54,7 @@ public abstract class L2PlayableAI extends L2CharacterAI
 				return;
 			}
 			
-			if (_actor.getActingPlayer().isProtectionBlessingAffected() && ((target.getActingPlayer().getLevel() - _actor.getActingPlayer().getLevel()) >= 10) && (target.getActingPlayer().getReputation() < 0) && !(target.isInsideZone(ZoneId.PVP)))
+			if (_actor.getActingPlayer().isProtectionBlessingAffected() && ((target.getActingPlayer().getLevel() - _actor.getActingPlayer().getLevel()) >= 10) && (target.getActingPlayer().getReputation() < 0) && !target.isInsideZone(ZoneId.PVP))
 			{
 				// If target have karma and have level >= 10 than his target and actor have
 				// Newbie Protection Buff,

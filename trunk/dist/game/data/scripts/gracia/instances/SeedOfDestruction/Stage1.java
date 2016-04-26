@@ -806,7 +806,7 @@ public final class Stage1 extends Quest
 		if (!isSummon && (player != null))
 		{
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
-			if ((tmpworld instanceof SOD1World) && (((SOD1World) tmpworld).getStatus() == 7) && spawnState(((SOD1World) tmpworld)))
+			if ((tmpworld instanceof SOD1World) && (((SOD1World) tmpworld).getStatus() == 7) && spawnState((SOD1World) tmpworld))
 			{
 				for (int objId : ((SOD1World) tmpworld).getAllowed())
 				{
@@ -997,7 +997,7 @@ public final class Stage1 extends Quest
 		if (npcId == ALENOS)
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-			if ((GraciaSeedsManager.getInstance().getSoDState() == 1) || ((world != null) && (world instanceof SOD1World)))
+			if ((GraciaSeedsManager.getInstance().getSoDState() == 1) || (world instanceof SOD1World))
 			{
 				enterInstance(player, "SeedOfDestructionStage1.xml", ENTER_TELEPORT_1);
 			}

@@ -165,7 +165,7 @@ public final class NightmareKamaloka extends AbstractInstance
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		if ((tmpWorld != null) && (tmpWorld instanceof NKWorld))
+		if (tmpWorld instanceof NKWorld)
 		{
 			final NKWorld world = (NKWorld) tmpWorld;
 			switch (npc.getId())

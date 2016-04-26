@@ -214,8 +214,8 @@ public final class Antharas extends AbstractNpcAI
 				{
 					final L2Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
-					final List<L2PcInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
-					final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
+					final List<L2PcInstance> members = isInCC ? party.getCommandChannel().getMembers() : party.getMembers();
+					final boolean isPartyLeader = isInCC ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 					if (!isPartyLeader)
 					{
 						htmltext = "13001-05.html";
@@ -244,20 +244,17 @@ public final class Antharas extends AbstractNpcAI
 						}
 					}
 				}
+				else if (!hasQuestItems(player, STONE))
+				{
+					htmltext = "13001-03.html";
+				}
 				else
 				{
-					if (!hasQuestItems(player, STONE))
+					player.teleToLocation(179700 + getRandom(700), 113800 + getRandom(2100), -7709);
+					if (getStatus() != WAITING)
 					{
-						htmltext = "13001-03.html";
-					}
-					else
-					{
-						player.teleToLocation(179700 + getRandom(700), 113800 + getRandom(2100), -7709);
-						if (getStatus() != WAITING)
-						{
-							setStatus(WAITING);
-							startQuestTimer("SPAWN_ANTHARAS", Config.ANTHARAS_WAIT_TIME * 60000, null, null);
-						}
+						setStatus(WAITING);
+						startQuestTimer("SPAWN_ANTHARAS", Config.ANTHARAS_WAIT_TIME * 60000, null, null);
 					}
 				}
 				return htmltext;
@@ -418,7 +415,7 @@ public final class Antharas extends AbstractNpcAI
 						addSpawn(BEHEMOTH, npc, true);
 						addSpawn(TERASQUE, npc, true);
 					}
-					_minionCount += (minionMultipler * 2);
+					_minionCount += minionMultipler * 2;
 				}
 				else if (_minionCount < 98)
 				{
@@ -428,7 +425,7 @@ public final class Antharas extends AbstractNpcAI
 				}
 				else if (_minionCount < 99)
 				{
-					addSpawn((getRandomBoolean() ? BEHEMOTH : TERASQUE), npc, true);
+					addSpawn(getRandomBoolean() ? BEHEMOTH : TERASQUE, npc, true);
 					_minionCount++;
 				}
 				
@@ -641,23 +638,23 @@ public final class Antharas extends AbstractNpcAI
 			
 			if (skill == null)
 			{
-				refreshAiParams(attacker, (damage * 1000));
+				refreshAiParams(attacker, damage * 1000);
 			}
 			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.25))
 			{
-				refreshAiParams(attacker, ((damage / 3) * 100));
+				refreshAiParams(attacker, (damage / 3) * 100);
 			}
 			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.5))
 			{
-				refreshAiParams(attacker, (damage * 20));
+				refreshAiParams(attacker, damage * 20);
 			}
 			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.75))
 			{
-				refreshAiParams(attacker, (damage * 10));
+				refreshAiParams(attacker, damage * 10);
 			}
 			else
 			{
-				refreshAiParams(attacker, ((damage / 3) * 20));
+				refreshAiParams(attacker, (damage / 3) * 20);
 			}
 			manageSkills(npc);
 		}
@@ -761,7 +758,7 @@ public final class Antharas extends AbstractNpcAI
 	
 	private void setRespawn(long respawnTime)
 	{
-		GrandBossManager.getInstance().getStatsSet(ANTHARAS).set("respawn_time", (System.currentTimeMillis() + respawnTime));
+		GrandBossManager.getInstance().getStatsSet(ANTHARAS).set("respawn_time", System.currentTimeMillis() + respawnTime);
 	}
 	
 	private final void refreshAiParams(L2PcInstance attacker, int damage)

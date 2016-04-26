@@ -508,7 +508,7 @@ public class GeoData
 			prevY = curY;
 			prevZ = curZ;
 		}
-		return (!hasGeoPos(prevX, prevY) || (prevZ == toZ));
+		return !hasGeoPos(prevX, prevY) || (prevZ == toZ);
 	}
 	
 	public int traceTerrainZ(int x, int y, int z, int tx, int ty)
@@ -574,6 +574,6 @@ public class GeoData
 	
 	private static class SingletonHolder
 	{
-		protected final static GeoData _instance = new GeoData();
+		protected static final GeoData _instance = new GeoData();
 	}
 }

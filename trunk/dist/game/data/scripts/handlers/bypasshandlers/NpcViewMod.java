@@ -114,7 +114,7 @@ public class NpcViewMod implements IBypassHandler
 					{
 						return false;
 					}
-					sendNpcDropList(activeChar, npc, dropListScope, (st.hasMoreElements() ? Integer.parseInt(st.nextToken()) : 0));
+					sendNpcDropList(activeChar, npc, dropListScope, st.hasMoreElements() ? Integer.parseInt(st.nextToken()) : 0);
 				}
 				catch (NumberFormatException e)
 				{
@@ -327,13 +327,9 @@ public class NpcViewMod implements IBypassHandler
 						final MinMax minMax = getPreciseMinMax(normalized.getChance(), generalDropItem.getMin(npc, activeChar), generalDropItem.getMax(npc, activeChar), generalDropItem.isPreciseCalculated());
 						final long min = minMax.min;
 						final long max = minMax.max;
-						if (min == max)
+						sb.append(amountFormat.format(min));
+						if (min != max)
 						{
-							sb.append(amountFormat.format(min));
-						}
-						else
-						{
-							sb.append(amountFormat.format(min));
 							sb.append(" - ");
 							sb.append(amountFormat.format(max));
 						}
@@ -407,13 +403,9 @@ public class NpcViewMod implements IBypassHandler
 		
 		final long min = minMax.min;
 		final long max = minMax.max;
-		if (min == max)
+		sb.append(amountFormat.format(min));
+		if (min != max)
 		{
-			sb.append(amountFormat.format(min));
-		}
-		else
-		{
-			sb.append(amountFormat.format(min));
 			sb.append(" - ");
 			sb.append(amountFormat.format(max));
 		}
@@ -442,7 +434,7 @@ public class NpcViewMod implements IBypassHandler
 			return new MinMax(min, max);
 		}
 		
-		final int mult = (int) (chance) / 100;
+		final int mult = (int) chance / 100;
 		return new MinMax(mult * min, (chance % 100) > 0 ? (mult + 1) * max : mult * max);
 	}
 }

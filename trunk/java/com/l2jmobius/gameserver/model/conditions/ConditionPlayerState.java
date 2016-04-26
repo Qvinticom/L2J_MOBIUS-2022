@@ -67,15 +67,15 @@ public class ConditionPlayerState extends Condition
 			}
 			case FLYING:
 			{
-				return (character.isFlying() == _required);
+				return character.isFlying() == _required;
 			}
 			case BEHIND:
 			{
-				return (character.isBehindTarget() == _required);
+				return character.isBehindTarget() == _required;
 			}
 			case FRONT:
 			{
-				return (character.isInFrontOfTarget() == _required);
+				return character.isInFrontOfTarget() == _required;
 			}
 			case CHAOTIC:
 			{

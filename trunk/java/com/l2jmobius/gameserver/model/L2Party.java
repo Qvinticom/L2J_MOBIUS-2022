@@ -145,7 +145,7 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	public boolean isInvitationRequestExpired()
 	{
-		return (_pendingInviteTimeout <= GameTimeController.getInstance().getGameTicks());
+		return _pendingInviteTimeout <= GameTimeController.getInstance().getGameTicks();
 	}
 	
 	/**
@@ -413,28 +413,17 @@ public class L2Party extends AbstractPlayerGroup
 			
 			// Add the new sign
 			_tacticalSigns.put(tacticalSignId, target);
-			getMembers().forEach(m -> m.sendPacket(new ExTacticalSign(target, tacticalSignId)));
+		}
+		else if (tacticalTarget == target)
+		{
+			_tacticalSigns.remove(tacticalSignId);
 		}
 		else
 		{
-			// Sign already assigned
-			// If the sign is applied on the same target, remove it
-			if (tacticalTarget == target)
-			{
-				_tacticalSigns.remove(tacticalSignId);
-				getMembers().forEach(m -> m.sendPacket(new ExTacticalSign(tacticalTarget, 0)));
-			}
-			else
-			{
-				// Otherwise, delete the old sign, and apply it to the new target
-				_tacticalSigns.replace(tacticalSignId, target);
-				getMembers().forEach(m ->
-				{
-					m.sendPacket(new ExTacticalSign(tacticalTarget, 0));
-					m.sendPacket(new ExTacticalSign(target, tacticalSignId));
-				});
-			}
+			// Otherwise, delete the old sign, and apply it to the new target
+			_tacticalSigns.replace(tacticalSignId, target);
 		}
+		getMembers().forEach(m -> m.sendPacket(new ExTacticalSign(target, tacticalSignId)));
 	}
 	
 	public void setTargetBasedOnTacticalSignId(L2PcInstance player, int tacticalSignId)
@@ -488,7 +477,7 @@ public class L2Party extends AbstractPlayerGroup
 		try
 		{
 			// Channeling a player!
-			if (player.isChanneling() && (player.getSkillChannelizer().hasChannelized()))
+			if (player.isChanneling() && player.getSkillChannelizer().hasChannelized())
 			{
 				player.abortCast();
 			}
@@ -813,7 +802,7 @@ public class L2Party extends AbstractPlayerGroup
 		int sqLevelSum = 0;
 		for (L2PcInstance member : validMembers)
 		{
-			sqLevelSum += (member.getLevel() * member.getLevel());
+			sqLevelSum += member.getLevel() * member.getLevel();
 		}
 		
 		final int vitalityPoints = (int) ((target.getVitalityPoints(partyDmg) * Config.RATE_PARTY_XP) / validMembers.size());
@@ -849,7 +838,7 @@ public class L2Party extends AbstractPlayerGroup
 				if (addexp > 0)
 				{
 					member.updateVitalityPoints(vitalityPoints, true, false);
-					PcCafePointsManager.getInstance().givePcCafePoint((member), addexp);
+					PcCafePointsManager.getInstance().givePcCafePoint(member, addexp);
 				}
 			}
 			else
@@ -929,7 +918,7 @@ public class L2Party extends AbstractPlayerGroup
 			int sqLevelSum = 0;
 			for (L2PcInstance member : members)
 			{
-				sqLevelSum += (member.getLevel() * member.getLevel());
+				sqLevelSum += member.getLevel() * member.getLevel();
 			}
 			
 			for (L2PcInstance member : members)
@@ -946,7 +935,7 @@ public class L2Party extends AbstractPlayerGroup
 			int sqLevelSum = 0;
 			for (L2PcInstance member : members)
 			{
-				sqLevelSum += (member.getLevel() * member.getLevel());
+				sqLevelSum += member.getLevel() * member.getLevel();
 			}
 			
 			int i = members.size() - 1;
@@ -996,12 +985,12 @@ public class L2Party extends AbstractPlayerGroup
 	
 	private double getExpBonus(int membersCount)
 	{
-		return (membersCount < 2) ? (getBaseExpSpBonus(membersCount)) : (getBaseExpSpBonus(membersCount) * Config.RATE_PARTY_XP);
+		return (membersCount < 2) ? getBaseExpSpBonus(membersCount) : (getBaseExpSpBonus(membersCount) * Config.RATE_PARTY_XP);
 	}
 	
 	private double getSpBonus(int membersCount)
 	{
-		return (membersCount < 2) ? (getBaseExpSpBonus(membersCount)) : (getBaseExpSpBonus(membersCount) * Config.RATE_PARTY_SP);
+		return (membersCount < 2) ? getBaseExpSpBonus(membersCount) : (getBaseExpSpBonus(membersCount) * Config.RATE_PARTY_SP);
 	}
 	
 	@Override

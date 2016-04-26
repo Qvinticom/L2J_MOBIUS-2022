@@ -79,7 +79,7 @@ public final class Util
 	 * @param toY
 	 * @return degree value of object 2 to the horizontal line with object 1 being the origin
 	 */
-	public static final double calculateAngleFrom(int fromX, int fromY, int toX, int toY)
+	public static double calculateAngleFrom(int fromX, int fromY, int toX, int toY)
 	{
 		double angleTarget = Math.toDegrees(Math.atan2(toY - fromY, toX - fromX));
 		if (angleTarget < 0)
@@ -89,12 +89,12 @@ public final class Util
 		return angleTarget;
 	}
 	
-	public static final double convertHeadingToDegree(int clientHeading)
+	public static double convertHeadingToDegree(int clientHeading)
 	{
 		return clientHeading / 182.044444444;
 	}
 	
-	public static final int convertDegreeToClientHeading(double degree)
+	public static int convertDegreeToClientHeading(double degree)
 	{
 		if (degree < 0)
 		{
@@ -103,12 +103,12 @@ public final class Util
 		return (int) (degree * 182.044444444);
 	}
 	
-	public static final int calculateHeadingFrom(ILocational from, ILocational to)
+	public static int calculateHeadingFrom(ILocational from, ILocational to)
 	{
 		return calculateHeadingFrom(from.getX(), from.getY(), to.getX(), to.getY());
 	}
 	
-	public static final int calculateHeadingFrom(int fromX, int fromY, int toX, int toY)
+	public static int calculateHeadingFrom(int fromX, int fromY, int toX, int toY)
 	{
 		double angleTarget = Math.toDegrees(Math.atan2(toY - fromY, toX - fromX));
 		if (angleTarget < 0)
@@ -118,7 +118,7 @@ public final class Util
 		return (int) (angleTarget * 182.044444444);
 	}
 	
-	public static final int calculateHeadingFrom(double dx, double dy)
+	public static int calculateHeadingFrom(double dx, double dy)
 	{
 		double angleTarget = Math.toDegrees(Math.atan2(dy, dx));
 		if (angleTarget < 0)
@@ -143,7 +143,7 @@ public final class Util
 	public static double calculateDistance(double x1, double y1, double z1, double x2, double y2, double z2, boolean includeZAxis, boolean squared)
 	{
 		final double distance = Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + (includeZAxis ? Math.pow(z1 - z2, 2) : 0);
-		return (squared) ? distance : Math.sqrt(distance);
+		return squared ? distance : Math.sqrt(distance);
 	}
 	
 	/**
@@ -243,7 +243,7 @@ public final class Util
 		if (includeZAxis)
 		{
 			final double dz = obj1.getZ() - obj2.getZ();
-			d += (dz * dz);
+			d += dz * dz;
 		}
 		return d <= ((range * range) + (2 * range * rad) + (rad * rad));
 	}
@@ -459,7 +459,7 @@ public final class Util
 		return (new SimpleDateFormat("yyyy-MM-dd")).format(date.getTime());
 	}
 	
-	private static final void buildHtmlBypassCache(L2PcInstance player, HtmlActionScope scope, String html)
+	private static void buildHtmlBypassCache(L2PcInstance player, HtmlActionScope scope, String html)
 	{
 		final String htmlLower = html.toLowerCase(Locale.ENGLISH);
 		int bypassEnd = 0;
@@ -491,7 +491,7 @@ public final class Util
 		}
 	}
 	
-	private static final void buildHtmlLinkCache(L2PcInstance player, HtmlActionScope scope, String html)
+	private static void buildHtmlLinkCache(L2PcInstance player, HtmlActionScope scope, String html)
 	{
 		final String htmlLower = html.toLowerCase(Locale.ENGLISH);
 		int linkEnd = 0;
@@ -636,32 +636,29 @@ public final class Util
 			activeChar.sendPacket(new ShowBoard(html, "1001"));
 			fillMultiEditContent(activeChar, fillMultiEdit);
 		}
+		else if (html.length() < 16250)
+		{
+			activeChar.sendPacket(new ShowBoard(html, "101"));
+			activeChar.sendPacket(new ShowBoard(null, "102"));
+			activeChar.sendPacket(new ShowBoard(null, "103"));
+		}
+		else if (html.length() < (16250 * 2))
+		{
+			activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
+			activeChar.sendPacket(new ShowBoard(html.substring(16250), "102"));
+			activeChar.sendPacket(new ShowBoard(null, "103"));
+		}
+		else if (html.length() < (16250 * 3))
+		{
+			activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
+			activeChar.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
+			activeChar.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
+		}
 		else
 		{
-			if (html.length() < 16250)
-			{
-				activeChar.sendPacket(new ShowBoard(html, "101"));
-				activeChar.sendPacket(new ShowBoard(null, "102"));
-				activeChar.sendPacket(new ShowBoard(null, "103"));
-			}
-			else if (html.length() < (16250 * 2))
-			{
-				activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
-				activeChar.sendPacket(new ShowBoard(html.substring(16250), "102"));
-				activeChar.sendPacket(new ShowBoard(null, "103"));
-			}
-			else if (html.length() < (16250 * 3))
-			{
-				activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
-				activeChar.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
-				activeChar.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
-			}
-			else
-			{
-				activeChar.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
-				activeChar.sendPacket(new ShowBoard(null, "102"));
-				activeChar.sendPacket(new ShowBoard(null, "103"));
-			}
+			activeChar.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
+			activeChar.sendPacket(new ShowBoard(null, "102"));
+			activeChar.sendPacket(new ShowBoard(null, "103"));
 		}
 	}
 	
@@ -689,7 +686,7 @@ public final class Util
 		final Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
 		for (L2Object obj : objs)
 		{
-			if ((obj != null) && (playable && (obj.isPlayable() || obj.isPet())))
+			if ((obj != null) && playable && (obj.isPlayable() || obj.isPet()))
 			{
 				if (!invisible && obj.isInvisible())
 				{
@@ -697,7 +694,7 @@ public final class Util
 				}
 				
 				final L2Character cha = (L2Character) obj;
-				if (((cha.getZ() < (npc.getZ() - 100)) && (cha.getZ() > (npc.getZ() + 100))) || !(GeoData.getInstance().canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), npc.getX(), npc.getY(), npc.getZ())))
+				if (((cha.getZ() < (npc.getZ() - 100)) && (cha.getZ() > (npc.getZ() + 100))) || !GeoData.getInstance().canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), npc.getX(), npc.getY(), npc.getZ()))
 				{
 					continue;
 				}

@@ -89,41 +89,38 @@ public class L2PcInstanceAction implements IActionHandler
 			{
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, player);
 			}
-			else
+			// Check if this L2PcInstance is autoAttackable
+			else if (player.isAutoAttackable(activeChar))
 			{
-				// Check if this L2PcInstance is autoAttackable
-				if (player.isAutoAttackable(activeChar))
+				if ((player.isCursedWeaponEquipped() && (activeChar.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)) //
+					|| (activeChar.isCursedWeaponEquipped() && (player.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)))
 				{
-					if ((player.isCursedWeaponEquipped() && (activeChar.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)) //
-						|| (activeChar.isCursedWeaponEquipped() && (player.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)))
-					{
-						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					}
-					else
-					{
-						if (GeoData.getInstance().canSeeTarget(activeChar, player))
-						{
-							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-						}
-						else
-						{
-							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, GeoData.getInstance().moveCheck(activeChar, player));
-						}
-						activeChar.onActionRequest();
-					}
+					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				}
 				else
 				{
-					// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					if (GeoData.getInstance().canSeeTarget(activeChar, player))
 					{
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 					}
 					else
 					{
 						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, GeoData.getInstance().moveCheck(activeChar, player));
 					}
+					activeChar.onActionRequest();
+				}
+			}
+			else
+			{
+				// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				if (GeoData.getInstance().canSeeTarget(activeChar, player))
+				{
+					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+				}
+				else
+				{
+					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, GeoData.getInstance().moveCheck(activeChar, player));
 				}
 			}
 		}

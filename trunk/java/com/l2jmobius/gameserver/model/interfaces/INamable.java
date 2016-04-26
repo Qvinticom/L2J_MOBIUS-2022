@@ -22,5 +22,5 @@ package com.l2jmobius.gameserver.model.interfaces;
  */
 public interface INamable
 {
-	public String getName();
+	String getName();
 }

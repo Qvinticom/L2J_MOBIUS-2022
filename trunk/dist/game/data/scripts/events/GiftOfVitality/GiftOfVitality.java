@@ -123,7 +123,7 @@ final class GiftOfVitality extends LongTimeEvent
 				}
 				else
 				{
-					final SkillHolder[] skills = (player.isMageClass()) ? MAGE_SKILLS : FIGHTER_SKILLS;
+					final SkillHolder[] skills = player.isMageClass() ? MAGE_SKILLS : FIGHTER_SKILLS;
 					npc.setTarget(player);
 					for (SkillHolder sk : skills)
 					{

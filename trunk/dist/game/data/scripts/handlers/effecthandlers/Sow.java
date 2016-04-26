@@ -58,7 +58,7 @@ public final class Sow extends AbstractEffect
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		final L2MonsterInstance target = (L2MonsterInstance) info.getEffected();
 		
-		if (target.isDead() || (!target.getTemplate().canBeSown()) || target.isSeeded() || (target.getSeederId() != player.getObjectId()))
+		if (target.isDead() || !target.getTemplate().canBeSown() || target.isSeeded() || (target.getSeederId() != player.getObjectId()))
 		{
 			return;
 		}
@@ -116,7 +116,7 @@ public final class Sow extends AbstractEffect
 		
 		// 5% decrease in chance if player level
 		// is more than +/- 5 levels to _target's_ level
-		int diff = (levelPlayer - levelTarget);
+		int diff = levelPlayer - levelTarget;
 		if (diff < 0)
 		{
 			diff = -diff;

@@ -86,7 +86,7 @@ public class RequestPackageSend extends L2GameClientPacket
 		}
 		
 		final L2Npc manager = player.getLastFolkNPC();
-		if (((manager == null) || !player.isInsideRadius(manager, L2Npc.INTERACTION_DISTANCE, false, false)))
+		if ((manager == null) || !player.isInsideRadius(manager, L2Npc.INTERACTION_DISTANCE, false, false))
 		{
 			return;
 		}

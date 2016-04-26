@@ -88,7 +88,7 @@ public final class ConditionSiegeZone extends Condition
 		
 		final L2PcInstance player = (L2PcInstance) activeChar;
 		
-		if (((castle == null) || (castle.getResidenceId() <= 0)))
+		if ((castle == null) || (castle.getResidenceId() <= 0))
 		{
 			if ((value & COND_NOT_ZONE) != 0)
 			{
@@ -134,7 +134,7 @@ public final class ConditionSiegeZone extends Condition
 		
 		final L2PcInstance player = (L2PcInstance) activeChar;
 		
-		if (((fort == null) || (fort.getResidenceId() <= 0)))
+		if ((fort == null) || (fort.getResidenceId() <= 0))
 		{
 			if ((value & COND_NOT_ZONE) != 0)
 			{

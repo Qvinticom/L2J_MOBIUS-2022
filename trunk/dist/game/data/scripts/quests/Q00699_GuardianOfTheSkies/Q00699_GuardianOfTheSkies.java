@@ -125,13 +125,10 @@ public class Q00699_GuardianOfTheSkies extends Quest
 				giveItems(killer, VULTURES_GOLDEN_FEATHER, amount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			else
+			else if (getRandom(1000) < MONSTERS.get(npc.getId()))
 			{
-				if (getRandom(1000) < MONSTERS.get(npc.getId()))
-				{
-					giveItems(killer, VULTURES_GOLDEN_FEATHER, 1);
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				giveItems(killer, VULTURES_GOLDEN_FEATHER, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -149,7 +146,7 @@ public class Q00699_GuardianOfTheSkies extends Quest
 				case State.CREATED:
 				{
 					qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-					htmltext = ((qs == null) || (!qs.isCompleted()) || (player.getLevel() < MIN_LVL)) ? "32557-02.htm" : "32557-01.htm";
+					htmltext = ((qs == null) || !qs.isCompleted() || (player.getLevel() < MIN_LVL)) ? "32557-02.htm" : "32557-01.htm";
 					break;
 				}
 				case State.STARTED:
@@ -157,7 +154,7 @@ public class Q00699_GuardianOfTheSkies extends Quest
 					final long feathers = getQuestItemsCount(player, VULTURES_GOLDEN_FEATHER);
 					if (feathers > 0)
 					{
-						giveAdena(player, ((feathers * VULTURES_GOLDEN_FEATHER_ADENA) + (feathers > BONUS_COUNT ? BONUS : 0)), true);
+						giveAdena(player, (feathers * VULTURES_GOLDEN_FEATHER_ADENA) + (feathers > BONUS_COUNT ? BONUS : 0), true);
 						takeItems(player, VULTURES_GOLDEN_FEATHER, -1);
 						htmltext = (feathers > BONUS_COUNT) ? "32557-07.html" : "32557-06.html";
 					}

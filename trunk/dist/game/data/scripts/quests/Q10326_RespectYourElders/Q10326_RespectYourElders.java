@@ -43,7 +43,7 @@ public class Q10326_RespectYourElders extends Quest
 	// Misc
 	private static final int MAX_LEVEL = 20;
 	private static final Location HANDERMONKEY_SPAWN = new Location(-116617, 255497, -1432);
-	private final static Location[] HANDERMONKEY_LOC =
+	private static final Location[] HANDERMONKEY_LOC =
 	{
 		new Location(-116560, 255951, -1457),
 		new Location(-116688, 256597, -1472),

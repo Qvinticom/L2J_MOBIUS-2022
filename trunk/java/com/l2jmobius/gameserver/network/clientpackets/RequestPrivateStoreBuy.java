@@ -111,7 +111,7 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 			return;
 		}
 		
-		if (!((storePlayer.getPrivateStoreType() == PrivateStoreType.SELL) || (storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL)))
+		if ((storePlayer.getPrivateStoreType() != PrivateStoreType.SELL) && (storePlayer.getPrivateStoreType() != PrivateStoreType.PACKAGE_SELL))
 		{
 			return;
 		}

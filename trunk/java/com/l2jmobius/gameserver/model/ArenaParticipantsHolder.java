@@ -56,8 +56,7 @@ public final class ArenaParticipantsHolder
 	
 	public List<L2PcInstance> getAllPlayers()
 	{
-		final List<L2PcInstance> all = new ArrayList<>(12);
-		all.addAll(_redPlayers);
+		final List<L2PcInstance> all = new ArrayList<>(_redPlayers);
 		all.addAll(_bluePlayers);
 		return all;
 	}

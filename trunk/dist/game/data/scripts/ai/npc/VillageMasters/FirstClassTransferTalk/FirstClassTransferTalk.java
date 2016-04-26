@@ -91,12 +91,9 @@ final class FirstClassTransferTalk extends AbstractNpcAI
 							htmltext += "mystic.html";
 						}
 					}
-					else
+					else if (npc instanceof L2VillageMasterFighterInstance)
 					{
-						if (npc instanceof L2VillageMasterFighterInstance)
-						{
-							htmltext += "fighter.html";
-						}
+						htmltext += "fighter.html";
 					}
 				}
 				else if (player.getClassId().level() == 1)

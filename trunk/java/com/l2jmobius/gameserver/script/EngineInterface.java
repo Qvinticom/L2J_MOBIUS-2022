@@ -21,7 +21,7 @@ package com.l2jmobius.gameserver.script;
  */
 public interface EngineInterface
 {
-	public void addEventDrop(int[] items, int[] count, double chance, DateRange range);
+	void addEventDrop(int[] items, int[] count, double chance, DateRange range);
 	
-	public void onPlayerLogin(String message, DateRange range);
+	void onPlayerLogin(String message, DateRange range);
 }

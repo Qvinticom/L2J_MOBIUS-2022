@@ -110,12 +110,12 @@ import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
  */
 public class EnterWorld extends L2GameClientPacket
 {
-	private final static String _C__11_ENTERWORLD = "[C] 11 EnterWorld";
+	private static final String _C__11_ENTERWORLD = "[C] 11 EnterWorld";
 	private final int[][] tracert = new int[5][4];
-	private final static double MIN_HP = 0.5;
+	private static final double MIN_HP = 0.5;
 	private static final int COMBAT_FLAG = 9819;
-	private final static int ERTHEIA_INTRO_FOR_ERTHEIA_USM_ID = 147;
-	private final static int ERTHEIA_INTRO_FOR_OTHERS_USM_ID = 148;
+	private static final int ERTHEIA_INTRO_FOR_ERTHEIA_USM_ID = 147;
+	private static final int ERTHEIA_INTRO_FOR_OTHERS_USM_ID = 148;
 	
 	@Override
 	protected void readImpl()

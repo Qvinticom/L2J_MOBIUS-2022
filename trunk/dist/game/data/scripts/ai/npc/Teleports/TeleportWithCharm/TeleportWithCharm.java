@@ -30,14 +30,14 @@ import ai.npc.AbstractNpcAI;
 final class TeleportWithCharm extends AbstractNpcAI
 {
 	// NPCs
-	private final static int WHIRPY = 30540;
-	private final static int TAMIL = 30576;
+	private static final int WHIRPY = 30540;
+	private static final int TAMIL = 30576;
 	// Items
-	private final static int ORC_GATEKEEPER_CHARM = 1658;
-	private final static int DWARF_GATEKEEPER_TOKEN = 1659;
+	private static final int ORC_GATEKEEPER_CHARM = 1658;
+	private static final int DWARF_GATEKEEPER_TOKEN = 1659;
 	// Locations
-	private final static Location ORC_TELEPORT = new Location(-80826, 149775, -3043);
-	private final static Location DWARF_TELEPORT = new Location(-80826, 149775, -3043);
+	private static final Location ORC_TELEPORT = new Location(-80826, 149775, -3043);
+	private static final Location DWARF_TELEPORT = new Location(-80826, 149775, -3043);
 	
 	private TeleportWithCharm()
 	{

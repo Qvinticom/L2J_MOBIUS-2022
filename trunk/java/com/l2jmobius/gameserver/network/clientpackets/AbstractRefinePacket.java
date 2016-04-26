@@ -256,7 +256,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		_lifeStones.put(45936, new LifeStone(GRADE_ACC, 15));
 	}
 	
-	protected static final LifeStone getLifeStone(int itemId)
+	protected static LifeStone getLifeStone(int itemId)
 	{
 		return _lifeStones.get(itemId);
 	}
@@ -269,7 +269,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 	 * @param gemStones
 	 * @return
 	 */
-	protected static final boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance refinerItem, L2ItemInstance gemStones)
+	protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance refinerItem, L2ItemInstance gemStones)
 	{
 		if (!isValid(player, item, refinerItem))
 		{
@@ -320,7 +320,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 	 * @param refinerItem
 	 * @return
 	 */
-	protected static final boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance refinerItem)
+	protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance refinerItem)
 	{
 		if (!isValid(player, item))
 		{
@@ -368,7 +368,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 	 * @param item
 	 * @return
 	 */
-	protected static final boolean isValid(L2PcInstance player, L2ItemInstance item)
+	protected static boolean isValid(L2PcInstance player, L2ItemInstance item)
 	{
 		if (!isValid(player))
 		{
@@ -478,7 +478,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 	 * @param player
 	 * @return
 	 */
-	protected static final boolean isValid(L2PcInstance player)
+	protected static boolean isValid(L2PcInstance player)
 	{
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
@@ -526,7 +526,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 	 * @param itemGrade
 	 * @return GemStone itemId based on item grade
 	 */
-	protected static final int[] getGemStoneId(CrystalType itemGrade)
+	protected static int[] getGemStoneId(CrystalType itemGrade)
 	{
 		switch (itemGrade)
 		{
@@ -564,7 +564,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 	 * @param lifeStoneGrade
 	 * @return GemStone count based on item grade and life stone grade
 	 */
-	protected static final int getGemStoneCount(CrystalType itemGrade, int lifeStoneGrade)
+	protected static int getGemStoneCount(CrystalType itemGrade, int lifeStoneGrade)
 	{
 		switch (lifeStoneGrade)
 		{

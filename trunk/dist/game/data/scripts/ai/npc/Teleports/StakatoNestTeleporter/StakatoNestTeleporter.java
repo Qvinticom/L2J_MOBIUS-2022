@@ -31,7 +31,7 @@ import quests.Q00240_ImTheOnlyOneYouCanTrust.Q00240_ImTheOnlyOneYouCanTrust;
 final class StakatoNestTeleporter extends AbstractNpcAI
 {
 	// Locations
-	private final static Location[] LOCS =
+	private static final Location[] LOCS =
 	{
 		new Location(80456, -52322, -5640),
 		new Location(88718, -46214, -4640),
@@ -40,7 +40,7 @@ final class StakatoNestTeleporter extends AbstractNpcAI
 		new Location(87682, -43291, -4128)
 	};
 	// NPC
-	private final static int KINTAIJIN = 32640;
+	private static final int KINTAIJIN = 32640;
 	
 	private StakatoNestTeleporter()
 	{
@@ -77,7 +77,7 @@ final class StakatoNestTeleporter extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState accessQuest = player.getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName());
-		return (((accessQuest != null) && accessQuest.isCompleted()) ? "32640.htm" : "32640-no.htm");
+		return ((accessQuest != null) && accessQuest.isCompleted()) ? "32640.htm" : "32640-no.htm";
 	}
 	
 	public static void main(String[] args)

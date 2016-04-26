@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class RequestExAutoFish extends L2GameClientPacket
 {
-	private final static SkillHolder FISHING_SKILL = new SkillHolder(1312, 1);
+	private static final SkillHolder FISHING_SKILL = new SkillHolder(1312, 1);
 	
 	public RequestExAutoFish()
 	{

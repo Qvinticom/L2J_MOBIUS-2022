@@ -597,12 +597,9 @@ public class Q10331_StartOfFate extends Quest
 						{
 							htmltext = player.getLevel() >= MIN_LEVEL ? "32153-01.htm" : "32153-12.htm";
 						}
-						else
+						else if (player.getLevel() >= MIN_LEVEL)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32153-15.htm";
-							}
+							htmltext = "32153-15.htm";
 						}
 						break;
 					}
@@ -612,12 +609,9 @@ public class Q10331_StartOfFate extends Quest
 						{
 							htmltext = player.getLevel() >= MIN_LEVEL ? "32147-01.html" : "32147-11.html";
 						}
-						else
+						else if (player.getLevel() >= MIN_LEVEL)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32147-14.html";
-							}
+							htmltext = "32147-14.html";
 						}
 						break;
 					}
@@ -627,12 +621,9 @@ public class Q10331_StartOfFate extends Quest
 						{
 							htmltext = player.getLevel() >= MIN_LEVEL ? "32160-01.html" : "32160-11.html";
 						}
-						else
+						else if (player.getLevel() >= MIN_LEVEL)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32160-14.html";
-							}
+							htmltext = "32160-14.html";
 						}
 						break;
 					}
@@ -642,12 +633,9 @@ public class Q10331_StartOfFate extends Quest
 						{
 							htmltext = player.getLevel() >= MIN_LEVEL ? "32150-01.html" : "32150-10.html";
 						}
-						else
+						else if (player.getLevel() >= MIN_LEVEL)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32150-13.html";
-							}
+							htmltext = "32150-13.html";
 						}
 						break;
 					}
@@ -657,12 +645,9 @@ public class Q10331_StartOfFate extends Quest
 						{
 							htmltext = player.getLevel() >= MIN_LEVEL ? "32157-01.html" : "32157-08.html";
 						}
-						else
+						else if (player.getLevel() >= MIN_LEVEL)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32157-11.html";
-							}
+							htmltext = "32157-11.html";
 						}
 						break;
 					}
@@ -672,12 +657,9 @@ public class Q10331_StartOfFate extends Quest
 						{
 							htmltext = player.getLevel() >= MIN_LEVEL ? "32146-01.html" : "32146-09.html";
 						}
-						else
+						else if (player.getLevel() >= MIN_LEVEL)
 						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								htmltext = "32146-12.html";
-							}
+							htmltext = "32146-12.html";
 						}
 						break;
 					}

@@ -515,11 +515,11 @@ public final class ZoneManager implements IXmlReader
 	 */
 	public <T extends L2ZoneType> T getZone(L2Object object, Class<T> type)
 	{
-		if (object == null)
+		if (object != null)
 		{
-			return null;
+			return getZone(object.getX(), object.getY(), object.getZ(), type);
 		}
-		return getZone(object.getX(), object.getY(), object.getZ(), type);
+		return null;
 	}
 	
 	/**
@@ -631,7 +631,7 @@ public final class ZoneManager implements IXmlReader
 		{
 			if ((temp instanceof L2ArenaZone) && temp.isCharacterInZone(character))
 			{
-				return ((L2ArenaZone) temp);
+				return (L2ArenaZone) temp;
 			}
 		}
 		
@@ -654,7 +654,7 @@ public final class ZoneManager implements IXmlReader
 		{
 			if ((temp instanceof L2OlympiadStadiumZone) && temp.isCharacterInZone(character))
 			{
-				return ((L2OlympiadStadiumZone) temp);
+				return (L2OlympiadStadiumZone) temp;
 			}
 		}
 		return null;
@@ -734,7 +734,7 @@ public final class ZoneManager implements IXmlReader
 	 * Gets the single instance of ZoneManager.
 	 * @return single instance of ZoneManager
 	 */
-	public static final ZoneManager getInstance()
+	public static ZoneManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

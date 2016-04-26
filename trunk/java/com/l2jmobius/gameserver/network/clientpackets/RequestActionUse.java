@@ -84,8 +84,8 @@ public final class RequestActionUse extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_actionId = readD();
-		_ctrlPressed = (readD() == 1);
-		_shiftPressed = (readC() == 1);
+		_ctrlPressed = readD() == 1;
+		_shiftPressed = readC() == 1;
 	}
 	
 	@Override
@@ -124,7 +124,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		}
 		
 		// Don't allow to do some action if player is transformed
-		if (activeChar.isTransformed() && !(Arrays.binarySearch((activeChar.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST), _actionId) >= 0))
+		if (activeChar.isTransformed() && (Arrays.binarySearch(activeChar.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST, _actionId) < 0))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			_log.warning("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation());
@@ -144,7 +144,7 @@ public final class RequestActionUse extends L2GameClientPacket
 				}
 				else
 				{
-					activeChar.getAI().setNextAction((new NextAction(CtrlEvent.EVT_ARRIVED, CtrlIntention.AI_INTENTION_MOVE_TO, () -> useSit(activeChar, target))));
+					activeChar.getAI().setNextAction(new NextAction(CtrlEvent.EVT_ARRIVED, CtrlIntention.AI_INTENTION_MOVE_TO, () -> useSit(activeChar, target)));
 				}
 				break;
 			}
@@ -463,7 +463,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			case 80:
 			case 81:
 			{
-				if ((activeChar.getParty() != null) && (activeChar.getTarget() != null) && (activeChar.getTarget().isCharacter()))
+				if ((activeChar.getParty() != null) && (activeChar.getTarget() != null) && activeChar.getTarget().isCharacter())
 				{
 					activeChar.getParty().addTacticalSign(_actionId - 77, (L2Character) activeChar.getTarget());
 				}

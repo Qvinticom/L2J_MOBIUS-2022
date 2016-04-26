@@ -65,7 +65,7 @@ final class CastleBlacksmith extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return (hasRights(player, npc)) ? npc.getId() + "-01.html" : "no.html";
+		return hasRights(player, npc) ? npc.getId() + "-01.html" : "no.html";
 	}
 	
 	public static void main(String[] args)

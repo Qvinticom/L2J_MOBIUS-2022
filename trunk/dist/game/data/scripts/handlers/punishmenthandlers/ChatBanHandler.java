@@ -126,7 +126,7 @@ public class ChatBanHandler implements IPunishmentHandler
 	 */
 	private static void applyToPlayer(PunishmentTask task, L2PcInstance player)
 	{
-		final long delay = ((task.getExpirationTime() - System.currentTimeMillis()) / 1000);
+		final long delay = (task.getExpirationTime() - System.currentTimeMillis()) / 1000;
 		if (delay > 0)
 		{
 			player.sendMessage("You've been chat banned for " + (delay > 60 ? ((delay / 60) + " minutes.") : delay + " seconds."));

@@ -129,7 +129,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 			L2PcInstance player = null;
 			if (target instanceof L2PcInstance)
 			{
-				player = ((L2PcInstance) target);
+				player = (L2PcInstance) target;
 			}
 			else if (target instanceof L2Summon)
 			{
@@ -486,16 +486,16 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 				if ((dist_2 <= (castRange * castRange)) && (castRange > 70) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
 				{
 					final L2Object OldTarget = _actor.getTarget();
-					if ((sk.isContinuous() && !sk.isDebuff()) || (sk.hasEffectType(L2EffectType.HEAL)))
+					if ((sk.isContinuous() && !sk.isDebuff()) || sk.hasEffectType(L2EffectType.HEAL))
 					{
 						boolean useSkillSelf = true;
-						if ((sk.hasEffectType(L2EffectType.HEAL)) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
+						if (sk.hasEffectType(L2EffectType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 						{
 							useSkillSelf = false;
 							break;
 						}
 						
-						if ((sk.isContinuous() && !sk.isDebuff()) && _actor.isAffectedBySkill(sk.getId()))
+						if (sk.isContinuous() && !sk.isDebuff() && _actor.isAffectedBySkill(sk.getId()))
 						{
 							useSkillSelf = false;
 						}
@@ -514,7 +514,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 			}
 			
 			// Check if the L2SiegeGuardInstance is attacking, knows the target and can't run
-			if (!(_actor.isAttackingNow()) && (_actor.getRunSpeed() == 0) && (_actor.getKnownList().knowsObject(attackTarget)))
+			if (!_actor.isAttackingNow() && (_actor.getRunSpeed() == 0) && _actor.getKnownList().knowsObject(attackTarget))
 			{
 				// Cancel the target
 				_actor.getKnownList().removeKnownObject(attackTarget);
@@ -530,30 +530,26 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 				final double homeY = attackTarget.getY() - sGuard.getSpawn().getY();
 				
 				// Check if the L2SiegeGuardInstance isn't too far from it's home location
-				if ((((dx * dx) + (dy * dy)) > 10000) && (((homeX * homeX) + (homeY * homeY)) > 3240000) && (_actor.getKnownList().knowsObject(attackTarget)))
+				if ((((dx * dx) + (dy * dy)) > 10000) && (((homeX * homeX) + (homeY * homeY)) > 3240000) && _actor.getKnownList().knowsObject(attackTarget))
 				{
 					// Cancel the target
 					_actor.getKnownList().removeKnownObject(attackTarget);
 					_actor.setTarget(null);
 					setIntention(AI_INTENTION_IDLE, null, null);
 				}
-				else
-				// Move the actor to Pawn server side AND client side by sending Server->Client packet MoveToPawn (broadcast)
+				// Temporary hack for preventing guards jumping off towers,
+				// before replacing this with effective geodata checks and AI modification
+				else if ((dz * dz) < (170 * 170))
 				{
-					// Temporary hack for preventing guards jumping off towers,
-					// before replacing this with effective geodata checks and AI modification
-					if ((dz * dz) < (170 * 170))
+					if (_selfAnalysis.isMage)
 					{
-						if (_selfAnalysis.isMage)
-						{
-							range = _selfAnalysis.maxCastRange - 50;
-						}
-						if (_actor.getWalkSpeed() <= 0)
-						{
-							return;
-						}
-						moveToPawn(attackTarget, attackTarget.isMoving() ? range - 70 : range);
+						range = _selfAnalysis.maxCastRange - 50;
 					}
+					if (_actor.getWalkSpeed() <= 0)
+					{
+						return;
+					}
+					moveToPawn(attackTarget, attackTarget.isMoving() ? range - 70 : range);
 				}
 			}
 		}
@@ -603,16 +599,16 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 						if (((castRange * castRange) >= dist_2) && !sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk))
 						{
 							final L2Object OldTarget = _actor.getTarget();
-							if ((sk.isContinuous() && !sk.isDebuff()) || (sk.hasEffectType(L2EffectType.HEAL)))
+							if ((sk.isContinuous() && !sk.isDebuff()) || sk.hasEffectType(L2EffectType.HEAL))
 							{
 								boolean useSkillSelf = true;
-								if ((sk.hasEffectType(L2EffectType.HEAL)) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
+								if (sk.hasEffectType(L2EffectType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 								{
 									useSkillSelf = false;
 									break;
 								}
 								
-								if ((sk.isContinuous() && !sk.isDebuff()) && _actor.isAffectedBySkill(sk.getId()))
+								if (sk.isContinuous() && !sk.isDebuff() && _actor.isAffectedBySkill(sk.getId()))
 								{
 									useSkillSelf = false;
 								}

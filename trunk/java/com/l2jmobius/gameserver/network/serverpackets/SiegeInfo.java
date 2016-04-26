@@ -73,7 +73,7 @@ public class SiegeInfo extends L2GameServerPacket
 			
 			final int ownerId = _castle.getOwnerId();
 			
-			writeD(((ownerId == activeChar.getClanId()) && (activeChar.isClanLeader())) ? 0x01 : 0x00);
+			writeD(((ownerId == activeChar.getClanId()) && activeChar.isClanLeader()) ? 0x01 : 0x00);
 			writeD(ownerId);
 			if (ownerId > 0)
 			{
@@ -126,7 +126,7 @@ public class SiegeInfo extends L2GameServerPacket
 			
 			final int ownerId = _hall.getOwnerId();
 			
-			writeD(((ownerId == activeChar.getClanId()) && (activeChar.isClanLeader())) ? 0x01 : 0x00);
+			writeD(((ownerId == activeChar.getClanId()) && activeChar.isClanLeader()) ? 0x01 : 0x00);
 			writeD(ownerId);
 			if (ownerId > 0)
 			{
@@ -152,7 +152,7 @@ public class SiegeInfo extends L2GameServerPacket
 			}
 			
 			writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000));
-			writeD((int) ((CHSiegeManager.getInstance().getSiegableHall(_hall.getId()).getNextSiegeTime()) / 1000));
+			writeD((int) (CHSiegeManager.getInstance().getSiegableHall(_hall.getId()).getNextSiegeTime() / 1000));
 			writeD(0x00); // number of choices?
 		}
 	}

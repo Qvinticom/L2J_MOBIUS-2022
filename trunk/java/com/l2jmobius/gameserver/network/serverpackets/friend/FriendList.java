@@ -50,7 +50,6 @@ public class FriendList extends L2GameServerPacket
 				writeD(player.getObjectId());
 				writeD(player.getLevel());
 				writeD(player.getClassId().getId());
-				writeS("testing");
 			}
 			else
 			{
@@ -60,8 +59,8 @@ public class FriendList extends L2GameServerPacket
 				writeD(0x00);
 				writeD(friend.getLevel());
 				writeD(friend.getClassId());
-				writeS("testing");
 			}
+			writeS("testing");
 		}
 	}
 }

@@ -91,7 +91,7 @@ public final class AbilityPointsData implements IXmlReader
 		return prevHolder != null ? prevHolder.getSP() : points >= 13 ? 1_000_000_000 : points >= 9 ? 750_000_000 : points >= 5 ? 500_000_000 : 250_000_000;
 	}
 	
-	public static final AbilityPointsData getInstance()
+	public static AbilityPointsData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

@@ -38,7 +38,7 @@ final class Karonf extends AbstractNpcAI
 		NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON,
 		NpcStringId.SOME_FOLKS_DON_T_KNOW_WHAT_THEY_ARE_DOING
 	};
-	private final static Location[] KARONF_LOC =
+	private static final Location[] KARONF_LOC =
 	{
 		new Location(-113984, 259782, -1203),
 		new Location(-113786, 259475, -1203),

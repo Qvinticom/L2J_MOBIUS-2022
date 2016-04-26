@@ -246,15 +246,12 @@ public class L2Npc extends L2Character
 						return;
 					}
 				}
-				else
+				else if (!_npc.isInActiveRegion())
 				{
-					if (!_npc.isInActiveRegion())
-					{
-						return;
-					}
+					return;
 				}
 				
-				if (!(_npc.isDead() || _npc.isStunned() || _npc.isSleeping() || _npc.isParalyzed()))
+				if (!_npc.isDead() && !_npc.isStunned() && !_npc.isSleeping() && !_npc.isParalyzed())
 				{
 					_npc.onRandomAnimation(Rnd.get(2, 3));
 				}
@@ -309,7 +306,7 @@ public class L2Npc extends L2Character
 	 */
 	public boolean hasRandomAnimation()
 	{
-		return ((Config.MAX_NPC_ANIMATION > 0) && _isRandomAnimationEnabled && !getAiType().equals(AIType.CORPSE));
+		return (Config.MAX_NPC_ANIMATION > 0) && _isRandomAnimationEnabled && !getAiType().equals(AIType.CORPSE);
 	}
 	
 	/**
@@ -823,12 +820,9 @@ public class L2Npc extends L2Character
 				return temp;
 			}
 		}
-		else
+		else if (HtmCache.getInstance().isLoadable(temp))
 		{
-			if (HtmCache.getInstance().isLoadable(temp))
-			{
-				return temp;
-			}
+			return temp;
 		}
 		
 		// If the file is not found, the standard message "I have nothing to say to you" is returned
@@ -954,7 +948,7 @@ public class L2Npc extends L2Character
 					return;
 				}
 				// Get the text of the selected HTML file in function of the npcId and of the page number
-				filename = (getHtmlPath(npcId, val));
+				filename = getHtmlPath(npcId, val);
 				break;
 			}
 		}
@@ -1492,7 +1486,7 @@ public class L2Npc extends L2Character
 	 */
 	public boolean isInMySpawnGroup(L2Npc npc)
 	{
-		return ((getSpawn() != null) && (npc.getSpawn() != null) && (getSpawn().getName() != null) && (getSpawn().getName().equals(npc.getSpawn().getName())));
+		return (getSpawn() != null) && (npc.getSpawn() != null) && (getSpawn().getName() != null) && getSpawn().getName().equals(npc.getSpawn().getName());
 	}
 	
 	/**
@@ -1500,7 +1494,7 @@ public class L2Npc extends L2Character
 	 */
 	public boolean staysInSpawnLoc()
 	{
-		return ((getSpawn() != null) && (getSpawn().getX(this) == getX()) && (getSpawn().getY(this) == getY()));
+		return (getSpawn() != null) && (getSpawn().getX(this) == getX()) && (getSpawn().getY(this) == getY());
 	}
 	
 	/**

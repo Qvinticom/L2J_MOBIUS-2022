@@ -750,7 +750,7 @@ public final class L2PcInstance extends L2Playable
 	private int _fishx = 0;
 	private int _fishy = 0;
 	private int _fishz = 0;
-	private final static SkillHolder FISHING_SKILL = new SkillHolder(1312, 1);
+	private static final SkillHolder FISHING_SKILL = new SkillHolder(1312, 1);
 	
 	private ScheduledFuture<?> _taskRentPet;
 	private ScheduledFuture<?> _taskWater;
@@ -1495,7 +1495,7 @@ public final class L2PcInstance extends L2Playable
 		final List<Quest> quests = new LinkedList<>();
 		for (QuestState qs : _quests.values())
 		{
-			if ((qs == null) || (qs.getQuest() == null) || (!qs.isCompleted()))
+			if ((qs == null) || (qs.getQuest() == null) || !qs.isCompleted())
 			{
 				continue;
 			}
@@ -1528,7 +1528,7 @@ public final class L2PcInstance extends L2Playable
 			final L2Object object = L2World.getInstance().findObject(getLastQuestNpcObject());
 			if (object.isNpc() && isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false))
 			{
-				quest.notifyEvent(event, ((L2Npc) object), this);
+				quest.notifyEvent(event, (L2Npc) object, this);
 			}
 		}
 	}
@@ -1702,7 +1702,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean isRegisteredOnThisSiegeField(int val)
 	{
-		return ((_siegeSide == val) || ((_siegeSide >= 81) && (_siegeSide <= 89)));
+		return (_siegeSide == val) || ((_siegeSide >= 81) && (_siegeSide <= 89));
 	}
 	
 	@Override
@@ -1815,7 +1815,7 @@ public final class L2PcInstance extends L2Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.ALTEREDZONE;
-			sendPacket((new ExSetCompassZoneCode(ExSetCompassZoneCode.ALTEREDZONE)));
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.ALTEREDZONE));
 		}
 		else if (isInsideZone(ZoneId.SIEGE))
 		{
@@ -1824,7 +1824,7 @@ public final class L2PcInstance extends L2Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.SIEGEWARZONE2;
-			sendPacket((new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2)));
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2));
 		}
 		else if (isInsideZone(ZoneId.PVP))
 		{
@@ -1833,7 +1833,7 @@ public final class L2PcInstance extends L2Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.PVPZONE;
-			sendPacket((new ExSetCompassZoneCode(ExSetCompassZoneCode.PVPZONE)));
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.PVPZONE));
 		}
 		else if (isInsideZone(ZoneId.PEACE))
 		{
@@ -1842,7 +1842,7 @@ public final class L2PcInstance extends L2Playable
 				return;
 			}
 			_lastCompassZone = ExSetCompassZoneCode.PEACEZONE;
-			sendPacket((new ExSetCompassZoneCode(ExSetCompassZoneCode.PEACEZONE)));
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.PEACEZONE));
 		}
 		else
 		{
@@ -1855,7 +1855,7 @@ public final class L2PcInstance extends L2Playable
 				updatePvPStatus();
 			}
 			_lastCompassZone = ExSetCompassZoneCode.GENERALZONE;
-			sendPacket((new ExSetCompassZoneCode(ExSetCompassZoneCode.GENERALZONE)));
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.GENERALZONE));
 		}
 	}
 	
@@ -2082,7 +2082,7 @@ public final class L2PcInstance extends L2Playable
 		final int maxLoad = getMaxLoad();
 		if (maxLoad > 0)
 		{
-			final long weightproc = (((getCurrentLoad() - getBonusWeightPenalty()) * 1000) / getMaxLoad());
+			final long weightproc = ((getCurrentLoad() - getBonusWeightPenalty()) * 1000) / getMaxLoad();
 			int newWeightPenalty;
 			if ((weightproc < 500) || _dietMode)
 			{
@@ -2139,7 +2139,7 @@ public final class L2PcInstance extends L2Playable
 		
 		for (L2ItemInstance item : getInventory().getItems())
 		{
-			if ((item != null) && item.isEquipped() && ((item.getItemType() != EtcItemType.ARROW) && (item.getItemType() != EtcItemType.BOLT)))
+			if ((item != null) && item.isEquipped() && (item.getItemType() != EtcItemType.ARROW) && (item.getItemType() != EtcItemType.BOLT))
 			{
 				crystaltype = item.getItem().getCrystalType().getId();
 				if (crystaltype > expertiseLevel)
@@ -2215,13 +2215,12 @@ public final class L2PcInstance extends L2Playable
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(item.getEnchantLevel());
-				sm.addItemName(item);
 			}
 			else
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
-				sm.addItemName(item);
 			}
+			sm.addItemName(item);
 			sendPacket(sm);
 			
 			final int slot = getInventory().getSlotFromItem(item);
@@ -2245,13 +2244,12 @@ public final class L2PcInstance extends L2Playable
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2);
 					sm.addInt(item.getEnchantLevel());
-					sm.addItemName(item);
 				}
 				else
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
-					sm.addItemName(item);
 				}
+				sm.addItemName(item);
 				sendPacket(sm);
 				
 				// Consume mana - will start a task if required; returns if item is not a shadow item
@@ -2376,7 +2374,7 @@ public final class L2PcInstance extends L2Playable
 				}
 				else
 				{
-					_clan.addReputationScore((Config.JOIN_ACADEMY_MAX_REP_SCORE - ((getLvlJoinedAcademy() - 16) * 20)), true);
+					_clan.addReputationScore(Config.JOIN_ACADEMY_MAX_REP_SCORE - ((getLvlJoinedAcademy() - 16) * 20), true);
 				}
 				setLvlJoinedAcademy(0);
 				// oust pledge member from the academy, cuz he has finished his 2nd class transfer
@@ -3379,13 +3377,13 @@ public final class L2PcInstance extends L2Playable
 			}
 			// Auto-use herbs.
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(item instanceof L2EtcItem ? (L2EtcItem) item : null);
-			if (handler == null)
+			if (handler != null)
 			{
-				_log.warning("No item handler registered for Herb ID " + item.getId() + "!");
+				handler.useItem(this, new L2ItemInstance(itemId), false);
 			}
 			else
 			{
-				handler.useItem(this, new L2ItemInstance(itemId), false);
+				_log.warning("No item handler registered for Herb ID " + item.getId() + "!");
 			}
 		}
 		return null;
@@ -4029,12 +4027,9 @@ public final class L2PcInstance extends L2Playable
 			{
 				_client.cleanMe(true);
 			}
-			else
+			else if (!_client.getConnection().isClosed())
 			{
-				if (!_client.getConnection().isClosed())
-				{
-					_client.close(closeClient ? LeaveWorld.STATIC_PACKET : ServerClose.STATIC_PACKET);
-				}
+				_client.close(closeClient ? LeaveWorld.STATIC_PACKET : ServerClose.STATIC_PACKET);
 			}
 		}
 	}
@@ -4071,7 +4066,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// Check if the spell using charges or not in AirShip
-		if (((getCharges() < skill.getChargeConsume())) || (isInAirShip() && !skill.hasEffectType(L2EffectType.REFUEL_AIRSHIP)))
+		if ((getCharges() < skill.getChargeConsume()) || (isInAirShip() && !skill.hasEffectType(L2EffectType.REFUEL_AIRSHIP)))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(skill);
@@ -4424,13 +4419,10 @@ public final class L2PcInstance extends L2Playable
 				sendPacket(new RecipeShopSellList(this, temp));
 			}
 		}
-		else
+		// _interactTarget=null should never happen but one never knows ^^;
+		else if (target != null)
 		{
-			// _interactTarget=null should never happen but one never knows ^^;
-			if (target != null)
-			{
-				target.onAction(this);
-			}
+			target.onAction(this);
 		}
 	}
 	
@@ -4495,7 +4487,7 @@ public final class L2PcInstance extends L2Playable
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		
 		// Check if the L2Object to pick up is a L2ItemInstance
-		if (!(object.isItem()))
+		if (!object.isItem())
 		{
 			// dont try to pickup anything that is not an item :)
 			_log.warning(this + " trying to pickup wrong target." + getTarget());
@@ -4584,13 +4576,13 @@ public final class L2PcInstance extends L2Playable
 		if (target.getItem().hasExImmediateEffect())
 		{
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
-			if (handler == null)
+			if (handler != null)
 			{
-				_log.warning("No item handler registered for item ID: " + target.getId() + ".");
+				handler.useItem(this, target, false);
 			}
 			else
 			{
-				handler.useItem(this, target, false);
+				_log.warning("No item handler registered for item ID: " + target.getId() + ".");
 			}
 			ItemTable.getInstance().destroyItem("Consume", target, this, null);
 		}
@@ -4697,7 +4689,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public int getMinShopDistance()
 	{
-		return (isSitting()) ? Config.SHOP_MIN_RANGE_FROM_PLAYER : 0;
+		return isSitting() ? Config.SHOP_MIN_RANGE_FROM_PLAYER : 0;
 	}
 	
 	public void tryOpenPrivateBuyStore()
@@ -4854,12 +4846,12 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public int getTransformationId()
 	{
-		return (isTransformed() ? getTransformation().getId() : 0);
+		return isTransformed() ? getTransformation().getId() : 0;
 	}
 	
 	public int getTransformationDisplayId()
 	{
-		return (isTransformed() ? getTransformation().getDisplayId() : 0);
+		return isTransformed() ? getTransformation().getDisplayId() : 0;
 	}
 	
 	/**
@@ -4876,7 +4868,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (newTarget != null)
 		{
-			final boolean isInParty = (newTarget.isPlayer() && isInParty() && getParty().containsPlayer(newTarget.getActingPlayer()));
+			final boolean isInParty = newTarget.isPlayer() && isInParty() && getParty().containsPlayer(newTarget.getActingPlayer());
 			
 			// Prevents /target exploiting
 			if (!isInParty && (Math.abs(newTarget.getZ() - getZ()) > 1000))
@@ -5253,7 +5245,7 @@ public final class L2PcInstance extends L2Playable
 					
 					if (!insidePvpZone && !insideSiegeZone)
 					{
-						if ((pk != null) && (pk.getClan() != null) && (getClan() != null) && !isAcademyMember() && !(pk.isAcademyMember()))
+						if ((pk != null) && (pk.getClan() != null) && (getClan() != null) && !isAcademyMember() && !pk.isAcademyMember())
 						{
 							if ((_clan.isAtWarWith(pk.getClanId()) && pk.getClan().isAtWarWith(_clan.getId())) || (isInSiege() && pk.isInSiege()))
 							{
@@ -5350,7 +5342,7 @@ public final class L2PcInstance extends L2Playable
 		if ((!isInsideZone(ZoneId.PVP) || (pk == null)) && (!isGM() || Config.KARMA_DROP_GM))
 		{
 			boolean isKarmaDrop = false;
-			final boolean isKillerNpc = (killer instanceof L2Npc);
+			final boolean isKillerNpc = killer instanceof L2Npc;
 			final int pkLimit = Config.KARMA_PK_LIMIT;
 			
 			int dropEquip = 0;
@@ -5611,7 +5603,7 @@ public final class L2PcInstance extends L2Playable
 			return;
 		}
 		
-		if ((isInDuel() && (player_target.getDuelId() == getDuelId())))
+		if (isInDuel() && (player_target.getDuelId() == getDuelId()))
 		{
 			return;
 		}
@@ -5918,7 +5910,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean isRequestExpired()
 	{
-		return !(_requestExpireTime > GameTimeController.getInstance().getGameTicks());
+		return _requestExpireTime <= GameTimeController.getInstance().getGameTicks();
 	}
 	
 	/**
@@ -6440,13 +6432,12 @@ public final class L2PcInstance extends L2Playable
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 					sm.addInt(unequiped[0].getEnchantLevel());
-					sm.addItemName(unequiped[0]);
 				}
 				else
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
-					sm.addItemName(unequiped[0]);
 				}
+				sm.addItemName(unequiped[0]);
 				sendPacket(sm);
 			}
 		}
@@ -7895,7 +7886,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			for (Shortcut sc : getAllShortCuts())
 			{
-				if ((sc != null) && (sc.getId() == skill.getId()) && (sc.getType() == ShortcutType.SKILL) && !((skill.getId() >= 3080) && (skill.getId() <= 3259)))
+				if ((sc != null) && (sc.getId() == skill.getId()) && (sc.getType() == ShortcutType.SKILL) && ((skill.getId() < 3080) || (skill.getId() > 3259)))
 				{
 					deleteShortCut(sc.getSlot(), sc.getPage());
 				}
@@ -8392,19 +8383,16 @@ public final class L2PcInstance extends L2Playable
 					_hennaCHA += h.getStatCHA();
 				}
 			}
-			else
+			else if (h.getDyeId() <= 180)
 			{
-				if (h.getDyeId() <= 180)
-				{
-					_hennaINT += ((_hennaINT + h.getStatINT()) > 5) ? 5 - _hennaINT : h.getStatINT();
-					_hennaSTR += ((_hennaSTR + h.getStatSTR()) > 5) ? 5 - _hennaSTR : h.getStatSTR();
-					_hennaMEN += ((_hennaMEN + h.getStatMEN()) > 5) ? 5 - _hennaMEN : h.getStatMEN();
-					_hennaCON += ((_hennaCON + h.getStatCON()) > 5) ? 5 - _hennaCON : h.getStatCON();
-					_hennaWIT += ((_hennaWIT + h.getStatWIT()) > 5) ? 5 - _hennaWIT : h.getStatWIT();
-					_hennaDEX += ((_hennaDEX + h.getStatDEX()) > 5) ? 5 - _hennaDEX : h.getStatDEX();
-					_hennaLUC += ((_hennaLUC + h.getStatLUC()) > 5) ? 5 - _hennaLUC : h.getStatLUC();
-					_hennaCHA += ((_hennaCHA + h.getStatCHA()) > 5) ? 5 - _hennaCHA : h.getStatCHA();
-				}
+				_hennaINT += ((_hennaINT + h.getStatINT()) > 5) ? 5 - _hennaINT : h.getStatINT();
+				_hennaSTR += ((_hennaSTR + h.getStatSTR()) > 5) ? 5 - _hennaSTR : h.getStatSTR();
+				_hennaMEN += ((_hennaMEN + h.getStatMEN()) > 5) ? 5 - _hennaMEN : h.getStatMEN();
+				_hennaCON += ((_hennaCON + h.getStatCON()) > 5) ? 5 - _hennaCON : h.getStatCON();
+				_hennaWIT += ((_hennaWIT + h.getStatWIT()) > 5) ? 5 - _hennaWIT : h.getStatWIT();
+				_hennaDEX += ((_hennaDEX + h.getStatDEX()) > 5) ? 5 - _hennaDEX : h.getStatDEX();
+				_hennaLUC += ((_hennaLUC + h.getStatLUC()) > 5) ? 5 - _hennaLUC : h.getStatLUC();
+				_hennaCHA += ((_hennaCHA + h.getStatCHA()) > 5) ? 5 - _hennaCHA : h.getStatCHA();
 			}
 		}
 	}
@@ -8566,11 +8554,7 @@ public final class L2PcInstance extends L2Playable
 		// Check if the attacker is in olympia and olympia start
 		if (attacker.isPlayer() && attacker.getActingPlayer().isInOlympiadMode())
 		{
-			if (isInOlympiadMode() && isOlympiadStart() && (((L2PcInstance) attacker).getOlympiadGameId() == getOlympiadGameId()))
-			{
-				return true;
-			}
-			return false;
+			return isInOlympiadMode() && isOlympiadStart() && (((L2PcInstance) attacker).getOlympiadGameId() == getOlympiadGameId());
 		}
 		
 		// Check if the attacker is in TvT and TvT is started
@@ -8617,7 +8601,7 @@ public final class L2PcInstance extends L2Playable
 			
 			// Check if the L2PcInstance is in an arena, but NOT siege zone. NOTE: This check comes before clan/ally checks, but after party checks.
 			// This is done because in arenas, clan/ally members can autoattack if they arent in party.
-			if ((isInsideZone(ZoneId.PVP) && attackerPlayer.isInsideZone(ZoneId.PVP)) && !(isInsideZone(ZoneId.SIEGE) && attackerPlayer.isInsideZone(ZoneId.SIEGE)))
+			if (isInsideZone(ZoneId.PVP) && attackerPlayer.isInsideZone(ZoneId.PVP) && (!isInsideZone(ZoneId.SIEGE) || !attackerPlayer.isInsideZone(ZoneId.SIEGE)))
 			{
 				return true;
 			}
@@ -8635,7 +8619,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			// Now check again if the L2PcInstance is in pvp zone, but this time at siege PvP zone, applying clan/ally checks
-			if ((isInsideZone(ZoneId.PVP) && attackerPlayer.isInsideZone(ZoneId.PVP)) && (isInsideZone(ZoneId.SIEGE) && attackerPlayer.isInsideZone(ZoneId.SIEGE)))
+			if (isInsideZone(ZoneId.PVP) && attackerPlayer.isInsideZone(ZoneId.PVP) && isInsideZone(ZoneId.SIEGE) && attackerPlayer.isInsideZone(ZoneId.SIEGE))
 			{
 				return true;
 			}
@@ -8650,7 +8634,7 @@ public final class L2PcInstance extends L2Playable
 			if (getClan() != null)
 			{
 				final Siege siege = SiegeManager.getInstance().getSiege(this);
-				return ((siege != null) && siege.checkIsAttacker(getClan()));
+				return (siege != null) && siege.checkIsAttacker(getClan());
 			}
 		}
 		
@@ -8924,7 +8908,7 @@ public final class L2PcInstance extends L2Playable
 				final int remainingTime = (int) (getSkillRemainingReuseTime(skill.getReuseHashCode()) / 1000);
 				final int hours = remainingTime / 3600;
 				final int minutes = (remainingTime % 3600) / 60;
-				final int seconds = (remainingTime % 60);
+				final int seconds = remainingTime % 60;
 				if (hours > 0)
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
@@ -8971,7 +8955,7 @@ public final class L2PcInstance extends L2Playable
 		// Check if this is bad magic skill
 		if (skill.isBad())
 		{
-			if ((isInsidePeaceZone(this, target)) && !getAccessLevel().allowPeaceAttack())
+			if (isInsidePeaceZone(this, target) && !getAccessLevel().allowPeaceAttack())
 			{
 				// If L2Character or target is in a peace zone, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed
 				sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
@@ -9139,12 +9123,7 @@ public final class L2PcInstance extends L2Playable
 			return getParty().getCommandChannel().getMembers().contains(looter);
 		}
 		
-		if (isInParty() && (looter != null))
-		{
-			return getParty().getMembers().contains(looter);
-		}
-		
-		return false;
+		return isInParty() && (looter != null) && getParty().getMembers().contains(looter);
 	}
 	
 	/**
@@ -9211,11 +9190,7 @@ public final class L2PcInstance extends L2Playable
 				}
 				else if ((getParty().getCommandChannel() != null) && getParty().getCommandChannel().containsPlayer(targetPlayer))
 				{
-					if ((skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target) && skill.isDamage())
-					{
-						return true;
-					}
-					return false;
+					return (skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target) && skill.isDamage();
 				}
 			}
 			
@@ -9233,20 +9208,12 @@ public final class L2PcInstance extends L2Playable
 				if (aClan.isAtWarWith(tClan.getId()) && tClan.isAtWarWith(aClan.getId()))
 				{
 					// Check if skill can do damage
-					if ((skill.isAOE() && (skill.getEffectRange() > 0)) && isCtrlPressed && (getTarget() == target))
-					{
-						return true;
-					}
-					return isCtrlPressed;
+					return (skill.isAOE() && (skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target)) || isCtrlPressed;
 				}
 				else if ((getClanId() == targetPlayer.getClanId()) || ((getAllyId() > 0) && (getAllyId() == targetPlayer.getAllyId())))
 				{
 					// Check if skill can do damage
-					if ((skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target) && skill.isDamage())
-					{
-						return true;
-					}
-					return false;
+					return (skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target) && skill.isDamage();
 				}
 			}
 			
@@ -9260,18 +9227,10 @@ public final class L2PcInstance extends L2Playable
 			if ((targetPlayer.getPvpFlag() == 0) && (targetPlayer.getReputation() > 0))
 			{
 				// Check if skill can do damage
-				if ((skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target) && skill.isDamage())
-				{
-					return true;
-				}
-				return false;
+				return (skill.getEffectRange() > 0) && isCtrlPressed && (getTarget() == target) && skill.isDamage();
 			}
 			
-			if ((targetPlayer.getPvpFlag() > 0) || (targetPlayer.getReputation() < 0))
-			{
-				return true;
-			}
-			return false;
+			return (targetPlayer.getPvpFlag() > 0) || (targetPlayer.getReputation() < 0);
 		}
 		return true;
 	}
@@ -9300,7 +9259,7 @@ public final class L2PcInstance extends L2Playable
 		// if this is a castle that is currently being sieged, and the rider is NOT a castle owner
 		// he cannot land.
 		// castle owner is the leader of the clan that owns the castle where the pc is
-		if (isInsideZone(ZoneId.SIEGE) && !((getClan() != null) && (CastleManager.getInstance().getCastle(this) == CastleManager.getInstance().getCastleByOwner(getClan())) && (this == getClan().getLeader().getPlayerInstance())))
+		if (isInsideZone(ZoneId.SIEGE) && ((getClan() == null) || (CastleManager.getInstance().getCastle(this) != CastleManager.getInstance().getCastleByOwner(getClan())) || (this != getClan().getLeader().getPlayerInstance())))
 		{
 			return true;
 		}
@@ -10897,16 +10856,13 @@ public final class L2PcInstance extends L2Playable
 			{
 				reviver.sendPacket(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 			}
+			else if (Pet)
+			{
+				reviver.sendPacket(SystemMessageId.A_PET_CANNOT_BE_RESURRECTED_WHILE_IT_S_OWNER_IS_IN_THE_PROCESS_OF_RESURRECTING); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
+			}
 			else
 			{
-				if (Pet)
-				{
-					reviver.sendPacket(SystemMessageId.A_PET_CANNOT_BE_RESURRECTED_WHILE_IT_S_OWNER_IS_IN_THE_PROCESS_OF_RESURRECTING); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
-				}
-				else
-				{
-					reviver.sendPacket(SystemMessageId.WHILE_A_PET_IS_BEING_RESURRECTED_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
-				}
+				reviver.sendPacket(SystemMessageId.WHILE_A_PET_IS_BEING_RESURRECTED_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
 			}
 			return;
 		}
@@ -10974,7 +10930,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean isReviveRequested()
 	{
-		return (_reviveRequested == 1);
+		return _reviveRequested == 1;
 	}
 	
 	public boolean isRevivingPet()
@@ -11115,13 +11071,10 @@ public final class L2PcInstance extends L2Playable
 				}
 			}
 		}
-		else
+		else if (_teleportWatchdog != null)
 		{
-			if (_teleportWatchdog != null)
-			{
-				_teleportWatchdog.cancel(false);
-				_teleportWatchdog = null;
-			}
+			_teleportWatchdog.cancel(false);
+			_teleportWatchdog = null;
 		}
 	}
 	
@@ -12687,7 +12640,7 @@ public final class L2PcInstance extends L2Playable
 			percent *= calcStat(Stats.REDUCE_DEATH_PENALTY_BY_PVP, 1);
 		}
 		
-		if ((killer.isInCategory(CategoryType.SHILENS_FOLLOWERS) || (Rnd.get(1, 100) <= ((Config.DEATH_PENALTY_CHANCE) * percent))) && (!killer.isPlayable() || (getReputation() < 0)))
+		if ((killer.isInCategory(CategoryType.SHILENS_FOLLOWERS) || (Rnd.get(1, 100) <= (Config.DEATH_PENALTY_CHANCE * percent))) && (!killer.isPlayable() || (getReputation() < 0)))
 		{
 			increaseShilensBreathDebuff();
 		}
@@ -12792,7 +12745,7 @@ public final class L2PcInstance extends L2Playable
 			sm.addPcName(this);
 			sm.addCharName(target);
 			sm.addInt(damage);
-			sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
+			sm.addPopup(target.getObjectId(), getObjectId(), damage * -1);
 		}
 		sendPacket(sm);
 	}
@@ -13048,7 +13001,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean isFlyingMounted()
 	{
-		return (isTransformed() && (getTransformation().isFlying()));
+		return isTransformed() && getTransformation().isFlying();
 	}
 	
 	/**
@@ -13655,7 +13608,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				friend.setLevel(rs.getByte("level"));
 				friend.setClassId(rs.getInt("classid"));
-				bClassId = (rs.getInt("base_class"));
+				bClassId = rs.getInt("base_class");
 				friend.setClanId(rs.getInt("clanid"));
 				friend.setLastLogin(rs.getLong("lastAccess"));
 				friend.setCreateDate(rs.getLong("createDate"));
@@ -14138,7 +14091,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean canMakeSocialAction()
 	{
-		return ((getPrivateStoreType() == PrivateStoreType.NONE) && (getActiveRequester() == null) && !isAlikeDead() && !isAllSkillsDisabled() && !isCastingNow() && !isCastingSimultaneouslyNow() && (getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE));
+		return (getPrivateStoreType() == PrivateStoreType.NONE) && (getActiveRequester() == null) && !isAlikeDead() && !isAllSkillsDisabled() && !isCastingNow() && !isCastingSimultaneouslyNow() && (getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE);
 	}
 	
 	public void setMultiSocialAction(int id, int targetId)
@@ -14225,7 +14178,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean isInventoryUnder90(boolean includeQuestInv)
 	{
-		return (getInventory().getSize(includeQuestInv) <= (getInventoryLimit() * 0.9));
+		return getInventory().getSize(includeQuestInv) <= (getInventoryLimit() * 0.9);
 	}
 	
 	public boolean havePetInvItems()
@@ -14761,15 +14714,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean isAtWarWith(L2Character target)
 	{
-		if (target == null)
-		{
-			return false;
-		}
-		if ((_clan != null) && !isAcademyMember() && (target.getClan() != null) && !target.isAcademyMember())
-		{
-			return _clan.isAtWarWith(target.getClan());
-		}
-		return false;
+		return (target != null) && (_clan != null) && !isAcademyMember() && (target.getClan() != null) && !target.isAcademyMember() && _clan.isAtWarWith(target.getClan());
 	}
 	
 	/**

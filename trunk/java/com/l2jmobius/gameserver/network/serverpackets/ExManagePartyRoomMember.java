@@ -56,16 +56,13 @@ public class ExManagePartyRoomMember extends L2GameServerPacket
 		{
 			writeD(1);
 		}
+		else if (_room.getOwner().isInParty() && _activeChar.isInParty() && (_room.getOwner().getParty().getLeaderObjectId() == _activeChar.getParty().getLeaderObjectId()))
+		{
+			writeD(0x02);
+		}
 		else
 		{
-			if ((_room.getOwner().isInParty() && _activeChar.isInParty()) && (_room.getOwner().getParty().getLeaderObjectId() == _activeChar.getParty().getLeaderObjectId()))
-			{
-				writeD(0x02);
-			}
-			else
-			{
-				writeD(0x00);
-			}
+			writeD(0x00);
 		}
 		writeD(0x00); // TODO: instance reuse time size
 		// TODO: for size writeD(instanceId)

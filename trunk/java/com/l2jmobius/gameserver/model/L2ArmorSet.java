@@ -287,7 +287,7 @@ public final class L2ArmorSet
 		final Inventory inv = player.getInventory();
 		
 		final L2ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-		return ((shieldItem != null) && _shield.contains(Integer.valueOf(shieldItem.getId())));
+		return (shieldItem != null) && _shield.contains(Integer.valueOf(shieldItem.getId()));
 	}
 	
 	public boolean containShield(int shield_id)

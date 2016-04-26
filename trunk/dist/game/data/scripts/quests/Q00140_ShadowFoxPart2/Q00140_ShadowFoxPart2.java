@@ -239,7 +239,7 @@ public class Q00140_ShadowFoxPart2 extends Quest
 						}
 						case 2:
 						{
-							htmltext = (qs.isSet("talk")) ? "30912-07.html" : "30912-02.html";
+							htmltext = qs.isSet("talk") ? "30912-07.html" : "30912-02.html";
 							break;
 						}
 						case 3:

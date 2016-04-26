@@ -74,7 +74,7 @@ public class PcStatus extends PlayableStatus
 			return;
 		}
 		
-		if ((getActiveChar().isInvul() || getActiveChar().isHpBlocked()) && !getActiveChar().isVulnerableFor(attacker) && !(isDOT || isHPConsumption))
+		if ((getActiveChar().isInvul() || getActiveChar().isHpBlocked()) && !getActiveChar().isVulnerableFor(attacker) && !isDOT && !isHPConsumption)
 		{
 			return;
 		}
@@ -175,7 +175,7 @@ public class PcStatus extends PlayableStatus
 			final L2PcInstance caster = getActiveChar().getTransferingDamageTo();
 			if ((caster != null) && (getActiveChar().getParty() != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster))
 			{
-				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, (((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100));
+				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, ((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100);
 				
 				if (transferDmg > 0)
 				{
@@ -304,7 +304,7 @@ public class PcStatus extends PlayableStatus
 			return;
 		}
 		
-		if ((attacker != null) && (attacker.isPlayer()))
+		if ((attacker != null) && attacker.isPlayer())
 		{
 			final int hpRestore = (int) attacker.getStat().calcStat(Stats.HP_RESTORE_ON_KILL, 0, null, null);
 			if (hpRestore > 0)

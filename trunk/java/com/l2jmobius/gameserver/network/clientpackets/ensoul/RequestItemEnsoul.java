@@ -132,7 +132,7 @@ public class RequestItemEnsoul extends L2GameClientPacket
 		activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
 	}
 	
-	private static final boolean checkAndConsume(L2PcInstance activeChar, L2ItemInstance soulcrystal, L2ItemInstance targetItem, boolean changing, boolean special)
+	private static boolean checkAndConsume(L2PcInstance activeChar, L2ItemInstance soulcrystal, L2ItemInstance targetItem, boolean changing, boolean special)
 	{
 		final CrystalType targetItemGrade = targetItem.getItem().getCrystalType();
 		final int gemstoneId = getGemStoneId(targetItemGrade);
@@ -166,7 +166,7 @@ public class RequestItemEnsoul extends L2GameClientPacket
 		return true;
 	}
 	
-	private static final long getGemstoneCount(CrystalType itemGrade, boolean price2x, boolean changing, boolean special)
+	private static long getGemstoneCount(CrystalType itemGrade, boolean price2x, boolean changing, boolean special)
 	{
 		switch (itemGrade)
 		{
@@ -210,7 +210,7 @@ public class RequestItemEnsoul extends L2GameClientPacket
 		}
 	}
 	
-	private static final int getGemStoneId(CrystalType itemGrade)
+	private static int getGemStoneId(CrystalType itemGrade)
 	{
 		switch (itemGrade)
 		{

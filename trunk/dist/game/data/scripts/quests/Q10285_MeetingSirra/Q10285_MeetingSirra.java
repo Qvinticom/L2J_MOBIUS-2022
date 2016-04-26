@@ -227,7 +227,7 @@ public final class Q10285_MeetingSirra extends Quest
 				if (npc.getId() == RAFFORTY)
 				{
 					qs = player.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "32020-01.htm" : "32020-04.htm";
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32020-01.htm" : "32020-04.htm";
 				}
 				break;
 			}

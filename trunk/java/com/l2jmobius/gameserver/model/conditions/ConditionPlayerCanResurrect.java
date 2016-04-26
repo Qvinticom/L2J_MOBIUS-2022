@@ -112,6 +112,6 @@ public class ConditionPlayerCanResurrect extends Condition
 				}
 			}
 		}
-		return (_val == canResurrect);
+		return _val == canResurrect;
 	}
 }

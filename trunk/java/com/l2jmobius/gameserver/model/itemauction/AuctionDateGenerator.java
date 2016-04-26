@@ -55,7 +55,7 @@ public final class AuctionDateGenerator
 		checkMinuteOfHour(0);
 	}
 	
-	public synchronized final long nextDate(long date)
+	public final synchronized long nextDate(long date)
 	{
 		_calendar.setTimeInMillis(date);
 		_calendar.set(Calendar.MILLISECOND, 0);

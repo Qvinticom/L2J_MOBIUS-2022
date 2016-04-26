@@ -62,7 +62,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		_playerTwo.getPlayer().setOlympiadGameId(id);
 	}
 	
-	protected static final Participant[] createListOfParticipants(List<Integer> list)
+	protected static Participant[] createListOfParticipants(List<Integer> list)
 	{
 		if ((list == null) || list.isEmpty() || (list.size() < 2))
 		{
@@ -319,8 +319,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		final List<OlympiadInfo> list1 = new ArrayList<>(1);
 		final List<OlympiadInfo> list2 = new ArrayList<>(1);
 		
-		final boolean _pOneCrash = ((_playerOne.getPlayer() == null) || _playerOne.isDisconnected());
-		final boolean _pTwoCrash = ((_playerTwo.getPlayer() == null) || _playerTwo.isDisconnected());
+		final boolean _pOneCrash = (_playerOne.getPlayer() == null) || _playerOne.isDisconnected();
+		final boolean _pTwoCrash = (_playerTwo.getPlayer() == null) || _playerTwo.isDisconnected();
 		
 		final int playerOnePoints = _playerOne.getStats().getInt(POINTS);
 		final int playerTwoPoints = _playerTwo.getStats().getInt(POINTS);
@@ -577,7 +577,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			String winner = "draw";
 			
 			// Calculate Fight time
-			final long _fightTime = (System.currentTimeMillis() - _startTime);
+			final long _fightTime = System.currentTimeMillis() - _startTime;
 			
 			double playerOneHp = 0;
 			if ((_playerOne.getPlayer() != null) && !_playerOne.getPlayer().isDead())
@@ -784,7 +784,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		_damageP2 = 0;
 	}
 	
-	protected static final void saveResults(Participant one, Participant two, int winner, long startTime, long fightTime, CompetitionType type)
+	protected static void saveResults(Participant one, Participant two, int winner, long startTime, long fightTime, CompetitionType type)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO olympiad_fights (charOneId, charTwoId, charOneClass, charTwoClass, winner, start, time, classed) values(?,?,?,?,?,?,?,?)"))
@@ -796,7 +796,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			ps.setInt(5, winner);
 			ps.setLong(6, startTime);
 			ps.setLong(7, fightTime);
-			ps.setInt(8, (type == CompetitionType.CLASSED ? 1 : 0));
+			ps.setInt(8, type == CompetitionType.CLASSED ? 1 : 0);
 			ps.execute();
 		}
 		catch (SQLException e)

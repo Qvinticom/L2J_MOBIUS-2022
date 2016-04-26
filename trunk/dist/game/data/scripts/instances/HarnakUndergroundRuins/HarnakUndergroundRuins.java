@@ -542,7 +542,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(killer);
-		if ((tmpworld instanceof HuRWorld))
+		if (tmpworld instanceof HuRWorld)
 		{
 			final HuRWorld world = (HuRWorld) tmpworld;
 			if (world.isStatus(0))
@@ -708,7 +708,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					case KRAKIA_LOTUS:
 					case WEISS_ELE:
 					{
-						if ((npc.getId() != world.currentNpc))
+						if (npc.getId() != world.currentNpc)
 						{
 							for (L2Npc livingNpc : world.spawnedNpc)
 							{

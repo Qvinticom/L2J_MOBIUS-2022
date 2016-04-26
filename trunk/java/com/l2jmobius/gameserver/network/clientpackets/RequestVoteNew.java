@@ -48,13 +48,13 @@ public final class RequestVoteNew extends L2GameClientPacket
 		
 		if (!(object instanceof L2PcInstance))
 		{
-			if (object == null)
+			if (object != null)
 			{
-				activeChar.sendPacket(SystemMessageId.SELECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+				activeChar.sendPacket(SystemMessageId.SELECT_TARGET);
 			}
 			return;
 		}

@@ -368,18 +368,15 @@ final class FeedableBeasts extends AbstractNpcAI
 					nextNpcId = GROWTH_CAPABLE_MONSTERS.get(npcId).getMob(food, 1, 0);
 				}
 			}
+			else // if not tamed, there is a small chance that have "mad cow" disease.
+			// that is a stronger-than-normal animal that attacks its feeder
+			if (getRandom(5) == 0)
+			{
+				nextNpcId = GROWTH_CAPABLE_MONSTERS.get(npcId).getMob(food, 0, 1);
+			}
 			else
 			{
-				// if not tamed, there is a small chance that have "mad cow" disease.
-				// that is a stronger-than-normal animal that attacks its feeder
-				if (getRandom(5) == 0)
-				{
-					nextNpcId = GROWTH_CAPABLE_MONSTERS.get(npcId).getMob(food, 0, 1);
-				}
-				else
-				{
-					nextNpcId = GROWTH_CAPABLE_MONSTERS.get(npcId).getMob(food, 0, 0);
-				}
+				nextNpcId = GROWTH_CAPABLE_MONSTERS.get(npcId).getMob(food, 0, 0);
 			}
 		}
 		else
@@ -464,7 +461,7 @@ final class FeedableBeasts extends AbstractNpcAI
 			
 			if (MAD_COW_POLYMORPH.containsKey(nextNpcId))
 			{
-				this.startQuestTimer("polymorph Mad Cow", 10000, nextNpc, player);
+				startQuestTimer("polymorph Mad Cow", 10000, nextNpc, player);
 			}
 			
 			// register the player in the feedinfo for the mob that just spawned
@@ -573,7 +570,7 @@ final class FeedableBeasts extends AbstractNpcAI
 		}
 		else if (Util.contains(TAMED_BEASTS, npcId) && (npc instanceof L2TamedBeastInstance))
 		{
-			final L2TamedBeastInstance beast = ((L2TamedBeastInstance) npc);
+			final L2TamedBeastInstance beast = (L2TamedBeastInstance) npc;
 			if (skillId == beast.getFoodType())
 			{
 				beast.onReceiveFood();

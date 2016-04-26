@@ -512,7 +512,7 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 		}
 	}
 	
-	public final static void showSubSkillList(L2PcInstance activeChar)
+	public static void showSubSkillList(L2PcInstance activeChar)
 	{
 		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableSubClassSkills(activeChar);
 		if (!skills.isEmpty())
@@ -525,7 +525,7 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 		}
 	}
 	
-	public final static void showDualSkillList(L2PcInstance activeChar)
+	public static void showDualSkillList(L2PcInstance activeChar)
 	{
 		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableDualClassSkills(activeChar);
 		if (!skills.isEmpty())

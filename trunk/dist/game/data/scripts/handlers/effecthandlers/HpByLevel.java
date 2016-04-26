@@ -61,7 +61,7 @@ public final class HpByLevel extends AbstractEffect
 		
 		// Calculation
 		final double abs = _power;
-		final double absorb = ((info.getEffector().getCurrentHp() + abs) > info.getEffector().getMaxHp() ? info.getEffector().getMaxHp() : (info.getEffector().getCurrentHp() + abs));
+		final double absorb = (info.getEffector().getCurrentHp() + abs) > info.getEffector().getMaxHp() ? info.getEffector().getMaxHp() : (info.getEffector().getCurrentHp() + abs);
 		final int restored = (int) (absorb - info.getEffector().getCurrentHp());
 		info.getEffector().setCurrentHp(absorb);
 		// System message

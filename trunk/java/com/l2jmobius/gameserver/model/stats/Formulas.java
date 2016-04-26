@@ -236,7 +236,7 @@ public final class Formulas
 	 * @param cha
 	 * @return
 	 */
-	public static final double calcHpRegen(L2Character cha)
+	public static double calcHpRegen(L2Character cha)
 	{
 		double init = cha.isPlayer() ? cha.getActingPlayer().getTemplate().getBaseHpRegen(cha.getLevel()) : cha.getTemplate().getBaseHpReg();
 		double hpRegenMultiplier = cha.isRaid() ? Config.RAID_HP_REGEN_MULTIPLIER : Config.HP_REGEN_MULTIPLIER;
@@ -339,7 +339,7 @@ public final class Formulas
 	 * @param cha
 	 * @return
 	 */
-	public static final double calcMpRegen(L2Character cha)
+	public static double calcMpRegen(L2Character cha)
 	{
 		double init = cha.isPlayer() ? cha.getActingPlayer().getTemplate().getBaseMpRegen(cha.getLevel()) : cha.getTemplate().getBaseMpReg();
 		double mpRegenMultiplier = cha.isRaid() ? Config.RAID_MP_REGEN_MULTIPLIER : Config.MP_REGEN_MULTIPLIER;
@@ -431,7 +431,7 @@ public final class Formulas
 	 * @param player the player
 	 * @return the CP regeneration rate
 	 */
-	public static final double calcCpRegen(L2PcInstance player)
+	public static double calcCpRegen(L2PcInstance player)
 	{
 		double cpRegenMultiplier = Config.CP_REGEN_MULTIPLIER;
 		// With CON bonus
@@ -453,7 +453,7 @@ public final class Formulas
 		return player.calcStat(Stats.REGENERATE_CP_RATE, Math.max(1, init), null, null) * cpRegenMultiplier;
 	}
 	
-	public static final double calcSiegeRegenModifier(L2PcInstance activeChar)
+	public static double calcSiegeRegenModifier(L2PcInstance activeChar)
 	{
 		if ((activeChar == null) || (activeChar.getClan() == null))
 		{
@@ -502,12 +502,12 @@ public final class Formulas
 		}
 		
 		// Initial damage
-		final double baseMod = ((77 * (power + (attacker.getPAtk(target) * ssboost))) / defence);
+		final double baseMod = (77 * (power + (attacker.getPAtk(target) * ssboost))) / defence;
 		// Critical
-		final double criticalMod = (attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill));
+		final double criticalMod = attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill);
 		final double criticalModPos = 1 + ((attacker.calcStat(Stats.CRITICAL_DAMAGE_POS, 1, target, skill) - 1) / 2);
-		final double criticalVulnMod = (target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, skill));
-		final double criticalAddMod = ((attacker.getStat().calcStat(Stats.CRITICAL_DAMAGE_ADD, 0) * 6.1 * 77) / defence);
+		final double criticalVulnMod = target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, skill);
+		final double criticalAddMod = (attacker.getStat().calcStat(Stats.CRITICAL_DAMAGE_ADD, 0) * 6.1 * 77) / defence;
 		final double criticalAddVuln = target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
 		// Trait, elements
 		final double weaponTraitMod = calcWeaponTraitBonus(attacker, target);
@@ -596,10 +596,10 @@ public final class Formulas
 		// Initial damage
 		final double baseMod = ((77 * (skill.getPower(isPvP, isPvE) + attacker.getPAtk(target))) / defence) * ssboost;
 		// Critical
-		final double criticalMod = (attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill));
+		final double criticalMod = attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill);
 		final double criticalModPos = 1 + ((attacker.calcStat(Stats.CRITICAL_DAMAGE_POS, 1, target, skill) - 1) / 2);
-		final double criticalVulnMod = (target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, skill));
-		final double criticalAddMod = ((attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 6.1 * 77) / defence);
+		final double criticalVulnMod = target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, skill);
+		final double criticalAddMod = (attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 6.1 * 77) / defence;
 		final double criticalAddVuln = target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
 		// Trait, elements
 		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
@@ -660,7 +660,7 @@ public final class Formulas
 	 * @param ss if weapon item was charged by soulshot
 	 * @return
 	 */
-	public static final double calcPhysDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean crit, boolean ss)
+	public static double calcPhysDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean crit, boolean ss)
 	{
 		final boolean isPvP = attacker.isPlayable() && target.isPlayable();
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
@@ -696,15 +696,15 @@ public final class Formulas
 		if (attacker.isPlayer())
 		{
 			double rubyBonus = 0;
-			if ((attacker.getInventory().getItemByItemId(38859) != null) && (attacker.getInventory().getItemByItemId(38859).isEquipped()))
+			if ((attacker.getInventory().getItemByItemId(38859) != null) && attacker.getInventory().getItemByItemId(38859).isEquipped())
 			{
 				rubyBonus = 0.2;
 			}
-			else if ((attacker.getInventory().getItemByItemId(38858) != null) && (attacker.getInventory().getItemByItemId(38858).isEquipped()))
+			else if ((attacker.getInventory().getItemByItemId(38858) != null) && attacker.getInventory().getItemByItemId(38858).isEquipped())
 			{
 				rubyBonus = 0.125;
 			}
-			else if ((attacker.getInventory().getItemByItemId(38857) != null) && (attacker.getInventory().getItemByItemId(38857).isEquipped()))
+			else if ((attacker.getInventory().getItemByItemId(38857) != null) && attacker.getInventory().getItemByItemId(38857).isEquipped())
 			{
 				rubyBonus = 0.075;
 			}
@@ -730,7 +730,7 @@ public final class Formulas
 			// Retail like formula.
 			damage = 2 * attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill) * attacker.calcStat(Stats.CRITICAL_DAMAGE_POS, 1, target, skill) * target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, null) * ((76 * damage * proximityBonus) / (defence * reduceDef));
 			// Crit dmg add is almost useless in normal hits.
-			damage += ((attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 77) / (defence * reduceDef));
+			damage += (attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 77) / (defence * reduceDef);
 			damage += target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
 		}
 		else
@@ -763,13 +763,13 @@ public final class Formulas
 		// Dmg bonuses in PvP fight
 		if (isPvP)
 		{
-			if (skill == null)
+			if (skill != null)
 			{
-				damage *= attacker.calcStat(Stats.PVP_PHYSICAL_DMG, 1, null, null);
+				damage *= attacker.calcStat(Stats.PVP_PHYS_SKILL_DMG, 1, null, null);
 			}
 			else
 			{
-				damage *= attacker.calcStat(Stats.PVP_PHYS_SKILL_DMG, 1, null, null);
+				damage *= attacker.calcStat(Stats.PVP_PHYSICAL_DMG, 1, null, null);
 			}
 		}
 		
@@ -823,16 +823,13 @@ public final class Formulas
 						damage *= Config.NPC_CRIT_DMG_PENALTY.get(lvlDiff);
 					}
 				}
+				else if (lvlDiff >= Config.NPC_DMG_PENALTY.size())
+				{
+					damage *= Config.NPC_DMG_PENALTY.get(Config.NPC_DMG_PENALTY.size() - 1);
+				}
 				else
 				{
-					if (lvlDiff >= Config.NPC_DMG_PENALTY.size())
-					{
-						damage *= Config.NPC_DMG_PENALTY.get(Config.NPC_DMG_PENALTY.size() - 1);
-					}
-					else
-					{
-						damage *= Config.NPC_DMG_PENALTY.get(lvlDiff);
-					}
+					damage *= Config.NPC_DMG_PENALTY.get(lvlDiff);
 				}
 			}
 		}
@@ -846,7 +843,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static final double calcMagicDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean sps, boolean bss, boolean mcrit)
+	public static double calcMagicDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean sps, boolean bss, boolean mcrit)
 	{
 		double mDef = target.getMDef(attacker, skill);
 		switch (shld)
@@ -884,15 +881,15 @@ public final class Formulas
 		{
 			double sapphireBonus = 0;
 			double ssEnchBonus = 0;
-			if ((attacker.getInventory().getItemByItemId(38931) != null) && (attacker.getInventory().getItemByItemId(38931).isEquipped()))
+			if ((attacker.getInventory().getItemByItemId(38931) != null) && attacker.getInventory().getItemByItemId(38931).isEquipped())
 			{
 				sapphireBonus = 0.2;
 			}
-			else if ((attacker.getInventory().getItemByItemId(38930) != null) && (attacker.getInventory().getItemByItemId(38930).isEquipped()))
+			else if ((attacker.getInventory().getItemByItemId(38930) != null) && attacker.getInventory().getItemByItemId(38930).isEquipped())
 			{
 				sapphireBonus = 0.125;
 			}
-			else if ((attacker.getInventory().getItemByItemId(38929) != null) && (attacker.getInventory().getItemByItemId(38929).isEquipped()))
+			else if ((attacker.getInventory().getItemByItemId(38929) != null) && attacker.getInventory().getItemByItemId(38929).isEquipped())
 			{
 				sapphireBonus = 0.075;
 			}
@@ -942,7 +939,7 @@ public final class Formulas
 			
 			if (target.isPlayer())
 			{
-				final SystemMessage sm = (skill.hasEffectType(L2EffectType.HP_DRAIN)) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
+				final SystemMessage sm = skill.hasEffectType(L2EffectType.HP_DRAIN) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
 				sm.addCharName(attacker);
 				target.sendPacket(sm);
 			}
@@ -959,7 +956,7 @@ public final class Formulas
 		// PvP bonuses for damage
 		if (isPvP)
 		{
-			damage *= attacker.calcStat((skill.isMagic() ? Stats.PVP_MAGICAL_DMG : Stats.PVP_PHYS_SKILL_DMG), 1, null, null);
+			damage *= attacker.calcStat(skill.isMagic() ? Stats.PVP_MAGICAL_DMG : Stats.PVP_PHYS_SKILL_DMG, 1, null, null);
 		}
 		
 		damage *= calcAttributeBonus(attacker, target, skill);
@@ -990,7 +987,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static final double calcMagicDam(L2CubicInstance attacker, L2Character target, Skill skill, boolean mcrit, byte shld)
+	public static double calcMagicDam(L2CubicInstance attacker, L2Character target, Skill skill, boolean mcrit, byte shld)
 	{
 		double mDef = target.getMDef(attacker.getOwner(), skill);
 		switch (shld)
@@ -1071,7 +1068,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static final boolean calcCrit(L2Character attacker, L2Character target)
+	public static boolean calcCrit(L2Character attacker, L2Character target)
 	{
 		return calcCrit(attacker, target, null);
 	}
@@ -1083,7 +1080,7 @@ public final class Formulas
 	 * @param skill
 	 * @return
 	 */
-	public static final boolean calcCrit(L2Character attacker, L2Character target, Skill skill)
+	public static boolean calcCrit(L2Character attacker, L2Character target, Skill skill)
 	{
 		double rate = 0.d;
 		if (skill != null)
@@ -1097,7 +1094,7 @@ public final class Formulas
 		return (target.getStat().calcStat(Stats.DEFENCE_CRITICAL_RATE, rate, null, null) + target.getStat().calcStat(Stats.DEFENCE_CRITICAL_RATE_ADD, 0, null, null)) > Rnd.get(1000);
 	}
 	
-	public static final boolean calcMCrit(double mRate)
+	public static boolean calcMCrit(double mRate)
 	{
 		return mRate > Rnd.get(1000);
 	}
@@ -1107,7 +1104,7 @@ public final class Formulas
 	 * @param dmg
 	 * @return true in case when ATTACK is canceled due to hit
 	 */
-	public static final boolean calcAtkBreak(L2Character target, double dmg)
+	public static boolean calcAtkBreak(L2Character target, double dmg)
 	{
 		if (target.isChanneling())
 		{
@@ -1134,7 +1131,7 @@ public final class Formulas
 		init += Math.sqrt(13 * dmg);
 		
 		// Chance is affected by target MEN
-		init -= ((BaseStats.MEN.calcBonus(target) * 100) - 100);
+		init -= (BaseStats.MEN.calcBonus(target) * 100) - 100;
 		
 		// Calculate all modifiers for ATTACK_CANCEL
 		double rate = target.calcStat(Stats.ATTACK_CANCEL, init, null, null);
@@ -1152,7 +1149,7 @@ public final class Formulas
 	 * @param rate
 	 * @return
 	 */
-	public static final int calcPAtkSpd(L2Character attacker, L2Character target, double rate)
+	public static int calcPAtkSpd(L2Character attacker, L2Character target, double rate)
 	{
 		return rate < 2 ? 2700 : (int) (470000 / rate);
 	}
@@ -1164,7 +1161,7 @@ public final class Formulas
 	 * @param skillTime
 	 * @return
 	 */
-	public static final int calcAtkSpd(L2Character attacker, Skill skill, double skillTime)
+	public static int calcAtkSpd(L2Character attacker, Skill skill, double skillTime)
 	{
 		return skill.isMagic() ? (int) ((skillTime / attacker.getMAtkSpd()) * 333) : (int) ((skillTime / attacker.getPAtkSpd()) * 300);
 	}
@@ -1219,7 +1216,7 @@ public final class Formulas
 		}
 		
 		final int degreeside = (int) target.calcStat(Stats.SHIELD_DEFENCE_ANGLE, 0, null, null) + 120;
-		if ((degreeside < 360) && (!target.isFacing(attacker, degreeside)))
+		if ((degreeside < 360) && !target.isFacing(attacker, degreeside))
 		{
 			return 0;
 		}
@@ -1361,7 +1358,7 @@ public final class Formulas
 			}
 		}
 		
-		final double baseMod = ((((((magicLevel - target.getLevel()) + 3) * skill.getLvlBonusRate()) + activateRate) + 30.0) - targetBaseStat);
+		final double baseMod = (((((magicLevel - target.getLevel()) + 3) * skill.getLvlBonusRate()) + activateRate) + 30.0) - targetBaseStat;
 		final double elementMod = calcAttributeBonus(attacker, target, skill);
 		final double traitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
 		final double buffDebuffMod = 1 + (target.calcStat(skill.isDebuff() ? Stats.DEBUFF_VULN : Stats.BUFF_VULN, 1, null, null) / 100);
@@ -1429,7 +1426,7 @@ public final class Formulas
 		// Calculate BaseRate.
 		final double baseRate = skill.getPower();
 		final double statMod = skill.getBasicProperty().calcBonus(target);
-		double rate = (baseRate / statMod);
+		double rate = baseRate / statMod;
 		
 		// Resist Modifier.
 		final double resMod = calcGeneralTraitBonus(attacker.getOwner(), target, skill.getTraitType(), false);
@@ -1461,7 +1458,7 @@ public final class Formulas
 			Debug.sendSkillDebug(attacker.getOwner(), target, skill, set);
 		}
 		
-		return (Rnd.get(100) < finalRate);
+		return Rnd.get(100) < finalRate;
 	}
 	
 	public static boolean calcMagicSuccess(L2Character attacker, L2Character target, Skill skill)
@@ -1472,7 +1469,7 @@ public final class Formulas
 		}
 		
 		// FIXME: Fix this LevelMod Formula.
-		final int lvlDifference = (target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel()));
+		final int lvlDifference = target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel());
 		final double lvlModifier = Math.pow(1.3, lvlDifference);
 		float targetModifier = 1;
 		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3))
@@ -1502,7 +1499,7 @@ public final class Formulas
 			Debug.sendSkillDebug(attacker, target, skill, set);
 		}
 		
-		return (Rnd.get(100) < rate);
+		return Rnd.get(100) < rate;
 	}
 	
 	public static double calcManaDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean sps, boolean bss, boolean mcrit)
@@ -1532,15 +1529,15 @@ public final class Formulas
 		{
 			double sapphireBonus = 0;
 			double ssEnchBonus = 0;
-			if ((attacker.getInventory().getItemByItemId(38931) != null) && (attacker.getInventory().getItemByItemId(38931).isEquipped()))
+			if ((attacker.getInventory().getItemByItemId(38931) != null) && attacker.getInventory().getItemByItemId(38931).isEquipped())
 			{
 				sapphireBonus = 0.2;
 			}
-			else if ((attacker.getInventory().getItemByItemId(38930) != null) && (attacker.getInventory().getItemByItemId(38930).isEquipped()))
+			else if ((attacker.getInventory().getItemByItemId(38930) != null) && attacker.getInventory().getItemByItemId(38930).isEquipped())
 			{
 				sapphireBonus = 0.125;
 			}
-			else if ((attacker.getInventory().getItemByItemId(38929) != null) && (attacker.getInventory().getItemByItemId(38929).isEquipped()))
+			else if ((attacker.getInventory().getItemByItemId(38929) != null) && attacker.getInventory().getItemByItemId(38929).isEquipped())
 			{
 				sapphireBonus = 0.075;
 			}
@@ -1666,17 +1663,17 @@ public final class Formulas
 		{
 			case 1:
 			{
-				initVal = (BaseStats.STR).calcBonus(actor);
+				initVal = BaseStats.STR.calcBonus(actor);
 				break;
 			}
 			case 4:
 			{
-				initVal = (BaseStats.INT).calcBonus(actor);
+				initVal = BaseStats.INT.calcBonus(actor);
 				break;
 			}
 		}
 		initVal *= actor.getStat().calcStat(Stats.SKILL_CRITICAL_PROBABILITY, 1, null, null);
-		return (Rnd.get(100) < initVal);
+		return Rnd.get(100) < initVal;
 	}
 	
 	/**
@@ -1784,23 +1781,20 @@ public final class Formulas
 				defence_attribute_mod = 0.55;
 			}
 		}
+		else if (defence_attribute >= 450)
+		{
+			attack_attribute_mod = 0.06909;
+			defence_attribute_mod = 0.078;
+		}
+		else if (defence_attribute >= 350)
+		{
+			attack_attribute_mod = 0.0887;
+			defence_attribute_mod = 0.1007;
+		}
 		else
 		{
-			if (defence_attribute >= 450)
-			{
-				attack_attribute_mod = 0.06909;
-				defence_attribute_mod = 0.078;
-			}
-			else if (defence_attribute >= 350)
-			{
-				attack_attribute_mod = 0.0887;
-				defence_attribute_mod = 0.1007;
-			}
-			else
-			{
-				attack_attribute_mod = 0.129;
-				defence_attribute_mod = 0.1473;
-			}
+			attack_attribute_mod = 0.129;
+			defence_attribute_mod = 0.1473;
 		}
 		
 		final int attribute_diff = attack_attribute - defence_attribute;
@@ -1842,7 +1836,7 @@ public final class Formulas
 		
 		defence_attribute_mod = (defence_attribute / 169.0) * defence_attribute_mod;
 		
-		final double attribute_mod_diff = Util.constrain((attack_attribute_mod - defence_attribute_mod), min, max);
+		final double attribute_mod_diff = Util.constrain(attack_attribute_mod - defence_attribute_mod, min, max);
 		
 		double result = (attribute_mod_diff / 100.0) + 1;
 		
@@ -1877,7 +1871,7 @@ public final class Formulas
 				attacker.sendPacket(sm);
 			}
 			
-			double counterdmg = (((target.getPAtk(attacker) * 10.0) * 70.0) / attacker.getPDef(target));
+			double counterdmg = (target.getPAtk(attacker) * 10.0 * 70.0) / attacker.getPDef(target);
 			counterdmg *= calcWeaponTraitBonus(attacker, target);
 			counterdmg *= calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
 			counterdmg *= calcAttributeBonus(attacker, target, skill);
@@ -1926,7 +1920,7 @@ public final class Formulas
 		// Apply DEX Mod.
 		final double blowChance = skill.getBlowChance();
 		// Apply Position Bonus (TODO: values are unconfirmed, possibly custom, remove or update when confirmed).
-		final double sideMod = (activeChar.isInFrontOfTarget()) ? 1 : (activeChar.isBehindTarget()) ? 2 : 1.5;
+		final double sideMod = activeChar.isInFrontOfTarget() ? 1 : activeChar.isBehindTarget() ? 2 : 1.5;
 		// Apply all mods.
 		final double baseRate = blowChance * dexMod * sideMod;
 		// Apply blow rates
@@ -1983,7 +1977,7 @@ public final class Formulas
 				for (int i = buffs.size() - 1; i >= 0; i--) // reverse order
 				{
 					final BuffInfo info = buffs.get(i);
-					if (!info.getSkill().canBeStolen() || (!calcCancelSuccess(info, cancelMagicLvl, (int) finalRate, skill)))
+					if (!info.getSkill().canBeStolen() || !calcCancelSuccess(info, cancelMagicLvl, (int) finalRate, skill))
 					{
 						continue;
 					}
@@ -2055,7 +2049,7 @@ public final class Formulas
 			final double resMod = calcGeneralTraitBonus(caster, target, skill.getTraitType(), false);
 			final double lvlBonusMod = calcLvlBonusMod(caster, target, skill);
 			final double elementMod = calcAttributeBonus(caster, target, skill);
-			time = (int) Math.ceil(Util.constrain(((time * resMod * lvlBonusMod * elementMod) / statMod), (time * 0.5), time));
+			time = (int) Math.ceil(Util.constrain((time * resMod * lvlBonusMod * elementMod) / statMod, time * 0.5, time));
 		}
 		return time;
 	}
@@ -2080,7 +2074,7 @@ public final class Formulas
 	 */
 	public static boolean calcProbability(double baseChance, L2Character attacker, L2Character target, Skill skill)
 	{
-		return Rnd.get(100) < ((((((skill.getMagicLevel() + baseChance) - target.getLevel()) + 30) - target.getINT()) * calcAttributeBonus(attacker, target, skill)) * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
+		return Rnd.get(100) < (((((skill.getMagicLevel() + baseChance) - target.getLevel()) + 30) - target.getINT()) * calcAttributeBonus(attacker, target, skill) * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
 	}
 	
 	/**
@@ -2117,7 +2111,7 @@ public final class Formulas
 		
 		if (target.isSummon())
 		{
-			result = (int) ((((pkCount * 0.375) + 1) * 60) * 4) - 150;
+			result = (int) (((pkCount * 0.375) + 1) * 60 * 4) - 150;
 			
 			if (result > 10800)
 			{
@@ -2127,11 +2121,11 @@ public final class Formulas
 		
 		if (pkCount < 99)
 		{
-			result = (int) ((((pkCount * 0.5) + 1) * 60) * 12);
+			result = (int) (((pkCount * 0.5) + 1) * 60 * 12);
 		}
 		else if (pkCount < 180)
 		{
-			result = (int) ((((pkCount * 0.125) + 37.75) * 60) * 12);
+			result = (int) (((pkCount * 0.125) + 37.75) * 60 * 12);
 		}
 		
 		return result;
@@ -2173,7 +2167,7 @@ public final class Formulas
 			}
 		}
 		
-		return Util.constrain(((attacker.getStat().getAttackTrait(traitType) - target.getStat().getDefenceTrait(traitType)) + 1.0), 0.05, 2.0);
+		return Util.constrain((attacker.getStat().getAttackTrait(traitType) - target.getStat().getDefenceTrait(traitType)) + 1.0, 0.05, 2.0);
 	}
 	
 	public static double calcWeaponTraitBonus(L2Character attacker, L2Character target)
@@ -2202,6 +2196,6 @@ public final class Formulas
 			}
 		}
 		
-		return Util.constrain((weaponTraitBonus * weaknessBonus), 0.05, 2.0);
+		return Util.constrain(weaponTraitBonus * weaknessBonus, 0.05, 2.0);
 	}
 }

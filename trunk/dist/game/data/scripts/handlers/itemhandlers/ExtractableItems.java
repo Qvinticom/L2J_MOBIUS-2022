@@ -199,25 +199,24 @@ public class ExtractableItems implements IItemHandler
 	
 	private void sendMessage(L2PcInstance player, L2ItemInstance item)
 	{
+		final SystemMessage sm;
 		if (item.getCount() > 1)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 			sm.addItemName(item);
 			sm.addLong(item.getCount());
-			player.sendPacket(sm);
 		}
 		else if (item.getEnchantLevel() > 0)
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
 			sm.addInt(item.getEnchantLevel());
 			sm.addItemName(item);
-			player.sendPacket(sm);
 		}
 		else
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
 			sm.addItemName(item);
-			player.sendPacket(sm);
 		}
+		player.sendPacket(sm);
 	}
 }

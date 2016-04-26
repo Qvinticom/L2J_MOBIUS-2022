@@ -153,7 +153,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 		}
 		else if (qs.isStarted())
 		{
-			htmltext = (hasAtLeastOneQuestItem(player, DINOSAUR_TISSUE, DINOSAUR_EGG)) ? "32105-08.html" : "32105-07.html";
+			htmltext = hasAtLeastOneQuestItem(player, DINOSAUR_TISSUE, DINOSAUR_EGG) ? "32105-08.html" : "32105-07.html";
 		}
 		return htmltext;
 	}

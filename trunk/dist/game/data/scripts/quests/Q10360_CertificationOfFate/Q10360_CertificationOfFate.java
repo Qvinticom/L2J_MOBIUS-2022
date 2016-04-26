@@ -808,7 +808,7 @@ public class Q10360_CertificationOfFate extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isStarted() && (qs.getCond() > 1) && (qs.getCond() < 7) && (Util.checkIfInRange(1500, npc, qs.getPlayer(), false)))
+		if ((qs != null) && qs.isStarted() && (qs.getCond() > 1) && (qs.getCond() < 7) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
 			switch (npc.getId())
 			{

@@ -216,12 +216,9 @@ public class L2Attackable extends L2Npc
 					return;
 				}
 			}
-			else
+			else if (isPhysicalMuted())
 			{
-				if (isPhysicalMuted())
-				{
-					return;
-				}
+				return;
 			}
 		}
 		
@@ -346,7 +343,7 @@ public class L2Attackable extends L2Npc
 			final int hpRestore = (int) killer.getStat().calcStat(Stats.HP_RESTORE_ON_KILL, 0, null, null);
 			if (hpRestore > 0)
 			{
-				final double amount = Math.max(Math.min(((killer.getMaxHp() * hpRestore) / 100), killer.getMaxRecoverableHp() - killer.getCurrentHp()), 0);
+				final double amount = Math.max(Math.min((killer.getMaxHp() * hpRestore) / 100, killer.getMaxRecoverableHp() - killer.getCurrentHp()), 0);
 				if (amount != 0)
 				{
 					killer.setCurrentHp(amount + killer.getCurrentHp());
@@ -360,7 +357,7 @@ public class L2Attackable extends L2Npc
 			final L2MonsterInstance mob = (L2MonsterInstance) this;
 			if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
 			{
-				mob.getLeader().getMinionList().onMinionDie(mob, (Config.MINIONS_RESPAWN_TIME.containsKey(getId()) ? Config.MINIONS_RESPAWN_TIME.get(getId()) * 1000 : -1));
+				mob.getLeader().getMinionList().onMinionDie(mob, Config.MINIONS_RESPAWN_TIME.containsKey(getId()) ? Config.MINIONS_RESPAWN_TIME.get(getId()) * 1000 : -1);
 			}
 			
 			if (mob.hasMinions())
@@ -528,7 +525,7 @@ public class L2Attackable extends L2Npc
 								if (addexp > 0)
 								{
 									attacker.updateVitalityPoints(getVitalityPoints(damage), true, false);
-									PcCafePointsManager.getInstance().givePcCafePoint((attacker), addexp);
+									PcCafePointsManager.getInstance().givePcCafePoint(attacker, addexp);
 								}
 							}
 						}
@@ -569,17 +566,12 @@ public class L2Attackable extends L2Npc
 								}
 								rewards.remove(partyPlayer); // Remove the L2PcInstance from the L2Attackable rewards
 							}
-							else
+							else if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true))
 							{
-								// Add L2PcInstance of the party (that have attacked or not) to members that can be rewarded
-								// and in range of the monster.
-								if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true))
+								rewardedMembers.add(partyPlayer);
+								if (partyPlayer.getLevel() > partyLvl)
 								{
-									rewardedMembers.add(partyPlayer);
-									if (partyPlayer.getLevel() > partyLvl)
-									{
-										partyLvl = attackerParty.isInCommandChannel() ? attackerParty.getCommandChannel().getLevel() : partyPlayer.getLevel();
-									}
+									partyLvl = attackerParty.isInCommandChannel() ? attackerParty.getCommandChannel().getLevel() : partyPlayer.getLevel();
 								}
 							}
 						}
@@ -587,7 +579,7 @@ public class L2Attackable extends L2Npc
 						// If the party didn't killed this L2Attackable alone
 						if (partyDmg < totalDamage)
 						{
-							partyMul = ((float) partyDmg / totalDamage);
+							partyMul = (float) partyDmg / totalDamage;
 						}
 						
 						// Calculate the level difference between Party and L2Attackable
@@ -1292,13 +1284,13 @@ public class L2Attackable extends L2Npc
 		final AbsorberInfo ai = _absorbersList.get(attacker.getObjectId());
 		
 		// If the L2Character attacker isn't already in the _absorbersList of this L2Attackable, add it
-		if (ai == null)
+		if (ai != null)
 		{
-			_absorbersList.put(attacker.getObjectId(), new AbsorberInfo(attacker.getObjectId(), getCurrentHp()));
+			ai.setAbsorbedHp(getCurrentHp());
 		}
 		else
 		{
-			ai.setAbsorbedHp(getCurrentHp());
+			_absorbersList.put(attacker.getObjectId(), new AbsorberInfo(attacker.getObjectId(), getCurrentHp()));
 		}
 		
 		// Set this L2Attackable as absorbed
@@ -1375,7 +1367,7 @@ public class L2Attackable extends L2Npc
 	public long calculateOverhitExp(long normalExp)
 	{
 		// Get the percentage based on the total of extra (over-hit) damage done relative to the total (maximum) ammount of HP on the L2Attackable
-		double overhitPercentage = ((getOverhitDamage() * 100) / getMaxHp());
+		double overhitPercentage = (getOverhitDamage() * 100) / getMaxHp();
 		
 		// Over-hit damage percentages are limited to 25% max
 		if (overhitPercentage > 25)
@@ -1383,7 +1375,7 @@ public class L2Attackable extends L2Npc
 			overhitPercentage = 25;
 		}
 		
-		return Math.round(((overhitPercentage / 100) * normalExp));
+		return Math.round((overhitPercentage / 100) * normalExp);
 	}
 	
 	/**
@@ -1557,7 +1549,7 @@ public class L2Attackable extends L2Npc
 	@Override
 	public boolean hasRandomAnimation()
 	{
-		return ((Config.MAX_MONSTER_ANIMATION > 0) && isRandomAnimationEnabled() && !(this instanceof L2GrandBossInstance));
+		return (Config.MAX_MONSTER_ANIMATION > 0) && isRandomAnimationEnabled() && !(this instanceof L2GrandBossInstance);
 	}
 	
 	@Override
@@ -1634,7 +1626,7 @@ public class L2Attackable extends L2Npc
 	 */
 	public boolean useVitalityRate()
 	{
-		return (!isChampion() || Config.L2JMOD_CHAMPION_ENABLE_VITALITY);
+		return !isChampion() || Config.L2JMOD_CHAMPION_ENABLE_VITALITY;
 	}
 	
 	/** Return True if the L2Character is RaidBoss or his minion. */

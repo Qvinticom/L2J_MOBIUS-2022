@@ -158,13 +158,13 @@ public class L2VillageMasterInstance extends L2NpcInstance
 				return;
 			}
 			
-			if (player.getClan() == null)
+			if (player.getClan() != null)
 			{
-				player.sendPacket(SystemMessageId.ONLY_CLAN_LEADERS_MAY_CREATE_ALLIANCES);
+				player.getClan().createAlly(player, cmdParams);
 			}
 			else
 			{
-				player.getClan().createAlly(player, cmdParams);
+				player.sendPacket(SystemMessageId.ONLY_CLAN_LEADERS_MAY_CREATE_ALLIANCES);
 			}
 		}
 		else if (actualCommand.equalsIgnoreCase("dissolve_ally"))
@@ -309,7 +309,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		return checkVillageMasterRace(pclass) && checkVillageMasterTeachType(pclass);
 	}
 	
-	private static final void dissolveClan(L2PcInstance player, int clanId)
+	private static void dissolveClan(L2PcInstance player, int clanId)
 	{
 		if (!player.isClanLeader())
 		{
@@ -370,7 +370,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		ClanTable.getInstance().scheduleRemoveClan(clan.getId());
 	}
 	
-	private static final void recoverClan(L2PcInstance player, int clanId)
+	private static void recoverClan(L2PcInstance player, int clanId)
 	{
 		if (!player.isClanLeader())
 		{
@@ -383,7 +383,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		clan.updateClanInDB();
 	}
 	
-	private static final void createSubPledge(L2PcInstance player, String clanName, String leaderName, int pledgeType, int minClanLvl)
+	private static void createSubPledge(L2PcInstance player, String clanName, String leaderName, int pledgeType, int minClanLvl)
 	{
 		if (!player.isClanLeader())
 		{
@@ -493,7 +493,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		}
 	}
 	
-	private static final void renameSubPledge(L2PcInstance player, int pledgeType, String pledgeName)
+	private static void renameSubPledge(L2PcInstance player, int pledgeType, String pledgeName)
 	{
 		if (!player.isClanLeader())
 		{
@@ -526,7 +526,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		player.sendMessage("Pledge name changed.");
 	}
 	
-	private static final void assignSubPledgeLeader(L2PcInstance player, String clanName, String leaderName)
+	private static void assignSubPledgeLeader(L2PcInstance player, String clanName, String leaderName)
 	{
 		if (!player.isClanLeader())
 		{
@@ -588,7 +588,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 	 * this displays PledgeSkillList to the player.
 	 * @param player
 	 */
-	public static final void showPledgeSkillList(L2PcInstance player)
+	public static void showPledgeSkillList(L2PcInstance player)
 	{
 		if (!player.isClanLeader())
 		{

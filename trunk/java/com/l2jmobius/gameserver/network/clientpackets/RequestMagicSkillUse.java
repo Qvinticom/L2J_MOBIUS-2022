@@ -119,7 +119,7 @@ public final class RequestMagicSkillUse extends L2GameClientPacket
 		}
 		
 		// Stop if use self-buff (except if on AirShip or Boat).
-		if ((skill.isContinuous() && !skill.isDebuff() && (skill.getTargetType() == L2TargetType.SELF)) && (!activeChar.isInAirShip() || !activeChar.isInBoat()))
+		if (skill.isContinuous() && !skill.isDebuff() && (skill.getTargetType() == L2TargetType.SELF) && (!activeChar.isInAirShip() || !activeChar.isInBoat()))
 		{
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, activeChar.getLocation());
 		}

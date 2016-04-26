@@ -438,7 +438,7 @@ public final class Q00420_LittleWing extends Quest
 			{
 				if (npc.getId() == COOPER)
 				{
-					htmltext = ((talker.getLevel() >= MIN_LVL) ? "30829-01.htm" : "30829-03.html");
+					htmltext = (talker.getLevel() >= MIN_LVL) ? "30829-01.htm" : "30829-03.html";
 				}
 				break;
 			}

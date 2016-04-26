@@ -137,7 +137,7 @@ public enum SkillOperateType
 	 */
 	public boolean isSelfContinuous()
 	{
-		return (this == ACTIVE_WITH_TRIGGER);
+		return this == ACTIVE_WITH_TRIGGER;
 	}
 	
 	/**
@@ -146,7 +146,7 @@ public enum SkillOperateType
 	 */
 	public boolean isPassive()
 	{
-		return (this == PASSIVE);
+		return this == PASSIVE;
 	}
 	
 	/**
@@ -155,7 +155,7 @@ public enum SkillOperateType
 	 */
 	public boolean isToggle()
 	{
-		return (this == TOGGLE);
+		return this == TOGGLE;
 	}
 	
 	/**

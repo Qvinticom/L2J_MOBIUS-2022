@@ -94,7 +94,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		}
 	}
 	
-	protected static final Participant[][] createListOfParticipants(List<List<Integer>> list)
+	protected static Participant[][] createListOfParticipants(List<List<Integer>> list)
 	{
 		if ((list == null) || list.isEmpty() || (list.size() < 2))
 		{
@@ -111,7 +111,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		{
 			teamOne = list.remove(Rnd.nextInt(list.size()));
 			
-			if (((teamOne == null) || teamOne.isEmpty()))
+			if ((teamOne == null) || teamOne.isEmpty())
 			{
 				continue;
 			}

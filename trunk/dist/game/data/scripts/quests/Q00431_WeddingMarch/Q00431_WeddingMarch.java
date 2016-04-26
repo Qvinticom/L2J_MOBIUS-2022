@@ -121,7 +121,7 @@ public class Q00431_WeddingMarch extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = (qs.isCond(1)) ? "31042-03.html" : "31042-04.html";
+				htmltext = qs.isCond(1) ? "31042-03.html" : "31042-04.html";
 				break;
 			}
 		}

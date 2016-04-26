@@ -166,19 +166,18 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		
 		if (itemToRemove.isEquipped())
 		{
+			final SystemMessage sm;
 			if (itemToRemove.getEnchantLevel() > 0)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(itemToRemove.getEnchantLevel());
-				sm.addItemName(itemToRemove);
-				activeChar.sendPacket(sm);
 			}
 			else
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
-				sm.addItemName(itemToRemove);
-				activeChar.sendPacket(sm);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 			}
+			sm.addItemName(itemToRemove);
+			activeChar.sendPacket(sm);
 			
 			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
 			

@@ -87,7 +87,7 @@ public final class DispelBySlot extends AbstractEffect
 		for (Entry<AbnormalType, Short> entry : _dispelAbnormals.entrySet())
 		{
 			// Dispel transformations (buff and by GM)
-			if ((entry.getKey() == AbnormalType.TRANSFORM) && (effected.isTransformed() || (effected.isPlayer() || (entry.getValue() == effected.getActingPlayer().getTransformationId()) || (entry.getValue() < 0))))
+			if ((entry.getKey() == AbnormalType.TRANSFORM) && (effected.isTransformed() || effected.isPlayer() || (entry.getValue() == effected.getActingPlayer().getTransformationId()) || (entry.getValue() < 0)))
 			{
 				info.getEffected().stopTransformation(true);
 				continue;

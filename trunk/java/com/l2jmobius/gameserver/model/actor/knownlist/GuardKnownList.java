@@ -73,7 +73,7 @@ public class GuardKnownList extends AttackableKnownList
 				}
 			}
 		}
-		else if ((Config.GUARD_ATTACK_AGGRO_MOB && getActiveChar().isInActiveRegion()) && object.isMonster() && ((L2MonsterInstance) object).isAggressive())
+		else if (Config.GUARD_ATTACK_AGGRO_MOB && getActiveChar().isInActiveRegion() && object.isMonster() && ((L2MonsterInstance) object).isAggressive())
 		{
 			if (Config.DEBUG)
 			{

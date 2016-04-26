@@ -162,7 +162,7 @@ public final class NewCrypt
 		
 		while (pos < stop)
 		{
-			edx = (raw[pos] & 0xFF);
+			edx = raw[pos] & 0xFF;
 			edx |= (raw[pos + 1] & 0xFF) << 8;
 			edx |= (raw[pos + 2] & 0xFF) << 16;
 			edx |= (raw[pos + 3] & 0xFF) << 24;

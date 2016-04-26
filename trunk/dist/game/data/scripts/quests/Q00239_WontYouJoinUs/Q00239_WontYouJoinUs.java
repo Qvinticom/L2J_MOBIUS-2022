@@ -181,7 +181,7 @@ public class Q00239_WontYouJoinUs extends Quest
 				{
 					case 1:
 					{
-						htmltext = (hasQuestItems(player, DESTROYED_MACHINE_PIECE)) ? "32643-05.html" : "32643-04.html";
+						htmltext = hasQuestItems(player, DESTROYED_MACHINE_PIECE) ? "32643-05.html" : "32643-04.html";
 						break;
 					}
 					case 2:
@@ -195,7 +195,7 @@ public class Q00239_WontYouJoinUs extends Quest
 					}
 					case 3:
 					{
-						htmltext = (hasQuestItems(player, ENCHANTED_GOLEM_FRAGMENT)) ? "32643-08.html" : "32643-09.html";
+						htmltext = hasQuestItems(player, ENCHANTED_GOLEM_FRAGMENT) ? "32643-08.html" : "32643-09.html";
 						break;
 					}
 					case 4:

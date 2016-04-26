@@ -38,10 +38,11 @@ public class Premium implements IVoicedCommandHandler
 		{
 			final SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm");
 			final long endDate = PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName());
+			final NpcHtmlMessage msg = new NpcHtmlMessage(5);
+			final StringBuilder html = new StringBuilder();
 			if (endDate == 0)
 			{
-				final NpcHtmlMessage msg = new NpcHtmlMessage(5);
-				final StringBuilder html = new StringBuilder("<html><body><title>Account Details</title><center>");
+				html.append("<html><body><title>Account Details</title><center>");
 				html.append("<table>");
 				html.append("<tr><td><center>Account Status: <font color=\"LEVEL\">Normal<br></font></td></tr>");
 				html.append("<tr><td>Rate XP: <font color=\"LEVEL\"> x" + Config.RATE_XP + "<br1></font></td></tr>");
@@ -56,15 +57,10 @@ public class Premium implements IVoicedCommandHandler
 				html.append("<tr><td> <font color=\"70FFCA\">1. Premium benefits CAN NOT BE TRANSFERED.<br1></font></td></tr>");
 				html.append("<tr><td> <font color=\"70FFCA\">2. Premium does not effect party members.<br1></font></td></tr>");
 				html.append("<tr><td> <font color=\"70FFCA\">3. Premium benefits effect ALL characters in same account.</font></td></tr>");
-				html.append("</table>");
-				html.append("</center></body></html>");
-				msg.setHtml(html.toString());
-				activeChar.sendPacket(msg);
 			}
 			else
 			{
-				final NpcHtmlMessage msg = new NpcHtmlMessage(5);
-				final StringBuilder html = new StringBuilder("<html><body><title>Premium Account Details</title><center>");
+				html.append("<html><body><title>Premium Account Details</title><center>");
 				html.append("<table>");
 				html.append("<tr><td><center>Account Status: <font color=\"LEVEL\">Premium<br></font></td></tr>");
 				html.append("<tr><td>Rate XP: <font color=\"LEVEL\">x" + (Config.RATE_XP * Config.PREMIUM_RATE_XP) + " <br1></font></td></tr>");
@@ -78,11 +74,11 @@ public class Premium implements IVoicedCommandHandler
 				html.append("<tr><td><font color=\"70FFCA\">2. Premium does not effect party members.<br1></font></td></tr>");
 				html.append("<tr><td><font color=\"70FFCA\">3. Premium account effects ALL characters in same account.<br><br><br></font></td></tr>");
 				html.append("<tr><td><center>Thank you for supporting our server.</td></tr>");
-				html.append("</table>");
-				html.append("</center></body></html>");
-				msg.setHtml(html.toString());
-				activeChar.sendPacket(msg);
 			}
+			html.append("</table>");
+			html.append("</center></body></html>");
+			msg.setHtml(html.toString());
+			activeChar.sendPacket(msg);
 		}
 		else
 		{

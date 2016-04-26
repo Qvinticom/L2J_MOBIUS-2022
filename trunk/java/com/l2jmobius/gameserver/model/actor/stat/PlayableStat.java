@@ -167,7 +167,7 @@ public class PlayableStat extends CharStat
 			}
 		}
 		
-		final boolean levelIncreased = ((getLevel() + value) > getLevel());
+		final boolean levelIncreased = (getLevel() + value) > getLevel();
 		value += getLevel();
 		setLevel(value);
 		

@@ -60,7 +60,7 @@ public class ZoneCylinder extends L2ZoneForm
 	@Override
 	public double getDistanceToZone(int x, int y)
 	{
-		return (Math.sqrt((Math.pow(_x - x, 2) + Math.pow(_y - y, 2))) - _rad);
+		return Math.sqrt(Math.pow(_x - x, 2) + Math.pow(_y - y, 2)) - _rad;
 	}
 	
 	// getLowZ() / getHighZ() - These two functions were added to cope with the demand of the new fishing algorithms, wich are now able to correctly place the hook in the water, thanks to getHighZ(). getLowZ() was added, considering potential future modifications.

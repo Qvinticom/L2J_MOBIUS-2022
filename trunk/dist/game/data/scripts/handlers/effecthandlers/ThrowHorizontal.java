@@ -79,7 +79,7 @@ public final class ThrowHorizontal extends AbstractEffect
 		final int z = info.getEffected().getZ();
 		
 		// Prevent using skill with this effect on NPC that not monster
-		if (!(info.getEffected().isMonster() || info.getEffected().isRaidMinion() || info.getEffected().isMinion() || info.getEffected().isSummon() || info.getEffected().isPlayer()))
+		if (!info.getEffected().isMonster() && !info.getEffected().isRaidMinion() && !info.getEffected().isMinion() && !info.getEffected().isSummon() && !info.getEffected().isPlayer())
 		{
 			final L2PcInstance effector = (L2PcInstance) info.getEffector();
 			effector.sendPacket(SystemMessageId.INVALID_TARGET);

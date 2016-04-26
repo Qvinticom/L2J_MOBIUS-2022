@@ -116,13 +116,10 @@ public class SpringUtilities
 				lastRowCons = lastCons;
 				cons.setX(initialXSpring);
 			}
-			else
+			// x position depends on previous component
+			else if (lastCons != null)
 			{
-				// x position depends on previous component
-				if (lastCons != null)
-				{
-					cons.setX(Spring.sum(lastCons.getConstraint(SpringLayout.EAST), xPadSpring));
-				}
+				cons.setX(Spring.sum(lastCons.getConstraint(SpringLayout.EAST), xPadSpring));
 			}
 			
 			if ((i / cols) == 0)
@@ -130,13 +127,10 @@ public class SpringUtilities
 				// first row
 				cons.setY(initialYSpring);
 			}
-			else
+			// y position depends on previous row
+			else if (lastRowCons != null)
 			{
-				// y position depends on previous row
-				if (lastRowCons != null)
-				{
-					cons.setY(Spring.sum(lastRowCons.getConstraint(SpringLayout.SOUTH), yPadSpring));
-				}
+				cons.setY(Spring.sum(lastRowCons.getConstraint(SpringLayout.SOUTH), yPadSpring));
 			}
 			lastCons = cons;
 		}

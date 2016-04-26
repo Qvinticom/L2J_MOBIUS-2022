@@ -235,7 +235,7 @@ public class L2PetInstance extends L2Summon
 		}
 	}
 	
-	public synchronized static L2PetInstance spawnPet(L2NpcTemplate template, L2PcInstance owner, L2ItemInstance control)
+	public static synchronized L2PetInstance spawnPet(L2NpcTemplate template, L2PcInstance owner, L2ItemInstance control)
 	{
 		if (L2World.getInstance().getPet(owner.getObjectId()) != null)
 		{
@@ -556,13 +556,13 @@ public class L2PetInstance extends L2Summon
 		if (target.getItem().hasExImmediateEffect())
 		{
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
-			if (handler == null)
+			if (handler != null)
 			{
-				_log.warning("No item handler registered for item ID: " + target.getId() + ".");
+				handler.useItem(this, target, false);
 			}
 			else
 			{
-				handler.useItem(this, target, false);
+				_log.warning("No item handler registered for item ID: " + target.getId() + ".");
 			}
 			
 			ItemTable.getInstance().destroyItem("Consume", target, getOwner(), null);
@@ -1204,7 +1204,7 @@ public class L2PetInstance extends L2Summon
 		final int maxLoad = getMaxLoad();
 		if (maxLoad > 0)
 		{
-			final long weightproc = (((getCurrentLoad() - getBonusWeightPenalty()) * 1000) / maxLoad);
+			final long weightproc = ((getCurrentLoad() - getBonusWeightPenalty()) * 1000) / maxLoad;
 			int newWeightPenalty;
 			if ((weightproc < 500) || getOwner().getDietMode())
 			{

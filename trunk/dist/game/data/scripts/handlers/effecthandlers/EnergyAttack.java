@@ -144,7 +144,7 @@ public final class EnergyAttack extends AbstractEffect
 				attacker.decreaseCharges(3);
 			}
 			
-			final double addPower = (attacker.getStat().calcStat(Stats.MOMENTUM_SKILL_POWER, 1, null, null));
+			final double addPower = attacker.getStat().calcStat(Stats.MOMENTUM_SKILL_POWER, 1, null, null);
 			
 			attack += _power;
 			attack *= addPower;
@@ -171,7 +171,7 @@ public final class EnergyAttack extends AbstractEffect
 		if (damage > 0)
 		{
 			// reduce damage if target has maxdamage buff
-			final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			final double maxDamage = target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null);
 			if (maxDamage > 0)
 			{
 				damage = (int) maxDamage;

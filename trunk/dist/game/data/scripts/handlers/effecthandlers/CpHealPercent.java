@@ -56,7 +56,7 @@ public final class CpHealPercent extends AbstractEffect
 		
 		double amount = 0;
 		final double power = _power;
-		final boolean full = (power == 100.0);
+		final boolean full = power == 100.0;
 		
 		amount = full ? target.getMaxCp() : (target.getMaxCp() * power) / 100.0;
 		// Prevents overheal and negative amount

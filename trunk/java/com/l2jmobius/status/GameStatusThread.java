@@ -68,13 +68,10 @@ public final class GameStatusThread extends Thread
 				System.out.println("TELNET | " + text);
 			}
 		}
-		else
+		// only print output if the message is rejected
+		else if (type == 5)
 		{
-			// only print output if the message is rejected
-			if (type == 5)
-			{
-				System.out.println("TELNET | " + text);
-			}
+			System.out.println("TELNET | " + text);
 		}
 	}
 	
@@ -165,23 +162,20 @@ public final class GameStatusThread extends Thread
 				_print.flush();
 				_cSocket.close();
 			}
+			else if (!tmpLine.equals(StatusPW))
+			{
+				_print.println("Incorrect Password!");
+				_print.println("Disconnected...");
+				_print.flush();
+				_cSocket.close();
+			}
 			else
 			{
-				if (!tmpLine.equals(StatusPW))
-				{
-					_print.println("Incorrect Password!");
-					_print.println("Disconnected...");
-					_print.flush();
-					_cSocket.close();
-				}
-				else
-				{
-					_print.println("Password Correct!");
-					_print.println("[L2J Game Server]");
-					_print.print("");
-					_print.flush();
-					start();
-				}
+				_print.println("Password Correct!");
+				_print.println("[L2J Game Server]");
+				_print.print("");
+				_print.flush();
+				start();
 			}
 		}
 		else

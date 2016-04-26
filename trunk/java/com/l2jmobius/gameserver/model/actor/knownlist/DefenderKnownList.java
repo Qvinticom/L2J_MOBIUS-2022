@@ -50,10 +50,10 @@ public class DefenderKnownList extends AttackableKnownList
 			{
 				player = object.getActingPlayer();
 			}
-			final int activeSiegeId = (fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : hall != null ? hall.getId() : 0));
+			final int activeSiegeId = fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : hall != null ? hall.getId() : 0);
 			
 			// Check if player is an enemy of this defender npc
-			if ((player != null) && (((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId)) || ((player.getSiegeState() == 1)) || (player.getSiegeState() == 0)))
+			if ((player != null) && (((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId)) || (player.getSiegeState() == 1) || (player.getSiegeState() == 0)))
 			{
 				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
 				{

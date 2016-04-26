@@ -215,7 +215,7 @@ public final class Q10284_AcquisitionOfDivineSword extends Quest
 				if (npc.getId() == RAFFORTY)
 				{
 					qs = player.getQuestState(Q10283_RequestOfIceMerchant.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "32020-01.htm" : "32020-04.html";
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32020-01.htm" : "32020-04.html";
 				}
 				break;
 			}

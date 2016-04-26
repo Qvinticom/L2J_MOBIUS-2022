@@ -100,7 +100,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					if (cw.isActivated())
 					{
 						final L2PcInstance pl = cw.getPlayer();
-						StringUtil.append(replyMSG, "<tr><td>Weilder:</td><td>", (pl == null ? "null" : pl.getName()), "</td></tr><tr><td>Karma:</td><td>", String.valueOf(cw.getPlayerKarma()), "</td></tr><tr><td>Kills:</td><td>", String.valueOf(cw.getPlayerPkKills()), "/", String.valueOf(cw.getNbKills()), "</td></tr><tr><td>Time remaining:</td><td>", String.valueOf(cw.getTimeLeft() / 60000), " min.</td></tr><tr><td><button value=\"Remove\" action=\"bypass -h admin_cw_remove ", String.valueOf(itemId), "\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Go\" action=\"bypass -h admin_cw_goto ", String.valueOf(itemId), "\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+						StringUtil.append(replyMSG, "<tr><td>Weilder:</td><td>", pl == null ? "null" : pl.getName(), "</td></tr><tr><td>Karma:</td><td>", String.valueOf(cw.getPlayerKarma()), "</td></tr><tr><td>Kills:</td><td>", String.valueOf(cw.getPlayerPkKills()), "/", String.valueOf(cw.getNbKills()), "</td></tr><tr><td>Time remaining:</td><td>", String.valueOf(cw.getTimeLeft() / 60000), " min.</td></tr><tr><td><button value=\"Remove\" action=\"bypass -h admin_cw_remove ", String.valueOf(itemId), "\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Go\" action=\"bypass -h admin_cw_goto ", String.valueOf(itemId), "\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 					}
 					else if (cw.isDropped())
 					{

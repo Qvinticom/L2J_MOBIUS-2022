@@ -51,16 +51,13 @@ public class ExPartyRoomMember extends L2GameServerPacket
 			{
 				writeD(0x01);
 			}
+			else if (_room.getOwner().isInParty() && member.isInParty() && (_room.getOwner().getParty().getLeaderObjectId() == member.getParty().getLeaderObjectId()))
+			{
+				writeD(0x02);
+			}
 			else
 			{
-				if ((_room.getOwner().isInParty() && member.isInParty()) && (_room.getOwner().getParty().getLeaderObjectId() == member.getParty().getLeaderObjectId()))
-				{
-					writeD(0x02);
-				}
-				else
-				{
-					writeD(0x00);
-				}
+				writeD(0x00);
 			}
 			writeD(0x00); // TODO: Instance datas there is more if that is not 0!
 		}

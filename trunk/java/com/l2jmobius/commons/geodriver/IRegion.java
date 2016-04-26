@@ -21,19 +21,19 @@ package com.l2jmobius.commons.geodriver;
  */
 public interface IRegion
 {
-	/** Blocks in a region on the x axis */
-	public static final int REGION_BLOCKS_X = 256;
-	/** Blocks in a region on the y axis */
-	public static final int REGION_BLOCKS_Y = 256;
-	/** Blocks in a region */
-	public static final int REGION_BLOCKS = REGION_BLOCKS_X * REGION_BLOCKS_Y;
+	/** Blocks in a region on the x axis. */
+	int REGION_BLOCKS_X = 256;
+	/** Blocks in a region on the y axis. */
+	int REGION_BLOCKS_Y = 256;
+	/** Blocks in a region. */
+	int REGION_BLOCKS = REGION_BLOCKS_X * REGION_BLOCKS_Y;
 	
-	/** Cells in a region on the x axis */
-	public static final int REGION_CELLS_X = REGION_BLOCKS_X * IBlock.BLOCK_CELLS_X;
-	/** Cells in a regioin on the y axis */
-	public static final int REGION_CELLS_Y = REGION_BLOCKS_Y * IBlock.BLOCK_CELLS_Y;
-	/** Cells in a region */
-	public static final int REGION_CELLS = REGION_CELLS_X * REGION_CELLS_Y;
+	/** Cells in a region on the x axis. */
+	int REGION_CELLS_X = REGION_BLOCKS_X * IBlock.BLOCK_CELLS_X;
+	/** Cells in a regioin on the y axis. */
+	int REGION_CELLS_Y = REGION_BLOCKS_Y * IBlock.BLOCK_CELLS_Y;
+	/** Cells in a region. */
+	int REGION_CELLS = REGION_CELLS_X * REGION_CELLS_Y;
 	
 	boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe);
 	

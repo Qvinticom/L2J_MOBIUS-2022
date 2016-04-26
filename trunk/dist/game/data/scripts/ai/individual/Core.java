@@ -65,7 +65,7 @@ final class Core extends AbstractNpcAI
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
 		if (GrandBossManager.getInstance().getBossStatus(CORE) == DEAD)
 		{
-			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
+			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
 			if (temp > 0)
 			{
 				startQuestTimer("core_unlock", temp, null, null);
@@ -194,7 +194,7 @@ final class Core extends AbstractNpcAI
 			startQuestTimer("core_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
 			final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
-			info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
+			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatsSet(CORE, info);
 			startQuestTimer("despawn_minions", 20000, null, null);
 			cancelQuestTimers("spawn_minion");

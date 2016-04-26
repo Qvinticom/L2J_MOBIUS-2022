@@ -121,7 +121,7 @@ public final class MercTicketManager
 			for (int i2 = 0; i2 < 50; i2 += 10)
 			{
 				// Simplified if statement;
-				if (((itemId >= ITEM_IDS[i2 + (i * GUARDIAN_TYPES_COUNT)]) && (itemId <= ITEM_IDS[i2 + 9 + (i * GUARDIAN_TYPES_COUNT)])))
+				if ((itemId >= ITEM_IDS[i2 + (i * GUARDIAN_TYPES_COUNT)]) && (itemId <= ITEM_IDS[i2 + 9 + (i * GUARDIAN_TYPES_COUNT)]))
 				{
 					return i + 1;
 				}
@@ -182,7 +182,7 @@ public final class MercTicketManager
 					if (NPC_IDS[i] == npcId) // Find the index of the item used
 					{
 						// only handle tickets if a siege is not ongoing in this npc's castle
-						if ((castle != null) && !(castle.getSiege().isInProgress()))
+						if ((castle != null) && !castle.getSiege().isInProgress())
 						{
 							itemId = ITEM_IDS[i];
 							// create the ticket in the gameworld
@@ -346,7 +346,7 @@ public final class MercTicketManager
 		final L2DefenderInstance npc = new L2DefenderInstance(template);
 		npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 		npc.setDecayed(false);
-		npc.spawnMe(x, y, (z + 20));
+		npc.spawnMe(x, y, z + 20);
 		if (despawnDelay > 0)
 		{
 			npc.scheduleDespawn(despawnDelay);
@@ -413,7 +413,7 @@ public final class MercTicketManager
 	 * Gets the single instance of {@code MercTicketManager}.
 	 * @return single instance of {@code MercTicketManager}
 	 */
-	public static final MercTicketManager getInstance()
+	public static MercTicketManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

@@ -33,7 +33,7 @@ public final class EventShrineManager
 		ENABLE_SHRINES = enabled;
 	}
 	
-	public static final EventShrineManager getInstance()
+	public static EventShrineManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

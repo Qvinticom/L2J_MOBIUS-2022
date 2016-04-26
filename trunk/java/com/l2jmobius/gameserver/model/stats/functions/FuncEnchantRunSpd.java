@@ -46,11 +46,11 @@ public abstract class FuncEnchantRunSpd extends AbstractFunction
 			// Increases speed for feets
 			if (item.getEnchantLevel() == 4)
 			{
-				value += (0.6 * blessedBonus);
+				value += 0.6 * blessedBonus;
 			}
 			else
 			{
-				value += (0.6 * blessedBonus * ((item.getEnchantLevel() * 2) - 9));
+				value += 0.6 * blessedBonus * ((item.getEnchantLevel() * 2) - 9);
 			}
 		}
 		return initVal;

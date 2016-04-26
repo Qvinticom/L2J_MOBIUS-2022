@@ -236,7 +236,7 @@ public final class CommissionManager
 				return;
 			}
 			
-			final long registrationFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, (totalPrice * REGISTRATION_FEE_PER_DAY) * durationInDays);
+			final long registrationFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, totalPrice * REGISTRATION_FEE_PER_DAY * durationInDays);
 			if (!player.getInventory().reduceAdena("Commission Registration Fee", registrationFee, player, null))
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_TO_REGISTER_THE_ITEM);
@@ -382,7 +382,7 @@ public final class CommissionManager
 		
 		if (deleteItemFromDB(commissionId))
 		{
-			final long saleFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, (totalPrice * SALE_FEE_PER_DAY) * commissionItem.getDurationInDays());
+			final long saleFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, totalPrice * SALE_FEE_PER_DAY * commissionItem.getDurationInDays());
 			final Message mail = new Message(itemInstance.getOwnerId(), itemInstance, MailType.COMMISSION_ITEM_SOLD);
 			
 			final Mail attachement = mail.createAttachments();

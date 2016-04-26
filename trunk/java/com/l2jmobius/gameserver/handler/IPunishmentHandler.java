@@ -26,11 +26,11 @@ import com.l2jmobius.gameserver.model.punishment.PunishmentType;
  */
 public interface IPunishmentHandler
 {
-	static final Logger _log = Logger.getLogger(IPunishmentHandler.class.getName());
+	Logger _log = Logger.getLogger(IPunishmentHandler.class.getName());
 	
-	public void onStart(PunishmentTask task);
+	void onStart(PunishmentTask task);
 	
-	public void onEnd(PunishmentTask task);
+	void onEnd(PunishmentTask task);
 	
-	public PunishmentType getType();
+	PunishmentType getType();
 }

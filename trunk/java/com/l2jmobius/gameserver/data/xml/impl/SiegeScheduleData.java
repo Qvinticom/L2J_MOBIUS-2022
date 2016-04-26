@@ -110,7 +110,7 @@ public class SiegeScheduleData implements IXmlReader
 		return _scheduleData;
 	}
 	
-	public static final SiegeScheduleData getInstance()
+	public static SiegeScheduleData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

@@ -71,9 +71,9 @@ public final class L2World
 	/** Map containing all the players in game. */
 	private final Map<Integer, L2PcInstance> _allPlayers = new ConcurrentHashMap<>();
 	/** Map containing all the Good players in game. */
-	private final static Map<Integer, L2PcInstance> _allGoodPlayers = new ConcurrentHashMap<>();
+	private static final Map<Integer, L2PcInstance> _allGoodPlayers = new ConcurrentHashMap<>();
 	/** Map containing all the Evil players in game. */
-	private final static Map<Integer, L2PcInstance> _allEvilPlayers = new ConcurrentHashMap<>();
+	private static final Map<Integer, L2PcInstance> _allEvilPlayers = new ConcurrentHashMap<>();
 	/** Map containing all visible objects. */
 	private final Map<Integer, L2Object> _allObjects = new ConcurrentHashMap<>();
 	/** Map with the pets instances and their owner ID. */
@@ -581,7 +581,7 @@ public final class L2World
 	 */
 	private boolean validRegion(int x, int y)
 	{
-		return ((x >= 0) && (x <= REGIONS_X) && (y >= 0) && (y <= REGIONS_Y));
+		return (x >= 0) && (x <= REGIONS_X) && (y >= 0) && (y <= REGIONS_Y);
 	}
 	
 	/**

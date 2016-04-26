@@ -93,8 +93,6 @@ final class DenOfEvil extends AbstractNpcAI
 		new Location(62905, -106109, -2384, 51288)
 	};
 	
-	private final static boolean DEBUG = false;
-	
 	private DenOfEvil()
 	{
 		super(DenOfEvil.class.getSimpleName(), "ai/group_template");
@@ -119,10 +117,6 @@ final class DenOfEvil extends AbstractNpcAI
 		final L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
 		if (zone == null)
 		{
-			if (DEBUG)
-			{
-				_log.warning("NPC " + npc + " spawned outside of L2EffectZone, check your zone coords! X:" + npc.getX() + " Y:" + npc.getY() + " Z:" + npc.getZ());
-			}
 			return null;
 		}
 		final int skillId = getSkillIdByNpcId(npc.getId());
@@ -147,10 +141,6 @@ final class DenOfEvil extends AbstractNpcAI
 		final L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
 		if (zone == null)
 		{
-			if (DEBUG)
-			{
-				_log.warning("NPC " + npc + " killed outside of L2EffectZone, check your zone coords! X:" + npc.getX() + " Y:" + npc.getY() + " Z:" + npc.getZ());
-			}
 			return null;
 		}
 		final int skillId = getSkillIdByNpcId(npc.getId());
@@ -210,12 +200,9 @@ final class DenOfEvil extends AbstractNpcAI
 				{
 					SkillData.getInstance().getSkill(6149, 1).applyEffects(character, character);
 				}
-				else
+				else if (character.doDie(null) && character.isNpc() && Util.contains(EYE_IDS, ((L2Npc) character).getId())) // mobs die
 				{
-					if (character.doDie(null) && character.isNpc() && Util.contains(EYE_IDS, ((L2Npc) character).getId())) // mobs die
-					{
-						ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(((L2Npc) character).getLocation()), 15000);
-					}
+					ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(((L2Npc) character).getLocation()), 15000);
 				}
 			}
 			for (int i = SKILL_ID; i <= (SKILL_ID + 4); i = i + 2)

@@ -345,16 +345,13 @@ public class AdminSpawn implements IAdminCommandHandler
 					}
 				}
 			}
+			else if (showposition && (npc != null))
+			{
+				activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + npc.getX() + " " + npc.getY() + " " + npc.getZ());
+			}
 			else
 			{
-				if (showposition && (npc != null))
-				{
-					activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + npc.getX() + " " + npc.getY() + " " + npc.getZ());
-				}
-				else
-				{
-					activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + spawn.getX() + " " + spawn.getY() + " " + spawn.getZ());
-				}
+				activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + spawn.getX() + " " + spawn.getY() + " " + spawn.getZ());
 			}
 		}
 		

@@ -832,7 +832,7 @@ public final class Skill implements IIdentifiable
 	
 	public int getAffectLimit()
 	{
-		return (_affectLimit[0] + Rnd.get(_affectLimit[1]));
+		return _affectLimit[0] + Rnd.get(_affectLimit[1]);
 	}
 	
 	public boolean isActive()
@@ -1111,7 +1111,7 @@ public final class Skill implements IIdentifiable
 	 * @param sourceInArena
 	 * @return
 	 */
-	public static final boolean checkForAreaOffensiveSkills(L2Character caster, L2Character target, Skill skill, boolean sourceInArena)
+	public static boolean checkForAreaOffensiveSkills(L2Character caster, L2Character target, Skill skill, boolean sourceInArena)
 	{
 		if ((target == null) || target.isDead() || (target == caster))
 		{
@@ -1164,7 +1164,7 @@ public final class Skill implements IIdentifiable
 					return false;
 				}
 				
-				if (!sourceInArena && !(targetPlayer.isInsideZone(ZoneId.PVP) && !targetPlayer.isInsideZone(ZoneId.SIEGE)))
+				if (!sourceInArena && (!targetPlayer.isInsideZone(ZoneId.PVP) || targetPlayer.isInsideZone(ZoneId.SIEGE)))
 				{
 					if ((player.getAllyId() != 0) && (player.getAllyId() == targetPlayer.getAllyId()))
 					{
@@ -1200,13 +1200,10 @@ public final class Skill implements IIdentifiable
 				}
 			}
 		}
-		else
+		// target is mob
+		else if ((targetPlayer == null) && (target instanceof L2Attackable) && (caster instanceof L2Attackable))
 		{
-			// target is mob
-			if ((targetPlayer == null) && (target instanceof L2Attackable) && (caster instanceof L2Attackable))
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		if (!GeoData.getInstance().canSeeTarget(caster, target))
@@ -1216,13 +1213,13 @@ public final class Skill implements IIdentifiable
 		return true;
 	}
 	
-	public static final boolean addPet(L2Character caster, L2PcInstance owner, int radius, boolean isDead)
+	public static boolean addPet(L2Character caster, L2PcInstance owner, int radius, boolean isDead)
 	{
 		final L2Summon pet = owner.getPet();
 		return (pet != null) && addCharacter(caster, pet, radius, isDead);
 	}
 	
-	public static final boolean addCharacter(L2Character caster, L2Character target, int radius, boolean isDead)
+	public static boolean addCharacter(L2Character caster, L2Character target, int radius, boolean isDead)
 	{
 		if (isDead != target.isDead())
 		{
@@ -1354,7 +1351,7 @@ public final class Skill implements IIdentifiable
 		}
 		
 		// Check bad skills against target.
-		if ((effector != effected) && isBad() && ((effected.isInvul() && (!effected.isVulnerableFor(effector))) || (effector.isGM() && !effector.getAccessLevel().canGiveDamage())))
+		if ((effector != effected) && isBad() && ((effected.isInvul() && !effected.isVulnerableFor(effector)) || (effector.isGM() && !effector.getAccessLevel().canGiveDamage())))
 		{
 			return;
 		}
@@ -1366,12 +1363,9 @@ public final class Skill implements IIdentifiable
 				return;
 			}
 		}
-		else
+		else if (effected.isBuffBlocked() && !isBad())
 		{
-			if (effected.isBuffBlocked() && !isBad())
-			{
-				return;
-			}
+			return;
 		}
 		
 		if (effected.isInvulAgainst(getId(), getLevel()))
@@ -1677,7 +1671,7 @@ public final class Skill implements IIdentifiable
 	 */
 	public boolean canBeStolen()
 	{
-		return !isPassive() && !isToggle() && !isDebuff() && !isHeroSkill() && !isGMSkill() && !(isStatic() && (getId() != CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && canBeDispeled() && (getId() != CommonSkill.SERVITOR_SHARE.getId());
+		return !isPassive() && !isToggle() && !isDebuff() && !isHeroSkill() && !isGMSkill() && (!isStatic() || (getId() == CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && canBeDispeled() && (getId() != CommonSkill.SERVITOR_SHARE.getId());
 	}
 	
 	public boolean isClanSkill()

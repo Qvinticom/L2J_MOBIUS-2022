@@ -90,7 +90,7 @@ public class Loto implements IBypassHandler
 	// 23 - current lottery jackpot
 	// 24 - Previous winning numbers/Prize claim
 	// >24 - check lottery ticket by item object id
-	private static final void showLotoWindow(L2PcInstance player, L2Npc npc, int val)
+	private static void showLotoWindow(L2PcInstance player, L2Npc npc, int val)
 	{
 		final int npcId = npc.getTemplate().getId();
 		String filename;
@@ -99,7 +99,7 @@ public class Loto implements IBypassHandler
 		
 		if (val == 0) // 0 - first buy lottery ticket window
 		{
-			filename = (npc.getHtmlPath(npcId, 1));
+			filename = npc.getHtmlPath(npcId, 1);
 			html.setFile(player.getHtmlPrefix(), filename);
 		}
 		else if ((val >= 1) && (val <= 21)) // 1-20 - buttons, 21 - second buy lottery ticket window
@@ -117,7 +117,7 @@ public class Loto implements IBypassHandler
 				return;
 			}
 			
-			filename = (npc.getHtmlPath(npcId, 5));
+			filename = npc.getHtmlPath(npcId, 5);
 			html.setFile(player.getHtmlPrefix(), filename);
 			
 			int count = 0;
@@ -240,17 +240,17 @@ public class Loto implements IBypassHandler
 			iu.addModifiedItem(adenaupdate);
 			player.sendPacket(iu);
 			
-			filename = (npc.getHtmlPath(npcId, 6));
+			filename = npc.getHtmlPath(npcId, 6);
 			html.setFile(player.getHtmlPrefix(), filename);
 		}
 		else if (val == 23) // 23 - current lottery jackpot
 		{
-			filename = (npc.getHtmlPath(npcId, 3));
+			filename = npc.getHtmlPath(npcId, 3);
 			html.setFile(player.getHtmlPrefix(), filename);
 		}
 		else if (val == 24) // 24 - Previous winning numbers/Prize claim
 		{
-			filename = (npc.getHtmlPath(npcId, 4));
+			filename = npc.getHtmlPath(npcId, 4);
 			html.setFile(player.getHtmlPrefix(), filename);
 			
 			final int lotonumber = Lottery.getInstance().getId();
@@ -308,7 +308,7 @@ public class Loto implements IBypassHandler
 		}
 		else if (val == 25) // 25 - lottery instructions
 		{
-			filename = (npc.getHtmlPath(npcId, 2));
+			filename = npc.getHtmlPath(npcId, 2);
 			html.setFile(player.getHtmlPrefix(), filename);
 		}
 		else if (val > 25) // >25 - check lottery ticket by item object id

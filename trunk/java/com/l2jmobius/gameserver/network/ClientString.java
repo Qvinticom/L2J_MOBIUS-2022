@@ -28,7 +28,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface ClientString
 {
-	public int id();
+	int id();
 	
-	public String message();
+	String message();
 }

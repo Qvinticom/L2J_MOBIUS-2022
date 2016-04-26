@@ -172,7 +172,7 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 	@Override
 	public String onExitZone(L2Character character, L2ZoneType zone)
 	{
-		if ((character.isPlayer()) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
+		if (character.isPlayer() && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
 			if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))

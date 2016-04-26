@@ -31,15 +31,15 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class FeohStance extends AbstractEffect
 {
-	private final static int FIRE_STANCE = 11007;
-	private final static int WATER_STANCE = 11008;
-	private final static int WIND_STANCE = 11009;
-	private final static int EARTH_STANCE = 11010;
-	private final static int ELEMENTAL_SPIKE = 11011;
-	private final static int ELEMENTAL_CRASH = 11017;
-	private final static int ELEMENTAL_DESTRUCTION = 11023;
-	private final static int ELEMENTAL_BLAST = 11034;
-	private final static int ELEMENTAL_STORM = 11040;
+	private static final int FIRE_STANCE = 11007;
+	private static final int WATER_STANCE = 11008;
+	private static final int WIND_STANCE = 11009;
+	private static final int EARTH_STANCE = 11010;
+	private static final int ELEMENTAL_SPIKE = 11011;
+	private static final int ELEMENTAL_CRASH = 11017;
+	private static final int ELEMENTAL_DESTRUCTION = 11023;
+	private static final int ELEMENTAL_BLAST = 11034;
+	private static final int ELEMENTAL_STORM = 11040;
 	private final HashSet<Skill> _skillList = new HashSet<>();
 	private int _stanceId;
 	

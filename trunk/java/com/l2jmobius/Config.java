@@ -2888,7 +2888,7 @@ public final class Config
 				{
 					if (geoData.containskey(regionX + "_" + regionY))
 					{
-						GEODATA_REGIONS.put((regionX + "_" + regionY), geoData.getBoolean((regionX + "_" + regionY), false));
+						GEODATA_REGIONS.put(regionX + "_" + regionY, geoData.getBoolean(regionX + "_" + regionY, false));
 					}
 				}
 			}

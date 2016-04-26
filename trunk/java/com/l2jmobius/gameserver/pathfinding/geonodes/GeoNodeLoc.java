@@ -98,18 +98,6 @@ public class GeoNodeLoc extends AbstractNodeLoc
 			return false;
 		}
 		final GeoNodeLoc other = (GeoNodeLoc) obj;
-		if (_x != other._x)
-		{
-			return false;
-		}
-		if (_y != other._y)
-		{
-			return false;
-		}
-		if (_z != other._z)
-		{
-			return false;
-		}
-		return true;
+		return (_x == other._x) && (_y == other._y) && (_z == other._z);
 	}
 }

@@ -229,21 +229,18 @@ public class TvTManager
 			{
 				nextMsg = delay;
 			}
+			// start
+			else if (TvTEvent.isInactive())
+			{
+				startReg();
+			}
+			else if (TvTEvent.isParticipating())
+			{
+				startEvent();
+			}
 			else
 			{
-				// start
-				if (TvTEvent.isInactive())
-				{
-					startReg();
-				}
-				else if (TvTEvent.isParticipating())
-				{
-					startEvent();
-				}
-				else
-				{
-					endEvent();
-				}
+				endEvent();
 			}
 			
 			if (delay > 0)
@@ -276,16 +273,13 @@ public class TvTManager
 					TvTEvent.sysMsgToAllParticipants("TvT Event: " + (time / 60) + " minute(s) until the event is finished!");
 				}
 			}
-			else
+			else if (TvTEvent.isParticipating())
 			{
-				if (TvTEvent.isParticipating())
-				{
-					Broadcast.toAllOnlinePlayers("TvT Event: " + time + " second(s) until registration is closed!");
-				}
-				else if (TvTEvent.isStarted())
-				{
-					TvTEvent.sysMsgToAllParticipants("TvT Event: " + time + " second(s) until the event is finished!");
-				}
+				Broadcast.toAllOnlinePlayers("TvT Event: " + time + " second(s) until registration is closed!");
+			}
+			else if (TvTEvent.isStarted())
+			{
+				TvTEvent.sysMsgToAllParticipants("TvT Event: " + time + " second(s) until the event is finished!");
 			}
 		}
 	}

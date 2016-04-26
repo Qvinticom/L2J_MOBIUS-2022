@@ -218,7 +218,7 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 						}
 						case 2:
 						{
-							htmltext = (qs.isSet("talk")) ? "30297-04.html" : "30297-02.html";
+							htmltext = qs.isSet("talk") ? "30297-04.html" : "30297-02.html";
 							break;
 						}
 						case 3:
@@ -256,7 +256,7 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 						}
 						case 3:
 						{
-							htmltext = (qs.isSet("talk")) ? "30612-04.html" : "30612-02.html";
+							htmltext = qs.isSet("talk") ? "30612-04.html" : "30612-02.html";
 							break;
 						}
 						default:

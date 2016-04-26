@@ -66,14 +66,14 @@ public final class Raina extends AbstractNpcAI
 	private static final int RAINA = 33491;
 	// Items
 	private static final int SUBCLASS_CERTIFICATE = 30433;
-	private final static int ABELIUS_POWER = 32264;
-	private final static int SAPYROS_POWER = 32265;
-	private final static int ASHAGEN_POWER = 32266;
-	private final static int CRANIGG_POWER = 32267;
-	private final static int SOLTKREIG_POWER = 32268;
-	private final static int NAVIAROPE_POWER = 32269;
-	private final static int LEISTER_POWER = 32270;
-	private final static int LAKCIS_POWER = 32271;
+	private static final int ABELIUS_POWER = 32264;
+	private static final int SAPYROS_POWER = 32265;
+	private static final int ASHAGEN_POWER = 32266;
+	private static final int CRANIGG_POWER = 32267;
+	private static final int SOLTKREIG_POWER = 32268;
+	private static final int NAVIAROPE_POWER = 32269;
+	private static final int LEISTER_POWER = 32270;
+	private static final int LAKCIS_POWER = 32271;
 	// Misc
 	private static final Set<PlayerClass> mainSubclassSet;
 	private static final Set<PlayerClass> neverSubclassed = EnumSet.of(PlayerClass.Overlord, PlayerClass.Warsmith);
@@ -529,7 +529,7 @@ public final class Raina extends AbstractNpcAI
 			case 5: // Reawaken (change dual class)
 			{
 				final int classId = event.getReply();
-				if (player.isTransformed() || player.hasSummon() || (!player.hasDualClass() || !player.isDualClassActive() || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal())))
+				if (player.isTransformed() || player.hasSummon() || !player.hasDualClass() || !player.isDualClassActive() || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal()))
 				{
 					break;
 				}
@@ -549,7 +549,7 @@ public final class Raina extends AbstractNpcAI
 					break;
 				}
 				
-				player.reduceAdena((getClass().getSimpleName() + "_Reawaken"), REAWAKEN_PRICE[index], npc, true);
+				player.reduceAdena(getClass().getSimpleName() + "_Reawaken", REAWAKEN_PRICE[index], npc, true);
 				takeItems(player, getCloakId(player), 1);
 				
 				final int classIndex = player.getClassIndex();

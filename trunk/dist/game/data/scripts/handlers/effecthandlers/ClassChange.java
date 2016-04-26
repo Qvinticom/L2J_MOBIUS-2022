@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class ClassChange extends AbstractEffect
 {
 	private final int _index;
-	private final static int IDENTITY_CRISIS_SKILL_ID = 1570;
+	private static final int IDENTITY_CRISIS_SKILL_ID = 1570;
 	
 	public ClassChange(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

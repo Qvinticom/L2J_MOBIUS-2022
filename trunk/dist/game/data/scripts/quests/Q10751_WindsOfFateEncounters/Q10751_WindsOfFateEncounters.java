@@ -307,7 +307,7 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 						{
 							htmltext = "33943-01.html";
 						}
-						else if (qs.isCond(4) && (!player.getClassId().isMage()))
+						else if (qs.isCond(4) && !player.getClassId().isMage())
 						{
 							htmltext = "33943-09.html";
 						}

@@ -37,7 +37,7 @@ public class Aura implements ITargetTypeHandler
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		final List<L2Character> targetList = new ArrayList<>();
-		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
+		final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
 		for (L2Character obj : activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange()))
 		{
 			if (obj.isDoor() || obj.isAttackable() || obj.isPlayable())

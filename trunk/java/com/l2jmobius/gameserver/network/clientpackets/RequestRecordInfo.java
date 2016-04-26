@@ -49,15 +49,12 @@ public class RequestRecordInfo extends L2GameClientPacket
 			{
 				activeChar.sendPacket(new SpawnItem(object));
 			}
-			else
+			else if (!object.isVisibleFor(activeChar))
 			{
-				if (!object.isVisibleFor(activeChar))
+				object.sendInfo(activeChar);
+				if ((object instanceof L2Character) && (((L2Character) object).getAI() != null))
 				{
-					object.sendInfo(activeChar);
-					if ((object instanceof L2Character) && (((L2Character) object).getAI() != null))
-					{
-						((L2Character) object).getAI().describeStateToPlayer(activeChar);
-					}
+					((L2Character) object).getAI().describeStateToPlayer(activeChar);
 				}
 			}
 		}

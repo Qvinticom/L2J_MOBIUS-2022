@@ -181,7 +181,7 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 				{
 					if (talker.getLevel() >= MIN_LVL)
 					{
-						htmltext = (hasItem(talker, SOY_SOURCE_JAR)) ? "31521-01.htm" : "31521-02.htm";
+						htmltext = hasItem(talker, SOY_SOURCE_JAR) ? "31521-01.htm" : "31521-02.htm";
 					}
 					else
 					{

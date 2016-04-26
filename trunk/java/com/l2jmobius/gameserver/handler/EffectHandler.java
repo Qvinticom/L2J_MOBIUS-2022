@@ -63,7 +63,7 @@ public final class EffectHandler implements IHandler<Class<? extends AbstractEff
 	{
 		try
 		{
-			L2ScriptEngineManager.getInstance().executeScript((new File(L2ScriptEngineManager.SCRIPT_FOLDER, "handlers/EffectMasterHandler.java")));
+			L2ScriptEngineManager.getInstance().executeScript(new File(L2ScriptEngineManager.SCRIPT_FOLDER, "handlers/EffectMasterHandler.java"));
 		}
 		catch (Exception e)
 		{

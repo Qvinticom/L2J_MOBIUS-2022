@@ -100,7 +100,7 @@ public class AutoSpawnHandler
 		{
 			if (asi != null)
 			{
-				this.removeSpawn(asi);
+				removeSpawn(asi);
 			}
 		}
 		
@@ -314,7 +314,7 @@ public class AutoSpawnHandler
 	public final long getTimeToNextSpawn(AutoSpawnInstance spawnInst)
 	{
 		final int objectId = spawnInst.getObjectId();
-		return !isSpawnRegistered(objectId) ? -1 : (_runningSpawns.containsKey(objectId)) ? _runningSpawns.get(objectId).getDelay(TimeUnit.MILLISECONDS) : 0;
+		return !isSpawnRegistered(objectId) ? -1 : _runningSpawns.containsKey(objectId) ? _runningSpawns.get(objectId).getDelay(TimeUnit.MILLISECONDS) : 0;
 	}
 	
 	/**
@@ -486,7 +486,7 @@ public class AutoSpawnHandler
 				// If there is no despawn time, do not create a despawn task.
 				if (spawnInst.getDespawnDelay() > 0)
 				{
-					ThreadPoolManager.getInstance().scheduleAi((new AutoDespawner(_objectId)), spawnInst.getDespawnDelay() - 1000);
+					ThreadPoolManager.getInstance().scheduleAi(new AutoDespawner(_objectId), spawnInst.getDespawnDelay() - 1000);
 				}
 			}
 			catch (Exception e)

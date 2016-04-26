@@ -89,13 +89,13 @@ public class Mail extends ItemContainer
 			{
 				continue;
 			}
-			if (wh == null)
+			if (wh != null)
 			{
-				item.setItemLocation(ItemLocation.WAREHOUSE);
+				transferItem("Expire", item.getObjectId(), item.getCount(), wh, null, null);
 			}
 			else
 			{
-				transferItem("Expire", item.getObjectId(), item.getCount(), wh, null, null);
+				item.setItemLocation(ItemLocation.WAREHOUSE);
 			}
 		}
 	}

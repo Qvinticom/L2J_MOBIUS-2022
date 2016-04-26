@@ -78,7 +78,7 @@ final class DelusionTeleport extends AbstractNpcAI
 		if (npc.getId() == NPCS[0]) // Pathfinder Worker
 		{
 			final L2TownZone town = TownManager.getTown(npc.getX(), npc.getY(), npc.getZ());
-			final int townId = ((town == null) ? 0 : town.getTownId());
+			final int townId = (town == null) ? 0 : town.getTownId();
 			player.getVariables().set(DELUSION_RETURN, townId);
 			player.teleToLocation(HALL_LOCATIONS[getRandom(HALL_LOCATIONS.length)], false);
 		}

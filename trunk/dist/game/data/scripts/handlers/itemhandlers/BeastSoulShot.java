@@ -117,15 +117,15 @@ public class BeastSoulShot implements IItemHandler
 		{
 			pet.setChargedShot(ShotType.SOULSHOTS, true);
 			// Visual effect change if player has equipped Ruby lvl 3 or higher
-			if ((activeOwner.getInventory().getItemByItemId(38859) != null) && (activeOwner.getInventory().getItemByItemId(38859).isEquipped()))
+			if ((activeOwner.getInventory().getItemByItemId(38859) != null) && activeOwner.getInventory().getItemByItemId(38859).isEquipped())
 			{
 				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, 17817, 1, 0, 0), 600);
 			}
-			else if ((activeOwner.getInventory().getItemByItemId(38858) != null) && (activeOwner.getInventory().getItemByItemId(38858).isEquipped()))
+			else if ((activeOwner.getInventory().getItemByItemId(38858) != null) && activeOwner.getInventory().getItemByItemId(38858).isEquipped())
 			{
 				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, 17816, 1, 0, 0), 600);
 			}
-			else if ((activeOwner.getInventory().getItemByItemId(38857) != null) && (activeOwner.getInventory().getItemByItemId(38857).isEquipped()))
+			else if ((activeOwner.getInventory().getItemByItemId(38857) != null) && activeOwner.getInventory().getItemByItemId(38857).isEquipped())
 			{
 				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, 17815, 1, 0, 0), 600);
 			}

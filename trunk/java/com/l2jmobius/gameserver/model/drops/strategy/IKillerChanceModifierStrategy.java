@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public interface IKillerChanceModifierStrategy extends INonGroupedKillerChanceModifierStrategy
 {
-	public static final IKillerChanceModifierStrategy DEFAULT_STRATEGY = (item, victim, killer) ->
+	IKillerChanceModifierStrategy DEFAULT_STRATEGY = (item, victim, killer) ->
 	{
 		final int levelDifference = victim.getLevel() - killer.getLevel();
 		if ((victim.isRaid()) && Config.DEEPBLUE_DROP_RULES_RAID)
@@ -42,7 +42,7 @@ public interface IKillerChanceModifierStrategy extends INonGroupedKillerChanceMo
 		}
 		return 1;
 	};
-	public static final INonGroupedKillerChanceModifierStrategy DEFAULT_NONGROUP_STRATEGY = (item, victim, killer) ->
+	INonGroupedKillerChanceModifierStrategy DEFAULT_NONGROUP_STRATEGY = (item, victim, killer) ->
 	{
 		if (((!(victim.isRaid())) && Config.DEEPBLUE_DROP_RULES) || ((victim.isRaid()) && Config.DEEPBLUE_DROP_RULES_RAID))
 		{
@@ -58,10 +58,10 @@ public interface IKillerChanceModifierStrategy extends INonGroupedKillerChanceMo
 	
 	IKillerChanceModifierStrategy NO_RULES = (item, victim, killer) -> 1;
 	
-	public double getKillerChanceModifier(IDropItem item, L2Character victim, L2Character killer);
+	double getKillerChanceModifier(IDropItem item, L2Character victim, L2Character killer);
 	
 	@Override
-	public default double getKillerChanceModifier(GeneralDropItem item, L2Character victim, L2Character killer)
+	default double getKillerChanceModifier(GeneralDropItem item, L2Character victim, L2Character killer)
 	{
 		return getKillerChanceModifier((IDropItem) item, victim, killer);
 	}

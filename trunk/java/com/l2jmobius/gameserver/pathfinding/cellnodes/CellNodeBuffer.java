@@ -264,24 +264,21 @@ public class CellNodeBuffer
 		{
 			weight = Config.HIGH_WEIGHT;
 		}
-		else
+		else if (isHighWeight(x + 1, y, geoZ))
 		{
-			if (isHighWeight(x + 1, y, geoZ))
-			{
-				weight = Config.MEDIUM_WEIGHT;
-			}
-			else if (isHighWeight(x - 1, y, geoZ))
-			{
-				weight = Config.MEDIUM_WEIGHT;
-			}
-			else if (isHighWeight(x, y + 1, geoZ))
-			{
-				weight = Config.MEDIUM_WEIGHT;
-			}
-			else if (isHighWeight(x, y - 1, geoZ))
-			{
-				weight = Config.MEDIUM_WEIGHT;
-			}
+			weight = Config.MEDIUM_WEIGHT;
+		}
+		else if (isHighWeight(x - 1, y, geoZ))
+		{
+			weight = Config.MEDIUM_WEIGHT;
+		}
+		else if (isHighWeight(x, y + 1, geoZ))
+		{
+			weight = Config.MEDIUM_WEIGHT;
+		}
+		else if (isHighWeight(x, y - 1, geoZ))
+		{
+			weight = Config.MEDIUM_WEIGHT;
 		}
 		
 		newNode.setParent(_current);

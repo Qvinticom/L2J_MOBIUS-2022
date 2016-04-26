@@ -36,7 +36,7 @@ public class FrontAura implements ITargetTypeHandler
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		final List<L2Character> targetList = new ArrayList<>();
-		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
+		final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
 		final int maxTargets = skill.getAffectLimit();
 		for (L2Character obj : objs)

@@ -54,6 +54,6 @@ public class ConditionPlayerActiveEffectId extends Condition
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
 		final BuffInfo info = effector.getEffectList().getBuffInfoBySkillId(_effectId);
-		return ((info != null) && ((_effectLvl == -1) || (_effectLvl <= info.getSkill().getLevel())));
+		return (info != null) && ((_effectLvl == -1) || (_effectLvl <= info.getSkill().getLevel()));
 	}
 }

@@ -36238,7 +36238,7 @@ public final class NpcStringId
 		buildFastLookupTable();
 	}
 	
-	private static final void buildFastLookupTable()
+	private static void buildFastLookupTable()
 	{
 		for (Field field : NpcStringId.class.getDeclaredFields())
 		{
@@ -36262,7 +36262,7 @@ public final class NpcStringId
 		}
 	}
 	
-	private static final int parseMessageParameters(String name)
+	private static int parseMessageParameters(String name)
 	{
 		int paramCount = 0;
 		char c1, c2;
@@ -36282,23 +36282,23 @@ public final class NpcStringId
 		return paramCount;
 	}
 	
-	public static final NpcStringId getNpcStringId(int id)
+	public static NpcStringId getNpcStringId(int id)
 	{
 		return getNpcStringIdOrDefault(id, new NpcStringId(id));
 	}
 	
-	public static final NpcStringId getNpcStringIdOrDefault(int id, NpcStringId defaultValue)
+	public static NpcStringId getNpcStringIdOrDefault(int id, NpcStringId defaultValue)
 	{
 		final NpcStringId nsi = getNpcStringIdInternal(id);
 		return nsi == null ? defaultValue : nsi;
 	}
 	
-	private static final NpcStringId getNpcStringIdInternal(int id)
+	private static NpcStringId getNpcStringIdInternal(int id)
 	{
 		return VALUES.get(id);
 	}
 	
-	public static final NpcStringId getNpcStringId(String name)
+	public static NpcStringId getNpcStringId(String name)
 	{
 		try
 		{
@@ -36310,7 +36310,7 @@ public final class NpcStringId
 		}
 	}
 	
-	public static final void reloadLocalisations()
+	public static void reloadLocalisations()
 	{
 		for (NpcStringId nsId : VALUES.values())
 		{
@@ -36363,21 +36363,16 @@ public final class NpcStringId
 								if (node != null)
 								{
 									nsId = getNpcStringId(Integer.parseInt(node.getNodeValue()));
-									if (nsId == null)
-									{
-										_log.log(Level.WARNING, "NpcStringId: Unknown NSID '" + node.getNodeValue() + "', lang '" + lang + "'.");
-										continue;
-									}
 								}
 								else
 								{
 									node = nnmb.getNamedItem("name");
 									nsId = getNpcStringId(node.getNodeValue());
-									if (nsId == null)
-									{
-										_log.log(Level.WARNING, "NpcStringId: Unknown NSID '" + node.getNodeValue() + "', lang '" + lang + "'.");
-										continue;
-									}
+								}
+								if (nsId == null)
+								{
+									_log.log(Level.WARNING, "NpcStringId: Unknown NSID '" + node.getNodeValue() + "', lang '" + lang + "'.");
+									continue;
 								}
 								
 								node = nnmb.getNamedItem("text");

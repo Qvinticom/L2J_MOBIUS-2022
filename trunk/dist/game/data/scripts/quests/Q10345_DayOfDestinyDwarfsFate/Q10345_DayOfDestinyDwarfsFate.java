@@ -249,13 +249,13 @@ public class Q10345_DayOfDestinyDwarfsFate extends Quest
 					{
 						if (qs.isCond(2))
 						{
-							if (qs.get("" + npc.getId()) == null)
+							if (qs.get("" + npc.getId()) != null)
 							{
-								htmltext = "dead_soldier.html";
+								htmltext = "dead_collect.html";
 							}
 							else
 							{
-								htmltext = "dead_collect.html";
+								htmltext = "dead_soldier.html";
 							}
 						}
 						else if (qs.isCond(3))

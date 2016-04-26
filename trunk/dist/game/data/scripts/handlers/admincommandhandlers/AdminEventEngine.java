@@ -385,12 +385,9 @@ public class AdminEventEngine implements IAdminCommandHandler
 						}
 					}
 				}
-				else
+				else if (activeChar.getTarget() instanceof L2PcInstance)
 				{
-					if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
-					{
-						L2Event.removeAndResetPlayer((L2PcInstance) activeChar.getTarget());
-					}
+					L2Event.removeAndResetPlayer((L2PcInstance) activeChar.getTarget());
 				}
 				showEventControl(activeChar);
 			}
@@ -502,7 +499,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		replyMSG.append("<center><multiedit var=\"txt\" width=270 height=100> <button value=\"Add text\" action=\"bypass -h admin_add $txt\" width=120 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 		replyMSG.append("<button value=\"Remove text\" action=\"bypass -h admin_delete_buffer\" width=120 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 		
-		if (!(tempName.isEmpty() && tempBuffer.isEmpty()))
+		if (!tempName.isEmpty() || !tempBuffer.isEmpty())
 		{
 			replyMSG.append("<br><button value=\"Store Event Data\" action=\"bypass -h admin_event_store\" width=160 height=32 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 		}

@@ -25,5 +25,5 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 
 public interface SpawnListener
 {
-	public void npcSpawned(L2Npc npc);
+	void npcSpawned(L2Npc npc);
 }

@@ -76,12 +76,7 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 	@Override
 	public boolean isOwner(L2PcInstance player)
 	{
-		if (_ownerId == 0)
-		{
-			return false;
-		}
-		
-		return (player.getClanId() == _ownerId) || (player.getObjectId() == _ownerId);
+		return (_ownerId != 0) && ((player.getClanId() == _ownerId) || (player.getObjectId() == _ownerId));
 	}
 	
 	@Override
@@ -121,76 +116,73 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 		{
 			_captain = null;
 		}
-		else
+		else if ((_captain == null) && (player.getAirShip() == this))
 		{
-			if ((_captain == null) && (player.getAirShip() == this))
+			final int x = player.getInVehiclePosition().getX() - 0x16e;
+			final int y = player.getInVehiclePosition().getY();
+			final int z = player.getInVehiclePosition().getZ() - 0x6b;
+			if (((x * x) + (y * y) + (z * z)) > 2500)
 			{
-				final int x = player.getInVehiclePosition().getX() - 0x16e;
-				final int y = player.getInVehiclePosition().getY();
-				final int z = player.getInVehiclePosition().getZ() - 0x6b;
-				if (((x * x) + (y * y) + (z * z)) > 2500)
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR);
-					return false;
-				}
-				// TODO: Missing message ID: 2739 Message: You cannot control the helm because you do not meet the requirements.
-				else if (player.isInCombat())
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_BATTLE);
-					return false;
-				}
-				else if (player.isSitting())
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_SITTING_POSITION);
-					return false;
-				}
-				else if (player.isParalyzed())
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_YOU_ARE_PETRIFIED);
-					return false;
-				}
-				else if (player.isCursedWeaponEquipped())
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
-					return false;
-				}
-				else if (player.isFishing())
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_FISHING);
-					return false;
-				}
-				else if (player.isDead() || player.isFakeDeath())
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHEN_YOU_ARE_DEAD);
-					return false;
-				}
-				else if (player.isCastingNow())
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_USING_A_SKILL);
-					return false;
-				}
-				else if (player.isTransformed())
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_TRANSFORMED);
-					return false;
-				}
-				else if (player.isCombatFlagEquipped())
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_HOLDING_A_FLAG);
-					return false;
-				}
-				else if (player.isInDuel())
-				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_DUEL);
-					return false;
-				}
-				_captain = player;
-				player.broadcastUserInfo();
-			}
-			else
-			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR);
 				return false;
 			}
+			// TODO: Missing message ID: 2739 Message: You cannot control the helm because you do not meet the requirements.
+			else if (player.isInCombat())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_BATTLE);
+				return false;
+			}
+			else if (player.isSitting())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_SITTING_POSITION);
+				return false;
+			}
+			else if (player.isParalyzed())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_YOU_ARE_PETRIFIED);
+				return false;
+			}
+			else if (player.isCursedWeaponEquipped())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
+				return false;
+			}
+			else if (player.isFishing())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_FISHING);
+				return false;
+			}
+			else if (player.isDead() || player.isFakeDeath())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHEN_YOU_ARE_DEAD);
+				return false;
+			}
+			else if (player.isCastingNow())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_USING_A_SKILL);
+				return false;
+			}
+			else if (player.isTransformed())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_TRANSFORMED);
+				return false;
+			}
+			else if (player.isCombatFlagEquipped())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_HOLDING_A_FLAG);
+				return false;
+			}
+			else if (player.isInDuel())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_DUEL);
+				return false;
+			}
+			_captain = player;
+			player.broadcastUserInfo();
+		}
+		else
+		{
+			return false;
 		}
 		updateAbnormalVisualEffects();
 		return true;

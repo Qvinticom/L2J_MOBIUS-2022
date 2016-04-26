@@ -28,5 +28,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface NpcLevelRanges
 {
-	public NpcLevelRange[] value();
+	NpcLevelRange[] value();
 }

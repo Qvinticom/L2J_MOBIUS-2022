@@ -313,7 +313,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			}
 		}
 		
-		_common = ((_itemId >= 11605) && (_itemId <= 12361));
+		_common = (_itemId >= 11605) && (_itemId <= 12361);
 		_heroItem = ((_itemId >= 6611) && (_itemId <= 6621)) || ((_itemId >= 9388) && (_itemId <= 9390)) || (_itemId == 6842);
 		_pvpItem = ((_itemId >= 10667) && (_itemId <= 10835)) || ((_itemId >= 12852) && (_itemId <= 12977)) || ((_itemId >= 14363) && (_itemId <= 14525)) || (_itemId == 14528) || (_itemId == 14529) || (_itemId == 14558) || ((_itemId >= 15913) && (_itemId <= 16024)) || ((_itemId >= 16134) && (_itemId <= 16147)) || (_itemId == 16149) || (_itemId == 16151) || (_itemId == 16153) || (_itemId == 16155) || (_itemId == 16157) || (_itemId == 16159) || ((_itemId >= 16168) && (_itemId <= 16176)) || ((_itemId >= 16179) && (_itemId <= 16220));
 	}
@@ -729,17 +729,17 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	
 	public boolean isPotion()
 	{
-		return (getItemType() == EtcItemType.POTION);
+		return getItemType() == EtcItemType.POTION;
 	}
 	
 	public boolean isElixir()
 	{
-		return (getItemType() == EtcItemType.ELIXIR);
+		return getItemType() == EtcItemType.ELIXIR;
 	}
 	
 	public boolean isScroll()
 	{
-		return (getItemType() == EtcItemType.SCROLL);
+		return getItemType() == EtcItemType.SCROLL;
 	}
 	
 	/**
@@ -870,7 +870,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		}
 		
 		// Don't allow hero equipment and restricted items during Olympiad
-		if ((isOlyRestrictedItem() || isHeroItem()) && ((activeChar instanceof L2PcInstance) && activeChar.getActingPlayer().isInOlympiadMode()))
+		if ((isOlyRestrictedItem() || isHeroItem()) && (activeChar instanceof L2PcInstance) && activeChar.getActingPlayer().isInOlympiadMode())
 		{
 			if (isEquipable())
 			{

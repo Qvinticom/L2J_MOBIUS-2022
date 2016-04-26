@@ -170,7 +170,7 @@ public class GameServerRegister extends BaseGameServerRegister
 			System.out.print("| ");
 			
 			inUse = GameServerTable.getInstance().hasRegisteredGameServerOnId(e.getKey());
-			final String inUseStr = (inUse ? gsInUse : gsFree);
+			final String inUseStr = inUse ? gsInUse : gsFree;
 			System.out.print(inUseStr);
 			
 			for (int i = inUseStr.length(); i < gsStatusMaxLen; i++)
@@ -258,25 +258,22 @@ public class GameServerRegister extends BaseGameServerRegister
 		{
 			System.out.printf("No name for ID: %d" + Config.EOL, id);
 		}
+		else if (GameServerTable.getInstance().hasRegisteredGameServerOnId(id))
+		{
+			System.out.printf("Are you sure you want to remove GameServer %d - %s?" + Config.EOL, id, name);
+			try
+			{
+				BaseGameServerRegister.unregisterGameServer(id);
+				System.out.printf("GameServer ID: %d was successfully removed from LoginServer." + Config.EOL, id);
+			}
+			catch (SQLException e)
+			{
+				showError("An SQL error occurred while trying to remove the GameServer.", e);
+			}
+		}
 		else
 		{
-			if (GameServerTable.getInstance().hasRegisteredGameServerOnId(id))
-			{
-				System.out.printf("Are you sure you want to remove GameServer %d - %s?" + Config.EOL, id, name);
-				try
-				{
-					BaseGameServerRegister.unregisterGameServer(id);
-					System.out.printf("GameServer ID: %d was successfully removed from LoginServer." + Config.EOL, id);
-				}
-				catch (SQLException e)
-				{
-					showError("An SQL error occurred while trying to remove the GameServer.", e);
-				}
-			}
-			else
-			{
-				System.out.printf("No GameServer is registered on ID: %d" + Config.EOL, id);
-			}
+			System.out.printf("No GameServer is registered on ID: %d" + Config.EOL, id);
 		}
 	}
 	
@@ -304,22 +301,19 @@ public class GameServerRegister extends BaseGameServerRegister
 		{
 			System.out.printf("No name for ID: %d" + Config.EOL, id);
 		}
+		else if (GameServerTable.getInstance().hasRegisteredGameServerOnId(id))
+		{
+			System.out.println("This ID is not available.");
+		}
 		else
 		{
-			if (GameServerTable.getInstance().hasRegisteredGameServerOnId(id))
+			try
 			{
-				System.out.println("This ID is not available.");
+				BaseGameServerRegister.registerGameServer(id, ".");
 			}
-			else
+			catch (IOException e)
 			{
-				try
-				{
-					BaseGameServerRegister.registerGameServer(id, ".");
-				}
-				catch (IOException e)
-				{
-					showError("An error saving the hexid file occurred while trying to register the GameServer.", e);
-				}
+				showError("An error saving the hexid file occurred while trying to register the GameServer.", e);
 			}
 		}
 	}

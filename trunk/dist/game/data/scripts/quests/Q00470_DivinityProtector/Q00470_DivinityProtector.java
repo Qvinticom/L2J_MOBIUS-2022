@@ -131,7 +131,7 @@ public class Q00470_DivinityProtector extends Quest
 			}
 			case AGRIPEL:
 			{
-				if ((qs.isCond(2)) && (getQuestItemsCount(player, REMNANT_ASH) >= 20))
+				if (qs.isCond(2) && (getQuestItemsCount(player, REMNANT_ASH) >= 20))
 				{
 					takeItems(player, REMNANT_ASH, 20);
 					giveItems(player, ADENA);

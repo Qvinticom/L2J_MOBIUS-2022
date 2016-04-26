@@ -60,7 +60,7 @@ final class GiantsCave extends AbstractNpcAI
 			
 			for (L2Character characters : npc.getKnownList().getKnownCharactersInRadius(450))
 			{
-				if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
+				if ((characters != null) && characters.isAttackable() && getRandomBoolean())
 				{
 					addAttackDesire((L2Npc) characters, player);
 				}

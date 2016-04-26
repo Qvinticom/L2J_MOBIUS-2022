@@ -75,7 +75,7 @@ public final class TradeDone extends L2GameClientPacket
 				return;
 			}
 			
-			if ((trade.getOwner().hasItemRequest()) || (trade.getPartner().hasItemRequest()))
+			if (trade.getOwner().hasItemRequest() || trade.getPartner().hasItemRequest())
 			{
 				return;
 			}

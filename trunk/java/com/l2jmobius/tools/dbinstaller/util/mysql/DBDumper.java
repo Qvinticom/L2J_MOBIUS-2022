@@ -174,13 +174,13 @@ public class DBDumper
 										fws.print(", ");
 									}
 									
-									if (dset.getString(i) == null)
+									if (dset.getString(i) != null)
 									{
-										fws.print("NULL");
+										fws.print("'" + dset.getString(i).replace("\'", "\\\'") + "'");
 									}
 									else
 									{
-										fws.print("'" + dset.getString(i).replace("\'", "\\\'") + "'");
+										fws.print("NULL");
 									}
 									isInFirst = false;
 								}

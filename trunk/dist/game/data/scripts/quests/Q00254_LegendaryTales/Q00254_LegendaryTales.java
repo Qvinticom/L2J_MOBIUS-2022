@@ -129,37 +129,37 @@ public class Q00254_LegendaryTales extends Quest
 			}
 			case "25718": // Emerald Horn
 			{
-				htmltext = (checkMask(qs, Bosses.EMERALD_HORN) ? "30754-22.html" : "30754-16.html");
+				htmltext = checkMask(qs, Bosses.EMERALD_HORN) ? "30754-22.html" : "30754-16.html";
 				break;
 			}
 			case "25719": // Dust Rider
 			{
-				htmltext = (checkMask(qs, Bosses.DUST_RIDER) ? "30754-23.html" : "30754-17.html");
+				htmltext = checkMask(qs, Bosses.DUST_RIDER) ? "30754-23.html" : "30754-17.html";
 				break;
 			}
 			case "25720": // Bleeding Fly
 			{
-				htmltext = (checkMask(qs, Bosses.BLEEDING_FLY) ? "30754-24.html" : "30754-18.html");
+				htmltext = checkMask(qs, Bosses.BLEEDING_FLY) ? "30754-24.html" : "30754-18.html";
 				break;
 			}
 			case "25721": // Black Dagger Wing
 			{
-				htmltext = (checkMask(qs, Bosses.BLACK_DAGGER) ? "30754-25.html" : "30754-19.html");
+				htmltext = checkMask(qs, Bosses.BLACK_DAGGER) ? "30754-25.html" : "30754-19.html";
 				break;
 			}
 			case "25722": // Shadow Summoner
 			{
-				htmltext = (checkMask(qs, Bosses.SHADOW_SUMMONER) ? "30754-26.html" : "30754-16.html");
+				htmltext = checkMask(qs, Bosses.SHADOW_SUMMONER) ? "30754-26.html" : "30754-16.html";
 				break;
 			}
 			case "25723": // Spike Slasher
 			{
-				htmltext = (checkMask(qs, Bosses.SPIKE_SLASHER) ? "30754-27.html" : "30754-17.html");
+				htmltext = checkMask(qs, Bosses.SPIKE_SLASHER) ? "30754-27.html" : "30754-17.html";
 				break;
 			}
 			case "25724": // Muscle Bomber
 			{
-				htmltext = (checkMask(qs, Bosses.MUSCLE_BOMBER) ? "30754-28.html" : "30754-18.html");
+				htmltext = checkMask(qs, Bosses.MUSCLE_BOMBER) ? "30754-28.html" : "30754-18.html";
 				break;
 			}
 			case "13467": // Vesper Thrower
@@ -208,11 +208,11 @@ public class Q00254_LegendaryTales extends Quest
 				final long count = getQuestItemsCount(player, LARGE_DRAGON_SKULL);
 				if (qs.isCond(1))
 				{
-					htmltext = ((count > 0) ? "30754-14.htm" : "30754-06.html");
+					htmltext = (count > 0) ? "30754-14.htm" : "30754-06.html";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = ((count < 7) ? "30754-12.htm" : "30754-07.html");
+					htmltext = (count < 7) ? "30754-12.htm" : "30754-07.html";
 				}
 				break;
 			}
@@ -272,6 +272,6 @@ public class Q00254_LegendaryTales extends Quest
 	private static boolean checkMask(QuestState qs, Bosses boss)
 	{
 		final int pos = boss.getMask();
-		return ((qs.getInt("raids") & pos) == pos);
+		return (qs.getInt("raids") & pos) == pos;
 	}
 }

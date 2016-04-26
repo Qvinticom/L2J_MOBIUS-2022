@@ -153,7 +153,7 @@ public class EnchantItemData implements IXmlReader
 	 * Gets the single instance of EnchantItemData.
 	 * @return single instance of EnchantItemData
 	 */
-	public static final EnchantItemData getInstance()
+	public static EnchantItemData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

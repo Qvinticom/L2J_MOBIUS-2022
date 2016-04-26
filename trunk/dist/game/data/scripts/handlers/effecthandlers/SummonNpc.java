@@ -155,8 +155,8 @@ public final class SummonNpc extends AbstractEffect
 				int y = player.getY();
 				if (_randomOffset)
 				{
-					x += (Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20));
-					y += (Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20));
+					x += Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20);
+					y += Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20);
 				}
 				
 				spawn.setX(x);

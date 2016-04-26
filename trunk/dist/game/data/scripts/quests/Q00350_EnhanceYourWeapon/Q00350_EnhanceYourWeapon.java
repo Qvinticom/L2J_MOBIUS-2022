@@ -425,12 +425,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			
 			// Fail if the killer isn't in the _absorbersList of this L2Attackable and mob is not boss
 			final AbsorberInfo ai = mob.getAbsorbersList().get(killer.getObjectId());
-			boolean isSuccess = true;
-			if ((ai == null) || (ai.getObjectId() != killer.getObjectId()))
-			{
-				isSuccess = false;
-			}
-			
+			boolean isSuccess = (ai != null) && (ai.getObjectId() == killer.getObjectId());
 			// Check if the soul crystal was used when HP of this L2Attackable wasn't higher than half of it
 			if ((ai != null) && (ai.getAbsorbedHp() > (mob.getMaxHp() / 2.0)))
 			{
@@ -466,8 +461,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			{
 				if (killer.getParty() != null)
 				{
-					final List<L2PcInstance> luckyParty = new ArrayList<>();
-					luckyParty.addAll(killer.getParty().getMembers());
+					final List<L2PcInstance> luckyParty = new ArrayList<>(killer.getParty().getMembers());
 					while ((getRandom(100) < 33) && !luckyParty.isEmpty())
 					{
 						final L2PcInstance lucky = luckyParty.remove(getRandom(luckyParty.size()));

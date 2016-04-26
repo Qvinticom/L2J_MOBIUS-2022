@@ -54,6 +54,6 @@ public class ConditionPlayerCanUntransform extends Condition
 			player.sendPacket(SystemMessageId.YOU_ARE_TOO_HIGH_TO_PERFORM_THIS_ACTION_PLEASE_LOWER_YOUR_ALTITUDE_AND_TRY_AGAIN); // TODO: check if message is retail like.
 			canUntransform = false;
 		}
-		return (_val == canUntransform);
+		return _val == canUntransform;
 	}
 }

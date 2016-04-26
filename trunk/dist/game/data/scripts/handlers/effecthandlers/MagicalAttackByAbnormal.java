@@ -73,12 +73,12 @@ public final class MagicalAttackByAbnormal extends AbstractEffect
 		int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
 		
 		// each buff increase +30%
-		damage *= (((target.getBuffCount() * 0.3) + 1.3) / 4);
+		damage *= ((target.getBuffCount() * 0.3) + 1.3) / 4;
 		
 		if (damage > 0)
 		{
 			// reduce damage if target has maxdamage buff
-			final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			final double maxDamage = target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null);
 			if (maxDamage > 0)
 			{
 				damage = (int) maxDamage;

@@ -123,7 +123,7 @@ public class Q00020_BringUpWithLove extends Quest
 					}
 					case 2:
 					{
-						htmltext = (!hasQuestItems(player, INNOCENCE_JEWEL)) ? "31537-14.html" : "31537-15.html";
+						htmltext = !hasQuestItems(player, INNOCENCE_JEWEL) ? "31537-14.html" : "31537-15.html";
 						break;
 					}
 				}

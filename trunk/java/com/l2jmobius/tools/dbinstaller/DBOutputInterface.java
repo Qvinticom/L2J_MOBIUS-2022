@@ -23,19 +23,19 @@ import java.sql.Connection;
  */
 public interface DBOutputInterface
 {
-	public void setProgressIndeterminate(boolean value);
+	void setProgressIndeterminate(boolean value);
 	
-	public void setProgressMaximum(int maxValue);
+	void setProgressMaximum(int maxValue);
 	
-	public void setProgressValue(int value);
+	void setProgressValue(int value);
 	
-	public void setFrameVisible(boolean value);
+	void setFrameVisible(boolean value);
 	
-	public void appendToProgressArea(String text);
+	void appendToProgressArea(String text);
 	
-	public Connection getConnection();
+	Connection getConnection();
 	
-	public int requestConfirm(String title, String message, int type);
+	int requestConfirm(String title, String message, int type);
 	
-	public void showMessage(String title, String message, int type);
+	void showMessage(String title, String message, int type);
 }

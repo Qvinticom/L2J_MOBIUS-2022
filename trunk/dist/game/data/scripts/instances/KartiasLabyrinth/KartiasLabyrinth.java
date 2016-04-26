@@ -216,7 +216,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 			}
 			case "request_zellaka_party":
 			{
-				if ((player.getParty() == null) || (!player.getParty().isLeader(player)))
+				if ((player.getParty() == null) || !player.getParty().isLeader(player))
 				{
 					htmltext = "33647-7.htm";
 				}
@@ -242,7 +242,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 			}
 			case "request_pelline_party":
 			{
-				if ((player.getParty() == null) || (!player.getParty().isLeader(player)))
+				if ((player.getParty() == null) || !player.getParty().isLeader(player))
 				{
 					htmltext = "33647-7.htm";
 				}
@@ -268,7 +268,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 			}
 			case "request_kalios_party":
 			{
-				if ((player.getParty() == null) || (!player.getParty().isLeader(player)))
+				if ((player.getParty() == null) || !player.getParty().isLeader(player))
 				{
 					htmltext = "33647-7.htm";
 				}
@@ -732,11 +732,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 		entryResetTime.set(Calendar.HOUR, 6);
 		entryResetTime.set(Calendar.MINUTE, 30);
 		entryResetTime.set(Calendar.AM_PM, Calendar.AM);
-		if (lastEntry < entryResetTime.getTimeInMillis())
-		{
-			return true;
-		}
-		return false;
+		return lastEntry < entryResetTime.getTimeInMillis();
 	}
 	
 	private String removeVanguard(L2PcInstance player, int removedNpcId)

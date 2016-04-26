@@ -183,22 +183,19 @@ public class PcStat extends PlayableStat
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_XP);
 			sm.addLong(addToExp);
 		}
+		else if (addToExp > baseExp)
+		{
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
+			sm.addLong(addToExp);
+			sm.addLong(addToExp - baseExp);
+			sm.addLong(addToSp);
+			sm.addLong(addToSp - baseSp);
+		}
 		else
 		{
-			if (addToExp > baseExp)
-			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
-				sm.addLong(addToExp);
-				sm.addLong(addToExp - baseExp);
-				sm.addLong(addToSp);
-				sm.addLong(addToSp - baseSp);
-			}
-			else
-			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_XP_AND_S2_SP);
-				sm.addLong(addToExp);
-				sm.addLong(addToSp);
-			}
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_XP_AND_S2_SP);
+			sm.addLong(addToExp);
+			sm.addLong(addToSp);
 		}
 		activeChar.sendPacket(sm);
 		return true;
@@ -765,12 +762,12 @@ public class PcStat extends PlayableStat
 		
 		if (vitality > 1.0)
 		{
-			bonus += (vitality - 1);
+			bonus += vitality - 1;
 		}
 		
 		if (bonusExp > 1)
 		{
-			bonus += (bonusExp - 1);
+			bonus += bonusExp - 1;
 		}
 		
 		// Check for abnormal bonuses
@@ -794,12 +791,12 @@ public class PcStat extends PlayableStat
 		
 		if (vitality > 1.0)
 		{
-			bonus += (vitality - 1);
+			bonus += vitality - 1;
 		}
 		
 		if (bonusSp > 1)
 		{
-			bonus += (bonusSp - 1);
+			bonus += bonusSp - 1;
 		}
 		
 		// Check for abnormal bonuses

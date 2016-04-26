@@ -84,7 +84,7 @@ public class Q00700_CursedLife extends Quest
 				case "32560-02.htm":
 				{
 					qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-					htmltext = ((player.getLevel() < MIN_LVL) || (qs == null) || (!qs.isCompleted())) ? "32560-03.htm" : event;
+					htmltext = ((player.getLevel() < MIN_LVL) || (qs == null) || !qs.isCompleted()) ? "32560-03.htm" : event;
 					break;
 				}
 				case "32560-04.htm":
@@ -132,7 +132,7 @@ public class Q00700_CursedLife extends Quest
 					final long sum = bones + ribs + skulls;
 					if (sum > 0)
 					{
-						giveAdena(player, ((bones * SWALLOWED_BONES_ADENA) + (ribs * SWALLOWED_STERNUM_ADENA) + (skulls * SWALLOWED_SKULL_ADENA) + (sum >= 10 ? BONUS : 0)), true);
+						giveAdena(player, (bones * SWALLOWED_BONES_ADENA) + (ribs * SWALLOWED_STERNUM_ADENA) + (skulls * SWALLOWED_SKULL_ADENA) + (sum >= 10 ? BONUS : 0), true);
 						takeItems(player, -1, SWALLOWED_BONES, SWALLOWED_STERNUM, SWALLOWED_SKULL);
 						htmltext = sum < 10 ? "32560-07.html" : "32560-08.html";
 					}

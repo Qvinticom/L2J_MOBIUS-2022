@@ -285,36 +285,33 @@ public final class WalkingManager implements IXmlReader
 					ThreadPoolManager.getInstance().scheduleGeneral(new StartMovingTask(npc, routeName), 60000);
 				}
 			}
-			else
 			// walk was stopped due to some reason (arrived to node, script action, fight or something else), resume it
+			else if (_activeRoutes.containsKey(npc.getObjectId()) && ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)))
 			{
-				if (_activeRoutes.containsKey(npc.getObjectId()) && ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)))
+				final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
+				if (walk == null)
 				{
-					final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-					if (walk == null)
-					{
-						return;
-					}
-					
-					// Prevent call simultaneously from scheduled task and onArrived() or temporarily stop walking for resuming in future
-					if (walk.isBlocked() || walk.isSuspended())
-					{
-						npc.sendDebugMessage("Failed to continue moving along route '" + routeName + "' (operation is blocked)");
-						return;
-					}
-					
-					walk.setBlocked(true);
-					final L2NpcWalkerNode node = walk.getCurrentNode();
-					npc.sendDebugMessage("Route '" + routeName + "', continuing to node " + walk.getCurrentNodeId());
-					npc.setIsRunning(node.runToLocation());
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
-					walk.setBlocked(false);
-					walk.setStoppedByAttack(false);
+					return;
 				}
-				else
+				
+				// Prevent call simultaneously from scheduled task and onArrived() or temporarily stop walking for resuming in future
+				if (walk.isBlocked() || walk.isSuspended())
 				{
-					npc.sendDebugMessage("Failed to continue moving along route '" + routeName + "' (wrong AI state - " + npc.getAI().getIntention() + ")");
+					npc.sendDebugMessage("Failed to continue moving along route '" + routeName + "' (operation is blocked)");
+					return;
 				}
+				
+				walk.setBlocked(true);
+				final L2NpcWalkerNode node = walk.getCurrentNode();
+				npc.sendDebugMessage("Route '" + routeName + "', continuing to node " + walk.getCurrentNodeId());
+				npc.setIsRunning(node.runToLocation());
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
+				walk.setBlocked(false);
+				walk.setStoppedByAttack(false);
+			}
+			else
+			{
+				npc.sendDebugMessage("Failed to continue moving along route '" + routeName + "' (wrong AI state - " + npc.getAI().getIntention() + ")");
 			}
 		}
 	}
@@ -455,7 +452,7 @@ public final class WalkingManager implements IXmlReader
 		}
 	}
 	
-	public static final WalkingManager getInstance()
+	public static WalkingManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

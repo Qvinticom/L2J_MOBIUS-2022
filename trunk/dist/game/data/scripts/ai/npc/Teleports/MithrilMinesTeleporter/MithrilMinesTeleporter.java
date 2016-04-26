@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
 final class MithrilMinesTeleporter extends AbstractNpcAI
 {
 	// NPC
-	private final static int TELEPORT_CRYSTAL = 32652;
+	private static final int TELEPORT_CRYSTAL = 32652;
 	// Location
 	private static final Location[] LOCS =
 	{

@@ -340,7 +340,7 @@ public final class Q00386_StolenDignity extends Quest
 		for (int i0 = 0; i0 < 9; i0 = i0 + 1)
 		{
 			final int i1 = getNumberFromBingoBoard(qs, i0);
-			html = html.replace("<?FontColor" + (i0 + 1) + "?>", (isSelectedBingoNumber(qs, i1)) ? "ff0000" : "ffffff");
+			html = html.replace("<?FontColor" + (i0 + 1) + "?>", isSelectedBingoNumber(qs, i1) ? "ff0000" : "ffffff");
 			html = html.replace("<?Cell" + (i0 + 1) + "?>", i1 + "");
 		}
 		return html;
@@ -353,7 +353,7 @@ public final class Q00386_StolenDignity extends Quest
 			selectBingoNumber(qs, num);
 			final int i3 = getMatchedBingoLineCount(qs);
 			String html;
-			if ((i3 == 3) && ((getBingoSelectCount(qs)) == 6))
+			if ((i3 == 3) && (getBingoSelectCount(qs) == 6))
 			{
 				reward(player, qs, 4);
 				html = getHtm(player.getHtmlPrefix(), "30843-22.html");

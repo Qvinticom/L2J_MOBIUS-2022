@@ -80,7 +80,7 @@ public class L2RaidBossInstance extends L2MonsterInstance
 			{
 				for (L2PcInstance member : player.getParty().getMembers())
 				{
-					member.setRaidPoints(member.getRaidPoints() + ((getLevel() / 2) + Rnd.get(-5, 5)));
+					member.setRaidPoints(member.getRaidPoints() + (getLevel() / 2) + Rnd.get(-5, 5));
 					if (member.isNoble())
 					{
 						Hero.getInstance().setRBkilled(member.getObjectId(), getId());
@@ -89,7 +89,7 @@ public class L2RaidBossInstance extends L2MonsterInstance
 			}
 			else
 			{
-				player.setRaidPoints(player.getRaidPoints() + ((getLevel() / 2) + Rnd.get(-5, 5)));
+				player.setRaidPoints(player.getRaidPoints() + (getLevel() / 2) + Rnd.get(-5, 5));
 				if (player.isNoble())
 				{
 					Hero.getInstance().setRBkilled(player.getObjectId(), getId());

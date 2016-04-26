@@ -142,13 +142,13 @@ public class Q10274_CollectingInTheAir extends Quest
 			case State.CREATED:
 			{
 				qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-				if (qs == null)
+				if (qs != null)
 				{
-					htmltext = "32557-00.html";
+					htmltext = ((player.getLevel() >= 75) && qs.isCompleted()) ? "32557-01.htm" : "32557-00.html";
 				}
 				else
 				{
-					htmltext = ((player.getLevel() >= 75) && qs.isCompleted()) ? "32557-01.htm" : "32557-00.html";
+					htmltext = "32557-00.html";
 				}
 				break;
 			}

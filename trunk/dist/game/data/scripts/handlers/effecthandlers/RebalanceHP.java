@@ -73,7 +73,7 @@ public final class RebalanceHP extends AbstractEffect
 			}
 			
 			final L2Summon summon = member.getPet();
-			if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
+			if ((summon != null) && !summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
 			{
 				fullHP += summon.getMaxHp();
 				currentHPs += summon.getCurrentHp();
@@ -106,7 +106,7 @@ public final class RebalanceHP extends AbstractEffect
 				member.setCurrentHp(newHP);
 			}
 			final L2Summon summon = member.getPet();
-			if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
+			if ((summon != null) && !summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
 			{
 				double newHP = (summon.getMaxHp() * currentHPs) / fullHP;
 				if (newHP > summon.getCurrentHp()) // The target gets healed

@@ -112,7 +112,7 @@ public final class RequestSellItem extends L2GameClientPacket
 		L2Character merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			if ((target == null) || (!player.isInsideRadius(target, INTERACTION_DISTANCE, true, false)) || (player.getInstanceId() != target.getInstanceId()))
+			if ((target == null) || !player.isInsideRadius(target, INTERACTION_DISTANCE, true, false) || (player.getInstanceId() != target.getInstanceId()))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
@@ -152,7 +152,7 @@ public final class RequestSellItem extends L2GameClientPacket
 		for (UniqueItemHolder i : _items)
 		{
 			L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
-			if ((item == null) || (!item.isSellable()))
+			if ((item == null) || !item.isSellable())
 			{
 				continue;
 			}

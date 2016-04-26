@@ -464,7 +464,7 @@ public class FortSiege implements Siegable
 	 */
 	public boolean checkIfInZone(int x, int y, int z)
 	{
-		return (isInProgress() && (getFort().checkIfInZone(x, y, z))); // Fort zone during siege
+		return isInProgress() && getFort().checkIfInZone(x, y, z); // Fort zone during siege
 	}
 	
 	/**
@@ -474,7 +474,7 @@ public class FortSiege implements Siegable
 	@Override
 	public boolean checkIsAttacker(L2Clan clan)
 	{
-		return (getAttackerClan(clan) != null);
+		return getAttackerClan(clan) != null;
 	}
 	
 	/**

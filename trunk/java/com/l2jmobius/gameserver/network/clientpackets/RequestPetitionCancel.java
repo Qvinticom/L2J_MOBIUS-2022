@@ -66,30 +66,27 @@ public final class RequestPetitionCancel extends L2GameClientPacket
 				activeChar.sendPacket(SystemMessageId.YOUR_PETITION_IS_BEING_PROCESSED);
 			}
 		}
-		else
+		else if (PetitionManager.getInstance().isPlayerPetitionPending(activeChar))
 		{
-			if (PetitionManager.getInstance().isPlayerPetitionPending(activeChar))
+			if (PetitionManager.getInstance().cancelActivePetition(activeChar))
 			{
-				if (PetitionManager.getInstance().cancelActivePetition(activeChar))
-				{
-					final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar);
-					
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITION_S_TODAY);
-					sm.addString(String.valueOf(numRemaining));
-					activeChar.sendPacket(sm);
-					
-					// Notify all GMs that the player's pending petition has been cancelled.
-					AdminData.getInstance().broadcastToGMs(new CreatureSay(activeChar.getObjectId(), ChatType.HERO_VOICE, "Petition System", (activeChar.getName() + " has canceled a pending petition.")));
-				}
-				else
-				{
-					activeChar.sendPacket(SystemMessageId.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER);
-				}
+				final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar);
+				
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITION_S_TODAY);
+				sm.addString(String.valueOf(numRemaining));
+				activeChar.sendPacket(sm);
+				
+				// Notify all GMs that the player's pending petition has been cancelled.
+				AdminData.getInstance().broadcastToGMs(new CreatureSay(activeChar.getObjectId(), ChatType.HERO_VOICE, "Petition System", (activeChar.getName() + " has canceled a pending petition.")));
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_HAVE_NOT_SUBMITTED_A_PETITION);
+				activeChar.sendPacket(SystemMessageId.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER);
 			}
+		}
+		else
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_HAVE_NOT_SUBMITTED_A_PETITION);
 		}
 	}
 	

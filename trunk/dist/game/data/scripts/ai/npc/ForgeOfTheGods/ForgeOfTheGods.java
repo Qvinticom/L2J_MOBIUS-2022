@@ -135,33 +135,29 @@ final class ForgeOfTheGods extends AbstractNpcAI
 				mob = spawnLavasaurus(npc, rand, LAVASAURUSES[2], LAVASAURUSES[1]);
 			}
 		}
-		else
-		// if (_npcsAlive < 32)
+		else if ((_npcCount > BONUS_UPPER_LV05) && (rand <= FORGE_BONUS02))
 		{
-			if ((_npcCount > BONUS_UPPER_LV05) && (rand <= FORGE_BONUS02))
-			{
-				mob = addSpawn(LAVASAURUSES[1], npc, true);
-			}
-			else if (_npcCount > BONUS_UPPER_LV04)
-			{
-				mob = spawnLavasaurus(npc, rand, LAVASAURUSES[4], LAVASAURUSES[3]);
-			}
-			else if (_npcCount > BONUS_UPPER_LV03)
-			{
-				mob = spawnLavasaurus(npc, rand, LAVASAURUSES[3], LAVASAURUSES[2]);
-			}
-			else if (_npcCount > BONUS_UPPER_LV02)
-			{
-				mob = spawnLavasaurus(npc, rand, LAVASAURUSES[2], LAVASAURUSES[1]);
-			}
-			else if (_npcCount > BONUS_UPPER_LV01)
-			{
-				mob = spawnLavasaurus(npc, rand, LAVASAURUSES[1], LAVASAURUSES[0]);
-			}
-			else if ((_npcCount >= MOBCOUNT_BONUS_MIN) && (rand <= FORGE_BONUS01))
-			{
-				mob = addSpawn(LAVASAURUSES[0], npc, true);
-			}
+			mob = addSpawn(LAVASAURUSES[1], npc, true);
+		}
+		else if (_npcCount > BONUS_UPPER_LV04)
+		{
+			mob = spawnLavasaurus(npc, rand, LAVASAURUSES[4], LAVASAURUSES[3]);
+		}
+		else if (_npcCount > BONUS_UPPER_LV03)
+		{
+			mob = spawnLavasaurus(npc, rand, LAVASAURUSES[3], LAVASAURUSES[2]);
+		}
+		else if (_npcCount > BONUS_UPPER_LV02)
+		{
+			mob = spawnLavasaurus(npc, rand, LAVASAURUSES[2], LAVASAURUSES[1]);
+		}
+		else if (_npcCount > BONUS_UPPER_LV01)
+		{
+			mob = spawnLavasaurus(npc, rand, LAVASAURUSES[1], LAVASAURUSES[0]);
+		}
+		else if ((_npcCount >= MOBCOUNT_BONUS_MIN) && (rand <= FORGE_BONUS01))
+		{
+			mob = addSpawn(LAVASAURUSES[0], npc, true);
 		}
 		if (mob != null)
 		{

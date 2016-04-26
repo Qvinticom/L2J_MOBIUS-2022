@@ -78,7 +78,7 @@ public abstract class AbstractEffect
 	 * @param params the parameters
 	 * @return the new effect
 	 */
-	public static final AbstractEffect createEffect(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public static AbstractEffect createEffect(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		final String name = set.getString("name");
 		final Class<? extends AbstractEffect> handler = EffectHandler.getInstance().getHandler(name);

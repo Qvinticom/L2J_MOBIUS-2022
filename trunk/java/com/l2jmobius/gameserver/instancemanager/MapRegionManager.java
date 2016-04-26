@@ -258,7 +258,7 @@ public final class MapRegionManager implements IXmlReader
 					if (castle == null)
 					{
 						castle = CastleManager.getInstance().getCastle(player);
-						if (!((castle != null) && castle.getSiege().isInProgress() && (castle.getSiege().getDefenderClan(player.getClan()) != null)))
+						if ((castle == null) || !castle.getSiege().isInProgress() || (castle.getSiege().getDefenderClan(player.getClan()) == null))
 						{
 							castle = null;
 						}
@@ -279,7 +279,7 @@ public final class MapRegionManager implements IXmlReader
 					if (fort == null)
 					{
 						fort = FortManager.getInstance().getFort(player);
-						if (!((fort != null) && fort.getSiege().isInProgress() && (fort.getOwnerClan() == player.getClan())))
+						if ((fort == null) || !fort.getSiege().isInProgress() || (fort.getOwnerClan() != player.getClan()))
 						{
 							fort = null;
 						}
@@ -406,7 +406,7 @@ public final class MapRegionManager implements IXmlReader
 	{
 		try
 		{
-			final L2PcInstance player = ((L2PcInstance) activeChar);
+			final L2PcInstance player = (L2PcInstance) activeChar;
 			final L2MapRegion region = _regions.get(point);
 			
 			if (region.getBannedRace().containsKey(player.getRace()))

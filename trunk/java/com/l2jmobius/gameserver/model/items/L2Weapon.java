@@ -331,7 +331,7 @@ public final class L2Weapon extends L2Item
 	 */
 	public void castOnCriticalSkill(L2Character caster, L2Character target)
 	{
-		if ((_skillsOnCrit == null))
+		if (_skillsOnCrit == null)
 		{
 			return;
 		}

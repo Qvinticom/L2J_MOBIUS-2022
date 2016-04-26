@@ -131,7 +131,7 @@ public class Q10764_FreeSpirit extends Quest
 		{
 			case VORBOS:
 			{
-				if (qs.isCreated() && ((player.getLevel() >= MIN_LEVEL)))
+				if (qs.isCreated() && (player.getLevel() >= MIN_LEVEL))
 				{
 					htmltext = "33966-01.htm";
 				}

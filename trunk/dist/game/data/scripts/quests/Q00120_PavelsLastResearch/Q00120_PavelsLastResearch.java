@@ -1203,12 +1203,9 @@ public final class Q00120_PavelsLastResearch extends Quest
 						}
 					}
 				}
-				else
+				else if (checkQ114(player))
 				{
-					if (checkQ114(player))
-					{
-						html = getAlreadyCompletedMsg(player);
-					}
+					html = getAlreadyCompletedMsg(player);
 				}
 				break;
 			}
@@ -1476,6 +1473,6 @@ public final class Q00120_PavelsLastResearch extends Quest
 	private static boolean checkQ114(L2PcInstance player)
 	{
 		final QuestState q114 = player.getQuestState(Q00114_ResurrectionOfAnOldManager.class.getSimpleName());
-		return ((q114 != null) && q114.isCompleted());
+		return (q114 != null) && q114.isCompleted();
 	}
 }

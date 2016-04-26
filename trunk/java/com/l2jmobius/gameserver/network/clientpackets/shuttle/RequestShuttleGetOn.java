@@ -53,7 +53,7 @@ public class RequestShuttleGetOn extends L2GameClientPacket
 		// TODO: better way?
 		for (L2Object obj : activeChar.getKnownList().getKnownObjects().values())
 		{
-			if ((obj instanceof L2ShuttleInstance))
+			if (obj instanceof L2ShuttleInstance)
 			{
 				final L2ShuttleInstance shuttle = (L2ShuttleInstance) obj;
 				if (shuttle.calculateDistance(activeChar, false, false) < 1000)

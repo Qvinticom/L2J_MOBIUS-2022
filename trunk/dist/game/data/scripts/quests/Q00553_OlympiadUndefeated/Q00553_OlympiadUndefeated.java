@@ -96,7 +96,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 			}
 			
 			final QuestState qs = getQuestState(player, false);
-			if ((qs != null) && qs.isStarted() && (qs.isCond(1)))
+			if ((qs != null) && qs.isStarted() && qs.isCond(1))
 			{
 				final int matches = qs.getInt("undefeatable") + 1;
 				qs.set("undefeatable", String.valueOf(matches));
@@ -140,7 +140,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 			}
 			
 			final QuestState qs = getQuestState(player, false);
-			if ((qs != null) && qs.isStarted() && (qs.isCond(1)))
+			if ((qs != null) && qs.isStarted() && qs.isCond(1))
 			{
 				qs.unset("undefeatable");
 				takeItems(player, WIN_CONF_2, -1);

@@ -56,7 +56,7 @@ public class Unstuck implements IUserCommandHandler
 			return false;
 		}
 		
-		final int unstuckTimer = (activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
+		final int unstuckTimer = activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000;
 		
 		if (activeChar.isInOlympiadMode())
 		{
@@ -87,16 +87,13 @@ public class Unstuck implements IUserCommandHandler
 			activeChar.doCast(escape);
 			return true;
 		}
+		else if (Config.UNSTUCK_INTERVAL > 100)
+		{
+			activeChar.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
+		}
 		else
 		{
-			if (Config.UNSTUCK_INTERVAL > 100)
-			{
-				activeChar.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
-			}
-			else
-			{
-				activeChar.sendMessage("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
-			}
+			activeChar.sendMessage("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
 		}
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		// SoE Animation section

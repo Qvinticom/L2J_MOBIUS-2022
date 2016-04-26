@@ -525,10 +525,10 @@ public class AugmentationData
 		int stat34 = 0;
 		if (Config.RETAIL_LIKE_AUGMENTATION)
 		{
+			final List<AugmentationChance> _selectedChances12 = new ArrayList<>();
+			final List<AugmentationChance> _selectedChances34 = new ArrayList<>();
 			if (item.getItem().isMagicWeapon())
 			{
-				final List<AugmentationChance> _selectedChances12 = new ArrayList<>();
-				final List<AugmentationChance> _selectedChances34 = new ArrayList<>();
 				for (AugmentationChance ac : _augmentationChances)
 				{
 					if (ac.getWeaponType().equals("mage") && (ac.getStoneId() == lifeStoneId))
@@ -543,87 +543,9 @@ public class AugmentationData
 						}
 					}
 				}
-				int r = Rnd.get(10000);
-				float s = 10000;
-				for (AugmentationChance ac : _selectedChances12)
-				{
-					if (s > r)
-					{
-						s -= (ac.getAugmentChance() * 100);
-						stat12 = ac.getAugmentId();
-					}
-				}
-				int[] gradeChance = null;
-				switch (lifeStoneGrade)
-				{
-					case AbstractRefinePacket.GRADE_NONE:
-					{
-						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
-						break;
-					}
-					case AbstractRefinePacket.GRADE_MID:
-					{
-						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_MID_CHANCE;
-						break;
-					}
-					case AbstractRefinePacket.GRADE_HIGH:
-					{
-						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE;
-						break;
-					}
-					case AbstractRefinePacket.GRADE_TOP:
-					{
-						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_TOP_CHANCE;
-						break;
-					}
-					default:
-					{
-						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
-					}
-				}
-				
-				int c = Rnd.get(100);
-				if (c < gradeChance[0])
-				{
-					c = 55;
-				}
-				else if (c < (gradeChance[0] + gradeChance[1]))
-				{
-					c = 35;
-				}
-				else if (c < (gradeChance[0] + gradeChance[1] + gradeChance[2]))
-				{
-					c = 7;
-				}
-				else
-				{
-					c = 3;
-				}
-				final List<AugmentationChance> _selectedChances34final = new ArrayList<>();
-				for (AugmentationChance ac : _selectedChances34)
-				{
-					if (ac.getCategoryChance() == c)
-					{
-						_selectedChances34final.add(ac);
-					}
-				}
-				
-				r = Rnd.get(10000);
-				s = 10000;
-				
-				for (AugmentationChance ac : _selectedChances34final)
-				{
-					if (s > r)
-					{
-						s -= (ac.getAugmentChance() * 100);
-						stat34 = ac.getAugmentId();
-					}
-				}
 			}
 			else
 			{
-				final List<AugmentationChance> _selectedChances12 = new ArrayList<>();
-				final List<AugmentationChance> _selectedChances34 = new ArrayList<>();
 				for (AugmentationChance ac : _augmentationChances)
 				{
 					if (ac.getWeaponType().equals("warrior") && (ac.getStoneId() == lifeStoneId))
@@ -638,79 +560,78 @@ public class AugmentationData
 						}
 					}
 				}
-				int r = Rnd.get(10000);
-				float s = 10000;
-				for (AugmentationChance ac : _selectedChances12)
+			}
+			int r = Rnd.get(10000);
+			float s = 10000;
+			for (AugmentationChance ac : _selectedChances12)
+			{
+				if (s > r)
 				{
-					if (s > r)
-					{
-						s -= (ac.getAugmentChance() * 100);
-						stat12 = ac.getAugmentId();
-					}
+					s -= ac.getAugmentChance() * 100;
+					stat12 = ac.getAugmentId();
 				}
-				int[] gradeChance = null;
-				switch (lifeStoneGrade)
+			}
+			int[] gradeChance = null;
+			switch (lifeStoneGrade)
+			{
+				case AbstractRefinePacket.GRADE_NONE:
 				{
-					case AbstractRefinePacket.GRADE_NONE:
-					{
-						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
-						break;
-					}
-					case AbstractRefinePacket.GRADE_MID:
-					{
-						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_MID_CHANCE;
-						break;
-					}
-					case AbstractRefinePacket.GRADE_HIGH:
-					{
-						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE;
-						break;
-					}
-					case AbstractRefinePacket.GRADE_TOP:
-					{
-						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_TOP_CHANCE;
-						break;
-					}
-					default:
-					{
-						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
-					}
+					gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
+					break;
 				}
-				
-				int c = Rnd.get(100);
-				if (c < gradeChance[0])
+				case AbstractRefinePacket.GRADE_MID:
 				{
-					c = 55;
+					gradeChance = Config.RETAIL_LIKE_AUGMENTATION_MID_CHANCE;
+					break;
 				}
-				else if (c < (gradeChance[0] + gradeChance[1]))
+				case AbstractRefinePacket.GRADE_HIGH:
 				{
-					c = 35;
+					gradeChance = Config.RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE;
+					break;
 				}
-				else if (c < (gradeChance[0] + gradeChance[1] + gradeChance[2]))
+				case AbstractRefinePacket.GRADE_TOP:
 				{
-					c = 7;
+					gradeChance = Config.RETAIL_LIKE_AUGMENTATION_TOP_CHANCE;
+					break;
 				}
-				else
+				default:
 				{
-					c = 3;
+					gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
 				}
-				final List<AugmentationChance> _selectedChances34final = new ArrayList<>();
-				for (AugmentationChance ac : _selectedChances34)
+			}
+			int c = Rnd.get(100);
+			if (c < gradeChance[0])
+			{
+				c = 55;
+			}
+			else if (c < (gradeChance[0] + gradeChance[1]))
+			{
+				c = 35;
+			}
+			else if (c < (gradeChance[0] + gradeChance[1] + gradeChance[2]))
+			{
+				c = 7;
+			}
+			else
+			{
+				c = 3;
+			}
+			final List<AugmentationChance> _selectedChances34final = new ArrayList<>();
+			for (AugmentationChance ac : _selectedChances34)
+			{
+				if (ac.getCategoryChance() == c)
 				{
-					if (ac.getCategoryChance() == c)
-					{
-						_selectedChances34final.add(ac);
-					}
+					_selectedChances34final.add(ac);
 				}
-				r = Rnd.get(10000);
-				s = 10000;
-				for (AugmentationChance ac : _selectedChances34final)
+			}
+			r = Rnd.get(10000);
+			s = 10000;
+			for (AugmentationChance ac : _selectedChances34final)
+			{
+				if (s > r)
 				{
-					if (s > r)
-					{
-						s -= (ac.getAugmentChance() * 100);
-						stat34 = ac.getAugmentId();
-					}
+					s -= ac.getAugmentChance() * 100;
+					stat34 = ac.getAugmentId();
 				}
 			}
 			return new L2Augmentation(((stat34 << 16) + stat12));
@@ -802,20 +723,17 @@ public class AugmentationData
 				resultColor = 0;
 			}
 		}
+		else if ((resultColor <= ((10 * lifeStoneGrade) + 5)) || (stat34 != 0))
+		{
+			resultColor = 3;
+		}
+		else if (resultColor <= ((10 * lifeStoneGrade) + 10))
+		{
+			resultColor = 1;
+		}
 		else
 		{
-			if ((resultColor <= ((10 * lifeStoneGrade) + 5)) || (stat34 != 0))
-			{
-				resultColor = 3;
-			}
-			else if (resultColor <= ((10 * lifeStoneGrade) + 10))
-			{
-				resultColor = 1;
-			}
-			else
-			{
-				resultColor = 2;
-			}
+			resultColor = 2;
 		}
 		
 		// generate a skill if necessary
@@ -866,29 +784,26 @@ public class AugmentationData
 		if (stat34 == 0)
 		{
 			final int temp = Rnd.get(2, 3);
-			final int colorOffset = (resultColor * (10 * STAT_SUBBLOCKSIZE)) + (temp * STAT_BLOCKSIZE) + 1;
+			final int colorOffset = (resultColor * 10 * STAT_SUBBLOCKSIZE) + (temp * STAT_BLOCKSIZE) + 1;
 			offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + colorOffset;
 			
 			stat34 = Rnd.get(offset, (offset + STAT_SUBBLOCKSIZE) - 1);
 			if (generateGlow && (lifeStoneGrade >= 2))
 			{
-				offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + ((temp - 2) * STAT_BLOCKSIZE) + (lifeStoneGrade * (10 * STAT_SUBBLOCKSIZE)) + 1;
+				offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + ((temp - 2) * STAT_BLOCKSIZE) + (lifeStoneGrade * 10 * STAT_SUBBLOCKSIZE) + 1;
 			}
 			else
 			{
-				offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + ((temp - 2) * STAT_BLOCKSIZE) + (Rnd.get(0, 1) * (10 * STAT_SUBBLOCKSIZE)) + 1;
+				offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + ((temp - 2) * STAT_BLOCKSIZE) + (Rnd.get(0, 1) * 10 * STAT_SUBBLOCKSIZE) + 1;
 			}
+		}
+		else if (!generateGlow)
+		{
+			offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + (Rnd.get(0, 1) * STAT_BLOCKSIZE) + 1;
 		}
 		else
 		{
-			if (!generateGlow)
-			{
-				offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + (Rnd.get(0, 1) * STAT_BLOCKSIZE) + 1;
-			}
-			else
-			{
-				offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + (Rnd.get(0, 1) * STAT_BLOCKSIZE) + (((lifeStoneGrade + resultColor) / 2) * (10 * STAT_SUBBLOCKSIZE)) + 1;
-			}
+			offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + (Rnd.get(0, 1) * STAT_BLOCKSIZE) + (((lifeStoneGrade + resultColor) / 2) * 10 * STAT_SUBBLOCKSIZE) + 1;
 		}
 		stat12 = Rnd.get(offset, (offset + STAT_SUBBLOCKSIZE) - 1);
 		
@@ -927,7 +842,7 @@ public class AugmentationData
 			{
 				if (s > r)
 				{
-					s -= (ac.getAugmentChance() * 100);
+					s -= ac.getAugmentChance() * 100;
 					stat12 = ac.getAugmentId();
 				}
 			}
@@ -962,7 +877,7 @@ public class AugmentationData
 			{
 				if (s > r)
 				{
-					s -= (ac.getAugmentChance() * 100);
+					s -= ac.getAugmentChance() * 100;
 					stat34 = ac.getAugmentId();
 				}
 			}
@@ -1031,7 +946,7 @@ public class AugmentationData
 		return new L2Augmentation(((stat34 << 16) + stat12));
 	}
 	
-	public static final AugmentationData getInstance()
+	public static AugmentationData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

@@ -138,7 +138,7 @@ public class CharStatus
 		}
 		
 		// invul handling
-		if ((getActiveChar().isInvul() || getActiveChar().isHpBlocked()) && !(isDOT || isHPConsumption))
+		if ((getActiveChar().isInvul() || getActiveChar().isHpBlocked()) && !isDOT && !isHPConsumption)
 		{
 			return;
 		}

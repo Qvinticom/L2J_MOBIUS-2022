@@ -21,5 +21,5 @@ package com.l2jmobius.gameserver.model.interfaces;
  */
 public interface ISpawnable
 {
-	public boolean spawnMe();
+	boolean spawnMe();
 }

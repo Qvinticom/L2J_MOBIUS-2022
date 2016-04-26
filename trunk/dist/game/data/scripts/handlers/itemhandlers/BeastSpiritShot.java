@@ -68,7 +68,7 @@ public class BeastSpiritShot implements IItemHandler
 		}
 		
 		final int itemId = item.getId();
-		final boolean isBlessed = ((itemId == 6647) || (itemId == 20334)); // TODO: Unhardcode these!
+		final boolean isBlessed = (itemId == 6647) || (itemId == 20334); // TODO: Unhardcode these!
 		final SkillHolder[] skills = item.getItem().getSkills();
 		
 		final ShotType shotType = isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS;
@@ -119,15 +119,15 @@ public class BeastSpiritShot implements IItemHandler
 		{
 			pet.setChargedShot(shotType, true);
 			// Visual effect change if player has equipped Sapphire lvl 3 or higher
-			if ((activeOwner.getInventory().getItemByItemId(38931) != null) && (activeOwner.getInventory().getItemByItemId(38931).isEquipped()))
+			if ((activeOwner.getInventory().getItemByItemId(38931) != null) && activeOwner.getInventory().getItemByItemId(38931).isEquipped())
 			{
 				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, 17821, 2, 0, 0), 600);
 			}
-			else if ((activeOwner.getInventory().getItemByItemId(38930) != null) && (activeOwner.getInventory().getItemByItemId(38930).isEquipped()))
+			else if ((activeOwner.getInventory().getItemByItemId(38930) != null) && activeOwner.getInventory().getItemByItemId(38930).isEquipped())
 			{
 				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, 17820, 2, 0, 0), 600);
 			}
-			else if ((activeOwner.getInventory().getItemByItemId(38929) != null) && (activeOwner.getInventory().getItemByItemId(38929).isEquipped()))
+			else if ((activeOwner.getInventory().getItemByItemId(38929) != null) && activeOwner.getInventory().getItemByItemId(38929).isEquipped())
 			{
 				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, 17819, 2, 0, 0), 600);
 			}

@@ -146,7 +146,7 @@ public class Q00278_HomeSecurity extends Quest
 			{
 				case 18905: // Farm Ravager (Crazy)
 				{
-					final int itemCount = ((getRandom(1000) < 486) ? getRandom(6) + 1 : getRandom(5) + 1);
+					final int itemCount = (getRandom(1000) < 486) ? getRandom(6) + 1 : getRandom(5) + 1;
 					if (giveItemRandomly(qs.getPlayer(), npc, SEL_MAHUM_MANE, itemCount, SEL_MAHUM_MANE_COUNT, 1.0, true))
 					{
 						qs.setCond(2, true);

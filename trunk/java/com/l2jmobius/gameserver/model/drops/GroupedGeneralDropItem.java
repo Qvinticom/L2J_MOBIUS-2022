@@ -206,7 +206,7 @@ public final class GroupedGeneralDropItem implements IDropItem
 	{
 		if (applyKillerModifier)
 		{
-			chanceModifier *= (getKillerChanceModifier(victim, killer));
+			chanceModifier *= getKillerChanceModifier(victim, killer);
 		}
 		double sumchance = 0;
 		for (GeneralDropItem item : getItems())

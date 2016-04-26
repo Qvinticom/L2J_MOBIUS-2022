@@ -85,29 +85,20 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_S_S3_ATTRIBUTE_HAS_BEEN_REMOVED);
 				}
 				sm.addInt(targetItem.getEnchantLevel());
-				sm.addItemName(targetItem);
-				if (targetItem.isArmor())
-				{
-					sm.addElemental(realElement);
-					sm.addElemental(Elementals.getOppositeElement(realElement));
-				}
+			}
+			else if (targetItem.isArmor())
+			{
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_WAS_REMOVED_AND_RESISTANCE_TO_S3_WAS_DECREASED);
 			}
 			else
 			{
-				if (targetItem.isArmor())
-				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_WAS_REMOVED_AND_RESISTANCE_TO_S3_WAS_DECREASED);
-				}
-				else
-				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_HAS_BEEN_REMOVED);
-				}
-				sm.addItemName(targetItem);
-				if (targetItem.isArmor())
-				{
-					sm.addElemental(realElement);
-					sm.addElemental(Elementals.getOppositeElement(realElement));
-				}
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_HAS_BEEN_REMOVED);
+			}
+			sm.addItemName(targetItem);
+			if (targetItem.isArmor())
+			{
+				sm.addElemental(realElement);
+				sm.addElemental(Elementals.getOppositeElement(realElement));
 			}
 			activeChar.sendPacket(sm);
 			activeChar.sendPacket(new ExBaseAttributeCancelResult(targetItem.getObjectId(), _element));

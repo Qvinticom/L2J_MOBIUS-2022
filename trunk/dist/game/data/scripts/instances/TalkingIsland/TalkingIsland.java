@@ -201,17 +201,17 @@ public class TalkingIsland extends AbstractInstance
 	{
 		final QuestState qs = player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
 		String htmltext = null;
-		if ((qs != null))
+		if (qs != null)
 		{
 			switch (npc.getId())
 			{
 				case DARIN:
 				{
-					if ((qs.isCond(19)) && qs.isMemoState(0))
+					if (qs.isCond(19) && qs.isMemoState(0))
 					{
 						htmltext = "33748-01.html";
 					}
-					else if ((qs.isCond(19)) && qs.isMemoState(1))
+					else if (qs.isCond(19) && qs.isMemoState(1))
 					{
 						htmltext = "33748-04.html";
 					}

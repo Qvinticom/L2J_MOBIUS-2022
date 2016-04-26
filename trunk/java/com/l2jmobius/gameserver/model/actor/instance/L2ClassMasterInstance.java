@@ -129,7 +129,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		}
 	}
 	
-	public static final void onTutorialLink(L2PcInstance player, String request)
+	public static void onTutorialLink(L2PcInstance player, String request)
 	{
 		if (!Config.ALTERNATE_CLASS_MASTER || (request == null) || !request.startsWith("AlternateClassMaster"))
 		{
@@ -152,7 +152,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
 	}
 	
-	public static final void onTutorialQuestionMark(L2PcInstance player, int number)
+	public static void onTutorialQuestionMark(L2PcInstance player, int number)
 	{
 		if (!Config.ALTERNATE_CLASS_MASTER || (number != 1001))
 		{
@@ -162,7 +162,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		showTutorialHtml(player);
 	}
 	
-	public static final void showQuestionMark(L2PcInstance player)
+	public static void showQuestionMark(L2PcInstance player)
 	{
 		if (!Config.ALTERNATE_CLASS_MASTER)
 		{
@@ -178,7 +178,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		player.sendPacket(new TutorialShowQuestionMark(1001));
 	}
 	
-	private static final void showHtmlMenu(L2PcInstance player, int objectId, int level)
+	private static void showHtmlMenu(L2PcInstance player, int objectId, int level)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(objectId);
 		
@@ -311,17 +311,14 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 						html.replace("%level%", String.valueOf(getMinLevel(level - 1, player)));
 					}
 				}
+				else if (minLevel < Integer.MAX_VALUE)
+				{
+					html.setFile(player.getHtmlPrefix(), "html/classmaster/comebacklater.htm");
+					html.replace("%level%", String.valueOf(minLevel));
+				}
 				else
 				{
-					if (minLevel < Integer.MAX_VALUE)
-					{
-						html.setFile(player.getHtmlPrefix(), "html/classmaster/comebacklater.htm");
-						html.replace("%level%", String.valueOf(minLevel));
-					}
-					else
-					{
-						html.setFile(player.getHtmlPrefix(), "html/classmaster/nomore.htm");
-					}
+					html.setFile(player.getHtmlPrefix(), "html/classmaster/nomore.htm");
 				}
 			}
 		}
@@ -331,7 +328,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		player.sendPacket(html);
 	}
 	
-	private static final void showTutorialHtml(L2PcInstance player)
+	private static void showTutorialHtml(L2PcInstance player)
 	{
 		final ClassId currentClassId = player.getClassId();
 		if ((getMinLevel(currentClassId.level(), player) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE)
@@ -358,7 +355,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		player.sendPacket(new NpcHtmlMessage(msg));
 	}
 	
-	private static final boolean checkAndChangeClass(L2PcInstance player, int val)
+	private static boolean checkAndChangeClass(L2PcInstance player, int val)
 	{
 		final ClassId currentClassId = player.getClassId();
 		if (((getMinLevel(currentClassId.level(), player) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE) || !validateClassId(currentClassId, val))
@@ -432,7 +429,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	 * @param player L2PcInstance
 	 * @return minimum player level required for next class transfer
 	 */
-	private static final int getMinLevel(int level, L2PcInstance player)
+	private static int getMinLevel(int level, L2PcInstance player)
 	{
 		if (player.getRace() == Race.ERTHEIA)
 		{
@@ -487,7 +484,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	 * @param val new class index
 	 * @return
 	 */
-	private static final boolean validateClassId(ClassId oldCID, int val)
+	private static boolean validateClassId(ClassId oldCID, int val)
 	{
 		return validateClassId(oldCID, ClassId.getClassId(val));
 	}
@@ -498,7 +495,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	 * @param newCID new ClassId
 	 * @return true if class change is possible
 	 */
-	private static final boolean validateClassId(ClassId oldCID, ClassId newCID)
+	private static boolean validateClassId(ClassId oldCID, ClassId newCID)
 	{
 		if ((newCID == null) || (newCID.getRace() == null))
 		{

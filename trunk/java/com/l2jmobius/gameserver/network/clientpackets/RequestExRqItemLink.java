@@ -53,12 +53,9 @@ public class RequestExRqItemLink extends L2GameClientPacket
 			{
 				client.sendPacket(new ExRpItemLink((L2ItemInstance) object));
 			}
-			else
+			else if (Config.DEBUG)
 			{
-				if (Config.DEBUG)
-				{
-					_log.info(getClient() + " requested item link for item which wasnt published! ID:" + _objectId);
-				}
+				_log.info(getClient() + " requested item link for item which wasnt published! ID:" + _objectId);
 			}
 		}
 	}

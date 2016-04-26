@@ -178,12 +178,12 @@ public class Q00139_ShadowFoxPart1 extends Quest
 				{
 					case 1:
 					{
-						htmltext = (qs.isSet("talk")) ? "30896-11.html" : "30896-05.html";
+						htmltext = qs.isSet("talk") ? "30896-11.html" : "30896-05.html";
 						break;
 					}
 					case 2:
 					{
-						htmltext = (qs.isSet("talk")) ? "30896-18.html" : ((getQuestItemsCount(player, FRAGMENT) >= 10) && (getQuestItemsCount(player, CHEST) >= 1)) ? "30896-15.html" : "30896-14.html";
+						htmltext = qs.isSet("talk") ? "30896-18.html" : ((getQuestItemsCount(player, FRAGMENT) >= 10) && (getQuestItemsCount(player, CHEST) >= 1)) ? "30896-15.html" : "30896-14.html";
 						break;
 					}
 				}

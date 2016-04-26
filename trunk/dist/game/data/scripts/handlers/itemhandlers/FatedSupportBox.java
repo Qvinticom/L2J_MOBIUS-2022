@@ -74,20 +74,17 @@ public class FatedSupportBox implements IItemHandler
 				{
 					player.addItem(getClass().getSimpleName(), 37316, 1, player, true);
 				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.SUB_GROUP_ROGUE, classId.getId()))
+				{
+					player.addItem(getClass().getSimpleName(), 37318, 1, player, true);
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.SUB_GROUP_KNIGHT, classId.getId()))
+				{
+					player.addItem(getClass().getSimpleName(), 37315, 1, player, true);
+				}
 				else
 				{
-					if (CategoryData.getInstance().isInCategory(CategoryType.SUB_GROUP_ROGUE, classId.getId()))
-					{
-						player.addItem(getClass().getSimpleName(), 37318, 1, player, true);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.SUB_GROUP_KNIGHT, classId.getId()))
-					{
-						player.addItem(getClass().getSimpleName(), 37315, 1, player, true);
-					}
-					else
-					{
-						player.addItem(getClass().getSimpleName(), 37317, 1, player, true);
-					}
+					player.addItem(getClass().getSimpleName(), 37317, 1, player, true);
 				}
 				break;
 			}

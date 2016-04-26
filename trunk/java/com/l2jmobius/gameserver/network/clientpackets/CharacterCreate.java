@@ -258,7 +258,7 @@ public final class CharacterCreate extends L2GameClientPacket
 					break;
 				}
 			}
-			newChar = L2PcInstance.create(template, getClient().getAccountName(), _name, (new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0)));
+			newChar = L2PcInstance.create(template, getClient().getAccountName(), _name, new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
 		
 		// HP and MP are at maximum and CP is zero by default.

@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
  */
 public class ExAlchemySkillList extends L2GameServerPacket
 {
-	private final static int ALCHEMY_CUBE_SKILL = 17943;
+	private static final int ALCHEMY_CUBE_SKILL = 17943;
 	private final List<Skill> _skills = new ArrayList<>();
 	
 	public ExAlchemySkillList(L2PcInstance player)

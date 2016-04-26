@@ -182,7 +182,6 @@ public final class HallOfSuffering extends AbstractNpcAI
 	private static final int TEMPLATE_ID = 115;
 	private static final int MIN_LEVEL = 75;
 	private static final int MAX_LEVEL = 82;
-	private static final boolean debug = false;
 	
 	public HallOfSuffering()
 	{
@@ -198,11 +197,6 @@ public final class HallOfSuffering extends AbstractNpcAI
 	
 	private static boolean checkConditions(L2PcInstance player)
 	{
-		if (debug)
-		{
-			return true;
-		}
-		
 		final L2Party party = player.getParty();
 		if (party == null)
 		{
@@ -514,7 +508,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 			else if (event.equalsIgnoreCase("ressurectTwin"))
 			{
 				final Skill skill = SkillData.getInstance().getSkill(5824, 1);
-				final L2Npc aliveTwin = (world.klanikus == npc ? world.klodekus : world.klanikus);
+				final L2Npc aliveTwin = world.klanikus == npc ? world.klodekus : world.klanikus;
 				npc.doRevive();
 				npc.doCast(skill);
 				npc.setCurrentHp(aliveTwin.getCurrentHp());

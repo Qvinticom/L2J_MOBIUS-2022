@@ -235,7 +235,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 						}
 					}
 					
-					if ((item.isArmor()) && (item.getEnchantLevel() >= 4) && item.isEquipped())
+					if (item.isArmor() && (item.getEnchantLevel() >= 4) && item.isEquipped())
 					{
 						enchant4Skill = it.getEnchant4Skill();
 						if (enchant4Skill != null)
@@ -274,19 +274,18 @@ public final class RequestEnchantItem extends L2GameClientPacket
 						// unequip item on enchant failure to avoid item skills stack
 						if (item.isEquipped())
 						{
+							final SystemMessage sm;
 							if (item.getEnchantLevel() > 0)
 							{
-								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+								sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 								sm.addInt(item.getEnchantLevel());
-								sm.addItemName(item);
-								activeChar.sendPacket(sm);
 							}
 							else
 							{
-								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
-								sm.addItemName(item);
-								activeChar.sendPacket(sm);
+								sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 							}
+							sm.addItemName(item);
+							activeChar.sendPacket(sm);
 							
 							final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
 							for (L2ItemInstance itm : unequiped)

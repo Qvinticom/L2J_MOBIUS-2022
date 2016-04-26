@@ -250,7 +250,7 @@ public final class AdminCastle implements IAdminCommandHandler
 	
 	private boolean checkTarget(L2PcInstance player)
 	{
-		return ((player.getTarget() != null) && player.getTarget().isPlayer() && (((L2PcInstance) player.getTarget()).getClan() != null));
+		return (player.getTarget() != null) && player.getTarget().isPlayer() && (((L2PcInstance) player.getTarget()).getClan() != null);
 	}
 	
 	@Override

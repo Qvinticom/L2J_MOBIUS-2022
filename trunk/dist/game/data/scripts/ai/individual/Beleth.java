@@ -108,7 +108,7 @@ final class Beleth extends AbstractNpcAI
 		final int status = GrandBossManager.getInstance().getBossStatus(REAL_BELETH);
 		if (status == DEAD)
 		{
-			final long time = (info.getLong("respawn_time") - System.currentTimeMillis());
+			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
 			if (time > 0)
 			{
 				startQuestTimer("BELETH_UNLOCK", time, null, null);
@@ -634,7 +634,7 @@ final class Beleth extends AbstractNpcAI
 				{
 					npc.setTarget(player);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-					startQuestTimer("CAST", ((int) (((distance2 - 890) / (npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed())) * 1000)), npc, null);
+					startQuestTimer("CAST", (int) (((distance2 - 890) / (npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed())) * 1000), npc, null);
 				}
 				else if (distance2 < 890)
 				{

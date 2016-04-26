@@ -214,7 +214,7 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 			{
 				if (qs.isStarted())
 				{
-					if ((qs.isCond(2)) && (qs.getInt("boss") == 1))
+					if (qs.isCond(2) && (qs.getInt("boss") == 1))
 					{
 						qs.setCond(3, true);
 						htmltext = "32785-01.html";

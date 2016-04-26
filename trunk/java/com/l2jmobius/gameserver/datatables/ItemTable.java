@@ -260,7 +260,7 @@ public class ItemTable
 			String referenceName = "no-reference";
 			if (reference instanceof L2Object)
 			{
-				referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+				referenceName = ((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name";
 			}
 			else if (reference instanceof String)
 			{
@@ -268,7 +268,7 @@ public class ItemTable
 			}
 			if (Config.GMAUDIT)
 			{
-				GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + itemId + " count: " + count + " name: " + item.getItemName() + " objId: " + item.getObjectId() + ")", (actor.getTarget() != null ? actor.getTarget().getName() : "no-target"), "L2Object referencing this action is: " + referenceName);
+				GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + itemId + " count: " + count + " name: " + item.getItemName() + " objId: " + item.getObjectId() + ")", actor.getTarget() != null ? actor.getTarget().getName() : "no-target", "L2Object referencing this action is: " + referenceName);
 			}
 		}
 		
@@ -327,7 +327,7 @@ public class ItemTable
 				String referenceName = "no-reference";
 				if (reference instanceof L2Object)
 				{
-					referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+					referenceName = ((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name";
 				}
 				else if (reference instanceof String)
 				{
@@ -335,7 +335,7 @@ public class ItemTable
 				}
 				if (Config.GMAUDIT)
 				{
-					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + item.getId() + " count: " + item.getCount() + " itemObjId: " + item.getObjectId() + ")", (actor.getTarget() != null ? actor.getTarget().getName() : "no-target"), "L2Object referencing this action is: " + referenceName);
+					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + item.getId() + " count: " + item.getCount() + " itemObjId: " + item.getObjectId() + ")", actor.getTarget() != null ? actor.getTarget().getName() : "no-target", "L2Object referencing this action is: " + referenceName);
 				}
 			}
 			

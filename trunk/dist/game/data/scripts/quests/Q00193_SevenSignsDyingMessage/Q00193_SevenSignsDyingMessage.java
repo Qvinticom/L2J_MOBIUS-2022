@@ -246,7 +246,7 @@ public final class Q00193_SevenSignsDyingMessage extends Quest
 				if (npc.getId() == HOLLINT)
 				{
 					qs = player.getQuestState(Q00192_SevenSignsSeriesOfDoubt.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "30191-01.htm" : "30191-03.html";
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "30191-01.htm" : "30191-03.html";
 				}
 				break;
 			}

@@ -62,24 +62,10 @@ public final class L2ScriptEngineManager
 	
 	private File _currentLoadingScript;
 	
-	// Configs
-	// TODO move to config file
-	/**
-	 * Informs(logs) the scripts being loaded.<BR>
-	 * Apply only when executing script from files.<BR>
-	 */
-	private static final boolean VERBOSE_LOADING = false;
-	
 	/**
 	 * If the script engine supports compilation the script is compiled before execution.<BR>
 	 */
 	private static final boolean ATTEMPT_COMPILATION = true;
-	
-	/**
-	 * Clean an previous error log(if such exists) for the script being loaded before trying to load.<BR>
-	 * Apply only when executing script from files.<BR>
-	 */
-	private static final boolean PURGE_ERROR_LOG = true;
 	
 	protected L2ScriptEngineManager()
 	{
@@ -203,10 +189,6 @@ public final class L2ScriptEngineManager
 		{
 			if (file.isDirectory() && recurseDown && (maxDepth > currentDepth))
 			{
-				if (VERBOSE_LOADING)
-				{
-					_log.info("Entering folder: " + file.getName());
-				}
 				executeAllScriptsInDirectory(file, recurseDown, maxDepth, currentDepth + 1);
 			}
 			else if (file.isFile())
@@ -254,12 +236,6 @@ public final class L2ScriptEngineManager
 	
 	public void executeScript(ScriptEngine engine, File file) throws ScriptException
 	{
-		if (VERBOSE_LOADING)
-		{
-			_log.info("Loading Script: " + file.getAbsolutePath());
-		}
-		
-		if (PURGE_ERROR_LOG)
 		{
 			final String name = file.getAbsolutePath() + ".error.log";
 			final File errorLog = new File(name);

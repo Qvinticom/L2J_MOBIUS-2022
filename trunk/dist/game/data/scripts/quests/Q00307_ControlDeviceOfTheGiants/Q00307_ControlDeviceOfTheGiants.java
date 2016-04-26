@@ -31,19 +31,19 @@ import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 public class Q00307_ControlDeviceOfTheGiants extends Quest
 {
 	// NPC
-	private final static int DROPH = 32711;
+	private static final int DROPH = 32711;
 	// RB
-	private final static int GORGOLOS = 25681;
-	private final static int LAST_TITAN_UTENUS = 25684;
-	private final static int GIANT_MARPANAK = 25680;
-	private final static int HEKATON_PRIME = 25687;
+	private static final int GORGOLOS = 25681;
+	private static final int LAST_TITAN_UTENUS = 25684;
+	private static final int GIANT_MARPANAK = 25680;
+	private static final int HEKATON_PRIME = 25687;
 	// Items
-	private final static int SUPPORT_ITEMS = 14850;
-	private final static int CET_1_SHEET = 14851;
-	private final static int CET_2_SHEET = 14852;
-	private final static int CET_3_SHEET = 14853;
+	private static final int SUPPORT_ITEMS = 14850;
+	private static final int CET_1_SHEET = 14851;
+	private static final int CET_2_SHEET = 14852;
+	private static final int CET_3_SHEET = 14853;
 	// Misc
-	private final static int RESPAWN_DELAY = 3600000; // 1 hour
+	private static final int RESPAWN_DELAY = 3600000; // 1 hour
 	private static L2Npc hekaton;
 	
 	public Q00307_ControlDeviceOfTheGiants()
@@ -71,7 +71,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				if (player.getLevel() >= 79)
 				{
 					qs.startQuest();
-					htmltext = (hasQuestItems(player, CET_1_SHEET, CET_2_SHEET, CET_3_SHEET)) ? "32711-04a.html" : "32711-04.html";
+					htmltext = hasQuestItems(player, CET_1_SHEET, CET_2_SHEET, CET_3_SHEET) ? "32711-04a.html" : "32711-04.html";
 				}
 				break;
 			}
@@ -101,7 +101,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 					return "32711-09.html";
 				}
 				final String respawn = loadGlobalQuestVar("Respawn");
-				final long remain = (!respawn.isEmpty()) ? Long.parseLong(respawn) - System.currentTimeMillis() : 0;
+				final long remain = !respawn.isEmpty() ? Long.parseLong(respawn) - System.currentTimeMillis() : 0;
 				if (remain > 0)
 				{
 					return "32711-09a.html";
@@ -203,7 +203,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				}
 				else if (qs.isCond(1))
 				{
-					htmltext = (!hasQuestItems(player, CET_1_SHEET, CET_2_SHEET, CET_3_SHEET)) ? "32711-07.html" : "32711-08.html";
+					htmltext = !hasQuestItems(player, CET_1_SHEET, CET_2_SHEET, CET_3_SHEET) ? "32711-07.html" : "32711-08.html";
 				}
 				else if (qs.isCond(2))
 				{

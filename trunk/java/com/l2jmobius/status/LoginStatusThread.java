@@ -155,23 +155,20 @@ public final class LoginStatusThread extends Thread
 				_print.flush();
 				_cSocket.close();
 			}
+			else if (!tmpLine.equals(StatusPW))
+			{
+				_print.println("Incorrect Password!");
+				_print.println("Disconnected...");
+				_print.flush();
+				_cSocket.close();
+			}
 			else
 			{
-				if (!tmpLine.equals(StatusPW))
-				{
-					_print.println("Incorrect Password!");
-					_print.println("Disconnected...");
-					_print.flush();
-					_cSocket.close();
-				}
-				else
-				{
-					_print.println("Password Correct!");
-					_print.println("[L2J Login Server]");
-					_print.print("");
-					_print.flush();
-					start();
-				}
+				_print.println("Password Correct!");
+				_print.println("[L2J Login Server]");
+				_print.print("");
+				_print.flush();
+				start();
 			}
 		}
 		else

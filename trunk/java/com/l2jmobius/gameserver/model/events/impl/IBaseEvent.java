@@ -23,5 +23,5 @@ import com.l2jmobius.gameserver.model.events.EventType;
  */
 public interface IBaseEvent
 {
-	public EventType getType();
+	EventType getType();
 }

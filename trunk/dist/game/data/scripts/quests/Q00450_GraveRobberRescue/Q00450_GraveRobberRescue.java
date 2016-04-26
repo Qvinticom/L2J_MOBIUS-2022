@@ -128,7 +128,7 @@ public class Q00450_GraveRobberRescue extends Quest
 				{
 					if (qs.isCond(1))
 					{
-						htmltext = (!hasQuestItems(player, EVIDENCE_OF_MIGRATION)) ? "32650-08.html" : "32650-09.html";
+						htmltext = !hasQuestItems(player, EVIDENCE_OF_MIGRATION) ? "32650-08.html" : "32650-09.html";
 					}
 					else
 					{

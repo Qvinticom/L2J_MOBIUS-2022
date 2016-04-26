@@ -134,21 +134,18 @@ final class MasterOfEnchanting extends LongTimeEvent
 					player.sendPacket(sm);
 					htmltext = "32599-scroll24.htm";
 				}
+				// Little glitch. There is no SystemMessage with seconds only.
+				// If time is less than 1 minute player can buy scrolls
+				else if (getQuestItemsCount(player, Inventory.ADENA_ID) > SCROLL_24_PRICE)
+				{
+					takeItems(player, Inventory.ADENA_ID, SCROLL_24_PRICE);
+					giveItems(player, MASTER_YOGI_SCROLL, 24);
+					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
+					htmltext = "32599-scroll24.htm";
+				}
 				else
 				{
-					// Little glitch. There is no SystemMessage with seconds only.
-					// If time is less than 1 minute player can buy scrolls
-					if (getQuestItemsCount(player, Inventory.ADENA_ID) > SCROLL_24_PRICE)
-					{
-						takeItems(player, Inventory.ADENA_ID, SCROLL_24_PRICE);
-						giveItems(player, MASTER_YOGI_SCROLL, 24);
-						saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
-						htmltext = "32599-scroll24.htm";
-					}
-					else
-					{
-						htmltext = "32599-s24-no.htm";
-					}
+					htmltext = "32599-s24-no.htm";
 				}
 			}
 		}

@@ -697,7 +697,7 @@ public final class SkillTreesData implements IXmlReader
 				continue;
 			}
 			
-			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId()))
+			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && !Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId()))
 			{
 				continue;
 			}
@@ -750,7 +750,7 @@ public final class SkillTreesData implements IXmlReader
 				continue;
 			}
 			
-			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId()))
+			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && !Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId()))
 			{
 				continue;
 			}
@@ -835,7 +835,7 @@ public final class SkillTreesData implements IXmlReader
 			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getSkillId());
 			final int hashCode = SkillData.getSkillHashCode(skill.getSkillId(), maxLvl);
 			
-			if (skill.isAutoGet() && ((player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel())))
+			if (skill.isAutoGet() && (player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel()))
 			{
 				final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
 				if (oldSkill != null)
@@ -871,7 +871,7 @@ public final class SkillTreesData implements IXmlReader
 				continue;
 			}
 			
-			if (skill.isLearnedByNpc() && ((player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel())))
+			if (skill.isLearnedByNpc() && (player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel()))
 			{
 				final Skill oldSkill = player.getSkills().get(skill.getSkillId());
 				if (oldSkill != null)
@@ -922,7 +922,7 @@ public final class SkillTreesData implements IXmlReader
 		
 		for (L2SkillLearn skill : _alchemySkillTree.values())
 		{
-			if (skill.isLearnedByNpc() && ((player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel())))
+			if (skill.isLearnedByNpc() && (player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel()))
 			{
 				final Skill oldSkill = player.getSkills().get(skill.getSkillId());
 				
@@ -1005,7 +1005,7 @@ public final class SkillTreesData implements IXmlReader
 		final Race race = player.getRace();
 		for (L2SkillLearn skill : _transformSkillTree.values())
 		{
-			if (((player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel())) && (skill.getRaces().isEmpty() || skill.getRaces().contains(race)))
+			if ((player.getLevel() >= skill.getGetLevel()) && (player.getDualClassLevel() >= skill.getDualClassLevel()) && (skill.getRaces().isEmpty() || skill.getRaces().contains(race)))
 			{
 				final Skill oldSkill = player.getSkills().get(skill.getSkillId());
 				if (oldSkill != null)
@@ -1079,7 +1079,7 @@ public final class SkillTreesData implements IXmlReader
 		{
 			for (L2SkillLearn skill : _subPledgeSkillTree.values())
 			{
-				if ((clan.getLevel() >= skill.getGetLevel()))
+				if (clan.getLevel() >= skill.getGetLevel())
 				{
 					final Skill oldSkill = clan.getSkills().get(skill.getSkillId());
 					if ((oldSkill == null) || (oldSkill.getLevel() < skill.getSkillLevel()))
@@ -1547,7 +1547,7 @@ public final class SkillTreesData implements IXmlReader
 			for (int i = 0; i < classlevel; i++)
 			{
 				classId = classId.getParent();
-				if (isCurrentClassSkillNoParent(classId, hashCurrentLevel) && (!isCurrentClassSkillNoParent(player.getClassId(), hashMaxLevel) && !isCurrentClassSkillNoParent(player.getClassId(), hashNextLevel)) && !isRemoveSkill(player.getClassId(), skill.getId()))
+				if (isCurrentClassSkillNoParent(classId, hashCurrentLevel) && !isCurrentClassSkillNoParent(player.getClassId(), hashMaxLevel) && !isCurrentClassSkillNoParent(player.getClassId(), hashNextLevel) && !isRemoveSkill(player.getClassId(), skill.getId()))
 				{
 					player.removeSkill(skill, true, true);
 				}

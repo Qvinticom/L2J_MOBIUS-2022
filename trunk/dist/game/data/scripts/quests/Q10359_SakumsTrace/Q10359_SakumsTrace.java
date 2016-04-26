@@ -247,7 +247,7 @@ public class Q10359_SakumsTrace extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && qs.isCond(2) && (Util.checkIfInRange(1500, npc, qs.getPlayer(), false)))
+		if ((qs != null) && qs.isStarted() && qs.isCond(2) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
 			if (getQuestItemsCount(qs.getPlayer(), SUSPICIOUS_FRAGMENT) < SUSPICIOUS_FRAGMENT_REQUIRED)
 			{

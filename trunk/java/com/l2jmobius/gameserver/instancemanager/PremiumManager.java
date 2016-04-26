@@ -124,7 +124,7 @@ public class PremiumManager
 		}
 	}
 	
-	public static final PremiumManager getInstance()
+	public static PremiumManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

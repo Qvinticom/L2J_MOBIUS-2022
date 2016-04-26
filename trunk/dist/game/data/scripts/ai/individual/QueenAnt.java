@@ -306,12 +306,9 @@ final class QueenAnt extends AbstractNpcAI
 					curse = CommonSkill.RAID_CURSE.getSkill();
 				}
 			}
-			else
+			else if (!character.isParalyzed() && (getRandom(4) == 0))
 			{
-				if (!character.isParalyzed() && (getRandom(4) == 0))
-				{
-					curse = CommonSkill.RAID_CURSE2.getSkill();
-				}
+				curse = CommonSkill.RAID_CURSE2.getSkill();
 			}
 			
 			if (curse != null)
@@ -360,7 +357,7 @@ final class QueenAnt extends AbstractNpcAI
 			{
 				if (((L2MonsterInstance) npc).getLeader() != null)
 				{
-					((L2MonsterInstance) npc).getLeader().getMinionList().onMinionDie(((L2MonsterInstance) npc), (280 + getRandom(40)) * 1000);
+					((L2MonsterInstance) npc).getLeader().getMinionList().onMinionDie((L2MonsterInstance) npc, (280 + getRandom(40)) * 1000);
 				}
 			}
 			else if (npcId == NURSE)
@@ -391,13 +388,10 @@ final class QueenAnt extends AbstractNpcAI
 				_task.cancel(false);
 				_task = null;
 			}
-			else
+			else if (_queen.calculateDistance(QUEEN_X, QUEEN_Y, QUEEN_Z, false, false) > 2000.)
 			{
-				if (_queen.calculateDistance(QUEEN_X, QUEEN_Y, QUEEN_Z, false, false) > 2000.)
-				{
-					_queen.clearAggroList();
-					_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
-				}
+				_queen.clearAggroList();
+				_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
 			}
 		}
 	}

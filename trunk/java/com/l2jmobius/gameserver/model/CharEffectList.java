@@ -515,13 +515,13 @@ public final class CharEffectList
 		if (_owner.isPlayer())
 		{
 			_shortBuff = info;
-			if (info == null)
+			if (info != null)
 			{
-				_owner.sendPacket(ShortBuffStatusUpdate.RESET_SHORT_BUFF);
+				_owner.sendPacket(new ShortBuffStatusUpdate(info.getSkill().getId(), info.getSkill().getLevel(), info.getTime()));
 			}
 			else
 			{
-				_owner.sendPacket(new ShortBuffStatusUpdate(info.getSkill().getId(), info.getSkill().getLevel(), info.getTime()));
+				_owner.sendPacket(ShortBuffStatusUpdate.RESET_SHORT_BUFF);
 			}
 		}
 	}

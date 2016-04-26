@@ -260,7 +260,7 @@ public final class FortSiegeManager
 	
 	public boolean isCombat(int itemId)
 	{
-		return (itemId == 9819);
+		return itemId == 9819;
 	}
 	
 	public boolean activateCombatFlag(L2PcInstance player, L2ItemInstance item)
@@ -321,7 +321,7 @@ public final class FortSiegeManager
 		}
 	}
 	
-	public static final FortSiegeManager getInstance()
+	public static FortSiegeManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

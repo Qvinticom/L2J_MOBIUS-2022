@@ -58,16 +58,16 @@ public final class AwakeningMaster extends AbstractNpcAI
 	private static final int AEORE_MASTER = 33404;
 	// Items
 	private static final int SCROLL_OF_AFTERLIFE = 17600;
-	private final static int ABELIUS_POWER = 32264;
-	private final static int SAPYROS_POWER = 32265;
-	private final static int ASHAGEN_POWER = 32266;
-	private final static int CRANIGG_POWER = 32267;
-	private final static int SOLTKREIG_POWER = 32268;
-	private final static int NAVIAROPE_POWER = 32269;
-	private final static int LEISTER_POWER = 32270;
-	private final static int LAKCIS_POWER = 32271;
+	private static final int ABELIUS_POWER = 32264;
+	private static final int SAPYROS_POWER = 32265;
+	private static final int ASHAGEN_POWER = 32266;
+	private static final int CRANIGG_POWER = 32267;
+	private static final int SOLTKREIG_POWER = 32268;
+	private static final int NAVIAROPE_POWER = 32269;
+	private static final int LEISTER_POWER = 32270;
+	private static final int LAKCIS_POWER = 32271;
 	// Other
-	private final static int AWAKENING_END_USM_ID = 10;
+	private static final int AWAKENING_END_USM_ID = 10;
 	
 	private AwakeningMaster()
 	{

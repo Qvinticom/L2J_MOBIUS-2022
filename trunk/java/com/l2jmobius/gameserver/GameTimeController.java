@@ -63,7 +63,7 @@ public final class GameTimeController extends Thread
 		super.start();
 	}
 	
-	public static final void init()
+	public static void init()
 	{
 		_instance = new GameTimeController();
 	}
@@ -180,7 +180,7 @@ public final class GameTimeController extends Thread
 		}
 	}
 	
-	public static final GameTimeController getInstance()
+	public static GameTimeController getInstance()
 	{
 		return _instance;
 	}

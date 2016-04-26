@@ -107,20 +107,17 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 				{
 					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_OLD;
 				}
+				else if (_elvl == 0)
+				{
+					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
+				}
+				else if (_elvl == 1)
+				{
+					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V2;
+				}
 				else
 				{
-					if (_elvl == 0)
-					{
-						bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
-					}
-					else if (_elvl == 1)
-					{
-						bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V2;
-					}
-					else
-					{
-						bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V3;
-					}
+					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V3;
 				}
 				reqCount = 1;
 				break;
@@ -131,20 +128,17 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 				{
 					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_OLD;
 				}
+				else if (_elvl == 0)
+				{
+					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
+				}
+				else if (_elvl == 1)
+				{
+					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V2;
+				}
 				else
 				{
-					if (_elvl == 0)
-					{
-						bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
-					}
-					else if (_elvl == 1)
-					{
-						bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V2;
-					}
-					else
-					{
-						bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V3;
-					}
+					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V3;
 				}
 				reqCount = 1;
 				break;
@@ -155,20 +149,17 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 				{
 					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_OLD;
 				}
+				else if (_elvl == 0)
+				{
+					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
+				}
+				else if (_elvl == 1)
+				{
+					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V2;
+				}
 				else
 				{
-					if (_elvl == 0)
-					{
-						bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
-					}
-					else if (_elvl == 1)
-					{
-						bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V2;
-					}
-					else
-					{
-						bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V3;
-					}
+					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V3;
 				}
 				reqCount = 1;
 				break;
@@ -179,20 +170,17 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 				{
 					bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
 				}
+				else if (_elvl == 0)
+				{
+					bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+				}
+				else if (_elvl == 1)
+				{
+					bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V2;
+				}
 				else
 				{
-					if (_elvl == 0)
-					{
-						bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
-					}
-					else if (_elvl == 1)
-					{
-						bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V2;
-					}
-					else
-					{
-						bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V3;
-					}
+					bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V3;
 				}
 				reqCount = 1;
 				break;

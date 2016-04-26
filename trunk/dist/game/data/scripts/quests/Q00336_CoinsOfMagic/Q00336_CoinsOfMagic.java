@@ -1459,7 +1459,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 		{
 			case 42:
 			{
-				if ((getQuestItemsCount(player, ITEM_1) >= (10 * mul * ITEM_1_MUL)))
+				if (getQuestItemsCount(player, ITEM_1) >= (10 * mul * ITEM_1_MUL))
 				{
 					takeItems(player, ITEM_1, 10 * mul * ITEM_1_MUL);
 					giveItems(player, REWARD_1, 1 * mul);

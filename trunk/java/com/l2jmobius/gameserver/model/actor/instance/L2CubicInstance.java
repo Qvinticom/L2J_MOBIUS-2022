@@ -377,7 +377,7 @@ public final class L2CubicInstance implements IIdentifiable
 				if (ownerTarget.getActingPlayer() != null)
 				{
 					final L2PcInstance target = ownerTarget.getActingPlayer();
-					if (enemyTeam.containsPlayer(target.getObjectId()) && !(target.isDead()))
+					if (enemyTeam.containsPlayer(target.getObjectId()) && !target.isDead())
 					{
 						_target = (L2Character) ownerTarget;
 					}
@@ -414,23 +414,20 @@ public final class L2CubicInstance implements IIdentifiable
 							partyEnemy = partyA;
 						}
 					}
-					else
+					else if (PlayerA == _owner)
 					{
-						if (PlayerA == _owner)
+						if (partyB != null)
 						{
-							if (partyB != null)
-							{
-								partyEnemy = partyB;
-							}
-							else
-							{
-								_target = PlayerB;
-							}
+							partyEnemy = partyB;
 						}
 						else
 						{
-							_target = PlayerA;
+							_target = PlayerB;
 						}
+					}
+					else
+					{
+						_target = PlayerA;
 					}
 					if (((_target == PlayerA) || (_target == PlayerB)) && (_target == ownerTarget))
 					{
@@ -682,9 +679,9 @@ public final class L2CubicInstance implements IIdentifiable
 			}
 			
 			// TODO: Unhardcode fixed value
-			final double hpAdd = (0.4 * damage);
+			final double hpAdd = 0.4 * damage;
 			final L2PcInstance owner = _owner;
-			final double hp = ((owner.getCurrentHp() + hpAdd) > owner.getMaxHp() ? owner.getMaxHp() : (owner.getCurrentHp() + hpAdd));
+			final double hp = (owner.getCurrentHp() + hpAdd) > owner.getMaxHp() ? owner.getMaxHp() : (owner.getCurrentHp() + hpAdd);
 			
 			owner.setCurrentHp(hp);
 			
@@ -738,12 +735,9 @@ public final class L2CubicInstance implements IIdentifiable
 						_log.info("Disablers: useCubicSkill() -> success");
 					}
 				}
-				else
+				else if (Config.DEBUG)
 				{
-					if (Config.DEBUG)
-					{
-						_log.info("Disablers: useCubicSkill() -> failed");
-					}
+					_log.info("Disablers: useCubicSkill() -> failed");
 				}
 			}
 			
@@ -764,12 +758,9 @@ public final class L2CubicInstance implements IIdentifiable
 						_log.info("Disablers: useCubicSkill() -> success");
 					}
 				}
-				else
+				else if (Config.DEBUG)
 				{
-					if (Config.DEBUG)
-					{
-						_log.info("Disablers: useCubicSkill() -> failed");
-					}
+					_log.info("Disablers: useCubicSkill() -> failed");
 				}
 			}
 		}
@@ -791,11 +782,11 @@ public final class L2CubicInstance implements IIdentifiable
 		// temporary range check until real behavior of cubics is known/coded
 		final int range = MAX_MAGIC_RANGE;
 		
-		x = (owner.getX() - target.getX());
-		y = (owner.getY() - target.getY());
-		z = (owner.getZ() - target.getZ());
+		x = owner.getX() - target.getX();
+		y = owner.getY() - target.getY();
+		z = owner.getZ() - target.getZ();
 		
-		return (((x * x) + (y * y) + (z * z)) <= (range * range));
+		return ((x * x) + (y * y) + (z * z)) <= (range * range);
 	}
 	
 	/** this sets the friendly target for a cubic */
@@ -815,7 +806,7 @@ public final class L2CubicInstance implements IIdentifiable
 			{
 				if (!partyMember.isDead() && isInCubicRange(_owner, partyMember) && (partyMember.getCurrentHp() < partyMember.getMaxHp()) && (percentleft > (partyMember.getCurrentHp() / partyMember.getMaxHp())))
 				{
-					percentleft = (partyMember.getCurrentHp() / partyMember.getMaxHp());
+					percentleft = partyMember.getCurrentHp() / partyMember.getMaxHp();
 					target = partyMember;
 				}
 				final L2Summon pet = partyMember.getPet();
@@ -830,7 +821,7 @@ public final class L2CubicInstance implements IIdentifiable
 					// the lowest HP
 					if ((pet.getCurrentHp() < pet.getMaxHp()) && (percentleft > (pet.getCurrentHp() / pet.getMaxHp())))
 					{
-						percentleft = (pet.getCurrentHp() / pet.getMaxHp());
+						percentleft = pet.getCurrentHp() / pet.getMaxHp();
 						target = pet;
 					}
 				}
@@ -845,7 +836,7 @@ public final class L2CubicInstance implements IIdentifiable
 					// the lowest HP
 					if ((s.getCurrentHp() < s.getMaxHp()) && (percentleft > (s.getCurrentHp() / s.getMaxHp())))
 					{
-						percentleft = (s.getCurrentHp() / s.getMaxHp());
+						percentleft = s.getCurrentHp() / s.getMaxHp();
 						target = s;
 					}
 				}
@@ -855,7 +846,7 @@ public final class L2CubicInstance implements IIdentifiable
 		{
 			if (_owner.getCurrentHp() < _owner.getMaxHp())
 			{
-				percentleft = (_owner.getCurrentHp() / _owner.getMaxHp());
+				percentleft = _owner.getCurrentHp() / _owner.getMaxHp();
 				target = _owner;
 			}
 			for (L2Summon summon : _owner.getServitors().values())

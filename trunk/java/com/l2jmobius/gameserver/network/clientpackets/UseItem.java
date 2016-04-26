@@ -251,7 +251,7 @@ public final class UseItem extends L2GameClientPacket
 				case L2Item.SLOT_FULL_ARMOR:
 				case L2Item.SLOT_LEGS:
 				{
-					if ((activeChar.getRace() == Race.ERTHEIA) && (activeChar.isMageClass()) && ((item.getItem().getItemType() == ArmorType.SHIELD) || (item.getItem().getItemType() == ArmorType.SIGIL)))
+					if ((activeChar.getRace() == Race.ERTHEIA) && activeChar.isMageClass() && ((item.getItem().getItemType() == ArmorType.SHIELD) || (item.getItem().getItemType() == ArmorType.SIGIL)))
 					{
 						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 						return;
@@ -296,7 +296,7 @@ public final class UseItem extends L2GameClientPacket
 		else
 		{
 			final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
-			if (((weaponItem != null) && (weaponItem.getItemType() == WeaponType.FISHINGROD)) && (((_itemId >= 6519) && (_itemId <= 6527)) || ((_itemId >= 7610) && (_itemId <= 7613)) || ((_itemId >= 7807) && (_itemId <= 7809)) || ((_itemId >= 8484) && (_itemId <= 8486)) || ((_itemId >= 8505) && (_itemId <= 8513))))
+			if ((weaponItem != null) && (weaponItem.getItemType() == WeaponType.FISHINGROD) && (((_itemId >= 6519) && (_itemId <= 6527)) || ((_itemId >= 7610) && (_itemId <= 7613)) || ((_itemId >= 7807) && (_itemId <= 7809)) || ((_itemId >= 8484) && (_itemId <= 8486)) || ((_itemId >= 8505) && (_itemId <= 8513))))
 			{
 				activeChar.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, item);
 				activeChar.broadcastUserInfo();

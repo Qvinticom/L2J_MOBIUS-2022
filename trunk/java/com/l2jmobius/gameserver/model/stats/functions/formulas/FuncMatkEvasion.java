@@ -43,15 +43,10 @@ public class FuncMatkEvasion extends AbstractFunction
 	{
 		final int level = effector.getLevel();
 		double value = initVal;
-		if (effector.isPlayer())
+		// [Square(WIT)] * 3 + lvl;
+		value += (Math.sqrt(effector.getWIT()) * 3) + (level * 2);
+		if (!effector.isPlayer())
 		{
-			// [Square(WIT)] * 3 + lvl;
-			value += (Math.sqrt(effector.getWIT()) * 3) + (level * 2);
-		}
-		else
-		{
-			// [Square(DEX)] * 6 + lvl;
-			value += (Math.sqrt(effector.getWIT()) * 3) + (level * 2);
 			if (level > 69)
 			{
 				value += (level - 69) + 2;

@@ -292,12 +292,12 @@ final class MC_Show extends AbstractNpcAI
 		final int hours = (gameTime / 60) % 24;
 		final int minutes = gameTime % 60;
 		int hourDiff, minDiff;
-		hourDiff = (20 - hours);
+		hourDiff = 20 - hours;
 		if (hourDiff < 0)
 		{
 			hourDiff = 24 - (hourDiff *= -1);
 		}
-		minDiff = (30 - minutes);
+		minDiff = 30 - minutes;
 		if (minDiff < 0)
 		{
 			minDiff = 60 - (minDiff *= -1);
@@ -500,25 +500,22 @@ final class MC_Show extends AbstractNpcAI
 				IS_STARTED = false;
 				npc.deleteMe();
 			}
-			else
+			else if (TALKS.containsKey(event))
 			{
-				if (TALKS.containsKey(event))
+				final ShoutInfo si = TALKS.get(event);
+				if (si != null)
 				{
-					final ShoutInfo si = TALKS.get(event);
-					if (si != null)
-					{
-						autoChat(npc, si.getNpcStringId(), ChatType.NPC_SHOUT);
-						startQuestTimer(si.getNextEvent(), si.getTime(), npc, null);
-					}
+					autoChat(npc, si.getNpcStringId(), ChatType.NPC_SHOUT);
+					startQuestTimer(si.getNextEvent(), si.getTime(), npc, null);
 				}
-				else if (WALKS.containsKey(event))
+			}
+			else if (WALKS.containsKey(event))
+			{
+				final WalkInfo wi = WALKS.get(event);
+				if (wi != null)
 				{
-					final WalkInfo wi = WALKS.get(event);
-					if (wi != null)
-					{
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, wi.getCharPos());
-						startQuestTimer(wi.getNextEvent(), wi.getTime(), npc, null);
-					}
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, wi.getCharPos());
+					startQuestTimer(wi.getNextEvent(), wi.getTime(), npc, null);
 				}
 			}
 		}

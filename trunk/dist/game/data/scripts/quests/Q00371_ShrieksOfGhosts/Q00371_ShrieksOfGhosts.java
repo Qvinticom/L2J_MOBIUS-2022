@@ -217,7 +217,7 @@ public final class Q00371_ShrieksOfGhosts extends Quest
 		{
 			if (npc.getId() == REVA)
 			{
-				htmltext = (hasQuestItems(player, ANCIENT_PORCELAIN)) ? "30867-04.html" : "30867-10.html";
+				htmltext = hasQuestItems(player, ANCIENT_PORCELAIN) ? "30867-04.html" : "30867-10.html";
 			}
 			else
 			{

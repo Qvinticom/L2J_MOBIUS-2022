@@ -339,7 +339,7 @@ public final class BuffInfo
 		// Remove abnormal visual effects.
 		resetAbnormalVisualEffects();
 		// Set the proper system message.
-		if (!(_effected.isSummon() && !((L2Summon) _effected).getOwner().hasSummon()))
+		if (!_effected.isSummon() || ((L2Summon) _effected).getOwner().hasSummon())
 		{
 			SystemMessageId smId = null;
 			if (_skill.isToggle())

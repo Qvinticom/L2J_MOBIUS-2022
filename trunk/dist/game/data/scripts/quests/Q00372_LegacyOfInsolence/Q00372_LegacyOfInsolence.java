@@ -649,12 +649,8 @@ public final class Q00372_LegacyOfInsolence extends Quest
 						{
 							giveAdena(player, 4000, true);
 						}
-						htmltext = "30929-02.html";
 					}
-					else
-					{
-						htmltext = "30929-02.html";
-					}
+					htmltext = "30929-02.html";
 					break;
 				}
 				case CLAUDIA_ATHEBALDT:

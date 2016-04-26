@@ -69,32 +69,29 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 			mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DECLINED_S1_S_MENTORING_OFFER).addCharName(mentor));
 			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DECLINED_BECOMING_YOUR_MENTEE).addCharName(mentee));
 		}
-		else
+		else if (validate(mentor, mentee))
 		{
-			if (validate(mentor, mentee))
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
+				PreparedStatement statement = con.prepareStatement("INSERT INTO character_mentees (charId, mentorId) VALUES (?, ?)"))
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection();
-					PreparedStatement statement = con.prepareStatement("INSERT INTO character_mentees (charId, mentorId) VALUES (?, ?)"))
-				{
-					statement.setInt(1, mentee.getObjectId());
-					statement.setInt(2, mentor.getObjectId());
-					statement.execute();
-					
-					MentorManager.getInstance().addMentor(mentor.getObjectId(), mentee.getObjectId());
-					
-					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeAdd(mentor, mentee), mentor);
-					
-					mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addCharName(mentee));
-					mentor.sendPacket(new ExMentorList(mentor));
-					
-					mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR).addCharName(mentor));
-					mentee.sendPacket(new ExMentorList(mentee));
-				}
-				catch (Exception e)
-				{
-					_log.log(Level.WARNING, e.getMessage(), e);
-				}
+				statement.setInt(1, mentee.getObjectId());
+				statement.setInt(2, mentor.getObjectId());
+				statement.execute();
+				
+				MentorManager.getInstance().addMentor(mentor.getObjectId(), mentee.getObjectId());
+				
+				// Notify to scripts
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeAdd(mentor, mentee), mentor);
+				
+				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addCharName(mentee));
+				mentor.sendPacket(new ExMentorList(mentor));
+				
+				mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR).addCharName(mentor));
+				mentee.sendPacket(new ExMentorList(mentee));
+			}
+			catch (Exception e)
+			{
+				_log.log(Level.WARNING, e.getMessage(), e);
 			}
 		}
 	}

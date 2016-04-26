@@ -119,7 +119,7 @@ public final class IceQueensCastle extends AbstractInstance
 			case "TIMER_PC_LEAVE":
 			{
 				final QuestState qs = player.getQuestState(Q10285_MeetingSirra.class.getSimpleName());
-				if ((qs != null))
+				if (qs != null)
 				{
 					qs.setMemoState(3);
 					qs.setCond(10, true);
@@ -165,7 +165,7 @@ public final class IceQueensCastle extends AbstractInstance
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		if ((tmpworld != null) && (tmpworld instanceof IQCWorld) && (skill == ETHERNAL_BLIZZARD.getSkill()) && (((IQCWorld) tmpworld).player != null))
+		if ((tmpworld instanceof IQCWorld) && (skill == ETHERNAL_BLIZZARD.getSkill()) && (((IQCWorld) tmpworld).player != null))
 		{
 			startQuestTimer("TIMER_SCENE_21", 1000, npc, ((IQCWorld) tmpworld).player);
 		}

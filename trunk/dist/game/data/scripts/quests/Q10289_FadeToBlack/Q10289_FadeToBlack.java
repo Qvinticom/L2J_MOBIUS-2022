@@ -215,7 +215,7 @@ public class Q10289_FadeToBlack extends Quest
 				for (L2PcInstance member : party.getMembers())
 				{
 					// only one lucky player will get the good item, the rest will get the bad one
-					rewardPlayer(getQuestState(member, false), (idx == rnd));
+					rewardPlayer(getQuestState(member, false), idx == rnd);
 					idx++;
 				}
 			}
@@ -231,7 +231,7 @@ public class Q10289_FadeToBlack extends Quest
 	@Override
 	public boolean checkPartyMember(QuestState qs, L2Npc npc)
 	{
-		return (qs.getCond() < 3);
+		return qs.getCond() < 3;
 	}
 	
 	@Override
@@ -276,11 +276,11 @@ public class Q10289_FadeToBlack extends Quest
 		return htmltext;
 	}
 	
-	private static final void rewardPlayer(QuestState qs, boolean isLucky)
+	private static void rewardPlayer(QuestState qs, boolean isLucky)
 	{
 		if ((qs != null) && qs.isCond(1))
 		{
-			giveItems(qs.getPlayer(), (isLucky ? MARK_OF_SPLENDOR : MARK_OF_DARKNESS), 1);
+			giveItems(qs.getPlayer(), isLucky ? MARK_OF_SPLENDOR : MARK_OF_DARKNESS, 1);
 			qs.setCond(isLucky ? 3 : 2, true);
 		}
 	}

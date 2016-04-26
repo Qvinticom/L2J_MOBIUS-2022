@@ -117,7 +117,7 @@ final class FortressOfResistance extends ClanHallSiegeEngine
 		final int clanId = player.getClanId();
 		if (clanId > 0)
 		{
-			_damageToNurka.put(clanId, ((_damageToNurka.containsKey(clanId)) ? _damageToNurka.get(clanId) + damage : damage));
+			_damageToNurka.put(clanId, _damageToNurka.containsKey(clanId) ? _damageToNurka.get(clanId) + damage : damage);
 		}
 		return null;
 	}

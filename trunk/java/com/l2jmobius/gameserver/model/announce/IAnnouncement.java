@@ -25,19 +25,19 @@ import com.l2jmobius.gameserver.model.interfaces.IUpdatable;
  */
 public interface IAnnouncement extends IStorable, IUpdatable, IDeletable
 {
-	public int getId();
+	int getId();
 	
-	public AnnouncementType getType();
+	AnnouncementType getType();
 	
-	public void setType(AnnouncementType type);
+	void setType(AnnouncementType type);
 	
-	public boolean isValid();
+	boolean isValid();
 	
-	public String getContent();
+	String getContent();
 	
-	public void setContent(String content);
+	void setContent(String content);
 	
-	public String getAuthor();
+	String getAuthor();
 	
-	public void setAuthor(String author);
+	void setAuthor(String author);
 }

@@ -55,7 +55,7 @@ public class SQLAccountManager
 				System.out.println("3 - Delete existing account");
 				System.out.println("4 - List accounts and access levels");
 				System.out.println("5 - Exit");
-				while (!(_mode.equals("1") || _mode.equals("2") || _mode.equals("3") || _mode.equals("4") || _mode.equals("5")))
+				while (!_mode.equals("1") && !_mode.equals("2") && !_mode.equals("3") && !_mode.equals("4") && !_mode.equals("5"))
 				{
 					System.out.print("Your choice: ");
 					_mode = _scn.next();
@@ -126,7 +126,7 @@ public class SQLAccountManager
 					System.out.println("2 - GM/privileged accounts (accessLevel > 0");
 					System.out.println("3 - Regular accounts only (accessLevel = 0)");
 					System.out.println("4 - List all");
-					while (!(_mode.equals("1") || _mode.equals("2") || _mode.equals("3") || _mode.equals("4")))
+					while (!_mode.equals("1") && !_mode.equals("2") && !_mode.equals("3") && !_mode.equals("4"))
 					{
 						System.out.print("Your choice: ");
 						_mode = _scn.next();

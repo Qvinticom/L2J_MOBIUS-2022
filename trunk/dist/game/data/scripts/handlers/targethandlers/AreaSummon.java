@@ -50,7 +50,7 @@ public class AreaSummon implements ITargetTypeHandler
 			};
 		}
 		
-		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
+		final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
 		final Collection<L2Character> objs = target.getKnownList().getKnownCharacters();
 		final int maxTargets = skill.getAffectLimit();
 		
@@ -66,7 +66,7 @@ public class AreaSummon implements ITargetTypeHandler
 				continue;
 			}
 			
-			if (!(obj.isAttackable() || obj.isPlayable()))
+			if (!obj.isAttackable() && !obj.isPlayable())
 			{
 				continue;
 			}

@@ -208,7 +208,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 				if (npc.getId() == WOOD)
 				{
 					qs = player.getQuestState(Q00197_SevenSignsTheSacredBookOfSeal.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "32593-01.htm" : "32593-03.html";
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32593-01.htm" : "32593-03.html";
 				}
 				break;
 			}
@@ -242,7 +242,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 					{
 						case 1:
 						{
-							htmltext = (isBusy) ? "32597-06.html" : "32597-01.html";
+							htmltext = isBusy ? "32597-06.html" : "32597-01.html";
 							break;
 						}
 						case 2:

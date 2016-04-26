@@ -62,7 +62,7 @@ public final class TriggerSkillBySkill extends AbstractEffect
 	
 	public void onSkillUseEvent(OnCreatureSkillUse event)
 	{
-		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0) || ((_castSkillId == 0) && (_skill.getSkillId() != AQUAMARINE))))
+		if ((_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0) || ((_castSkillId == 0) && (_skill.getSkillId() != AQUAMARINE)))
 		{
 			return;
 		}
@@ -93,7 +93,7 @@ public final class TriggerSkillBySkill extends AbstractEffect
 			}
 			if (!((L2Character) triggerTarget).isInvul())
 			{
-				event.getCaster().makeTriggerCast(triggerSkill, ((L2Character) triggerTarget));
+				event.getCaster().makeTriggerCast(triggerSkill, (L2Character) triggerTarget);
 			}
 		}
 	}

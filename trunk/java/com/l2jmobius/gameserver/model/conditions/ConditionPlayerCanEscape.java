@@ -74,6 +74,6 @@ public class ConditionPlayerCanEscape extends Condition
 		{
 			canTeleport = false;
 		}
-		return (_val == canTeleport);
+		return _val == canTeleport;
 	}
 }

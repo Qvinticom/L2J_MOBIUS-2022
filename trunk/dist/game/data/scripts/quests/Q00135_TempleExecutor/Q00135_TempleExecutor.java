@@ -136,7 +136,7 @@ public class Q00135_TempleExecutor extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState qs = getQuestState(member, false);
-		if ((getRandom(1000) < MOBS.get(npc.getId())))
+		if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
 			if (getQuestItemsCount(player, STOLEN_CARGO) < ITEM_COUNT)
 			{

@@ -91,7 +91,7 @@ public final class MagicalAttackMp extends AbstractEffect
 		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
 		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
 		final double damage = Formulas.calcManaDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
-		final double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
+		final double mp = damage > target.getCurrentMp() ? target.getCurrentMp() : damage;
 		
 		if (damage > 0)
 		{

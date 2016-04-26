@@ -125,7 +125,7 @@ public class RequestDivideAdena extends L2GameClientPacket
 		{
 			for (L2PcInstance target : targets)
 			{
-				if ((target == null))
+				if (target == null)
 				{
 					// TODO : handle that case here + regive adena OR filter with Objects::nonNull on memberCount ?
 					// those sys msg exists and bother me ADENA_WAS_NOT_DISTRIBUTED_TO_S1 / YOU_DID_NOT_RECEIVE_ADENA_DISTRIBUTION

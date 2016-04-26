@@ -805,7 +805,7 @@ final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		else
 		{
 			_usedTextPassages.put(_textPassages[randomPos], new ArrayList<L2Clan>());
-			npc.broadcastPacket((new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), _textPassages[randomPos])));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), _textPassages[randomPos]));
 		}
 	}
 	

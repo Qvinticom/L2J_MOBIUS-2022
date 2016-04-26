@@ -365,7 +365,7 @@ public class ClanEntryManager
 		sortBy = Util.constrain(sortBy, 1, CLAN_COMPARATOR.size() - 1);
 		//@formatter:off
 		return _clanList.values().stream()
-		      .filter((p -> (((clanLevel < 0) && (karma >= 0) && (karma != p.getKarma())) || ((clanLevel >= 0) && (karma < 0) && (clanLevel != p.getClanLevel())) || ((clanLevel >= 0) && (karma >= 0) && ((clanLevel != p.getClanLevel()) || (karma != p.getKarma()))))))
+		      .filter(p -> (((clanLevel < 0) && (karma >= 0) && (karma != p.getKarma())) || ((clanLevel >= 0) && (karma < 0) && (clanLevel != p.getClanLevel())) || ((clanLevel >= 0) && (karma >= 0) && ((clanLevel != p.getClanLevel()) || (karma != p.getKarma())))))
 		      .sorted(descending ? CLAN_COMPARATOR.get(sortBy).reversed() : CLAN_COMPARATOR.get(sortBy))
 		      .collect(Collectors.toList());
 		//@formatter:on

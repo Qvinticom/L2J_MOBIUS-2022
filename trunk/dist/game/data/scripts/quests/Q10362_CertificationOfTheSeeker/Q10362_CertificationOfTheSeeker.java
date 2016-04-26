@@ -165,7 +165,7 @@ public class Q10362_CertificationOfTheSeeker extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && qs.isCond(1) && (Util.checkIfInRange(1500, npc, qs.getPlayer(), false)))
+		if ((qs != null) && qs.isStarted() && qs.isCond(1) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
 			int kills = 0;
 			switch (npc.getId())
@@ -191,7 +191,7 @@ public class Q10362_CertificationOfTheSeeker extends Quest
 			log.addNpc(STALKER, qs.getInt(Integer.toString(STALKER)));
 			killer.sendPacket(log);
 			
-			if (((qs.getInt(Integer.toString(CRAWLER)) >= MOBS_REQUIRED.get(CRAWLER)) && (qs.getInt(Integer.toString(STALKER)) >= MOBS_REQUIRED.get(STALKER))))
+			if ((qs.getInt(Integer.toString(CRAWLER)) >= MOBS_REQUIRED.get(CRAWLER)) && (qs.getInt(Integer.toString(STALKER)) >= MOBS_REQUIRED.get(STALKER)))
 			{
 				qs.setCond(2);
 			}

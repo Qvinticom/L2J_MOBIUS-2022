@@ -130,19 +130,16 @@ public class L2ClanHallDoormenInstance extends L2DoormenInstance
 			html.setFile(player.getHtmlPrefix(), _hasEvolve ? "html/clanHallDoormen/doormen2.htm" : "html/clanHallDoormen/doormen1.htm");
 			html.replace("%clanname%", owner.getName());
 		}
+		else if ((owner != null) && (owner.getLeader() != null))
+		{
+			html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/doormen-no.htm");
+			html.replace("%leadername%", owner.getLeaderName());
+			html.replace("%clanname%", owner.getName());
+		}
 		else
 		{
-			if ((owner != null) && (owner.getLeader() != null))
-			{
-				html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/doormen-no.htm");
-				html.replace("%leadername%", owner.getLeaderName());
-				html.replace("%clanname%", owner.getName());
-			}
-			else
-			{
-				html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/emptyowner.htm");
-				html.replace("%hallname%", getClanHall().getName());
-			}
+			html.setFile(player.getHtmlPrefix(), "html/clanHallDoormen/emptyowner.htm");
+			html.replace("%hallname%", getClanHall().getName());
 		}
 		
 		html.replace("%objectId%", String.valueOf(getObjectId()));

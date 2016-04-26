@@ -122,7 +122,7 @@ final class FrightenedRagnaOrc extends AbstractNpcAI
 					}
 					else
 					{
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, (getRandomBoolean() ? NpcStringId.THANKS_BUT_THAT_THING_ABOUT_10_000_000_ADENA_WAS_A_LIE_SEE_YA : NpcStringId.YOU_RE_PRETTY_DUMB_TO_BELIEVE_ME));
+						broadcastNpcSay(npc, ChatType.NPC_GENERAL, getRandomBoolean() ? NpcStringId.THANKS_BUT_THAT_THING_ABOUT_10_000_000_ADENA_WAS_A_LIE_SEE_YA : NpcStringId.YOU_RE_PRETTY_DUMB_TO_BELIEVE_ME);
 					}
 					startQuestTimer("despawn", 1000, npc, null);
 				}

@@ -568,7 +568,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 				{
 					if (lqs != null)
 					{
-						if ((qs.getMemoState() == 1000))
+						if (qs.getMemoState() == 1000)
 						{
 							if (!player.isClanLeader())
 							{
@@ -596,11 +596,11 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 								htmltext = "30645-05.html";
 							}
 						}
-						else if ((qs.getMemoState() == 3000))
+						else if (qs.getMemoState() == 3000)
 						{
 							htmltext = "30645-07.html";
 						}
-						else if ((qs.getMemoState() > 3000))
+						else if (qs.getMemoState() > 3000)
 						{
 							htmltext = "30645-08.html";
 						}
@@ -655,7 +655,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 				{
 					if (lqs != null)
 					{
-						if ((qs.getMemoState() == 4000))
+						if (qs.getMemoState() == 4000)
 						{
 							if (!player.isClanLeader())
 							{
@@ -670,7 +670,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 								htmltext = "30764-04.html";
 							}
 						}
-						else if ((qs.getMemoState() == 5000))
+						else if (qs.getMemoState() == 5000)
 						{
 							if (getQuestItemsCount(player, SPITEFUL_SOUL_ENERGY) < 10)
 							{
@@ -684,7 +684,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 								htmltext = "30764-08a.html";
 							}
 						}
-						else if ((qs.getMemoState() >= 6000))
+						else if (qs.getMemoState() >= 6000)
 						{
 							htmltext = "30764-09.html";
 						}

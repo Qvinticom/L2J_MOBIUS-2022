@@ -47,7 +47,7 @@ public class SetPrivateStoreListSell extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_packageSale = (readD() == 1);
+		_packageSale = readD() == 1;
 		final int count = readD();
 		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
 		{

@@ -88,14 +88,11 @@ public final class DuelManager
 				return;
 			}
 		}
-		else
+		else if ((playerA.getPvpFlag() != 0) || (playerB.getPvpFlag() != 0))
 		{
-			if ((playerA.getPvpFlag() != 0) || (playerB.getPvpFlag() != 0))
-			{
-				playerA.sendMessage(engagedInPvP);
-				playerB.sendMessage(engagedInPvP);
-				return;
-			}
+			playerA.sendMessage(engagedInPvP);
+			playerB.sendMessage(engagedInPvP);
+			return;
 		}
 		final int duelId = _currentDuelId.incrementAndGet();
 		_duels.put(duelId, new Duel(playerA, playerB, partyDuel, duelId));
@@ -195,7 +192,7 @@ public final class DuelManager
 		{
 			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_POLYMORPHED;
 		}
-		else if (target.isDead() || target.isAlikeDead() || ((target.getCurrentHp() < (target.getMaxHp() / 2)) || (target.getCurrentMp() < (target.getMaxMp() / 2))))
+		else if (target.isDead() || target.isAlikeDead() || (target.getCurrentHp() < (target.getMaxHp() / 2)) || (target.getCurrentMp() < (target.getMaxMp() / 2)))
 		{
 			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_S_HP_OR_MP_IS_BELOW_50;
 		}
@@ -239,7 +236,7 @@ public final class DuelManager
 		return true;
 	}
 	
-	public static final DuelManager getInstance()
+	public static DuelManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

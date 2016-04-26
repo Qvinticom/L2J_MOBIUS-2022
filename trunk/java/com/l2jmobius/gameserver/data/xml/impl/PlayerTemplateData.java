@@ -128,7 +128,7 @@ public final class PlayerTemplateData implements IXmlReader
 									}
 									else if (!cnd.getNodeName().equals("#text"))
 									{
-										set.set((nd.getNodeName() + cnd.getNodeName()), cnd.getTextContent());
+										set.set(nd.getNodeName() + cnd.getNodeName(), cnd.getTextContent());
 									}
 								}
 							}
@@ -138,8 +138,8 @@ public final class PlayerTemplateData implements IXmlReader
 							}
 						}
 						// calculate total pdef and mdef from parts
-						set.set("basePDef", (set.getInt("basePDefchest", 0) + set.getInt("basePDeflegs", 0) + set.getInt("basePDefhead", 0) + set.getInt("basePDeffeet", 0) + set.getInt("basePDefgloves", 0) + set.getInt("basePDefunderwear", 0) + set.getInt("basePDefcloak", 0)));
-						set.set("baseMDef", (set.getInt("baseMDefrear", 0) + set.getInt("baseMDeflear", 0) + set.getInt("baseMDefrfinger", 0) + set.getInt("baseMDefrfinger", 0) + set.getInt("baseMDefneck", 0)));
+						set.set("basePDef", set.getInt("basePDefchest", 0) + set.getInt("basePDeflegs", 0) + set.getInt("basePDefhead", 0) + set.getInt("basePDeffeet", 0) + set.getInt("basePDefgloves", 0) + set.getInt("basePDefunderwear", 0) + set.getInt("basePDefcloak", 0));
+						set.set("baseMDef", set.getInt("baseMDefrear", 0) + set.getInt("baseMDeflear", 0) + set.getInt("baseMDefrfinger", 0) + set.getInt("baseMDefrfinger", 0) + set.getInt("baseMDefneck", 0));
 						
 						_playerTemplates.put(ClassId.getClassId(classId), new L2PcTemplate(set, creationPoints));
 					}
@@ -180,7 +180,7 @@ public final class PlayerTemplateData implements IXmlReader
 		return _playerTemplates.get(ClassId.getClassId(classId));
 	}
 	
-	public static final PlayerTemplateData getInstance()
+	public static PlayerTemplateData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

@@ -550,54 +550,51 @@ public class NpcData implements IXmlReader
 											aiSkillScopes.add(shortOrLongRangeScope);
 										}
 									}
+									else if (skill.hasEffectType(L2EffectType.DISPEL, L2EffectType.DISPEL_BY_SLOT))
+									{
+										aiSkillScopes.add(AISkillScope.NEGATIVE);
+										aiSkillScopes.add(shortOrLongRangeScope);
+									}
+									else if (skill.hasEffectType(L2EffectType.HEAL))
+									{
+										aiSkillScopes.add(AISkillScope.HEAL);
+									}
+									else if (skill.hasEffectType(L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK, L2EffectType.MAGICAL_ATTACK, L2EffectType.DEATH_LINK, L2EffectType.HP_DRAIN))
+									{
+										aiSkillScopes.add(AISkillScope.ATTACK);
+										aiSkillScopes.add(AISkillScope.UNIVERSAL);
+										aiSkillScopes.add(shortOrLongRangeScope);
+									}
+									else if (skill.hasEffectType(L2EffectType.SLEEP))
+									{
+										aiSkillScopes.add(AISkillScope.IMMOBILIZE);
+									}
+									else if (skill.hasEffectType(L2EffectType.STUN, L2EffectType.ROOT))
+									{
+										aiSkillScopes.add(AISkillScope.IMMOBILIZE);
+										aiSkillScopes.add(shortOrLongRangeScope);
+									}
+									else if (skill.hasEffectType(L2EffectType.MUTE, L2EffectType.FEAR))
+									{
+										aiSkillScopes.add(AISkillScope.COT);
+										aiSkillScopes.add(shortOrLongRangeScope);
+									}
+									else if (skill.hasEffectType(L2EffectType.PARALYZE))
+									{
+										aiSkillScopes.add(AISkillScope.IMMOBILIZE);
+										aiSkillScopes.add(shortOrLongRangeScope);
+									}
+									else if (skill.hasEffectType(L2EffectType.DMG_OVER_TIME, L2EffectType.DMG_OVER_TIME_PERCENT))
+									{
+										aiSkillScopes.add(shortOrLongRangeScope);
+									}
+									else if (skill.hasEffectType(L2EffectType.RESURRECTION))
+									{
+										aiSkillScopes.add(AISkillScope.RES);
+									}
 									else
 									{
-										if (skill.hasEffectType(L2EffectType.DISPEL, L2EffectType.DISPEL_BY_SLOT))
-										{
-											aiSkillScopes.add(AISkillScope.NEGATIVE);
-											aiSkillScopes.add(shortOrLongRangeScope);
-										}
-										else if (skill.hasEffectType(L2EffectType.HEAL))
-										{
-											aiSkillScopes.add(AISkillScope.HEAL);
-										}
-										else if (skill.hasEffectType(L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK, L2EffectType.MAGICAL_ATTACK, L2EffectType.DEATH_LINK, L2EffectType.HP_DRAIN))
-										{
-											aiSkillScopes.add(AISkillScope.ATTACK);
-											aiSkillScopes.add(AISkillScope.UNIVERSAL);
-											aiSkillScopes.add(shortOrLongRangeScope);
-										}
-										else if (skill.hasEffectType(L2EffectType.SLEEP))
-										{
-											aiSkillScopes.add(AISkillScope.IMMOBILIZE);
-										}
-										else if (skill.hasEffectType(L2EffectType.STUN, L2EffectType.ROOT))
-										{
-											aiSkillScopes.add(AISkillScope.IMMOBILIZE);
-											aiSkillScopes.add(shortOrLongRangeScope);
-										}
-										else if (skill.hasEffectType(L2EffectType.MUTE, L2EffectType.FEAR))
-										{
-											aiSkillScopes.add(AISkillScope.COT);
-											aiSkillScopes.add(shortOrLongRangeScope);
-										}
-										else if (skill.hasEffectType(L2EffectType.PARALYZE))
-										{
-											aiSkillScopes.add(AISkillScope.IMMOBILIZE);
-											aiSkillScopes.add(shortOrLongRangeScope);
-										}
-										else if (skill.hasEffectType(L2EffectType.DMG_OVER_TIME, L2EffectType.DMG_OVER_TIME_PERCENT))
-										{
-											aiSkillScopes.add(shortOrLongRangeScope);
-										}
-										else if (skill.hasEffectType(L2EffectType.RESURRECTION))
-										{
-											aiSkillScopes.add(AISkillScope.RES);
-										}
-										else
-										{
-											aiSkillScopes.add(AISkillScope.UNIVERSAL);
-										}
+										aiSkillScopes.add(AISkillScope.UNIVERSAL);
 									}
 								}
 								

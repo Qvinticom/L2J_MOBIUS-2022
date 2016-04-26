@@ -125,11 +125,11 @@ public final class Q00357_WarehouseKeepersAmbition extends Quest
 		String htmltext = getNoQuestMsg(talker);
 		if (qs.isCreated())
 		{
-			htmltext = ((talker.getLevel() < MIN_LVL) ? "30686-01.html" : "30686-02.htm");
+			htmltext = (talker.getLevel() < MIN_LVL) ? "30686-01.html" : "30686-02.htm";
 		}
 		else if (qs.isStarted())
 		{
-			htmltext = (hasQuestItems(talker, JADE_CRYSTAL)) ? "30686-07.html" : "30686-06.html";
+			htmltext = hasQuestItems(talker, JADE_CRYSTAL) ? "30686-07.html" : "30686-06.html";
 		}
 		return htmltext;
 	}

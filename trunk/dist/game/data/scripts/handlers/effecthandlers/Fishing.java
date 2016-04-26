@@ -100,7 +100,7 @@ public final class Fishing extends AbstractEffect
 		
 		// check for equiped fishing rod
 		final L2Weapon equipedWeapon = player.getActiveWeaponItem();
-		if (((equipedWeapon == null) || (equipedWeapon.getItemType() != WeaponType.FISHINGROD)))
+		if ((equipedWeapon == null) || (equipedWeapon.getItemType() != WeaponType.FISHINGROD))
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
 			return;
@@ -230,12 +230,12 @@ public final class Fishing extends AbstractEffect
 	 */
 	private static int computeBaitZ(L2PcInstance player, int baitX, int baitY, L2FishingZone fishingZone, L2WaterZone waterZone)
 	{
-		if ((fishingZone == null))
+		if (fishingZone == null)
 		{
 			return Integer.MIN_VALUE;
 		}
 		
-		if ((waterZone == null))
+		if (waterZone == null)
 		{
 			return Integer.MIN_VALUE;
 		}

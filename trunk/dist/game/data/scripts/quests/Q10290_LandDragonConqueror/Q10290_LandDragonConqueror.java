@@ -139,7 +139,7 @@ public final class Q10290_LandDragonConqueror extends Quest
 						htmltext = "30755-07.html";
 					}
 				}
-				else if ((qs.isCond(2)) && hasQuestItems(player, MIRACLE_NECKLACE))
+				else if (qs.isCond(2) && hasQuestItems(player, MIRACLE_NECKLACE))
 				{
 					htmltext = "30755-08.html";
 					giveAdena(player, 131236, true);

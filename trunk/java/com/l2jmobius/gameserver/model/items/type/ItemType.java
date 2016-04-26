@@ -22,5 +22,5 @@ package com.l2jmobius.gameserver.model.items.type;
  */
 public interface ItemType
 {
-	public int mask();
+	int mask();
 }

@@ -114,10 +114,10 @@ public final class TriggerForce extends AbstractEffect
 		// apply offensive aura to enemies
 		if ((_skill.getSkillId() == RAGE_AURA) || (_skill.getSkillId() == ROLLING_THUNDER))
 		{
-			final boolean srcInArena = (effector.isInsideZone(ZoneId.PVP) && (!effector.isInsideZone(ZoneId.SIEGE)));
+			final boolean srcInArena = effector.isInsideZone(ZoneId.PVP) && !effector.isInsideZone(ZoneId.SIEGE);
 			for (L2Character obj : effector.getKnownList().getKnownCharactersInRadius(200))
 			{
-				if (((obj.isAttackable() || obj.isPlayable()) && !obj.isDoor()) && Skill.checkForAreaOffensiveSkills(effector, obj, _skill.getSkill(), srcInArena) && !_affectedObjects.contains(obj))
+				if ((obj.isAttackable() || obj.isPlayable()) && !obj.isDoor() && Skill.checkForAreaOffensiveSkills(effector, obj, _skill.getSkill(), srcInArena) && !_affectedObjects.contains(obj))
 				{
 					_affectedObjects.add(obj);
 					_skill.getSkill().applyEffects(effector, obj);
@@ -159,7 +159,7 @@ public final class TriggerForce extends AbstractEffect
 				}
 				if (!member.getEffectList().isAffectedBySkill(_skill.getSkillId()) && (member.calculateDistance(effector, true, false) < 900) && (_skill.getSkillId() != RAGE_AURA) && (_skill.getSkillId() != ROLLING_THUNDER))
 				{
-					if ((member != effector))
+					if (member != effector)
 					{
 						_skill.getSkill().applyEffects(effector, member);
 					}
@@ -234,13 +234,13 @@ public final class TriggerForce extends AbstractEffect
 					activeForces++;
 				}
 				
-				if (((activeForces < 4) || ((member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) == null) || (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) == null))) && (member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY) != null))
+				if (((activeForces < 4) || (member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) == null) || (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) == null)) && (member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY) != null))
 				{
 					member.getEffectList().remove(true, member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY));
 				}
-				if ((activeForces >= 4) && (member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) != null) && (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) != null) && (!member.getEffectList().isAffectedBySkill(PARTY_SOLIDARITY) || (member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY).getSkill().getLevel() != Math.min((activeForces - 3), 3))))
+				if ((activeForces >= 4) && (member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) != null) && (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) != null) && (!member.getEffectList().isAffectedBySkill(PARTY_SOLIDARITY) || (member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY).getSkill().getLevel() != Math.min(activeForces - 3, 3))))
 				{
-					member.makeTriggerCast(SkillData.getInstance().getSkill(PARTY_SOLIDARITY, Math.min((activeForces - 3), 3)), member);
+					member.makeTriggerCast(SkillData.getInstance().getSkill(PARTY_SOLIDARITY, Math.min(activeForces - 3, 3)), member);
 				}
 			}
 		}

@@ -51,7 +51,7 @@ final class Hardin extends AbstractNpcAI
 		{
 			htmltext = "33870-01.html";
 		}
-		else if ((player.getRace() != Race.ERTHEIA) && (CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, player.getBaseClassId())))
+		else if ((player.getRace() != Race.ERTHEIA) && CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, player.getBaseClassId()))
 		{
 			htmltext = "33870-02.html";
 		}

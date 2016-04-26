@@ -125,7 +125,7 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 				{
 					case 1:
 					{
-						htmltext = (!hasQuestItems(player, STAKATO_FANG)) ? "32640-8.html" : "32640-9.html";
+						htmltext = !hasQuestItems(player, STAKATO_FANG) ? "32640-8.html" : "32640-9.html";
 						break;
 					}
 					case 2:

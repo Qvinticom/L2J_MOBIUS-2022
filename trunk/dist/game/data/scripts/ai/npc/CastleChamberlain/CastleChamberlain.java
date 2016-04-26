@@ -725,7 +725,7 @@ final class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
-					final long amount = (st.hasMoreTokens()) ? Long.parseLong(st.nextToken()) : 0;
+					final long amount = st.hasMoreTokens() ? Long.parseLong(st.nextToken()) : 0;
 					if ((amount > 0) && (amount < Inventory.MAX_ADENA))
 					{
 						if (player.getAdena() >= amount)
@@ -750,10 +750,10 @@ final class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
-					final long amount = (st.hasMoreTokens()) ? Long.parseLong(st.nextToken()) : 0;
+					final long amount = st.hasMoreTokens() ? Long.parseLong(st.nextToken()) : 0;
 					if (amount <= castle.getTreasury())
 					{
-						castle.addToTreasuryNoTax((-1) * amount);
+						castle.addToTreasuryNoTax(-1 * amount);
 						giveAdena(player, amount, false);
 						htmltext = "chamberlain-01.html";
 					}
@@ -851,12 +851,12 @@ final class CastleChamberlain extends AbstractNpcAI
 				}
 				else
 				{
-					final boolean open = (Integer.parseInt(st.nextToken()) == 1);
+					final boolean open = Integer.parseInt(st.nextToken()) == 1;
 					while (st.hasMoreTokens())
 					{
 						castle.openCloseDoor(player, Integer.parseInt(st.nextToken()), open);
 					}
-					htmltext = (open ? "chamberlain-05.html" : "chamberlain-06.html");
+					htmltext = open ? "chamberlain-05.html" : "chamberlain-06.html";
 				}
 				break;
 			}
@@ -972,13 +972,13 @@ final class CastleChamberlain extends AbstractNpcAI
 				{
 					htmltext = "chamberlain-21.html";
 				}
-				else if (castle.getFunction(Castle.FUNC_TELEPORT) == null)
+				else if (castle.getFunction(Castle.FUNC_TELEPORT) != null)
 				{
-					htmltext = "castlefuncdisabled.html";
+					htmltext = npc.getCastle().getName() + "-t" + castle.getFunction(Castle.FUNC_TELEPORT).getLvl() + ".html";
 				}
 				else
 				{
-					htmltext = npc.getCastle().getName() + "-t" + castle.getFunction(Castle.FUNC_TELEPORT).getLvl() + ".html";
+					htmltext = "castlefuncdisabled.html";
 				}
 				break;
 			}
@@ -1164,7 +1164,7 @@ final class CastleChamberlain extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return (isOwner(player, npc)) ? "chamberlain-01.html" : "chamberlain-04.html";
+		return isOwner(player, npc) ? "chamberlain-01.html" : "chamberlain-04.html";
 	}
 	
 	// @formatter:off

@@ -99,7 +99,7 @@ public final class AdminPCBangPoints implements IAdminCommandHandler
 							return false;
 						}
 						
-						int pcBangCount = Math.min((target.getPcBangPoints() + value), Config.PC_BANG_MAX_POINTS);
+						int pcBangCount = Math.min(target.getPcBangPoints() + value, Config.PC_BANG_MAX_POINTS);
 						if (pcBangCount < 0)
 						{
 							pcBangCount = Config.PC_BANG_MAX_POINTS;
@@ -166,7 +166,7 @@ public final class AdminPCBangPoints implements IAdminCommandHandler
 					continue;
 				}
 				
-				int pcBangCount = Math.min((temp.getPcBangPoints() + value), Integer.MAX_VALUE);
+				int pcBangCount = Math.min(temp.getPcBangPoints() + value, Integer.MAX_VALUE);
 				if (pcBangCount < 0)
 				{
 					pcBangCount = Integer.MAX_VALUE;

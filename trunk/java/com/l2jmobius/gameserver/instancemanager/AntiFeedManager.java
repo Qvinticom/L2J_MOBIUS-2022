@@ -246,7 +246,7 @@ public final class AntiFeedManager
 		return Config.L2JMOD_DUALBOX_CHECK_WHITELIST.containsKey(addrHash) ? max + Config.L2JMOD_DUALBOX_CHECK_WHITELIST.get(addrHash) : max;
 	}
 	
-	public static final AntiFeedManager getInstance()
+	public static AntiFeedManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

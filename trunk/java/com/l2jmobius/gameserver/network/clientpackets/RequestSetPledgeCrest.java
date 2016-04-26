@@ -56,7 +56,7 @@ public final class RequestSetPledgeCrest extends L2GameClientPacket
 			return;
 		}
 		
-		if ((_length < 0))
+		if (_length < 0)
 		{
 			activeChar.sendPacket(SystemMessageId.THE_SIZE_OF_THE_UPLOADED_SYMBOL_DOES_NOT_MEET_THE_STANDARD_REQUIREMENTS);
 			return;

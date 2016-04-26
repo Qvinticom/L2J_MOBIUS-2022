@@ -380,12 +380,12 @@ public enum ClassId implements IIdentifiable
 	 */
 	public final int level()
 	{
-		if (_parent == null)
+		if (_parent != null)
 		{
-			return 0;
+			return 1 + _parent.level();
 		}
 		
-		return 1 + _parent.level();
+		return 0;
 	}
 	
 	/**

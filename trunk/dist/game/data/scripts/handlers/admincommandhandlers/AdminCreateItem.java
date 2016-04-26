@@ -187,7 +187,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 			for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
 			{
-				if ((activeChar != onlinePlayer) && onlinePlayer.isOnline() && ((onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached()))
+				if ((activeChar != onlinePlayer) && onlinePlayer.isOnline() && (onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached())
 				{
 					onlinePlayer.getInventory().addItem("Admin", idval, numval, onlinePlayer, activeChar);
 					onlinePlayer.sendMessage("Admin spawned " + numval + " " + template.getName() + " in your inventory.");

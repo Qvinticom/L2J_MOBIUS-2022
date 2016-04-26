@@ -85,7 +85,7 @@ public class Q10472_WindsOfFate_EncroachingShadows extends Quest
 	private static final int MIN_LEVEL = 85;
 	private static final int RELIQUARY_PRESENTATION_MOVIE_ZONE = 10472;
 	private static final String MOVIE_VAR = "reliquary_of_the_giants_movie_zone";
-	private final static int ERTHEIA_AWEK_QUEST_USM_ID = 9; // TODO: Find proper Movie
+	private static final int ERTHEIA_AWEK_QUEST_USM_ID = 9; // TODO: Find proper Movie
 	
 	public Q10472_WindsOfFate_EncroachingShadows()
 	{

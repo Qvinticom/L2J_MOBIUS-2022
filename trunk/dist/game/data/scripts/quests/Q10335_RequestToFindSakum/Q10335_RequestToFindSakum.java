@@ -210,7 +210,7 @@ public class Q10335_RequestToFindSakum extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && qs.isCond(2) && (Util.checkIfInRange(1500, npc, qs.getPlayer(), false)))
+		if ((qs != null) && qs.isStarted() && qs.isCond(2) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
 			int kills = qs.getInt(Integer.toString(npc.getId()));
 			if (kills < MOBS_REQUIRED.get(npc.getId())) // check if killed required number of monsters

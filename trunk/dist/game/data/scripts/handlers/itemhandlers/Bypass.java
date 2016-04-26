@@ -44,14 +44,13 @@ public class Bypass implements IItemHandler
 		if (content == null)
 		{
 			html.setHtml("<html><body>My Text is missing:<br>" + filename + "</body></html>");
-			activeChar.sendPacket(html);
 		}
 		else
 		{
 			html.setHtml(content);
 			html.replace("%itemId%", String.valueOf(item.getObjectId()));
-			activeChar.sendPacket(html);
 		}
+		activeChar.sendPacket(html);
 		return true;
 	}
 }

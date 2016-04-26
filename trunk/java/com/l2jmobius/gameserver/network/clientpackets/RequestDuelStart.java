@@ -135,33 +135,29 @@ public final class RequestDuelStart extends L2GameClientPacket
 				}
 			}
 		}
-		else
-		// 1vs1 duel
+		else if (!targetChar.isProcessingRequest())
 		{
-			if (!targetChar.isProcessingRequest())
+			activeChar.onTransactionRequest(targetChar);
+			targetChar.sendPacket(new ExDuelAskStart(activeChar.getName(), _partyDuel));
+			
+			if (Config.DEBUG)
 			{
-				activeChar.onTransactionRequest(targetChar);
-				targetChar.sendPacket(new ExDuelAskStart(activeChar.getName(), _partyDuel));
-				
-				if (Config.DEBUG)
-				{
-					_log.fine(activeChar.getName() + " requested a duel with " + targetChar.getName());
-				}
-				
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
-				msg.addString(targetChar.getName());
-				activeChar.sendPacket(msg);
-				
-				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CHALLENGED_YOU_TO_A_DUEL);
-				msg.addString(activeChar.getName());
-				targetChar.sendPacket(msg);
+				_log.fine(activeChar.getName() + " requested a duel with " + targetChar.getName());
 			}
-			else
-			{
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
-				msg.addString(targetChar.getName());
-				activeChar.sendPacket(msg);
-			}
+			
+			SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
+			msg.addString(targetChar.getName());
+			activeChar.sendPacket(msg);
+			
+			msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CHALLENGED_YOU_TO_A_DUEL);
+			msg.addString(activeChar.getName());
+			targetChar.sendPacket(msg);
+		}
+		else
+		{
+			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+			msg.addString(targetChar.getName());
+			activeChar.sendPacket(msg);
 		}
 	}
 	

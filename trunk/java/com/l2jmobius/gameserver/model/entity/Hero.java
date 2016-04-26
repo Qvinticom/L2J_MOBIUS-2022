@@ -460,7 +460,7 @@ public class Hero
 					final StringBuilder fList = new StringBuilder(500);
 					int counter = 0;
 					int breakat = 0;
-					for (int i = ((page - 1) * perpage); i < list.size(); i++)
+					for (int i = (page - 1) * perpage; i < list.size(); i++)
 					{
 						breakat = i;
 						final StatsSet diaryEntry = list.get(i);
@@ -548,7 +548,7 @@ public class Hero
 					final StringBuilder fList = new StringBuilder(500);
 					int counter = 0;
 					int breakat = 0;
-					for (int i = ((page - 1) * perpage); i < heroFights.size(); i++)
+					for (int i = (page - 1) * perpage; i < heroFights.size(); i++)
 					{
 						breakat = i;
 						final StatsSet fight = heroFights.get(i);

@@ -84,7 +84,7 @@ public final class TriggerSkillByAttack extends AbstractEffect
 	
 	public void onAttackEvent(OnCreatureDamageDealt event)
 	{
-		if (event.isDamageOverTime() || (_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0)))
+		if (event.isDamageOverTime() || (_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0))
 		{
 			return;
 		}
@@ -130,7 +130,7 @@ public final class TriggerSkillByAttack extends AbstractEffect
 			}
 			if (!((L2Character) triggerTarget).isInvul())
 			{
-				event.getAttacker().makeTriggerCast(triggerSkill, ((L2Character) triggerTarget));
+				event.getAttacker().makeTriggerCast(triggerSkill, (L2Character) triggerTarget);
 			}
 		}
 	}

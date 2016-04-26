@@ -39,7 +39,7 @@ public class ListenersContainer
 	 */
 	public AbstractEventListener addListener(AbstractEventListener listener)
 	{
-		if ((listener == null))
+		if (listener == null)
 		{
 			throw new NullPointerException("Listener cannot be null!");
 		}
@@ -54,7 +54,7 @@ public class ListenersContainer
 	 */
 	public AbstractEventListener removeListener(AbstractEventListener listener)
 	{
-		if ((listener == null))
+		if (listener == null)
 		{
 			throw new NullPointerException("Listener cannot be null!");
 		}

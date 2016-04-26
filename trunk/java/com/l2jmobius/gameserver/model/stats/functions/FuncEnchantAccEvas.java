@@ -47,11 +47,11 @@ public class FuncEnchantAccEvas extends AbstractFunction
 			// Increases Phys.Accuracy / Mag.Accuracy for gloves
 			if (item.getEnchantLevel() == 4)
 			{
-				value += (0.2 * blessedBonus);
+				value += 0.2 * blessedBonus;
 			}
 			else
 			{
-				value += (0.2 * blessedBonus * ((item.getEnchantLevel() * 2) - 9));
+				value += 0.2 * blessedBonus * ((item.getEnchantLevel() * 2) - 9);
 			}
 		}
 		return initVal;

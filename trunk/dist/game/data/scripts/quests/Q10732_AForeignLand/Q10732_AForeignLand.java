@@ -34,7 +34,7 @@ public class Q10732_AForeignLand extends Quest
 	private static final int GERETH = 33932;
 	// Misc
 	private static final int MAX_LEVEL = 20;
-	private final static int ERTHEIA_FIRST_QUEST_USM_ID = 14;
+	private static final int ERTHEIA_FIRST_QUEST_USM_ID = 14;
 	
 	public Q10732_AForeignLand()
 	{

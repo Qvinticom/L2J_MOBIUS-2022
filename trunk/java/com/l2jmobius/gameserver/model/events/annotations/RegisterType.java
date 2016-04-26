@@ -30,5 +30,5 @@ import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 @Target(ElementType.METHOD)
 public @interface RegisterType
 {
-	public ListenerRegisterType value();
+	ListenerRegisterType value();
 }

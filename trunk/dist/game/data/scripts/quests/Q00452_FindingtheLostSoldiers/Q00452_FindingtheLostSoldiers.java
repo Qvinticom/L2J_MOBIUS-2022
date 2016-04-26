@@ -67,25 +67,22 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 				qs.startQuest();
 			}
 		}
-		else
+		else if (qs.isCond(1))
 		{
-			if (qs.isCond(1))
+			if (getRandom(10) < 5)
 			{
-				if (getRandom(10) < 5)
-				{
-					giveItems(player, TAG_ID, 1);
-				}
-				else
-				{
-					htmltext = "corpse-3.html";
-				}
-				qs.setCond(2, true);
-				npc.deleteMe();
+				giveItems(player, TAG_ID, 1);
 			}
 			else
 			{
 				htmltext = "corpse-3.html";
 			}
+			qs.setCond(2, true);
+			npc.deleteMe();
+		}
+		else
+		{
+			htmltext = "corpse-3.html";
 		}
 		return htmltext;
 	}
@@ -134,12 +131,9 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 					break;
 			}
 		}
-		else
+		else if (qs.isCond(1))
 		{
-			if (qs.isCond(1))
-			{
-				htmltext = "corpse-1.html";
-			}
+			htmltext = "corpse-1.html";
 		}
 		return htmltext;
 	}

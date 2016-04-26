@@ -76,29 +76,26 @@ public class IPSubnet
 				}
 			}
 		}
-		else
+		// check for embedded v4 in v6 addr (not done !)
+		else if (_isIPv4)
 		{
-			// check for embedded v4 in v6 addr (not done !)
-			if (_isIPv4)
+			// my V4 vs V6
+			for (int i = 0; i < _addr.length; i++)
 			{
-				// my V4 vs V6
-				for (int i = 0; i < _addr.length; i++)
+				if ((addr[i + 12] & _mask[i]) != _addr[i])
 				{
-					if ((addr[i + 12] & _mask[i]) != _addr[i])
-					{
-						return false;
-					}
+					return false;
 				}
 			}
-			else
+		}
+		else
+		{
+			// my V6 vs V4
+			for (int i = 0; i < _addr.length; i++)
 			{
-				// my V6 vs V4
-				for (int i = 0; i < _addr.length; i++)
+				if ((addr[i] & _mask[i + 12]) != _addr[i + 12])
 				{
-					if ((addr[i] & _mask[i + 12]) != _addr[i + 12])
-					{
-						return false;
-					}
+					return false;
 				}
 			}
 		}
@@ -112,7 +109,7 @@ public class IPSubnet
 		int size = 0;
 		for (byte element : _mask)
 		{
-			size += Integer.bitCount((element & 0xFF));
+			size += Integer.bitCount(element & 0xFF);
 		}
 		
 		try
@@ -136,15 +133,10 @@ public class IPSubnet
 		{
 			return applyMask(((IPSubnet) o).getAddress());
 		}
-		if (o instanceof InetAddress)
-		{
-			return applyMask(((InetAddress) o).getAddress());
-		}
-		
-		return false;
+		return (o instanceof InetAddress) && applyMask(((InetAddress) o).getAddress());
 	}
 	
-	private static final byte[] getMask(int n, int maxLength) throws UnknownHostException
+	private static byte[] getMask(int n, int maxLength) throws UnknownHostException
 	{
 		if ((n > (maxLength << 3)) || (n < 0))
 		{

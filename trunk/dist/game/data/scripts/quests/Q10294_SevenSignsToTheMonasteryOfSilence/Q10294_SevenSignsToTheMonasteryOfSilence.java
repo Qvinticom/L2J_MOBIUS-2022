@@ -260,22 +260,22 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			}
 			case "DONE1":
 			{
-				htmltext = ((qs.getInt("good1") == 1) ? "32804-05.html" : "32804-03.html");
+				htmltext = (qs.getInt("good1") == 1) ? "32804-05.html" : "32804-03.html";
 				break;
 			}
 			case "DONE2":
 			{
-				htmltext = ((qs.getInt("good2") == 1) ? "32805-05.html" : "32805-03.html");
+				htmltext = (qs.getInt("good2") == 1) ? "32805-05.html" : "32805-03.html";
 				break;
 			}
 			case "DONE3":
 			{
-				htmltext = ((qs.getInt("good3") == 1) ? "32806-05.html" : "32806-03.html");
+				htmltext = (qs.getInt("good3") == 1) ? "32806-05.html" : "32806-03.html";
 				break;
 			}
 			case "DONE4":
 			{
-				htmltext = ((qs.getInt("good4") == 1) ? "32807-05.html" : "32807-03.html");
+				htmltext = (qs.getInt("good4") == 1) ? "32807-05.html" : "32807-03.html";
 				break;
 			}
 			case "SPAWN_MOBS":
@@ -312,7 +312,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				else if (qs.isCreated())
 				{
 					qs = player.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "32784-01.htm" : "32784-07.htm";
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32784-01.htm" : "32784-07.htm";
 				}
 				else if (qs.isStarted() && qs.isCond(1))
 				{
@@ -336,7 +336,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 					}
 					case 3:
 					{
-						htmltext = ((player.isSubClassActive()) ? "32792-09.html" : "32792-07.html");
+						htmltext = player.isSubClassActive() ? "32792-09.html" : "32792-07.html";
 						break;
 					}
 				}
@@ -403,22 +403,22 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			}
 			case READING_DESK1:
 			{
-				htmltext = ((qs.getInt("good1") == 1) ? "32821-03.html" : "32821-01.html");
+				htmltext = (qs.getInt("good1") == 1) ? "32821-03.html" : "32821-01.html";
 				break;
 			}
 			case READING_DESK5:
 			{
-				htmltext = ((qs.getInt("good2") == 1) ? "32821-03.html" : "32825-01.html");
+				htmltext = (qs.getInt("good2") == 1) ? "32821-03.html" : "32825-01.html";
 				break;
 			}
 			case READING_DESK9:
 			{
-				htmltext = ((qs.getInt("good3") == 1) ? "32821-03.html" : "32829-01.html");
+				htmltext = (qs.getInt("good3") == 1) ? "32821-03.html" : "32829-01.html";
 				break;
 			}
 			case READING_DESK13:
 			{
-				htmltext = ((qs.getInt("good4") == 1) ? "32821-03.html" : "32833-01.html");
+				htmltext = (qs.getInt("good4") == 1) ? "32821-03.html" : "32833-01.html";
 				break;
 			}
 			case SOLINAS_EVIL_THOUGHTS:
@@ -440,6 +440,6 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 	
 	private boolean hasCheckedAllRightBooks(QuestState qs)
 	{
-		return ((qs.getInt("good1") == 1) && (qs.getInt("good2") == 1) && (qs.getInt("good3") == 1) && (qs.getInt("good4") == 1));
+		return (qs.getInt("good1") == 1) && (qs.getInt("good2") == 1) && (qs.getInt("good3") == 1) && (qs.getInt("good4") == 1);
 	}
 }

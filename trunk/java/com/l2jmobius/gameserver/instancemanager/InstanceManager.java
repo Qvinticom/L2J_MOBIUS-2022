@@ -204,7 +204,7 @@ public final class InstanceManager implements IXmlReader
 		{
 			return _instanceIdNames.get(id);
 		}
-		return ("UnknownInstance");
+		return "UnknownInstance";
 	}
 	
 	@Override
@@ -253,7 +253,7 @@ public final class InstanceManager implements IXmlReader
 	{
 		for (InstanceWorld temp : _instanceWorlds.values())
 		{
-			if ((temp != null) && (temp.isAllowed(player.getObjectId())))
+			if ((temp != null) && temp.isAllowed(player.getObjectId()))
 			{
 				return temp;
 			}
@@ -384,7 +384,7 @@ public final class InstanceManager implements IXmlReader
 	 * Gets the single instance of {@code InstanceManager}.
 	 * @return single instance of {@code InstanceManager}
 	 */
-	public static final InstanceManager getInstance()
+	public static InstanceManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

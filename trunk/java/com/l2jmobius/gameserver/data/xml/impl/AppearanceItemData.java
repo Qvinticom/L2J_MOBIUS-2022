@@ -141,7 +141,7 @@ public class AppearanceItemData implements IXmlReader
 	 * Gets the single instance of AppearanceItemData.
 	 * @return single instance of AppearanceItemData
 	 */
-	public static final AppearanceItemData getInstance()
+	public static AppearanceItemData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

@@ -81,7 +81,7 @@ public class ValidatePosition extends L2GameClientPacket
 				dx = _x - activeChar.getInVehiclePosition().getX();
 				dy = _y - activeChar.getInVehiclePosition().getY();
 				// dz = _z - activeChar.getInVehiclePosition().getZ();
-				diffSq = ((dx * dx) + (dy * dy));
+				diffSq = (dx * dx) + (dy * dy);
 				if (diffSq > 250000)
 				{
 					sendPacket(new GetOnVehicle(activeChar.getObjectId(), _data, activeChar.getInVehiclePosition()));
@@ -98,7 +98,7 @@ public class ValidatePosition extends L2GameClientPacket
 		dx = _x - realX;
 		dy = _y - realY;
 		dz = _z - realZ;
-		diffSq = ((dx * dx) + (dy * dy));
+		diffSq = (dx * dx) + (dy * dy);
 		
 		// Zoey76: TODO: Implement or cleanup.
 		// L2Party party = activeChar.getParty();

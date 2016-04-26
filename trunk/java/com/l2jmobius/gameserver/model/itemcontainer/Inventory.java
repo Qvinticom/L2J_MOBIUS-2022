@@ -55,9 +55,9 @@ public abstract class Inventory extends ItemContainer
 	
 	public interface PaperdollListener
 	{
-		public void notifyEquiped(int slot, L2ItemInstance inst, Inventory inventory);
+		void notifyEquiped(int slot, L2ItemInstance inst, Inventory inventory);
 		
-		public void notifyUnequiped(int slot, L2ItemInstance inst, Inventory inventory);
+		void notifyUnequiped(int slot, L2ItemInstance inst, Inventory inventory);
 	}
 	
 	// Common Items
@@ -1771,7 +1771,7 @@ public abstract class Inventory extends ItemContainer
 			case L2Item.SLOT_L_HAND:
 			{
 				final L2ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
-				if ((rh != null) && (rh.getItem().getBodyPart() == L2Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || ((rh.getItemType() == WeaponType.CROSSBOW) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
+				if ((rh != null) && (rh.getItem().getBodyPart() == L2Item.SLOT_LR_HAND) && ((rh.getItemType() != WeaponType.BOW) || (item.getItemType() != EtcItemType.ARROW)) && ((rh.getItemType() != WeaponType.CROSSBOW) || (item.getItemType() != EtcItemType.BOLT)) && ((rh.getItemType() != WeaponType.FISHINGROD) || (item.getItemType() != EtcItemType.LURE)))
 				{
 					setPaperdollItem(PAPERDOLL_RHAND, null);
 				}
@@ -1793,13 +1793,13 @@ public abstract class Inventory extends ItemContainer
 				{
 					setPaperdollItem(PAPERDOLL_LEAR, item);
 				}
-				else if (_paperdoll[PAPERDOLL_REAR] == null)
+				else if (_paperdoll[PAPERDOLL_REAR] != null)
 				{
-					setPaperdollItem(PAPERDOLL_REAR, item);
+					setPaperdollItem(PAPERDOLL_LEAR, item);
 				}
 				else
 				{
-					setPaperdollItem(PAPERDOLL_LEAR, item);
+					setPaperdollItem(PAPERDOLL_REAR, item);
 				}
 				break;
 			}
@@ -1811,13 +1811,13 @@ public abstract class Inventory extends ItemContainer
 				{
 					setPaperdollItem(PAPERDOLL_LFINGER, item);
 				}
-				else if (_paperdoll[PAPERDOLL_RFINGER] == null)
+				else if (_paperdoll[PAPERDOLL_RFINGER] != null)
 				{
-					setPaperdollItem(PAPERDOLL_RFINGER, item);
+					setPaperdollItem(PAPERDOLL_LFINGER, item);
 				}
 				else
 				{
-					setPaperdollItem(PAPERDOLL_LFINGER, item);
+					setPaperdollItem(PAPERDOLL_RFINGER, item);
 				}
 				break;
 			}

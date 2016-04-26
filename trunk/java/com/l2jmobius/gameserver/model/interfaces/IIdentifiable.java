@@ -22,5 +22,5 @@ package com.l2jmobius.gameserver.model.interfaces;
  */
 public interface IIdentifiable
 {
-	public int getId();
+	int getId();
 }

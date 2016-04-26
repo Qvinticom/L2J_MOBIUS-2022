@@ -26,8 +26,8 @@ public class ExShowBeautyMenu extends L2GameServerPacket
 	private final L2PcInstance _activeChar;
 	private final int _type;
 	
-	public final static int MODIFY_APPEARANCE = 0;
-	public final static int RESTORE_APPEARANCE = 1;
+	public static final int MODIFY_APPEARANCE = 0;
+	public static final int RESTORE_APPEARANCE = 1;
 	
 	public ExShowBeautyMenu(L2PcInstance activeChar, int type)
 	{

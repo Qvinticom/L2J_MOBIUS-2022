@@ -794,12 +794,9 @@ public final class DarkCloudMansion extends AbstractInstance
 				decayedSamples += 1;
 				mob.count = 2;
 			}
-			else
+			else if (mob.count == 2)
 			{
-				if (mob.count == 2)
-				{
-					decayedSamples += 1;
-				}
+				decayedSamples += 1;
 			}
 		}
 		
@@ -819,16 +816,13 @@ public final class DarkCloudMansion extends AbstractInstance
 				startQuestTimer("respawnFifth", 6000, npc, null);
 			}
 		}
-		else
+		else if ((FifthRoom.reset == 0) && (FifthRoom.founded == 3))
 		{
-			if ((FifthRoom.reset == 0) && (FifthRoom.founded == 3))
+			for (DMCNpc mob : FifthRoom.npcList)
 			{
-				for (DMCNpc mob : FifthRoom.npcList)
-				{
-					mob.npc.decayMe();
-				}
-				endInstance(world);
+				mob.npc.decayMe();
 			}
+			endInstance(world);
 		}
 	}
 	

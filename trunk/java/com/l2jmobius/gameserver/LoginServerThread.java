@@ -219,7 +219,7 @@ public class LoginServerThread extends Thread
 							
 							try
 							{
-								publicKey = (RSAPublicKey) KeyFactory.getInstance("RSA").generatePublic((new RSAPublicKeySpec(new BigInteger(init.getRSAKey()), RSAKeyGenParameterSpec.F4)));
+								publicKey = (RSAPublicKey) KeyFactory.getInstance("RSA").generatePublic(new RSAPublicKeySpec(new BigInteger(init.getRSAKey()), RSAKeyGenParameterSpec.F4));
 							}
 							catch (GeneralSecurityException e)
 							{

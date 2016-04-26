@@ -131,20 +131,17 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_OLD;
 				}
+				else if (_elvl == 0)
+				{
+					reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
+				}
+				else if (_elvl == 1)
+				{
+					reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V2;
+				}
 				else
 				{
-					if (_elvl == 0)
-					{
-						reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
-					}
-					else if (_elvl == 1)
-					{
-						reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V2;
-					}
-					else
-					{
-						reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V3;
-					}
+					reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V3;
 				}
 				final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
 				
@@ -154,7 +151,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 					return;
 				}
 				
-				final int requiredAdena = (esd.getAdenaCost() * costMultiplier);
+				final int requiredAdena = esd.getAdenaCost() * costMultiplier;
 				if (player.getInventory().getAdena() < requiredAdena)
 				{
 					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
@@ -253,20 +250,17 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			{
 				reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_OLD;
 			}
+			else if (_elvl == 0)
+			{
+				reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
+			}
+			else if (_elvl == 1)
+			{
+				reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V2;
+			}
 			else
 			{
-				if (_elvl == 0)
-				{
-					reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
-				}
-				else if (_elvl == 1)
-				{
-					reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V2;
-				}
-				else
-				{
-					reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V3;
-				}
+				reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V3;
 			}
 			final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
 			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
@@ -378,20 +372,17 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			{
 				reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_OLD;
 			}
+			else if (_elvl == 0)
+			{
+				reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
+			}
+			else if (_elvl == 1)
+			{
+				reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V2;
+			}
 			else
 			{
-				if (_elvl == 0)
-				{
-					reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
-				}
-				else if (_elvl == 1)
-				{
-					reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V2;
-				}
-				else
-				{
-					reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V3;
-				}
+				reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V3;
 			}
 			
 			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
@@ -469,15 +460,15 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				
 				player.sendPacket(new UserInfo(player));
 				
+				final SystemMessage sm;
 				if (levelPenalty == 0)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_WILL_REMAIN);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_WILL_REMAIN);
 					sm.addSkillName(_skillId);
-					player.sendPacket(sm);
 				}
 				else
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_S2);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_S2);
 					sm.addSkillName(_skillId);
 					
 					if (_skillLvl > 1000)
@@ -488,8 +479,8 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 					{
 						sm.addInt(0);
 					}
-					player.sendPacket(sm);
 				}
+				player.sendPacket(sm);
 				player.sendSkillList();
 				final int afterEnchantSkillLevel = player.getSkillLevel(_skillId);
 				player.sendPacket(new ExEnchantSkillInfo(_skillId, afterEnchantSkillLevel));
@@ -508,20 +499,17 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			{
 				reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
 			}
+			else if (_elvl == 0)
+			{
+				reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+			}
+			else if (_elvl == 1)
+			{
+				reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V2;
+			}
 			else
 			{
-				if (_elvl == 0)
-				{
-					reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
-				}
-				else if (_elvl == 1)
-				{
-					reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V2;
-				}
-				else
-				{
-					reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V3;
-				}
+				reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V3;
 			}
 			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
 			if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl))

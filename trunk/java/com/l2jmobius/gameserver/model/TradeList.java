@@ -217,7 +217,7 @@ public class TradeList
 		}
 		
 		final L2ItemInstance item = (L2ItemInstance) o;
-		if (!(item.isTradeable() || (getOwner().isGM() && Config.GM_TRADE_RESTRICTED_ITEMS)) || item.isQuestItem())
+		if ((!item.isTradeable() && (!getOwner().isGM() || !Config.GM_TRADE_RESTRICTED_ITEMS)) || item.isQuestItem())
 		{
 			_log.warning(_owner.getName() + ": Attempt to add a restricted item!");
 			return null;
@@ -614,12 +614,12 @@ public class TradeList
 		boolean success = false;
 		
 		// check weight and slots
-		if ((!getOwner().getInventory().validateWeight(partnerList.calcItemsWeight())) || !(partnerList.getOwner().getInventory().validateWeight(calcItemsWeight())))
+		if (!getOwner().getInventory().validateWeight(partnerList.calcItemsWeight()) || !partnerList.getOwner().getInventory().validateWeight(calcItemsWeight()))
 		{
 			partnerList.getOwner().sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 			getOwner().sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 		}
-		else if ((!getOwner().getInventory().validateCapacity(partnerList.countItemsSlots(getOwner()))) || (!partnerList.getOwner().getInventory().validateCapacity(countItemsSlots(partnerList.getOwner()))))
+		else if (!getOwner().getInventory().validateCapacity(partnerList.countItemsSlots(getOwner())) || !partnerList.getOwner().getInventory().validateCapacity(countItemsSlots(partnerList.getOwner())))
 		{
 			partnerList.getOwner().sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 			getOwner().sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);

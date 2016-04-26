@@ -46,11 +46,11 @@ public class FuncEnchantPMCritRate extends AbstractFunction
 			// Increases P. Critical Rate / magic damage for legs
 			if (item.getEnchantLevel() == 4)
 			{
-				value += (0.34 * blessedBonus);
+				value += 0.34 * blessedBonus;
 			}
 			else
 			{
-				value += (0.34 * blessedBonus * ((item.getEnchantLevel() * 2) - 9));
+				value += 0.34 * blessedBonus * ((item.getEnchantLevel() * 2) - 9);
 			}
 		}
 		return initVal;

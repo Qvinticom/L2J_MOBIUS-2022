@@ -77,6 +77,6 @@ public class ConditionPlayerCanCreateOutpost extends Condition
 			player.sendPacket(SystemMessageId.YOU_CANNOT_SET_UP_A_BASE_HERE);
 			canCreateOutpost = false;
 		}
-		return (_val == canCreateOutpost);
+		return _val == canCreateOutpost;
 	}
 }

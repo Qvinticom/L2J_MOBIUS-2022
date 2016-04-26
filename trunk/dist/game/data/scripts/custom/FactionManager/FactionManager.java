@@ -61,7 +61,7 @@ final class FactionManager extends AbstractNpcAI
 		{
 			case "selectGoodFaction":
 			{
-				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (L2World.getInstance().getAllGoodPlayersCount() >= ((L2World.getInstance().getAllEvilPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
+				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (L2World.getInstance().getAllGoodPlayersCount() >= (L2World.getInstance().getAllEvilPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
 				{
 					final String htmltext = null;
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
@@ -88,7 +88,7 @@ final class FactionManager extends AbstractNpcAI
 			}
 			case "selectEvilFaction":
 			{
-				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (L2World.getInstance().getAllEvilPlayersCount() >= ((L2World.getInstance().getAllGoodPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
+				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (L2World.getInstance().getAllEvilPlayersCount() >= (L2World.getInstance().getAllGoodPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
 				{
 					final String htmltext = null;
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());

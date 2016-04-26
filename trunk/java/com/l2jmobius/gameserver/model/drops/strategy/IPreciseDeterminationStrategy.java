@@ -24,15 +24,15 @@ import com.l2jmobius.gameserver.model.drops.IDropItem;
  */
 public interface IPreciseDeterminationStrategy
 {
-	public static final IPreciseDeterminationStrategy ALWAYS = dropItem -> true;
+	IPreciseDeterminationStrategy ALWAYS = dropItem -> true;
 	
-	public static final IPreciseDeterminationStrategy DEFAULT = dropItem -> Config.PRECISE_DROP_CALCULATION;
+	IPreciseDeterminationStrategy DEFAULT = dropItem -> Config.PRECISE_DROP_CALCULATION;
 	
-	public static final IPreciseDeterminationStrategy NEVER = dropItem -> false;
+	IPreciseDeterminationStrategy NEVER = dropItem -> false;
 	
 	/**
 	 * @param dropItem
 	 * @return <code>true</code> if drop calculation strategy should use precise rules
 	 */
-	public boolean isPreciseCalculated(IDropItem dropItem);
+	boolean isPreciseCalculated(IDropItem dropItem);
 }

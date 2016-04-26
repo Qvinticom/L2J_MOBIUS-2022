@@ -130,7 +130,7 @@ public final class MithrilMine extends AbstractInstance
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = player.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
-		if ((qs != null))
+		if (qs != null)
 		{
 			if (qs.isMemoState(2))
 			{
@@ -155,7 +155,7 @@ public final class MithrilMine extends AbstractInstance
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		final MMWorld _world = ((MMWorld) world);
+		final MMWorld _world = (MMWorld) world;
 		
 		if (npc.getId() == KEGOR)
 		{

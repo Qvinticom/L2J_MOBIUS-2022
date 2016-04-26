@@ -29,7 +29,7 @@ public abstract class Builder
 	
 	public abstract int getIndex();
 	
-	public static final Builder newBuilder(String text)
+	public static Builder newBuilder(String text)
 	{
 		final ArrayList<Builder> builders = new ArrayList<>();
 		

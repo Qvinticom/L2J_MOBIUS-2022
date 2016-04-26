@@ -27,13 +27,13 @@ import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
 public class ExPledgeRecruitBoardSearch extends L2GameServerPacket
 {
 	final List<PledgeRecruitInfo> _clanList;
-	final private int _currentPage;
-	final private int _totalNumberOfPage;
-	final private int _clanOnCurrentPage;
-	final private int _startIndex;
-	final private int _endIndex;
+	private final int _currentPage;
+	private final int _totalNumberOfPage;
+	private final int _clanOnCurrentPage;
+	private final int _startIndex;
+	private final int _endIndex;
 	
-	final static int CLAN_PER_PAGE = 12;
+	static final int CLAN_PER_PAGE = 12;
 	
 	public ExPledgeRecruitBoardSearch(List<PledgeRecruitInfo> clanList, int currentPage)
 	{

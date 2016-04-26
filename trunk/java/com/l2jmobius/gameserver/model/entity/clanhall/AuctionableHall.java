@@ -220,7 +220,7 @@ public final class AuctionableHall extends ClanHall
 		{
 			ps.setInt(1, getOwnerId());
 			ps.setLong(2, getPaidUntil());
-			ps.setInt(3, (getPaid()) ? 1 : 0);
+			ps.setInt(3, getPaid() ? 1 : 0);
 			ps.setInt(4, getId());
 			ps.execute();
 		}

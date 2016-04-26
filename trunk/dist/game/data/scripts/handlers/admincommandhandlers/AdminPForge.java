@@ -67,12 +67,12 @@ public final class AdminPForge implements IAdminCommandHandler
 			opCodes.add(token);
 		}
 		
-		if (opCodes == null)
+		if (opCodes != null)
 		{
-			return null;
+			return opCodes.toArray(new String[opCodes.size()]);
 		}
 		
-		return opCodes.toArray(new String[opCodes.size()]);
+		return null;
 	}
 	
 	private boolean validateOpCodes(String[] opCodes)
@@ -201,13 +201,13 @@ public final class AdminPForge implements IAdminCommandHandler
 	private void showSendUsage(L2PcInstance activeChar, String[] opCodes, String format)
 	{
 		activeChar.sendMessage("Usage: //forge_send sc|sb|cs opcode1[;opcode2[;opcode3]][ format value1 ... valueN] ");
-		if (opCodes == null)
+		if (opCodes != null)
 		{
-			showMainPage(activeChar);
+			showValuesPage(activeChar, opCodes, format);
 		}
 		else
 		{
-			showValuesPage(activeChar, opCodes, format);
+			showMainPage(activeChar);
 		}
 	}
 	
@@ -466,7 +466,7 @@ public final class AdminPForge implements IAdminCommandHandler
 							case "$tboid":
 							{
 								target = activeChar.getTarget();
-								if ((target != null) && (target instanceof L2Playable))
+								if (target instanceof L2Playable)
 								{
 									boat = ((L2Playable) target).getActingPlayer().getBoat();
 									value = boat != null ? String.valueOf(boat.getObjectId()) : "0";
@@ -476,7 +476,7 @@ public final class AdminPForge implements IAdminCommandHandler
 							case "$ttitle":
 							{
 								target = activeChar.getTarget();
-								value = (target != null) && (target instanceof L2Character) ? String.valueOf(((L2Character) target).getTitle()) : "";
+								value = target instanceof L2Character ? String.valueOf(((L2Character) target).getTitle()) : "";
 								break;
 							}
 							case "$tname":

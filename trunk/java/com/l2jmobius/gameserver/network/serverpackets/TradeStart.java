@@ -33,7 +33,7 @@ public final class TradeStart extends AbstractItemPacket
 	{
 		_activeChar = player;
 		_partner = player.getActiveTradeList().getPartner();
-		_itemList = _activeChar.getInventory().getAvailableItems(true, (_activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && Config.GM_TRADE_RESTRICTED_ITEMS), false);
+		_itemList = _activeChar.getInventory().getAvailableItems(true, _activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && Config.GM_TRADE_RESTRICTED_ITEMS, false);
 		
 		if (_partner == null)
 		{

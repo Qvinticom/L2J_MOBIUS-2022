@@ -46,11 +46,11 @@ public class FuncEnchantMAtk extends AbstractFunction
 			// Increases Mag. Atk for chest
 			if (item.getEnchantLevel() == 4)
 			{
-				value += (1.4 * blessedBonus);
+				value += 1.4 * blessedBonus;
 			}
 			else
 			{
-				value += (1.4 * blessedBonus * ((item.getEnchantLevel() * 2) - 9));
+				value += 1.4 * blessedBonus * ((item.getEnchantLevel() * 2) - 9);
 			}
 		}
 		return initVal;

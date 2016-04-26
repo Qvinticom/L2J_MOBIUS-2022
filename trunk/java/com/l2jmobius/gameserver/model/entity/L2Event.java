@@ -541,7 +541,7 @@ public class L2Event
 		return "The event has been successfully finished.";
 	}
 	
-	private static final Map<L2PcInstance, Integer> sortByValue(Map<L2PcInstance, Integer> unsortMap)
+	private static Map<L2PcInstance, Integer> sortByValue(Map<L2PcInstance, Integer> unsortMap)
 	{
 		final List<Entry<L2PcInstance, Integer>> list = new LinkedList<>(unsortMap.entrySet());
 		

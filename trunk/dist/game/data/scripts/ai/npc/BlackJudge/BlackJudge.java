@@ -56,7 +56,7 @@ final class BlackJudge extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		final int level = ((player.getExpertiseLevel() < 5) ? player.getExpertiseLevel() : 5);
+		final int level = (player.getExpertiseLevel() < 5) ? player.getExpertiseLevel() : 5;
 		switch (event)
 		{
 			case "remove_info":

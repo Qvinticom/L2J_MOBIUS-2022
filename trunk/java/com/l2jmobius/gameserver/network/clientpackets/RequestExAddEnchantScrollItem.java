@@ -72,7 +72,7 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 		}
 		
 		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
-		if ((scrollTemplate == null))
+		if (scrollTemplate == null)
 		{
 			// message may be custom
 			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);

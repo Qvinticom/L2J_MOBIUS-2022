@@ -125,7 +125,7 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30857-01.htm" : "30857-06.html");
+			htmltext = (player.getLevel() >= MIN_LEVEL) ? "30857-01.htm" : "30857-06.html";
 		}
 		else if (qs.isStarted())
 		{

@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
 
 public final class TownManager
 {
-	public static final int getTownCastle(int townId)
+	public static int getTownCastle(int townId)
 	{
 		switch (townId)
 		{
@@ -69,7 +69,7 @@ public final class TownManager
 		}
 	}
 	
-	public static final boolean townHasCastleInSiege(int townId)
+	public static boolean townHasCastleInSiege(int townId)
 	{
 		final int castleIndex = getTownCastle(townId);
 		
@@ -84,12 +84,12 @@ public final class TownManager
 		return false;
 	}
 	
-	public static final boolean townHasCastleInSiege(int x, int y)
+	public static boolean townHasCastleInSiege(int x, int y)
 	{
 		return townHasCastleInSiege(MapRegionManager.getInstance().getMapRegionLocId(x, y));
 	}
 	
-	public static final L2TownZone getTown(int townId)
+	public static L2TownZone getTown(int townId)
 	{
 		for (L2TownZone temp : ZoneManager.getInstance().getAllZones(L2TownZone.class))
 		{
@@ -108,7 +108,7 @@ public final class TownManager
 	 * @param z
 	 * @return
 	 */
-	public static final L2TownZone getTown(int x, int y, int z)
+	public static L2TownZone getTown(int x, int y, int z)
 	{
 		for (L2ZoneType temp : ZoneManager.getInstance().getZones(x, y, z))
 		{

@@ -114,7 +114,7 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 			case "ACCEPT":
 			{
 				qs.startQuest();
-				if ((q115 != null) && (q115.isCompleted()))
+				if ((q115 != null) && q115.isCompleted())
 				{
 					htmltext = "32020-04.htm";
 				}
@@ -200,7 +200,7 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 			{
 				if ((qs.getCond() >= 1) && hasQuestItems(player, SILVER_ICE_CRYSTAL) && (qs.getInt("ex") == 0))
 				{
-					qs.set("ex", ((getRandom(4) + 1) * 10));
+					qs.set("ex", (getRandom(4) + 1) * 10);
 					htmltext = event;
 				}
 				break;
@@ -210,7 +210,7 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 				if ((qs.getCond() >= 1) && hasQuestItems(player, SILVER_ICE_CRYSTAL) && (qs.getInt("ex") > 0))
 				{
 					takeItems(player, SILVER_ICE_CRYSTAL, 1);
-					final int val = (qs.getInt("ex") + 1);
+					final int val = qs.getInt("ex") + 1;
 					qs.set("ex", val);
 					playSound(player, QuestSound.ITEMSOUND_BROKEN_KEY);
 					htmltext = event;
@@ -222,7 +222,7 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 				if ((qs.getCond() >= 1) && hasQuestItems(player, SILVER_ICE_CRYSTAL) && (qs.getInt("ex") > 0))
 				{
 					takeItems(player, SILVER_ICE_CRYSTAL, 1);
-					final int val = (qs.getInt("ex") + 2);
+					final int val = qs.getInt("ex") + 2;
 					qs.set("ex", val);
 					playSound(player, QuestSound.ITEMSOUND_BROKEN_KEY);
 					htmltext = event;
@@ -257,7 +257,7 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 				{
 					final int ex = qs.getInt("ex");
 					final int val1 = ex / 10;
-					final int val2 = ((ex - (val1 * 10)) + 2);
+					final int val2 = (ex - (val1 * 10)) + 2;
 					if (val1 == val2)
 					{
 						htmltext = "32023-07.html";
@@ -319,7 +319,7 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 					}
 					else
 					{
-						htmltext = ((qs2 != null) && (qs2.isCompleted())) ? "32020-02.htm" : "32020-03.htm";
+						htmltext = ((qs2 != null) && qs2.isCompleted()) ? "32020-02.htm" : "32020-03.htm";
 					}
 				}
 				else if (qs.isStarted())

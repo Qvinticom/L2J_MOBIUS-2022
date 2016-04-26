@@ -98,7 +98,7 @@ public final class TriggerSkillByDamage extends AbstractEffect
 			}
 			if (!((L2Character) triggerTarget).isInvul())
 			{
-				event.getTarget().makeTriggerCast(triggerSkill, ((L2Character) triggerTarget));
+				event.getTarget().makeTriggerCast(triggerSkill, (L2Character) triggerTarget);
 			}
 		}
 	}

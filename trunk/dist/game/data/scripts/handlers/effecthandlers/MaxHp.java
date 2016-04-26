@@ -80,7 +80,7 @@ public final class MaxHp extends AbstractEffect
 					charStat.getActiveChar().addStatFunc(new FuncAdd(Stats.MAX_HP, 1, this, _power, null));
 					if (_heal)
 					{
-						effected.setCurrentHp((currentHp + _power));
+						effected.setCurrentHp(currentHp + _power);
 					}
 					break;
 				}

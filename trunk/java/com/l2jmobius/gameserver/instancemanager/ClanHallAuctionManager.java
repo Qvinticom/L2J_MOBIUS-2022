@@ -172,7 +172,7 @@ public final class ClanHallAuctionManager
 		}
 	}
 	
-	public static final ClanHallAuctionManager getInstance()
+	public static ClanHallAuctionManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

@@ -135,7 +135,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 		return htmltext;
 	}
 	
-	private static final boolean haveAllExceptThis(L2PcInstance player, int idx)
+	private static boolean haveAllExceptThis(L2PcInstance player, int idx)
 	{
 		for (int i = 0; i < SEAL_COMPONENTS.length; i++)
 		{

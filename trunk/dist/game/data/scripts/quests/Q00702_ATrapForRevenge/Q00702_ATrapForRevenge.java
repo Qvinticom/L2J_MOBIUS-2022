@@ -395,7 +395,7 @@ public class Q00702_ATrapForRevenge extends Quest
 				}
 				case State.STARTED:
 				{
-					htmltext = (qs.isCond(1)) ? "32563-05.html" : "32563-06.html";
+					htmltext = qs.isCond(1) ? "32563-05.html" : "32563-06.html";
 					break;
 				}
 			}

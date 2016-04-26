@@ -30,7 +30,7 @@ public class ConditionPlayerHasServitor extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		if ((effector.getActingPlayer() == null))
+		if (effector.getActingPlayer() == null)
 		{
 			return false;
 		}

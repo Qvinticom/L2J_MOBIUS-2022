@@ -205,7 +205,7 @@ public final class NornilsGarden extends AbstractInstance
 		final InstanceWorld inst = InstanceManager.getInstance().getWorld(player.getInstanceId());
 		if (inst instanceof NornilsWorld)
 		{
-			final NornilsWorld world = ((NornilsWorld) inst);
+			final NornilsWorld world = (NornilsWorld) inst;
 			world.removeAllowed(player.getObjectId());
 			teleportPlayer(player, EXIT_PPL, 0);
 		}
@@ -239,7 +239,7 @@ public final class NornilsGarden extends AbstractInstance
 		}
 		// Creating new instance
 		final String result = checkConditions(npc, player);
-		if (!(result.equalsIgnoreCase("ok")))
+		if (!result.equalsIgnoreCase("ok"))
 		{
 			return result;
 		}
@@ -290,7 +290,7 @@ public final class NornilsGarden extends AbstractInstance
 		final InstanceWorld inst = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (inst instanceof NornilsWorld)
 		{
-			final NornilsWorld world = ((NornilsWorld) inst);
+			final NornilsWorld world = (NornilsWorld) inst;
 			if (npc.equals(world.first_npc) && !world.spawned_1)
 			{
 				world.spawned_1 = true;
@@ -308,7 +308,7 @@ public final class NornilsGarden extends AbstractInstance
 		final InstanceWorld inst = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (inst instanceof NornilsWorld)
 		{
-			final NornilsWorld world = ((NornilsWorld) inst);
+			final NornilsWorld world = (NornilsWorld) inst;
 			if (!world.spawned_2)
 			{
 				world.spawned_2 = true;
@@ -326,7 +326,7 @@ public final class NornilsGarden extends AbstractInstance
 		final InstanceWorld inst = InstanceManager.getInstance().getWorld(cha.getInstanceId());
 		if (inst instanceof NornilsWorld)
 		{
-			final NornilsWorld world = ((NornilsWorld) inst);
+			final NornilsWorld world = (NornilsWorld) inst;
 			if (!world.spawned_3)
 			{
 				world.spawned_3 = true;
@@ -344,7 +344,7 @@ public final class NornilsGarden extends AbstractInstance
 		final InstanceWorld inst = InstanceManager.getInstance().getWorld(cha.getInstanceId());
 		if (inst instanceof NornilsWorld)
 		{
-			final NornilsWorld world = ((NornilsWorld) inst);
+			final NornilsWorld world = (NornilsWorld) inst;
 			if (!world.spawned_4)
 			{
 				world.spawned_4 = true;
@@ -367,7 +367,7 @@ public final class NornilsGarden extends AbstractInstance
 		}
 	}
 	
-	private static final String checkConditions(L2Npc npc, L2PcInstance player)
+	private static String checkConditions(L2Npc npc, L2PcInstance player)
 	{
 		final L2Party party = player.getParty();
 		// player must be in party
@@ -428,7 +428,7 @@ public final class NornilsGarden extends AbstractInstance
 		return "ok";
 	}
 	
-	private static final void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
+	private static void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
 	{
 		final int chance = getRandom(100);
 		for (int[] element : drop)
@@ -440,7 +440,7 @@ public final class NornilsGarden extends AbstractInstance
 		}
 	}
 	
-	private static final void giveBuffs(L2Character ch)
+	private static void giveBuffs(L2Character ch)
 	{
 		if (skill1 != null)
 		{

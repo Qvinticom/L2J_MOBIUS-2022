@@ -64,7 +64,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			fort = FortManager.getInstance().getFortById(fortId);
 		}
 		// Get fort
-		if (((fort == null) || (fortId == 0)))
+		if ((fort == null) || (fortId == 0))
 		{
 			// No fort specified
 			showFortSelectPage(activeChar);
@@ -84,18 +84,15 @@ public class AdminFortSiege implements IAdminCommandHandler
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				}
+				else if (fort.getSiege().addAttacker(player, false) == 4)
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1_S_FORTRESS_BATTLE);
+					sm.addCastleId(fort.getResidenceId());
+					player.sendPacket(sm);
+				}
 				else
 				{
-					if (fort.getSiege().addAttacker(player, false) == 4)
-					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1_S_FORTRESS_BATTLE);
-						sm.addCastleId(fort.getResidenceId());
-						player.sendPacket(sm);
-					}
-					else
-					{
-						player.sendMessage("During registering error occurred!");
-					}
+					player.sendMessage("During registering error occurred!");
 				}
 			}
 			else if (command.equalsIgnoreCase("admin_clear_fortsiege_list"))

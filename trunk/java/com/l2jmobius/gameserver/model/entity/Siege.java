@@ -721,7 +721,7 @@ public class Siege implements Siegable
 	 */
 	public boolean checkIfInZone(int x, int y, int z)
 	{
-		return (isInProgress() && (getCastle().checkIfInZone(x, y, z))); // Castle zone during siege
+		return isInProgress() && getCastle().checkIfInZone(x, y, z); // Castle zone during siege
 	}
 	
 	/**
@@ -732,7 +732,7 @@ public class Siege implements Siegable
 	@Override
 	public boolean checkIsAttacker(L2Clan clan)
 	{
-		return (getAttackerClan(clan) != null);
+		return getAttackerClan(clan) != null;
 	}
 	
 	/**
@@ -743,7 +743,7 @@ public class Siege implements Siegable
 	@Override
 	public boolean checkIsDefender(L2Clan clan)
 	{
-		return (getDefenderClan(clan) != null);
+		return getDefenderClan(clan) != null;
 	}
 	
 	/**
@@ -752,7 +752,7 @@ public class Siege implements Siegable
 	 */
 	public boolean checkIsDefenderWaiting(L2Clan clan)
 	{
-		return (getDefenderWaitingClan(clan) != null);
+		return getDefenderWaitingClan(clan) != null;
 	}
 	
 	/** Clear all registered siege clans from database for castle */
@@ -1420,12 +1420,9 @@ public class Siege implements Siegable
 					return;
 				}
 			}
-			else
+			else if (getAttackerClans().size() >= SiegeManager.getInstance().getAttackerMaxClans())
 			{
-				if (getAttackerClans().size() >= SiegeManager.getInstance().getAttackerMaxClans())
-				{
-					return;
-				}
+				return;
 			}
 			
 			if (!isUpdateRegistration)
@@ -1615,7 +1612,7 @@ public class Siege implements Siegable
 	
 	public final int getAttackerRespawnDelay()
 	{
-		return (SiegeManager.getInstance().getAttackerRespawnDelay());
+		return SiegeManager.getInstance().getAttackerRespawnDelay();
 	}
 	
 	public final Castle getCastle()

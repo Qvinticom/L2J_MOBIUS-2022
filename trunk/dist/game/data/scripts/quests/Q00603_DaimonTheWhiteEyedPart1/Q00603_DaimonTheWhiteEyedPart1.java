@@ -146,7 +146,7 @@ public final class Q00603_DaimonTheWhiteEyedPart1 extends Quest
 			{
 				if (npc.getId() == EYE_OF_ARGOS)
 				{
-					htmltext = ((talker.getLevel() < MIN_LVL) ? "31683-02.html" : "31683-01.htm");
+					htmltext = (talker.getLevel() < MIN_LVL) ? "31683-02.html" : "31683-01.htm";
 				}
 				break;
 			}

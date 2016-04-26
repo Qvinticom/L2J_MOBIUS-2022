@@ -119,7 +119,7 @@ final class DragonVortex extends AbstractNpcAI
 				if (!unspawnedRaids.isEmpty())
 				{
 					final int unspawnedRaidsSize = unspawnedRaids.size();
-					final int chanceIncrease = (raidChanceIncrease / unspawnedRaidsSize);
+					final int chanceIncrease = raidChanceIncrease / unspawnedRaidsSize;
 					int raidChanceValue = 0;
 					
 					for (int[] unspawnedRaidsList : unspawnedRaids)
@@ -172,7 +172,7 @@ final class DragonVortex extends AbstractNpcAI
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
 		{
 			final L2Npc spawnedWarpgate = spawn.getLastSpawn();
-			if ((spawnedWarpgate != null))
+			if (spawnedWarpgate != null)
 			{
 				return true;
 			}

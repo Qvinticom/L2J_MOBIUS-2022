@@ -125,7 +125,7 @@ public class Q00432_BirthdayPartySong extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = (qs.isCond(1)) ? "31043-03.html" : "31043-04.html";
+				htmltext = qs.isCond(1) ? "31043-03.html" : "31043-04.html";
 				break;
 			}
 		}

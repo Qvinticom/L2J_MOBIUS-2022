@@ -123,7 +123,7 @@ public class CharacterSelect extends L2GameClientPacket
 				
 				if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_BALANCE_ONLINE_PLAYERS)
 				{
-					if (info.isGood() && (L2World.getInstance().getAllGoodPlayersCount() >= ((L2World.getInstance().getAllEvilPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
+					if (info.isGood() && (L2World.getInstance().getAllGoodPlayersCount() >= (L2World.getInstance().getAllEvilPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
 					{
 						final NpcHtmlMessage msg = new NpcHtmlMessage();
 						msg.setFile(info.getHtmlPrefix(), "html/mods/Faction/ExceededOnlineLimit.htm");
@@ -132,7 +132,7 @@ public class CharacterSelect extends L2GameClientPacket
 						client.sendPacket(msg);
 						return;
 					}
-					if (info.isEvil() && (L2World.getInstance().getAllEvilPlayersCount() >= ((L2World.getInstance().getAllGoodPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
+					if (info.isEvil() && (L2World.getInstance().getAllEvilPlayersCount() >= (L2World.getInstance().getAllGoodPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
 					{
 						final NpcHtmlMessage msg = new NpcHtmlMessage();
 						msg.setFile(info.getHtmlPrefix(), "html/mods/Faction/ExceededOnlineLimit.htm");

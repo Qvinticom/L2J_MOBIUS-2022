@@ -88,7 +88,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 	@Override
 	public final int getLevel()
 	{
-		return (getTemplate() != null ? getTemplate().getLevel() : 0);
+		return getTemplate() != null ? getTemplate().getLevel() : 0;
 	}
 	
 	@Override
@@ -500,7 +500,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 	@Override
 	public int getCriticalHit(L2Character target, Skill skill)
 	{
-		return (int) (super.getCriticalHit(target, skill) + ((getActingPlayer().getCriticalHit(target, skill)) * (getActingPlayer().getServitorShareBonus(Stats.CRITICAL_RATE) - 1.0)));
+		return (int) (super.getCriticalHit(target, skill) + (getActingPlayer().getCriticalHit(target, skill) * (getActingPlayer().getServitorShareBonus(Stats.CRITICAL_RATE) - 1.0)));
 	}
 	
 	@Override

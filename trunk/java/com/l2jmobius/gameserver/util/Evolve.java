@@ -49,7 +49,7 @@ public final class Evolve
 {
 	protected static final Logger _log = Logger.getLogger(Evolve.class.getName());
 	
-	public static final boolean doEvolve(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
+	public static boolean doEvolve(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
 	{
 		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminlvl == 0))
 		{
@@ -160,7 +160,7 @@ public final class Evolve
 		return true;
 	}
 	
-	public static final boolean doRestore(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
+	public static boolean doRestore(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
 	{
 		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminlvl == 0))
 		{

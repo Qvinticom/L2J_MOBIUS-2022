@@ -21,5 +21,5 @@ package com.l2jmobius.gameserver.model.drops;
  */
 public interface IGroupedDropItemFactory
 {
-	public GroupedGeneralDropItem newGroupedDropItem(double chance);
+	GroupedGeneralDropItem newGroupedDropItem(double chance);
 }

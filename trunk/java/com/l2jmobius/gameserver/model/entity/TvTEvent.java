@@ -484,7 +484,7 @@ public class TvTEvent
 		// Check to which team the player should be added
 		if (_teams[0].getParticipatedPlayerCount() == _teams[1].getParticipatedPlayerCount())
 		{
-			teamId = (byte) (Rnd.get(2));
+			teamId = (byte) Rnd.get(2);
 		}
 		else
 		{
@@ -889,17 +889,14 @@ public class TvTEvent
 				}
 			}
 		}
-		else
+		else if ((Config.TVT_EVENT_FIGHTER_BUFFS != null) && !Config.TVT_EVENT_FIGHTER_BUFFS.isEmpty())
 		{
-			if ((Config.TVT_EVENT_FIGHTER_BUFFS != null) && !Config.TVT_EVENT_FIGHTER_BUFFS.isEmpty())
+			for (Entry<Integer, Integer> e : Config.TVT_EVENT_FIGHTER_BUFFS.entrySet())
 			{
-				for (Entry<Integer, Integer> e : Config.TVT_EVENT_FIGHTER_BUFFS.entrySet())
+				final Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
+				if (skill != null)
 				{
-					final Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
-					if (skill != null)
-					{
-						skill.applyEffects(playerInstance, playerInstance);
-					}
+					skill.applyEffects(playerInstance, playerInstance);
 				}
 			}
 		}
@@ -911,7 +908,7 @@ public class TvTEvent
 	 * @param skill
 	 * @return true if player valid for skill
 	 */
-	public static final boolean checkForTvTSkill(L2PcInstance source, L2PcInstance target, Skill skill)
+	public static boolean checkForTvTSkill(L2PcInstance source, L2PcInstance target, Skill skill)
 	{
 		if (!isStarted())
 		{
@@ -1073,7 +1070,7 @@ public class TvTEvent
 	 */
 	public static TvTEventTeam getParticipantTeam(int playerObjectId)
 	{
-		return (_teams[0].containsPlayer(playerObjectId) ? _teams[0] : (_teams[1].containsPlayer(playerObjectId) ? _teams[1] : null));
+		return _teams[0].containsPlayer(playerObjectId) ? _teams[0] : (_teams[1].containsPlayer(playerObjectId) ? _teams[1] : null);
 	}
 	
 	/**
@@ -1083,7 +1080,7 @@ public class TvTEvent
 	 */
 	public static TvTEventTeam getParticipantEnemyTeam(int playerObjectId)
 	{
-		return (_teams[0].containsPlayer(playerObjectId) ? _teams[1] : (_teams[1].containsPlayer(playerObjectId) ? _teams[0] : null));
+		return _teams[0].containsPlayer(playerObjectId) ? _teams[1] : (_teams[1].containsPlayer(playerObjectId) ? _teams[0] : null);
 	}
 	
 	/**

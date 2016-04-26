@@ -595,7 +595,7 @@ public final class ItemAuctionInstance
 				{
 					while (rs.next())
 					{
-						auctionBids.add((new ItemAuctionBid(rs.getInt(1), rs.getLong(2))));
+						auctionBids.add(new ItemAuctionBid(rs.getInt(1), rs.getLong(2)));
 					}
 				}
 			}

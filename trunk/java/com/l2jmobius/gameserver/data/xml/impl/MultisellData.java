@@ -271,7 +271,7 @@ public final class MultisellData implements IXmlReader
 		separateAndSend(listId, player, npc, inventoryOnly, 1, 1);
 	}
 	
-	public static final boolean hasSpecialIngredient(int id, long amount, L2PcInstance player)
+	public static boolean hasSpecialIngredient(int id, long amount, L2PcInstance player)
 	{
 		switch (id)
 		{
@@ -324,13 +324,13 @@ public final class MultisellData implements IXmlReader
 		return false;
 	}
 	
-	public static final boolean takeSpecialIngredient(int id, long amount, L2PcInstance player)
+	public static boolean takeSpecialIngredient(int id, long amount, L2PcInstance player)
 	{
 		switch (id)
 		{
 			case PC_BANG_POINTS: // PcBang points
 			{
-				final int cost = player.getPcBangPoints() - (int) (amount);
+				final int cost = player.getPcBangPoints() - (int) amount;
 				player.setPcBangPoints(cost);
 				final SystemMessage smsgpc = SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_USING_S1_POINT);
 				smsgpc.addLong((int) amount);
@@ -362,7 +362,7 @@ public final class MultisellData implements IXmlReader
 		return false;
 	}
 	
-	public static final void giveSpecialProduct(int id, long amount, L2PcInstance player)
+	public static void giveSpecialProduct(int id, long amount, L2PcInstance player)
 	{
 		switch (id)
 		{

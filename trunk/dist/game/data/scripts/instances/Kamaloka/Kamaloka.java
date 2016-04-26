@@ -1217,7 +1217,7 @@ public final class Kamaloka extends AbstractInstance
 	 * @param index (0-18) index of the kamaloka in arrays
 	 * @return true if party allowed to enter
 	 */
-	private static final boolean checkPartyConditions(L2PcInstance player, int index)
+	private static boolean checkPartyConditions(L2PcInstance player, int index)
 	{
 		final L2Party party = player.getParty();
 		// player must be in party
@@ -1294,7 +1294,7 @@ public final class Kamaloka extends AbstractInstance
 	 * Removing all buffs from player and pet except BUFFS_WHITELIST
 	 * @param ch player
 	 */
-	private static final void removeBuffs(L2Character ch)
+	private static void removeBuffs(L2Character ch)
 	{
 		final Function<BuffInfo, Boolean> removeBuffs = info ->
 		{

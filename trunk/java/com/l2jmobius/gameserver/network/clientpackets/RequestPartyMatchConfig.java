@@ -89,7 +89,7 @@ public final class RequestPartyMatchConfig extends L2GameClientPacket
 			PartyMatchWaitingList.getInstance().addPlayer(_activeChar);
 			
 			// Send Room list
-			_activeChar.sendPacket((new ListPartyWating(_activeChar, _auto, _loc, _lvl)));
+			_activeChar.sendPacket(new ListPartyWating(_activeChar, _auto, _loc, _lvl));
 		}
 	}
 	

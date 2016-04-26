@@ -30,7 +30,7 @@ public final class RequestRecipeBookOpen extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_isDwarvenCraft = (readD() == 0);
+		_isDwarvenCraft = readD() == 0;
 		if (Config.DEBUG)
 		{
 			_log.info("RequestRecipeBookOpen : " + (_isDwarvenCraft ? "dwarvenCraft" : "commonCraft"));

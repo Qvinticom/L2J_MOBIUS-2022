@@ -97,15 +97,15 @@ public class BlessedSpiritShot implements IItemHandler
 		activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
 		activeChar.setChargedShot(ShotType.BLESSED_SPIRITSHOTS, true);
 		// Visual effect change if player has equipped Sapphire lvl 3 or higher
-		if ((activeChar.getInventory().getItemByItemId(38931) != null) && (activeChar.getInventory().getItemByItemId(38931).isEquipped()))
+		if ((activeChar.getInventory().getItemByItemId(38931) != null) && activeChar.getInventory().getItemByItemId(38931).isEquipped())
 		{
 			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17821, 2, 0, 0), 600);
 		}
-		else if ((activeChar.getInventory().getItemByItemId(38930) != null) && (activeChar.getInventory().getItemByItemId(38930).isEquipped()))
+		else if ((activeChar.getInventory().getItemByItemId(38930) != null) && activeChar.getInventory().getItemByItemId(38930).isEquipped())
 		{
 			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17820, 2, 0, 0), 600);
 		}
-		else if ((activeChar.getInventory().getItemByItemId(38929) != null) && (activeChar.getInventory().getItemByItemId(38929).isEquipped()))
+		else if ((activeChar.getInventory().getItemByItemId(38929) != null) && activeChar.getInventory().getItemByItemId(38929).isEquipped())
 		{
 			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17819, 2, 0, 0), 600);
 		}

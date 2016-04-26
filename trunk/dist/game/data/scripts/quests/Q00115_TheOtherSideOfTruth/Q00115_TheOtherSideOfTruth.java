@@ -187,7 +187,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "32018-05.html":
 			{
-				if (qs.isCond(6) && (hasQuestItems(player, RAFFORTYS_LETTER)))
+				if (qs.isCond(6) && hasQuestItems(player, RAFFORTYS_LETTER))
 				{
 					takeItems(player, RAFFORTYS_LETTER, -1);
 					qs.setCond(7, true);
@@ -422,7 +422,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 							}
 							case 2:
 							{
-								htmltext = (!hasQuestItems(player, MISAS_LETTER)) ? "32020-05.html" : "32020-06.html";
+								htmltext = !hasQuestItems(player, MISAS_LETTER) ? "32020-05.html" : "32020-06.html";
 								break;
 							}
 							case 3:

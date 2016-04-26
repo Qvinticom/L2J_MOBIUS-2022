@@ -85,7 +85,7 @@ public final class PcCafePointsManager
 	 * Gets the single instance of {@code PcCafePointsManager}.
 	 * @return single instance of {@code PcCafePointsManager}
 	 */
-	public static final PcCafePointsManager getInstance()
+	public static PcCafePointsManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

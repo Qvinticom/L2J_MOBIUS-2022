@@ -55,7 +55,7 @@ public class L2EffectZone extends L2ZoneType
 		setTargetType(InstanceType.L2Playable); // default only playabale
 		_bypassConditions = false;
 		_isShowDangerIcon = true;
-		setSettings((ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName())));
+		setSettings(ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName()));
 	}
 	
 	@Override

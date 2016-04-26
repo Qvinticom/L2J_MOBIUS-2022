@@ -492,23 +492,23 @@ public final class Baium extends AbstractNpcAI
 			
 			if (skill == null)
 			{
-				refreshAiParams(attacker, npc, (damage * 1000));
+				refreshAiParams(attacker, npc, damage * 1000);
 			}
 			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.25))
 			{
-				refreshAiParams(attacker, npc, ((damage / 3) * 100));
+				refreshAiParams(attacker, npc, (damage / 3) * 100);
 			}
 			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.5))
 			{
-				refreshAiParams(attacker, npc, (damage * 20));
+				refreshAiParams(attacker, npc, damage * 20);
 			}
 			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.75))
 			{
-				refreshAiParams(attacker, npc, (damage * 10));
+				refreshAiParams(attacker, npc, damage * 10);
 			}
 			else
 			{
-				refreshAiParams(attacker, npc, ((damage / 3) * 20));
+				refreshAiParams(attacker, npc, (damage / 3) * 20);
 			}
 			manageSkills(npc);
 		}
@@ -658,7 +658,7 @@ public final class Baium extends AbstractNpcAI
 	
 	private void setRespawn(long respawnTime)
 	{
-		GrandBossManager.getInstance().getStatsSet(BAIUM).set("respawn_time", (System.currentTimeMillis() + respawnTime));
+		GrandBossManager.getInstance().getStatsSet(BAIUM).set("respawn_time", System.currentTimeMillis() + respawnTime);
 	}
 	
 	private void manageSkills(L2Npc npc)
@@ -672,7 +672,7 @@ public final class Baium extends AbstractNpcAI
 		for (int i = 0; i < 3; i++)
 		{
 			final L2Character attacker = vars.getObject("c_quest" + i, L2Character.class);
-			if ((attacker == null) || ((npc.calculateDistance(attacker, true, false) > 9000) || attacker.isDead()))
+			if ((attacker == null) || (npc.calculateDistance(attacker, true, false) > 9000) || attacker.isDead())
 			{
 				vars.set("i_quest" + i, 0);
 			}

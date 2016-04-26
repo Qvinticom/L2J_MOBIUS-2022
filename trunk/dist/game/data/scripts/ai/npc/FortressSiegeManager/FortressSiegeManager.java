@@ -106,7 +106,7 @@ final class FortressSiegeManager extends AbstractNpcAI
 					{
 						htmltext = "FortressSiegeManager-10.html";
 					}
-					else if ((clan.getLevel() < FortSiegeManager.getInstance().getSiegeClanMinLevel()))
+					else if (clan.getLevel() < FortSiegeManager.getInstance().getSiegeClanMinLevel())
 					{
 						htmltext = "FortressSiegeManager-04.html";
 					}

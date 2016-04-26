@@ -172,7 +172,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 		}
 		for (String content : getContent().split(Config.EOL))
 		{
-			Broadcast.toAllOnlinePlayers(content, (getType() == AnnouncementType.AUTO_CRITICAL));
+			Broadcast.toAllOnlinePlayers(content, getType() == AnnouncementType.AUTO_CRITICAL);
 		}
 		if (_currentState != -1)
 		{

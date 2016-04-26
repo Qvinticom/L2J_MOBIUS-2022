@@ -61,7 +61,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x09); // packet id
-		final int size = (_characterPackages.size());
+		final int size = _characterPackages.size();
 		writeD(size); // How many char there is on this account
 		
 		// Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )

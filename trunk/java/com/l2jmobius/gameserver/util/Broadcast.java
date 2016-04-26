@@ -80,7 +80,7 @@ public final class Broadcast
 			try
 			{
 				player.sendPacket(mov);
-				if ((mov instanceof CharInfo) && (character.isPlayer()))
+				if ((mov instanceof CharInfo) && character.isPlayer())
 				{
 					final int relation = ((L2PcInstance) character).getRelation(player);
 					final Integer oldrelation = character.getKnownList().getKnownRelations().get(player.getObjectId());

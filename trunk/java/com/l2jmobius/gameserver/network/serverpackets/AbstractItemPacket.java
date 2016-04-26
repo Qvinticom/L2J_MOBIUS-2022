@@ -125,7 +125,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 	}
 	
-	protected static final int calculateMask(ItemInfo item)
+	protected static int calculateMask(ItemInfo item)
 	{
 		int mask = 0;
 		if (item.getAugmentationBonus() > 0)

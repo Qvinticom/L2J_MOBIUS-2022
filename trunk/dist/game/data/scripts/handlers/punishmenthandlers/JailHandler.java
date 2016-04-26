@@ -186,7 +186,7 @@ public class JailHandler implements IPunishmentHandler
 		player.sendPacket(msg);
 		if (task != null)
 		{
-			final long delay = ((task.getExpirationTime() - System.currentTimeMillis()) / 1000);
+			final long delay = (task.getExpirationTime() - System.currentTimeMillis()) / 1000;
 			if (delay > 0)
 			{
 				player.sendMessage("You've been jailed for " + (delay > 60 ? ((delay / 60) + " minutes.") : delay + " seconds."));

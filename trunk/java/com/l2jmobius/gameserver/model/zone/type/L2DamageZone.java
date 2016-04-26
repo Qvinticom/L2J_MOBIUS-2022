@@ -59,7 +59,7 @@ public class L2DamageZone extends L2ZoneType
 		_castle = null;
 		
 		setTargetType(InstanceType.L2Playable); // default only playabale
-		setSettings((ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName())));
+		setSettings(ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName()));
 	}
 	
 	@Override
@@ -106,7 +106,7 @@ public class L2DamageZone extends L2ZoneType
 		}
 		
 		final L2PcInstance player = character.getActingPlayer();
-		if ((getCastle() != null) && !(getCastle().getSiege().isInProgress() && (player != null) && (player.getSiegeState() != 2)))
+		if ((getCastle() != null) && (!getCastle().getSiege().isInProgress() || (player == null) || (player.getSiegeState() == 2)))
 		{
 			return;
 		}

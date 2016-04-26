@@ -65,7 +65,6 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 			writeC(createDate.get(Calendar.MONTH) + 1);
 			writeC(createDate.get(Calendar.DAY_OF_MONTH));
 			writeD((int) ((System.currentTimeMillis() - friend.getLastLogin()) / 1000));
-			writeS(friend.getMemo()); // memo
 		}
 		else
 		{
@@ -84,7 +83,7 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 			writeC(createDate.get(Calendar.MONTH) + 1);
 			writeC(createDate.get(Calendar.DAY_OF_MONTH));
 			writeD(player.isOnline() ? -1 : (int) ((System.currentTimeMillis() - player.getLastAccess()) / 1000));
-			writeS(friend.getMemo()); // memo
 		}
+		writeS(friend.getMemo()); // memo
 	}
 }

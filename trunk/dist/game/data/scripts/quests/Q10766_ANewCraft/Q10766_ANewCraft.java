@@ -202,7 +202,7 @@ public class Q10766_ANewCraft extends Quest
 	public void onItemCreate(OnItemCreate event)
 	{
 		final QuestState qs = getQuestState(event.getActiveChar(), false);
-		if ((qs != null) && (qs.isCond(3)) && (getQuestItemsCount(qs.getPlayer(), AIR_STONE) >= 1) && (getQuestItemsCount(qs.getPlayer(), WINDY_HEALING_POTION_1) >= 1))
+		if ((qs != null) && qs.isCond(3) && (getQuestItemsCount(qs.getPlayer(), AIR_STONE) >= 1) && (getQuestItemsCount(qs.getPlayer(), WINDY_HEALING_POTION_1) >= 1))
 		{
 			qs.setCond(4, true);
 		}

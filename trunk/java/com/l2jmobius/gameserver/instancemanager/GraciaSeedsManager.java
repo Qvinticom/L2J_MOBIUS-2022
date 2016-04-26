@@ -132,13 +132,13 @@ public final class GraciaSeedsManager
 	public void updateSodState()
 	{
 		final Quest quest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
-		if (quest == null)
+		if (quest != null)
 		{
-			_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+			quest.notifyEvent("StopSoDAi", null, null);
 		}
 		else
 		{
-			quest.notifyEvent("StopSoDAi", null, null);
+			_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
 		}
 	}
 	
@@ -155,13 +155,13 @@ public final class GraciaSeedsManager
 		}
 		saveData(SODTYPE);
 		final Quest esQuest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
-		if (esQuest == null)
+		if (esQuest != null)
 		{
-			_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+			esQuest.notifyEvent("StartSoDAi", null, null);
 		}
 		else
 		{
-			esQuest.notifyEvent("StartSoDAi", null, null);
+			_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
 		}
 	}
 	
@@ -199,7 +199,7 @@ public final class GraciaSeedsManager
 			}
 			case 2:
 			{
-				return ((_SoDLastStateChangeDate.getTimeInMillis() + Config.SOD_STAGE_2_LENGTH) - System.currentTimeMillis());
+				return (_SoDLastStateChangeDate.getTimeInMillis() + Config.SOD_STAGE_2_LENGTH) - System.currentTimeMillis();
 			}
 			case 3:
 			{
@@ -228,7 +228,7 @@ public final class GraciaSeedsManager
 	 * Gets the single instance of {@code GraciaSeedsManager}.
 	 * @return single instance of {@code GraciaSeedsManager}
 	 */
-	public static final GraciaSeedsManager getInstance()
+	public static GraciaSeedsManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

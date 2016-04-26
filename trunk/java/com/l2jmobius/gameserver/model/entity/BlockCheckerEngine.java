@@ -535,7 +535,7 @@ public final class BlockCheckerEngine
 			_redPoints += _numOfBoxes / 2;
 			_bluePoints += _numOfBoxes / 2;
 			
-			getHolder().broadCastPacketToTeam((new ExCubeGameChangePoints((int) ((getStarterTime() - System.currentTimeMillis()) / 1000), getBluePoints(), getRedPoints())));
+			getHolder().broadCastPacketToTeam(new ExCubeGameChangePoints((int) ((getStarterTime() - System.currentTimeMillis()) / 1000), getBluePoints(), getRedPoints()));
 		}
 	}
 	

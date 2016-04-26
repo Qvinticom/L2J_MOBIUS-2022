@@ -49,7 +49,7 @@ public class OlympiadManager
 		_teamsBasedRegisters = new CopyOnWriteArrayList<>();
 	}
 	
-	public static final OlympiadManager getInstance()
+	public static OlympiadManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

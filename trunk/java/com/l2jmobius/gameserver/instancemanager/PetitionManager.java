@@ -108,12 +108,12 @@ public final class PetitionManager
 		{
 			if ((currPetition.getPetitioner() != null) && (currPetition.getPetitioner().getObjectId() == player.getObjectId()))
 			{
-				return (currPetition.endPetitionConsultation(PetitionState.PETITIONER_CANCEL));
+				return currPetition.endPetitionConsultation(PetitionState.PETITIONER_CANCEL);
 			}
 			
 			if ((currPetition.getResponder() != null) && (currPetition.getResponder().getObjectId() == player.getObjectId()))
 			{
-				return (currPetition.endPetitionConsultation(PetitionState.RESPONDER_CANCEL));
+				return currPetition.endPetitionConsultation(PetitionState.RESPONDER_CANCEL);
 			}
 		}
 		
@@ -160,7 +160,7 @@ public final class PetitionManager
 			
 			if ((currPetition.getResponder() != null) && (currPetition.getResponder().getObjectId() == player.getObjectId()))
 			{
-				return (currPetition.endPetitionConsultation(PetitionState.COMPLETED));
+				return currPetition.endPetitionConsultation(PetitionState.COMPLETED);
 			}
 		}
 		
@@ -309,7 +309,7 @@ public final class PetitionManager
 		}
 		
 		currPetition.setResponder(respondingAdmin);
-		return (currPetition.endPetitionConsultation(PetitionState.RESPONDER_REJECT));
+		return currPetition.endPetitionConsultation(PetitionState.RESPONDER_REJECT);
 	}
 	
 	public boolean sendActivePetitionMessage(L2PcInstance player, String messageText)
@@ -374,8 +374,8 @@ public final class PetitionManager
 				continue;
 			}
 			
-			StringUtil.append(htmlContent, "<tr><td width=\"270\"><table width=\"270\" cellpadding=\"2\" bgcolor=", (color ? "131210" : "444444"), "><tr><td width=\"130\">", dateFormat.format(new Date(currPetition.getSubmitTime())));
-			StringUtil.append(htmlContent, "</td><td width=\"140\" align=right><font color=\"", (currPetition.getPetitioner().isOnline() ? "00FF00" : "999999"), "\">", currPetition.getPetitioner().getName(), "</font></td></tr>");
+			StringUtil.append(htmlContent, "<tr><td width=\"270\"><table width=\"270\" cellpadding=\"2\" bgcolor=", color ? "131210" : "444444", "><tr><td width=\"130\">", dateFormat.format(new Date(currPetition.getSubmitTime())));
+			StringUtil.append(htmlContent, "</td><td width=\"140\" align=right><font color=\"", currPetition.getPetitioner().isOnline() ? "00FF00" : "999999", "\">", currPetition.getPetitioner().getName(), "</font></td></tr>");
 			StringUtil.append(htmlContent, "<tr><td width=\"130\">");
 			if (currPetition.getState() != PetitionState.IN_PROCESS)
 			{
@@ -432,7 +432,7 @@ public final class PetitionManager
 		html.replace("%time%", dateFormat.format(new Date(currPetition.getSubmitTime())));
 		html.replace("%type%", currPetition.getTypeAsString());
 		html.replace("%petitioner%", currPetition.getPetitioner().getName());
-		html.replace("%online%", (currPetition.getPetitioner().isOnline() ? "00FF00" : "999999"));
+		html.replace("%online%", currPetition.getPetitioner().isOnline() ? "00FF00" : "999999");
 		html.replace("%text%", currPetition.getContent());
 		
 		activeChar.sendPacket(html);
@@ -442,7 +442,7 @@ public final class PetitionManager
 	 * Gets the single instance of {@code PetitionManager}.
 	 * @return single instance of {@code PetitionManager}
 	 */
-	public static final PetitionManager getInstance()
+	public static PetitionManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

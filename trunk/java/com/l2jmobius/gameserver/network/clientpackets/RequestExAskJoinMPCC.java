@@ -97,29 +97,26 @@ public final class RequestExAskJoinMPCC extends L2GameClientPacket
 				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL);
 				activeChar.sendPacket(sm);
 			}
-			else
+			// target in a party?
+			else if (player.isInParty())
 			{
-				// target in a party?
-				if (player.isInParty())
+				// targets party already in a CChannel?
+				if (player.getParty().isInCommandChannel())
 				{
-					// targets party already in a CChannel?
-					if (player.getParty().isInCommandChannel())
-					{
-						sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL);
-						sm.addString(player.getName());
-						activeChar.sendPacket(sm);
-					}
-					else
-					{
-						// ready to open a new CC
-						// send request to targets Party's PartyLeader
-						askJoinMPCC(activeChar, player);
-					}
+					sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL);
+					sm.addString(player.getName());
+					activeChar.sendPacket(sm);
 				}
 				else
 				{
-					activeChar.sendMessage(player.getName() + " doesn't have party and cannot be invited to Command Channel.");
+					// ready to open a new CC
+					// send request to targets Party's PartyLeader
+					askJoinMPCC(activeChar, player);
 				}
+			}
+			else
+			{
+				activeChar.sendMessage(player.getName() + " doesn't have party and cannot be invited to Command Channel.");
 			}
 		}
 		else

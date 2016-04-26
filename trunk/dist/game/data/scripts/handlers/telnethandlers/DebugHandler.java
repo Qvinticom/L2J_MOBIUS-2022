@@ -434,7 +434,7 @@ public class DebugHandler implements ITelnetHandler
 		uptime = uptime / 1000;
 		final int h = uptime / 3600;
 		final int m = (uptime - (h * 3600)) / 60;
-		final int s = ((uptime - (h * 3600)) - (m * 60));
+		final int s = (uptime - (h * 3600)) - (m * 60);
 		return h + "hrs " + m + "mins " + s + "secs";
 	}
 	

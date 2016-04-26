@@ -80,7 +80,7 @@ public final class MagicalSoulAttack extends AbstractEffect
 		if (damage > 0)
 		{
 			// reduce damage if target has maxdamage buff
-			final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			final double maxDamage = target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null);
 			if (maxDamage > 0)
 			{
 				damage = (int) maxDamage;

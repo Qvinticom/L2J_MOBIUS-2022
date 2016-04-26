@@ -911,7 +911,7 @@ public class L2CharacterAI extends AbstractAI
 		}
 		
 		// If pathfinding enabled the creature will go to the destination or it will go to the nearest obstacle.
-		setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, (Config.PATHFINDING > 0 ? GeoData.getInstance().moveCheck(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId()) : new Location(posX, posY, posZ)));
+		setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, Config.PATHFINDING > 0 ? GeoData.getInstance().moveCheck(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId()) : new Location(posX, posY, posZ));
 	}
 	
 	protected boolean maybeMoveToPosition(ILocational worldPosition, int offset)
@@ -1483,45 +1483,42 @@ public class L2CharacterAI extends AbstractAI
 				}
 			}
 		}
-		else
+		else if ((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA) || (sk.getTargetType() == L2TargetType.AURA_CORPSE_MOB))
 		{
-			if ((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA) || (sk.getTargetType() == L2TargetType.AURA_CORPSE_MOB))
+			boolean cancast = false;
+			for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
 			{
-				boolean cancast = false;
-				for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
+				if (!GeoData.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
 				{
-					if (!GeoData.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
-					{
-						continue;
-					}
-					if (!target.getEffectList().isEmpty())
-					{
-						cancast = true;
-					}
+					continue;
 				}
-				if (cancast)
+				if (!target.getEffectList().isEmpty())
 				{
-					return true;
+					cancast = true;
 				}
 			}
-			else if ((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA))
+			if (cancast)
 			{
-				boolean cancast = true;
-				for (L2Character target : getAttackTarget().getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
+				return true;
+			}
+		}
+		else if ((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA))
+		{
+			boolean cancast = true;
+			for (L2Character target : getAttackTarget().getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
+			{
+				if (!GeoData.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
 				{
-					if (!GeoData.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
-					{
-						continue;
-					}
-					if (target.isAffectedBySkill(sk.getId()))
-					{
-						cancast = false;
-					}
+					continue;
 				}
-				if (cancast)
+				if (target.isAffectedBySkill(sk.getId()))
 				{
-					return true;
+					cancast = false;
 				}
+			}
+			if (cancast)
+			{
+				return true;
 			}
 		}
 		return false;
@@ -1539,7 +1536,7 @@ public class L2CharacterAI extends AbstractAI
 				{
 					continue;
 				}
-				if (((L2Npc) target).isInMyClan(((L2Npc) _actor)))
+				if (((L2Npc) target).isInMyClan((L2Npc) _actor))
 				{
 					count++;
 					if (target.isAffectedBySkill(sk.getId()))
@@ -1558,6 +1555,6 @@ public class L2CharacterAI extends AbstractAI
 	
 	public boolean isParty(Skill sk)
 	{
-		return (sk.getTargetType() == L2TargetType.PARTY);
+		return sk.getTargetType() == L2TargetType.PARTY;
 	}
 }

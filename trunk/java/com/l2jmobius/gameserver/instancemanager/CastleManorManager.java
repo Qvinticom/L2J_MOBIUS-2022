@@ -91,7 +91,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 			{
 				_mode = ManorMode.MODIFIABLE;
 			}
-			else if ((hour == Config.ALT_MANOR_REFRESH_TIME) && ((min >= Config.ALT_MANOR_REFRESH_MIN) && (min < maintenanceMin)))
+			else if ((hour == Config.ALT_MANOR_REFRESH_TIME) && (min >= Config.ALT_MANOR_REFRESH_MIN) && (min < maintenanceMin))
 			{
 				_mode = ManorMode.MAINTENANCE;
 			}
@@ -279,7 +279,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 			}
 		}
 		// Schedule mode change
-		ThreadPoolManager.getInstance().scheduleGeneral(this::changeMode, (_nextModeChange.getTimeInMillis() - System.currentTimeMillis()));
+		ThreadPoolManager.getInstance().scheduleGeneral(this::changeMode, _nextModeChange.getTimeInMillis() - System.currentTimeMillis());
 	}
 	
 	public final void changeMode()
@@ -552,7 +552,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 	
 	public final List<SeedProduction> getSeedProduction(int castleId, boolean nextPeriod)
 	{
-		return (nextPeriod) ? _productionNext.get(castleId) : _production.get(castleId);
+		return nextPeriod ? _productionNext.get(castleId) : _production.get(castleId);
 	}
 	
 	public final SeedProduction getSeedProduct(int castleId, int seedId, boolean nextPeriod)
@@ -569,7 +569,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 	
 	public final List<CropProcure> getCropProcure(int castleId, boolean nextPeriod)
 	{
-		return (nextPeriod) ? _procureNext.get(castleId) : _procure.get(castleId);
+		return nextPeriod ? _procureNext.get(castleId) : _procure.get(castleId);
 	}
 	
 	public final CropProcure getCropProcure(int castleId, int cropId, boolean nextPeriod)
@@ -597,7 +597,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 		for (CropProcure crop : procure)
 		{
-			total += (crop.getPrice() * crop.getStartAmount());
+			total += crop.getPrice() * crop.getStartAmount();
 		}
 		return total;
 	}
@@ -813,7 +813,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 	// -------------------------------------------------------
 	// Static methods
 	// -------------------------------------------------------
-	public static final CastleManorManager getInstance()
+	public static CastleManorManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

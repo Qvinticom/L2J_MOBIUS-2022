@@ -51,13 +51,13 @@ public class RequestPledgeWaitingUser extends L2GameClientPacket
 		
 		final PledgeApplicantInfo infos = ClanEntryManager.getInstance().getPlayerApplication(_clanId, _playerId);
 		
-		if (infos == null)
+		if (infos != null)
 		{
-			activeChar.sendPacket(new ExPledgeWaitingList(_clanId));
+			activeChar.sendPacket(new ExPledgeWaitingUser(infos));
 		}
 		else
 		{
-			activeChar.sendPacket(new ExPledgeWaitingUser(infos));
+			activeChar.sendPacket(new ExPledgeWaitingList(_clanId));
 		}
 	}
 	

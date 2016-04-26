@@ -27,11 +27,11 @@ import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
  */
 public interface IAmountMultiplierStrategy
 {
-	public static final IAmountMultiplierStrategy DROP = DEFAULT_STRATEGY(Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER);
-	public static final IAmountMultiplierStrategy SPOIL = DEFAULT_STRATEGY(Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER);
-	public static final IAmountMultiplierStrategy STATIC = (item, victim) -> 1;
+	IAmountMultiplierStrategy DROP = DEFAULT_STRATEGY(Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER);
+	IAmountMultiplierStrategy SPOIL = DEFAULT_STRATEGY(Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER);
+	IAmountMultiplierStrategy STATIC = (item, victim) -> 1;
 	
-	public static IAmountMultiplierStrategy DEFAULT_STRATEGY(double defaultMultiplier)
+	static IAmountMultiplierStrategy DEFAULT_STRATEGY(double defaultMultiplier)
 	{
 		return (item, victim) ->
 		{
@@ -61,5 +61,5 @@ public interface IAmountMultiplierStrategy
 		};
 	}
 	
-	public double getAmountMultiplier(GeneralDropItem item, L2Character victim);
+	double getAmountMultiplier(GeneralDropItem item, L2Character victim);
 }

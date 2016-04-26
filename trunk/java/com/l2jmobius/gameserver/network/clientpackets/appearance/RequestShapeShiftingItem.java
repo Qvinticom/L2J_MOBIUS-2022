@@ -262,24 +262,24 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
 		
-		if (inventory.getItemByObjectId(stone.getObjectId()) == null)
+		if (inventory.getItemByObjectId(stone.getObjectId()) != null)
 		{
-			iu.addRemovedItem(stone);
+			iu.addModifiedItem(stone);
 		}
 		else
 		{
-			iu.addModifiedItem(stone);
+			iu.addRemovedItem(stone);
 		}
 		
 		if (appearanceStone.getType() == AppearanceType.NORMAL)
 		{
-			if (inventory.getItemByObjectId(extracItem.getObjectId()) == null)
+			if (inventory.getItemByObjectId(extracItem.getObjectId()) != null)
 			{
-				iu.addRemovedItem(extracItem);
+				iu.addModifiedItem(extracItem);
 			}
 			else
 			{
-				iu.addModifiedItem(extracItem);
+				iu.addRemovedItem(extracItem);
 			}
 		}
 		

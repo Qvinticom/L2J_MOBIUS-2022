@@ -699,13 +699,10 @@ public abstract class L2Summon extends L2Playable
 					return false;
 				}
 			}
-			else
+			else if ((!target.canBeAttacked() && !getOwner().getAccessLevel().allowPeaceAttack())//
+				|| (!target.isAutoAttackable(this) && !forceUse && !target.isNpc() && (skill.getTargetType() != L2TargetType.AURA) && (skill.getTargetType() != L2TargetType.FRONT_AURA) && (skill.getTargetType() != L2TargetType.BEHIND_AURA) && (skill.getTargetType() != L2TargetType.CLAN) && (skill.getTargetType() != L2TargetType.PARTY) && (skill.getTargetType() != L2TargetType.SELF)))
 			{
-				if ((!target.canBeAttacked() && !getOwner().getAccessLevel().allowPeaceAttack())//
-					|| (!target.isAutoAttackable(this) && !forceUse && !target.isNpc() && (skill.getTargetType() != L2TargetType.AURA) && (skill.getTargetType() != L2TargetType.FRONT_AURA) && (skill.getTargetType() != L2TargetType.BEHIND_AURA) && (skill.getTargetType() != L2TargetType.CLAN) && (skill.getTargetType() != L2TargetType.PARTY) && (skill.getTargetType() != L2TargetType.SELF)))
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 		// Notify the AI with AI_INTENTION_CAST and target
@@ -773,7 +770,7 @@ public abstract class L2Summon extends L2Playable
 			sm.addNpcName(this);
 			sm.addCharName(target);
 			sm.addInt(damage);
-			sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
+			sm.addPopup(target.getObjectId(), getObjectId(), damage * -1);
 		}
 		
 		sendPacket(sm);
@@ -912,16 +909,13 @@ public abstract class L2Summon extends L2Playable
 				activeChar.sendPacket(new PetItemList(getInventory().getItems()));
 			}
 		}
+		else if (isPet())
+		{
+			activeChar.sendPacket(new ExPetInfo(this, activeChar, 0));
+		}
 		else
 		{
-			if (isPet())
-			{
-				activeChar.sendPacket(new ExPetInfo(this, activeChar, 0));
-			}
-			else
-			{
-				activeChar.sendPacket(new SummonInfo(this, activeChar, 0));
-			}
+			activeChar.sendPacket(new SummonInfo(this, activeChar, 0));
 		}
 	}
 	
@@ -970,8 +964,7 @@ public abstract class L2Summon extends L2Playable
 	{
 		final L2PcInstance owner = getOwner();
 		final L2Object target = getOwner().getTarget();
-		if ((owner == null) || (target == null)//
-			|| (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((owner.isGood() && target.getActingPlayer().isGood()) || (owner.isEvil() && target.getActingPlayer().isEvil()))))
+		if ((owner == null) || (target == null) || (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((owner.isGood() && target.getActingPlayer().isGood()) || (owner.isEvil() && target.getActingPlayer().isEvil()))))
 		{
 			return;
 		}
@@ -1063,13 +1056,7 @@ public abstract class L2Summon extends L2Playable
 			return false;
 		}
 		
-		// Siege golems AI doesn't support attacking other than doors/walls at the moment.
-		if (target.isDoor() && (getTemplate().getRace() != Race.SIEGE_WEAPON))
-		{
-			return false;
-		}
-		
-		return true;
+		return !target.isDoor() || (getTemplate().getRace() == Race.SIEGE_WEAPON);
 	}
 	
 	@Override

@@ -84,7 +84,7 @@ final class DevastatedCastle extends ClanHallSiegeEngine
 				final int id = clan.getId();
 				if (_damageToGustav.containsKey(id))
 				{
-					_damageToGustav.put(id, (_damageToGustav.get(id) + damage));
+					_damageToGustav.put(id, _damageToGustav.get(id) + damage);
 				}
 				else
 				{

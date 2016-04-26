@@ -135,7 +135,7 @@ public class GameServerThread extends Thread
 		}
 		catch (IOException e)
 		{
-			final String serverName = (getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")");
+			final String serverName = getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")";
 			final String msg = "GameServer " + serverName + ": Connection lost: " + e.getMessage();
 			_log.info(msg);
 			broadcastToTelnet(msg);

@@ -72,12 +72,12 @@ public final class RequestDropItem extends L2GameClientPacket
 		
 		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
 		
-		if ((item == null) || (_count == 0) || !activeChar.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || (!item.isDropable() && !(activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && activeChar.havePetInvItems()) || activeChar.isInsideZone(ZoneId.NO_ITEM_DROP))
+		if ((item == null) || (_count == 0) || !activeChar.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || (!item.isDropable() && (!activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) || !Config.GM_TRADE_RESTRICTED_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && activeChar.havePetInvItems()) || activeChar.isInsideZone(ZoneId.NO_ITEM_DROP))
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			return;
 		}
-		if (item.isQuestItem() && !(activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS))
+		if (item.isQuestItem() && (!activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) || !Config.GM_TRADE_RESTRICTED_ITEMS))
 		{
 			return;
 		}
@@ -192,7 +192,7 @@ public final class RequestDropItem extends L2GameClientPacket
 			activeChar.sendPacket(iu);
 			activeChar.broadcastUserInfo();
 			
-			activeChar.sendPacket((new ItemList(activeChar, true)));
+			activeChar.sendPacket(new ItemList(activeChar, true));
 		}
 		
 		final L2ItemInstance dropedItem = activeChar.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
@@ -206,7 +206,7 @@ public final class RequestDropItem extends L2GameClientPacket
 		
 		if (activeChar.isGM())
 		{
-			final String target = (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target");
+			final String target = activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target";
 			GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "Drop", target, "(id: " + dropedItem.getId() + " name: " + dropedItem.getItemName() + " objId: " + dropedItem.getObjectId() + " x: " + activeChar.getX() + " y: " + activeChar.getY() + " z: " + activeChar.getZ() + ")");
 		}
 		

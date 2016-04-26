@@ -74,7 +74,7 @@ public final class HpCpHeal extends AbstractEffect
 		final boolean sps = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
 		final boolean bss = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
-		if (((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())) || activeChar.isSummon())
+		if (((sps || bss) && activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass()) || activeChar.isSummon())
 		{
 			staticShotBonus = info.getSkill().getMpConsume(); // static bonus for spiritshots
 			mAtkMul = bss ? 4 : 2;
@@ -151,19 +151,18 @@ public final class HpCpHeal extends AbstractEffect
 			{
 				target.setCurrentCp(amount + target.getCurrentCp());
 				
+				final SystemMessage sm;
 				if (activeChar.isPlayer() && (activeChar != target))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1);
 					sm.addString(activeChar.getName());
-					sm.addInt((int) amount);
-					target.sendPacket(sm);
 				}
 				else
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
-					sm.addInt((int) amount);
-					target.sendPacket(sm);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
 				}
+				sm.addInt((int) amount);
+				target.sendPacket(sm);
 			}
 		}
 	}

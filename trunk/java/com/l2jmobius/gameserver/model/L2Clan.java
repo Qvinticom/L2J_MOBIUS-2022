@@ -201,7 +201,7 @@ public class L2Clan implements IIdentifiable, INamable
 	 */
 	public int getLeaderId()
 	{
-		return (_leader != null ? _leader.getObjectId() : 0);
+		return _leader != null ? _leader.getObjectId() : 0;
 	}
 	
 	/**
@@ -849,7 +849,7 @@ public class L2Clan implements IIdentifiable, INamable
 	 */
 	public boolean isMember(int id)
 	{
-		return ((id != 0) && _members.containsKey(id));
+		return (id != 0) && _members.containsKey(id);
 	}
 	
 	/**
@@ -1113,7 +1113,7 @@ public class L2Clan implements IIdentifiable, INamable
 					setAuctionBiddedAt(clanData.getInt("auction_bid_at"), false);
 					setNewLeaderId(clanData.getInt("new_leader_id"), false);
 					
-					final int leaderId = (clanData.getInt("leader_id"));
+					final int leaderId = clanData.getInt("leader_id");
 					
 					ps.clearParameters();
 					
@@ -1398,15 +1398,12 @@ public class L2Clan implements IIdentifiable, INamable
 							temp.getPlayerInstance().sendSkillList();
 						}
 					}
-					else
+					else if (temp.getPledgeType() == subType)
 					{
-						if (temp.getPledgeType() == subType)
-						{
-							temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
-							temp.getPlayerInstance().sendPacket(new ExSubPledgeSkillAdd(subType, newSkill.getId(), newSkill.getLevel()));
-							temp.getPlayerInstance().sendPacket(sm);
-							temp.getPlayerInstance().sendSkillList();
-						}
+						temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
+						temp.getPlayerInstance().sendPacket(new ExSubPledgeSkillAdd(subType, newSkill.getId(), newSkill.getLevel()));
+						temp.getPlayerInstance().sendPacket(sm);
+						temp.getPlayerInstance().sendSkillList();
 					}
 				}
 			}
@@ -1794,7 +1791,7 @@ public class L2Clan implements IIdentifiable, INamable
 				while (rset.next())
 				{
 					final int id = rset.getInt("sub_pledge_id");
-					_subPledges.put(id, (new SubPledge(id, rset.getString("name"), rset.getInt("leader_id"))));
+					_subPledges.put(id, new SubPledge(id, rset.getString("name"), rset.getInt("leader_id")));
 				}
 			}
 		}

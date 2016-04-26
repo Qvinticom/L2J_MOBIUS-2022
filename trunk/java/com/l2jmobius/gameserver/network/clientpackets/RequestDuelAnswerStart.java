@@ -78,7 +78,6 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket
 				msg1.addString(requestor.getName());
 				
 				msg2 = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ACCEPTED_YOUR_CHALLENGE_TO_DUEL_AGAINST_THEIR_PARTY_THE_DUEL_WILL_BEGIN_IN_A_FEW_MOMENTS);
-				msg2.addString(player.getName());
 			}
 			else
 			{
@@ -86,13 +85,13 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket
 				msg1.addString(requestor.getName());
 				
 				msg2 = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ACCEPTED_YOUR_CHALLENGE_TO_A_DUEL_THE_DUEL_WILL_BEGIN_IN_A_FEW_MOMENTS);
-				msg2.addString(player.getName());
 			}
+			msg2.addString(player.getName());
 			
 			player.sendPacket(msg1);
 			requestor.sendPacket(msg2);
 			
-			DuelManager.getInstance().addDuel(requestor, player, _partyDuel == 1 ? true : false);
+			DuelManager.getInstance().addDuel(requestor, player, _partyDuel == 1);
 		}
 		else if (_response == -1)
 		{

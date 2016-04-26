@@ -118,7 +118,7 @@ public final class Harvesting extends AbstractEffect
 		final int levelPlayer = activeChar.getLevel();
 		final int levelTarget = target.getLevel();
 		
-		int diff = (levelPlayer - levelTarget);
+		int diff = levelPlayer - levelTarget;
 		if (diff < 0)
 		{
 			diff = -diff;

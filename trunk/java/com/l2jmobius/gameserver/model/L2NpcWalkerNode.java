@@ -35,7 +35,7 @@ public class L2NpcWalkerNode extends Location
 		_delay = delay;
 		_runToLocation = runToLocation;
 		_npcString = npcString;
-		_chatString = ((chatText == null) ? "" : chatText);
+		_chatString = (chatText == null) ? "" : chatText;
 	}
 	
 	public int getDelay()

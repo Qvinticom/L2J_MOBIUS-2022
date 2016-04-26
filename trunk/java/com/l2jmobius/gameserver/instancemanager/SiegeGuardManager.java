@@ -239,7 +239,7 @@ public final class SiegeGuardManager
 			ps.setInt(4, y);
 			ps.setInt(5, z);
 			ps.setInt(6, heading);
-			ps.setInt(7, (isHire == 1 ? 0 : 600));
+			ps.setInt(7, isHire == 1 ? 0 : 600);
 			ps.setInt(8, isHire);
 			ps.execute();
 		}

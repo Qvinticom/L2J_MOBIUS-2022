@@ -49,13 +49,13 @@ public final class RequestExPledgeCrestLarge extends L2GameClientPacket
 				if (i < 4)
 				{
 					final byte[] fullChunk = new byte[14336];
-					System.arraycopy(data, (14336 * i), fullChunk, 0, 14336);
+					System.arraycopy(data, 14336 * i, fullChunk, 0, 14336);
 					sendPacket(new ExPledgeEmblem(_crestId, fullChunk, _clanId, i));
 				}
 				else
 				{
 					final byte[] lastChunk = new byte[8320];
-					System.arraycopy(data, (14336 * i), lastChunk, 0, 8320);
+					System.arraycopy(data, 14336 * i, lastChunk, 0, 8320);
 					sendPacket(new ExPledgeEmblem(_crestId, lastChunk, _clanId, i));
 				}
 			}

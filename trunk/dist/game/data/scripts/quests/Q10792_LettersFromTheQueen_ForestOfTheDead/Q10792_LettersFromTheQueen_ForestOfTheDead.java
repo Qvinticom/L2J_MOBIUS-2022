@@ -156,7 +156,7 @@ public class Q10792_LettersFromTheQueen_ForestOfTheDead extends Quest implements
 					
 					case HATUBA:
 					{
-						if ((player.getRace() != Race.ERTHEIA))
+						if (player.getRace() != Race.ERTHEIA)
 						{
 							htmltext = getNoQuestMsg(player);
 						}

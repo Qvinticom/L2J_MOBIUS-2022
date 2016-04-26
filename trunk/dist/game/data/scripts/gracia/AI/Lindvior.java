@@ -110,7 +110,7 @@ public class Lindvior extends AbstractNpcAI
 	
 	private void scheduleNextLindviorVisit()
 	{
-		startQuestTimer("start", ((ALT_MODE) ? ALT_MODE_MIN * 60000 : scheduleNextLindviorDate()), null, null);
+		startQuestTimer("start", ALT_MODE ? ALT_MODE_MIN * 60000 : scheduleNextLindviorDate(), null, null);
 	}
 	
 	private long scheduleNextLindviorDate()

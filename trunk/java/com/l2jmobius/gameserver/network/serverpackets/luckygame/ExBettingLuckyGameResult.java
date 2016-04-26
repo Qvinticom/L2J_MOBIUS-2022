@@ -78,7 +78,7 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 		}
 		
 		// Check inventory capacity
-		if ((rewards.size() > 0) && ((!_activeChar.getInventory().validateCapacity(rewards.size())) || (!_activeChar.getInventory().validateWeight(totalWeight))))
+		if ((rewards.size() > 0) && (!_activeChar.getInventory().validateCapacity(rewards.size()) || !_activeChar.getInventory().validateWeight(totalWeight)))
 		{
 			_activeChar.sendPacket(new ExStartLuckyGame(_type));
 			_activeChar.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_EITHER_FULL_OR_OVERWEIGHT);
@@ -109,25 +109,21 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 				writeD(0x02); // normal = 1, rare = 2 (forcing 2)
 				writeD(reward.getId());
 				writeD((int) reward.getCount());
-				
+				final SystemMessage sm;
 				if (_type == 2)
 				{
 					_activeChar.addItem("LuxuryFortuneTelling", reward, _activeChar, false);
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_IN_THE_LUXURY_FORTUNE_READING);
-					sm.addPcName(_activeChar);
-					sm.addLong(reward.getCount());
-					sm.addItemName(new L2ItemInstance(reward.getId()));
-					_activeChar.broadcastPacket(sm, 1000);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_IN_THE_LUXURY_FORTUNE_READING);
 				}
 				else
 				{
 					_activeChar.addItem("FortuneTelling", reward, _activeChar, false);
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_THROUGH_FORTUNE_READING);
-					sm.addPcName(_activeChar);
-					sm.addLong(reward.getCount());
-					sm.addItemName(new L2ItemInstance(reward.getId()));
-					_activeChar.broadcastPacket(sm, 1000);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_THROUGH_FORTUNE_READING);
 				}
+				sm.addPcName(_activeChar);
+				sm.addLong(reward.getCount());
+				sm.addItemName(new L2ItemInstance(reward.getId()));
+				_activeChar.broadcastPacket(sm, 1000);
 			}
 		}
 		else

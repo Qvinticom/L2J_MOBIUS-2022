@@ -88,15 +88,15 @@ public class L2Fishing implements Runnable
 		final int lureType;
 		if (isUpperGrade)
 		{
-			_deceptiveMode = ((Rnd.get(100) >= 90) ? 1 : 0);
+			_deceptiveMode = (Rnd.get(100) >= 90) ? 1 : 0;
 			lureType = 2;
 		}
 		else
 		{
 			_deceptiveMode = 0;
-			lureType = (isNoob ? 0 : 1);
+			lureType = isNoob ? 0 : 1;
 		}
-		_mode = ((Rnd.get(100) >= 80) ? 1 : 0);
+		_mode = (Rnd.get(100) >= 80) ? 1 : 0;
 		
 		_fisher.broadcastPacket(new ExFishingStartCombat(_fisher, _time, _fishMaxHp, _mode, lureType, _deceptiveMode));
 		_fisher.sendPacket(new PlaySound(1, "SF_S_01", 0, 0, 0, 0, 0));
@@ -189,12 +189,9 @@ public class L2Fishing implements Runnable
 					_fishCurHp += (int) _regenHp;
 				}
 			}
-			else
+			else if (_deceptiveMode == 1)
 			{
-				if (_deceptiveMode == 1)
-				{
-					_fishCurHp += (int) _regenHp;
-				}
+				_fishCurHp += (int) _regenHp;
 			}
 			if (_stop == 0)
 			{
@@ -274,32 +271,29 @@ public class L2Fishing implements Runnable
 				changeHp(-dmg, pen);
 			}
 		}
+		else if (_deceptiveMode == 0)
+		{
+			// Reeling failed, Damage: $s1
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP);
+			sm.addInt(dmg);
+			_fisher.sendPacket(sm);
+			_goodUse = 2;
+			changeHp(-dmg, pen);
+		}
 		else
 		{
-			if (_deceptiveMode == 0)
+			// Reeling is successful, Damage: $s1
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_REEL_THAT_FISH_IN_CLOSER_AND_CAUSE_S1_DAMAGE);
+			sm.addInt(dmg);
+			_fisher.sendPacket(sm);
+			if (pen > 0)
 			{
-				// Reeling failed, Damage: $s1
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP);
-				sm.addInt(dmg);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESSFUL_MASTERY_PENALTY_S1);
+				sm.addInt(pen);
 				_fisher.sendPacket(sm);
-				_goodUse = 2;
-				changeHp(-dmg, pen);
 			}
-			else
-			{
-				// Reeling is successful, Damage: $s1
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_REEL_THAT_FISH_IN_CLOSER_AND_CAUSE_S1_DAMAGE);
-				sm.addInt(dmg);
-				_fisher.sendPacket(sm);
-				if (pen > 0)
-				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESSFUL_MASTERY_PENALTY_S1);
-					sm.addInt(pen);
-					_fisher.sendPacket(sm);
-				}
-				_goodUse = 1;
-				changeHp(dmg, pen);
-			}
+			_goodUse = 1;
+			changeHp(dmg, pen);
 		}
 	}
 	
@@ -344,32 +338,29 @@ public class L2Fishing implements Runnable
 				changeHp(-dmg, pen);
 			}
 		}
+		else if (_deceptiveMode == 0)
+		{
+			// Pumping failed, Regained: $s1
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP);
+			sm.addInt(dmg);
+			_fisher.sendPacket(sm);
+			_goodUse = 2;
+			changeHp(-dmg, pen);
+		}
 		else
 		{
-			if (_deceptiveMode == 0)
+			// Pumping is successful. Damage: $s1
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_IS_SUCCESSFUL_CAUSING_S1_DAMAGE);
+			sm.addInt(dmg);
+			_fisher.sendPacket(sm);
+			if (pen > 0)
 			{
-				// Pumping failed, Regained: $s1
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP);
-				sm.addInt(dmg);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESSFUL_MASTERY_PENALTY_S1);
+				sm.addInt(pen);
 				_fisher.sendPacket(sm);
-				_goodUse = 2;
-				changeHp(-dmg, pen);
 			}
-			else
-			{
-				// Pumping is successful. Damage: $s1
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_IS_SUCCESSFUL_CAUSING_S1_DAMAGE);
-				sm.addInt(dmg);
-				_fisher.sendPacket(sm);
-				if (pen > 0)
-				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESSFUL_MASTERY_PENALTY_S1);
-					sm.addInt(pen);
-					_fisher.sendPacket(sm);
-				}
-				_goodUse = 1;
-				changeHp(dmg, pen);
-			}
+			_goodUse = 1;
+			changeHp(dmg, pen);
 		}
 	}
 }

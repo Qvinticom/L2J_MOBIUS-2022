@@ -27,11 +27,11 @@ import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
  */
 public interface IChanceMultiplierStrategy
 {
-	public static final IChanceMultiplierStrategy DROP = DEFAULT_STRATEGY(Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER);
-	public static final IChanceMultiplierStrategy SPOIL = DEFAULT_STRATEGY(Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER);
-	public static final IChanceMultiplierStrategy STATIC = (item, victim) -> 1;
+	IChanceMultiplierStrategy DROP = DEFAULT_STRATEGY(Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER);
+	IChanceMultiplierStrategy SPOIL = DEFAULT_STRATEGY(Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER);
+	IChanceMultiplierStrategy STATIC = (item, victim) -> 1;
 	
-	public static final IChanceMultiplierStrategy QUEST = (item, victim) ->
+	IChanceMultiplierStrategy QUEST = (item, victim) ->
 	{
 		double championmult;
 		if ((item.getItemId() == Inventory.ADENA_ID) || (item.getItemId() == Inventory.ANCIENT_ADENA_ID))
@@ -46,7 +46,7 @@ public interface IChanceMultiplierStrategy
 		return (Config.L2JMOD_CHAMPION_ENABLE && (victim != null) && victim.isChampion()) ? (Config.RATE_QUEST_DROP * championmult) : Config.RATE_QUEST_DROP;
 	};
 	
-	public static IChanceMultiplierStrategy DEFAULT_STRATEGY(double defaultMultiplier)
+	static IChanceMultiplierStrategy DEFAULT_STRATEGY(double defaultMultiplier)
 	{
 		return (item, victim) ->
 		{
@@ -76,5 +76,5 @@ public interface IChanceMultiplierStrategy
 		};
 	}
 	
-	public double getChanceMultiplier(GeneralDropItem item, L2Character victim);
+	double getChanceMultiplier(GeneralDropItem item, L2Character victim);
 }

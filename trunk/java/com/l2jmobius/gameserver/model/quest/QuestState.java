@@ -120,7 +120,7 @@ public final class QuestState
 	 */
 	public boolean isCreated()
 	{
-		return (_state == State.CREATED);
+		return _state == State.CREATED;
 	}
 	
 	/**
@@ -129,7 +129,7 @@ public final class QuestState
 	 */
 	public boolean isStarted()
 	{
-		return (_state == State.STARTED);
+		return _state == State.STARTED;
 	}
 	
 	/**
@@ -138,7 +138,7 @@ public final class QuestState
 	 */
 	public boolean isCompleted()
 	{
-		return (_state == State.COMPLETED);
+		return _state == State.COMPLETED;
 	}
 	
 	/**
@@ -322,10 +322,10 @@ public final class QuestState
 				
 				// since no flag had been skipped until now, the least significant bits must all
 				// be set to 1, up until "old" number of bits.
-				completedStateFlags |= ((1 << old) - 1);
+				completedStateFlags |= (1 << old) - 1;
 				
 				// now, just set the bit corresponding to the passed cond to 1 (current step)
-				completedStateFlags |= (1 << (cond - 1));
+				completedStateFlags |= 1 << (cond - 1);
 				set("__compltdStateFlags", String.valueOf(completedStateFlags));
 			}
 		}
@@ -334,7 +334,7 @@ public final class QuestState
 		else if (cond < old)
 		{
 			// note, this also unsets the flag indicating that there exist skips
-			completedStateFlags &= ((1 << cond) - 1);
+			completedStateFlags &= (1 << cond) - 1;
 			
 			// now, check if this resulted in no steps being skipped any more
 			if (completedStateFlags == ((1 << cond) - 1))
@@ -354,7 +354,7 @@ public final class QuestState
 		// Just mark this state and we are done.
 		else
 		{
-			completedStateFlags |= (1 << (cond - 1));
+			completedStateFlags |= 1 << (cond - 1);
 			set("__compltdStateFlags", String.valueOf(completedStateFlags));
 		}
 		
@@ -509,7 +509,7 @@ public final class QuestState
 	 */
 	public boolean isCond(int condition)
 	{
-		return (getInt("cond") == condition);
+		return getInt("cond") == condition;
 	}
 	
 	/**
@@ -546,7 +546,7 @@ public final class QuestState
 	 */
 	public boolean isSet(String variable)
 	{
-		return (get(variable) != null);
+		return get(variable) != null;
 	}
 	
 	/**
@@ -588,7 +588,7 @@ public final class QuestState
 	
 	public boolean isMemoState(int memoState)
 	{
-		return (getInt("memoState") == memoState);
+		return getInt("memoState") == memoState;
 	}
 	
 	/**
@@ -621,7 +621,7 @@ public final class QuestState
 	 */
 	public boolean isMemoStateEx(int slot, int memoStateEx)
 	{
-		return (getMemoStateEx(slot) == memoStateEx);
+		return getMemoStateEx(slot) == memoStateEx;
 	}
 	
 	/**
@@ -1028,7 +1028,7 @@ public final class QuestState
 	public boolean isNowAvailable()
 	{
 		final String val = get("restartTime");
-		return ((val == null) || !Util.isDigit(val)) || (Long.parseLong(val) <= System.currentTimeMillis());
+		return (val == null) || !Util.isDigit(val) || (Long.parseLong(val) <= System.currentTimeMillis());
 	}
 	
 	/**

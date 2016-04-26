@@ -29,7 +29,7 @@ import com.l2jmobius.util.Rnd;
  */
 public interface IDropCalculationStrategy
 {
-	public static final IDropCalculationStrategy DEFAULT_STRATEGY = (item, victim, killer) ->
+	IDropCalculationStrategy DEFAULT_STRATEGY = (item, victim, killer) ->
 	{
 		final double chance = item.getChance(victim, killer);
 		if (chance > (Rnd.nextDouble() * 100))
@@ -50,5 +50,5 @@ public interface IDropCalculationStrategy
 		return null;
 	};
 	
-	public List<ItemHolder> calculateDrops(GeneralDropItem item, L2Character victim, L2Character killer);
+	List<ItemHolder> calculateDrops(GeneralDropItem item, L2Character victim, L2Character killer);
 }

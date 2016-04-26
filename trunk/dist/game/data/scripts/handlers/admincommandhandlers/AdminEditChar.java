@@ -117,7 +117,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_character_info"))
 		{
 			final String[] data = command.split(" ");
-			if ((data.length > 1))
+			if (data.length > 1)
 			{
 				showCharacterInfo(activeChar, L2World.getInstance().getPlayer(data[1]));
 			}
@@ -185,7 +185,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_edit_character"))
 		{
 			final String[] data = command.split(" ");
-			if ((data.length > 1))
+			if (data.length > 1)
 			{
 				editCharacter(activeChar, data[1]);
 			}
@@ -481,7 +481,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				return false;
 			}
-			player.getAppearance().setSex(player.getAppearance().getSex() ? false : true);
+			player.getAppearance().setSex(!player.getAppearance().getSex());
 			player.sendMessage("Your gender has been changed by a GM");
 			player.broadcastUserInfo();
 		}
@@ -574,17 +574,14 @@ public class AdminEditChar implements IAdminCommandHandler
 						ps.execute();
 					}
 				}
+				else // removing penalty
+				if (changeCreateExpiryTime)
+				{
+					player.setClanCreateExpiryTime(0);
+				}
 				else
 				{
-					// removing penalty
-					if (changeCreateExpiryTime)
-					{
-						player.setClanCreateExpiryTime(0);
-					}
-					else
-					{
-						player.setClanJoinExpiryTime(0);
-					}
+					player.setClanJoinExpiryTime(0);
 				}
 				
 				activeChar.sendMessage("Clan penalty successfully removed to character: " + playerName);
@@ -634,7 +631,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			final String[] data = command.split(" ");
 			L2PcInstance pl = null;
-			if ((data.length > 1))
+			if (data.length > 1)
 			{
 				pl = L2World.getInstance().getPlayer(data[1]);
 			}
@@ -798,7 +795,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				player = activeChar;
 			}
-			else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
+			else if (activeChar.getTarget() instanceof L2PcInstance)
 			{
 				player = (L2PcInstance) activeChar.getTarget();
 			}
@@ -1067,7 +1064,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		if (target instanceof L2PcInstance)
 		{
-			gatherCharacterInfo(activeChar, ((L2PcInstance) target), "charedit.htm");
+			gatherCharacterInfo(activeChar, (L2PcInstance) target, "charedit.htm");
 		}
 	}
 	
@@ -1137,12 +1134,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			findDisconnected = true;
 		}
-		else
+		else if (!IpAdress.matches("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$"))
 		{
-			if (!IpAdress.matches("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$"))
-			{
-				throw new IllegalArgumentException("Malformed IPv4 number");
-			}
+			throw new IllegalArgumentException("Malformed IPv4 number");
 		}
 		
 		int CharactersFound = 0;
@@ -1270,13 +1264,13 @@ public class AdminEditChar implements IAdminCommandHandler
 			if (ipMap.get(ip).size() >= multibox)
 			{
 				final Integer count = dualboxIPs.get(ip);
-				if (count == null)
+				if (count != null)
 				{
-					dualboxIPs.put(ip, multibox);
+					dualboxIPs.put(ip, count + 1);
 				}
 				else
 				{
-					dualboxIPs.put(ip, count + 1);
+					dualboxIPs.put(ip, multibox);
 				}
 			}
 		}
@@ -1322,13 +1316,13 @@ public class AdminEditChar implements IAdminCommandHandler
 			if (ipMap.get(pack).size() >= multibox)
 			{
 				final Integer count = dualboxIPs.get(pack);
-				if (count == null)
+				if (count != null)
 				{
-					dualboxIPs.put(pack, multibox);
+					dualboxIPs.put(pack, count + 1);
 				}
 				else
 				{
-					dualboxIPs.put(pack, count + 1);
+					dualboxIPs.put(pack, multibox);
 				}
 			}
 		}

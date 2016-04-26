@@ -193,7 +193,7 @@ public final class Q00032_AnObviousLie extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = ((player.getLevel() >= MIN_LVL) ? "30120-01.htm" : "30120-03.htm");
+					htmltext = (player.getLevel() >= MIN_LVL) ? "30120-01.htm" : "30120-03.htm";
 				}
 				else if (qs.isStarted())
 				{
@@ -224,12 +224,12 @@ public final class Q00032_AnObviousLie extends Quest
 					}
 					case 4:
 					{
-						htmltext = (hasItem(player, MEDICINAL_HERB) ? "30094-04.html" : "30094-05.html");
+						htmltext = hasItem(player, MEDICINAL_HERB) ? "30094-04.html" : "30094-05.html";
 						break;
 					}
 					case 5:
 					{
-						htmltext = (hasItem(player, SPIRIT_ORE) ? "30094-07.html" : "30094-08.html");
+						htmltext = hasItem(player, SPIRIT_ORE) ? "30094-07.html" : "30094-08.html";
 						break;
 					}
 					case 6:

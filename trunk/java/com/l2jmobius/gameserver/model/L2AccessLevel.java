@@ -210,6 +210,6 @@ public class L2AccessLevel
 			
 			_childsAccessLevel = AdminData.getInstance().getAccessLevel(_child);
 		}
-		return ((_childsAccessLevel.getLevel() == accessLevel.getLevel()) || _childsAccessLevel.hasChildAccess(accessLevel));
+		return (_childsAccessLevel.getLevel() == accessLevel.getLevel()) || _childsAccessLevel.hasChildAccess(accessLevel);
 	}
 }

@@ -204,7 +204,7 @@ public enum AbnormalVisualEffect
 	 * @param name the name
 	 * @return The abnormal visual effect if its found, {@code null} otherwise
 	 */
-	public static final AbnormalVisualEffect findByName(String name)
+	public static AbnormalVisualEffect findByName(String name)
 	{
 		for (AbnormalVisualEffect abnormalVisualEffect : values())
 		{

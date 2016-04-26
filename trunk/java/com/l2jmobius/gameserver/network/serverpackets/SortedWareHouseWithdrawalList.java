@@ -297,15 +297,15 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY))
 			{
-				return (order == A2Z ? Z2A : A2Z);
+				return order == A2Z ? Z2A : A2Z;
 			}
 			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY))
 			{
-				return (order == A2Z ? A2Z : Z2A);
+				return order == A2Z ? A2Z : Z2A;
 			}
 			final String s1 = o1.getItemName();
 			final String s2 = o2.getItemName();
-			return (order == A2Z ? s1.compareTo(s2) : s2.compareTo(s1));
+			return order == A2Z ? s1.compareTo(s2) : s2.compareTo(s1);
 		}
 	}
 	
@@ -329,13 +329,13 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY))
 			{
-				return (order == A2Z ? Z2A : A2Z);
+				return order == A2Z ? Z2A : A2Z;
 			}
 			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY))
 			{
-				return (order == A2Z ? A2Z : Z2A);
+				return order == A2Z ? A2Z : Z2A;
 			}
-			if ((o1.isEtcItem() && (o1.getItemType() == EtcItemType.RECIPE)) && (o2.isEtcItem() && (o2.getItemType() == EtcItemType.RECIPE)))
+			if (o1.isEtcItem() && (o1.getItemType() == EtcItemType.RECIPE) && o2.isEtcItem() && (o2.getItemType() == EtcItemType.RECIPE))
 			{
 				try
 				{
@@ -344,17 +344,17 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 					
 					if (rp1 == null)
 					{
-						return (order == A2Z ? A2Z : Z2A);
+						return order == A2Z ? A2Z : Z2A;
 					}
 					if (rp2 == null)
 					{
-						return (order == A2Z ? Z2A : A2Z);
+						return order == A2Z ? Z2A : A2Z;
 					}
 					
 					final Integer i1 = rp1.getLevel();
 					final Integer i2 = rp2.getLevel();
 					
-					return (order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1));
+					return order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1);
 				}
 				catch (Exception e)
 				{
@@ -364,7 +364,7 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 			
 			final String s1 = o1.getItemName();
 			final String s2 = o2.getItemName();
-			return (order == A2Z ? s1.compareTo(s2) : s2.compareTo(s1));
+			return order == A2Z ? s1.compareTo(s2) : s2.compareTo(s1);
 		}
 	}
 	
@@ -385,15 +385,15 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY))
 			{
-				return (order == A2Z ? Z2A : A2Z);
+				return order == A2Z ? Z2A : A2Z;
 			}
 			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY))
 			{
-				return (order == A2Z ? A2Z : Z2A);
+				return order == A2Z ? A2Z : Z2A;
 			}
 			final Integer i1 = o1.getBodyPart();
 			final Integer i2 = o2.getBodyPart();
-			return (order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1));
+			return order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1);
 		}
 	}
 	
@@ -414,15 +414,15 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY))
 			{
-				return (order == A2Z ? Z2A : A2Z);
+				return order == A2Z ? Z2A : A2Z;
 			}
 			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY))
 			{
-				return (order == A2Z ? A2Z : Z2A);
+				return order == A2Z ? A2Z : Z2A;
 			}
 			final CrystalType i1 = o1.getItemGrade();
 			final CrystalType i2 = o2.getItemGrade();
-			return (order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1));
+			return order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1);
 		}
 	}
 	
@@ -443,17 +443,17 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		{
 			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY))
 			{
-				return (order == A2Z ? Z2A : A2Z);
+				return order == A2Z ? Z2A : A2Z;
 			}
 			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY))
 			{
-				return (order == A2Z ? A2Z : Z2A);
+				return order == A2Z ? A2Z : Z2A;
 			}
 			try
 			{
 				final MaterialType i1 = o1.getItem().getMaterialType();
 				final MaterialType i2 = o2.getItem().getMaterialType();
-				return (order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1));
+				return order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1);
 			}
 			catch (Exception e)
 			{
@@ -595,7 +595,7 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		final List<L2WarehouseItem> list = new ArrayList<>();
 		for (L2ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && item.getItemName().toUpperCase().startsWith("AMULET")) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
 				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
@@ -619,7 +619,7 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		final List<L2WarehouseItem> list = new ArrayList<>();
 		for (L2ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && !item.getItemName().toUpperCase().startsWith("AMULET")) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
 				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{
@@ -739,7 +739,7 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		final List<L2WarehouseItem> list = new ArrayList<>();
 		for (L2ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() != EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != EtcItemType.SHOT))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() != EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != EtcItemType.SHOT)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
 				if (list.size() >= MAX_SORT_LIST_ITEMS)
 				{

@@ -28,14 +28,14 @@ import ai.npc.AbstractNpcAI;
 final class DimensionalWarpTeleport extends AbstractNpcAI
 {
 	// NPC
-	private final static int RESED = 33974;
+	private static final int RESED = 33974;
 	// Misc
-	private final static int MIN_LEVEL = 99;
+	private static final int MIN_LEVEL = 99;
 	// Items
-	private final static int WARP_CRYSTAL = 39597;
-	private final static int WARP_CRYSTAL_COUNT = 3;
+	private static final int WARP_CRYSTAL = 39597;
+	private static final int WARP_CRYSTAL_COUNT = 3;
 	// Location
-	private final static Location DIMENSIONAL_WARP = new Location(-76785, -217420, 4016);
+	private static final Location DIMENSIONAL_WARP = new Location(-76785, -217420, 4016);
 	
 	private DimensionalWarpTeleport()
 	{
@@ -47,7 +47,7 @@ final class DimensionalWarpTeleport extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if ((hasQuestItems(player, WARP_CRYSTAL)) && (player.getLevel() >= MIN_LEVEL) && (getQuestItemsCount(player, WARP_CRYSTAL) >= WARP_CRYSTAL_COUNT) && (player.isAwaken()))
+		if (hasQuestItems(player, WARP_CRYSTAL) && (player.getLevel() >= MIN_LEVEL) && (getQuestItemsCount(player, WARP_CRYSTAL) >= WARP_CRYSTAL_COUNT) && player.isAwaken())
 		{
 			takeItems(player, WARP_CRYSTAL, 3);
 			player.teleToLocation(DIMENSIONAL_WARP);

@@ -149,7 +149,7 @@ public class OptionData implements IXmlReader
 	 * Gets the single instance of OptionsData.
 	 * @return single instance of OptionsData
 	 */
-	public static final OptionData getInstance()
+	public static OptionData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

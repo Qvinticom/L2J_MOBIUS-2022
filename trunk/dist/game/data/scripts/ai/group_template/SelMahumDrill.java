@@ -206,12 +206,12 @@ final class SelMahumDrill extends AbstractNpcAI
 		// group hate
 		for (L2Character ch : npc.getKnownList().getKnownCharacters())
 		{
-			if (!ch.isInCombat() && ch.isMonster() && (((L2Npc) ch).getSpawn().getName().equals(npc.getSpawn().getName())))
+			if (!ch.isInCombat() && ch.isMonster() && ((L2Npc) ch).getSpawn().getName().equals(npc.getSpawn().getName()))
 			{
 				addAttackDesire((L2Npc) ch, attacker);
 			}
 		}
-		if ((getRandom(10) < 1) && (Util.contains(MAHUM_SOLDIERS, npc.getId())))
+		if ((getRandom(10) < 1) && Util.contains(MAHUM_SOLDIERS, npc.getId()))
 		{
 			npc.broadcastEvent("ATTACKED", 1000, null);
 		}
@@ -317,7 +317,7 @@ final class SelMahumDrill extends AbstractNpcAI
 		final int remainedCount = npc.getVariables().getInt("SOCIAL_ACTION_REMAINED_COUNT");
 		if (remainedCount > 0)
 		{
-			npc.getVariables().set("SOCIAL_ACTION_REMAINED_COUNT", (remainedCount - 1));
+			npc.getVariables().set("SOCIAL_ACTION_REMAINED_COUNT", remainedCount - 1);
 			startQuestTimer("do_social_action", action.getRepeatInterval(), npc, null);
 		}
 	}

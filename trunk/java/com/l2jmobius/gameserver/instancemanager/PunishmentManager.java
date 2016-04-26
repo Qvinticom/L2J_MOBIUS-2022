@@ -123,7 +123,7 @@ public final class PunishmentManager
 	 * Gets the single instance of {@code PunishmentManager}.
 	 * @return single instance of {@code PunishmentManager}
 	 */
-	public static final PunishmentManager getInstance()
+	public static PunishmentManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

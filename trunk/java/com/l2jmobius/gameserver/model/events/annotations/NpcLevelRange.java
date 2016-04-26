@@ -30,7 +30,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface NpcLevelRange
 {
-	public int from();
+	int from();
 	
-	public int to();
+	int to();
 }

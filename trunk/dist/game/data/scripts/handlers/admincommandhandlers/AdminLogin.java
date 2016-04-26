@@ -106,13 +106,12 @@ public class AdminLogin implements IAdminCommandHandler
 					Config.SERVER_LIST_TYPE = newType;
 					LoginServerThread.getInstance().sendServerType();
 					activeChar.sendMessage("Server Type changed to " + getServerTypeName(newType));
-					showMainPage(activeChar);
 				}
 				else
 				{
 					activeChar.sendMessage("Server Type is already " + getServerTypeName(newType));
-					showMainPage(activeChar);
 				}
+				showMainPage(activeChar);
 			}
 			else
 			{
@@ -135,13 +134,12 @@ public class AdminLogin implements IAdminCommandHandler
 						Config.SERVER_LIST_TYPE = age;
 						LoginServerThread.getInstance().sendServerStatus(ServerStatus.SERVER_AGE, age);
 						activeChar.sendMessage("Server Age changed to " + age);
-						showMainPage(activeChar);
 					}
 					else
 					{
 						activeChar.sendMessage("Server Age is already " + age);
-						showMainPage(activeChar);
 					}
+					showMainPage(activeChar);
 				}
 				catch (NumberFormatException e)
 				{

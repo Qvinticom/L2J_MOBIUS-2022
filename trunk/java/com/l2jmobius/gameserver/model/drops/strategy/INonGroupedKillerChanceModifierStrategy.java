@@ -24,5 +24,5 @@ import com.l2jmobius.gameserver.model.drops.GeneralDropItem;
  */
 public interface INonGroupedKillerChanceModifierStrategy
 {
-	public double getKillerChanceModifier(GeneralDropItem item, L2Character victim, L2Character killer);
+	double getKillerChanceModifier(GeneralDropItem item, L2Character victim, L2Character killer);
 }

@@ -38,7 +38,7 @@ final class Eleve extends AbstractNpcAI
 		NpcStringId.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP,
 		NpcStringId.DO_YOU_SEE_A_SCROLL_ICON_GO_THAT_LOCATION
 	};
-	private final static Location[] ELEVE_LOC =
+	private static final Location[] ELEVE_LOC =
 	{
 		new Location(-114936, 259918, -1203),
 		new Location(-114687, 259872, -1203),

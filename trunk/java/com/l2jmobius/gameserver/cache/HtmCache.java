@@ -78,7 +78,7 @@ public class HtmCache
 	
 	public double getMemoryUsage()
 	{
-		return ((float) _bytesBuffLen / 1048576);
+		return (float) _bytesBuffLen / 1048576;
 	}
 	
 	public int getLoadedFiles()

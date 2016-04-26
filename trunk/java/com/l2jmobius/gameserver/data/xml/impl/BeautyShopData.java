@@ -124,7 +124,7 @@ public final class BeautyShopData implements IXmlReader
 											att = attrs.item(i);
 											set.set(att.getNodeName(), att.getNodeValue());
 										}
-										beautyData.addFace((new BeautyItem(set)));
+										beautyData.addFace(new BeautyItem(set));
 									}
 								}
 								

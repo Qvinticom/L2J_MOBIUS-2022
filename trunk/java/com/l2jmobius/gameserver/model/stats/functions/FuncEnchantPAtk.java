@@ -46,11 +46,11 @@ public class FuncEnchantPAtk extends AbstractFunction
 			// Increases Phys.Atk for chest
 			if (item.getEnchantLevel() == 4)
 			{
-				value += (2 * blessedBonus);
+				value += 2 * blessedBonus;
 			}
 			else
 			{
-				value += (2 * blessedBonus * ((item.getEnchantLevel() * 2) - 9));
+				value += 2 * blessedBonus * ((item.getEnchantLevel() * 2) - 9);
 			}
 		}
 		return initVal;

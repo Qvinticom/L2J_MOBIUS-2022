@@ -185,7 +185,6 @@ public final class FinalEmperialTomb extends AbstractInstance
 	private static final int MAX_PLAYERS = 45;
 	private static final int TIME_BETWEEN_DEMON_SPAWNS = 20000;
 	private static final int MAX_DEMONS = 24;
-	private static final boolean debug = false;
 	private final Map<Integer, L2Territory> _spawnZoneList = new HashMap<>();
 	private final Map<Integer, List<FETSpawn>> _spawnList = new HashMap<>();
 	private final List<Integer> _mustKillMobsId = new ArrayList<>();
@@ -436,17 +435,12 @@ public final class FinalEmperialTomb extends AbstractInstance
 		{
 			_log.log(Level.WARNING, "[Final Emperial Tomb] Could not parse final_emperial_tomb.xml file: " + e.getMessage(), e);
 		}
-		if (debug)
-		{
-			_log.info("[Final Emperial Tomb] Loaded " + _spawnZoneList.size() + " spawn zones data.");
-			_log.info("[Final Emperial Tomb] Loaded " + spawnCount + " spawns data.");
-		}
 	}
 	
 	@Override
 	protected boolean checkConditions(L2PcInstance player)
 	{
-		if (debug || player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
+		if (player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
 		{
 			return true;
 		}
@@ -585,10 +579,6 @@ public final class FinalEmperialTomb extends AbstractInstance
 		{
 			try
 			{
-				if (debug)
-				{
-					_log.info("[Final Emperial Tomb] Starting " + world.getStatus() + ". status.");
-				}
 				world.npcList.clear();
 				switch (world.getStatus())
 				{
@@ -731,10 +721,6 @@ public final class FinalEmperialTomb extends AbstractInstance
 		{
 			if ((InstanceManager.getInstance().getWorld(_world.getInstanceId()) != _world) || _world.portraits.isEmpty())
 			{
-				if (debug)
-				{
-					_log.info("[Final Emperial Tomb] Instance is deleted or all Portraits is killed.");
-				}
 				return;
 			}
 			for (int i : _world.portraits.values())
@@ -1480,10 +1466,6 @@ public final class FinalEmperialTomb extends AbstractInstance
 			if (npc.getId() == HALL_ALARM)
 			{
 				ThreadPoolManager.getInstance().scheduleGeneral(new StatusTask(world, 0), 2000);
-				if (debug)
-				{
-					_log.info("[Final Emperial Tomb] Hall alarm is disabled, doors will open!");
-				}
 			}
 			else if (npc.getId() == DARK_CHOIR_PLAYER)
 			{
@@ -1491,10 +1473,6 @@ public final class FinalEmperialTomb extends AbstractInstance
 				if (world.darkChoirPlayerCount < 1)
 				{
 					ThreadPoolManager.getInstance().scheduleGeneral(new StatusTask(world, 2), 2000);
-					if (debug)
-					{
-						_log.info("[Final Emperial Tomb] All Dark Choir Players are killed, doors will open!");
-					}
 				}
 			}
 			else if (npc.getId() == SCARLET2)

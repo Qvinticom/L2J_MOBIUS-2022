@@ -180,7 +180,7 @@ public abstract class L2Playable extends L2Character
 		{
 			for (QuestState qs : actingPlayer.getNotifyQuestOfDeath())
 			{
-				qs.getQuest().notifyDeath((killer == null ? this : killer), this, qs);
+				qs.getQuest().notifyDeath(killer == null ? this : killer, this, qs);
 			}
 		}
 		// Notify instance

@@ -159,7 +159,7 @@ public class Q10795_LettersFromTheQueen_WallOfAgros extends Quest implements IBy
 					
 					case HERMIT:
 					{
-						if ((player.getRace() != Race.ERTHEIA))
+						if (player.getRace() != Race.ERTHEIA)
 						{
 							htmltext = getNoQuestMsg(player);
 						}
@@ -233,7 +233,7 @@ public class Q10795_LettersFromTheQueen_WallOfAgros extends Quest implements IBy
 	public boolean useBypass(String command, L2PcInstance player, L2Character bypassOrigin)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) || (player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL) || ((player.getRace() != Race.ERTHEIA)))
+		if ((qs != null) || (player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL) || (player.getRace() != Race.ERTHEIA))
 		{
 			return false;
 		}

@@ -58,7 +58,7 @@ public class AreaCorpseMob implements ITargetTypeHandler
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharacters();
 		for (L2Character obj : objs)
 		{
-			if (!(obj.isAttackable() || obj.isPlayable()) || !Util.checkIfInRange(skill.getAffectRange(), target, obj, true))
+			if ((!obj.isAttackable() && !obj.isPlayable()) || !Util.checkIfInRange(skill.getAffectRange(), target, obj, true))
 			{
 				continue;
 			}

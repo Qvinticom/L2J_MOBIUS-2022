@@ -52,7 +52,7 @@ public final class StaticDamage extends AbstractEffect
 		}
 		
 		// reduce damage if target has maxdamage buff
-		final double maxDamage = (info.getEffected().getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+		final double maxDamage = info.getEffected().getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null);
 		if (maxDamage > 0)
 		{
 			_power = (int) maxDamage;

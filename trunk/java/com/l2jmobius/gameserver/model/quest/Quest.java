@@ -1030,7 +1030,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public String onDeath(L2Character killer, L2Character victim, QuestState qs)
 	{
-		return onAdvEvent("", ((killer instanceof L2Npc) ? ((L2Npc) killer) : null), qs.getPlayer());
+		return onAdvEvent("", (killer instanceof L2Npc) ? (L2Npc) killer : null, qs.getPlayer());
 	}
 	
 	/**
@@ -1439,7 +1439,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			_log.warning(getClass().getSimpleName() + ": " + t.getMessage());
 		}
-		return (player != null) && player.getAccessLevel().isGm() && showResult(player, ("<html><body><title>Script error</title>" + Util.getStackTrace(t) + "</body></html>"));
+		return (player != null) && player.getAccessLevel().isGm() && showResult(player, "<html><body><title>Script error</title>" + Util.getStackTrace(t) + "</body></html>");
 	}
 	
 	/**
@@ -1496,7 +1496,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * Loads all quest states and variables for the specified player.
 	 * @param player the player who is entering the world
 	 */
-	public static final void playerEnter(L2PcInstance player)
+	public static void playerEnter(L2PcInstance player)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement invalidQuestData = con.prepareStatement("DELETE FROM character_quests WHERE charId = ? AND name = ?");
@@ -2302,7 +2302,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			return null;
 		}
 		final L2Party party = player.getParty();
-		return (party == null) || (party.getMembers().isEmpty()) ? player : party.getMembers().get(Rnd.get(party.getMembers().size()));
+		return (party == null) || party.getMembers().isEmpty() ? player : party.getMembers().get(Rnd.get(party.getMembers().size()));
 	}
 	
 	/**
@@ -2345,7 +2345,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		QuestState temp = null;
 		final L2Party party = player.getParty();
 		// if this player is not in a party, just check if this player instance matches the conditions itself
-		if ((party == null) || (party.getMembers().isEmpty()))
+		if ((party == null) || party.getMembers().isEmpty())
 		{
 			temp = player.getQuestState(getName());
 			return (temp != null) && temp.isSet(var) && temp.get(var).equalsIgnoreCase(value) ? player : null;
@@ -2362,7 +2362,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 				continue;
 			}
 			temp = partyMember.getQuestState(getName());
-			if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius(target, 1500, true, false))
+			if ((temp != null) && (temp.get(var) != null) && temp.get(var).equalsIgnoreCase(value) && partyMember.isInsideRadius(target, 1500, true, false))
 			{
 				candidates.add(partyMember);
 			}
@@ -2391,7 +2391,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		QuestState temp = null;
 		final L2Party party = player.getParty();
 		// if this player is not in a party, just check if this player instance matches the conditions itself
-		if ((party == null) || (party.getMembers().isEmpty()))
+		if ((party == null) || party.getMembers().isEmpty())
 		{
 			temp = player.getQuestState(getName());
 			return (temp != null) && (temp.getState() == state) ? player : null;
@@ -2530,12 +2530,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	private boolean checkPartyMemberConditions(QuestState qs, int condition, L2Npc npc)
 	{
-		return ((qs != null) && ((condition == -1) ? qs.isStarted() : qs.isCond(condition)) && checkPartyMember(qs, npc));
+		return (qs != null) && ((condition == -1) ? qs.isStarted() : qs.isCond(condition)) && checkPartyMember(qs, npc);
 	}
 	
 	private static boolean checkDistanceToTarget(L2PcInstance player, L2Npc target)
 	{
-		return ((target == null) || com.l2jmobius.gameserver.util.Util.checkIfInRange(1500, player, target, true));
+		return (target == null) || com.l2jmobius.gameserver.util.Util.checkIfInRange(1500, player, target, true);
 	}
 	
 	/**

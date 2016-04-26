@@ -77,16 +77,13 @@ public class PcKnownList extends PlayableKnownList
 			// else if (object.getPolytype().equals("npc"))
 			// sendPacket(new NpcInfoPoly(object, this));
 		}
-		else
+		else if (object.isVisibleFor(getActiveChar()))
 		{
-			if (object.isVisibleFor(getActiveChar()))
+			object.sendInfo(getActiveChar());
+			
+			if ((object instanceof L2Character) && ((L2Character) object).hasAI())
 			{
-				object.sendInfo(getActiveChar());
-				
-				if ((object instanceof L2Character) && ((L2Character) object).hasAI())
-				{
-					((L2Character) object).getAI().describeStateToPlayer(getActiveChar());
-				}
+				((L2Character) object).getAI().describeStateToPlayer(getActiveChar());
 			}
 		}
 		

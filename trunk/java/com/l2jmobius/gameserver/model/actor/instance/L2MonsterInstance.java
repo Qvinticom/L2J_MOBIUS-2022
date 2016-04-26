@@ -214,7 +214,7 @@ public class L2MonsterInstance extends L2Attackable
 	@Override
 	public boolean isWalker()
 	{
-		return ((getLeader() == null) ? super.isWalker() : getLeader().isWalker());
+		return (getLeader() == null) ? super.isWalker() : getLeader().isWalker();
 	}
 	
 	/**

@@ -84,7 +84,7 @@ public final class ItemCrystalizationData implements IXmlReader
 	 * Gets the single instance of ItemCrystalizationData.
 	 * @return single instance of ItemCrystalizationData
 	 */
-	public static final ItemCrystalizationData getInstance()
+	public static ItemCrystalizationData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

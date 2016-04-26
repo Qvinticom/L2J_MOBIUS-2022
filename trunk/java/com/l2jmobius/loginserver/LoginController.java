@@ -175,13 +175,13 @@ public class LoginController
 		synchronized (_failedLoginAttemps)
 		{
 			failedLoginAttemps = _failedLoginAttemps.get(addr);
-			if (failedLoginAttemps == null)
+			if (failedLoginAttemps != null)
 			{
-				failedLoginAttemps = 1;
+				++failedLoginAttemps;
 			}
 			else
 			{
-				++failedLoginAttemps;
+				failedLoginAttemps = 1;
 			}
 			
 			_failedLoginAttemps.put(addr, failedLoginAttemps);
@@ -370,7 +370,7 @@ public class LoginController
 	{
 		try
 		{
-			return this.removeBanForAddress(InetAddress.getByName(address));
+			return removeBanForAddress(InetAddress.getByName(address));
 		}
 		catch (UnknownHostException e)
 		{

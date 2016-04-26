@@ -106,7 +106,7 @@ public class Message
 		_receiverId = receiverId;
 		_subject = subject;
 		_content = text;
-		_expiration = (isCod ? System.currentTimeMillis() + (COD_EXPIRATION * 3600000) : System.currentTimeMillis() + (EXPIRATION * 3600000));
+		_expiration = isCod ? System.currentTimeMillis() + (COD_EXPIRATION * 3600000) : System.currentTimeMillis() + (EXPIRATION * 3600000);
 		_hasAttachments = false;
 		_unread = true;
 		_deletedBySender = false;
@@ -214,7 +214,7 @@ public class Message
 		}
 	}
 	
-	public static final PreparedStatement getStatement(Message msg, Connection con) throws SQLException
+	public static PreparedStatement getStatement(Message msg, Connection con) throws SQLException
 	{
 		final PreparedStatement stmt = con.prepareStatement("INSERT INTO messages (messageId, senderId, receiverId, subject, content, expiration, reqAdena, hasAttachments, isUnread, isDeletedBySender, isDeletedByReceiver, sendBySystem, isReturned, itemId, enchantLvl, elementals) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		

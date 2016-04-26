@@ -247,7 +247,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 				if (npc.getId() == IASON_HEINE)
 				{
 					qs = player.getQuestState(Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "30969-01.htm" : "30969-08.html";
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "30969-01.htm" : "30969-08.html";
 				}
 				break;
 			}
@@ -298,7 +298,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 							{
 								npc.setScriptValue(player.getObjectId());
 							}
-							htmltext = (npc.isScriptValue(player.getObjectId())) ? "32584-01.html" : "32584-06.html";
+							htmltext = npc.isScriptValue(player.getObjectId()) ? "32584-01.html" : "32584-06.html";
 						}
 						break;
 					}
@@ -358,7 +358,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 					{
 						if (qs.isCond(3) || qs.isCond(4))
 						{
-							htmltext = (!hasQuestItems(player, COURT_MAGICIANS_MAGIC_STAFF)) ? "32598-01.html" : "32598-03.html";
+							htmltext = !hasQuestItems(player, COURT_MAGICIANS_MAGIC_STAFF) ? "32598-01.html" : "32598-03.html";
 							player.sendPacket(SystemMessageId.BY_USING_THE_COURT_WIZARD_S_MAGIC_STAFF_OPEN_THE_DOOR_ON_WHICH_THE_MAGICIAN_S_BARRIER_IS_PLACED);
 						}
 						break;

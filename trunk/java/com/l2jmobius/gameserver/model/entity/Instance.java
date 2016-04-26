@@ -638,13 +638,13 @@ public final class Instance
 										spawnDat.startRespawn();
 									}
 									spawnDat.setInstanceId(getId());
-									if (allowRandomWalk == null)
+									if (allowRandomWalk != null)
 									{
-										spawnDat.setIsNoRndWalk(!_allowRandomWalk);
+										spawnDat.setIsNoRndWalk(!allowRandomWalk);
 									}
 									else
 									{
-										spawnDat.setIsNoRndWalk(!allowRandomWalk);
+										spawnDat.setIsNoRndWalk(!_allowRandomWalk);
 									}
 									
 									spawnDat.setAreaName(areaName);
@@ -887,7 +887,7 @@ public final class Instance
 	
 	public void addEjectDeadTask(L2PcInstance player)
 	{
-		if ((player != null))
+		if (player != null)
 		{
 			_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneral(() ->
 			{

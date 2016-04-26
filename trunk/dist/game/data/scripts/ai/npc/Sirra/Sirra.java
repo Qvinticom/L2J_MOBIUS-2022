@@ -48,11 +48,11 @@ final class Sirra extends AbstractNpcAI
 		
 		if ((world != null) && (world.getTemplateId() == FREYA_INSTID))
 		{
-			return (world.isStatus(0)) ? "32762-easy.html" : "32762-easyfight.html";
+			return world.isStatus(0) ? "32762-easy.html" : "32762-easyfight.html";
 		}
 		else if ((world != null) && (world.getTemplateId() == FREYA_HARD_INSTID))
 		{
-			return (world.isStatus(0)) ? "32762-hard.html" : "32762-hardfight.html";
+			return world.isStatus(0) ? "32762-hard.html" : "32762-hardfight.html";
 		}
 		return "32762.html";
 	}

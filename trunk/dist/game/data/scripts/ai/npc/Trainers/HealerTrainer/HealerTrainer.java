@@ -188,7 +188,7 @@ final class HealerTrainer extends AbstractNpcAI
 				itemId = -1;
 			}
 		}
-		return (player.getInventory().getInventoryItemCount(itemId, -1) > 0);
+		return player.getInventory().getInventoryItemCount(itemId, -1) > 0;
 	}
 	
 	public static void main(String[] args)

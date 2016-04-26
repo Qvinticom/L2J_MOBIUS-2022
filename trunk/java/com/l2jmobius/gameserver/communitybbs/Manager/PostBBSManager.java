@@ -70,7 +70,7 @@ public class PostBBSManager extends BaseBBSManager
 			final int idp = Integer.parseInt(st.nextToken());
 			final String index = st.hasMoreTokens() ? st.nextToken() : null;
 			final int ind = index == null ? 1 : Integer.parseInt(index);
-			showPost((TopicBBSManager.getInstance().getTopicByID(idp)), ForumsBBSManager.getInstance().getForumByID(idf), activeChar, ind);
+			showPost(TopicBBSManager.getInstance().getTopicByID(idp), ForumsBBSManager.getInstance().getForumByID(idf), activeChar, ind);
 		}
 		else if (command.startsWith("_bbsposts;edit;"))
 		{
@@ -80,7 +80,7 @@ public class PostBBSManager extends BaseBBSManager
 			final int idf = Integer.parseInt(st.nextToken());
 			final int idt = Integer.parseInt(st.nextToken());
 			final int idp = Integer.parseInt(st.nextToken());
-			showEditPost((TopicBBSManager.getInstance().getTopicByID(idt)), ForumsBBSManager.getInstance().getForumByID(idf), activeChar, idp);
+			showEditPost(TopicBBSManager.getInstance().getTopicByID(idt), ForumsBBSManager.getInstance().getForumByID(idf), activeChar, idp);
 		}
 		else
 		{

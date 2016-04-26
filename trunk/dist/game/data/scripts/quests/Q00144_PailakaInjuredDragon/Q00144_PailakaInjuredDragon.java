@@ -810,7 +810,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		}
 	}
 	
-	private static final void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
+	private static void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
 	{
 		final int chance = Rnd.get(100);
 		for (int[] element : drop)
@@ -823,7 +823,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		}
 	}
 	
-	private static final void dropItem(L2Npc mob, L2PcInstance player)
+	private static void dropItem(L2Npc mob, L2PcInstance player)
 	{
 		// To make random drops, we shuffle the droplist every time its used.
 		Collections.shuffle(DROPLIST);
@@ -844,7 +844,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		buff_counter--;
 	}
 	
-	private static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	private static void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);

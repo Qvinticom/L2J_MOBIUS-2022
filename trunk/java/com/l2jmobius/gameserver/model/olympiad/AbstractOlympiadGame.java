@@ -160,7 +160,7 @@ public abstract class AbstractOlympiadGame
 		return null;
 	}
 	
-	protected static final boolean portPlayerToArena(Participant par, Location loc, int id)
+	protected static boolean portPlayerToArena(Participant par, Location loc, int id)
 	{
 		final L2PcInstance player = par.getPlayer();
 		if ((player == null) || !player.isOnline())
@@ -194,7 +194,7 @@ public abstract class AbstractOlympiadGame
 		return true;
 	}
 	
-	protected static final void removals(L2PcInstance player, boolean removeParty)
+	protected static void removals(L2PcInstance player, boolean removeParty)
 	{
 		try
 		{
@@ -297,7 +297,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected static final void cleanEffects(L2PcInstance player)
+	protected static void cleanEffects(L2PcInstance player)
 	{
 		try
 		{
@@ -350,7 +350,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected static final void playerStatusBack(L2PcInstance player)
+	protected static void playerStatusBack(L2PcInstance player)
 	{
 		try
 		{
@@ -401,7 +401,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected static final void portPlayerBack(L2PcInstance player)
+	protected static void portPlayerBack(L2PcInstance player)
 	{
 		if (player == null)
 		{
@@ -418,7 +418,7 @@ public abstract class AbstractOlympiadGame
 		player.unsetLastLocation();
 	}
 	
-	public static final void rewardParticipant(L2PcInstance player, int[][] reward)
+	public static void rewardParticipant(L2PcInstance player, int[][] reward)
 	{
 		if ((player == null) || !player.isOnline() || (reward == null))
 		{

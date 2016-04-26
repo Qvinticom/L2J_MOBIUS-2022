@@ -335,16 +335,13 @@ public final class Castle extends AbstractResidence
 			}
 			_treasury -= amount;
 		}
+		else if ((_treasury + amount) > Inventory.MAX_ADENA)
+		{
+			_treasury = Inventory.MAX_ADENA;
+		}
 		else
 		{
-			if ((_treasury + amount) > Inventory.MAX_ADENA)
-			{
-				_treasury = Inventory.MAX_ADENA;
-			}
-			else
-			{
-				_treasury += amount;
-			}
+			_treasury += amount;
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -592,7 +589,7 @@ public final class Castle extends AbstractResidence
 			if (door.isDead())
 			{
 				door.doRevive();
-				door.setCurrentHp((isDoorWeak) ? (door.getMaxHp() / 2) : (door.getMaxHp()));
+				door.setCurrentHp(isDoorWeak ? (door.getMaxHp() / 2) : door.getMaxHp());
 			}
 			
 			if (door.getOpen())
@@ -701,26 +698,20 @@ public final class Castle extends AbstractResidence
 		{
 			_function.put(type, new CastleFunction(type, lvl, lease, 0, rate, 0, false));
 		}
+		else if ((lvl == 0) && (lease == 0))
+		{
+			removeFunction(type);
+		}
+		else if ((lease - _function.get(type).getLease()) > 0)
+		{
+			_function.remove(type);
+			_function.put(type, new CastleFunction(type, lvl, lease, 0, rate, -1, false));
+		}
 		else
 		{
-			if ((lvl == 0) && (lease == 0))
-			{
-				removeFunction(type);
-			}
-			else
-			{
-				if ((lease - _function.get(type).getLease()) > 0)
-				{
-					_function.remove(type);
-					_function.put(type, new CastleFunction(type, lvl, lease, 0, rate, -1, false));
-				}
-				else
-				{
-					_function.get(type).setLease(lease);
-					_function.get(type).setLvl(lvl);
-					_function.get(type).dbSave();
-				}
-			}
+			_function.get(type).setLease(lease);
+			_function.get(type).setLvl(lvl);
+			_function.get(type).dbSave();
 		}
 		return true;
 	}
@@ -785,7 +776,7 @@ public final class Castle extends AbstractResidence
 	
 	public void setDoorUpgrade(int doorId, int ratio, boolean save)
 	{
-		final L2DoorInstance door = (getDoors().isEmpty()) ? DoorData.getInstance().getDoor(doorId) : getDoor(doorId);
+		final L2DoorInstance door = getDoors().isEmpty() ? DoorData.getInstance().getDoor(doorId) : getDoor(doorId);
 		if (door == null)
 		{
 			return;
@@ -1126,7 +1117,7 @@ public final class Castle extends AbstractResidence
 	public void giveResidentialSkills(L2PcInstance player)
 	{
 		super.giveResidentialSkills(player);
-		player.addSkill((getSide() == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill()));
+		player.addSkill(getSide() == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill());
 	}
 	
 	@Override

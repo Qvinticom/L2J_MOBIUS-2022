@@ -192,7 +192,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 		
 		if (Util.contains(MOBS1, npcId))
 		{
-			final float chance = (CHANCE_MOBS1 * Config.RATE_QUEST_DROP);
+			final float chance = CHANCE_MOBS1 * Config.RATE_QUEST_DROP;
 			if (getRandom(1000) < chance)
 			{
 				rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 2);
@@ -239,7 +239,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			{
 				if (npc.getId() == SINGSING)
 				{
-					htmltext = (hasQuestItems(player, BONES_OF_A_PLAINS_DINOSAUR)) ? "32106-08.html" : "32106-14.html";
+					htmltext = hasQuestItems(player, BONES_OF_A_PLAINS_DINOSAUR) ? "32106-08.html" : "32106-14.html";
 				}
 				else if (npc.getId() == KARAKAWEI)
 				{

@@ -40,6 +40,6 @@ public class ConditionPlayerLevelRange extends Condition
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
 		final int level = effector.getLevel();
-		return ((level >= _levels[0]) && (level <= _levels[1]));
+		return (level >= _levels[0]) && (level <= _levels[1]);
 	}
 }

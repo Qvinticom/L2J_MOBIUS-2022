@@ -73,8 +73,8 @@ public class SessionKey
 		// when server doesn't show license it doesn't send the LoginOk packet, client doesn't have this part of the key then.
 		if (Config.SHOW_LICENCE)
 		{
-			return ((playOkID1 == key.playOkID1) && (loginOkID1 == key.loginOkID1) && (playOkID2 == key.playOkID2) && (loginOkID2 == key.loginOkID2));
+			return (playOkID1 == key.playOkID1) && (loginOkID1 == key.loginOkID1) && (playOkID2 == key.playOkID2) && (loginOkID2 == key.loginOkID2);
 		}
-		return ((playOkID1 == key.playOkID1) && (playOkID2 == key.playOkID2));
+		return (playOkID1 == key.playOkID1) && (playOkID2 == key.playOkID2);
 	}
 }

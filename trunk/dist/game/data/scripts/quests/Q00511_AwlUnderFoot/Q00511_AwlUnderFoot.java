@@ -114,9 +114,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		}
 	}
 	
-	private static final boolean debug = false;
 	private static final long REENTERTIME = 14400000;
-	
 	private static final long RAID_SPAWN_DELAY = 120000;
 	
 	private final Map<Integer, FortDungeon> _fortDungeons = new HashMap<>(21);
@@ -191,10 +189,6 @@ public final class Q00511_AwlUnderFoot extends Quest
 	
 	private String checkConditions(L2PcInstance player)
 	{
-		if (debug)
-		{
-			return null;
-		}
 		final L2Party party = player.getParty();
 		if (party == null)
 		{
@@ -346,7 +340,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
-		final L2Playable attacker = (isSummon ? player.getServitors().values().stream().findFirst().orElse(player.getPet()) : player);
+		final L2Playable attacker = isSummon ? player.getServitors().values().stream().findFirst().orElse(player.getPet()) : player;
 		if ((attacker.getLevel() - npc.getLevel()) >= 9)
 		{
 			if ((attacker.getBuffCount() > 0) || (attacker.getDanceCount() > 0))

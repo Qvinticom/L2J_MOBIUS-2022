@@ -140,7 +140,7 @@ final class CastleAmbassador extends AbstractNpcAI
 		
 		if (player.isClanLeader() && (player.getClanId() == fortOwner))
 		{
-			htmltext = (fortresss.isBorderFortress()) ? "ambassador-01.html" : "ambassador.html";
+			htmltext = fortresss.isBorderFortress() ? "ambassador-01.html" : "ambassador.html";
 		}
 		else
 		{

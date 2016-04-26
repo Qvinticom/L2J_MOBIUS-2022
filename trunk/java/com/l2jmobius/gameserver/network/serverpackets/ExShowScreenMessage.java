@@ -220,15 +220,12 @@ public class ExShowScreenMessage extends L2GameServerPacket
 			writeS(_text);
 			exsize--;
 		}
-		else
+		else if (_parameters != null)
 		{
-			if (_parameters != null)
+			for (String s : _parameters)
 			{
-				for (String s : _parameters)
-				{
-					writeS(s);
-					exsize--;
-				}
+				writeS(s);
+				exsize--;
 			}
 		}
 		for (int i = 1; i < exsize; i++)

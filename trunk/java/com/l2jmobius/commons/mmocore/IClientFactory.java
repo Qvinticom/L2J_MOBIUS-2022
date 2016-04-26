@@ -22,5 +22,5 @@ package com.l2jmobius.commons.mmocore;
  */
 public interface IClientFactory<T extends MMOClient<?>>
 {
-	public T create(MMOConnection<T> con);
+	T create(MMOConnection<T> con);
 }

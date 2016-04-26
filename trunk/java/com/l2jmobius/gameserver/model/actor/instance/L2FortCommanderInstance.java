@@ -53,13 +53,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		if ((attacker == null) || !(attacker instanceof L2PcInstance))
-		{
-			return false;
-		}
-		
-		// Attackable during siege by all except defenders
-		return ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(((L2PcInstance) attacker).getClan()));
+		return (attacker instanceof L2PcInstance) && (getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(((L2PcInstance) attacker).getClan());
 	}
 	
 	@Override

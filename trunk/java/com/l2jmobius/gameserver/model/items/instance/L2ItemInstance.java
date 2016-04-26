@@ -330,13 +330,13 @@ public final class L2ItemInstance extends L2Object
 			String referenceName = "no-reference";
 			if (reference instanceof L2Object)
 			{
-				referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+				referenceName = ((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name";
 			}
 			else if (reference instanceof String)
 			{
 				referenceName = (String) reference;
 			}
-			final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
+			final String targetName = creator.getTarget() != null ? creator.getTarget().getName() : "no-target";
 			if (Config.GMAUDIT)
 			{
 				GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + getId() + " name: " + getName() + ")", targetName, "L2Object referencing this action is: " + referenceName);
@@ -492,13 +492,13 @@ public final class L2ItemInstance extends L2Object
 			String referenceName = "no-reference";
 			if (reference instanceof L2Object)
 			{
-				referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+				referenceName = ((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name";
 			}
 			else if (reference instanceof String)
 			{
 				referenceName = (String) reference;
 			}
-			final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
+			final String targetName = creator.getTarget() != null ? creator.getTarget().getName() : "no-target";
 			if (Config.GMAUDIT)
 			{
 				GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + getId() + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "L2Object referencing this action is: " + referenceName);
@@ -527,7 +527,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isEquipable()
 	{
-		return !((_item.getBodyPart() == 0) || (_item.getItemType() == EtcItemType.ARROW) || (_item.getItemType() == EtcItemType.BOLT) || (_item.getItemType() == EtcItemType.LURE));
+		return (_item.getBodyPart() != 0) && (_item.getItemType() != EtcItemType.ARROW) && (_item.getItemType() != EtcItemType.BOLT) && (_item.getItemType() != EtcItemType.LURE);
 	}
 	
 	/**
@@ -619,7 +619,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isEtcItem()
 	{
-		return (_item instanceof L2EtcItem);
+		return _item instanceof L2EtcItem;
 	}
 	
 	/**
@@ -627,7 +627,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isWeapon()
 	{
-		return (_item instanceof L2Weapon);
+		return _item instanceof L2Weapon;
 	}
 	
 	/**
@@ -635,7 +635,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isArmor()
 	{
-		return (_item instanceof L2Armor);
+		return _item instanceof L2Armor;
 	}
 	
 	/**
@@ -1247,7 +1247,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isShadowItem()
 	{
-		return (_mana >= 0);
+		return _mana >= 0;
 	}
 	
 	/**
@@ -1422,7 +1422,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public void updateDatabase()
 	{
-		this.updateDatabase(false);
+		updateDatabase(false);
 	}
 	
 	/**
@@ -1788,7 +1788,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public boolean isNightLure()
 	{
-		return (((_itemId >= 8505) && (_itemId <= 8513)) || (_itemId == 8485));
+		return ((_itemId >= 8505) && (_itemId <= 8513)) || (_itemId == 8485);
 	}
 	
 	public void setCountDecrease(boolean decrease)
@@ -1821,7 +1821,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public boolean isTimeLimitedItem()
 	{
-		return (_time > 0);
+		return _time > 0;
 	}
 	
 	/**
@@ -2349,7 +2349,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public void addCommonSoulCrystalOption(SoulCrystalOption option)
 	{
-		if ((isEquipped()) && (_commonSoulCrystalOptions[option.getSlot() - 1] != null) && (getActingPlayer() != null))
+		if (isEquipped() && (_commonSoulCrystalOptions[option.getSlot() - 1] != null) && (getActingPlayer() != null))
 		{
 			getActingPlayer().removeSkill(_commonSoulCrystalOptions[option.getSlot() - 1].getSkill(), true);
 		}
@@ -2358,7 +2358,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public void setSpecialSoulCrystalOption(SoulCrystalOption special)
 	{
-		if ((isEquipped()) && (_specialSoulCrystalOption != null) && (getActingPlayer() != null))
+		if (isEquipped() && (_specialSoulCrystalOption != null) && (getActingPlayer() != null))
 		{
 			getActingPlayer().removeSkill(_specialSoulCrystalOption.getSkill(), true);
 		}
@@ -2450,7 +2450,7 @@ public final class L2ItemInstance extends L2Object
 	public void applySoulCrystalOptionEffect()
 	{
 		final L2PcInstance owner = getActingPlayer();
-		if ((owner == null) || (!isEquipped()))
+		if ((owner == null) || !isEquipped())
 		{
 			return;
 		}
@@ -2474,7 +2474,7 @@ public final class L2ItemInstance extends L2Object
 	public void removeSoulCrystalOptionEffect()
 	{
 		final L2PcInstance owner = getActingPlayer();
-		if ((owner == null) || (isEquipped()))
+		if ((owner == null) || isEquipped())
 		{
 			return;
 		}

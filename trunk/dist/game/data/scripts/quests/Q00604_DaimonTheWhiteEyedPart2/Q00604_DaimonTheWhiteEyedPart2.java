@@ -231,35 +231,32 @@ public final class Q00604_DaimonTheWhiteEyedPart2 extends Quest
 				}
 				else if (qs.getMemoState() >= 22)
 				{
-					htmltext = (hasQuestItems(player, ESSENCE_OF_DAIMON)) ? "31683-06.html" : "31683-09.html";
+					htmltext = hasQuestItems(player, ESSENCE_OF_DAIMON) ? "31683-06.html" : "31683-09.html";
 				}
 			}
-			else
+			else if (qs.isMemoState(11))
 			{
-				if (qs.isMemoState(11))
+				if (hasQuestItems(player, SUMMON_CRYSTAL))
 				{
-					if (hasQuestItems(player, SUMMON_CRYSTAL))
-					{
-						htmltext = "31541-01.html";
-					}
+					htmltext = "31541-01.html";
 				}
-				else if (qs.isMemoState(21))
+			}
+			else if (qs.isMemoState(21))
+			{
+				if (!isDaimonSpawned())
 				{
-					if (!isDaimonSpawned())
-					{
-						addSpawn(DAIMON_THE_WHITE_EYED, DAIMON_THE_WHITE_EYED_LOC);
-						npc.deleteMe();
-						htmltext = "31541-02.html";
-					}
-					else
-					{
-						htmltext = "31541-03.html";
-					}
+					addSpawn(DAIMON_THE_WHITE_EYED, DAIMON_THE_WHITE_EYED_LOC);
+					npc.deleteMe();
+					htmltext = "31541-02.html";
 				}
-				else if (qs.getMemoState() >= 22)
+				else
 				{
-					htmltext = "31541-05.html";
+					htmltext = "31541-03.html";
 				}
+			}
+			else if (qs.getMemoState() >= 22)
+			{
+				htmltext = "31541-05.html";
 			}
 		}
 		return htmltext;

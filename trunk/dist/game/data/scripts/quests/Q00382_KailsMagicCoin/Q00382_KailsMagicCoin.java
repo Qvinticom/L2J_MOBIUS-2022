@@ -106,7 +106,7 @@ public final class Q00382_KailsMagicCoin extends Quest
 		String htmltext = getNoQuestMsg(talker);
 		if (qs.isCreated())
 		{
-			htmltext = (((talker.getLevel() >= MIN_LVL) && hasQuestItems(talker, ROYAL_MEMBERSHIP)) ? "30687-02.htm" : "30687-01.htm");
+			htmltext = ((talker.getLevel() >= MIN_LVL) && hasQuestItems(talker, ROYAL_MEMBERSHIP)) ? "30687-02.htm" : "30687-01.htm";
 		}
 		else if (qs.isStarted())
 		{

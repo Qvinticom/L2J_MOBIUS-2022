@@ -127,7 +127,7 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		final float chance = (DROP_RATE * Config.RATE_QUEST_DROP);
+		final float chance = DROP_RATE * Config.RATE_QUEST_DROP;
 		if (getRandom(1000) < chance)
 		{
 			rewardItems(partyMember, DINOSAUR_FANG_NECKLACE, 1);
@@ -155,7 +155,7 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = (hasQuestItems(player, DINOSAUR_FANG_NECKLACE)) ? "32105-05.html" : "32105-12.html";
+				htmltext = hasQuestItems(player, DINOSAUR_FANG_NECKLACE) ? "32105-05.html" : "32105-12.html";
 				break;
 			}
 		}

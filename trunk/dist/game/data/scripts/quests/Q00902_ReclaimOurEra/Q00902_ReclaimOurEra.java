@@ -71,7 +71,7 @@ public final class Q00902_ReclaimOurEra extends Quest
 	private void giveItem(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && (qs.isStarted()) && (!qs.isCond(5)) && Util.checkIfInRange(1500, npc, player, false))
+		if ((qs != null) && qs.isStarted() && !qs.isCond(5) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			giveItems(player, MONSTER_DROPS.get(npc.getId()), 1);
 			qs.setCond(5, true);

@@ -127,7 +127,7 @@ public final class Valakas extends AbstractNpcAI
 		if (status == DEAD)
 		{
 			// load the unlock date and time for valakas from DB
-			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
+			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
 			if (temp > 0)
 			{
 				// The time has not yet expired. Mark Valakas as currently locked (dead).
@@ -178,7 +178,7 @@ public final class Valakas extends AbstractNpcAI
 				// Start timer to lock entry after 30 minutes
 				if (status == WAITING)
 				{
-					startQuestTimer("beginning", (Config.VALAKAS_WAIT_TIME * 60000), valakas, null);
+					startQuestTimer("beginning", Config.VALAKAS_WAIT_TIME * 60000, valakas, null);
 				}
 			}
 		}
@@ -356,18 +356,15 @@ public final class Valakas extends AbstractNpcAI
 				callSkillAI(npc);
 			}
 		}
-		else
+		else if (event.equalsIgnoreCase("valakas_unlock"))
 		{
-			if (event.equalsIgnoreCase("valakas_unlock"))
-			{
-				final L2Npc valakas = addSpawn(VALAKAS, -105200, -253104, -15264, 32768, false, 0);
-				GrandBossManager.getInstance().addBoss((L2GrandBossInstance) valakas);
-				GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
-			}
-			else if (event.equalsIgnoreCase("remove_players"))
-			{
-				ZONE.oustAllPlayers();
-			}
+			final L2Npc valakas = addSpawn(VALAKAS, -105200, -253104, -15264, 32768, false, 0);
+			GrandBossManager.getInstance().addBoss((L2GrandBossInstance) valakas);
+			GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
+		}
+		else if (event.equalsIgnoreCase("remove_players"))
+		{
+			ZONE.oustAllPlayers();
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -436,7 +433,7 @@ public final class Valakas extends AbstractNpcAI
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);
-		info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
+		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 		GrandBossManager.getInstance().setStatsSet(VALAKAS, info);
 		
 		return super.onKill(npc, killer, isSummon);
@@ -456,7 +453,7 @@ public final class Valakas extends AbstractNpcAI
 		}
 		
 		// Pickup a target if no or dead victim. 10% luck he decides to reconsiders his target.
-		if ((_actualVictim == null) || _actualVictim.isDead() || !(npc.getKnownList().knowsObject(_actualVictim)) || (getRandom(10) == 0))
+		if ((_actualVictim == null) || _actualVictim.isDead() || !npc.getKnownList().knowsObject(_actualVictim) || (getRandom(10) == 0))
 		{
 			_actualVictim = getRandomTarget(npc);
 		}
@@ -550,7 +547,7 @@ public final class Valakas extends AbstractNpcAI
 			}
 		}
 		
-		return (result.isEmpty()) ? null : result.get(getRandom(result.size()));
+		return result.isEmpty() ? null : result.get(getRandom(result.size()));
 	}
 	
 	public static void main(String[] args)

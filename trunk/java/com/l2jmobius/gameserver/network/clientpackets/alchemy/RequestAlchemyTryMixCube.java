@@ -28,8 +28,8 @@ import com.l2jmobius.gameserver.network.serverpackets.alchemy.ExTryMixCube;
 
 public class RequestAlchemyTryMixCube extends L2GameClientPacket
 {
-	private final static int AIR_STONE = 39461;
-	private final static int ELCYUM_CRYSTAL = 36514;
+	private static final int AIR_STONE = 39461;
+	private static final int ELCYUM_CRYSTAL = 36514;
 	private final Map<Integer, Long> _items = new HashMap<>();
 	
 	public RequestAlchemyTryMixCube()

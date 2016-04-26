@@ -143,7 +143,7 @@ public class Q00141_ShadowFoxPart3 extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState qs = getQuestState(member, false);
-		if ((getRandom(100) < MOBS.get(npc.getId())))
+		if (getRandom(100) < MOBS.get(npc.getId()))
 		{
 			giveItems(member, PREDECESSORS_REPORT, 1);
 			if (getQuestItemsCount(member, PREDECESSORS_REPORT) >= REPORT_COUNT)

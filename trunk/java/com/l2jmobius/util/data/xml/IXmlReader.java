@@ -38,17 +38,17 @@ import com.l2jmobius.util.file.filter.XMLFilter;
  */
 public interface IXmlReader
 {
-	static final Logger LOGGER = Logger.getLogger(IXmlReader.class.getName());
-	static final String JAXP_SCHEMA_LANGUAGE = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
-	static final String W3C_XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
+	Logger LOGGER = Logger.getLogger(IXmlReader.class.getName());
+	String JAXP_SCHEMA_LANGUAGE = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
+	String W3C_XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
 	/** The default file filter, ".xml" files only. */
-	static final XMLFilter XML_FILTER = new XMLFilter();
+	XMLFilter XML_FILTER = new XMLFilter();
 	
 	/**
 	 * This method can be used to load/reload the data.<br>
 	 * It's highly recommended to clear the data storage, either the list or map.
 	 */
-	public void load();
+	void load();
 	
 	/**
 	 * Wrapper for {@link #parseFile(File)} method.

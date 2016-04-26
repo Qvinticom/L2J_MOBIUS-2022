@@ -85,19 +85,19 @@ final class DarkWaterDragon extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("1")) // spawns a detractor
 			{
-				addSpawn(DETRACTOR1, (npc.getX() + 100), (npc.getY() + 100), npc.getZ(), 0, false, 40000);
+				addSpawn(DETRACTOR1, npc.getX() + 100, npc.getY() + 100, npc.getZ(), 0, false, 40000);
 			}
 			else if (event.equalsIgnoreCase("2")) // spawns a detractor
 			{
-				addSpawn(DETRACTOR2, (npc.getX() + 100), (npc.getY() - 100), npc.getZ(), 0, false, 40000);
+				addSpawn(DETRACTOR2, npc.getX() + 100, npc.getY() - 100, npc.getZ(), 0, false, 40000);
 			}
 			else if (event.equalsIgnoreCase("3")) // spawns a detractor
 			{
-				addSpawn(DETRACTOR1, (npc.getX() - 100), (npc.getY() + 100), npc.getZ(), 0, false, 40000);
+				addSpawn(DETRACTOR1, npc.getX() - 100, npc.getY() + 100, npc.getZ(), 0, false, 40000);
 			}
 			else if (event.equalsIgnoreCase("4")) // spawns a detractor
 			{
-				addSpawn(DETRACTOR2, (npc.getX() - 100), (npc.getY() - 100), npc.getZ(), 0, false, 40000);
+				addSpawn(DETRACTOR2, npc.getX() - 100, npc.getY() - 100, npc.getZ(), 0, false, 40000);
 			}
 			else if (event.equalsIgnoreCase("fafurion_despawn")) // Fafurion Kindred disappears and drops reward
 			{
@@ -156,7 +156,7 @@ final class DarkWaterDragon extends AbstractNpcAI
 				spawnShade(originalAttacker, SHADE2, npc.getX() - 100, npc.getY() - 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE1, npc.getX() - 150, npc.getY() + 150, npc.getZ());
 			}
-			else if ((npc.getCurrentHp() < (npc.getMaxHp() / 2.0)) && !(SECOND_SPAWN.contains(npcObjId)))
+			else if ((npc.getCurrentHp() < (npc.getMaxHp() / 2.0)) && !SECOND_SPAWN.contains(npcObjId))
 			{
 				SECOND_SPAWN.add(npcObjId);
 				// Spawn second 5 shades on half hp of on Dark Water Dragon

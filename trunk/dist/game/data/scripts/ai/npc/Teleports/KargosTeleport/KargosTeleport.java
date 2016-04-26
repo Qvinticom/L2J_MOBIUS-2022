@@ -28,13 +28,13 @@ import ai.npc.AbstractNpcAI;
 final class KargosTeleport extends AbstractNpcAI
 {
 	// NPC
-	private final static int KARGOS = 33821;
+	private static final int KARGOS = 33821;
 	// Items
-	private final static int PAGAN_MARK = 8067;
-	private final static int VISITOR_MARK = 8064;
+	private static final int PAGAN_MARK = 8067;
+	private static final int VISITOR_MARK = 8064;
 	// Locations
-	private final static Location PAGAN_TEMPLE = new Location(-16350, -37579, -10725);
-	private final static Location PAGAN_ROOM = new Location(-12766, -35840, -10851);
+	private static final Location PAGAN_TEMPLE = new Location(-16350, -37579, -10725);
+	private static final Location PAGAN_ROOM = new Location(-12766, -35840, -10851);
 	
 	private KargosTeleport()
 	{

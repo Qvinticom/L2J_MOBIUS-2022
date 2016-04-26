@@ -136,7 +136,7 @@ public final class CoupleManager
 		return _couples;
 	}
 	
-	public static final CoupleManager getInstance()
+	public static CoupleManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

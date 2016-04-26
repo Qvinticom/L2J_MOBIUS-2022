@@ -140,13 +140,13 @@ public class AdminElement implements IAdminCommandHandler
 		{
 			String old, current;
 			final Elementals element = itemInstance.getElemental(type);
-			if (element == null)
+			if (element != null)
 			{
-				old = "None";
+				old = element.toString();
 			}
 			else
 			{
-				old = element.toString();
+				old = "None";
 			}
 			
 			// set enchant value
@@ -161,13 +161,13 @@ public class AdminElement implements IAdminCommandHandler
 			}
 			player.getInventory().equipItem(itemInstance);
 			
-			if (itemInstance.getElementals() == null)
+			if (itemInstance.getElementals() != null)
 			{
-				current = "None";
+				current = itemInstance.getElemental(type).toString();
 			}
 			else
 			{
-				current = itemInstance.getElemental(type).toString();
+				current = "None";
 			}
 			
 			// send packets

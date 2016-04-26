@@ -133,7 +133,7 @@ public final class CrystalCaverns extends AbstractInstance
 	private static final int CONT_CRYSTAL = 9690; // Contaminated Crystal
 	private static final int RED_CORAL = 9692; // Red Coral
 	private static final int CRYSTALFOOD = 9693; // Food item for Crystal Golems
-	final private static int RACE_KEY = 9694; // Race Key for Emerald doors
+	private static final int RACE_KEY = 9694; // Race Key for Emerald doors
 	private static final int BOSS_CRYSTAL_1 = 9695; // Clear Crystal
 	private static final int BOSS_CRYSTAL_2 = 9696; // Clear Crystal
 	private static final int BOSS_CRYSTAL_3 = 9697; // Clear Crystal
@@ -165,7 +165,7 @@ public final class CrystalCaverns extends AbstractInstance
 	private static final int KECHIGUARD = 25533;
 	private static final int BAYLOR = 29099;
 	private static final int DARNEL = 25531;
-	private final static int ALARMID = 18474;
+	private static final int ALARMID = 18474;
 	// private static final int[] BOSSCR = {9695,9696,9697};
 	private static final int[] CGMOBS =
 	{
@@ -216,7 +216,6 @@ public final class CrystalCaverns extends AbstractInstance
 	private static final Location START_LOC = new Location(143348, 148707, -11972);
 	// Misc
 	private static final int TEMPLATE_ID = 10;
-	private static final boolean debug = false;
 	private static final int DOOR1 = 24220021;
 	private static final int DOOR2 = 24220024;
 	private static final int DOOR3 = 24220023;
@@ -230,7 +229,7 @@ public final class CrystalCaverns extends AbstractInstance
 		20107
 	};
 	// @formatter:off
-	private final static int[][] ALARMSPAWN =
+	private static final int[][] ALARMSPAWN =
 	{
 		{153572, 141277, -12738},
 		{153572, 142852, -12738},
@@ -512,7 +511,7 @@ public final class CrystalCaverns extends AbstractInstance
 	@Override
 	protected boolean checkConditions(L2PcInstance player)
 	{
-		if (debug || player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
+		if (player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
 		{
 			return true;
 		}
@@ -565,10 +564,6 @@ public final class CrystalCaverns extends AbstractInstance
 	
 	private boolean checkOracleConditions(L2PcInstance player)
 	{
-		if (debug)
-		{
-			return true;
-		}
 		final L2Party party = player.getParty();
 		if (party == null)
 		{
@@ -1054,11 +1049,7 @@ public final class CrystalCaverns extends AbstractInstance
 				}
 				else if (!world.copys.isEmpty())
 				{
-					boolean notAOE = true;
-					if ((skill != null) && ((skill.getTargetType() == L2TargetType.AREA) || (skill.getTargetType() == L2TargetType.FRONT_AREA) || (skill.getTargetType() == L2TargetType.BEHIND_AREA) || (skill.getTargetType() == L2TargetType.AURA) || (skill.getTargetType() == L2TargetType.FRONT_AURA) || (skill.getTargetType() == L2TargetType.BEHIND_AURA)))
-					{
-						notAOE = false;
-					}
+					boolean notAOE = (skill == null) || ((skill.getTargetType() != L2TargetType.AREA) && (skill.getTargetType() != L2TargetType.FRONT_AREA) && (skill.getTargetType() != L2TargetType.BEHIND_AREA) && (skill.getTargetType() != L2TargetType.AURA) && (skill.getTargetType() != L2TargetType.FRONT_AURA) && (skill.getTargetType() != L2TargetType.BEHIND_AURA));
 					if (notAOE)
 					{
 						for (L2Npc copy : world.copys)
@@ -1208,7 +1199,7 @@ public final class CrystalCaverns extends AbstractInstance
 			else if (event.equalsIgnoreCase("spawn_oracle"))
 			{
 				addSpawn(32271, 153572, 142075, -9728, 10800, false, 0, false, world.getInstanceId());
-				addSpawn((getRandom(10) < 5 ? 29116 : 29117), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, false, world.getInstanceId()); // Baylor's Chest
+				addSpawn(getRandom(10) < 5 ? 29116 : 29117, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, false, world.getInstanceId()); // Baylor's Chest
 				addSpawn(ORACLE_GUIDE_4, 153572, 142075, -12738, 10800, false, 0, false, world.getInstanceId());
 				cancelQuestTimer("baylor_despawn", npc, null);
 				cancelQuestTimers("baylor_skill");
@@ -1749,7 +1740,7 @@ public final class CrystalCaverns extends AbstractInstance
 				npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 				final Instance baylorInstance = InstanceManager.getInstance().getInstance(npc.getInstanceId());
 				baylorInstance.setDuration(300000);
-				this.startQuestTimer("spawn_oracle", 1000, npc, null);
+				startQuestTimer("spawn_oracle", 1000, npc, null);
 				giveRewards(player, npc.getInstanceId(), -1, true);
 			}
 		}
@@ -1908,18 +1899,13 @@ public final class CrystalCaverns extends AbstractInstance
 				{
 					world._raiders.clear();
 					final L2Party party = player.getParty();
-					if (party == null)
+					if (party != null)
 					{
-						world._raiders.add(player);
+						world._raiders.addAll(party.getMembers());
 					}
 					else
 					{
-						for (L2PcInstance partyMember : party.getMembers())
-						{
-							// int rnd = getRandom(100);
-							// partyMember.destroyItemByItemId("Quest", (rnd < 33 ? BOSS_CRYSTAL_1:(rnd < 67 ? BOSS_CRYSTAL_2:BOSS_CRYSTAL_3)), 1, partyMember, true); Crystals are no longer beign cunsumed while entering to Baylor Lair.
-							world._raiders.add(partyMember);
-						}
+						world._raiders.add(player);
 					}
 				}
 				else
@@ -1976,7 +1962,7 @@ public final class CrystalCaverns extends AbstractInstance
 					if (trap.getId() == DOOR_OPENING_TRAP[0])
 					{
 						openDoor(24220001, ((CCWorld) tmpworld).getInstanceId());
-						runEmeraldRooms(((CCWorld) tmpworld), ROOM1_SPAWNS, 1);
+						runEmeraldRooms((CCWorld) tmpworld, ROOM1_SPAWNS, 1);
 					}
 					break;
 				}

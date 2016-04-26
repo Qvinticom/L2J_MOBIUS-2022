@@ -582,7 +582,7 @@ public final class Fort extends AbstractResidence
 				long initial = System.currentTimeMillis() - _lastOwnedTime.getTimeInMillis();
 				while (initial > (Config.FS_UPDATE_FRQ * 60000L))
 				{
-					initial -= (Config.FS_UPDATE_FRQ * 60000L);
+					initial -= Config.FS_UPDATE_FRQ * 60000L;
 				}
 				initial = (Config.FS_UPDATE_FRQ * 60000L) - initial;
 				if ((Config.FS_MAX_OWN_TIME <= 0) || (getOwnedTime() < (Config.FS_MAX_OWN_TIME * 3600)))
@@ -675,26 +675,20 @@ public final class Fort extends AbstractResidence
 		{
 			_function.put(type, new FortFunction(type, lvl, lease, 0, rate, 0, false));
 		}
+		else if ((lvl == 0) && (lease == 0))
+		{
+			removeFunction(type);
+		}
+		else if ((lease - _function.get(type).getLease()) > 0)
+		{
+			_function.remove(type);
+			_function.put(type, new FortFunction(type, lvl, lease, 0, rate, -1, false));
+		}
 		else
 		{
-			if ((lvl == 0) && (lease == 0))
-			{
-				removeFunction(type);
-			}
-			else
-			{
-				if ((lease - _function.get(type).getLease()) > 0)
-				{
-					_function.remove(type);
-					_function.put(type, new FortFunction(type, lvl, lease, 0, rate, -1, false));
-				}
-				else
-				{
-					_function.get(type).setLease(lease);
-					_function.get(type).setLvl(lvl);
-					_function.get(type).dbSave();
-				}
-			}
+			_function.get(type).setLease(lease);
+			_function.get(type).setLvl(lvl);
+			_function.get(type).dbSave();
 		}
 		return true;
 	}

@@ -68,7 +68,7 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 		final PrimeShopGroup item = PrimeShopData.getInstance().getItem(_brId);
 		if (validatePlayer(item, _count, activeChar))
 		{
-			final int price = (item.getPrice() * _count);
+			final int price = item.getPrice() * _count;
 			final int paymentId = validatePaymentId(activeChar, item, price);
 			
 			if (paymentId < 0)

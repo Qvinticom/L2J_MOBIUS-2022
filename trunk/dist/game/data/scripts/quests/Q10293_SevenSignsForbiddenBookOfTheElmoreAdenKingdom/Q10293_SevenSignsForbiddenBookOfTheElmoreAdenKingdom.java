@@ -231,7 +231,7 @@ public final class Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom extends 
 				else if (qs.isCreated())
 				{
 					qs = player.getQuestState(Q10292_SevenSignsGirlOfDoubt.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "32784-01.htm" : "32784-11.htm";
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32784-01.htm" : "32784-11.htm";
 				}
 				else if (qs.isStarted())
 				{

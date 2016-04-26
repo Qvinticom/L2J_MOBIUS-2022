@@ -54,7 +54,7 @@ public final class EnchantScroll extends AbstractEnchantItem
 		_isBlessed = (type == EtcItemType.BLESS_SCRL_ENCHANT_AM) || (type == EtcItemType.BLESS_SCRL_ENCHANT_WP);
 		_isSafe = (type == EtcItemType.ANCIENT_CRYSTAL_ENCHANT_AM) || (type == EtcItemType.ANCIENT_CRYSTAL_ENCHANT_WP);
 		_isGiant = (type == EtcItemType.GIANT_SCRL_ENCHANT_AM) || (type == EtcItemType.GIANT_SCRL_ENCHANT_WP);
-		_isHair = (type == EtcItemType.SCRL_ENCHANT_HR);
+		_isHair = type == EtcItemType.SCRL_ENCHANT_HR;
 	}
 	
 	@Override
@@ -133,7 +133,7 @@ public final class EnchantScroll extends AbstractEnchantItem
 			_log.info("bodypart: " + itemToEnchant.getItem().getBodyPart());
 			return false;
 		}
-		else if ((supportItem != null))
+		else if (supportItem != null)
 		{
 			if (isBlessed() && (supportItem.getItem().getItemType() != EtcItemType.BLESS_SCRL_INC_ENCHANT_PROP_WP) && (supportItem.getItem().getItemType() != EtcItemType.BLESS_SCRL_INC_ENCHANT_PROP_AM) && (supportItem.getItem().getItemType() != EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_WP) && (supportItem.getItem().getItemType() != EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_AM))
 			{
@@ -205,7 +205,7 @@ public final class EnchantScroll extends AbstractEnchantItem
 		final double finalChance = Math.min(chance + bonusRate + supportBonusRate, 100);
 		
 		final double random = 100 * Rnd.nextDouble();
-		final boolean success = (random < finalChance);
+		final boolean success = random < finalChance;
 		
 		if (player.isDebug())
 		{

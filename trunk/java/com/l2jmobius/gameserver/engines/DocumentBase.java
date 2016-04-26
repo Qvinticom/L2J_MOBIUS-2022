@@ -342,7 +342,7 @@ public abstract class DocumentBase
 	private StatsSet parseParameters(Node n, Object template)
 	{
 		StatsSet parameters = null;
-		while ((n != null))
+		while (n != null)
 		{
 			// Parse all parameters.
 			if ((n.getNodeType() == Node.ELEMENT_NODE) && "param".equals(n.getNodeName()))

@@ -218,8 +218,8 @@ public final class ItemsOnGroundManager implements Runnable
 					ps.setInt(5, item.getX());
 					ps.setInt(6, item.getY());
 					ps.setInt(7, item.getZ());
-					ps.setLong(8, (item.isProtected() ? -1 : item.getDropTime())); // item is protected or AutoDestroyed
-					ps.setLong(9, (item.isEquipable() ? 1 : 0)); // set equip-able
+					ps.setLong(8, item.isProtected() ? -1 : item.getDropTime()); // item is protected or AutoDestroyed
+					ps.setLong(9, item.isEquipable() ? 1 : 0); // set equip-able
 					ps.execute();
 					ps.clearParameters();
 				}
@@ -239,7 +239,7 @@ public final class ItemsOnGroundManager implements Runnable
 	 * Gets the single instance of {@code ItemsOnGroundManager}.
 	 * @return single instance of {@code ItemsOnGroundManager}
 	 */
-	public static final ItemsOnGroundManager getInstance()
+	public static ItemsOnGroundManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

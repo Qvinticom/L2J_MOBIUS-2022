@@ -87,7 +87,7 @@ public class L2MerchantInstance extends L2NpcInstance
 			return;
 		}
 		
-		final double taxRate = (applyTax) ? getMpc().getTotalTaxRate() : 0;
+		final double taxRate = applyTax ? getMpc().getTotalTaxRate() : 0;
 		
 		player.setInventoryBlockingStatus(true);
 		

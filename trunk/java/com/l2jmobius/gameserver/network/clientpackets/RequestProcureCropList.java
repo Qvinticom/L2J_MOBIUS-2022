@@ -119,7 +119,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 			}
 			
 			final L2Item template = ItemTable.getInstance().getTemplate(i.getRewardId());
-			weight += (i.getCount() * template.getWeight());
+			weight += i.getCount() * template.getWeight();
 			
 			if (!template.isStackable())
 			{
@@ -166,7 +166,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 			}
 			
 			// Fee for selling to other manors
-			final long fee = (castleId == i.getManorId()) ? 0 : ((long) (i.getPrice() * 0.05));
+			final long fee = (castleId == i.getManorId()) ? 0 : (long) (i.getPrice() * 0.05);
 			if ((fee != 0) && (player.getAdena() < fee))
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.FAILED_IN_TRADING_S2_OF_S1_CROPS);

@@ -39,7 +39,7 @@ public class Ground implements ITargetTypeHandler
 		final List<L2Character> targetList = new ArrayList<>();
 		final L2PcInstance player = (L2PcInstance) activeChar;
 		final int maxTargets = skill.getAffectLimit();
-		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
+		final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
 		
 		for (L2Character character : activeChar.getKnownList().getKnownCharacters())
 		{

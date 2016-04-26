@@ -309,7 +309,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		for (int x = 0; x < maxPages; x++)
 		{
-			StringUtil.append(replyMSG, "<td><a action=\"bypass -h admin_remove_skills ", String.valueOf(x), "\">Page ", String.valueOf((x + 1)), "</a></td>");
+			StringUtil.append(replyMSG, "<td><a action=\"bypass -h admin_remove_skills ", String.valueOf(x), "\">Page ", String.valueOf(x + 1), "</a></td>");
 		}
 		
 		replyMSG.append("</tr></table></center><br><table width=270><tr><td width=80>Name:</td><td width=60>Level:</td><td width=40>Id:</td></tr>");

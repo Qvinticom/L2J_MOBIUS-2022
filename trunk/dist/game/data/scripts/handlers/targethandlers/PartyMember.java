@@ -36,7 +36,7 @@ public class PartyMember implements ITargetTypeHandler
 			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return EMPTY_TARGET_LIST;
 		}
-		if (!target.isDead() && ((target == activeChar) || (activeChar.isInParty() && target.isInParty() && (activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())) || ((activeChar.isPlayer() && target.isSummon() && ((activeChar.getPet() == target) || activeChar.hasServitor(target.getObjectId()))) || (activeChar.isSummon() && target.isPlayer() && ((activeChar == target.getPet()) || target.hasServitor(activeChar.getObjectId()))))))
+		if (!target.isDead() && ((target == activeChar) || (activeChar.isInParty() && target.isInParty() && (activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())) || (activeChar.isPlayer() && target.isSummon() && ((activeChar.getPet() == target) || activeChar.hasServitor(target.getObjectId()))) || (activeChar.isSummon() && target.isPlayer() && ((activeChar == target.getPet()) || target.hasServitor(activeChar.getObjectId())))))
 		{
 			return new L2Character[]
 			{

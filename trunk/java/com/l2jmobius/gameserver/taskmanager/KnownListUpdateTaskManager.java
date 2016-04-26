@@ -69,7 +69,7 @@ public class KnownListUpdateTaskManager
 							failed = FAILED_REGIONS.contains(r); // failed on last pass
 							if (r.isActive()) // and check only if the region is active
 							{
-								updateRegion(r, ((_fullUpdateTimer == FULL_UPDATE_TIMER) || failed), updatePass);
+								updateRegion(r, (_fullUpdateTimer == FULL_UPDATE_TIMER) || failed, updatePass);
 							}
 							if (failed)
 							{
@@ -111,7 +111,7 @@ public class KnownListUpdateTaskManager
 			}
 			
 			// Some mobs need faster knownlist update
-			final boolean aggro = (Config.GUARD_ATTACK_AGGRO_MOB && (object instanceof L2GuardInstance));
+			final boolean aggro = Config.GUARD_ATTACK_AGGRO_MOB && (object instanceof L2GuardInstance);
 			
 			if (forgetObjects)
 			{

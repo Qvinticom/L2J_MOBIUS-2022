@@ -151,7 +151,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 				
 				for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
 				{
-					if (((onlinePlayer != null) && (onlinePlayer.getClient() != null)) && !onlinePlayer.getClient().isDetached())
+					if ((onlinePlayer != null) && (onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached())
 					{
 						realPlayers.add(onlinePlayer.getIPAddress());
 					}

@@ -206,21 +206,17 @@ public final class GeoUtils
 				return Cell.NSWE_WEST; // Direction.WEST;
 			}
 		}
-		else
-		// unchanged x
+		else if (y > lastY)
 		{
-			if (y > lastY)
-			{
-				return Cell.NSWE_SOUTH; // Direction.SOUTH;
-			}
-			else if (y < lastY)
-			{
-				return Cell.NSWE_NORTH; // Direction.NORTH;
-			}
-			else
-			{
-				throw new RuntimeException();
-			}
+			return Cell.NSWE_SOUTH; // Direction.SOUTH;
+		}
+		else if (y < lastY)
+		{
+			return Cell.NSWE_NORTH; // Direction.NORTH;
+		}
+		else
+		{
+			throw new RuntimeException();
 		}
 	}
 }

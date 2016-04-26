@@ -48,7 +48,7 @@ public class RequestPledgeRecruitApplyInfo extends L2GameClientPacket
 		{
 			status = ClanEntryStatus.ORDERED;
 		}
-		else if ((activeChar.getClan() == null) && (ClanEntryManager.getInstance().isPlayerRegistred(activeChar.getObjectId())))
+		else if ((activeChar.getClan() == null) && ClanEntryManager.getInstance().isPlayerRegistred(activeChar.getObjectId()))
 		{
 			status = ClanEntryStatus.WAITING;
 		}

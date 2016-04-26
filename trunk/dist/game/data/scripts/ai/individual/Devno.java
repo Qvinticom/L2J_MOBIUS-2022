@@ -39,7 +39,7 @@ final class Devno extends AbstractNpcAI
 		NpcStringId.I_SEE_THAT_ADVENTURERS_ARE_RETURNING_TO_TALKING_ISLAND_FOR_THE_AWAKENING,
 		NpcStringId.YOU_CAN_SEE_VARIOUS_STATISTICS_IN_THE_MUSEUM_STATS_IN_THE_MAIN_MENU
 	};
-	private final static Location[] DEVNO_LOC =
+	private static final Location[] DEVNO_LOC =
 	{
 		new Location(-114448, 259106, -1203),
 		new Location(-114565, 258686, -1203),

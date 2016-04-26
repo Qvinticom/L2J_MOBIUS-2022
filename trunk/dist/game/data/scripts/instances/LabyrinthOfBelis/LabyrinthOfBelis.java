@@ -486,12 +486,9 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				{
 					world.incStatus();
 				}
-				else
+				else if (getRandomBoolean())
 				{
-					if (getRandomBoolean())
-					{
-						npc.dropItem(killer, BELIS_MARK, 1);
-					}
+					npc.dropItem(killer, BELIS_MARK, 1);
 				}
 				break;
 			}

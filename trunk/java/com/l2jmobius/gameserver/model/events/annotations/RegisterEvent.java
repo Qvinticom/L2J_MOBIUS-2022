@@ -30,5 +30,5 @@ import com.l2jmobius.gameserver.model.events.EventType;
 @Target(ElementType.METHOD)
 public @interface RegisterEvent
 {
-	public EventType value();
+	EventType value();
 }

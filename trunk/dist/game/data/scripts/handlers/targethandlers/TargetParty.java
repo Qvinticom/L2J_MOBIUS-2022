@@ -51,7 +51,7 @@ public class TargetParty implements ITargetTypeHandler
 		{
 			for (L2PcInstance partyMember : player.getParty().getMembers())
 			{
-				if ((partyMember == null))
+				if (partyMember == null)
 				{
 					continue;
 				}

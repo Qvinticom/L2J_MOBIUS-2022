@@ -242,7 +242,7 @@ public class RaidBossSpawnManager
 		}
 		else
 		{
-			_schedules.put(bossId, ThreadPoolManager.getInstance().scheduleGeneral(new SpawnSchedule(bossId), (respawnTime - Calendar.getInstance().getTimeInMillis())));
+			_schedules.put(bossId, ThreadPoolManager.getInstance().scheduleGeneral(new SpawnSchedule(bossId), respawnTime - Calendar.getInstance().getTimeInMillis()));
 		}
 		
 		_spawns.put(bossId, spawnDat);

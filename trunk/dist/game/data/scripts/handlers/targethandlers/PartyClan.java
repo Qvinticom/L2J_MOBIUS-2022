@@ -72,7 +72,7 @@ public class PartyClan implements ITargetTypeHandler
 		});
 		
 		// if player in clan and not in party
-		if (!(hasClan || hasParty))
+		if (!hasClan && !hasParty)
 		{
 			return targetList.toArray(new L2Character[targetList.size()]);
 		}
@@ -117,7 +117,7 @@ public class PartyClan implements ITargetTypeHandler
 				}
 			}
 			
-			if (!((hasClan && (obj.getClanId() == player.getClanId())) || (hasParty && obj.isInParty() && (player.getParty().getLeaderObjectId() == obj.getParty().getLeaderObjectId()))))
+			if ((!hasClan || (obj.getClanId() != player.getClanId())) && (!hasParty || !obj.isInParty() || (player.getParty().getLeaderObjectId() != obj.getParty().getLeaderObjectId())))
 			{
 				continue;
 			}

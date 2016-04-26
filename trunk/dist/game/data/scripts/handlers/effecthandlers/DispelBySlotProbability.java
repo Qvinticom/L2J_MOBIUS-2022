@@ -89,10 +89,10 @@ public final class DispelBySlotProbability extends AbstractEffect
 		// Operation of O(n) for the amount of slots to dispel (which is usually small) and O(1) to get the buff.
 		for (Entry<AbnormalType, Short> entry : _dispelAbnormals.entrySet())
 		{
-			if ((Rnd.get(100) < _rate))
+			if (Rnd.get(100) < _rate)
 			{
 				// Dispel transformations (buff and by GM)
-				if ((entry.getKey() == AbnormalType.TRANSFORM) && (effected.isTransformed() || (effected.isPlayer() || (entry.getValue() == effected.getActingPlayer().getTransformationId()) || (entry.getValue() < 0))))
+				if ((entry.getKey() == AbnormalType.TRANSFORM) && (effected.isTransformed() || effected.isPlayer() || (entry.getValue() == effected.getActingPlayer().getTransformationId()) || (entry.getValue() < 0)))
 				{
 					info.getEffected().stopTransformation(true);
 				}

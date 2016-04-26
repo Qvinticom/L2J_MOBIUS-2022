@@ -92,19 +92,13 @@ public class Q00943_FillingTheEnergyOfDestruction extends Quest
 			}
 			case "33715-06.html":
 			{
+				takeItems(player, CORE_OF_TWISTED_MAGIC, 1);
+				giveItems(player, ENERGY_OF_DESTRUCTION, 1);
 				if (player.getLevel() >= 99)
 				{
-					takeItems(player, CORE_OF_TWISTED_MAGIC, 1);
-					giveItems(player, ENERGY_OF_DESTRUCTION, 1);
 					addExpAndSp(player, 0, 5371901);
-					qs.exitQuest(QuestType.DAILY, true);
 				}
-				else
-				{
-					takeItems(player, CORE_OF_TWISTED_MAGIC, 1);
-					giveItems(player, ENERGY_OF_DESTRUCTION, 1);
-					qs.exitQuest(QuestType.DAILY, true);
-				}
+				qs.exitQuest(QuestType.DAILY, true);
 				break;
 			}
 		}

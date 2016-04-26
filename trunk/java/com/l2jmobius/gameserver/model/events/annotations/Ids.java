@@ -28,5 +28,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface Ids
 {
-	public Id[] value();
+	Id[] value();
 }

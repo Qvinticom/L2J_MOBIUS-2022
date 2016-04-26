@@ -28,11 +28,11 @@ import ai.npc.AbstractNpcAI;
 final class HarnakUnderground extends AbstractNpcAI
 {
 	// NPC
-	private final static int HADEL = 33344;
+	private static final int HADEL = 33344;
 	// Misc
-	private final static int MIN_LEVEL = 85;
+	private static final int MIN_LEVEL = 85;
 	// Location
-	private final static Location HARNAK_UNDERGROUND = new Location(-114700, 147909, -7720);
+	private static final Location HARNAK_UNDERGROUND = new Location(-114700, 147909, -7720);
 	
 	private HarnakUnderground()
 	{
@@ -44,7 +44,7 @@ final class HarnakUnderground extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if ((player.getLevel() >= MIN_LEVEL) && (player.isAwaken()))
+		if ((player.getLevel() >= MIN_LEVEL) && player.isAwaken())
 		{
 			player.teleToLocation(HARNAK_UNDERGROUND);
 		}

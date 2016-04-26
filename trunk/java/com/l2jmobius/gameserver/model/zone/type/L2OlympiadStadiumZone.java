@@ -52,7 +52,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 	public L2OlympiadStadiumZone(int id)
 	{
 		super(id);
-		setSettings((ZoneManager.getSettings(getName()) == null ? new Settings() : ZoneManager.getSettings(getName())));
+		setSettings(ZoneManager.getSettings(getName()) == null ? new Settings() : ZoneManager.getSettings(getName()));
 	}
 	
 	public final class Settings extends AbstractZoneSettings

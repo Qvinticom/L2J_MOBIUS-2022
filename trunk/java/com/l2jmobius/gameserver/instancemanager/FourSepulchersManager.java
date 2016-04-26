@@ -1537,7 +1537,7 @@ public final class FourSepulchersManager
 				{
 					continue;
 				}
-				((L2SepulcherNpcInstance) temp.getLastSpawn()).sayInShout((min == 90 ? NpcStringId.GAME_OVER_THE_TELEPORT_WILL_APPEAR_MOMENTARILY : NpcStringId.MINUTE_S_HAVE_PASSED));
+				((L2SepulcherNpcInstance) temp.getLastSpawn()).sayInShout(min == 90 ? NpcStringId.GAME_OVER_THE_TELEPORT_WILL_APPEAR_MOMENTARILY : NpcStringId.MINUTE_S_HAVE_PASSED);
 			}
 		}
 		else if (_inEntryTime)
@@ -1571,7 +1571,7 @@ public final class FourSepulchersManager
 		player.sendPacket(html);
 	}
 	
-	public static final FourSepulchersManager getInstance()
+	public static FourSepulchersManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

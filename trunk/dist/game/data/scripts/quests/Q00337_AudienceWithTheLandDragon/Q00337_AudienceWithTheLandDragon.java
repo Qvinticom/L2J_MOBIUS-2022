@@ -252,11 +252,11 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 				{
 					htmltext = "30753-01.htm";
 				}
-				else if ((qs.isCond(1)) && (getQuestItemsCount(player, MARK_OF_WATCHMAN) < 4))
+				else if (qs.isCond(1) && (getQuestItemsCount(player, MARK_OF_WATCHMAN) < 4))
 				{
 					htmltext = "30753-06.html";
 				}
-				else if ((qs.isCond(1)) && (getQuestItemsCount(player, MARK_OF_WATCHMAN) >= 4))
+				else if (qs.isCond(1) && (getQuestItemsCount(player, MARK_OF_WATCHMAN) >= 4))
 				{
 					htmltext = "30753-07.html";
 				}
@@ -349,7 +349,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 				{
 					if (qs.getInt("drop3") == 1)
 					{
-						if ((hasQuestItems(player, KRANROT_SKIN)) && (hasQuestItems(player, HAMRUT_LEG)))
+						if (hasQuestItems(player, KRANROT_SKIN) && hasQuestItems(player, HAMRUT_LEG))
 						{
 							takeItems(player, KRANROT_SKIN, 1);
 							takeItems(player, HAMRUT_LEG, 1);
@@ -380,7 +380,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 				{
 					if (qs.getInt("drop4") == 1)
 					{
-						if ((hasQuestItems(player, MARSH_DRAKE_TALONS)) && (hasQuestItems(player, MARSH_STALKER_HORN)))
+						if (hasQuestItems(player, MARSH_DRAKE_TALONS) && hasQuestItems(player, MARSH_STALKER_HORN))
 						{
 							takeItems(player, MARSH_DRAKE_TALONS, 1);
 							takeItems(player, MARSH_STALKER_HORN, 1);
@@ -419,7 +419,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 						}
 						case 1:
 						{
-							if ((hasQuestItems(player, FIRST_FRAGMENT_OF_ABYSS_JEWEL)) && (hasQuestItems(player, MARA_FANG)))
+							if (hasQuestItems(player, FIRST_FRAGMENT_OF_ABYSS_JEWEL) && hasQuestItems(player, MARA_FANG))
 							{
 								takeItems(player, FIRST_FRAGMENT_OF_ABYSS_JEWEL, 1);
 								takeItems(player, MARA_FANG, 1);
@@ -464,7 +464,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 						}
 						case 1:
 						{
-							if ((hasQuestItems(player, SECOND_FRAGMENT_OF_ABYSS_JEWEL)) && (hasQuestItems(player, MUSFEL_FANG)))
+							if (hasQuestItems(player, SECOND_FRAGMENT_OF_ABYSS_JEWEL) && hasQuestItems(player, MUSFEL_FANG))
 							{
 								takeItems(player, SECOND_FRAGMENT_OF_ABYSS_JEWEL, 1);
 								takeItems(player, MUSFEL_FANG, 1);
@@ -497,7 +497,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 			}
 			case GILMORE:
 			{
-				if ((qs.isCond(2)) || (qs.isCond(1)))
+				if (qs.isCond(2) || qs.isCond(1))
 				{
 					htmltext = "30754-01.html";
 				}
@@ -522,7 +522,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 			}
 			case THEODRIC:
 			{
-				if ((qs.isCond(1)) || (qs.isCond(2)))
+				if (qs.isCond(1) || qs.isCond(2))
 				{
 					htmltext = "30755-01.html";
 				}
@@ -580,16 +580,13 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 					{
 						spawn = jewel3;
 					}
+					else if (npcId == ABYSSAL_JEWEL_2)
+					{
+						spawn = jewel2;
+					}
 					else
 					{
-						if (npcId == ABYSSAL_JEWEL_2)
-						{
-							spawn = jewel2;
-						}
-						else
-						{
-							spawn = jewel1;
-						}
+						spawn = jewel1;
 					}
 					if (spawn)
 					{
@@ -677,7 +674,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 			}
 			case BLOOD_QUEEN:
 			{
-				if (qs.isCond(1) && (getRandom(100) < 70) && (qs.getInt("drop1") == 1) && (!hasQuestItems(player, REMAINS_OF_SACRIFIED)))
+				if (qs.isCond(1) && (getRandom(100) < 70) && (qs.getInt("drop1") == 1) && !hasQuestItems(player, REMAINS_OF_SACRIFIED))
 				{
 					for (int i = 0; i < 10; i++)
 					{
@@ -688,7 +685,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 			}
 			case HARIT_LIZARDMAN_SHAMAN:
 			{
-				if (qs.isCond(1) && (getRandom(100) < 70) && (qs.getInt("drop2") == 1) && (!hasQuestItems(player, TOTEM_OF_LAND_DRAGON)))
+				if (qs.isCond(1) && (getRandom(100) < 70) && (qs.getInt("drop2") == 1) && !hasQuestItems(player, TOTEM_OF_LAND_DRAGON))
 				{
 					for (int i = 0; i < 3; i++)
 					{

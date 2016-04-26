@@ -154,7 +154,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState qs;
-		if ((npc.getId() == FALLEN_ANGEL))
+		if (npc.getId() == FALLEN_ANGEL)
 		{
 			qs = getQuestState(player, false);
 			if (qs.isCond(5))

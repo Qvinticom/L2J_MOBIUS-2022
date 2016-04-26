@@ -27,20 +27,20 @@ import com.l2jmobius.gameserver.model.event.LongTimeEvent;
  */
 final class HeavyMedal extends LongTimeEvent
 {
-	private final static int CAT_ROY = 31228;
-	private final static int CAT_WINNIE = 31229;
-	private final static int GLITTERING_MEDAL = 6393;
+	private static final int CAT_ROY = 31228;
+	private static final int CAT_WINNIE = 31229;
+	private static final int GLITTERING_MEDAL = 6393;
 	
-	private final static int WIN_CHANCE = 50;
+	private static final int WIN_CHANCE = 50;
 	
-	private final static int[] MEDALS =
+	private static final int[] MEDALS =
 	{
 		5,
 		10,
 		20,
 		40
 	};
-	private final static int[] BADGES =
+	private static final int[] BADGES =
 	{
 		6399,
 		6400,

@@ -76,12 +76,9 @@ class NpcBufferAI implements Runnable
 						}
 					}
 				}
-				else
+				else if (Util.checkIfInRange(skill.getAffectRange(), _npc, player, true) && !player.isDead())
 				{
-					if (Util.checkIfInRange(skill.getAffectRange(), _npc, player, true) && !player.isDead())
-					{
-						skill.applyEffects(player, player);
-					}
+					skill.applyEffects(player, player);
 				}
 				break;
 			}

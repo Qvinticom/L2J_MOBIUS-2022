@@ -42,13 +42,13 @@ public class L2ClanHallZone extends L2ResidenceZone
 			setResidenceId(Integer.parseInt(value));
 			// Register self to the correct clan hall
 			final ClanHall hall = ClanHallManager.getInstance().getClanHallById(getResidenceId());
-			if (hall == null)
+			if (hall != null)
 			{
-				_log.warning("L2ClanHallZone: Clan hall with id " + getResidenceId() + " does not exist!");
+				hall.setZone(this);
 			}
 			else
 			{
-				hall.setZone(this);
+				_log.warning("L2ClanHallZone: Clan hall with id " + getResidenceId() + " does not exist!");
 			}
 		}
 		else

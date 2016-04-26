@@ -110,7 +110,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 			final int npcId = npc.getId();
 			if (MOBS1.containsKey(npcId))
 			{
-				giveItemRandomly(qs.getPlayer(), npc, TITAN_ANCIENT_BOOK, ((getRandom(1000) < MOBS1.get(npcId)) ? 3 : 2), 0, 1.0, true);
+				giveItemRandomly(qs.getPlayer(), npc, TITAN_ANCIENT_BOOK, (getRandom(1000) < MOBS1.get(npcId)) ? 3 : 2, 0, 1.0, true);
 			}
 			else
 			{
@@ -132,11 +132,11 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		
 		if (qs.isCreated())
 		{
-			htmltext = ((player.getLevel() >= 79) ? "31147-01.htm" : "31147-00.html");
+			htmltext = (player.getLevel() >= 79) ? "31147-01.htm" : "31147-00.html";
 		}
 		else if (qs.isStarted())
 		{
-			htmltext = (hasQuestItems(player, BOOK1, BOOK2, BOOK3, BOOK4, BOOK5) ? "31147-03.html" : "31147-02a.html");
+			htmltext = hasQuestItems(player, BOOK1, BOOK2, BOOK3, BOOK4, BOOK5) ? "31147-03.html" : "31147-02a.html";
 		}
 		return htmltext;
 	}

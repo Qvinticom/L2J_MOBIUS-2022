@@ -76,7 +76,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 			case "30070-05.html":
 			{
 				giveAdena(player, 84593, true);
-				if ((player.getLevel() < 42))
+				if (player.getLevel() < 42)
 				{
 					addExpAndSp(player, 187062, 11307);
 				}

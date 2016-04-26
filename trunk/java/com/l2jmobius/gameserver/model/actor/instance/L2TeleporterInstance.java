@@ -237,7 +237,7 @@ public final class L2TeleporterInstance extends L2Npc
 			final Calendar cal = Calendar.getInstance();
 			final int hour = cal.get(Calendar.HOUR_OF_DAY);
 			final int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
-			if ((hour >= 20) && ((dayOfWeek >= Calendar.MONDAY) && (dayOfWeek <= Calendar.TUESDAY)))
+			if ((hour >= 20) && (dayOfWeek >= Calendar.MONDAY) && (dayOfWeek <= Calendar.TUESDAY))
 			{
 				return loc.getFeeCount() / 2;
 			}
@@ -247,7 +247,7 @@ public final class L2TeleporterInstance extends L2Npc
 	
 	protected boolean shouldPayFee(L2PcInstance player, TeleportType type, TeleportLocation loc)
 	{
-		return (type != TeleportType.NORMAL) || (!Config.FREE_TELEPORTING && ((player.getLevel() > 76) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+		return (type != TeleportType.NORMAL) || (!Config.FREE_TELEPORTING && ((player.getLevel() > 76) || player.isSubClassActive()) && (loc.getFeeId() != 0) && (loc.getFeeCount() > 0));
 	}
 	
 	protected int parseNextInt(StringTokenizer st, int defaultVal)
@@ -454,7 +454,7 @@ public final class L2TeleporterInstance extends L2Npc
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		
-		final String filename = !HtmCache.getInstance().isLoadable(("html/teleporter/half/" + getId() + ".htm")) ? "html/teleporter/" + getId() + "-1.htm" : "html/teleporter/half/" + getId() + ".htm";
+		final String filename = !HtmCache.getInstance().isLoadable("html/teleporter/half/" + getId() + ".htm") ? "html/teleporter/" + getId() + "-1.htm" : "html/teleporter/half/" + getId() + ".htm";
 		html.setFile(player.getHtmlPrefix(), filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());

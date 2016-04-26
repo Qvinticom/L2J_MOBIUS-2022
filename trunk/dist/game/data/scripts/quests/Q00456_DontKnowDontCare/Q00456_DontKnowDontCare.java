@@ -203,14 +203,14 @@ public final class Q00456_DontKnowDontCare extends Quest
 					qs.setState(State.CREATED);
 					// intentional fall-through
 				case State.CREATED:
-					htmltext = ((player.getLevel() >= MIN_LEVEL) ? "32864-01.htm" : "32864-03.html");
+					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32864-01.htm" : "32864-03.html";
 					break;
 				case State.STARTED:
 					switch (qs.getCond())
 					{
 						case 1:
 						{
-							htmltext = (hasAtLeastOneQuestItem(player, getRegisteredItemIds()) ? "32864-09.html" : "32864-08.html");
+							htmltext = hasAtLeastOneQuestItem(player, getRegisteredItemIds()) ? "32864-09.html" : "32864-08.html";
 							break;
 						}
 						case 2:

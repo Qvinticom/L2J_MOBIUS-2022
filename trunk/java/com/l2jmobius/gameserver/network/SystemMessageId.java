@@ -15180,7 +15180,7 @@ public final class SystemMessageId
 		buildFastLookupTable();
 	}
 	
-	private static final void buildFastLookupTable()
+	private static void buildFastLookupTable()
 	{
 		for (Field field : SystemMessageId.class.getDeclaredFields())
 		{
@@ -15204,7 +15204,7 @@ public final class SystemMessageId
 		}
 	}
 	
-	private static final int parseMessageParameters(String name)
+	private static int parseMessageParameters(String name)
 	{
 		int paramCount = 0;
 		char c1, c2;
@@ -15224,18 +15224,18 @@ public final class SystemMessageId
 		return paramCount;
 	}
 	
-	public static final SystemMessageId getSystemMessageId(int id)
+	public static SystemMessageId getSystemMessageId(int id)
 	{
 		final SystemMessageId smi = getSystemMessageIdInternal(id);
 		return smi == null ? new SystemMessageId(id) : smi;
 	}
 	
-	private static final SystemMessageId getSystemMessageIdInternal(int id)
+	private static SystemMessageId getSystemMessageIdInternal(int id)
 	{
 		return VALUES.get(id);
 	}
 	
-	public static final SystemMessageId getSystemMessageId(String name)
+	public static SystemMessageId getSystemMessageId(String name)
 	{
 		try
 		{
@@ -15247,7 +15247,7 @@ public final class SystemMessageId
 		}
 	}
 	
-	public static final void reloadLocalisations()
+	public static void reloadLocalisations()
 	{
 		for (SystemMessageId smId : VALUES.values())
 		{
@@ -15300,21 +15300,16 @@ public final class SystemMessageId
 								if (node != null)
 								{
 									smId = getSystemMessageId(Integer.parseInt(node.getNodeValue()));
-									if (smId == null)
-									{
-										_log.log(Level.WARNING, "SystemMessageId: Unknown SMID '" + node.getNodeValue() + "', lang '" + lang + "'.");
-										continue;
-									}
 								}
 								else
 								{
 									node = nnmb.getNamedItem("name");
 									smId = getSystemMessageId(node.getNodeValue());
-									if (smId == null)
-									{
-										_log.log(Level.WARNING, "SystemMessageId: Unknown SMID '" + node.getNodeValue() + "', lang '" + lang + "'.");
-										continue;
-									}
+								}
+								if (smId == null)
+								{
+									_log.log(Level.WARNING, "SystemMessageId: Unknown SMID '" + node.getNodeValue() + "', lang '" + lang + "'.");
+									continue;
 								}
 								
 								node = nnmb.getNamedItem("text");

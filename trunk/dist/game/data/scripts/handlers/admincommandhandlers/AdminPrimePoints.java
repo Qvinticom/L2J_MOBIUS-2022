@@ -85,7 +85,7 @@ public final class AdminPrimePoints implements IAdminCommandHandler
 							return false;
 						}
 						
-						int primeCount = Math.min((target.getPrimePoints() + value), Integer.MAX_VALUE);
+						int primeCount = Math.min(target.getPrimePoints() + value, Integer.MAX_VALUE);
 						if (primeCount < 0)
 						{
 							primeCount = Integer.MAX_VALUE;
@@ -150,7 +150,7 @@ public final class AdminPrimePoints implements IAdminCommandHandler
 					continue;
 				}
 				
-				int primeCount = Math.min((temp.getPrimePoints() + value), Integer.MAX_VALUE);
+				int primeCount = Math.min(temp.getPrimePoints() + value, Integer.MAX_VALUE);
 				if (primeCount < 0)
 				{
 					primeCount = Integer.MAX_VALUE;

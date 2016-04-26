@@ -688,7 +688,7 @@ public class PcInventory extends Inventory
 	public L2ItemInstance destroyItem(String process, int objectId, long count, L2PcInstance actor, Object reference)
 	{
 		final L2ItemInstance item = getItemByObjectId(objectId);
-		return item == null ? null : this.destroyItem(process, item, count, actor, reference);
+		return item == null ? null : destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**
@@ -704,7 +704,7 @@ public class PcInventory extends Inventory
 	public L2ItemInstance destroyItemByItemId(String process, int itemId, long count, L2PcInstance actor, Object reference)
 	{
 		final L2ItemInstance item = getItemByItemId(itemId);
-		return item == null ? null : this.destroyItem(process, item, count, actor, reference);
+		return item == null ? null : destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**
@@ -978,7 +978,7 @@ public class PcInventory extends Inventory
 	 */
 	public boolean hasInventoryBlock()
 	{
-		return ((_blockMode > -1) && (_blockItems != null) && (_blockItems.length > 0));
+		return (_blockMode > -1) && (_blockItems != null) && (_blockItems.length > 0);
 	}
 	
 	/**

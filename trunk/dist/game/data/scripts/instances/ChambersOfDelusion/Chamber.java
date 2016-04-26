@@ -196,12 +196,12 @@ abstract class Chamber extends AbstractInstance
 	
 	private boolean isBigChamber()
 	{
-		return ((INSTANCEID == 131) || (INSTANCEID == 132));
+		return (INSTANCEID == 131) || (INSTANCEID == 132);
 	}
 	
 	private boolean isBossRoom(CDWorld world)
 	{
-		return (world.currentRoom == (ROOM_ENTER_POINTS.length - 1));
+		return world.currentRoom == (ROOM_ENTER_POINTS.length - 1);
 	}
 	
 	@Override
@@ -435,7 +435,7 @@ abstract class Chamber extends AbstractInstance
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			world.removeAllowed((player.getObjectId()));
+			world.removeAllowed(player.getObjectId());
 		}
 	}
 	
@@ -568,7 +568,7 @@ abstract class Chamber extends AbstractInstance
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
-		if ((tmpworld != null) && (tmpworld instanceof CDWorld))
+		if (tmpworld instanceof CDWorld)
 		{
 			final CDWorld world = (CDWorld) tmpworld;
 			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());

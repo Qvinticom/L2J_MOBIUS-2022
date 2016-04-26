@@ -100,7 +100,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 				while (rset.next())
 				{
 					final int id = rset.getInt("attacker_id");
-					_attackers.put(id, (new L2SiegeClan(id, SiegeClanType.ATTACKER)));
+					_attackers.put(id, new L2SiegeClan(id, SiegeClanType.ATTACKER));
 				}
 			}
 		}

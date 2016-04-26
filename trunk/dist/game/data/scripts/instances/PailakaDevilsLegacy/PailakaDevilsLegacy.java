@@ -121,7 +121,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 				htmltext = "32498-02.htm";
 			}
 		}
-		else if ((tmpworld != null) && (tmpworld instanceof DIWorld))
+		else if (tmpworld instanceof DIWorld)
 		{
 			final DIWorld world = (DIWorld) tmpworld;
 			
@@ -177,7 +177,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		
-		if ((tmpworld != null) && (tmpworld instanceof DIWorld))
+		if (tmpworld instanceof DIWorld)
 		{
 			switch (npc.getId())
 			{
@@ -265,7 +265,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		
-		if ((tmpworld != null) && (tmpworld instanceof DIWorld))
+		if (tmpworld instanceof DIWorld)
 		{
 			final DIWorld world = (DIWorld) tmpworld;
 			
@@ -285,7 +285,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	@Override
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
-		if ((character.isPlayer()) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
+		if (character.isPlayer() && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
 			if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))
@@ -303,7 +303,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 		{
 			for (L2Summon summon : character.getServitors().values())
 			{
-				if (((summon.getTemplate().getId() == TIGRESS_LVL1) || (summon.getTemplate().getId() == TIGRESS_LVL2)))
+				if ((summon.getTemplate().getId() == TIGRESS_LVL1) || (summon.getTemplate().getId() == TIGRESS_LVL2))
 				{
 					if (!summon.isDead())
 					{

@@ -81,7 +81,7 @@ public final class MarkRetriever extends AbstractEffect
 		if (damage > 0)
 		{
 			// reduce damage if target has maxdamage buff
-			final double maxDamage = (effected.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			final double maxDamage = effected.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null);
 			if (maxDamage > 0)
 			{
 				damage = maxDamage;

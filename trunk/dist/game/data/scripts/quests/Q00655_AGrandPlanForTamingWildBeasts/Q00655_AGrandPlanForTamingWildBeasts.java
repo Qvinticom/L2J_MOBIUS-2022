@@ -135,16 +135,13 @@ public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 						htmltext = "35627-04.html";
 					}
 				}
+				else if ((clan.getFortId() == ClanHallSiegeEngine.BEAST_FARM) && (minutesToSiege > 0) && (minutesToSiege < MINUTES_TO_SIEGE))
+				{
+					htmltext = HtmCache.getInstance().getHtm(talker.getHtmlPrefix(), PATH_TO_HTML);
+				}
 				else
 				{
-					if ((clan.getFortId() == ClanHallSiegeEngine.BEAST_FARM) && (minutesToSiege > 0) && (minutesToSiege < MINUTES_TO_SIEGE))
-					{
-						htmltext = HtmCache.getInstance().getHtm(talker.getHtmlPrefix(), PATH_TO_HTML);
-					}
-					else
-					{
-						htmltext = "35627-05.html";
-					}
+					htmltext = "35627-05.html";
 				}
 			}
 			else
@@ -153,36 +150,27 @@ public final class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 				htmltext = htmltext.replace("%next_siege%", getSiegeDate());
 			}
 		}
+		else if ((minutesToSiege < 0) || (minutesToSiege > MINUTES_TO_SIEGE))
+		{
+			takeItems(talker, TRAINER_LICENSE, -1);
+			takeItems(talker, CRYSTAL_OF_PURITY, -1);
+			qs.exitQuest(true, true);
+			htmltext = "35627-07.html";
+		}
+		else if (hasQuestItems(talker, TRAINER_LICENSE))
+		{
+			htmltext = "35627-09.html";
+		}
+		else if (getQuestItemsCount(talker, CRYSTAL_OF_PURITY) < REQUIRED_CRYSTAL_COUNT)
+		{
+			htmltext = "35627-08.html";
+		}
 		else
 		{
-			if ((minutesToSiege < 0) || (minutesToSiege > MINUTES_TO_SIEGE))
-			{
-				takeItems(talker, TRAINER_LICENSE, -1);
-				takeItems(talker, CRYSTAL_OF_PURITY, -1);
-				qs.exitQuest(true, true);
-				htmltext = "35627-07.html";
-			}
-			else
-			{
-				if (hasQuestItems(talker, TRAINER_LICENSE))
-				{
-					htmltext = "35627-09.html";
-				}
-				else
-				{
-					if (getQuestItemsCount(talker, CRYSTAL_OF_PURITY) < REQUIRED_CRYSTAL_COUNT)
-					{
-						htmltext = "35627-08.html";
-					}
-					else
-					{
-						giveItems(talker, TRAINER_LICENSE, 1);
-						takeItems(talker, CRYSTAL_OF_PURITY, -1);
-						qs.setCond(3, true);
-						htmltext = "35627-10.html";
-					}
-				}
-			}
+			giveItems(talker, TRAINER_LICENSE, 1);
+			takeItems(talker, CRYSTAL_OF_PURITY, -1);
+			qs.setCond(3, true);
+			htmltext = "35627-10.html";
 		}
 		return htmltext;
 	}

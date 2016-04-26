@@ -98,7 +98,7 @@ public final class Petition
 		}
 		
 		PetitionManager.getInstance().getCompletedPetitions().put(getId(), this);
-		return (PetitionManager.getInstance().getPendingPetitions().remove(getId()) != null);
+		return PetitionManager.getInstance().getPendingPetitions().remove(getId()) != null;
 	}
 	
 	public String getContent()

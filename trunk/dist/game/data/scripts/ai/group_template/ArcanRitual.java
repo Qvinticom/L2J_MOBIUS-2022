@@ -40,7 +40,6 @@ final class ArcanRitual extends Quest
 	private static final int BLUE_TRIGGER = 262001;
 	private static final int RED_TRIGGER = 262003;
 	private static final int ARCAN_RITUAL_INTERVAL = 30 * 60000; // 30 minutes
-	private static final boolean ENABLED = true; // In case we want to disable spawning NPCs
 	private static final Location ARCAN_TOWN_LOC = new Location(207096, 88696, -1129);
 	// @formatter:off
 	static final int[][] RITUAL_NPCS =
@@ -155,10 +154,7 @@ final class ArcanRitual extends Quest
 		}
 		addEnterZoneId(arcanZone.getId());
 		ritualStage = BLUE_TRIGGER;
-		if (ENABLED)
-		{
-			ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ChangeStage(), ARCAN_RITUAL_INTERVAL, ARCAN_RITUAL_INTERVAL);
-		}
+		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ChangeStage(), ARCAN_RITUAL_INTERVAL, ARCAN_RITUAL_INTERVAL);
 	}
 	
 	@Override

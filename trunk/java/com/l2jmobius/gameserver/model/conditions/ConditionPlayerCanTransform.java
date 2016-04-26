@@ -64,6 +64,6 @@ public class ConditionPlayerCanTransform extends Condition
 			player.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_RIDING_A_PET);
 			canTransform = false;
 		}
-		return (_val == canTransform);
+		return _val == canTransform;
 	}
 }

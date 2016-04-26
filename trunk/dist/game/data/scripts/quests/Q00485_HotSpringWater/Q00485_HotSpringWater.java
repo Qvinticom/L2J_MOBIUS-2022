@@ -121,7 +121,7 @@ public class Q00485_HotSpringWater extends Quest
 			}
 			case WALDERAL:
 			{
-				if ((qs.isCond(2)) && (getQuestItemsCount(player, HOT_SPRINGS_WATER_SAMPLE) >= 40))
+				if (qs.isCond(2) && (getQuestItemsCount(player, HOT_SPRINGS_WATER_SAMPLE) >= 40))
 				{
 					takeItems(player, HOT_SPRINGS_WATER_SAMPLE, -1);
 					giveItems(player, ADENA);

@@ -41,7 +41,7 @@ public class Q10734_DoOrDie extends Quest
 	// Misc
 	private static final int MAX_LEVEL = 20;
 	// Skills
-	private final static SkillHolder[] COMMON_BUFFS =
+	private static final SkillHolder[] COMMON_BUFFS =
 	{
 		new SkillHolder(5182, 1), // Blessing of Protection
 		new SkillHolder(15642, 1), // Horn Melody

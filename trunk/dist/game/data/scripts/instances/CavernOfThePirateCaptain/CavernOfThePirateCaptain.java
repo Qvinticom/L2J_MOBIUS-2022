@@ -215,8 +215,8 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		final boolean is83 = templateId == TEMPLATE_ID_83;
 		final L2Party party = player.getParty();
 		final boolean isInCC = party.isInCommandChannel();
-		final List<L2PcInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
-		final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
+		final List<L2PcInstance> members = isInCC ? party.getCommandChannel().getMembers() : party.getMembers();
+		final boolean isPartyLeader = isInCC ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 		
 		if (!isPartyLeader)
 		{
@@ -244,7 +244,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 				return false;
 			}
 			
-			if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), (is83 ? TEMPLATE_ID_83 : TEMPLATE_ID_60)))
+			if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), is83 ? TEMPLATE_ID_83 : TEMPLATE_ID_60))
 			{
 				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_MAY_NOT_RE_ENTER_YET, true);
 				return false;
@@ -291,7 +291,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		{
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			
-			if ((tmpworld != null) && (tmpworld instanceof CavernOfThePirateCaptainWorld))
+			if (tmpworld instanceof CavernOfThePirateCaptainWorld)
 			{
 				final CavernOfThePirateCaptainWorld world = (CavernOfThePirateCaptainWorld) tmpworld;
 				
@@ -365,7 +365,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		
-		if ((tmpworld != null) && (tmpworld instanceof CavernOfThePirateCaptainWorld))
+		if (tmpworld instanceof CavernOfThePirateCaptainWorld)
 		{
 			final CavernOfThePirateCaptainWorld world = (CavernOfThePirateCaptainWorld) tmpworld;
 			
@@ -373,7 +373,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 			{
 				for (L2PcInstance playersInside : world.playersInside)
 				{
-					if ((playersInside != null) && ((playersInside.getInstanceId() == world.getInstanceId()) && playersInside.isInsideRadius(npc, 1500, true, true)))
+					if ((playersInside != null) && (playersInside.getInstanceId() == world.getInstanceId()) && playersInside.isInsideRadius(npc, 1500, true, true))
 					{
 						final long time = System.currentTimeMillis() - world.storeTime;
 						if (time <= 300000) // 5 minutes
@@ -407,7 +407,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		
-		if ((tmpworld != null) && (tmpworld instanceof CavernOfThePirateCaptainWorld))
+		if (tmpworld instanceof CavernOfThePirateCaptainWorld)
 		{
 			final CavernOfThePirateCaptainWorld world = (CavernOfThePirateCaptainWorld) tmpworld;
 			final boolean isBlue = npc.getVariables().getInt("isBlue", 0) == 1;

@@ -1911,7 +1911,7 @@ public abstract class AbstractScript implements INamable
 		}
 		if (checkCount)
 		{
-			return (getQuestItemsCount(player, item.getId()) >= item.getCount());
+			return getQuestItemsCount(player, item.getId()) >= item.getCount();
 		}
 		return hasQuestItems(player, item.getId());
 	}
@@ -1948,7 +1948,7 @@ public abstract class AbstractScript implements INamable
 	 */
 	public static boolean hasQuestItems(L2PcInstance player, int itemId)
 	{
-		return (player.getInventory().getItemByItemId(itemId) != null);
+		return player.getInventory().getItemByItemId(itemId) != null;
 	}
 	
 	/**
@@ -2002,11 +2002,11 @@ public abstract class AbstractScript implements INamable
 	public static int getEnchantLevel(L2PcInstance player, int itemId)
 	{
 		final L2ItemInstance enchantedItem = player.getInventory().getItemByItemId(itemId);
-		if (enchantedItem == null)
+		if (enchantedItem != null)
 		{
-			return 0;
+			return enchantedItem.getEnchantLevel();
 		}
-		return enchantedItem.getEnchantLevel();
+		return 0;
 	}
 	
 	/**
@@ -2133,19 +2133,16 @@ public abstract class AbstractScript implements INamable
 			smsg.addLong(count);
 		}
 		// Otherwise, send message of object reward to client
+		else if (count > 1)
+		{
+			smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+			smsg.addItemName(item);
+			smsg.addLong(count);
+		}
 		else
 		{
-			if (count > 1)
-			{
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-				smsg.addItemName(item);
-				smsg.addLong(count);
-			}
-			else
-			{
-				smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-				smsg.addItemName(item);
-			}
+			smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+			smsg.addItemName(item);
 		}
 		// send packets
 		player.sendPacket(smsg);
@@ -2315,7 +2312,7 @@ public abstract class AbstractScript implements INamable
 			}
 		}
 		
-		long amountToGive = ((minAmount == maxAmount) ? minAmount : Rnd.get(minAmount, maxAmount));
+		long amountToGive = (minAmount == maxAmount) ? minAmount : Rnd.get(minAmount, maxAmount);
 		final double random = Rnd.nextDouble();
 		// Inventory slot check (almost useless for non-stacking items)
 		if ((dropChance >= random) && (amountToGive > 0) && player.getInventory().validateCapacityByItemId(itemId))
@@ -2769,7 +2766,7 @@ public abstract class AbstractScript implements INamable
 					if (equaldist >= maxGive)
 					{
 						toGive = maxGive;
-						randomdist += (equaldist - maxGive); // overflown items are available to next players
+						randomdist += equaldist - maxGive; // overflown items are available to next players
 						it.remove(); // this player is already full
 					}
 					rewardedCounts.get(player).put(item.getId(), rewardedCounts.get(player).get(item.getId()) + toGive);
@@ -3274,7 +3271,7 @@ public abstract class AbstractScript implements INamable
 	 * @param isWide
 	 * @param relAngle
 	 */
-	public static final void specialCamera(L2PcInstance player, L2Character creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle)
+	public static void specialCamera(L2PcInstance player, L2Character creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle)
 	{
 		player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle));
 	}
@@ -3293,7 +3290,7 @@ public abstract class AbstractScript implements INamable
 	 * @param isWide
 	 * @param relAngle
 	 */
-	public static final void specialCameraEx(L2PcInstance player, L2Character creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle)
+	public static void specialCameraEx(L2PcInstance player, L2Character creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle)
 	{
 		player.sendPacket(new SpecialCamera(creature, player, force, angle1, angle2, time, duration, relYaw, relPitch, isWide, relAngle));
 	}
@@ -3314,7 +3311,7 @@ public abstract class AbstractScript implements INamable
 	 * @param relAngle
 	 * @param unk
 	 */
-	public static final void specialCamera3(L2PcInstance player, L2Character creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk)
+	public static void specialCamera3(L2PcInstance player, L2Character creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk)
 	{
 		player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
 	}

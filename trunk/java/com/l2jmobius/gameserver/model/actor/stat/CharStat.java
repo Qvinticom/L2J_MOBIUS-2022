@@ -160,7 +160,7 @@ public class CharStat
 	 */
 	public final float getAttackSpeedMultiplier()
 	{
-		return (float) (((1.1) * getPAtkSpd()) / _activeChar.getTemplate().getBasePAtkSpd());
+		return (float) ((1.1 * getPAtkSpd()) / _activeChar.getTemplate().getBasePAtkSpd());
 	}
 	
 	/**
@@ -188,7 +188,7 @@ public class CharStat
 		{
 			if (maxCrit > 0)
 			{
-				val = Math.min(val, (Config.MAX_PCRIT_RATE + maxCrit));
+				val = Math.min(val, Config.MAX_PCRIT_RATE + maxCrit);
 			}
 			else
 			{
@@ -587,7 +587,7 @@ public class CharStat
 	 */
 	public double getPDef(L2Character target)
 	{
-		return calcStat(Stats.POWER_DEFENCE, (_activeChar.isRaid()) ? _activeChar.getTemplate().getBasePDef() * Config.RAID_PDEFENCE_MULTIPLIER : _activeChar.getTemplate().getBasePDef(), target, null);
+		return calcStat(Stats.POWER_DEFENCE, _activeChar.isRaid() ? _activeChar.getTemplate().getBasePDef() * Config.RAID_PDEFENCE_MULTIPLIER : _activeChar.getTemplate().getBasePDef(), target, null);
 	}
 	
 	/**

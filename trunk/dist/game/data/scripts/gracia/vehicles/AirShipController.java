@@ -398,16 +398,13 @@ public abstract class AirShipController extends Quest
 			{
 				_log.log(Level.WARNING, getName() + ": Fuel consumption not defined.");
 			}
+			else if (_teleportsTable.length != _fuelTable.length)
+			{
+				_log.log(Level.WARNING, getName() + ": Fuel consumption not match teleport list.");
+			}
 			else
 			{
-				if (_teleportsTable.length != _fuelTable.length)
-				{
-					_log.log(Level.WARNING, getName() + ": Fuel consumption not match teleport list.");
-				}
-				else
-				{
-					AirShipManager.getInstance().registerAirShipTeleportList(_dockZone, _locationId, _teleportsTable, _fuelTable);
-				}
+				AirShipManager.getInstance().registerAirShipTeleportList(_dockZone, _locationId, _teleportsTable, _fuelTable);
 			}
 		}
 	}

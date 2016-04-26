@@ -294,7 +294,7 @@ public final class SiegeManager
 		}
 	}
 	
-	public static final SiegeManager getInstance()
+	public static SiegeManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

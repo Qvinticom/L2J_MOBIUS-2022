@@ -100,7 +100,7 @@ public class RequestRegistBeauty extends L2GameClientPacket
 			requiredBeautyShopTicket += face.getBeautyShopTicket();
 		}
 		
-		if ((player.getAdena() < requiredAdena) || ((player.getBeautyTickets() < requiredBeautyShopTicket)))
+		if ((player.getAdena() < requiredAdena) || (player.getBeautyTickets() < requiredBeautyShopTicket))
 		{
 			player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));
 			player.sendPacket(new ExResponseBeautyList(player, ExResponseBeautyList.SHOW_FACESHAPE));

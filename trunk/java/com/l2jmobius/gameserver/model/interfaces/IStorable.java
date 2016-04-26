@@ -21,5 +21,5 @@ package com.l2jmobius.gameserver.model.interfaces;
  */
 public interface IStorable
 {
-	public boolean storeMe();
+	boolean storeMe();
 }

@@ -138,7 +138,7 @@ final class PrimevalIsle extends AbstractNpcAI
 				if (skill.getId() == SELFBUFF1.getSkillId())
 				{
 					npc.setScriptValue(3);
-					if ((target != null))
+					if (target != null)
 					{
 						npc.setTarget(target);
 						addAttackDesire(npc, player);
@@ -150,7 +150,7 @@ final class PrimevalIsle extends AbstractNpcAI
 				if (skill.getId() == SELFBUFF1.getSkillId())
 				{
 					npc.setScriptValue(1);
-					if ((target != null))
+					if (target != null)
 					{
 						npc.setTarget(target);
 						addAttackDesire(npc, player);
@@ -159,7 +159,7 @@ final class PrimevalIsle extends AbstractNpcAI
 				else if (skill.getId() == SELFBUFF2.getSkillId())
 				{
 					npc.setScriptValue(5);
-					if ((target != null))
+					if (target != null)
 					{
 						npc.setTarget(target);
 						addAttackDesire(npc, player);
@@ -179,7 +179,7 @@ final class PrimevalIsle extends AbstractNpcAI
 			{
 				if ((npc != null) && !npc.isDead())
 				{
-					npc.doCast((npc.getId() == SPRIGNANT[0] ? ANESTHESIA.getSkill() : DEADLY_POISON.getSkill()));
+					npc.doCast(npc.getId() == SPRIGNANT[0] ? ANESTHESIA.getSkill() : DEADLY_POISON.getSkill());
 					startQuestTimer("USE_SKILL", 15000, npc, null);
 				}
 				break;
@@ -320,9 +320,9 @@ final class PrimevalIsle extends AbstractNpcAI
 				final L2Playable playable = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
 				for (L2Character characters : npc.getKnownList().getKnownCharactersInRadius(500))
 				{
-					if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
+					if ((characters != null) && characters.isAttackable() && getRandomBoolean())
 					{
-						addAttackDesire(((L2Attackable) characters), playable);
+						addAttackDesire((L2Attackable) characters, playable);
 					}
 				}
 			}
@@ -349,7 +349,7 @@ final class PrimevalIsle extends AbstractNpcAI
 					}
 				}
 			}
-			else if ((((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 60) && (npc.isScriptValue(3)))
+			else if ((((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 60) && npc.isScriptValue(3))
 			{
 				if (!npc.isSkillDisabled(SELFBUFF1.getSkill()))
 				{

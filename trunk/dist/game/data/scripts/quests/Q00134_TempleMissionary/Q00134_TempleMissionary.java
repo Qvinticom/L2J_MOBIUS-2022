@@ -152,21 +152,18 @@ public class Q00134_TempleMissionary extends Quest
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
-		else
+		else if (hasQuestItems(player, GIANTS_EXPERIMENTAL_TOOL))
 		{
-			if (hasQuestItems(player, GIANTS_EXPERIMENTAL_TOOL))
+			takeItems(player, GIANTS_EXPERIMENTAL_TOOL, 1);
+			if (getRandom(100) != 0)
 			{
-				takeItems(player, GIANTS_EXPERIMENTAL_TOOL, 1);
-				if (getRandom(100) != 0)
-				{
-					addSpawn(CRUMA_MARSHLANDS_TRAITOR, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 60000);
-				}
+				addSpawn(CRUMA_MARSHLANDS_TRAITOR, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 60000);
 			}
-			else if (getRandom(100) < MOBS.get(npc.getId()))
-			{
-				giveItems(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, 1);
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
+		}
+		else if (getRandom(100) < MOBS.get(npc.getId()))
+		{
+			giveItems(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, 1);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);
 	}

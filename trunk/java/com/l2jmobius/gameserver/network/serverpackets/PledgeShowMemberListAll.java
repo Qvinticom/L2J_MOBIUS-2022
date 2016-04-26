@@ -66,7 +66,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 	
 	private void writePledge(SubPledge pledge, String name, String ldname)
 	{
-		_pledgeType = (pledge == null ? 0x00 : pledge.getId());
+		_pledgeType = pledge == null ? 0x00 : pledge.getId();
 		writeC(0x5a);
 		
 		String _name = "";
@@ -74,7 +74,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		{
 			_name = subPledge.getName();
 		}
-		writeD((_name.equals("")) || (_name.equals(name)) ? 0 : 1);
+		writeD(_name.equals("") || _name.equals(name) ? 0 : 1);
 		writeD(_clan.getId());
 		writeD(Config.SERVER_ID);
 		writeD(_pledgeType);

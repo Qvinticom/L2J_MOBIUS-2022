@@ -102,7 +102,7 @@ public final class ItemAuctionManager
 								throw new Exception("Dublicated instanceId " + instanceId);
 							}
 							
-							_managerInstances.put(instanceId, (new ItemAuctionInstance(instanceId, _auctionIds, nb)));
+							_managerInstances.put(instanceId, new ItemAuctionInstance(instanceId, _auctionIds, nb));
 						}
 					}
 				}
@@ -133,7 +133,7 @@ public final class ItemAuctionManager
 		return _auctionIds.getAndIncrement();
 	}
 	
-	public static final void deleteAuction(int auctionId)
+	public static void deleteAuction(int auctionId)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
@@ -159,7 +159,7 @@ public final class ItemAuctionManager
 	 * Gets the single instance of {@code ItemAuctionManager}.
 	 * @return single instance of {@code ItemAuctionManager}
 	 */
-	public static final ItemAuctionManager getInstance()
+	public static ItemAuctionManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

@@ -87,8 +87,8 @@ public final class HpDrain extends AbstractEffect
 			drain = damage;
 		}
 		
-		final double hpAdd = (_power * drain);
-		final double hpFinal = ((activeChar.getCurrentHp() + hpAdd) > activeChar.getMaxHp() ? activeChar.getMaxHp() : (activeChar.getCurrentHp() + hpAdd));
+		final double hpAdd = _power * drain;
+		final double hpFinal = (activeChar.getCurrentHp() + hpAdd) > activeChar.getMaxHp() ? activeChar.getMaxHp() : (activeChar.getCurrentHp() + hpAdd);
 		activeChar.setCurrentHp(hpFinal);
 		
 		if (damage > 0)

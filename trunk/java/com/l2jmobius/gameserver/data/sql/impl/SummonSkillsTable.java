@@ -91,7 +91,7 @@ public class SummonSkillsTable
 			{
 				if (cha.getLevel() < 70)
 				{
-					lvl = (cha.getLevel() / 10);
+					lvl = cha.getLevel() / 10;
 					if (lvl <= 0)
 					{
 						lvl = 1;
@@ -99,7 +99,7 @@ public class SummonSkillsTable
 				}
 				else
 				{
-					lvl = (7 + ((cha.getLevel() - 70) / 5));
+					lvl = 7 + ((cha.getLevel() - 70) / 5);
 				}
 				
 				// formula usable for skill that have 10 or more skill levels

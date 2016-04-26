@@ -86,7 +86,7 @@ public class Q00137_TempleChampionPart1 extends Quest
 			}
 			case "30070-16.html":
 			{
-				if (qs.isCond(3) && (hasQuestItems(player, EXECUTOR) && hasQuestItems(player, MISSIONARY)))
+				if (qs.isCond(3) && hasQuestItems(player, EXECUTOR) && hasQuestItems(player, MISSIONARY))
 				{
 					takeItems(player, EXECUTOR, -1);
 					takeItems(player, MISSIONARY, -1);

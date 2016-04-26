@@ -80,7 +80,7 @@ public final class MaxCp extends AbstractEffect
 					charStat.getActiveChar().addStatFunc(new FuncAdd(Stats.MAX_CP, 1, this, _power, null));
 					if (_heal)
 					{
-						effected.setCurrentCp((currentCp + _power));
+						effected.setCurrentCp(currentCp + _power);
 					}
 					break;
 				}

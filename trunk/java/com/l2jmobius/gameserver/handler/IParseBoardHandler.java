@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public interface IParseBoardHandler
 {
-	public static final Logger LOG = Logger.getLogger(IParseBoardHandler.class.getName());
+	Logger LOG = Logger.getLogger(IParseBoardHandler.class.getName());
 	
 	/**
 	 * Parses a community board command.
@@ -34,11 +34,11 @@ public interface IParseBoardHandler
 	 * @param player the player
 	 * @return
 	 */
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance player);
+	boolean parseCommunityBoardCommand(String command, L2PcInstance player);
 	
 	/**
 	 * Gets the community board commands.
 	 * @return the community board commands
 	 */
-	public String[] getCommunityBoardCommands();
+	String[] getCommunityBoardCommands();
 }

@@ -32,17 +32,17 @@ import ai.npc.AbstractNpcAI;
 final class LairOfAntharas extends AbstractNpcAI
 {
 	// NPC
-	final private static int KNORIKS = 22857;
-	final private static int DRAGON_KNIGHT = 22844;
-	final private static int DRAGON_KNIGHT2 = 22845;
-	final private static int ELITE_DRAGON_KNIGHT = 22846;
+	private static final int KNORIKS = 22857;
+	private static final int DRAGON_KNIGHT = 22844;
+	private static final int DRAGON_KNIGHT2 = 22845;
+	private static final int ELITE_DRAGON_KNIGHT = 22846;
 	
-	final private static int DRAGON_GUARD = 22852;
-	final private static int DRAGON_MAGE = 22853;
+	private static final int DRAGON_GUARD = 22852;
+	private static final int DRAGON_MAGE = 22853;
 	// Misc
-	final private static int KNIGHT_CHANCE = 30;
-	final private static int KNORIKS_CHANCE = 60;
-	final private static int KNORIKS_CHANCE2 = 50;
+	private static final int KNIGHT_CHANCE = 30;
+	private static final int KNORIKS_CHANCE = 60;
+	private static final int KNORIKS_CHANCE2 = 50;
 	
 	private LairOfAntharas()
 	{

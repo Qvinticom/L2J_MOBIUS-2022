@@ -161,7 +161,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		}
 		
 		// create a ClassLoader to load classes from MemoryJavaFileManager
-		return parseMain((new MemoryClassLoader(classBytes, classPath, getParentLoader(ctx))), ctx);
+		return parseMain(new MemoryClassLoader(classBytes, classPath, getParentLoader(ctx)), ctx);
 	}
 	
 	protected static Class<?> parseMain(MemoryClassLoader loader, ScriptContext ctx) throws ScriptException

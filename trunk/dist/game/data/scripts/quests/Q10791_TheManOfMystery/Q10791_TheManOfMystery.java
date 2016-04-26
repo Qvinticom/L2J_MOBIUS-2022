@@ -163,7 +163,7 @@ public class Q10791_TheManOfMystery extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && (qs.getCond() > 0) && (Util.checkIfInRange(1500, npc, qs.getPlayer(), false)))
+		if ((qs != null) && (qs.getCond() > 0) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
 			switch (npc.getId())
 			{
@@ -190,7 +190,7 @@ public class Q10791_TheManOfMystery extends Quest
 				case NEEDLE_STAKATO_CAPTAIN:
 				{
 					int kills = qs.getInt(Integer.toString(NEEDLE_STAKATO_CAPTAIN));
-					if ((kills < 1) && (qs.isCond(2)))
+					if ((kills < 1) && qs.isCond(2))
 					{
 						kills++;
 						qs.set(Integer.toString(NEEDLE_STAKATO_CAPTAIN), kills);

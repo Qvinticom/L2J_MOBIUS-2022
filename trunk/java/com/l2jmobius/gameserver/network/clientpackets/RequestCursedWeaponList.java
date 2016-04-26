@@ -47,12 +47,7 @@ public class RequestCursedWeaponList extends L2GameClientPacket
 		}
 		
 		// send a ExCursedWeaponList :p
-		final List<Integer> list = new ArrayList<>();
-		for (int id : CursedWeaponsManager.getInstance().getCursedWeaponsIds())
-		{
-			list.add(id);
-		}
-		
+		final List<Integer> list = new ArrayList<>(CursedWeaponsManager.getInstance().getCursedWeaponsIds());
 		activeChar.sendPacket(new ExCursedWeaponList(list));
 	}
 	

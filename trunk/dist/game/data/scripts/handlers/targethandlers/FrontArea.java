@@ -38,14 +38,14 @@ public class FrontArea implements ITargetTypeHandler
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		final List<L2Character> targetList = new ArrayList<>();
-		if ((target == null) || (((target == activeChar) || target.isAlikeDead()) && (skill.getCastRange() >= 0)) || (!(target.isAttackable() || target.isPlayable())))
+		if ((target == null) || (((target == activeChar) || target.isAlikeDead()) && (skill.getCastRange() >= 0)) || (!target.isAttackable() && !target.isPlayable()))
 		{
 			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return EMPTY_TARGET_LIST;
 		}
 		
 		final L2Character origin;
-		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
+		final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
 		
 		if (skill.getCastRange() >= 0)
 		{
@@ -74,7 +74,7 @@ public class FrontArea implements ITargetTypeHandler
 		final int maxTargets = skill.getAffectLimit();
 		for (L2Character obj : objs)
 		{
-			if (!(obj.isAttackable() || obj.isPlayable()))
+			if (!obj.isAttackable() && !obj.isPlayable())
 			{
 				continue;
 			}

@@ -117,13 +117,13 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 		player.sendPacket(new ExStorageMaxCount(player));
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(item);
-		if (player.getInventory().getItemByObjectId(_attributeOID) == null)
+		if (player.getInventory().getItemByObjectId(_attributeOID) != null)
 		{
-			iu.addRemovedItem(attribute);
+			iu.addModifiedItem(attribute);
 		}
 		else
 		{
-			iu.addModifiedItem(attribute);
+			iu.addRemovedItem(attribute);
 		}
 		player.sendPacket(iu);
 		

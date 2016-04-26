@@ -200,7 +200,7 @@ public class JumpManager
 			return;
 		}
 		final Track t = getTrack(player.getJumpTrackId());
-		if (!((t.x == 0) && (t.y == 0) && (t.z == 0)))
+		if ((t.x != 0) || (t.y != 0) || (t.z != 0))
 		{
 			player.broadcastPacket(new FlyToLocation(player, t.x, t.y, t.z, FlyType.DUMMY));
 			player.setXYZ(t.x, t.y, t.z);
@@ -226,7 +226,7 @@ public class JumpManager
 		player.setXYZ(n.getX(), n.getY(), n.getZ());
 	}
 	
-	public static final JumpManager getInstance()
+	public static JumpManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

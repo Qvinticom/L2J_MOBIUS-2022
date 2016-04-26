@@ -102,7 +102,7 @@ final class KetraOrcSupport extends AbstractNpcAI
 		{
 			if (hasQuestItems(player, KETRA_MARKS[i]))
 			{
-				return (i + 1);
+				return i + 1;
 			}
 		}
 		return 0;

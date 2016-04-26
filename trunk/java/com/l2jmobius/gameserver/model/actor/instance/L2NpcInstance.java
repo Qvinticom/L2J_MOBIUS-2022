@@ -132,18 +132,15 @@ public class L2NpcInstance extends L2Npc
 				sm.addInt(minLevel);
 				player.sendPacket(sm);
 			}
+			else if (player.getClassId().level() == 1)
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN_PLEASE_COME_BACK_AFTER_S1ND_CLASS_CHANGE);
+				sm.addInt(2);
+				player.sendPacket(sm);
+			}
 			else
 			{
-				if (player.getClassId().level() == 1)
-				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN_PLEASE_COME_BACK_AFTER_S1ND_CLASS_CHANGE);
-					sm.addInt(2);
-					player.sendPacket(sm);
-				}
-				else
-				{
-					player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
-				}
+				player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 			}
 		}
 		else

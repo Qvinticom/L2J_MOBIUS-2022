@@ -48,13 +48,13 @@ public class ZoneCuboid extends L2ZoneForm
 	@Override
 	public boolean isInsideZone(int x, int y, int z)
 	{
-		return (_r.contains(x, y) && (z >= _z1) && (z <= _z2));
+		return _r.contains(x, y) && (z >= _z1) && (z <= _z2);
 	}
 	
 	@Override
 	public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2)
 	{
-		return (_r.intersects(Math.min(ax1, ax2), Math.min(ay1, ay2), Math.abs(ax2 - ax1), Math.abs(ay2 - ay1)));
+		return _r.intersects(Math.min(ax1, ax2), Math.min(ay1, ay2), Math.abs(ax2 - ax1), Math.abs(ay2 - ay1));
 	}
 	
 	@Override

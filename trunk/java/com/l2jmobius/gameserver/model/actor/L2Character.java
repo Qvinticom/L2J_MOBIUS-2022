@@ -759,7 +759,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void teleToLocation(int x, int y, int z, int heading, int instanceId, boolean randomOffset)
 	{
-		teleToLocation(x, y, z, heading, instanceId, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
+		teleToLocation(x, y, z, heading, instanceId, randomOffset ? Config.MAX_OFFSET_ON_TELEPORT : 0);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading, int instanceId)
@@ -769,7 +769,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void teleToLocation(int x, int y, int z, int heading, boolean randomOffset)
 	{
-		teleToLocation(x, y, z, heading, -1, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
+		teleToLocation(x, y, z, heading, -1, randomOffset ? Config.MAX_OFFSET_ON_TELEPORT : 0);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading)
@@ -779,7 +779,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void teleToLocation(int x, int y, int z, boolean randomOffset)
 	{
-		teleToLocation(x, y, z, 0, -1, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
+		teleToLocation(x, y, z, 0, -1, randomOffset ? Config.MAX_OFFSET_ON_TELEPORT : 0);
 	}
 	
 	public void teleToLocation(int x, int y, int z)
@@ -799,7 +799,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void teleToLocation(ILocational loc, boolean randomOffset)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), randomOffset ? Config.MAX_OFFSET_ON_TELEPORT : 0);
 	}
 	
 	public void teleToLocation(ILocational loc)
@@ -844,7 +844,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return false;
 			}
-			final int mpConsume = (int) calcStat(Stats.BOW_MP_CONSUME_RATE, ((weaponItem.getReducedMpConsume() > 0) && (Rnd.get(100) < weaponItem.getReducedMpConsumeChance()) ? weaponItem.getReducedMpConsume() : weaponItem.getMpConsume()), null, null);
+			final int mpConsume = (int) calcStat(Stats.BOW_MP_CONSUME_RATE, (weaponItem.getReducedMpConsume() > 0) && (Rnd.get(100) < weaponItem.getReducedMpConsumeChance()) ? weaponItem.getReducedMpConsume() : weaponItem.getMpConsume(), null, null);
 			if (getCurrentMp() < mpConsume)
 			{
 				// If L2PcInstance doesn't have enough MP, stop the attack
@@ -1078,22 +1078,19 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				abortAttack(); // Abort the attack of the L2Character and send Server->Client ActionFailed packet
 			}
-			else
+			else if (player != null)
 			{
-				if (player != null)
+				if (player.isCursedWeaponEquipped())
 				{
-					if (player.isCursedWeaponEquipped())
+					// If hit by a cursed weapon, CP is reduced to 0
+					if (!target.isInvul())
 					{
-						// If hit by a cursed weapon, CP is reduced to 0
-						if (!target.isInvul())
-						{
-							target.setCurrentCp(0);
-						}
+						target.setCurrentCp(0);
 					}
-					else if (player.isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
-					{
-						target.setCurrentCp(0); // If a cursed weapon is hit by a Hero, CP is reduced to 0
-					}
+				}
+				else if (player.isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
+				{
+					target.setCurrentCp(0); // If a cursed weapon is hit by a Hero, CP is reduced to 0
 				}
 			}
 			
@@ -1319,7 +1316,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		attack.addHit(target, damage2, miss2, crit2, shld2);
 		
 		// Return true if hit 1 or hit 2 isn't missed
-		return (!miss1 || !miss2);
+		return !miss1 || !miss2;
 	}
 	
 	/**
@@ -1729,7 +1726,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		final int magicId = skill.getId();
 		
 		// Get the Base Casting Time of the Skills.
-		int skillTime = (skill.getHitTime() + skill.getCoolTime());
+		int skillTime = skill.getHitTime() + skill.getCoolTime();
 		
 		if (!skill.isChanneling() || (skill.getChannelingSkillId() == 0))
 		{
@@ -1780,7 +1777,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		int reuseDelay;
 		if (skill.isStaticReuse() || skill.isStatic())
 		{
-			reuseDelay = (skill.getReuseDelay());
+			reuseDelay = skill.getReuseDelay();
 		}
 		else if (skill.isMagic())
 		{
@@ -2016,15 +2013,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					return false;
 				}
 			}
-			else
+			// Check if the skill is physical and if the L2Character is not physical_muted
+			else if (isPhysicalMuted())
 			{
-				// Check if the skill is physical and if the L2Character is not physical_muted
-				if (isPhysicalMuted())
-				{
-					// Send a Server->Client packet ActionFailed to the L2PcInstance
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return false;
-				}
+				// Send a Server->Client packet ActionFailed to the L2PcInstance
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return false;
 			}
 		}
 		
@@ -2159,7 +2153,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param itemObjId the item object ID
 	 * @return if the item has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public synchronized final long getItemRemainingReuseTime(int itemObjId)
+	public final synchronized long getItemRemainingReuseTime(int itemObjId)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsItems != null) ? _reuseTimeStampsItems.get(itemObjId) : null;
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
@@ -2230,7 +2224,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * Removes a skill reuse time stamp.
 	 * @param skill the skill to remove
 	 */
-	public synchronized final void removeTimeStamp(Skill skill)
+	public final synchronized void removeTimeStamp(Skill skill)
 	{
 		if (_reuseTimeStampsSkills != null)
 		{
@@ -2241,7 +2235,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/**
 	 * Removes all skill reuse time stamps.
 	 */
-	public synchronized final void resetTimeStamps()
+	public final synchronized void resetTimeStamps()
 	{
 		if (_reuseTimeStampsSkills != null)
 		{
@@ -2254,7 +2248,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return if the skill has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public synchronized final long getSkillRemainingReuseTime(int hashCode)
+	public final synchronized long getSkillRemainingReuseTime(int hashCode)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
@@ -2265,7 +2259,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return {@code true} if the skill is under reuse time, {@code false} otherwise
 	 */
-	public synchronized final boolean hasSkillReuse(int hashCode)
+	public final synchronized boolean hasSkillReuse(int hashCode)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
 		return (reuseStamp != null) && reuseStamp.hasNotPassed();
@@ -2276,7 +2270,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return if the skill has a reuse time stamp, the skill reuse time stamp, otherwise {@code null}
 	 */
-	public synchronized final TimeStamp getSkillReuseTimeStamp(int hashCode)
+	public final synchronized TimeStamp getSkillReuseTimeStamp(int hashCode)
 	{
 		return _reuseTimeStampsSkills != null ? _reuseTimeStampsSkills.get(hashCode) : null;
 	}
@@ -2333,7 +2327,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/**
 	 * Removes all the disabled skills.
 	 */
-	public synchronized final void resetDisabledSkills()
+	public final synchronized void resetDisabledSkills()
 	{
 		if (_disabledSkills != null)
 		{
@@ -3012,7 +3006,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	@Override
 	public CharKnownList getKnownList()
 	{
-		return ((CharKnownList) super.getKnownList());
+		return (CharKnownList) super.getKnownList();
 	}
 	
 	@Override
@@ -3105,13 +3099,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final void setTitle(String value)
 	{
-		if (value == null)
+		if (value != null)
 		{
-			_title = "";
+			_title = value.length() > 21 ? value.substring(0, 20) : value;
 		}
 		else
 		{
-			_title = value.length() > 21 ? value.substring(0, 20) : value;
+			_title = "";
 		}
 	}
 	
@@ -3734,7 +3728,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		else
 		{
-			final boolean broadcastFull = true;
 			final StatusUpdate su = new StatusUpdate(this);
 			UserInfo info = null;
 			if (isPlayer())
@@ -3829,16 +3822,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				player.refreshExpertisePenalty();
 				sendPacket(info);
 				
-				if (broadcastFull)
 				{
 					player.broadcastPacket(new CharInfo(player));
-				}
-				else
-				{
-					if (su.hasAttributes())
-					{
-						broadcastPacket(su);
-					}
 				}
 				if (hasServitors() && isAffected(EffectFlag.SERVITOR_SHARE))
 				{
@@ -3847,7 +3832,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			else if (isNpc())
 			{
-				if (broadcastFull)
 				{
 					for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 					{
@@ -3864,10 +3848,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 							player.sendPacket(new NpcInfo((L2Npc) this));
 						}
 					}
-				}
-				else if (su.hasAttributes())
-				{
-					broadcastPacket(su);
 				}
 			}
 			else if (su.hasAttributes())
@@ -4092,8 +4072,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		final boolean isFloating = isFlying() || isInsideZone(ZoneId.WATER);
 		
 		// Z coordinate will follow geodata or client values
-		if ((Config.COORD_SYNCHRONIZE == 2) && !isFloating && !m.disregardingGeodata && ((GameTimeController.getInstance().getGameTicks() % 10) == 0 // once a second to reduce possible cpu load
-		) && GeoData.getInstance().hasGeo(xPrev, yPrev))
+		if ((Config.COORD_SYNCHRONIZE == 2) && !isFloating && !m.disregardingGeodata && ((GameTimeController.getInstance().getGameTicks() % 10) == 0) && GeoData.getInstance().hasGeo(xPrev, yPrev))
 		{
 			final int geoHeight = GeoData.getInstance().getSpawnHeight(xPrev, yPrev, zPrev);
 			dz = m._zDestination - geoHeight;
@@ -4133,7 +4112,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			m._yAccurate += dy * distFraction;
 			
 			// Set the position of the L2Character to estimated after parcial move
-			super.setXYZ((int) (m._xAccurate), (int) (m._yAccurate), zPrev + (int) ((dz * distFraction) + 0.5));
+			super.setXYZ((int) m._xAccurate, (int) m._yAccurate, zPrev + (int) ((dz * distFraction) + 0.5));
 		}
 		revalidateZone(false);
 		
@@ -4328,9 +4307,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		// Calculate distance (dx,dy) between current position and destination
 		// TODO: improve Z axis move/follow support when dx,dy are small compared to dz
-		double dx = (x - curX);
-		double dy = (y - curY);
-		double dz = (z - curZ);
+		double dx = x - curX;
+		double dy = y - curY;
+		double dz = z - curZ;
 		double distance = Math.sqrt((dx * dx) + (dy * dy));
 		
 		final boolean verticalMovementOnly = isFlying() && (distance == 0) && (dz != 0);
@@ -4347,9 +4326,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			x = curX + (int) (divider * dx);
 			y = curY + (int) (divider * dy);
 			z = curZ + (int) (divider * dz);
-			dx = (x - curX);
-			dy = (y - curY);
-			dz = (z - curZ);
+			dx = x - curX;
+			dy = y - curY;
+			dz = z - curZ;
 			distance = Math.sqrt((dx * dx) + (dy * dy));
 		}
 		
@@ -4391,7 +4370,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			sin = dy / distance;
 			cos = dx / distance;
 			
-			distance -= (offset - 5); // due to rounding error, we have to move a bit closer to be in range
+			distance -= offset - 5; // due to rounding error, we have to move a bit closer to be in range
 			
 			// Calculate the new destination with offset included
 			x = curX + (int) (distance * cos);
@@ -4429,8 +4408,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			
 			// Movement checks:
 			// When pathfinding enabled, for all characters except monsters returning home (could be changed later to teleport if pathfinding fails)
-			if (((Config.PATHFINDING > 0) && (!(isAttackable() && ((L2Attackable) this).isReturningToSpawnPoint()))) //
-				|| (isPlayer() && !(isInVehicle && (distance > 1500))))
+			if (((Config.PATHFINDING > 0) && (!isAttackable() || !((L2Attackable) this).isReturningToSpawnPoint())) //
+				|| (isPlayer() && (!isInVehicle || (distance <= 1500))))
 			{
 				if (isOnGeodataPath())
 				{
@@ -4640,8 +4619,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		m._zDestination = md.geoPath.get(m.onGeodataPathIndex).getZ();
 		
-		final double dx = (m._xDestination - super.getX());
-		final double dy = (m._yDestination - super.getY());
+		final double dx = m._xDestination - super.getX();
+		final double dy = m._yDestination - super.getY();
 		final double distance = Math.sqrt((dx * dx) + (dy * dy));
 		// Calculate and set the heading of the L2Character
 		if (distance != 0)
@@ -4692,7 +4671,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		boolean result = true;
 		if (m._heading != heading)
 		{
-			result = (m._heading == 0); // initial value or false
+			result = m._heading == 0; // initial value or false
 			m._heading = heading;
 		}
 		
@@ -4725,7 +4704,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public final boolean isInsideRadius(int x, int y, int z, int radius, boolean checkZAxis, boolean strictCheck)
 	{
 		final double distance = calculateDistance(x, y, z, checkZAxis, true);
-		return (strictCheck) ? (distance < (radius * radius)) : (distance <= (radius * radius));
+		return strictCheck ? (distance < (radius * radius)) : (distance <= (radius * radius));
 	}
 	
 	/**
@@ -4876,7 +4855,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		if (!miss && (damage > 0))
 		{
 			final L2Weapon weapon = getActiveWeaponItem();
-			final boolean isBow = ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)));
+			final boolean isBow = (weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW));
 			int reflectedDamage = 0;
 			
 			if (!isBow && !target.isInvul() && (!target.isRaid() || (getActingPlayer() == null) || (getActingPlayer().getLevel() <= (target.getLevel() + 8)))) // Do not reflect if weapon is of type bow or target is invunlerable
@@ -5120,7 +5099,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public boolean isInsidePeaceZone(L2PcInstance attacker, L2Object target)
 	{
-		return (!attacker.getAccessLevel().allowPeaceAttack() && isInsidePeaceZone((L2Object) attacker, target));
+		return !attacker.getAccessLevel().allowPeaceAttack() && isInsidePeaceZone((L2Object) attacker, target);
 	}
 	
 	public boolean isInsidePeaceZone(L2Object attacker, L2Object target)
@@ -5129,7 +5108,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			return false;
 		}
-		if (!(target.isPlayable() && attacker.isPlayable()))
+		if (!target.isPlayable() || !attacker.isPlayable())
 		{
 			return false;
 		}
@@ -5151,7 +5130,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 		}
 		
-		return (target.isInsideZone(ZoneId.PEACE) || attacker.isInsideZone(ZoneId.PEACE));
+		return target.isInsideZone(ZoneId.PEACE) || attacker.isInsideZone(ZoneId.PEACE);
 	}
 	
 	/**
@@ -5160,7 +5139,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public boolean isInActiveRegion()
 	{
 		final L2WorldRegion region = getWorldRegion();
-		return ((region != null) && (region.isActive()));
+		return (region != null) && region.isActive();
 	}
 	
 	/**
@@ -5441,13 +5420,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 								continue;
 							}
 						}
-						else
+						else if (((L2Character) target).isInsidePeaceZone(this, target))
 						{
-							if (((L2Character) target).isInsidePeaceZone(this, target))
-							{
-								skipPeaceZone++;
-								continue;
-							}
+							skipPeaceZone++;
+							continue;
 						}
 					}
 					targetList.add(target);
@@ -5619,16 +5595,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			onMagicFinalizer(mut);
 		}
+		else if (mut.isSimultaneous())
+		{
+			_skillCast2 = ThreadPoolManager.getInstance().scheduleEffect(mut, 300);
+		}
 		else
 		{
-			if (mut.isSimultaneous())
-			{
-				_skillCast2 = ThreadPoolManager.getInstance().scheduleEffect(mut, 300);
-			}
-			else
-			{
-				_skillCast = ThreadPoolManager.getInstance().scheduleEffect(mut, 300);
-			}
+			_skillCast = ThreadPoolManager.getInstance().scheduleEffect(mut, 300);
 		}
 	}
 	
@@ -5660,7 +5633,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		
 		// Attack target after skill use
-		if ((skill.nextActionIsAttack()) && (getTarget() instanceof L2Character) && (getTarget() != this) && (target != null) && (getTarget() == target) && target.canBeAttacked()//
+		if (skill.nextActionIsAttack() && (getTarget() instanceof L2Character) && (getTarget() != this) && (target != null) && (getTarget() == target) && target.canBeAttacked()//
 			&& ((getAI().getNextIntention() == null) || (getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO)))
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
@@ -5822,7 +5795,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 									
 									// attack of the own pet does not flag player
 									// triggering trap not flag trap owner
-									if ((player.getPet() != target) && !player.hasServitor(target.getObjectId()) && !isTrap() && !((skill.getEffectPoint() == 0) && (skill.getAffectRange() > 0)))
+									if ((player.getPet() != target) && !player.hasServitor(target.getObjectId()) && !isTrap() && ((skill.getEffectPoint() != 0) || (skill.getAffectRange() <= 0)))
 									{
 										player.updatePvPStatus((L2Character) target);
 									}
@@ -5849,20 +5822,17 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 								((L2Character) target).getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
 							}
 						}
-						else
+						else if (target.isPlayer())
 						{
-							if (target.isPlayer())
-							{
-								// Casting non offensive skill on player with pvp flag set or with karma
-								if (!(target.equals(this) || target.equals(player)) && ((target.getActingPlayer().getPvpFlag() > 0) || (target.getActingPlayer().getReputation() < 0)))
-								{
-									player.updatePvPStatus();
-								}
-							}
-							else if (target.isAttackable())
+							// Casting non offensive skill on player with pvp flag set or with karma
+							if (!target.equals(this) && !target.equals(player) && ((target.getActingPlayer().getPvpFlag() > 0) || (target.getActingPlayer().getReputation() < 0)))
 							{
 								player.updatePvPStatus();
 							}
+						}
+						else if (target.isAttackable())
+						{
+							player.updatePvPStatus();
 						}
 					}
 				}
@@ -5873,7 +5843,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					if ((spMob != null) && spMob.isNpc())
 					{
 						final L2Npc npcMob = (L2Npc) spMob;
-						if ((npcMob.isInsideRadius(player, 1000, true, true)))
+						if (npcMob.isInsideRadius(player, 1000, true, true))
 						{
 							EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, targets, isSummon()), npcMob);
 							
@@ -5906,7 +5876,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 									{
 										if ((npcTarget == skillTarget) || (npcMob == skillTarget))
 										{
-											attackable.addDamageHate((isSummon() ? this : player), 0, (skillEffectPoint * 150) / (attackable.getLevel() + 7));
+											attackable.addDamageHate(isSummon() ? this : player, 0, (skillEffectPoint * 150) / (attackable.getLevel() + 7));
 										}
 									}
 								}
@@ -6041,7 +6011,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public double getLevelMod()
 	{
-		return ((getLevel() + 89) / 100d);
+		return (getLevel() + 89) / 100d;
 	}
 	
 	public final void setSkillCast(Future<?> newSkillCast)
@@ -6075,7 +6045,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		final L2Weapon activeWeapon = getActiveWeaponItem();
 		final int random = activeWeapon != null ? activeWeapon.getRandomDamage() : 5 + (int) Math.sqrt(getLevel());
 		
-		return (1 + ((double) Rnd.get(0 - random, random) / 100));
+		return 1 + ((double) Rnd.get(0 - random, random) / 100);
 	}
 	
 	public final long getAttackEndTime()
@@ -6318,7 +6288,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && (Config.L2JMOD_CHAMPION_HP != 0))
 		{
-			getStatus().reduceHp((damage / Config.L2JMOD_CHAMPION_HP), attacker, awake, isDOT, false);
+			getStatus().reduceHp(damage / Config.L2JMOD_CHAMPION_HP, attacker, awake, isDOT, false);
 		}
 		else
 		{
@@ -6563,7 +6533,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		try
 		{
-			if ((skill == null))
+			if (skill == null)
 			{
 				return;
 			}
@@ -6828,7 +6798,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return false;
 		}
 		final SkillHolder holder = getInvulAgainstSkills().get(skillId);
-		return ((holder != null) && ((holder.getSkillLvl() < 1) || (holder.getSkillLvl() == skillLvl)));
+		return (holder != null) && ((holder.getSkillLvl() < 1) || (holder.getSkillLvl() == skillLvl));
 	}
 	
 	private Map<Integer, InvulSkillHolder> getInvulAgainstSkills()
@@ -6871,8 +6841,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return globalListeners;
 		}
 		
-		final Queue<AbstractEventListener> both = new LinkedBlockingDeque<>(objectListenres.size() + templateListeners.size() + globalListeners.size());
-		both.addAll(objectListenres);
+		final Queue<AbstractEventListener> both = new LinkedBlockingDeque<>(objectListenres);
 		both.addAll(templateListeners);
 		both.addAll(globalListeners);
 		return both;

@@ -411,12 +411,9 @@ public class Auction
 			{
 				returnItem(b.getClanName(), b.getBid(), true); // 10 % tax
 			}
-			else
+			else if (L2World.getInstance().getPlayer(b.getName()) != null)
 			{
-				if (L2World.getInstance().getPlayer(b.getName()) != null)
-				{
-					L2World.getInstance().getPlayer(b.getName()).sendMessage("Congratulation you have won ClanHall!");
-				}
+				L2World.getInstance().getPlayer(b.getName()).sendMessage("Congratulation you have won ClanHall!");
 			}
 			ClanTable.getInstance().getClanByName(b.getClanName()).setAuctionBiddedAt(0, true);
 		}

@@ -21,5 +21,5 @@ package com.l2jmobius.gameserver.model.interfaces;
  */
 public interface IUpdateTypeComponent
 {
-	public int getMask();
+	int getMask();
 }

@@ -96,6 +96,6 @@ public class ConditionPlayerCanCreateBase extends Condition
 			player.sendPacket(SystemMessageId.YOU_CANNOT_SET_UP_A_BASE_HERE);
 			canCreateBase = false;
 		}
-		return (_val == canCreateBase);
+		return _val == canCreateBase;
 	}
 }

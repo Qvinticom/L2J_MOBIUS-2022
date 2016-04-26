@@ -362,7 +362,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 		final QuestState qs = getQuestState(activeChar, false);
 		final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
 		
-		if ((qs != null) && (qs.isCond(2)))
+		if ((qs != null) && qs.isCond(2))
 		{
 			npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM, qs.getMemoState()));
 			return npcLogList;

@@ -95,7 +95,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		{
 			if (activeChar.getTarget() instanceof L2Character)
 			{
-				attack(command, activeChar, ((L2Character) activeChar.getTarget()));
+				attack(command, activeChar, (L2Character) activeChar.getTarget());
 			}
 		}
 		else if (command.startsWith("admin_mobgroup_rnd"))

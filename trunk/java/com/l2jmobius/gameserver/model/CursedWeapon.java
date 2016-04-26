@@ -165,42 +165,39 @@ public class CursedWeapon implements INamable
 				}
 			}
 		}
-		else
+		// either this cursed weapon is in the inventory of someone who has another cursed weapon equipped,
+		// OR this cursed weapon is on the ground.
+		else if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null))
 		{
-			// either this cursed weapon is in the inventory of someone who has another cursed weapon equipped,
-			// OR this cursed weapon is on the ground.
-			if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null))
+			// Destroy
+			final L2ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
+			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
-				// Destroy
-				final L2ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
-				if (!Config.FORCE_INVENTORY_UPDATE)
+				final InventoryUpdate iu = new InventoryUpdate();
+				if (removedItem.getCount() == 0)
 				{
-					final InventoryUpdate iu = new InventoryUpdate();
-					if (removedItem.getCount() == 0)
-					{
-						iu.addRemovedItem(removedItem);
-					}
-					else
-					{
-						iu.addModifiedItem(removedItem);
-					}
-					
-					_player.sendPacket(iu);
+					iu.addRemovedItem(removedItem);
 				}
 				else
 				{
-					_player.sendPacket(new ItemList(_player, true));
+					iu.addModifiedItem(removedItem);
 				}
 				
-				_player.broadcastUserInfo();
+				_player.sendPacket(iu);
 			}
-			// is dropped on the ground
-			else if (_item != null)
+			else
 			{
-				_item.decayMe();
-				L2World.getInstance().removeObject(_item);
-				_log.info(_name + " item has been removed from World.");
+				_player.sendPacket(new ItemList(_player, true));
 			}
+			
+			_player.broadcastUserInfo();
+		}
+		// is dropped on the ground
+		else if (_item != null)
+		{
+			_item.decayMe();
+			L2World.getInstance().removeObject(_item);
+			_log.info(_name + " item has been removed from World.");
 		}
 		
 		// Delete infos from table if any
@@ -692,7 +689,7 @@ public class CursedWeapon implements INamable
 		{
 			return _skillMaxLevel;
 		}
-		return (_nbKills / _stageKills);
+		return _nbKills / _stageKills;
 	}
 	
 	public long getTimeLeft()

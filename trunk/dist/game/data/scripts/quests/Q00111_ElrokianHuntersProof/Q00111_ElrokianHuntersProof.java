@@ -223,7 +223,7 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 			final ItemChanceHolder item = MOBS_DROP_CHANCES.get(npc.getId());
 			if (item.getCount() == qs.getMemoState())
 			{
-				if (qs.isCond(4) && (giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 50, item.getChance(), true)))
+				if (qs.isCond(4) && giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 50, item.getChance(), true))
 				{
 					qs.setCond(5);
 				}
@@ -260,7 +260,7 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 			{
 				if (npc.getId() == MARQUEZ)
 				{
-					htmltext = ((player.getLevel() >= MIN_LEVEL) ? "32113-01.htm" : "32113-06.html");
+					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32113-01.htm" : "32113-06.html";
 				}
 				break;
 			}

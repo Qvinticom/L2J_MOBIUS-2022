@@ -549,7 +549,7 @@ public class Olympiad extends ListenersContainer
 	private long getMillisToOlympiadEnd()
 	{
 		// if (_olympiadEnd > Calendar.getInstance().getTimeInMillis())
-		return (_olympiadEnd - Calendar.getInstance().getTimeInMillis());
+		return _olympiadEnd - Calendar.getInstance().getTimeInMillis();
 		// return 10L;
 	}
 	
@@ -567,14 +567,14 @@ public class Olympiad extends ListenersContainer
 	{
 		if (_validationEnd > Calendar.getInstance().getTimeInMillis())
 		{
-			return (_validationEnd - Calendar.getInstance().getTimeInMillis());
+			return _validationEnd - Calendar.getInstance().getTimeInMillis();
 		}
 		return 10L;
 	}
 	
 	public boolean isOlympiadEnd()
 	{
-		return (_period != 0);
+		return _period != 0;
 	}
 	
 	protected void setNewOlympiadEnd()
@@ -612,7 +612,7 @@ public class Olympiad extends ListenersContainer
 		
 		if (_compStart.getTimeInMillis() > Calendar.getInstance().getTimeInMillis())
 		{
-			return (_compStart.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
+			return _compStart.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 		}
 		
 		return setNewCompBegin();
@@ -628,13 +628,13 @@ public class Olympiad extends ListenersContainer
 		
 		_log.info("Olympiad System: New Schedule @ " + _compStart.getTime());
 		
-		return (_compStart.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
+		return _compStart.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 	}
 	
 	protected long getMillisToCompEnd()
 	{
 		// if (_compEnd > Calendar.getInstance().getTimeInMillis())
-		return (_compEnd - Calendar.getInstance().getTimeInMillis());
+		return _compEnd - Calendar.getInstance().getTimeInMillis();
 		// return 10L;
 	}
 	
@@ -642,7 +642,7 @@ public class Olympiad extends ListenersContainer
 	{
 		if (_nextWeeklyChange > Calendar.getInstance().getTimeInMillis())
 		{
-			return (_nextWeeklyChange - Calendar.getInstance().getTimeInMillis());
+			return _nextWeeklyChange - Calendar.getInstance().getTimeInMillis();
 		}
 		return 10L;
 	}
@@ -707,7 +707,7 @@ public class Olympiad extends ListenersContainer
 	
 	public boolean playerInStadia(L2PcInstance player)
 	{
-		return (ZoneManager.getInstance().getOlympiadStadium(player) != null);
+		return ZoneManager.getInstance().getOlympiadStadium(player) != null;
 	}
 	
 	/**
@@ -964,27 +964,21 @@ public class Olympiad extends ListenersContainer
 					{
 						winner = hero2;
 					}
+					else if (hero1Comps > hero2Comps)
+					{
+						winner = hero1;
+					}
+					else if (hero2Comps > hero1Comps)
+					{
+						winner = hero2;
+					}
+					else if (hero1Wins > hero2Wins)
+					{
+						winner = hero1;
+					}
 					else
 					{
-						if (hero1Comps > hero2Comps)
-						{
-							winner = hero1;
-						}
-						else if (hero2Comps > hero1Comps)
-						{
-							winner = hero2;
-						}
-						else
-						{
-							if (hero1Wins > hero2Wins)
-							{
-								winner = hero1;
-							}
-							else
-							{
-								winner = hero2;
-							}
-						}
+						winner = hero2;
 					}
 					
 					hero.set(CLASS_ID, winner.getInt(CLASS_ID));
@@ -1052,7 +1046,7 @@ public class Olympiad extends ListenersContainer
 		}
 		
 		final int rank = NOBLES_RANK.get(objId);
-		int points = (player.isHero() || Hero.getInstance().isUnclaimedHero(player.getObjectId()) ? Config.ALT_OLY_HERO_POINTS : 0);
+		int points = player.isHero() || Hero.getInstance().isUnclaimedHero(player.getObjectId()) ? Config.ALT_OLY_HERO_POINTS : 0;
 		switch (rank)
 		{
 			case 1:

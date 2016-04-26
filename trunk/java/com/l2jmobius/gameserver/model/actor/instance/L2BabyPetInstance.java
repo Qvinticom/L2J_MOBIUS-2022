@@ -113,17 +113,14 @@ public final class L2BabyPetInstance extends L2PetInstance
 					_minorHeal = _majorHeal;
 					healPower = skill.getPower();
 				}
+				// another heal skill found - search for most powerful
+				else if (skill.getPower() > healPower)
+				{
+					_majorHeal = new SkillHolder(skill);
+				}
 				else
 				{
-					// another heal skill found - search for most powerful
-					if (skill.getPower() > healPower)
-					{
-						_majorHeal = new SkillHolder(skill);
-					}
-					else
-					{
-						_minorHeal = new SkillHolder(skill);
-					}
+					_minorHeal = new SkillHolder(skill);
 				}
 				continue;
 			}

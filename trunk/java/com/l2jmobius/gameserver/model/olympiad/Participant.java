@@ -70,7 +70,7 @@ public final class Participant
 		{
 			player = L2World.getInstance().getPlayer(getObjectId());
 		}
-		return (player != null);
+		return player != null;
 	}
 	
 	/**

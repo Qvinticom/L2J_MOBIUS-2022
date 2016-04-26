@@ -37,7 +37,7 @@ public interface IGroupedItemDropCalculationStrategy
 	/**
 	 * The default strategy used in L2J to calculate drops. When the group's chance raises over 100% and group has precise calculation, the dropped item's amount increases.
 	 */
-	public static final IGroupedItemDropCalculationStrategy DEFAULT_STRATEGY = new IGroupedItemDropCalculationStrategy()
+	IGroupedItemDropCalculationStrategy DEFAULT_STRATEGY = new IGroupedItemDropCalculationStrategy()
 	{
 		private final Map<GroupedGeneralDropItem, GeneralDropItem> singleItemCache = new ConcurrentHashMap<>();
 		
@@ -59,7 +59,7 @@ public interface IGroupedItemDropCalculationStrategy
 			final GroupedGeneralDropItem normalized = dropItem.normalizeMe(victim, killer);
 			if (normalized.getChance() > (Rnd.nextDouble() * 100))
 			{
-				final double random = (Rnd.nextDouble() * 100);
+				final double random = Rnd.nextDouble() * 100;
 				double totalChance = 0;
 				for (GeneralDropItem item2 : normalized.getItems())
 				{
@@ -70,7 +70,7 @@ public interface IGroupedItemDropCalculationStrategy
 						int amountMultiply = 1;
 						if (dropItem.isPreciseCalculated() && (normalized.getChance() >= 100))
 						{
-							amountMultiply = (int) (normalized.getChance()) / 100;
+							amountMultiply = (int) normalized.getChance() / 100;
 							if ((normalized.getChance() % 100) > (Rnd.nextDouble() * 100))
 							{
 								amountMultiply++;
@@ -88,7 +88,7 @@ public interface IGroupedItemDropCalculationStrategy
 	/**
 	 * This strategy calculates a group's drop by calculating drops of its individual items and merging its results.
 	 */
-	public static final IGroupedItemDropCalculationStrategy DISBAND_GROUP = (item, victim, killer) ->
+	IGroupedItemDropCalculationStrategy DISBAND_GROUP = (item, victim, killer) ->
 	{
 		final List<ItemHolder> dropped = new ArrayList<>();
 		for (IDropItem dropItem : item.extractMe())
@@ -101,7 +101,7 @@ public interface IGroupedItemDropCalculationStrategy
 	/**
 	 * This strategy when group has precise calculation rolls multiple times over group to determine drops when group's chance raises over 100% instead of just multiplying the dropped item's amount. Thus it can produce different items from group at once.
 	 */
-	public static final IGroupedItemDropCalculationStrategy PRECISE_MULTIPLE_GROUP_ROLLS = (item, victim, killer) ->
+	IGroupedItemDropCalculationStrategy PRECISE_MULTIPLE_GROUP_ROLLS = (item, victim, killer) ->
 	{
 		if (!item.isPreciseCalculated())
 		{
@@ -126,5 +126,5 @@ public interface IGroupedItemDropCalculationStrategy
 		return dropped.isEmpty() ? null : dropped;
 	};
 	
-	public List<ItemHolder> calculateDrops(GroupedGeneralDropItem item, L2Character victim, L2Character killer);
+	List<ItemHolder> calculateDrops(GroupedGeneralDropItem item, L2Character victim, L2Character killer);
 }

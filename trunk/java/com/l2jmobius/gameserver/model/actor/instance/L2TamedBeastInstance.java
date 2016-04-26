@@ -219,7 +219,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		for (Skill skill : _beastSkills)
 		{
 			ThreadPoolManager.getInstance().scheduleGeneral(new buffCast(skill), delay);
-			delay += (100 + skill.getHitTime());
+			delay += 100 + skill.getHitTime();
 		}
 		ThreadPoolManager.getInstance().scheduleGeneral(new buffCast(null), delay);
 	}
@@ -236,13 +236,13 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		@Override
 		public void run()
 		{
-			if (_skill == null)
+			if (_skill != null)
 			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
+				sitCastAndFollow(_skill, _owner);
 			}
 			else
 			{
-				sitCastAndFollow(_skill, _owner);
+				getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
 			}
 		}
 	}
@@ -353,7 +353,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 			return;
 		}
 		
-		final float HPRatio = ((float) _owner.getCurrentHp()) / _owner.getMaxHp();
+		final float HPRatio = (float) _owner.getCurrentHp() / _owner.getMaxHp();
 		
 		// if the owner has a lot of HP, then debuff the enemy with a random debuff among the available skills
 		// use of more than one debuff at this moment is acceptable
@@ -362,7 +362,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 			for (Skill skill : getTemplate().getSkills().values())
 			{
 				// if the skill is a debuff, check if the attacker has it already [ attacker.getEffect(L2Skill skill) ]
-				if (skill.isDebuff() && (Rnd.get(3) < 1) && ((attacker != null) && attacker.isAffectedBySkill(skill.getId())))
+				if (skill.isDebuff() && (Rnd.get(3) < 1) && (attacker != null) && attacker.isAffectedBySkill(skill.getId()))
 				{
 					sitCastAndFollow(skill, attacker);
 				}
@@ -460,14 +460,11 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 					owner.callSkill(SkillData.getInstance().getSkill(foodTypeSkillId, 1), targets);
 					owner.setTarget(oldTarget);
 				}
-				else
+				// if the owner has no food, the beast immediately despawns, except when it was only
+				// newly spawned. Newly spawned beasts can last up to 5 minutes
+				else if (_tamedBeast.getRemainingTime() < (MAX_DURATION - 300000))
 				{
-					// if the owner has no food, the beast immediately despawns, except when it was only
-					// newly spawned. Newly spawned beasts can last up to 5 minutes
-					if (_tamedBeast.getRemainingTime() < (MAX_DURATION - 300000))
-					{
-						_tamedBeast.setRemainingTime(-1);
-					}
+					_tamedBeast.setRemainingTime(-1);
 				}
 				// There are too many conflicting reports about whether distance from home should be taken into consideration. Disabled for now.
 				// if (_tamedBeast.isTooFarFromHome())

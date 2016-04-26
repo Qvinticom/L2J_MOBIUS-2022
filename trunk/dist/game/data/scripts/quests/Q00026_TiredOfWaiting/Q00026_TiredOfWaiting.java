@@ -129,7 +129,7 @@ public final class Q00026_TiredOfWaiting extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = ((player.getLevel() >= 80) ? "30655-01.htm" : "30655-00.html");
+					htmltext = (player.getLevel() >= 80) ? "30655-01.htm" : "30655-00.html";
 				}
 				else if (qs.isStarted())
 				{
@@ -145,7 +145,7 @@ public final class Q00026_TiredOfWaiting extends Quest
 			{
 				if (qs.isStarted())
 				{
-					htmltext = (hasQuestItems(player, DELIVERY_BOX) ? "31045-01.html" : "31045-09.html");
+					htmltext = hasQuestItems(player, DELIVERY_BOX) ? "31045-01.html" : "31045-09.html";
 				}
 				break;
 			}

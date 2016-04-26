@@ -187,7 +187,7 @@ public final class QuestManager extends ScriptManager<Quest>
 		
 		if (Config.ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS)
 		{
-			_log.info("Loaded quest " + Util.splitWords((quest.getName().contains("_") ? quest.getName().substring(quest.getName().indexOf('_') + 1) : quest.getName())) + ".");
+			_log.info("Loaded quest " + Util.splitWords(quest.getName().contains("_") ? quest.getName().substring(quest.getName().indexOf('_') + 1) : quest.getName()) + ".");
 		}
 	}
 	

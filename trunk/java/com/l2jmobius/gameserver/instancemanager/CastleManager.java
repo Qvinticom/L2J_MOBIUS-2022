@@ -313,7 +313,7 @@ public final class CastleManager implements InstanceListManager
 		return count;
 	}
 	
-	public static final CastleManager getInstance()
+	public static CastleManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

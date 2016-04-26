@@ -126,14 +126,13 @@ public class OlympiadManagerLink implements IBypassHandler
 							html.replace("%olympiad_period%", String.valueOf(Olympiad.getInstance().getPeriod()));
 							html.replace("%olympiad_cycle%", String.valueOf(Olympiad.getInstance().getCurrentCycle()));
 							html.replace("%olympiad_opponent%", String.valueOf(OlympiadManager.getInstance().getCountOpponents()));
-							activeChar.sendPacket(html);
 						}
 						else
 						{
 							html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_unregister.htm");
 							html.replace("%objectId%", String.valueOf(target.getObjectId()));
-							activeChar.sendPacket(html);
 						}
+						activeChar.sendPacket(html);
 						break;
 					}
 					case 1: // unregister
@@ -199,15 +198,13 @@ public class OlympiadManagerLink implements IBypassHandler
 						if (passes > 0)
 						{
 							html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_settle.htm");
-							html.replace("%objectId%", String.valueOf(target.getObjectId()));
-							activeChar.sendPacket(html);
 						}
 						else
 						{
 							html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_nopoints2.htm");
-							html.replace("%objectId%", String.valueOf(target.getObjectId()));
-							activeChar.sendPacket(html);
 						}
+						html.replace("%objectId%", String.valueOf(target.getObjectId()));
+						activeChar.sendPacket(html);
 						break;
 					}
 					case 7: // Equipment Rewards

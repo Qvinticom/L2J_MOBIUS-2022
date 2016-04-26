@@ -53,16 +53,13 @@ public final class L2ObservationInstance extends L2Npc
 				filename = "html/observation/" + getId() + "-Oracle-" + val + ".htm";
 			}
 		}
+		else if (val == 0)
+		{
+			filename = "html/observation/" + getId() + ".htm";
+		}
 		else
 		{
-			if (val == 0)
-			{
-				filename = "html/observation/" + getId() + ".htm";
-			}
-			else
-			{
-				filename = "html/observation/" + getId() + "-" + val + ".htm";
-			}
+			filename = "html/observation/" + getId() + "-" + val + ".htm";
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());

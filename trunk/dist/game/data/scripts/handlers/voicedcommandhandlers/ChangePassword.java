@@ -57,7 +57,7 @@ public class ChangePassword implements IVoicedCommandHandler
 					repeatnewpass = st.nextToken();
 				}
 				
-				if (!((curpass == null) || (newpass == null) || (repeatnewpass == null)))
+				if ((curpass != null) && (newpass != null) && (repeatnewpass != null))
 				{
 					if (!newpass.equals(repeatnewpass))
 					{

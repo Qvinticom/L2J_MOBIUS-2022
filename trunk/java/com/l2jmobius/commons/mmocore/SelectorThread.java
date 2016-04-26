@@ -106,13 +106,13 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		
 		final ServerSocket ss = selectable.socket();
 		
-		if (address == null)
+		if (address != null)
 		{
-			ss.bind(new InetSocketAddress(tcpPort));
+			ss.bind(new InetSocketAddress(address, tcpPort));
 		}
 		else
 		{
-			ss.bind(new InetSocketAddress(address, tcpPort));
+			ss.bind(new InetSocketAddress(tcpPort));
 		}
 		
 		selectable.register(_selector, SelectionKey.OP_ACCEPT);
@@ -289,8 +289,8 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 		{
 			return;
 		}
-		ByteBuffer buf;
-		if ((buf = con.getReadBuffer()) == null)
+		ByteBuffer buf = con.getReadBuffer();
+		if (buf == null)
 		{
 			buf = READ_BUFFER;
 		}

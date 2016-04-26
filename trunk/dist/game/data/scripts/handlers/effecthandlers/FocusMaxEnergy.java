@@ -50,7 +50,7 @@ public final class FocusMaxEnergy extends AbstractEffect
 			final int maxCharge = (sonicMastery != null) ? sonicMastery.getLevel() : (focusMastery != null) ? focusMastery.getLevel() : (maximumForceMastery != null) ? 15 : 0;
 			if (maxCharge != 0)
 			{
-				info.getEffected().getActingPlayer().increaseCharges((maxCharge - info.getEffected().getActingPlayer().getCharges()), maxCharge);
+				info.getEffected().getActingPlayer().increaseCharges(maxCharge - info.getEffected().getActingPlayer().getCharges(), maxCharge);
 			}
 		}
 	}

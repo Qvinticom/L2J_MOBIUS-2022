@@ -68,16 +68,13 @@ final class CastleSiegeManager extends AbstractNpcAI
 		{
 			htmltext = "CastleSiegeManager-02.html";
 		}
+		else if (npc.getConquerableHall() != null)
+		{
+			npc.getConquerableHall().showSiegeInfo(player);
+		}
 		else
 		{
-			if (npc.getConquerableHall() != null)
-			{
-				npc.getConquerableHall().showSiegeInfo(player);
-			}
-			else
-			{
-				npc.getCastle().getSiege().listRegisterClan(player);
-			}
+			npc.getCastle().getSiege().listRegisterClan(player);
 		}
 		return htmltext;
 	}

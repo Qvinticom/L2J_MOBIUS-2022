@@ -29,7 +29,7 @@ import ai.npc.AbstractNpcAI;
 final class StrongholdsTeleports extends AbstractNpcAI
 {
 	// NPCs
-	private final static int[] NPCs =
+	private static final int[] NPCs =
 	{
 		32181,
 		32184,

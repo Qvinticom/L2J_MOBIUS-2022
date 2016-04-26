@@ -112,7 +112,7 @@ public class Q00017_LightAndDarkness extends Quest
 			case State.CREATED:
 			{
 				final QuestState qs2 = player.getQuestState(Q00015_SweetWhispers.class.getSimpleName());
-				htmltext = ((qs2 != null) && (qs2.isCompleted())) ? "31517-00.htm" : "31517-06.html";
+				htmltext = ((qs2 != null) && qs2.isCompleted()) ? "31517-00.htm" : "31517-06.html";
 				break;
 			}
 			case State.STARTED:
