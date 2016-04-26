@@ -206,7 +206,7 @@ final class SelMahumDrill extends AbstractNpcAI
 		// group hate
 		for (L2Character ch : npc.getKnownList().getKnownCharacters())
 		{
-			if (!ch.isInCombat() && ch.isMonster() && (((L2Npc) ch).getSpawn().getName() == npc.getSpawn().getName()))
+			if (!ch.isInCombat() && ch.isMonster() && (((L2Npc) ch).getSpawn().getName().equals(npc.getSpawn().getName())))
 			{
 				addAttackDesire((L2Npc) ch, attacker);
 			}

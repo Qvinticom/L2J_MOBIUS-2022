@@ -66,7 +66,7 @@ public class RequestAlchemyTryMixCube extends L2GameClientPacket
 			activeChar.sendPacket(ExTryMixCube.FAIL);
 			return;
 		}
-		if (activeChar.isInStoreMode() || activeChar.isInStoreMode())
+		if (activeChar.isInStoreMode())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_TRADING_OR_USING_A_PRIVATE_STORE_OR_SHOP);
 			activeChar.sendPacket(ExTryMixCube.FAIL);

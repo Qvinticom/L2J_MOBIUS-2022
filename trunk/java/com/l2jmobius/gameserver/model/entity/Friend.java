@@ -128,7 +128,7 @@ public class Friend
 	
 	public String getName()
 	{
-		if (_name == "")
+		if (_name.equals(""))
 		{
 			_name = CharNameTable.getInstance().getNameById(_friendOID);
 		}

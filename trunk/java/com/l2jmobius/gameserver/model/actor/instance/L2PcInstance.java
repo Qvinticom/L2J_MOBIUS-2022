@@ -8320,7 +8320,7 @@ public final class L2PcInstance extends L2Playable
 				// Add Henna skills
 				for (SkillHolder skill : henna.getSkills())
 				{
-					if (!getAllSkills().contains(skill))
+					if (!getAllSkills().contains(skill.getSkill()))
 					{
 						addSkill(skill.getSkill(), true);
 					}

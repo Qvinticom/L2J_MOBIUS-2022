@@ -55,8 +55,8 @@ public final class RequestAnswerFriendInvite extends L2GameClientPacket
 			return;
 		}
 		
-		if (player.getFriendList().containsValue(requestor.getObjectId()) //
-			|| requestor.getFriendList().containsValue(player.getObjectId()))
+		if (player.getFriendList().containsKey(requestor.getObjectId()) //
+			|| requestor.getFriendList().containsKey(player.getObjectId()))
 		{
 			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST));
 			return;

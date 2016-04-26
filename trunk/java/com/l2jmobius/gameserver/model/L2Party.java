@@ -386,10 +386,7 @@ public class L2Party extends AbstractPlayerGroup
 		{
 			synchronized (this)
 			{
-				if (_tacticalSigns == null)
-				{
-					_tacticalSigns = new ConcurrentHashMap<>(1);
-				}
+				_tacticalSigns = new ConcurrentHashMap<>(1);
 			}
 		}
 		return _tacticalSigns;

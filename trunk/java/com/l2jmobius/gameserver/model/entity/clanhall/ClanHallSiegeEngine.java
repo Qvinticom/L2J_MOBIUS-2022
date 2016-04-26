@@ -150,19 +150,17 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 			PreparedStatement ps = con.prepareStatement(SQL_LOAD_GUARDS))
 		{
 			ps.setInt(1, _hall.getId());
-			try (ResultSet rset = ps.executeQuery())
+			final ResultSet rset = ps.executeQuery();
+			while (rset.next())
 			{
-				while (rset.next())
-				{
-					final L2Spawn spawn = new L2Spawn(rset.getInt("npcId"));
-					spawn.setX(rset.getInt("x"));
-					spawn.setY(rset.getInt("y"));
-					spawn.setZ(rset.getInt("z"));
-					spawn.setHeading(rset.getInt("heading"));
-					spawn.setRespawnDelay(rset.getInt("respawnDelay"));
-					spawn.setAmount(1);
-					_guards.add(spawn);
-				}
+				final L2Spawn spawn = new L2Spawn(rset.getInt("npcId"));
+				spawn.setX(rset.getInt("x"));
+				spawn.setY(rset.getInt("y"));
+				spawn.setZ(rset.getInt("z"));
+				spawn.setHeading(rset.getInt("heading"));
+				spawn.setRespawnDelay(rset.getInt("respawnDelay"));
+				spawn.setAmount(1);
+				_guards.add(spawn);
 			}
 		}
 		catch (Exception e)

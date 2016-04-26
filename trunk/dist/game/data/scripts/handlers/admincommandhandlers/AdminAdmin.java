@@ -369,7 +369,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_gmon"))
 		{
-			// nothing
+			// TODO why is this empty?
 		}
 		return true;
 	}

@@ -638,16 +638,9 @@ public class AutoSpawnHandler
 			return _locList.toArray(new Location[_locList.size()]);
 		}
 		
-		public L2Npc[] getNPCInstanceList()
+		public List<L2Npc> getNPCInstanceList()
 		{
-			L2Npc[] ret;
-			synchronized (_npcList)
-			{
-				ret = new L2Npc[_npcList.size()];
-				_npcList.toArray(ret);
-			}
-			
-			return ret;
+			return _npcList;
 		}
 		
 		public List<L2Spawn> getSpawns()

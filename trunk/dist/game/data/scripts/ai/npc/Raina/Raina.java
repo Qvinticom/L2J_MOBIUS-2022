@@ -651,14 +651,11 @@ public final class Raina extends AbstractNpcAI
 			for (PlayerClass pclass : availSubs)
 			{
 				// scan for already used subclasses
-				final int availClassId = pclass.ordinal();
-				final ClassId cid = ClassId.getClassId(availClassId);
-				
 				for (SubClass subList : player.getSubClasses().values())
 				{
-					if (ClassId.getClassId(subList.getClassId()).equalsOrChildOf(cid))
+					if (ClassId.getClassId(subList.getClassId()).equalsOrChildOf(ClassId.getClassId(pclass.ordinal())))
 					{
-						availSubs.remove(cid);
+						availSubs.remove(pclass);
 						break;
 					}
 				}

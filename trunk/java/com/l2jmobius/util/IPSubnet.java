@@ -136,7 +136,7 @@ public class IPSubnet
 		{
 			return applyMask(((IPSubnet) o).getAddress());
 		}
-		else if (o instanceof InetAddress)
+		if (o instanceof InetAddress)
 		{
 			return applyMask(((InetAddress) o).getAddress());
 		}

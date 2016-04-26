@@ -74,7 +74,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		{
 			_name = subPledge.getName();
 		}
-		writeD((_name == "") || (_name == name) ? 0 : 1);
+		writeD((_name.equals("")) || (_name.equals(name)) ? 0 : 1);
 		writeD(_clan.getId());
 		writeD(Config.SERVER_ID);
 		writeD(_pledgeType);
