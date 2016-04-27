@@ -19,6 +19,7 @@ package ai.npc.AwakeningMaster;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.CategoryType;
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -29,6 +30,7 @@ import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerChangeToAwakenedClass;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -40,6 +42,7 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 import ai.npc.AbstractNpcAI;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
+import quests.Q10472_WindsOfFate_EncroachingShadows.Q10472_WindsOfFate_EncroachingShadows;
 
 /**
  * AwakeningMaster AI.
@@ -56,6 +59,15 @@ public final class AwakeningMaster extends AbstractNpcAI
 	private static final int ISS_MASTER = 33402;
 	private static final int WYNN_MASTER = 33403;
 	private static final int AEORE_MASTER = 33404;
+	// Skills
+	private static final SkillHolder NPC_WYNN = new SkillHolder(16390, 1);
+	private static final SkillHolder NPC_FEOH = new SkillHolder(16391, 1);
+	private static final SkillHolder NPC_TYRR = new SkillHolder(16392, 1);
+	private static final SkillHolder NPC_OTHELL = new SkillHolder(16393, 1);
+	private static final SkillHolder NPC_YUL = new SkillHolder(16394, 1);
+	private static final SkillHolder NPC_ISS = new SkillHolder(16395, 1);
+	private static final SkillHolder NPC_SIGEL = new SkillHolder(16396, 1);
+	private static final SkillHolder NPC_AEORE = new SkillHolder(16397, 1);
 	// Items
 	private static final int SCROLL_OF_AFTERLIFE = 17600;
 	private static final int ABELIUS_POWER = 32264;
@@ -66,6 +78,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 	private static final int NAVIAROPE_POWER = 32269;
 	private static final int LEISTER_POWER = 32270;
 	private static final int LAKCIS_POWER = 32271;
+	private static final int COUNTERFEIT_ATELIA = 40059;
 	// Other
 	private static final int AWAKENING_END_USM_ID = 10;
 	
@@ -169,6 +182,103 @@ public final class AwakeningMaster extends AbstractNpcAI
 				else
 				{
 					return npc.getId() + "-no.htm";
+				}
+				break;
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		if (player.getRace() != Race.ERTHEIA)
+		{
+			return npc.getId() + ".html";
+		}
+		
+		final QuestState qs3 = player.getQuestState(Q10472_WindsOfFate_EncroachingShadows.class.getSimpleName());
+		String htmltext = getNoQuestMsg(player);
+		
+		switch (npc.getId())
+		{
+			case WYNN_MASTER:
+			{
+				if (qs3.isCond(8) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
+				{
+					htmltext = "33403-01.html";
+					npc.doCast(NPC_WYNN.getSkill());
+					qs3.setCond(9, true);
+				}
+				break;
+			}
+			case FEOH_MASTER:
+			{
+				if (qs3.isCond(9) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
+				{
+					htmltext = "33401-01.html";
+					npc.doCast(NPC_FEOH.getSkill());
+					qs3.setCond(10, true);
+				}
+				break;
+			}
+			case TYRR_MASTER:
+			{
+				if (qs3.isCond(10) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
+				{
+					htmltext = "33398-01.html";
+					npc.doCast(NPC_TYRR.getSkill());
+					qs3.setCond(11, true);
+				}
+				break;
+			}
+			case OTHELL_MASTER:
+			{
+				if (qs3.isCond(11) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
+				{
+					htmltext = "33399-01.html";
+					npc.doCast(NPC_OTHELL.getSkill());
+					qs3.setCond(12, true);
+				}
+				break;
+			}
+			case ISS_MASTER:
+			{
+				if (qs3.isCond(12) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
+				{
+					htmltext = "33402-01.html";
+					npc.doCast(NPC_ISS.getSkill());
+					qs3.setCond(13, true);
+				}
+				break;
+			}
+			case YUL_MASTER:
+			{
+				if (qs3.isCond(13) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
+				{
+					htmltext = "33400-01.html";
+					npc.doCast(NPC_YUL.getSkill());
+					qs3.setCond(14, true);
+				}
+				break;
+			}
+			case SIGEL_MASTER:
+			{
+				if (qs3.isCond(14) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
+				{
+					htmltext = "33397-01.html";
+					npc.doCast(NPC_SIGEL.getSkill());
+					qs3.setCond(15, true);
+				}
+				break;
+			}
+			case AEORE_MASTER:
+			{
+				if (qs3.isCond(15) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
+				{
+					htmltext = "33404-01.html";
+					npc.doCast(NPC_AEORE.getSkill());
+					qs3.setCond(16, true);
 				}
 				break;
 			}

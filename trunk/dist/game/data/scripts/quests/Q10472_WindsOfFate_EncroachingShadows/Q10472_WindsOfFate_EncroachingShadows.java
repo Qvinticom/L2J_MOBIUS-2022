@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
@@ -61,15 +60,6 @@ public class Q10472_WindsOfFate_EncroachingShadows extends Quest
 	private static final int HOLY_STONE = 9551;
 	private static final int CRYSTAL_R = 17371;
 	private static final int RECIPE = 36791;
-	// Skills
-	private static final SkillHolder NPC_WYNN = new SkillHolder(16390, 1);
-	private static final SkillHolder NPC_FEOH = new SkillHolder(16391, 1);
-	private static final SkillHolder NPC_TYRR = new SkillHolder(16392, 1);
-	private static final SkillHolder NPC_OTHELL = new SkillHolder(16393, 1);
-	private static final SkillHolder NPC_YUL = new SkillHolder(16394, 1);
-	private static final SkillHolder NPC_ISS = new SkillHolder(16395, 1);
-	private static final SkillHolder NPC_SIGEL = new SkillHolder(16396, 1);
-	private static final SkillHolder NPC_AEORE = new SkillHolder(16397, 1);
 	// Mobs
 	private static final int[] MOBS =
 	{
@@ -92,7 +82,6 @@ public class Q10472_WindsOfFate_EncroachingShadows extends Quest
 		super(10472, Q10472_WindsOfFate_EncroachingShadows.class.getSimpleName(), "Winds Of Fate: Encroaching Shadows");
 		addStartNpc(NAVARI);
 		addTalkId(NAVARI, ZEPHYRA, MOMET, MAMMON, BLACKSMITH_MAMMON, HARDIN, WYNN, FEOH, TYRR, OTHELL, ISS, YUL, SIGEL, AEORE, KARLA, RAINA);
-		addFirstTalkId(WYNN, FEOH, TYRR, OTHELL, ISS, YUL, SIGEL, AEORE);
 		registerQuestItems(DARK_FRAGMENT, COUNTERFEIT_ATELIA, FIRE_STONE, WATER_STONE, EARTH_STONE, WIND_STONE, DARK_STONE, HOLY_STONE, CRYSTAL_R, RECIPE);
 		addKillId(MOBS);
 		// addCondCompletedQuest(Q10471_WindsOfFate_Choices.class.getSimpleName(), "no_cond.html"); // Need be Done!
@@ -455,98 +444,6 @@ public class Q10472_WindsOfFate_EncroachingShadows extends Quest
 				break;
 			}
 			
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		
-		switch (npc.getId())
-		{
-			case WYNN:
-			{
-				if (qs.isCond(8) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
-				{
-					htmltext = "33403-01.html";
-					npc.doCast(NPC_WYNN.getSkill());
-					qs.setCond(9, true);
-				}
-				break;
-			}
-			case FEOH:
-			{
-				if (qs.isCond(9) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
-				{
-					htmltext = "33401-01.html";
-					npc.doCast(NPC_FEOH.getSkill());
-					qs.setCond(10, true);
-				}
-				break;
-			}
-			case TYRR:
-			{
-				if (qs.isCond(10) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
-				{
-					htmltext = "33398-01.html";
-					npc.doCast(NPC_TYRR.getSkill());
-					qs.setCond(11, true);
-				}
-				break;
-			}
-			case OTHELL:
-			{
-				if (qs.isCond(11) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
-				{
-					htmltext = "33399-01.html";
-					npc.doCast(NPC_OTHELL.getSkill());
-					qs.setCond(12, true);
-				}
-				break;
-			}
-			case ISS:
-			{
-				if (qs.isCond(12) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
-				{
-					htmltext = "33402-01.html";
-					npc.doCast(NPC_ISS.getSkill());
-					qs.setCond(13, true);
-				}
-				break;
-			}
-			case YUL:
-			{
-				if (qs.isCond(13) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
-				{
-					htmltext = "33400-01.html";
-					npc.doCast(NPC_YUL.getSkill());
-					qs.setCond(14, true);
-				}
-				break;
-			}
-			case SIGEL:
-			{
-				if (qs.isCond(14) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
-				{
-					htmltext = "33397-01.html";
-					npc.doCast(NPC_SIGEL.getSkill());
-					qs.setCond(15, true);
-				}
-				break;
-			}
-			case AEORE:
-			{
-				if (qs.isCond(15) && (getQuestItemsCount(player, COUNTERFEIT_ATELIA) >= 1))
-				{
-					htmltext = "33404-01.html";
-					npc.doCast(NPC_AEORE.getSkill());
-					qs.setCond(16, true);
-				}
-				break;
-			}
 		}
 		return htmltext;
 	}
