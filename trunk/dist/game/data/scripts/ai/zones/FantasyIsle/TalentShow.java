@@ -14,15 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.fantasy_isle;
+package ai.zones.FantasyIsle;
 
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
@@ -35,10 +33,10 @@ import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import ai.npc.AbstractNpcAI;
 
 /**
- * MC Show AI.
+ * Talent Show AI.
  * @author Kerberos
  */
-final class MC_Show extends AbstractNpcAI
+final class TalentShow extends AbstractNpcAI
 {
 	private static int MC = 32433;
 	// @formatter:off
@@ -167,9 +165,9 @@ final class MC_Show extends AbstractNpcAI
 	private static final Map<String, ShoutInfo> TALKS = new HashMap<>();
 	private static final Map<String, WalkInfo> WALKS = new HashMap<>();
 	
-	private MC_Show()
+	private TalentShow()
 	{
-		super(MC_Show.class.getSimpleName(), "ai/fantasy_isle");
+		super(TalentShow.class.getSimpleName(), "ai/zones/FantasyIsle");
 		addSpawnId(32433, 32431, 32432, 32442, 32443, 32444, 32445, 32446, 32424, 32425, 32426, 32427, 32428);
 		load();
 		scheduleTimer();
@@ -306,13 +304,8 @@ final class MC_Show extends AbstractNpcAI
 		hourDiff *= 3600000;
 		minDiff *= 60000;
 		diff = hourDiff + minDiff;
-		if (Config.DEBUG)
-		{
-			_log.info("Fantasy Isle: MC show script starting at " + (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
-		}
-		// TODO startRepeatingQuestTimer("Start", diff, 14400000, null, null);
-		// missing option to provide different initial delay
-		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new StartMCShow(), diff, 14400000L);
+		_log.info("Fantasy Isle: MC show script starting at " + (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
+		startQuestTimer("Start", diff, null, null); // first start
 	}
 	
 	private void autoChat(L2Npc npc, NpcStringId npcString, ChatType type)
@@ -384,6 +377,7 @@ final class MC_Show extends AbstractNpcAI
 		{
 			IS_STARTED = true;
 			addSpawn(MC, -56698, -56430, -2008, 32768, false, 0);
+			startQuestTimer("Start", 14400000L, null, null); // repeat
 		}
 		else if ((npc != null) && IS_STARTED)
 		{
@@ -524,6 +518,6 @@ final class MC_Show extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new MC_Show();
+		new TalentShow();
 	}
 }

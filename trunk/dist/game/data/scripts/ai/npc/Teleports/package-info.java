@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Teleports;
 
 /**
  * Teleporter AIs are used for teleports that are too advanced to be done under normal means.<br>
@@ -25,3 +24,4 @@ package ai.npc.Teleports;
  * All implementation details are fully covered by quests.<br>
  * @author Zoey76
  */
+package ai.npc.Teleports;

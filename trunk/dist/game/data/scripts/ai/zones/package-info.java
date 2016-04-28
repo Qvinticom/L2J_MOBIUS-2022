@@ -14,18 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.fantasy_isle;
-
-import com.l2jmobius.gameserver.instancemanager.QuestManager;
 
 /**
- * Start MC Show.
+ * Zone AIs:<br>
+ * This folder contains AI scripts for specific zones.
+ * @author Mobius
  */
-class StartMCShow implements Runnable
-{
-	@Override
-	public void run()
-	{
-		QuestManager.getInstance().getQuest("MC_Show").notifyEvent("Start", null, null);
-	}
-}
+package ai.zones;

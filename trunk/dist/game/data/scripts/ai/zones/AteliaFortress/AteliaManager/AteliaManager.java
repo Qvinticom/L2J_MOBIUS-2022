@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.atelia_fortess.AteliaStatus;
+package ai.zones.AteliaFortress.AteliaManager;
 
 import java.util.ArrayList;
 
@@ -36,7 +36,7 @@ import ai.npc.AbstractNpcAI;
  * URL https://l2wiki.com/Atelia_Fortress
  * @author hlwrave, Stayway, Mobius
  */
-final class AteliaStatus extends AbstractNpcAI
+final class AteliaManager extends AbstractNpcAI
 {
 	// Npc Devianne
 	private static final int DEVIANNE = 34089;
@@ -310,9 +310,9 @@ final class AteliaStatus extends AbstractNpcAI
 	
 	static ArrayList<L2Npc> FortessSpawns = new ArrayList<>();
 	
-	private AteliaStatus()
+	private AteliaManager()
 	{
-		super(AteliaStatus.class.getSimpleName(), "ai/atelia_fortess");
+		super(AteliaManager.class.getSimpleName(), "ai/zones/AteliaFortress");
 		addStartNpc(BARTON, GLENKI, HAYUK, HURAK, ELISE, LAFFIAN, JULIA, MION, ELIYAH, SHERRY, SAYLEM, NIKA);
 		addFirstTalkId(BARTON, GLENKI, HAYUK, HURAK, ELISE, LAFFIAN, JULIA, MION, ELIYAH, SHERRY, SAYLEM, NIKA);
 		addTalkId(BARTON, GLENKI, HAYUK, HURAK, ELISE, LAFFIAN, JULIA, MION, ELIYAH, SHERRY, SAYLEM, NIKA);
@@ -702,6 +702,6 @@ final class AteliaStatus extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new AteliaStatus();
+		new AteliaManager();
 	}
 }

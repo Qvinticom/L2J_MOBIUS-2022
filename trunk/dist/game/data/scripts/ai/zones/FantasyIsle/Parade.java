@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.fantasy_isle;
+package ai.zones.FantasyIsle;
 
 import java.text.SimpleDateFormat;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -127,7 +127,7 @@ final class Parade extends AbstractNpcAI
 	
 	public Parade()
 	{
-		super(Parade.class.getSimpleName(), "ai/fantasy_isle");
+		super(Parade.class.getSimpleName(), "ai/zones/FantasyIsle");
 		
 		// Starts at 8:00 and repeats every 6 hours.
 		final long diff = timeLeftMilli(8, 0, 0), cycle = 3600000L;
