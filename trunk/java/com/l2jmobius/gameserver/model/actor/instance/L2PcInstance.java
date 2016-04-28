@@ -8678,6 +8678,14 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
+		// Check if the skill type is toggle.
+		if (skill.isToggle() && isAffectedBySkill(skill.getId()))
+		{
+			stopSkillEffects(true, skill.getId());
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return false;
+		}
+		
 		// ************************************* Check Casting in Progress *******************************************
 		
 		// If a skill is currently being used, queue this one if this is not the same
@@ -8696,6 +8704,7 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
+		
 		setIsCastingNow(true);
 		// Create a new SkillDat object and set the player _currentSkill
 		// This is used mainly to save & queue the button presses, since L2Character has
@@ -8777,14 +8786,6 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
 			
 			// Send a Server->Client packet ActionFailed to the L2PcInstance
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return false;
-		}
-		
-		// Check if the skill type is toggle.
-		if (skill.isToggle() && isAffectedBySkill(skill.getId()))
-		{
-			stopSkillEffects(true, skill.getId());
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
