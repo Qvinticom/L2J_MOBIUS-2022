@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Teleports.AnghelWaterfallPortal;
+package ai.zones.Magmeld;
 
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -33,7 +33,7 @@ final class AnghelWaterfallPortal extends AbstractNpcAI
 	
 	private AnghelWaterfallPortal()
 	{
-		super(AnghelWaterfallPortal.class.getSimpleName(), "ai/npc/Teleports");
+		super(AnghelWaterfallPortal.class.getSimpleName(), "ai/zones/Magmeld");
 		addEnterZoneId(ZONE_ID);
 	}
 	

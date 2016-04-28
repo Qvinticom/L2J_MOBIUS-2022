@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.group_template;
+package ai.zones.Magmeld;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -45,7 +45,7 @@ final class OrbisTempleStatues extends AbstractNpcAI
 	
 	public OrbisTempleStatues()
 	{
-		super(OrbisTempleStatues.class.getSimpleName(), "ai/group_template");
+		super(OrbisTempleStatues.class.getSimpleName(), "ai/zones/Magmeld");
 		addSpawnId(VICTIM_1, VICTIM_2, VICTIM_3, GUARD_1, GUARD_2, GUARD_3, THROWER_1, THROWER_2, THROWER_3, ANCIENT_HERO, CHIEF_CURATOR);
 		addAttackId(VICTIM_1, VICTIM_2, VICTIM_3, GUARD_1, GUARD_2, GUARD_3, THROWER_1, THROWER_2, THROWER_3);
 	}

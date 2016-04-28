@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Teleports.OrbisTemple;
+package ai.zones.Magmeld;
 
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -26,7 +26,7 @@ import ai.npc.AbstractNpcAI;
  * Orbis Temple teleport AI.
  * @author Mobius
  */
-final class OrbisTemple extends AbstractNpcAI
+final class OrbisTempleTeleports extends AbstractNpcAI
 {
 	// Zones
 	private static final int ZONE_ID_1 = 200201;
@@ -43,9 +43,9 @@ final class OrbisTemple extends AbstractNpcAI
 	private static final Location TELEPORT_LOC_5 = new Location(211137, 50501, -14624);
 	private static final Location TELEPORT_LOC_6 = new Location(211641, 115547, -12736);
 	
-	private OrbisTemple()
+	private OrbisTempleTeleports()
 	{
-		super(OrbisTemple.class.getSimpleName(), "ai/npc/Teleports");
+		super(OrbisTempleTeleports.class.getSimpleName(), "ai/zones/Magmeld");
 		addEnterZoneId(ZONE_ID_1, ZONE_ID_2, ZONE_ID_3, ZONE_ID_4, ZONE_ID_5, ZONE_ID_6);
 	}
 	
@@ -93,6 +93,6 @@ final class OrbisTemple extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new OrbisTemple();
+		new OrbisTempleTeleports();
 	}
 }
