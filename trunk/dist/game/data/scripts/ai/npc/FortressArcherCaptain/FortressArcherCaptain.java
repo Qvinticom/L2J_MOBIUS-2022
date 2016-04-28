@@ -19,7 +19,7 @@ package ai.npc.FortressArcherCaptain;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Fortress Archer Captain AI.

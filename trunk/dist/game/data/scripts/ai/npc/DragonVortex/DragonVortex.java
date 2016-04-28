@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Dragon Vortex AI.

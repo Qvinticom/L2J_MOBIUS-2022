@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCreate;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * @author Neanrakyr

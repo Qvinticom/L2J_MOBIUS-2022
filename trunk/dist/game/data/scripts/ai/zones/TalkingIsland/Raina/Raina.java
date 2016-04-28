@@ -54,7 +54,7 @@ import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Raina AI.

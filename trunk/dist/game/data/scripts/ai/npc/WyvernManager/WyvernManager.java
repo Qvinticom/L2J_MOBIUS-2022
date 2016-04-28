@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Wyvern Manager

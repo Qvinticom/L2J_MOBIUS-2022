@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Queen Ant's AI

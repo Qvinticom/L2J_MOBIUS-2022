@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.network.clientpackets.RequestAcquireSkill;
 import com.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Avant-Garde AI.<br>

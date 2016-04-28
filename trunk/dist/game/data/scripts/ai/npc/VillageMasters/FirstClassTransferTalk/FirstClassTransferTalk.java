@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2VillageMasterFighterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2VillageMasterPriestInstance;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * This script manages the dialogs of the headmasters of all newbie villages.<br>

@@ -18,7 +18,7 @@ package ai.zones.TalkingIsland;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Training Golem AI.

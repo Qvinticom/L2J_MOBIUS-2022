@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Manages spawn of NPCs having several random spawn points.

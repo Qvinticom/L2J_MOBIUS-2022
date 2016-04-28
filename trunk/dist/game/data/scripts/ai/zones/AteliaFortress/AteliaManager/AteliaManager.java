@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * URL https://l2wiki.com/Atelia_Fortress

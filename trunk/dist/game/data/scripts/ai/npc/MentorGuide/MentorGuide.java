@@ -53,7 +53,7 @@ import com.l2jmobius.gameserver.network.serverpackets.mentoring.ExMentorList;
 import com.l2jmobius.gameserver.util.Util;
 import com.l2jmobius.util.data.xml.IXmlReader;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Mentor Guide.

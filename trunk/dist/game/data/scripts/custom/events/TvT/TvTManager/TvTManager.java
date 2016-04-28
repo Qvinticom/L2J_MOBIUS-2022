@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * TvT Manager AI.

@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q10791_TheManOfMystery.Q10791_TheManOfMystery;
 
 /**

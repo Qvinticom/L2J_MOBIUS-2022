@@ -48,7 +48,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jmobius.gameserver.network.serverpackets.StaticObject;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Beleth's AI.

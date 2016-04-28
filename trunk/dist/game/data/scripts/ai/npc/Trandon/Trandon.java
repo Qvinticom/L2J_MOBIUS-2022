@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.network.clientpackets.RequestAcquireSkill;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Trandon AI.

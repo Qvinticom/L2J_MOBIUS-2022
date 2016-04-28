@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Sailren AI.

@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExResponseBeautyList;
 import com.l2jmobius.gameserver.network.serverpackets.ExResponseResetList;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowBeautyMenu;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * La Vie En Rose AI.

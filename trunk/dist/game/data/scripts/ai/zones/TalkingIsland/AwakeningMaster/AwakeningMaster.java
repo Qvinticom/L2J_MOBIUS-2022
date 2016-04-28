@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowUsm;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 import quests.Q10472_WindsOfFate_EncroachingShadows.Q10472_WindsOfFate_EncroachingShadows;
 
