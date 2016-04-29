@@ -16,17 +16,41 @@
  */
 package com.l2jmobius.gameserver.model.drops;
 
+import com.l2jmobius.Config;
+
 /**
- * @author Battlecruiser
+ * @author NosBit
  */
-public interface IDropItemFactory
+public class CorpseDropItem extends GeneralDropItem
 {
 	/**
 	 * @param itemId the item id
 	 * @param min the min count
 	 * @param max the max count
 	 * @param chance the chance of this drop item
-	 * @return the drop item created by this factory
 	 */
-	IDropItem newDropItem(int itemId, long min, long max, double chance);
+	public CorpseDropItem(int itemId, long min, long max, double chance)
+	{
+		super(itemId, min, max, chance);
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.drops.GeneralDropItem#getGlobalAmountMultiplier()
+	 */
+	@Override
+	protected double getGlobalAmountMultiplier(boolean isPremium)
+	{
+		return isPremium ? Config.PREMIUM_RATE_SPOIL_AMOUNT * Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER : Config.RATE_CORPSE_DROP_AMOUNT_MULTIPLIER;
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.drops.GeneralDropItem#getGlobalChanceMultiplier()
+	 */
+	@Override
+	protected double getGlobalChanceMultiplier(boolean isPremium)
+	{
+		return isPremium ? Config.PREMIUM_RATE_SPOIL_CHANCE * Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER : Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER;
+	}
 }

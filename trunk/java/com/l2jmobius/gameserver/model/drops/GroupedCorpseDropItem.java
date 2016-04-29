@@ -16,10 +16,28 @@
  */
 package com.l2jmobius.gameserver.model.drops;
 
+import com.l2jmobius.Config;
+
 /**
- * @author Battlecruiser
+ * @author NosBit
  */
-public interface IGroupedDropItemFactory
+public class GroupedCorpseDropItem extends GroupedGeneralDropItem
 {
-	GroupedGeneralDropItem newGroupedDropItem(double chance);
+	/**
+	 * @param chance the chance of this drop item.
+	 */
+	public GroupedCorpseDropItem(double chance)
+	{
+		super(chance);
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.drops.GroupedGeneralDropItem#getGlobalChanceMultiplier()
+	 */
+	@Override
+	protected double getGlobalChanceMultiplier()
+	{
+		return Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER;
+	}
 }

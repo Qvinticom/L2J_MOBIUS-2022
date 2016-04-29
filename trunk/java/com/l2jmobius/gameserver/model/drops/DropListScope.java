@@ -16,44 +16,75 @@
  */
 package com.l2jmobius.gameserver.model.drops;
 
-import com.l2jmobius.gameserver.model.drops.strategy.IAmountMultiplierStrategy;
-import com.l2jmobius.gameserver.model.drops.strategy.IChanceMultiplierStrategy;
-import com.l2jmobius.gameserver.model.drops.strategy.IGroupedItemDropCalculationStrategy;
-import com.l2jmobius.gameserver.model.drops.strategy.IKillerChanceModifierStrategy;
-import com.l2jmobius.gameserver.model.drops.strategy.IPreciseDeterminationStrategy;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author NosBit
  */
-public enum DropListScope implements IDropItemFactory, IGroupedDropItemFactory
+public enum DropListScope
 {
-	DEATH((itemId, min, max, chance) -> new GeneralDropItem(itemId, min, max, chance, IAmountMultiplierStrategy.DROP, IChanceMultiplierStrategy.DROP), chance -> new GroupedGeneralDropItem(chance)),
-	CORPSE((itemId, min, max, chance) -> new GeneralDropItem(itemId, min, max, chance, IAmountMultiplierStrategy.SPOIL, IChanceMultiplierStrategy.SPOIL), DEATH),
+	DEATH(DeathDropItem.class, GroupedDeathDropItem.class),
+	CORPSE(CorpseDropItem.class, GroupedCorpseDropItem.class);
 	
-	/**
-	 * This droplist scope isn't affected by ANY rates, nor Champion, etc...
-	 */
-	STATIC((itemId, min, max, chance) -> new GeneralDropItem(itemId, min, max, chance, IAmountMultiplierStrategy.STATIC, IChanceMultiplierStrategy.STATIC, IPreciseDeterminationStrategy.ALWAYS, IKillerChanceModifierStrategy.NO_RULES), chance -> new GroupedGeneralDropItem(chance, IGroupedItemDropCalculationStrategy.DEFAULT_STRATEGY, IKillerChanceModifierStrategy.NO_RULES, IPreciseDeterminationStrategy.ALWAYS)),
-	QUEST((itemId, min, max, chance) -> new GeneralDropItem(itemId, min, max, chance, IAmountMultiplierStrategy.STATIC, IChanceMultiplierStrategy.QUEST, IPreciseDeterminationStrategy.ALWAYS, IKillerChanceModifierStrategy.NO_RULES), STATIC);
+	private static final Logger _log = Logger.getLogger(DropListScope.class.getName());
 	
-	private final IDropItemFactory _factory;
-	private final IGroupedDropItemFactory _groupFactory;
+	private final Class<? extends GeneralDropItem> _dropItemClass;
+	private final Class<? extends GroupedGeneralDropItem> _groupedDropItemClass;
 	
-	private DropListScope(IDropItemFactory factory, IGroupedDropItemFactory groupFactory)
+	private DropListScope(Class<? extends GeneralDropItem> dropItemClass, Class<? extends GroupedGeneralDropItem> groupedDropItemClass)
 	{
-		_factory = factory;
-		_groupFactory = groupFactory;
+		_dropItemClass = dropItemClass;
+		_groupedDropItemClass = groupedDropItemClass;
 	}
 	
-	@Override
 	public IDropItem newDropItem(int itemId, long min, long max, double chance)
 	{
-		return _factory.newDropItem(itemId, min, max, chance);
+		final Constructor<? extends GeneralDropItem> constructor;
+		try
+		{
+			constructor = _dropItemClass.getConstructor(int.class, long.class, long.class, double.class);
+		}
+		catch (NoSuchMethodException | SecurityException e)
+		{
+			_log.log(Level.SEVERE, "Constructor(int, long, long, double) not found for " + _dropItemClass.getSimpleName(), e);
+			return null;
+		}
+		
+		try
+		{
+			return constructor.newInstance(itemId, min, max, chance);
+		}
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e)
+		{
+			_log.log(Level.SEVERE, "", e);
+			return null;
+		}
 	}
 	
-	@Override
 	public GroupedGeneralDropItem newGroupedDropItem(double chance)
 	{
-		return _groupFactory.newGroupedDropItem(chance);
+		final Constructor<? extends GroupedGeneralDropItem> constructor;
+		try
+		{
+			constructor = _groupedDropItemClass.getConstructor(double.class);
+		}
+		catch (NoSuchMethodException | SecurityException e)
+		{
+			_log.log(Level.SEVERE, "Constructor(double) not found for " + _groupedDropItemClass.getSimpleName(), e);
+			return null;
+		}
+		
+		try
+		{
+			return constructor.newInstance(chance);
+		}
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e)
+		{
+			_log.log(Level.SEVERE, "", e);
+			return null;
+		}
 	}
 }

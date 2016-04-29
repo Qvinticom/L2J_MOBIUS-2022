@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.drops;
 
-import java.util.List;
+import java.util.Collection;
 
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -32,5 +32,5 @@ public interface IDropItem
 	 * @param killer the killer
 	 * @return {@code null} or empty collection if there are no drops, a collection containing all items to drop otherwise
 	 */
-	List<ItemHolder> calculateDrops(L2Character victim, L2Character killer);
+	public Collection<ItemHolder> calculateDrops(L2Character victim, L2Character killer);
 }

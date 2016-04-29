@@ -492,7 +492,6 @@ public final class Config
 	public static int SAVE_DROPPED_ITEM_INTERVAL;
 	public static boolean CLEAR_DROPPED_ITEM_TABLE;
 	public static boolean AUTODELETE_INVALID_QUEST_DATA;
-	public static boolean PRECISE_DROP_CALCULATION;
 	public static boolean MULTIPLE_ITEM_DROP;
 	public static boolean FORCE_INVENTORY_UPDATE;
 	public static boolean LAZY_CACHE;
@@ -782,6 +781,7 @@ public final class Config
 	public static int L2JMOD_DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
 	public static Map<Integer, Integer> L2JMOD_DUALBOX_CHECK_WHITELIST;
 	public static boolean L2JMOD_ALLOW_CHANGE_PASSWORD;
+	public static boolean L2JMOD_OLD_DROP_BEHAVIOR;
 	public static boolean ALLOW_HUMAN;
 	public static boolean ALLOW_ELF;
 	public static boolean ALLOW_DARKELF;
@@ -828,10 +828,13 @@ public final class Config
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
 	public static float PREMIUM_RATE_SP;
+	public static Map<Integer, Float> PREMIUM_RATE_DROP_ITEMS_ID;
 	public static float PREMIUM_RATE_DROP_CHANCE;
 	public static float PREMIUM_RATE_DROP_AMOUNT;
-	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_MULTIPLIER;
-	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_MULTIPLIER;
+	public static float PREMIUM_RATE_SPOIL_CHANCE;
+	public static float PREMIUM_RATE_SPOIL_AMOUNT;
+	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
+	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
 	public static boolean PC_BANG_ENABLED;
 	public static int PC_BANG_MAX_POINTS;
 	public static boolean PC_BANG_ENABLE_DOUBLE_POINTS;
@@ -849,8 +852,6 @@ public final class Config
 	public static boolean ALT_ATTACKABLE_NPCS;
 	public static boolean ALT_GAME_VIEWNPC;
 	public static int MAX_DRIFT_RANGE;
-	public static boolean DEEPBLUE_DROP_RULES;
-	public static boolean DEEPBLUE_DROP_RULES_RAID;
 	public static boolean SHOW_NPC_LVL;
 	public static boolean SHOW_CREST_WITHOUT_QUEST;
 	public static boolean ENABLE_RANDOM_ENCHANT_EFFECT;
@@ -935,8 +936,8 @@ public final class Config
 	public static float RATE_CORPSE_DROP_CHANCE_MULTIPLIER;
 	public static float RATE_HERB_DROP_CHANCE_MULTIPLIER;
 	public static float RATE_RAID_DROP_CHANCE_MULTIPLIER;
-	public static Map<Integer, Float> RATE_DROP_AMOUNT_MULTIPLIER;
-	public static Map<Integer, Float> RATE_DROP_CHANCE_MULTIPLIER;
+	public static Map<Integer, Float> RATE_DROP_AMOUNT_BY_ID;
+	public static Map<Integer, Float> RATE_DROP_CHANCE_BY_ID;
 	public static float RATE_KARMA_LOST;
 	public static float RATE_KARMA_EXP_LOST;
 	public static float RATE_SIEGE_GUARDS_PRICE;
@@ -1840,7 +1841,6 @@ public final class Config
 			SAVE_DROPPED_ITEM_INTERVAL = General.getInt("SaveDroppedItemInterval", 60) * 60000;
 			CLEAR_DROPPED_ITEM_TABLE = General.getBoolean("ClearDroppedItemTable", false);
 			AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
-			PRECISE_DROP_CALCULATION = General.getBoolean("PreciseDropCalculation", true);
 			MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);
 			FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 			LAZY_CACHE = General.getBoolean("LazyCache", true);
@@ -2016,8 +2016,6 @@ public final class Config
 			ALT_ATTACKABLE_NPCS = NPC.getBoolean("AltAttackableNpcs", true);
 			ALT_GAME_VIEWNPC = NPC.getBoolean("AltGameViewNpc", false);
 			MAX_DRIFT_RANGE = NPC.getInt("MaxDriftRange", 300);
-			DEEPBLUE_DROP_RULES = NPC.getBoolean("UseDeepBlueDropRules", true);
-			DEEPBLUE_DROP_RULES_RAID = NPC.getBoolean("UseDeepBlueDropRulesRaid", true);
 			SHOW_NPC_LVL = NPC.getBoolean("ShowNpcLevel", false);
 			SHOW_CREST_WITHOUT_QUEST = NPC.getBoolean("ShowCrestWithoutQuest", false);
 			ENABLE_RANDOM_ENCHANT_EFFECT = NPC.getBoolean("EnableRandomEnchantEffect", false);
@@ -2142,8 +2140,9 @@ public final class Config
 			RATE_CORPSE_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("CorpseDropChanceMultiplier", 1);
 			RATE_HERB_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("HerbDropChanceMultiplier", 1);
 			RATE_RAID_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("RaidDropChanceMultiplier", 1);
+			
 			final String[] dropAmountMultiplier = RatesSettings.getString("DropAmountMultiplierByItemId", "").split(";");
-			RATE_DROP_AMOUNT_MULTIPLIER = new HashMap<>(dropAmountMultiplier.length);
+			RATE_DROP_AMOUNT_BY_ID = new HashMap<>(dropAmountMultiplier.length);
 			if (!dropAmountMultiplier[0].isEmpty())
 			{
 				for (String item : dropAmountMultiplier)
@@ -2157,7 +2156,7 @@ public final class Config
 					{
 						try
 						{
-							RATE_DROP_AMOUNT_MULTIPLIER.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+							RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
 						}
 						catch (NumberFormatException nfe)
 						{
@@ -2171,7 +2170,7 @@ public final class Config
 			}
 			
 			final String[] dropChanceMultiplier = RatesSettings.getString("DropChanceMultiplierByItemId", "").split(";");
-			RATE_DROP_CHANCE_MULTIPLIER = new HashMap<>(dropChanceMultiplier.length);
+			RATE_DROP_CHANCE_BY_ID = new HashMap<>(dropChanceMultiplier.length);
 			if (!dropChanceMultiplier[0].isEmpty())
 			{
 				for (String item : dropChanceMultiplier)
@@ -2185,7 +2184,7 @@ public final class Config
 					{
 						try
 						{
-							RATE_DROP_CHANCE_MULTIPLIER.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+							RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
 						}
 						catch (NumberFormatException nfe)
 						{
@@ -2244,6 +2243,8 @@ public final class Config
 			
 			L2JMOD_ENABLE_WAREHOUSESORTING_CLAN = CustomSettings.getBoolean("EnableWarehouseSortingClan", false);
 			L2JMOD_ENABLE_WAREHOUSESORTING_PRIVATE = CustomSettings.getBoolean("EnableWarehouseSortingPrivate", false);
+			
+			L2JMOD_OLD_DROP_BEHAVIOR = CustomSettings.getBoolean("OldDropBehavior", false);
 			
 			if (TVT_EVENT_PARTICIPATION_NPC_ID == 0)
 			{
@@ -2610,57 +2611,59 @@ public final class Config
 			PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("EnablePremiumSystem", false);
 			PREMIUM_RATE_XP = CustomSettings.getFloat("PremiumRateXp", 2);
 			PREMIUM_RATE_SP = CustomSettings.getFloat("PremiumRateSp", 2);
-			PREMIUM_RATE_DROP_CHANCE = CustomSettings.getFloat("PremiumRateDropChance", 1);
-			PREMIUM_RATE_DROP_AMOUNT = CustomSettings.getFloat("PremiumRateDropAmount", 2);
-			final String[] premiumDropChanceMultiplier = CustomSettings.getString("PremiumDropChanceMultiplierByItemId", "").split(";");
-			PREMIUM_RATE_DROP_CHANCE_MULTIPLIER = new HashMap<>(premiumDropChanceMultiplier.length);
+			PREMIUM_RATE_DROP_CHANCE = CustomSettings.getFloat("PremiumRateDropChance", 2);
+			PREMIUM_RATE_DROP_AMOUNT = CustomSettings.getFloat("PremiumRateDropAmount", 1);
+			PREMIUM_RATE_SPOIL_CHANCE = CustomSettings.getFloat("PremiumRateSpoilChance", 2);
+			PREMIUM_RATE_SPOIL_AMOUNT = CustomSettings.getFloat("PremiumRateSpoilAmount", 1);
+			String[] premiumDropChanceMultiplier = CustomSettings.getString("PremiumRateDropChanceByItemId", "").split(";");
+			PREMIUM_RATE_DROP_CHANCE_BY_ID = new HashMap<>(premiumDropChanceMultiplier.length);
 			if (!premiumDropChanceMultiplier[0].isEmpty())
 			{
 				for (String item : premiumDropChanceMultiplier)
 				{
-					final String[] itemSplit = item.split(",");
+					String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
-						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumDropChanceMultiplierByItemId \"", item, "\""));
+						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
 					}
 					else
 					{
 						try
 						{
-							PREMIUM_RATE_DROP_CHANCE_MULTIPLIER.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+							PREMIUM_RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
 						}
 						catch (NumberFormatException nfe)
 						{
 							if (!item.isEmpty())
 							{
-								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumDropChanceMultiplierByItemId \"", item, "\""));
+								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
 							}
 						}
 					}
 				}
 			}
-			final String[] premiumDropAmountMultiplier = CustomSettings.getString("PremiumDropAmountMultiplierByItemId", "").split(";");
-			PREMIUM_RATE_DROP_AMOUNT_MULTIPLIER = new HashMap<>(premiumDropAmountMultiplier.length);
+			String[] premiumDropAmountMultiplier = CustomSettings.getString("PremiumRateDropAmountByItemId", "").split(";");
+			PREMIUM_RATE_DROP_AMOUNT_BY_ID = new HashMap<>(premiumDropAmountMultiplier.length);
 			if (!premiumDropAmountMultiplier[0].isEmpty())
 			{
 				for (String item : premiumDropAmountMultiplier)
 				{
-					final String[] itemSplit = item.split(",");
+					String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
-						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumDropAmountMultiplierByItemId \"", item, "\""));
+						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
 					}
 					else
 					{
 						try
 						{
-							PREMIUM_RATE_DROP_AMOUNT_MULTIPLIER.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+							PREMIUM_RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
 						}
 						catch (NumberFormatException nfe)
 						{
 							if (!item.isEmpty())
 							{
-								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumDropAmountMultiplierByItemId \"", item, "\""));
+								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
 							}
 						}
 					}

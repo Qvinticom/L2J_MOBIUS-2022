@@ -236,7 +236,7 @@ public abstract class ItemContainer
 			item = olditem;
 			
 			// Updates database
-			if ((item.getId() == Inventory.ADENA_ID) && (count < (10000 * Config.RATE_DROP_AMOUNT_MULTIPLIER.getOrDefault(Inventory.ADENA_ID, 1f))))
+			if ((item.getId() == Inventory.ADENA_ID) && (count < (10000 * Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(Inventory.ADENA_ID, 1f))))
 			{
 				// Small adena changes won't be saved to database all the time
 				if ((GameTimeController.getInstance().getGameTicks() % 5) == 0)
@@ -287,7 +287,7 @@ public abstract class ItemContainer
 			item.setLastChange(L2ItemInstance.MODIFIED);
 			// Updates database
 			// If Adena drop rate is not present it will be x1.
-			if ((itemId == Inventory.ADENA_ID) && (count < (10000 * Config.RATE_DROP_AMOUNT_MULTIPLIER.getOrDefault(Inventory.ADENA_ID, 1f))))
+			if ((itemId == Inventory.ADENA_ID) && (count < (10000 * Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(Inventory.ADENA_ID, 1f))))
 			{
 				// Small adena changes won't be saved to database all the time
 				if ((GameTimeController.getInstance().getGameTicks() % 5) == 0)

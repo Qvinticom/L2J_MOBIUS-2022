@@ -222,12 +222,12 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 			if (classId == 184)
 			{
 				htmltext = "33943-ccf.html";
-				giveItems(player, NAVARIS_SUPPORT_BOX_F, 1);
+				giveItems(player, NAVARIS_SUPPORT_BOX_F);
 			}
 			else if (classId == 185)
 			{
 				htmltext = "33942-ccm.html";
-				giveItems(player, NAVARIS_SUPPORT_BOX_M, 1);
+				giveItems(player, NAVARIS_SUPPORT_BOX_M);
 			}
 			player.broadcastUserInfo();
 			qs.exitQuest(false, true);

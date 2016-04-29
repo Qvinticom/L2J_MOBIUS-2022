@@ -14,25 +14,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model.drops.strategy;
+package com.l2jmobius.gameserver.model.drops;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.drops.IDropItem;
 
 /**
- * @author Battlecruiser
+ * @author NosBit
  */
-public interface IPreciseDeterminationStrategy
+public class GroupedDeathDropItem extends GroupedGeneralDropItem
 {
-	IPreciseDeterminationStrategy ALWAYS = dropItem -> true;
-	
-	IPreciseDeterminationStrategy DEFAULT = dropItem -> Config.PRECISE_DROP_CALCULATION;
-	
-	IPreciseDeterminationStrategy NEVER = dropItem -> false;
-	
 	/**
-	 * @param dropItem
-	 * @return <code>true</code> if drop calculation strategy should use precise rules
+	 * @param chance the chance of this drop item.
 	 */
-	boolean isPreciseCalculated(IDropItem dropItem);
+	public GroupedDeathDropItem(double chance)
+	{
+		super(chance);
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.drops.GroupedGeneralDropItem#getGlobalChanceMultiplier()
+	 */
+	@Override
+	protected double getGlobalChanceMultiplier()
+	{
+		return Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER;
+	}
 }
