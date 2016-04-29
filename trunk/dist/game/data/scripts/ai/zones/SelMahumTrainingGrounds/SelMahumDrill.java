@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.group_template;
+package ai.zones.SelMahumTrainingGrounds;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
@@ -127,7 +127,7 @@ final class SelMahumDrill extends AbstractNpcAI
 	
 	private SelMahumDrill()
 	{
-		super(SelMahumDrill.class.getSimpleName(), "ai/group_template");
+		super(SelMahumDrill.class.getSimpleName(), "ai/zones/SelMahumTrainingGrounds");
 		
 		addAttackId(MAHUM_CHIEFS);
 		addAttackId(MAHUM_SOLDIERS);

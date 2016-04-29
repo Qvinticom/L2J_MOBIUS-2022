@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.group_template;
+package ai.zones.SelMahumTrainingGrounds;
 
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -68,7 +68,7 @@ final class SelMahumSquad extends AbstractNpcAI
 	
 	private SelMahumSquad()
 	{
-		super(SelMahumSquad.class.getSimpleName(), "ai/group_template");
+		super(SelMahumSquad.class.getSimpleName(), "ai/zones/SelMahumTrainingGrounds");
 		
 		addAttackId(CHEF);
 		addAttackId(SQUAD_LEADERS);
