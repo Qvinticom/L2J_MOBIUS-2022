@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.RemembranceTower;
+package ai.zones.FaeronVillage.RemembranceTower;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -35,7 +35,7 @@ final class RemembranceTower extends AbstractNpcAI
 	
 	private RemembranceTower()
 	{
-		super(RemembranceTower.class.getSimpleName(), "ai/npc");
+		super(RemembranceTower.class.getSimpleName(), "ai/zones/FaeronVillage");
 		addStartNpc(REMEMBRANCE_TOWER);
 		addTalkId(REMEMBRANCE_TOWER);
 		addFirstTalkId(REMEMBRANCE_TOWER);
