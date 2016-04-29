@@ -307,7 +307,14 @@ public class Shutdown extends Thread
 	{
 		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 		
-		_log.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
+		if (activeChar != null)
+		{
+			_log.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
+		}
+		else
+		{
+			_log.warning("Server scheduled restart issued shutdown command. Restart in " + seconds + " seconds!");
+		}
 		
 		if (_shutdownMode > 0)
 		{

@@ -132,6 +132,7 @@ import com.l2jmobius.gameserver.instancemanager.PremiumManager;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
+import com.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -456,6 +457,11 @@ public final class GameServer
 		{
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
 			System.exit(1);
+		}
+		
+		if (Config.SERVER_RESTART_SCHEDULE)
+		{
+			ServerRestartManager.getInstance();
 		}
 		
 		LoginServerThread.getInstance().start();

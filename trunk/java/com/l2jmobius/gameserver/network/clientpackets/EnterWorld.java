@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
 import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
@@ -37,6 +38,7 @@ import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.instancemanager.PetitionManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
+import com.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -64,6 +66,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.AllyCrest;
+import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.Die;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ExAcquireAPSkillList;
@@ -501,6 +504,11 @@ public class EnterWorld extends L2GameClientPacket
 		activeChar.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
 		
 		AnnouncementsTable.getInstance().showAnnouncements(activeChar);
+		
+		if ((Config.SERVER_RESTART_SCHEDULE) && (Config.SERVER_RESTART_SCHEDULE_MESSAGE))
+		{
+			activeChar.sendPacket(new CreatureSay(2, ChatType.BATTLEFIELD, "[SERVER]", "Next restart is scheduled at " + ServerRestartManager.getInstance().getNextRestartTime() + "."));
+		}
 		
 		if (showClanNotice)
 		{
