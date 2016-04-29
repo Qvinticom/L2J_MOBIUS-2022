@@ -31,7 +31,7 @@ public class ServerRestartManager
 {
 	static final Logger _log = Logger.getLogger(ServerRestartManager.class.getName());
 	
-	private String nextRestartString = "unknown";
+	private String nextRestartTime = "unknown";
 	
 	protected ServerRestartManager()
 	{
@@ -71,7 +71,7 @@ public class ServerRestartManager
 				count++;
 			}
 			
-			nextRestartString = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
+			nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
 			ThreadPoolManager.getInstance().scheduleGeneral(new ServerRestartTask(), lastDelay);
 			_log.info("Scheduled server restart at " + lastRestart.getTime().toString() + ".");
 		}
@@ -83,7 +83,7 @@ public class ServerRestartManager
 	
 	public String getNextRestartTime()
 	{
-		return nextRestartString;
+		return nextRestartTime;
 	}
 	
 	class ServerRestartTask implements Runnable
