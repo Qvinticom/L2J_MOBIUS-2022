@@ -68,7 +68,7 @@ public class GroupedGeneralDropItem implements IDropItem
 	 */
 	public double getChance(L2Character victim, L2Character killer)
 	{
-		for (final GeneralDropItem gdi : getItems())
+		for (GeneralDropItem gdi : getItems())
 		{
 			final L2Item item = ItemTable.getInstance().getTemplate(gdi.getItemId());
 			if ((item == null) || !item.hasExImmediateEffect())

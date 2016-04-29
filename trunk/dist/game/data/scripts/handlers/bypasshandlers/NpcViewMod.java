@@ -77,7 +77,7 @@ public class NpcViewMod implements IBypassHandler
 					{
 						target = L2World.getInstance().findObject(Integer.parseInt(st.nextToken()));
 					}
-					catch (final NumberFormatException e)
+					catch (NumberFormatException e)
 					{
 						return false;
 					}
@@ -116,11 +116,11 @@ public class NpcViewMod implements IBypassHandler
 					}
 					sendNpcDropList(activeChar, npc, dropListScope, st.hasMoreElements() ? Integer.parseInt(st.nextToken()) : 0);
 				}
-				catch (final NumberFormatException e)
+				catch (NumberFormatException e)
 				{
 					return false;
 				}
-				catch (final IllegalArgumentException e)
+				catch (IllegalArgumentException e)
 				{
 					_log.warning("Bypass[NpcViewMod] unknown drop list scope: " + dropListScopeString);
 					return false;
@@ -155,7 +155,7 @@ public class NpcViewMod implements IBypassHandler
 		{
 			TimeUnit timeUnit = TimeUnit.MILLISECONDS;
 			long min = Long.MAX_VALUE;
-			for (final TimeUnit tu : TimeUnit.values())
+			for (TimeUnit tu : TimeUnit.values())
 			{
 				final long minTimeFromMillis = tu.convert(npcSpawn.getRespawnMinDelay(), TimeUnit.MILLISECONDS);
 				final long maxTimeFromMillis = tu.convert(npcSpawn.getRespawnMaxDelay(), TimeUnit.MILLISECONDS);
@@ -361,7 +361,7 @@ public class NpcViewMod implements IBypassHandler
 					sb.append(chanceFormat.format(Math.min(generalGroupedDropItem.getChance(npc, activeChar), 100)));
 					sb.append("%</td></tr></table><br>");
 					
-					for (final GeneralDropItem generalDropItem : generalGroupedDropItem.getItems())
+					for (GeneralDropItem generalDropItem : generalGroupedDropItem.getItems())
 					{
 						final L2Item item = ItemTable.getInstance().getTemplate(generalDropItem.getItemId());
 						sb.append("<table width=291 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
