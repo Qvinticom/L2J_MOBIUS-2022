@@ -38,18 +38,16 @@ public class ServerRestartManager
 		try
 		{
 			final Calendar currentTime = Calendar.getInstance();
-			final Calendar restartTime = currentTime;
-			Calendar lastRestart = currentTime;
-			restartTime.setLenient(true);
+			final Calendar restartTime = Calendar.getInstance();
+			Calendar lastRestart = null;
 			long delay = 0;
 			long lastDelay = 0;
-			int count = 0;
 			
-			for (String timeOfDay : Config.SERVER_RESTART_SCHEDULE_HOURS)
+			for (String scheduledTime : Config.SERVER_RESTART_SCHEDULE)
 			{
-				final String[] splitTimeOfDay = timeOfDay.split(":");
-				restartTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(splitTimeOfDay[0]));
-				restartTime.set(Calendar.MINUTE, Integer.parseInt(splitTimeOfDay[1]));
+				final String[] splitTime = scheduledTime.trim().split(":");
+				restartTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(splitTime[0]));
+				restartTime.set(Calendar.MINUTE, Integer.parseInt(splitTime[1]));
 				restartTime.set(Calendar.SECOND, 00);
 				
 				if (restartTime.getTimeInMillis() < currentTime.getTimeInMillis())
@@ -58,7 +56,7 @@ public class ServerRestartManager
 				}
 				
 				delay = restartTime.getTimeInMillis() - currentTime.getTimeInMillis();
-				if (count == 0)
+				if (lastDelay == 0)
 				{
 					lastDelay = delay;
 					lastRestart = restartTime;
@@ -68,12 +66,14 @@ public class ServerRestartManager
 					lastDelay = delay;
 					lastRestart = restartTime;
 				}
-				count++;
 			}
 			
-			nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
-			ThreadPoolManager.getInstance().scheduleGeneral(new ServerRestartTask(), lastDelay);
-			_log.info("Scheduled server restart at " + lastRestart.getTime().toString() + ".");
+			if (lastRestart != null)
+			{
+				nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
+				ThreadPoolManager.getInstance().scheduleGeneral(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
+				_log.info("Scheduled server restart at " + lastRestart.getTime().toString() + ".");
+			}
 		}
 		catch (Exception e)
 		{

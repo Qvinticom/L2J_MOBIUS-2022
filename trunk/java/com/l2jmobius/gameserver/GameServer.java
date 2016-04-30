@@ -459,7 +459,7 @@ public final class GameServer
 			System.exit(1);
 		}
 		
-		if (Config.SERVER_RESTART_SCHEDULE)
+		if (Config.SERVER_RESTART_SCHEDULE_ENABLED)
 		{
 			ServerRestartManager.getInstance();
 		}

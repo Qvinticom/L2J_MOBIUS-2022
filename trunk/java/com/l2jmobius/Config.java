@@ -989,10 +989,10 @@ public final class Config
 	public static boolean SERVER_LIST_BRACKET;
 	public static boolean LOGIN_SERVER_SCHEDULE_RESTART;
 	public static long LOGIN_SERVER_SCHEDULE_RESTART_TIME;
-	public static boolean SERVER_RESTART_SCHEDULE;
+	public static boolean SERVER_RESTART_SCHEDULE_ENABLED;
 	public static boolean SERVER_RESTART_SCHEDULE_MESSAGE;
 	public static int SERVER_RESTART_SCHEDULE_COUNTDOWN;
-	public static String[] SERVER_RESTART_SCHEDULE_HOURS;
+	public static String[] SERVER_RESTART_SCHEDULE;
 	
 	// --------------------------------------------------
 	// MMO Settings
@@ -1228,10 +1228,10 @@ public final class Config
 			SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
 			SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
 			
-			SERVER_RESTART_SCHEDULE = serverSettings.getBoolean("ServerRestartSchedule", false);
+			SERVER_RESTART_SCHEDULE_ENABLED = serverSettings.getBoolean("ServerRestartScheduleEnabled", false);
 			SERVER_RESTART_SCHEDULE_MESSAGE = serverSettings.getBoolean("ServerRestartScheduleMessage", false);
-			SERVER_RESTART_SCHEDULE_COUNTDOWN = serverSettings.getInt("ServerRestartScheduleCountdown", 300);
-			SERVER_RESTART_SCHEDULE_HOURS = serverSettings.getString("ServerRestartScheduleHours", "00:00").split(",");
+			SERVER_RESTART_SCHEDULE_COUNTDOWN = serverSettings.getInt("ServerRestartScheduleCountdown", 600);
+			SERVER_RESTART_SCHEDULE = serverSettings.getString("ServerRestartSchedule", "08:00").split(",");
 			
 			try
 			{

@@ -505,7 +505,7 @@ public class EnterWorld extends L2GameClientPacket
 		
 		AnnouncementsTable.getInstance().showAnnouncements(activeChar);
 		
-		if ((Config.SERVER_RESTART_SCHEDULE) && (Config.SERVER_RESTART_SCHEDULE_MESSAGE))
+		if ((Config.SERVER_RESTART_SCHEDULE_ENABLED) && (Config.SERVER_RESTART_SCHEDULE_MESSAGE))
 		{
 			activeChar.sendPacket(new CreatureSay(2, ChatType.BATTLEFIELD, "[SERVER]", "Next restart is scheduled at " + ServerRestartManager.getInstance().getNextRestartTime() + "."));
 		}
