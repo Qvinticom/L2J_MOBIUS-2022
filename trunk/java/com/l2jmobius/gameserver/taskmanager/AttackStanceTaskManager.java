@@ -132,7 +132,7 @@ public class AttackStanceTaskManager
 								actor.getServitors().values().forEach(s -> s.broadcastPacket(new AutoAttackStop(s.getObjectId())));
 							}
 						}
-						_attackStanceTasks.remove(e);
+						_attackStanceTasks.remove(e.getKey());
 					}
 				}
 			}
