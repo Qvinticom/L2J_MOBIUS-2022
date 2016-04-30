@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Trandon;
+package ai.zones.TalkingIsland.Trandon;
 
 import java.util.Set;
 
@@ -53,7 +53,7 @@ public final class Trandon extends AbstractNpcAI
 	
 	private Trandon()
 	{
-		super(Trandon.class.getSimpleName(), "ai/npc");
+		super(Trandon.class.getSimpleName(), "ai/zones/TalkingIsland");
 		addStartNpc(NPC_ID);
 		addFirstTalkId(NPC_ID);
 		addTalkId(NPC_ID);

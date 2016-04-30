@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Toyron;
+package ai.zones.TalkingIsland.Toyron;
 
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -40,7 +40,7 @@ final class Toyron extends AbstractNpcAI
 	
 	private Toyron()
 	{
-		super(Toyron.class.getSimpleName(), "ai/npc");
+		super(Toyron.class.getSimpleName(), "ai/zones/TalkingIsland");
 		addStartNpc(TOYRON);
 		addFirstTalkId(TOYRON);
 		addTalkId(TOYRON);
