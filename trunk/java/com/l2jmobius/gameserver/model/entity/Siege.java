@@ -22,7 +22,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
@@ -1083,13 +1082,11 @@ public class Siege implements Siegable
 			case NotOwner:
 			{
 				players = getPlayersInZone();
-				final Iterator<L2PcInstance> it = players.iterator();
-				while (it.hasNext())
+				for (L2PcInstance player : players)
 				{
-					final L2PcInstance player = it.next();
 					if ((player == null) || player.inObserverMode() || ((player.getClanId() > 0) && (player.getClanId() == getCastle().getOwnerId())))
 					{
-						it.remove();
+						players.remove(player);
 					}
 				}
 				break;

@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
-import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -159,10 +158,8 @@ public class ObjectKnownList
 	 */
 	public void forgetObjects(boolean fullCheck)
 	{
-		final Iterator<L2Object> oIter = getKnownObjects().values().iterator();
-		while (oIter.hasNext())
+		for (L2Object object : getKnownObjects().values())
 		{
-			final L2Object object = oIter.next();
 			if (!fullCheck && !object.isPlayable())
 			{
 				continue;
@@ -171,7 +168,6 @@ public class ObjectKnownList
 			// Remove all objects invisible or too far
 			if (!object.isVisible() || !Util.checkIfInShortRadius(getDistanceToForgetObject(object), getActiveObject(), object, true))
 			{
-				oIter.remove();
 				removeKnownObject(object, true);
 			}
 		}

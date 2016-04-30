@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.Iterator;
 import java.util.List;
 
 import com.l2jmobius.gameserver.ai.L2ShuttleAI;
@@ -120,18 +119,13 @@ public class L2ShuttleInstance extends L2Vehicle
 	@Override
 	public void oustPlayers()
 	{
-		L2PcInstance player;
-		
-		// Use iterator because oustPlayer will try to remove player from _passengers
-		final Iterator<L2PcInstance> iter = _passengers.iterator();
-		while (iter.hasNext())
+		for (L2PcInstance player : _passengers)
 		{
-			player = iter.next();
-			iter.remove();
 			if (player != null)
 			{
 				oustPlayer(player);
 			}
+			_passengers.remove(player);
 		}
 	}
 	

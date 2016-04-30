@@ -21,7 +21,6 @@ import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -707,15 +706,13 @@ public final class ZoneManager implements IXmlReader
 	{
 		if (_debugItems != null)
 		{
-			final Iterator<L2ItemInstance> it = _debugItems.iterator();
-			while (it.hasNext())
+			for (L2ItemInstance item : _debugItems)
 			{
-				final L2ItemInstance item = it.next();
 				if (item != null)
 				{
 					item.decayMe();
 				}
-				it.remove();
+				_debugItems.remove(item);
 			}
 		}
 	}

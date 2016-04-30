@@ -26,7 +26,6 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -142,11 +141,7 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 	public final void run()
 	{
 		int selectedKeysCount = 0;
-		
-		SelectionKey key;
 		MMOConnection<T> con;
-		
-		Iterator<SelectionKey> selectedKeys;
 		
 		while (!_shutdown)
 		{
@@ -161,13 +156,9 @@ public final class SelectorThread<T extends MMOClient<?>>extends Thread
 			
 			if (selectedKeysCount > 0)
 			{
-				selectedKeys = _selector.selectedKeys().iterator();
-				
-				while (selectedKeys.hasNext())
+				for (SelectionKey key : _selector.selectedKeys())
 				{
-					key = selectedKeys.next();
-					selectedKeys.remove();
-					
+					_selector.selectedKeys().remove(key);
 					con = (MMOConnection<T>) key.attachment();
 					
 					switch (key.readyOps())

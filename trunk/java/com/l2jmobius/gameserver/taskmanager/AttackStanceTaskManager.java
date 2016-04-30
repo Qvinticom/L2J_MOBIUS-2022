@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.taskmanager;
 
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
@@ -113,12 +112,9 @@ public class AttackStanceTaskManager
 			final long current = System.currentTimeMillis();
 			try
 			{
-				final Iterator<Entry<L2Character, Long>> iter = _attackStanceTasks.entrySet().iterator();
-				Entry<L2Character, Long> e;
 				L2Character actor;
-				while (iter.hasNext())
+				for (Entry<L2Character, Long> e : _attackStanceTasks.entrySet())
 				{
-					e = iter.next();
 					if ((current - e.getValue()) > 15000)
 					{
 						actor = e.getKey();
@@ -136,7 +132,7 @@ public class AttackStanceTaskManager
 								actor.getServitors().values().forEach(s -> s.broadcastPacket(new AutoAttackStop(s.getObjectId())));
 							}
 						}
-						iter.remove();
+						_attackStanceTasks.remove(e);
 					}
 				}
 			}

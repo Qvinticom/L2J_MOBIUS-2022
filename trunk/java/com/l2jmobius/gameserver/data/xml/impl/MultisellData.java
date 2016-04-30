@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.io.FileFilter;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.logging.Level;
 
@@ -388,12 +387,8 @@ public final class MultisellData implements IXmlReader
 	
 	private final void verify()
 	{
-		ListContainer list;
-		final Iterator<ListContainer> iter = _entries.values().iterator();
-		while (iter.hasNext())
+		for (ListContainer list : _entries.values())
 		{
-			list = iter.next();
-			
 			for (Entry ent : list.getEntries())
 			{
 				for (Ingredient ing : ent.getIngredients())

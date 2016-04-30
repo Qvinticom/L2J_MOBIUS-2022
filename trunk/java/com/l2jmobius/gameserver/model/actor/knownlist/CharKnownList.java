@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -123,30 +122,25 @@ public class CharKnownList extends ObjectKnownList
 	{
 		if (!fullCheck)
 		{
-			final Iterator<L2PcInstance> pIter = getKnownPlayers().values().iterator();
-			while (pIter.hasNext())
+			for (L2PcInstance player : getKnownPlayers().values())
 			{
-				final L2PcInstance player = pIter.next();
 				if (player == null)
 				{
-					pIter.remove();
+					removeKnownObject(player, true);
 				}
 				else if (!player.isVisible() || !Util.checkIfInShortRadius(getDistanceToForgetObject(player), getActiveObject(), player, true))
 				{
-					pIter.remove();
 					removeKnownObject(player, true);
 					getKnownRelations().remove(player.getObjectId());
 					getKnownObjects().remove(player.getObjectId());
 				}
 			}
 			
-			final Iterator<L2Summon> sIter = getKnownSummons().values().iterator();
-			while (sIter.hasNext())
+			for (L2Summon summon : getKnownSummons().values())
 			{
-				final L2Summon summon = sIter.next();
 				if (summon == null)
 				{
-					sIter.remove();
+					removeKnownObject(summon, true);
 				}
 				else if (getActiveChar().isPlayer() && (summon.getOwner() == getActiveChar()))
 				{
@@ -154,7 +148,6 @@ public class CharKnownList extends ObjectKnownList
 				}
 				else if (!summon.isVisible() || !Util.checkIfInShortRadius(getDistanceToForgetObject(summon), getActiveObject(), summon, true))
 				{
-					sIter.remove();
 					removeKnownObject(summon, true);
 					getKnownObjects().remove(summon.getObjectId());
 				}
@@ -163,17 +156,14 @@ public class CharKnownList extends ObjectKnownList
 			return;
 		}
 		// Go through knownObjects
-		final Iterator<L2Object> oIter = getKnownObjects().values().iterator();
-		while (oIter.hasNext())
+		for (L2Object object : getKnownObjects().values())
 		{
-			final L2Object object = oIter.next();
 			if (object == null)
 			{
-				oIter.remove();
+				removeKnownObject(object, true);
 			}
 			else if (!object.isVisible() || !Util.checkIfInShortRadius(getDistanceToForgetObject(object), getActiveObject(), object, true))
 			{
-				oIter.remove();
 				removeKnownObject(object, true);
 				
 				if (object.isPlayer())

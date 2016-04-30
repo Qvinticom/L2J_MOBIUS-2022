@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.model.entity;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -189,17 +188,13 @@ public class TvTEvent
 		_teams[0].cleanMe();
 		_teams[1].cleanMe();
 		
-		L2PcInstance player;
-		Iterator<L2PcInstance> iter;
 		if (needParticipationFee())
 		{
-			iter = allParticipants.values().iterator();
-			while (iter.hasNext())
+			for (L2PcInstance player : allParticipants.values())
 			{
-				player = iter.next();
 				if (!hasParticipationFee(player))
 				{
-					iter.remove();
+					allParticipants.remove(player.getObjectId());
 				}
 			}
 		}
@@ -253,22 +248,18 @@ public class TvTEvent
 		
 		if (needParticipationFee())
 		{
-			iter = _teams[0].getParticipatedPlayers().values().iterator();
-			while (iter.hasNext())
+			for (L2PcInstance player : _teams[0].getParticipatedPlayers().values())
 			{
-				player = iter.next();
 				if (!payParticipationFee(player))
 				{
-					iter.remove();
+					_teams[0].removePlayer(player.getObjectId());
 				}
 			}
-			iter = _teams[1].getParticipatedPlayers().values().iterator();
-			while (iter.hasNext())
+			for (L2PcInstance player : _teams[1].getParticipatedPlayers().values())
 			{
-				player = iter.next();
 				if (!payParticipationFee(player))
 				{
-					iter.remove();
+					_teams[1].removePlayer(player.getObjectId());
 				}
 			}
 		}
