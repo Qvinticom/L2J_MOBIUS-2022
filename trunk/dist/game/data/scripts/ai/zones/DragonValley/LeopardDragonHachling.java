@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.individual;
+package ai.zones.DragonValley;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,7 @@ final class LeopardDragonHachling extends AbstractNpcAI
 	
 	private LeopardDragonHachling()
 	{
-		super(LeopardDragonHachling.class.getSimpleName(), "ai/individual");
+		super(LeopardDragonHachling.class.getSimpleName(), "ai/zones/DragonValley");
 		addAttackId(DRAGON_HACHLING);
 	}
 	

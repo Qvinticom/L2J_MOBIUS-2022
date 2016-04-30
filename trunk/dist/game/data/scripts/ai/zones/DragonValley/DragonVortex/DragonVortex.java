@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.DragonVortex;
+package ai.zones.DragonValley.DragonVortex;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +73,7 @@ final class DragonVortex extends AbstractNpcAI
 	
 	private DragonVortex()
 	{
-		super(DragonVortex.class.getSimpleName(), "ai/npc");
+		super(DragonVortex.class.getSimpleName(), "ai/zones/DragonValley");
 		addStartNpc(VORTEX);
 		addFirstTalkId(VORTEX);
 		addTalkId(VORTEX);

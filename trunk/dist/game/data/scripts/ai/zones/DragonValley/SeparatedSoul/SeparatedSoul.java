@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Teleports.SeparatedSoul;
+package ai.zones.DragonValley.SeparatedSoul;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -65,7 +65,7 @@ final class SeparatedSoul extends AbstractNpcAI
 	
 	private SeparatedSoul()
 	{
-		super(SeparatedSoul.class.getSimpleName(), "ai/npc/Teleports");
+		super(SeparatedSoul.class.getSimpleName(), "ai/zones/DragonValley");
 		addStartNpc(SEPARATED_SOULS);
 		addTalkId(SEPARATED_SOULS);
 		addFirstTalkId(SEPARATED_SOULS);
