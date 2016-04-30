@@ -131,10 +131,7 @@ public class L2EffectZone extends L2ZoneType
 		{
 			synchronized (this)
 			{
-				if (getSettings().getTask() == null)
-				{
-					getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
-				}
+				getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
 			}
 		}
 		if (!character.isPlayer())
@@ -193,10 +190,7 @@ public class L2EffectZone extends L2ZoneType
 		{
 			synchronized (this)
 			{
-				if (_skills == null)
-				{
-					_skills = new ConcurrentHashMap<>(3);
-				}
+				_skills = new ConcurrentHashMap<>(3);
 			}
 		}
 		_skills.put(skillId, skillLvL);

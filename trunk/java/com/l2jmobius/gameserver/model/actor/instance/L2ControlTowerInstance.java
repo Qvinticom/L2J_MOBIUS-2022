@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
  */
 public class L2ControlTowerInstance extends L2Tower
 {
-	private volatile List<L2Spawn> _guards;
+	private volatile List<L2Spawn> _guards = new CopyOnWriteArrayList<>();
 	
 	/**
 	 * Creates a control tower.
@@ -50,22 +50,19 @@ public class L2ControlTowerInstance extends L2Tower
 		{
 			getCastle().getSiege().killedCT(this);
 			
-			if ((_guards != null) && !_guards.isEmpty())
+			for (L2Spawn spawn : _guards)
 			{
-				for (L2Spawn spawn : _guards)
+				try
 				{
-					try
-					{
-						spawn.stopRespawn();
-						// spawn.getLastSpawn().doDie(spawn.getLastSpawn());
-					}
-					catch (Exception e)
-					{
-						_log.log(Level.WARNING, "Error at L2ControlTowerInstance", e);
-					}
+					spawn.stopRespawn();
+					// spawn.getLastSpawn().doDie(spawn.getLastSpawn());
 				}
-				_guards.clear();
+				catch (Exception e)
+				{
+					_log.log(Level.WARNING, "Error at L2ControlTowerInstance", e);
+				}
 			}
+			_guards.clear();
 		}
 		return super.doDie(killer);
 	}
@@ -77,16 +74,6 @@ public class L2ControlTowerInstance extends L2Tower
 	
 	private final List<L2Spawn> getGuards()
 	{
-		if (_guards == null)
-		{
-			synchronized (this)
-			{
-				if (_guards == null)
-				{
-					_guards = new CopyOnWriteArrayList<>();
-				}
-			}
-		}
 		return _guards;
 	}
 }

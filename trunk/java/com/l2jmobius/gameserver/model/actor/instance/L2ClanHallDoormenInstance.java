@@ -172,15 +172,12 @@ public class L2ClanHallDoormenInstance extends L2DoormenInstance
 		{
 			synchronized (this)
 			{
-				if (!_init)
+				_clanHall = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 500);
+				if (_clanHall != null)
 				{
-					_clanHall = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 500);
-					if (_clanHall != null)
-					{
-						_hasEvolve = Arrays.binarySearch(CH_WITH_EVOLVE, _clanHall.getId()) >= 0;
-					}
-					_init = true;
+					_hasEvolve = Arrays.binarySearch(CH_WITH_EVOLVE, _clanHall.getId()) >= 0;
 				}
+				_init = true;
 			}
 		}
 		return _clanHall;

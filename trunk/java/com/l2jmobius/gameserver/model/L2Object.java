@@ -64,7 +64,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	private L2WorldRegion _worldRegion;
 	/** Instance type */
 	private InstanceType _instanceType = null;
-	private volatile Map<String, Object> _scripts;
+	private volatile Map<String, Object> _scripts = new ConcurrentHashMap<>();
 	/** X coordinate */
 	private final AtomicInteger _x = new AtomicInteger(0);
 	/** Y coordinate */
@@ -531,16 +531,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public final <T> T addScript(T script)
 	{
-		if (_scripts == null)
-		{
-			synchronized (this)
-			{
-				if (_scripts == null)
-				{
-					_scripts = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		_scripts.put(script.getClass().getName(), script);
 		return script;
 	}

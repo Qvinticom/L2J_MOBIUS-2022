@@ -518,7 +518,7 @@ public final class L2PcInstance extends L2Playable
 	private long _offlineShopStart = 0;
 	
 	private Transform _transformation;
-	private volatile Map<Integer, Skill> _transformSkills;
+	private volatile Map<Integer, Skill> _transformSkills = new ConcurrentHashMap<>();
 	
 	/** The table containing all L2RecipeList of the L2PcInstance */
 	private final Map<Integer, L2RecipeList> _dwarvenRecipeBook = new ConcurrentHashMap<>();
@@ -607,7 +607,7 @@ public final class L2PcInstance extends L2Playable
 	/** The Pet of the L2PcInstance */
 	private L2Summon _pet = null;
 	/** Servitors of the L2PcInstance */
-	private volatile Map<Integer, L2Summon> _servitors = null;
+	private volatile Map<Integer, L2Summon> _servitors = new ConcurrentHashMap<>();
 	private int _usedSummonPoints = 0;
 	/** The L2Decoy of the L2PcInstance */
 	private L2Decoy _decoy = null;
@@ -693,7 +693,7 @@ public final class L2PcInstance extends L2Playable
 	
 	private L2ItemInstance _lure = null;
 	
-	private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos;
+	private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos = new ConcurrentHashMap<>();
 	
 	public boolean isSpawnProtected()
 	{
@@ -722,7 +722,7 @@ public final class L2PcInstance extends L2Playable
 	private int _expertiseWeaponPenalty = 0;
 	private int _expertisePenaltyBonus = 0;
 	
-	private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> _requests;
+	private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> _requests = new ConcurrentHashMap<>();
 	
 	protected boolean _inventoryDisable = false;
 	/** Player's cubics. */
@@ -1534,7 +1534,7 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/** List of all QuestState instance that needs to be notified of this L2PcInstance's or its pet's death */
-	private volatile List<QuestState> _notifyQuestOfDeathList;
+	private volatile List<QuestState> _notifyQuestOfDeathList = new CopyOnWriteArrayList<>();
 	
 	/**
 	 * Add QuestState instance that is to be notified of L2PcInstance's death.
@@ -1559,11 +1559,10 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void removeNotifyQuestOfDeath(QuestState qs)
 	{
-		if ((qs == null) || (_notifyQuestOfDeathList == null))
+		if (qs == null)
 		{
 			return;
 		}
-		
 		_notifyQuestOfDeathList.remove(qs);
 	}
 	
@@ -1572,23 +1571,12 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public final List<QuestState> getNotifyQuestOfDeath()
 	{
-		if (_notifyQuestOfDeathList == null)
-		{
-			synchronized (this)
-			{
-				if (_notifyQuestOfDeathList == null)
-				{
-					_notifyQuestOfDeathList = new CopyOnWriteArrayList<>();
-				}
-			}
-		}
-		
 		return _notifyQuestOfDeathList;
 	}
 	
 	public final boolean isNotifyQuestOfDeathEmpty()
 	{
-		return (_notifyQuestOfDeathList == null) || _notifyQuestOfDeathList.isEmpty();
+		return _notifyQuestOfDeathList.isEmpty();
 	}
 	
 	/**
@@ -5755,7 +5743,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public Map<Integer, L2Summon> getServitors()
 	{
-		return _servitors == null ? Collections.emptyMap() : _servitors;
+		return _servitors;
 	}
 	
 	public L2Summon getAnyServitor()
@@ -5796,16 +5784,6 @@ public final class L2PcInstance extends L2Playable
 	
 	public void addServitor(L2Summon servitor)
 	{
-		if (_servitors == null)
-		{
-			synchronized (this)
-			{
-				if (_servitors == null)
-				{
-					_servitors = new ConcurrentHashMap<>(1);
-				}
-			}
-		}
 		_servitors.put(servitor.getObjectId(), servitor);
 	}
 	
@@ -6036,10 +6014,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			synchronized (this)
 			{
-				if (_manufactureItems == null)
-				{
-					_manufactureItems = Collections.synchronizedMap(new LinkedHashMap<Integer, L2ManufactureItem>());
-				}
+				_manufactureItems = Collections.synchronizedMap(new LinkedHashMap<Integer, L2ManufactureItem>());
 			}
 		}
 		return _manufactureItems;
@@ -11065,10 +11040,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				synchronized (this)
 				{
-					if (_teleportWatchdog == null)
-					{
-						_teleportWatchdog = ThreadPoolManager.getInstance().scheduleGeneral(new TeleportWatchdogTask(this), Config.TELEPORT_WATCHDOG_TIMEOUT * 1000);
-					}
+					_teleportWatchdog = ThreadPoolManager.getInstance().scheduleGeneral(new TeleportWatchdogTask(this), Config.TELEPORT_WATCHDOG_TIMEOUT * 1000);
 				}
 			}
 		}
@@ -12814,16 +12786,6 @@ public final class L2PcInstance extends L2Playable
 	
 	public void addTransformSkill(Skill sk)
 	{
-		if (_transformSkills == null)
-		{
-			synchronized (this)
-			{
-				if (_transformSkills == null)
-				{
-					_transformSkills = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		_transformSkills.put(sk.getId(), sk);
 		if (sk.isPassive())
 		{
@@ -12833,17 +12795,17 @@ public final class L2PcInstance extends L2Playable
 	
 	public Skill getTransformSkill(int id)
 	{
-		return _transformSkills == null ? null : _transformSkills.get(id);
+		return _transformSkills.get(id);
 	}
 	
 	public boolean hasTransformSkill(int id)
 	{
-		return (_transformSkills != null) && _transformSkills.containsKey(id);
+		return _transformSkills.containsKey(id);
 	}
 	
 	public void removeAllTransformSkills()
 	{
-		_transformSkills = null;
+		_transformSkills.clear();
 	}
 	
 	protected void startFeed(int npcId)
@@ -13076,10 +13038,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			synchronized (this)
 			{
-				if (_chargeTask != null)
-				{
-					_chargeTask.cancel(false);
-				}
+				_chargeTask.cancel(false);
 			}
 		}
 		_chargeTask = ThreadPoolManager.getInstance().scheduleGeneral(new ResetChargesTask(this), 600000);
@@ -14946,22 +14905,12 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean addRequest(AbstractRequest request)
 	{
-		if (_requests == null)
-		{
-			synchronized (this)
-			{
-				if (_requests == null)
-				{
-					_requests = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return canRequest(request) && (_requests.putIfAbsent(request.getClass(), request) == null);
 	}
 	
 	public boolean canRequest(AbstractRequest request)
 	{
-		return (_requests != null) && _requests.values().stream().allMatch(request::canWorkWith);
+		return _requests.values().stream().allMatch(request::canWorkWith);
 	}
 	
 	/**
@@ -14970,7 +14919,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean removeRequest(Class<? extends AbstractRequest> clazz)
 	{
-		return (_requests != null) && (_requests.remove(clazz) != null);
+		return (_requests.remove(clazz) != null);
 	}
 	
 	/**
@@ -14980,7 +14929,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public <T extends AbstractRequest> T getRequest(Class<T> requestClass)
 	{
-		return _requests != null ? requestClass.cast(_requests.get(requestClass)) : null;
+		return requestClass.cast(_requests.get(requestClass));
 	}
 	
 	/**
@@ -14988,12 +14937,12 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean hasRequests()
 	{
-		return (_requests != null) && !_requests.isEmpty();
+		return !_requests.isEmpty();
 	}
 	
 	public boolean hasItemRequest()
 	{
-		return (_requests != null) && _requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
+		return _requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
 	}
 	
 	/**
@@ -15004,7 +14953,7 @@ public final class L2PcInstance extends L2Playable
 	@SafeVarargs
 	public final boolean hasRequest(Class<? extends AbstractRequest> requestClass, Class<? extends AbstractRequest>... classes)
 	{
-		if (_requests == null)
+		if (_requests.isEmpty())
 		{
 			return false;
 		}
@@ -15024,7 +14973,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean isProcessingItem(int objectId)
 	{
-		return (_requests != null) && _requests.values().stream().anyMatch(req -> req.isUsing(objectId));
+		return _requests.values().stream().anyMatch(req -> req.isUsing(objectId));
 	}
 	
 	/**
@@ -15033,10 +14982,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void removeRequestsThatProcessesItem(int objectId)
 	{
-		if (_requests != null)
-		{
-			_requests.values().removeIf(req -> req.isUsing(objectId));
-		}
+		_requests.values().removeIf(req -> req.isUsing(objectId));
 	}
 	
 	/*
@@ -15095,16 +15041,6 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public Map<Integer, ExResponseCommissionInfo> getLastCommissionInfos()
 	{
-		if (_lastCommissionInfos == null)
-		{
-			synchronized (this)
-			{
-				if (_lastCommissionInfos == null)
-				{
-					_lastCommissionInfos = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return _lastCommissionInfos;
 	}
 	

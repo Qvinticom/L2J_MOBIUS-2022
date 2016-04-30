@@ -1834,28 +1834,25 @@ public final class Skill implements IIdentifiable
 		{
 			synchronized (this)
 			{
-				if (_effectTypes == null)
+				final Set<Byte> effectTypesSet = new HashSet<>();
+				for (List<AbstractEffect> effectList : _effectLists.values())
 				{
-					final Set<Byte> effectTypesSet = new HashSet<>();
-					for (List<AbstractEffect> effectList : _effectLists.values())
+					if (effectList != null)
 					{
-						if (effectList != null)
+						for (AbstractEffect effect : effectList)
 						{
-							for (AbstractEffect effect : effectList)
+							if (effect == null)
 							{
-								if (effect == null)
-								{
-									continue;
-								}
-								effectTypesSet.add((byte) effect.getEffectType().ordinal());
+								continue;
 							}
+							effectTypesSet.add((byte) effect.getEffectType().ordinal());
 						}
 					}
-					
-					final Byte[] effectTypesArray = effectTypesSet.toArray(new Byte[effectTypesSet.size()]);
-					Arrays.sort(effectTypesArray);
-					_effectTypes = effectTypesArray;
 				}
+				
+				final Byte[] effectTypesArray = effectTypesSet.toArray(new Byte[effectTypesSet.size()]);
+				Arrays.sort(effectTypesArray);
+				_effectTypes = effectTypesArray;
 			}
 		}
 		

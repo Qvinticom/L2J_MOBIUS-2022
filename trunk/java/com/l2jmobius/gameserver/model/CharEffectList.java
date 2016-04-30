@@ -25,6 +25,7 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
@@ -64,21 +65,21 @@ public final class CharEffectList
 {
 	private static final Logger _log = Logger.getLogger(CharEffectList.class.getName());
 	/** Queue containing all effects from buffs for this effect list. */
-	private volatile Queue<BuffInfo> _buffs;
+	private volatile Queue<BuffInfo> _buffs = new ConcurrentLinkedQueue<>();
 	/** Queue containing all triggered skills for this effect list. */
-	private volatile Queue<BuffInfo> _triggered;
+	private volatile Queue<BuffInfo> _triggered = new ConcurrentLinkedQueue<>();
 	/** Queue containing all dances/songs for this effect list. */
-	private volatile Queue<BuffInfo> _dances;
+	private volatile Queue<BuffInfo> _dances = new ConcurrentLinkedQueue<>();
 	/** Queue containing all toggle for this effect list. */
-	private volatile Queue<BuffInfo> _toggles;
+	private volatile Queue<BuffInfo> _toggles = new ConcurrentLinkedQueue<>();
 	/** Queue containing all debuffs for this effect list. */
-	private volatile Queue<BuffInfo> _debuffs;
+	private volatile Queue<BuffInfo> _debuffs = new ConcurrentLinkedQueue<>();
 	/** Queue containing all passives for this effect list. They bypass most of the actions and they are not included in most operations. */
-	private volatile Queue<BuffInfo> _passives;
+	private volatile Queue<BuffInfo> _passives = new ConcurrentLinkedQueue<>();
 	/** Map containing the all stacked effect in progress for each abnormal type. */
-	private volatile Map<AbnormalType, BuffInfo> _stackedEffects;
+	private volatile Map<AbnormalType, BuffInfo> _stackedEffects = new ConcurrentHashMap<>();
 	/** Set containing all abnormal types that shouldn't be added to this creature effect list. */
-	private volatile Set<AbnormalType> _blockedBuffSlots = null;
+	private volatile Set<AbnormalType> _blockedBuffSlots = new CopyOnWriteArraySet<>();
 	/** Short buff skill ID. */
 	private BuffInfo _shortBuff = null;
 	/** If {@code true} this effect list has buffs removed on any action. */
@@ -113,16 +114,6 @@ public final class CharEffectList
 	 */
 	public Queue<BuffInfo> getBuffs()
 	{
-		if (_buffs == null)
-		{
-			synchronized (this)
-			{
-				if (_buffs == null)
-				{
-					_buffs = new ConcurrentLinkedQueue<>();
-				}
-			}
-		}
 		return _buffs;
 	}
 	
@@ -132,16 +123,6 @@ public final class CharEffectList
 	 */
 	public Queue<BuffInfo> getTriggered()
 	{
-		if (_triggered == null)
-		{
-			synchronized (this)
-			{
-				if (_triggered == null)
-				{
-					_triggered = new ConcurrentLinkedQueue<>();
-				}
-			}
-		}
 		return _triggered;
 	}
 	
@@ -151,16 +132,6 @@ public final class CharEffectList
 	 */
 	public Queue<BuffInfo> getDances()
 	{
-		if (_dances == null)
-		{
-			synchronized (this)
-			{
-				if (_dances == null)
-				{
-					_dances = new ConcurrentLinkedQueue<>();
-				}
-			}
-		}
 		return _dances;
 	}
 	
@@ -170,16 +141,6 @@ public final class CharEffectList
 	 */
 	public Queue<BuffInfo> getToggles()
 	{
-		if (_toggles == null)
-		{
-			synchronized (this)
-			{
-				if (_toggles == null)
-				{
-					_toggles = new ConcurrentLinkedQueue<>();
-				}
-			}
-		}
 		return _toggles;
 	}
 	
@@ -189,16 +150,6 @@ public final class CharEffectList
 	 */
 	public Queue<BuffInfo> getDebuffs()
 	{
-		if (_debuffs == null)
-		{
-			synchronized (this)
-			{
-				if (_debuffs == null)
-				{
-					_debuffs = new ConcurrentLinkedQueue<>();
-				}
-			}
-		}
 		return _debuffs;
 	}
 	
@@ -208,16 +159,6 @@ public final class CharEffectList
 	 */
 	public Queue<BuffInfo> getPassives()
 	{
-		if (_passives == null)
-		{
-			synchronized (this)
-			{
-				if (_passives == null)
-				{
-					_passives = new ConcurrentLinkedQueue<>();
-				}
-			}
-		}
 		return _passives;
 	}
 	
@@ -465,16 +406,6 @@ public final class CharEffectList
 	 */
 	public void addBlockedBuffSlots(Set<AbnormalType> blockedBuffSlots)
 	{
-		if (_blockedBuffSlots == null)
-		{
-			synchronized (this)
-			{
-				if (_blockedBuffSlots == null)
-				{
-					_blockedBuffSlots = ConcurrentHashMap.newKeySet(blockedBuffSlots.size());
-				}
-			}
-		}
 		_blockedBuffSlots.addAll(blockedBuffSlots);
 	}
 	
@@ -1265,17 +1196,6 @@ public final class CharEffectList
 		// Verify stacked skills.
 		else
 		{
-			if (_stackedEffects == null)
-			{
-				synchronized (this)
-				{
-					if (_stackedEffects == null)
-					{
-						_stackedEffects = new ConcurrentHashMap<>();
-					}
-				}
-			}
-			
 			if (_stackedEffects.containsKey(skill.getAbnormalType()))
 			{
 				BuffInfo stackedInfo = _stackedEffects.get(skill.getAbnormalType());

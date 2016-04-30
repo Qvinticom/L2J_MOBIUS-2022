@@ -51,7 +51,7 @@ public final class BuffInfo
 	private final List<AbstractEffect> _effects = new ArrayList<>(1);
 	// Tasks
 	/** Effect tasks for ticks. */
-	private volatile Map<AbstractEffect, EffectTaskInfo> _tasks;
+	private volatile Map<AbstractEffect, EffectTaskInfo> _tasks = new ConcurrentHashMap<>();
 	/** Scheduled future. */
 	private ScheduledFuture<?> _scheduledFutureTimeTask;
 	// Time and ticks
@@ -106,16 +106,6 @@ public final class BuffInfo
 	 */
 	private void addTask(AbstractEffect effect, EffectTaskInfo effectTaskInfo)
 	{
-		if (_tasks == null)
-		{
-			synchronized (this)
-			{
-				if (_tasks == null)
-				{
-					_tasks = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		_tasks.put(effect, effectTaskInfo);
 	}
 	
@@ -126,7 +116,7 @@ public final class BuffInfo
 	 */
 	private EffectTaskInfo getEffectTask(AbstractEffect effect)
 	{
-		return (_tasks == null) ? null : _tasks.get(effect);
+		return _tasks.get(effect);
 	}
 	
 	/**
@@ -318,12 +308,9 @@ public final class BuffInfo
 	public void finishEffects()
 	{
 		// Cancels the ticking task.
-		if (_tasks != null)
+		for (EffectTaskInfo effectTask : _tasks.values())
 		{
-			for (EffectTaskInfo effectTask : _tasks.values())
-			{
-				effectTask.getScheduledFuture().cancel(true); // Don't allow to finish current run.
-			}
+			effectTask.getScheduledFuture().cancel(true); // Don't allow to finish current run.
 		}
 		// Remove stats
 		removeStats();
@@ -405,13 +392,10 @@ public final class BuffInfo
 	 */
 	public int getTickCount(AbstractEffect effect)
 	{
-		if (_tasks != null)
+		final EffectTaskInfo effectTaskInfo = _tasks.get(effect);
+		if (effectTaskInfo != null)
 		{
-			final EffectTaskInfo effectTaskInfo = _tasks.get(effect);
-			if (effectTaskInfo != null)
-			{
-				return effectTaskInfo.getEffectTask().getTickCount();
-			}
+			return effectTaskInfo.getEffectTask().getTickCount();
 		}
 		return 0;
 	}

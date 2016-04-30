@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.util.Util;
 public class ObjectKnownList
 {
 	private final L2Object _activeObject;
-	private volatile Map<Integer, L2Object> _knownObjects;
+	private volatile Map<Integer, L2Object> _knownObjects = new ConcurrentHashMap<>();
 	
 	public ObjectKnownList(L2Object activeObject)
 	{
@@ -193,16 +193,6 @@ public class ObjectKnownList
 	 */
 	public final Map<Integer, L2Object> getKnownObjects()
 	{
-		if (_knownObjects == null)
-		{
-			synchronized (this)
-			{
-				if (_knownObjects == null)
-				{
-					_knownObjects = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return _knownObjects;
 	}
 }

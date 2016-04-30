@@ -29,9 +29,9 @@ import com.l2jmobius.gameserver.util.Util;
 
 public class CharKnownList extends ObjectKnownList
 {
-	private volatile Map<Integer, L2PcInstance> _knownPlayers;
-	private volatile Map<Integer, L2Summon> _knownSummons;
-	private volatile Map<Integer, Integer> _knownRelations;
+	private volatile Map<Integer, L2PcInstance> _knownPlayers = new ConcurrentHashMap<>();
+	private volatile Map<Integer, L2Summon> _knownSummons = new ConcurrentHashMap<>();
+	private volatile Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
 	
 	public CharKnownList(L2Character activeChar)
 	{
@@ -225,46 +225,16 @@ public class CharKnownList extends ObjectKnownList
 	
 	public final Map<Integer, L2PcInstance> getKnownPlayers()
 	{
-		if (_knownPlayers == null)
-		{
-			synchronized (this)
-			{
-				if (_knownPlayers == null)
-				{
-					_knownPlayers = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return _knownPlayers;
 	}
 	
 	public final Map<Integer, Integer> getKnownRelations()
 	{
-		if (_knownRelations == null)
-		{
-			synchronized (this)
-			{
-				if (_knownRelations == null)
-				{
-					_knownRelations = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return _knownRelations;
 	}
 	
 	public final Map<Integer, L2Summon> getKnownSummons()
 	{
-		if (_knownSummons == null)
-		{
-			synchronized (this)
-			{
-				if (_knownSummons == null)
-				{
-					_knownSummons = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return _knownSummons;
 	}
 	

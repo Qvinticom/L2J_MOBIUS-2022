@@ -29,6 +29,7 @@ import java.util.Objects;
 import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
@@ -190,7 +191,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 {
 	public static final Logger _log = Logger.getLogger(L2Character.class.getName());
 	
-	private volatile Set<L2Character> _attackByList;
+	private volatile Set<L2Character> _attackByList = new CopyOnWriteArraySet<>();
 	private volatile boolean _isCastingNow = false;
 	private volatile boolean _isCastingSimultaneouslyNow = false;
 	private Skill _lastSkillCast;
@@ -225,11 +226,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/** Map containing all skills of this character. */
 	private final Map<Integer, Skill> _skills = new ConcurrentHashMap<>();
 	/** Map containing the skill reuse time stamps. */
-	private volatile Map<Integer, TimeStamp> _reuseTimeStampsSkills = null;
+	private volatile Map<Integer, TimeStamp> _reuseTimeStampsSkills = new ConcurrentHashMap<>();
 	/** Map containing the item reuse time stamps. */
-	private volatile Map<Integer, TimeStamp> _reuseTimeStampsItems = null;
+	private volatile Map<Integer, TimeStamp> _reuseTimeStampsItems = new ConcurrentHashMap<>();
 	/** Map containing all the disabled skills. */
-	private volatile Map<Integer, Long> _disabledSkills = null;
+	private volatile Map<Integer, Long> _disabledSkills = new ConcurrentHashMap<>();
 	private boolean _allSkillsDisabled;
 	
 	private final byte[] _zones = new byte[ZoneId.getZoneCount()];
@@ -246,9 +247,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	private boolean _lethalable = true;
 	
-	private volatile Map<Integer, OptionsSkillHolder> _triggerSkills;
+	private volatile Map<Integer, OptionsSkillHolder> _triggerSkills = new ConcurrentHashMap<>();
 	
-	private volatile Map<Integer, InvulSkillHolder> _invulAgainst;
+	private volatile Map<Integer, InvulSkillHolder> _invulAgainst = new ConcurrentHashMap<>();
 	/** Creatures effect list. */
 	private final CharEffectList _effectList = new CharEffectList(this);
 	/** The character that summons this character. */
@@ -258,8 +259,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	private SkillChannelized _channelized = null;
 	
-	private volatile Set<AbnormalVisualEffect> _abnormalVisualEffects;
-	private volatile Set<AbnormalVisualEffect> _currentAbnormalVisualEffects;
+	private volatile Set<AbnormalVisualEffect> _abnormalVisualEffects = new CopyOnWriteArraySet<>();
+	private volatile Set<AbnormalVisualEffect> _currentAbnormalVisualEffects = new CopyOnWriteArraySet<>();
 	
 	/** Movement data of this L2Character */
 	protected MoveData _move;
@@ -2135,16 +2136,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final void addTimeStampItem(L2ItemInstance item, long reuse, long systime)
 	{
-		if (_reuseTimeStampsItems == null)
-		{
-			synchronized (this)
-			{
-				if (_reuseTimeStampsItems == null)
-				{
-					_reuseTimeStampsItems = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		_reuseTimeStampsItems.put(item.getObjectId(), new TimeStamp(item, reuse, systime));
 	}
 	
@@ -2155,7 +2146,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final synchronized long getItemRemainingReuseTime(int itemObjId)
 	{
-		final TimeStamp reuseStamp = (_reuseTimeStampsItems != null) ? _reuseTimeStampsItems.get(itemObjId) : null;
+		final TimeStamp reuseStamp = _reuseTimeStampsItems.get(itemObjId);
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
 	}
 	
@@ -2166,7 +2157,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final long getReuseDelayOnGroup(int group)
 	{
-		if ((group > 0) && (_reuseTimeStampsItems != null))
+		if (group > 0)
 		{
 			for (TimeStamp ts : _reuseTimeStampsItems.values())
 			{
@@ -2207,16 +2198,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final void addTimeStamp(Skill skill, long reuse, long systime)
 	{
-		if (_reuseTimeStampsSkills == null)
-		{
-			synchronized (this)
-			{
-				if (_reuseTimeStampsSkills == null)
-				{
-					_reuseTimeStampsSkills = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		_reuseTimeStampsSkills.put(skill.getReuseHashCode(), new TimeStamp(skill, reuse, systime));
 	}
 	
@@ -2226,10 +2207,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final synchronized void removeTimeStamp(Skill skill)
 	{
-		if (_reuseTimeStampsSkills != null)
-		{
-			_reuseTimeStampsSkills.remove(skill.getReuseHashCode());
-		}
+		_reuseTimeStampsSkills.remove(skill.getReuseHashCode());
 	}
 	
 	/**
@@ -2237,10 +2215,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final synchronized void resetTimeStamps()
 	{
-		if (_reuseTimeStampsSkills != null)
-		{
-			_reuseTimeStampsSkills.clear();
-		}
+		_reuseTimeStampsSkills.clear();
 	}
 	
 	/**
@@ -2250,7 +2225,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final synchronized long getSkillRemainingReuseTime(int hashCode)
 	{
-		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
+		final TimeStamp reuseStamp = _reuseTimeStampsSkills.get(hashCode);
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
 	}
 	
@@ -2261,7 +2236,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final synchronized boolean hasSkillReuse(int hashCode)
 	{
-		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
+		final TimeStamp reuseStamp = _reuseTimeStampsSkills.get(hashCode);
 		return (reuseStamp != null) && reuseStamp.hasNotPassed();
 	}
 	
@@ -2272,7 +2247,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final synchronized TimeStamp getSkillReuseTimeStamp(int hashCode)
 	{
-		return _reuseTimeStampsSkills != null ? _reuseTimeStampsSkills.get(hashCode) : null;
+		return _reuseTimeStampsSkills.get(hashCode);
 	}
 	
 	/**
@@ -2290,7 +2265,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void enableSkill(Skill skill)
 	{
-		if ((skill == null) || (_disabledSkills == null))
+		if (skill == null)
 		{
 			return;
 		}
@@ -2309,18 +2284,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			return;
 		}
-		
-		if (_disabledSkills == null)
-		{
-			synchronized (this)
-			{
-				if (_disabledSkills == null)
-				{
-					_disabledSkills = new ConcurrentHashMap<>();
-				}
-			}
-		}
-		
 		_disabledSkills.put(skill.getReuseHashCode(), delay > 0 ? System.currentTimeMillis() + delay : Long.MAX_VALUE);
 	}
 	
@@ -2329,10 +2292,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final synchronized void resetDisabledSkills()
 	{
-		if (_disabledSkills != null)
-		{
-			_disabledSkills.clear();
-		}
+		_disabledSkills.clear();
 	}
 	
 	/**
@@ -2357,7 +2317,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return true;
 		}
 		
-		if (_disabledSkills == null)
+		if (_disabledSkills.isEmpty())
 		{
 			return false;
 		}
@@ -2454,7 +2414,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			getWorldRegion().onDeath(this);
 		}
 		
-		getAttackByList().clear();
+		clearAttackByList();
 		
 		if (isChannelized())
 		{
@@ -2555,12 +2515,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			synchronized (this)
 			{
-				if (_ai == null)
-				{
-					// Return the new AI within the synchronized block
-					// to avoid being nulled by other threads
-					return _ai = initAI();
-				}
+				// Return the new AI within the synchronized block
+				// to avoid being nulled by other threads
+				return _ai = initAI();
 			}
 		}
 		return _ai;
@@ -2624,17 +2581,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final Set<L2Character> getAttackByList()
 	{
-		if (_attackByList == null)
-		{
-			synchronized (this)
-			{
-				if (_attackByList == null)
-				{
-					_attackByList = ConcurrentHashMap.newKeySet();
-				}
-			}
-		}
 		return _attackByList;
+	}
+	
+	public void clearAttackByList()
+	{
+		_attackByList.clear();
 	}
 	
 	public final Skill getLastSimultaneousSkillCast()
@@ -3135,12 +3087,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			.collect(Collectors.toCollection(HashSet::new));
 		//@formatter:on
 		
-		if (_abnormalVisualEffects != null)
+		if (!_abnormalVisualEffects.isEmpty())
 		{
 			abnormalVisualEffects.addAll(_abnormalVisualEffects);
 		}
 		
-		if ((_currentAbnormalVisualEffects == null) || !_currentAbnormalVisualEffects.equals(abnormalVisualEffects))
+		if ((_currentAbnormalVisualEffects.isEmpty()) || !_currentAbnormalVisualEffects.equals(abnormalVisualEffects))
 		{
 			_currentAbnormalVisualEffects = abnormalVisualEffects;
 			updateAbnormalVisualEffects();
@@ -3153,7 +3105,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public Set<AbnormalVisualEffect> getCurrentAbnormalVisualEffects()
 	{
-		return _currentAbnormalVisualEffects != null ? _currentAbnormalVisualEffects : Collections.emptySet();
+		return _currentAbnormalVisualEffects;
 	}
 	
 	/**
@@ -3163,7 +3115,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public boolean hasAbnormalVisualEffect(AbnormalVisualEffect ave)
 	{
-		return (_abnormalVisualEffects != null) && _abnormalVisualEffects.contains(ave);
+		return _abnormalVisualEffects.contains(ave);
 	}
 	
 	/**
@@ -3174,16 +3126,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		for (AbnormalVisualEffect ave : aves)
 		{
-			if (_abnormalVisualEffects == null)
-			{
-				synchronized (this)
-				{
-					if (_abnormalVisualEffects == null)
-					{
-						_abnormalVisualEffects = Collections.newSetFromMap(new ConcurrentHashMap<>());
-					}
-				}
-			}
 			_abnormalVisualEffects.add(ave);
 		}
 		resetCurrentAbnormalVisualEffects();
@@ -3195,14 +3137,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final void stopAbnormalVisualEffect(AbnormalVisualEffect... aves)
 	{
-		if (_abnormalVisualEffects != null)
+		for (AbnormalVisualEffect ave : aves)
 		{
-			for (AbnormalVisualEffect ave : aves)
-			{
-				_abnormalVisualEffects.remove(ave);
-			}
-			resetCurrentAbnormalVisualEffects();
+			_abnormalVisualEffects.remove(ave);
 		}
+		resetCurrentAbnormalVisualEffects();
 	}
 	
 	/**
@@ -4953,16 +4892,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				target.breakCast();
 			}
 			
-			if (_triggerSkills != null)
+			for (OptionsSkillHolder holder : _triggerSkills.values())
 			{
-				for (OptionsSkillHolder holder : _triggerSkills.values())
+				if (((!crit && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && crit)) && (Rnd.get(100) < holder.getChance()))
 				{
-					if (((!crit && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && crit)) && (Rnd.get(100) < holder.getChance()))
-					{
-						makeTriggerCast(holder.getSkill(), target);
-					}
+					makeTriggerCast(holder.getSkill(), target);
 				}
 			}
+			
 			// Launch weapon onCritical Special ability effect if available
 			if (crit && (weapon != null))
 			{
@@ -5748,14 +5685,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						activeWeapon.castOnMagicSkill(this, target, skill);
 					}
 					
-					if (_triggerSkills != null)
+					for (OptionsSkillHolder holder : _triggerSkills.values())
 					{
-						for (OptionsSkillHolder holder : _triggerSkills.values())
+						if (((skill.isMagic() && (holder.getSkillType() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionsSkillType.ATTACK))) && (Rnd.get(100) < holder.getChance()))
 						{
-							if (((skill.isMagic() && (holder.getSkillType() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionsSkillType.ATTACK))) && (Rnd.get(100) < holder.getChance()))
-							{
-								makeTriggerCast(holder.getSkill(), target);
-							}
+							makeTriggerCast(holder.getSkill(), target);
 						}
 					}
 				}
@@ -6506,16 +6440,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public Map<Integer, OptionsSkillHolder> getTriggerSkills()
 	{
-		if (_triggerSkills == null)
-		{
-			synchronized (this)
-			{
-				if (_triggerSkills == null)
-				{
-					_triggerSkills = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return _triggerSkills;
 	}
 	
@@ -6793,7 +6717,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public boolean isInvulAgainst(int skillId, int skillLvl)
 	{
-		if (_invulAgainst == null)
+		if (_invulAgainst.isEmpty())
 		{
 			return false;
 		}
@@ -6803,16 +6727,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	private Map<Integer, InvulSkillHolder> getInvulAgainstSkills()
 	{
-		if (_invulAgainst == null)
-		{
-			synchronized (this)
-			{
-				if (_invulAgainst == null)
-				{
-					_invulAgainst = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return _invulAgainst;
 	}
 	

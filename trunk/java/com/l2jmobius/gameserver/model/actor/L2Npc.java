@@ -144,7 +144,7 @@ public class L2Npc extends L2Character
 	private int _shotsMask = 0;
 	private int _killingBlowWeaponId;
 	/** Map of summoned NPCs by this NPC. */
-	private volatile Map<Integer, L2Npc> _summonedNpcs = null;
+	private volatile Map<Integer, L2Npc> _summonedNpcs = new ConcurrentHashMap<>();
 	
 	/**
 	 * Creates a NPC.
@@ -1685,19 +1685,7 @@ public class L2Npc extends L2Character
 	 */
 	public final void addSummonedNpc(L2Npc npc)
 	{
-		if (_summonedNpcs == null)
-		{
-			synchronized (this)
-			{
-				if (_summonedNpcs == null)
-				{
-					_summonedNpcs = new ConcurrentHashMap<>();
-				}
-			}
-		}
-		
 		_summonedNpcs.put(npc.getObjectId(), npc);
-		
 		npc.setSummoner(this);
 	}
 	

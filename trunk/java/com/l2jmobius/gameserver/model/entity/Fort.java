@@ -890,10 +890,7 @@ public final class Fort extends AbstractResidence
 		{
 			synchronized (this)
 			{
-				if (_siege == null)
-				{
-					_siege = new FortSiege(this);
-				}
+				_siege = new FortSiege(this);
 			}
 		}
 		return _siege;

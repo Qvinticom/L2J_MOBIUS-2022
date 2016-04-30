@@ -30,7 +30,7 @@ import com.l2jmobius.util.EmptyQueue;
  */
 public class ListenersContainer
 {
-	private volatile Map<EventType, Queue<AbstractEventListener>> _listeners = null;
+	private volatile Map<EventType, Queue<AbstractEventListener>> _listeners = new ConcurrentHashMap<>();
 	
 	/**
 	 * Registers listener for a callback when specified event is executed.
@@ -58,10 +58,6 @@ public class ListenersContainer
 		{
 			throw new NullPointerException("Listener cannot be null!");
 		}
-		else if (_listeners == null)
-		{
-			throw new NullPointerException("Listeners container is not initialized!");
-		}
 		else if (!_listeners.containsKey(listener.getType()))
 		{
 			throw new IllegalAccessError("Listeners container doesn't had " + listener.getType() + " event type added!");
@@ -77,7 +73,7 @@ public class ListenersContainer
 	 */
 	public Queue<AbstractEventListener> getListeners(EventType type)
 	{
-		return (_listeners != null) && _listeners.containsKey(type) ? _listeners.get(type) : EmptyQueue.emptyQueue();
+		return _listeners.containsKey(type) ? _listeners.get(type) : EmptyQueue.emptyQueue();
 	}
 	
 	public void removeListenerIf(EventType type, Predicate<? super AbstractEventListener> filter)
@@ -87,10 +83,7 @@ public class ListenersContainer
 	
 	public void removeListenerIf(Predicate<? super AbstractEventListener> filter)
 	{
-		if (_listeners != null)
-		{
-			getListeners().values().forEach(queue -> queue.stream().filter(filter).forEach(AbstractEventListener::unregisterMe));
-		}
+		getListeners().values().forEach(queue -> queue.stream().filter(filter).forEach(AbstractEventListener::unregisterMe));
 	}
 	
 	public boolean hasListener(EventType type)
@@ -104,16 +97,6 @@ public class ListenersContainer
 	 */
 	private Map<EventType, Queue<AbstractEventListener>> getListeners()
 	{
-		if (_listeners == null)
-		{
-			synchronized (this)
-			{
-				if (_listeners == null)
-				{
-					_listeners = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		return _listeners;
 	}
 }

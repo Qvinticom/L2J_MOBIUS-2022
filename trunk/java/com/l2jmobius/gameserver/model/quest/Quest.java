@@ -246,10 +246,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			synchronized (this)
 			{
-				if (_questTimers == null)
-				{
-					_questTimers = new ConcurrentHashMap<>(1);
-				}
+				_questTimers = new ConcurrentHashMap<>(1);
 			}
 		}
 		return _questTimers;
@@ -2799,10 +2796,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			synchronized (this)
 			{
-				if (_startCondition == null)
-				{
-					_startCondition = new LinkedHashMap<>(1);
-				}
+				_startCondition = new LinkedHashMap<>(1);
 			}
 		}
 		return _startCondition;

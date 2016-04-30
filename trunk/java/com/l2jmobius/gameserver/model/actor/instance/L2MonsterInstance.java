@@ -193,10 +193,7 @@ public class L2MonsterInstance extends L2Attackable
 		{
 			synchronized (this)
 			{
-				if (_minionList == null)
-				{
-					_minionList = new MinionList(this);
-				}
+				_minionList = new MinionList(this);
 			}
 		}
 		return _minionList;
