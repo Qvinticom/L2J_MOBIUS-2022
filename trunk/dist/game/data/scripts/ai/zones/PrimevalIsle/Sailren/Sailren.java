@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.individual.Sailren;
+package ai.zones.PrimevalIsle.Sailren;
 
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -65,7 +65,7 @@ final class Sailren extends AbstractNpcAI
 	
 	private Sailren()
 	{
-		super(Sailren.class.getSimpleName(), "ai/individual");
+		super(Sailren.class.getSimpleName(), "ai/zones/PrimevalIsle");
 		addStartNpc(STATUE, CUBIC);
 		addTalkId(STATUE, CUBIC);
 		addFirstTalkId(STATUE);

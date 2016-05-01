@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.group_template;
+package ai.zones.PrimevalIsle;
 
 import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -104,7 +104,7 @@ final class PrimevalIsle extends AbstractNpcAI
 	
 	private PrimevalIsle()
 	{
-		super(PrimevalIsle.class.getSimpleName(), "ai/group_template");
+		super(PrimevalIsle.class.getSimpleName(), "ai/zones/PrimevalIsle");
 		addSpawnId(TREX);
 		addSpawnId(SPRIGNANT);
 		addSpawnId(MONSTERS);

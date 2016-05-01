@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Teleports.ElrokiTeleporters;
+package ai.zones.PrimevalIsle.ElrokiTeleporters;
 
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -37,7 +37,7 @@ final class ElrokiTeleporters extends AbstractNpcAI
 	
 	private ElrokiTeleporters()
 	{
-		super(ElrokiTeleporters.class.getSimpleName(), "ai/npc/Teleports");
+		super(ElrokiTeleporters.class.getSimpleName(), "ai/zones/PrimevalIsle");
 		addFirstTalkId(ORAHOCHIN, GARIACHIN);
 		addStartNpc(ORAHOCHIN, GARIACHIN);
 		addTalkId(ORAHOCHIN, GARIACHIN);
