@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.individual;
+package ai.zones.DragonValley;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -35,7 +35,7 @@ final class Rakun extends AbstractNpcAI
 	
 	private Rakun()
 	{
-		super(Rakun.class.getSimpleName(), "ai/individual");
+		super(Rakun.class.getSimpleName(), "ai/zones/DragonValley");
 		addSeeCreatureId(RAKUN);
 	}
 	
