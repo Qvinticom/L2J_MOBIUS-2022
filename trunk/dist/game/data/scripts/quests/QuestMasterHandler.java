@@ -96,19 +96,13 @@ import quests.Q00254_LegendaryTales.Q00254_LegendaryTales;
 import quests.Q00255_Tutorial.Q00255_Tutorial;
 import quests.Q00270_TheOneWhoEndsSilence.Q00270_TheOneWhoEndsSilence;
 import quests.Q00278_HomeSecurity.Q00278_HomeSecurity;
-import quests.Q00279_TargetOfOpportunity.Q00279_TargetOfOpportunity;
 import quests.Q00298_LizardmensConspiracy.Q00298_LizardmensConspiracy;
-import quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman;
 import quests.Q00307_ControlDeviceOfTheGiants.Q00307_ControlDeviceOfTheGiants;
 import quests.Q00310_OnlyWhatRemains.Q00310_OnlyWhatRemains;
-import quests.Q00326_VanquishRemnants.Q00326_VanquishRemnants;
 import quests.Q00336_CoinsOfMagic.Q00336_CoinsOfMagic;
 import quests.Q00337_AudienceWithTheLandDragon.Q00337_AudienceWithTheLandDragon;
-import quests.Q00350_EnhanceYourWeapon.Q00350_EnhanceYourWeapon;
-import quests.Q00357_WarehouseKeepersAmbition.Q00357_WarehouseKeepersAmbition;
 import quests.Q00359_ForASleeplessDeadman.Q00359_ForASleeplessDeadman;
 import quests.Q00371_ShrieksOfGhosts.Q00371_ShrieksOfGhosts;
-import quests.Q00372_LegacyOfInsolence.Q00372_LegacyOfInsolence;
 import quests.Q00373_SupplierOfReagents.Q00373_SupplierOfReagents;
 import quests.Q00376_ExplorationOfTheGiantsCavePart1.Q00376_ExplorationOfTheGiantsCavePart1;
 import quests.Q00377_ExplorationOfTheGiantsCavePart2.Q00377_ExplorationOfTheGiantsCavePart2;
@@ -152,17 +146,12 @@ import quests.Q00509_AClansFame.Q00509_AClansFame;
 import quests.Q00510_AClansPrestige.Q00510_AClansPrestige;
 import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;
 import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
-import quests.Q00552_OlympiadVeteran.Q00552_OlympiadVeteran;
 import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
-import quests.Q00603_DaimonTheWhiteEyedPart1.Q00603_DaimonTheWhiteEyedPart1;
-import quests.Q00604_DaimonTheWhiteEyedPart2.Q00604_DaimonTheWhiteEyedPart2;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00621_EggDelivery.Q00621_EggDelivery;
 import quests.Q00622_SpecialtyLiquorDelivery.Q00622_SpecialtyLiquorDelivery;
 import quests.Q00623_TheFinestFood.Q00623_TheFinestFood;
-import quests.Q00624_TheFinestIngredientsPart1.Q00624_TheFinestIngredientsPart1;
-import quests.Q00625_TheFinestIngredientsPart2.Q00625_TheFinestIngredientsPart2;
 import quests.Q00626_ADarkTwilight.Q00626_ADarkTwilight;
 import quests.Q00627_HeartInSearchOfPower.Q00627_HeartInSearchOfPower;
 import quests.Q00631_DeliciousTopChoiceMeat.Q00631_DeliciousTopChoiceMeat;
@@ -177,10 +166,6 @@ import quests.Q00652_AnAgedExAdventurer.Q00652_AnAgedExAdventurer;
 import quests.Q00655_AGrandPlanForTamingWildBeasts.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
-import quests.Q00699_GuardianOfTheSkies.Q00699_GuardianOfTheSkies;
-import quests.Q00700_CursedLife.Q00700_CursedLife;
-import quests.Q00701_ProofOfExistence.Q00701_ProofOfExistence;
-import quests.Q00702_ATrapForRevenge.Q00702_ATrapForRevenge;
 import quests.Q00754_AssistingTheRebelForces.Q00754_AssistingTheRebelForces;
 import quests.Q00755_InNeedOfPetras.Q00755_InNeedOfPetras;
 import quests.Q00756_TopQualityPetra.Q00756_TopQualityPetra;
@@ -194,7 +179,6 @@ import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
 import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
 import quests.Q00907_DragonTrophyValakas.Q00907_DragonTrophyValakas;
 import quests.Q00943_FillingTheEnergyOfDestruction.Q00943_FillingTheEnergyOfDestruction;
-import quests.Q00998_FallenAngelSelect.Q00998_FallenAngelSelect;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import quests.Q10274_CollectingInTheAir.Q10274_CollectingInTheAir;
 import quests.Q10275_ContainingTheAttributePower.Q10275_ContainingTheAttributePower;
@@ -398,19 +382,13 @@ final class QuestMasterHandler
 		Q00255_Tutorial.class,
 		Q00270_TheOneWhoEndsSilence.class,
 		Q00278_HomeSecurity.class,
-		Q00279_TargetOfOpportunity.class,
 		Q00298_LizardmensConspiracy.class,
-		Q00300_HuntingLetoLizardman.class,
 		Q00307_ControlDeviceOfTheGiants.class,
 		Q00310_OnlyWhatRemains.class,
-		Q00326_VanquishRemnants.class,
 		Q00336_CoinsOfMagic.class,
 		Q00337_AudienceWithTheLandDragon.class,
-		Q00350_EnhanceYourWeapon.class,
-		Q00357_WarehouseKeepersAmbition.class,
 		Q00359_ForASleeplessDeadman.class,
 		Q00371_ShrieksOfGhosts.class,
-		Q00372_LegacyOfInsolence.class,
 		Q00373_SupplierOfReagents.class,
 		Q00376_ExplorationOfTheGiantsCavePart1.class,
 		Q00377_ExplorationOfTheGiantsCavePart2.class,
@@ -451,17 +429,12 @@ final class QuestMasterHandler
 		Q00510_AClansPrestige.class,
 		Q00511_AwlUnderFoot.class,
 		Q00551_OlympiadStarter.class,
-		Q00552_OlympiadVeteran.class,
 		Q00553_OlympiadUndefeated.class,
-		Q00603_DaimonTheWhiteEyedPart1.class,
-		Q00604_DaimonTheWhiteEyedPart2.class,
 		Q00617_GatherTheFlames.class,
 		Q00618_IntoTheFlame.class,
 		Q00621_EggDelivery.class,
 		Q00622_SpecialtyLiquorDelivery.class,
 		Q00623_TheFinestFood.class,
-		Q00624_TheFinestIngredientsPart1.class,
-		Q00625_TheFinestIngredientsPart2.class,
 		Q00626_ADarkTwilight.class,
 		Q00627_HeartInSearchOfPower.class,
 		Q00631_DeliciousTopChoiceMeat.class,
@@ -476,10 +449,6 @@ final class QuestMasterHandler
 		Q00655_AGrandPlanForTamingWildBeasts.class,
 		Q00662_AGameOfCards.class,
 		Q00688_DefeatTheElrokianRaiders.class,
-		Q00699_GuardianOfTheSkies.class,
-		Q00700_CursedLife.class,
-		Q00701_ProofOfExistence.class,
-		Q00702_ATrapForRevenge.class,
 		Q00754_AssistingTheRebelForces.class,
 		Q00755_InNeedOfPetras.class,
 		Q00756_TopQualityPetra.class,
@@ -493,7 +462,6 @@ final class QuestMasterHandler
 		Q00906_TheCallOfValakas.class,
 		Q00907_DragonTrophyValakas.class,
 		Q00943_FillingTheEnergyOfDestruction.class,
-		Q00998_FallenAngelSelect.class,
 		Q10273_GoodDayToFly.class,
 		Q10274_CollectingInTheAir.class,
 		Q10275_ContainingTheAttributePower.class,
