@@ -57,7 +57,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ShortBuffStatusUpdate;
  * Holds all the buff infos that are affecting a creature.<br>
  * Manages the logic that controls whether a buff is added, remove, replaced or set inactive.<br>
  * Uses maps with skill ID as key and buff info DTO as value to avoid iterations.<br>
- * Uses Double-Checked Locking to avoid useless initialization and synchronization issues and overhead.<br>
  * Methods may resemble List interface, although it doesn't implement such interface.
  * @author Zoey76
  */

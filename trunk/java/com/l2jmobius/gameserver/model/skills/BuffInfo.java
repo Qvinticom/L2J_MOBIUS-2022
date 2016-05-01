@@ -100,7 +100,6 @@ public final class BuffInfo
 	
 	/**
 	 * Adds an effect task to this buff info.<br>
-	 * Uses double-checked locking to initialize the map if it's necessary.
 	 * @param effect the effect that owns the task
 	 * @param effectTaskInfo the task info
 	 */
