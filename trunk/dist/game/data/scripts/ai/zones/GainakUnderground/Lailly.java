@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.individual;
+package ai.zones.GainakUnderground;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -34,7 +34,7 @@ final class Lailly extends AbstractNpcAI
 	
 	private Lailly()
 	{
-		super(Lailly.class.getSimpleName(), "ai/individual");
+		super(Lailly.class.getSimpleName(), "ai/zones/GainakUnderground");
 		addSpawnId(LAILLY);
 	}
 	

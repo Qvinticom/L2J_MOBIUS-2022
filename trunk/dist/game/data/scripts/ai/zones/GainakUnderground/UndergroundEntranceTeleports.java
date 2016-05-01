@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Teleports.GainakUndergroundEntrance;
+package ai.zones.GainakUnderground;
 
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Gainak Underground Entrance teleport AI.
  * @author Mobius
  */
-final class GainakUndergroundEntrance extends AbstractNpcAI
+final class UndergroundEntranceTeleports extends AbstractNpcAI
 {
 	// Zones
 	private static final int ZONE_ID_1 = 200207;
@@ -43,9 +43,9 @@ final class GainakUndergroundEntrance extends AbstractNpcAI
 	private static final Location TELEPORT_LOC_5 = new Location(-46867, -149309, -14216);
 	private static final Location TELEPORT_LOC_6 = new Location(18784, -115648, -248);
 	
-	private GainakUndergroundEntrance()
+	private UndergroundEntranceTeleports()
 	{
-		super(GainakUndergroundEntrance.class.getSimpleName(), "ai/npc/Teleports");
+		super(UndergroundEntranceTeleports.class.getSimpleName(), "ai/zones/GainakUnderground");
 		addEnterZoneId(ZONE_ID_1, ZONE_ID_2, ZONE_ID_3, ZONE_ID_4, ZONE_ID_5, ZONE_ID_6);
 	}
 	
@@ -93,6 +93,6 @@ final class GainakUndergroundEntrance extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new GainakUndergroundEntrance();
+		new UndergroundEntranceTeleports();
 	}
 }
