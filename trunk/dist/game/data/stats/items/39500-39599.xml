@@ -1146,28 +1146,38 @@
 	<item id="39586" name="Scroll of Escape: Town of Giran" type="EtcItem">
 		<!-- Teleports you to Town of Giran. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="handler" val="ItemSkills" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="17961-1" /> <!-- Scroll of Escape: Giran -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="39587" name="Scroll of Escape: Dragon Valley" type="EtcItem">
 		<!-- Teleports you to Dragon Valley. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="handler" val="ItemSkills" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="17962-1" /> <!-- Scroll of Escape: Dragon Valley -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="39588" name="Yum Yum Candy Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing a Yum Yum Candy (30-day). Cannot be shared once open. The coupon that came with this gives you the Nom Nom Candy Box. Cannot be used in the Olympiad / Ceremony of Chaos. -->

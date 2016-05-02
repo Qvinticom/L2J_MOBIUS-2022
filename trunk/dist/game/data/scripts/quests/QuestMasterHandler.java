@@ -297,6 +297,7 @@ import quests.Q10790_AMercenaryHelper.Q10790_AMercenaryHelper;
 import quests.Q10791_TheManOfMystery.Q10791_TheManOfMystery;
 import quests.Q10792_LettersFromTheQueen_ForestOfTheDead.Q10792_LettersFromTheQueen_ForestOfTheDead;
 import quests.Q10795_LettersFromTheQueen_WallOfAgros.Q10795_LettersFromTheQueen_WallOfAgros;
+import quests.Q10798_LettersFromTheQueen_DragonValley.Q10798_LettersFromTheQueen_DragonValley;
 
 /**
  * @author NosBit
@@ -584,7 +585,8 @@ final class QuestMasterHandler
 		Q10790_AMercenaryHelper.class,
 		Q10791_TheManOfMystery.class,
 		Q10792_LettersFromTheQueen_ForestOfTheDead.class,
-		Q10795_LettersFromTheQueen_WallOfAgros.class
+		Q10795_LettersFromTheQueen_WallOfAgros.class,
+		Q10798_LettersFromTheQueen_DragonValley.class
 	};
 	
 	public static void main(String[] args)
