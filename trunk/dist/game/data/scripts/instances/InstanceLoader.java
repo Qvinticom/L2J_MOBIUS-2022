@@ -33,6 +33,7 @@ import instances.ElcadiasTent.ElcadiasTent;
 import instances.FaeronTrainingGrounds1.FaeronTrainingGrounds1;
 import instances.FaeronTrainingGrounds2.FaeronTrainingGrounds2;
 import instances.FinalEmperialTomb.FinalEmperialTomb;
+import instances.FortressOfTheDeadInstance.FortressOfTheDeadInstance;
 import instances.HarnakUndergroundRuins.HarnakUndergroundRuins;
 import instances.HideoutOfTheDawn.HideoutOfTheDawn;
 import instances.IceQueensCastle.IceQueensCastle;
@@ -76,6 +77,7 @@ final class InstanceLoader
 		FaeronTrainingGrounds1.class,
 		FaeronTrainingGrounds2.class,
 		FinalEmperialTomb.class,
+		FortressOfTheDeadInstance.class,
 		HarnakUndergroundRuins.class,
 		HideoutOfTheDawn.class,
 		ChamberOfDelusionEast.class,

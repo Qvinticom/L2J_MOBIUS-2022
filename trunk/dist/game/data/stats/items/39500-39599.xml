@@ -510,11 +510,13 @@
 		<!-- Part of a machine used by ancient Ertheia to record prophecies. Double-click to look closer. -->
 		<set name="icon" val="icon.etc_ertheia_prophecy_device_piece" />
 		<set name="default_action" val="SHOW_HTML" />
+		<set name="handler" val="Book" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
@@ -952,14 +954,21 @@
 		<!-- Teleports you to Town of Oren. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9995-1" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="39575" name="Scroll of Escape: Sea of Spores" type="EtcItem">
 		<!-- Teleports you to Sea of Spores. -->
@@ -1008,14 +1017,21 @@
 		<!-- Teleports you to Town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9993-1" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="39579" name="Scroll of Escape: Fields of Massacre" type="EtcItem">
 		<!-- Teleports you to Fields of Massacre. -->
@@ -1060,14 +1076,21 @@
 		<!-- Teleports you to Town of Rune. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9991-1" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="39583" name="Scroll of Escape: Forest of the Dead" type="EtcItem">
 		<!-- Teleports you to Forest of the Dead. -->
@@ -1086,27 +1109,39 @@
 		<!-- Teleports you to Town of Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9933-1" /> <!-- Scroll of Escape: Town of Goddard -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="39585" name="Scroll of Escape: Wall of Argos" type="EtcItem">
 		<!-- Teleports you to Wall of Argos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9974-1" /> <!-- Scroll of Escape: Wall of Argos -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="39586" name="Scroll of Escape: Town of Giran" type="EtcItem">
 		<!-- Teleports you to Town of Giran. -->
@@ -1224,14 +1259,21 @@
 		<!-- Teleports you to Town of Dion. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
- 		<set name="is_auctionable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
- 		<set name="material" val="PAPER" />
+		<set name="item_skill" val="17985-1" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="39596" name="Scroll of Escape: Cruma Tower" type="EtcItem">
 		<!-- Teleports you to Cruma Tower Underground Lv. 3. -->
