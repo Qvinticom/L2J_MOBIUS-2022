@@ -1185,7 +1185,7 @@
 	<!-- Source: https://l2wiki.com/Phoenix_Arrow_-_Yul_Trickster -->
 		<table name="#magicLvl"> 95 101 103 105 </table>
 		<table name="#power"> 45215 56558 59316 62074 </table>
-		<table name="#enchPower"> 46273 47330 48388 49445 50503 51560 52618 53677 54733 55792 </table>
+		<table name="#enchPower"> 46273 47330 48388 49445 50503 51560 52618 53677 54733 65792 </table>
 		<table name="#ench1mpConsume"> 212 198 185 171 158 144 131 117 103 90 </table>
 		<set name="reuseDelay" val="30000" />
 		<set name="castRange" val="600" />
@@ -1195,17 +1195,27 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="GROUND" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="staticReuse" val="true" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<!--<for>
-			<effect abnormalTime="2" count="1" name="SignetPDam" self="1" val="0" />
-		</for>-->
+		<set name="baseCritRate" val="15" />
+		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-686" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="200" />
+		<set name="mpConsume" val="160" />
+		<set name="overHit" val="true" />
+		<set name="rideState" val="NONE" />
+		<cond msgId="113" addName="1">
+			<using kind="BOW" />
+		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="CallSkill">
+				<param skillId="10782" skillLevel="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10782" levels="1" name="Deadly Move 2">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Death blow! Please do not use. -->
 		<set name="icon" val="icon.skill10782" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
