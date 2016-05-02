@@ -470,63 +470,228 @@
 	</skill>
 	<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes $s1 Spirit Ores. --> 
 	<skill id="11134" levels="1" name="Meteor">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="channelingSkillId" val="11139" />
+		<set name="channelingTickInterval" val="2" />
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="107" />
+		<set name="power" val="900" />
+		<set name="hitTime" val="10000" />
+		<set name="castRange" val="900" />
+		<set name="magicLvl" val="105" />
+		<set name="mpConsume" val="1000" />
+		<set name="mpInitialConsume" val="36" />
+		<set name="mpPerChanneling" val="80" />
+		<set name="operateType" val="CHANNELING_CONTINUOUS" />
+		<set name="staticReuse" val="true" />
+		<set name="reuseDelay" val="120000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="GROUND" />
+		<channelingEffects>
+			<effect name="MagicalAttack" />
+		</channelingEffects>
 	</skill>
 	<!-- Creates a black swamp in the selected location, dealing great damage, and receiving $s1 of the target's damage as HP. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Shocks the target. Consumes $s2 Spirit Ores. --> 
 	<skill id="11135" levels="1" name="Black Pool">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="channelingSkillId" val="11140" />
+		<set name="channelingTickInterval" val="2" />
+		<set name="hitTime" val="10000" />
+		<set name="castRange" val="900" />
+		<set name="magicLvl" val="105" />
+		<set name="mpConsume" val="1000" />
+		<set name="mpInitialConsume" val="36" />
+		<set name="mpPerChanneling" val="80" />
+		<set name="operateType" val="CHANNELING_CONTINUOUS" />
+		<set name="staticReuse" val="true" />
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="107" />
+		<set name="power" val="900" />
+		<set name="reuseDelay" val="120000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="GROUND" />
+		<channelingEffects>
+			<effect name="MagicalAttack" />
+		</channelingEffects>
 	</skill>
 	<!-- Creates an ice storm in the selected location, dealing continuous damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes $s1 Spirit Ores. --> 
 	<skill id="11136" levels="1" name="Snow Storm">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="channelingSkillId" val="11141" />
+		<set name="channelingTickInterval" val="2" />
+		<set name="hitTime" val="10000" />
+		<set name="castRange" val="900" />
+		<set name="magicLvl" val="105" />
+		<set name="mpConsume" val="1000" />
+		<set name="mpInitialConsume" val="36" />
+		<set name="mpPerChanneling" val="80" />
+		<set name="operateType" val="CHANNELING_CONTINUOUS" />
+		<set name="staticReuse" val="true" />
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="element" val="2" /> <!-- Water -->
+		<set name="elementPower" val="300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="107" />
+		<set name="power" val="900" />
+		<set name="reuseDelay" val="120000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="GROUND" />
+		<channelingEffects>
+			<effect name="MagicalAttack" />
+		</channelingEffects>
 	</skill>
 	<!-- Creates a tornado in the selected location, dealing great damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, locks the target in an Aerial Yoke. Consumes $s1 Spirit Ores. --> 
 	<skill id="11137" levels="1" name="Tornado">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="channelingSkillId" val="11144" />
+		<set name="channelingTickInterval" val="2" />
+		<set name="hitTime" val="10000" />
+		<set name="castRange" val="900" />
+		<set name="magicLvl" val="105" />
+		<set name="mpConsume" val="1000" />
+		<set name="mpInitialConsume" val="36" />
+		<set name="mpPerChanneling" val="80" />
+		<set name="operateType" val="CHANNELING_CONTINUOUS" />
+		<set name="staticReuse" val="true" />
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="element" val="3" /> <!-- Wind -->
+		<set name="elementPower" val="300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="107" />
+		<set name="power" val="900" />
+		<set name="reuseDelay" val="120000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="GROUND" />
+		<channelingEffects>
+			<effect name="MagicalAttack" />
+		</channelingEffects>
 	</skill>
 	<!-- Detonates the soul in the selected location to attack surrounding enemies. Increases target's PvP Damage. The effect increases as the level of the abnormal state increases. Consumes $s1 Spirit Ores. --> 
 	<skill id="11138" levels="1" name="Soul Barrage">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="channelingSkillId" val="11145" />
+		<set name="channelingTickInterval" val="2" />
+		<set name="hitTime" val="10000" />
+		<set name="castRange" val="900" />
+		<set name="magicLvl" val="105" />
+		<set name="mpConsume" val="1000" />
+		<set name="mpInitialConsume" val="36" />
+		<set name="mpPerChanneling" val="80" />
+		<set name="operateType" val="CHANNELING_CONTINUOUS" />
+		<set name="staticReuse" val="true" />
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="107" />
+		<set name="power" val="900" />
+		<set name="reuseDelay" val="120000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="GROUND" />
+		<channelingEffects>
+			<effect name="MagicalAttack" />
+		</channelingEffects>
 	</skill>
 	<!-- Engulfed in flames. --> 
 	<skill id="11139" levels="1" name="Ignite">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="107" />
+		<set name="power" val="900" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="GROUND" />
+		<set name="isDebuff" val="true"/>
+		<set name="abnormalTime" val="10" />
+		<set name="activateRate" val="100"/>
+		<set name="effectPoint" val="-676" />
+		<for>
+			<effect name="MagicalAttack" />
+			<effect name="DamOverTime" ticks="1">
+				<param power="2000" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Bound to dark power. --> 
 	<skill id="11140" levels="1" name="Black Shackle">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="element" val="5" /> <!-- dark -->
+		<set name="elementPower" val="300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="107" />
+		<set name="power" val="900" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="channelingTickInterval" val="2" />
+		<set name="targetType" val="GROUND" />
+		<set name="isDebuff" val="true"/>
+		<set name="abnormalTime" val="10" />
+		<set name="effectPoint" val="-676" />
+		<set name="activateRate" val="100"/>
+		<for>
+			<effect name="MagicalAttack" />
+			<effect name="HpDrain">
+				<param power="0.5" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="runSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<!-- The cold is creeping up from your feet. --> 
 	<skill id="11141" levels="1" name="Freezing Slow">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="element" val="1" /> <!-- water -->
+		<set name="elementPower" val="300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="107" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="channelingTickInterval" val="2" />
+		<set name="power" val="900" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="GROUND" />
+		<set name="abnormalType" val="FREEZING" />
+		<set name="isDebuff" val="true"/>
+		<set name="abnormalVisualEffect" val="FROZEN_PILLAR" />
+		<set name="abnormalTime" val="10" />
+		<set name="effectPoint" val="-676" />
+		<set name="activateRate" val="100"/>
+		<for>
+			<effect name="MagicalAttack" />
+			<effect name="Paralyze" />
+		</for>
 	</skill>
 	<!-- Momentarily incurs damage. All speeds are decreased. --> 
 	<skill id="11142" levels="1" name="Damaged Area">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
@@ -558,17 +723,56 @@
 	</skill>
 	<!-- Speed has decreased due to the gust. --> 
 	<skill id="11144" levels="1" name="Wind Binding">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="107" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="channelingTickInterval" val="2" />
+		<set name="power" val="900" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="GROUND" />
+		<set name="isDebuff" val="true"/>
+		<set name="abnormalTime" val="10" />
+		<set name="effectPoint" val="-676" />
+		<set name="activateRate" val="100"/>
+		<for>
+			<effect name="MagicalAttack" />
+			<effect name="ThrowUp"/>
+			<effect name="Debuff">
+				<mul stat="runSpd" val="1.9" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Cursed by a soul. --> 
 	<skill id="11145" levels="1" name="Soul Weakness">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="element" val="5" /> <!-- dark -->
+		<set name="elementPower" val="300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="107" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="channelingTickInterval" val="2" />
+		<set name="power" val="900" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="GROUND" />
+		<set name="isDebuff" val="true"/>
+		<set name="abnormalTime" val="10" />
+		<set name="effectPoint" val="-676" />
+		<set name="activateRate" val="100"/>
+		<for>
+			<effect name="MagicalAttack" />
+			<effect name="Debuff">
+				<mul stat="pvpMagicalDef" val="1.3" />
+				<mul stat="pvpPhysSkillsDef" val="1.3" />
+				<mul stat="pvpPhysDef" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11150" levels="1" name="Dark Curse">
 		<!-- AUTO GENERATED SKILL -->
