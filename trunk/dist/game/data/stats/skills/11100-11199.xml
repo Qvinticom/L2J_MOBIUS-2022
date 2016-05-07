@@ -866,8 +866,15 @@
 		<set name="hitTime" val="2279" />
 		<set name="coolTime" val="300" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="reuseDelay" val="5" />
+		<set name="targetType" val="ONE" />
 		<set name="overHit" val="true" />
+		<for>
+			<effect name="MagicalAttack" />
+			<effect name="CallSkill">
+            <param skillId="11195" skillLevel="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11178" levels="1" name="Aqua Crash - Speed Decrease">
 		<!-- AUTO GENERATED SKILL -->
@@ -1047,12 +1054,28 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11195" levels="1" name="Aqua Crash - Freeze">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Use Aqua Crash to freeze target. -->
-		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="0" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="affectLimit" val="15-25" />
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="900" />
+		<set name="targetType" val="AURA" />
+		<set name="mpConsume" val="70" />
+		<set name="activateRate" val="80"/>
+		<set name="power" val="200"/>
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="4000" />
+		<set name="abnormalType" val="FREEZING" />
+		<set name="abnormalVisualEffect" val="FROZEN_PILLAR" />
+		<set name="isDebuff" val="true" />
+		<set name="abnormalTime" val="1" />
+		<for>
+		<effect name="Paralyze" />
+		<effect name="Debuff">
+				<mul stat="runSpd" val="1.1" />
+		</effect>
+		</for>
 	</skill>
 	<skill id="11196" levels="1" name="Frozen">
 		<!-- AUTO GENERATED SKILL -->
