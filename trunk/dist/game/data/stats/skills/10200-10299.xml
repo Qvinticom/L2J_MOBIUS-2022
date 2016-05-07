@@ -1427,13 +1427,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10278" levels="8" name="Reduce Anger" enchantGroup1="10" enchantGroup2="10" enchantGroup9="10">
-	<!-- NEED FIX -->
-		<table name="#ench1MpConsume">90 86 82 78 75 71 67 63 60 56</table>
-		<table name="#ench2Power"> -451 -502 -553 -604 -655 -706 -757 -808 -859 -910 </table> <!-- Need verify -->
-		<table name="#magicLvl">85 86 88 90 92 94 96 98</table>
-		<table name="#mpConsume">76 77 80 83 86 88 91 94</table>
-		<table name="#ench9Reuse"> 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 </table> <!-- Need verify -->
+	<skill id="10278" levels="8" name="Reduce Anger" enchantGroup1="11" enchantGroup2="11">
+		<table name="#ench1MpConsume"> 90 86 82 78 75 71 67 63 60 56 </table>
+		<table name="#ench2Power"> -451 -502 -553 -604 -655 -706 -757 -808 -859 -910 -951 -1002 -1053 -1104 -1155 -1206 -1257 -1308 -1359 -1410 </table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
+		<table name="#mpConsume"> 76 77 80 83 86 88 91 94 </table>
+		<table name="#ench9Reuse"> 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 19000 18000 17000 16000 15000 14000 13000 12000 11000 10000 </table> 
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="targetType" val="AURA" />
@@ -1445,16 +1444,17 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="rideState" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
+		<set name="abnormalTime" val="30" />
+		<enchant1 name="mpConsume" val="50" />
+		<enchant3 name="reuseDelay" val="#ench9Reuse" />
 		<for>
 			<effect name="AddHate">
-				<param power="-400" /> <!-- Need verify -->
+				<param power="-450" />
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="AddHate">
-				<param power="#ench2Power" /> <!-- Need verify -->
+				<param power="#ench2Power" />
 			</effect>
 		</enchant2for>
 	</skill>
