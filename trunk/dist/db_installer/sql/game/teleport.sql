@@ -1114,8 +1114,8 @@ INSERT INTO `teleport` VALUES ('Dolkin -> Whispering Woods', '3400201', '-88295'
 
 -- Harnak Underground Ruins
 INSERT INTO `teleport` VALUES ('UndergroundLevel1', 990008, -114700, 147909, -7720, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('UndergroundLevel2', 990005, -114708, 147867, -10744, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('UndergroundLevel3', 990006, -114698, 181951, -13808, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('UndergroundLevel2', 990005, -114715, 149146, -10786, 0, 0, 57);
+INSERT INTO `teleport` VALUES ('UndergroundLevel3', 990006, -114713, 183251, -13845, 0, 0, 57);
 INSERT INTO `teleport` VALUES ('UndergroundOutside', 990007, -116160, 236370, -3088, 0, 0, 57);
 
 -- Shuttgart to Frozen Labyrinth
