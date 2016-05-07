@@ -2443,13 +2443,16 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="mpConsume" val="582" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="2000" />
+		<set name="affectLimit" val="5-12" />
+		<set name="castRange" val="900" />
+		<set name="effectPoint" val="398" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="AREA_FRIENDLY" />
 		<for>
-			<effect name="HealPercent"> <!-- Make it work for nearby targets. -->
+			<effect name="HealPercent">
 				<param power="35" />
 			</effect>
 		</for>
