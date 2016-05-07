@@ -24,10 +24,24 @@
 	</skill>
 	<!-- Decreases target's Bow/Crossbow Resistance by $s2 for $s1. Does not cancel when striking. Consumes $s3 Soulstone. --> 
 	<skill id="19203" levels="1" name="Ultimate Bullseye">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="1785" />
+		<set name="hitTime" val="500" />
+		<set name="castRange" val="1100" />
+		<set name="reuseDelay" val="10000" />
+		<set name="mpConsume" val="27" />
+		<set name="abnormalTime" val="7" />
+		<set name="magicLvl" val="105" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="power" val="-1" />
+		<set name="targetType" val="ONE" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Debuff">
+				<param BOW="1.6" />
+				<param CROSSBOW="1.6" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Increases Critical Rate and Damage of general attacks and skills of selected party member by $s1 for $s2. Consumes $s3 Spirit Ores. --> 
 	<skill id="19204" levels="1" name="Prophecy of Might">
