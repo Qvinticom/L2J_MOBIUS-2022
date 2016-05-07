@@ -1296,45 +1296,177 @@
 	</skill>
 	<!-- Summons Commando Cat. Consumes $s1 summon points. --> 
 	<skill id="11369" levels="6" name="Summon Commando Cat">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#magicLvl"> 89 91 93 95 97 105 </table>
+		<table name="#mpConsume"> 376 391 406 421 436 456 </table>
+		<table name="#npcIds"> 15155 15156 15157 15158 15159 15160 </table>
+		<set name="icon" val="icon.skill11256" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3799" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Summons Witch Cat. Consumes $s1 summon points. --> 
 	<skill id="11370" levels="6" name="Summon Witch Cat">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#magicLvl"> 89 91 93 95 97 105 </table>
+		<table name="#mpConsume"> 376 391 406 421 436 456 </table>
+		<table name="#npcIds"> 15161 15162 15163 15164 15165 15166 </table>
+		<set name="icon" val="icon.skill11256" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3799" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Summons Unicorn Lancer. Consumes $s1 summon points. --> 
 	<skill id="11371" levels="6" name="Summon Unicorn Lancer">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#magicLvl"> 89 91 93 95 97 105 </table>
+		<table name="#mpConsume"> 376 391 406 421 436 456 </table>
+		<table name="#npcIds"> 15167 15168 15169 15170 15171 15172 </table>
+		<set name="icon" val="icon.skill11256" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3799" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Summons Unicorn Cherub. Consumes $s1 summon points. --> 
 	<skill id="11372" levels="6" name="Summon Unicorn Cherub">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#magicLvl"> 89 91 93 95 97 105 </table>
+		<table name="#mpConsume"> 376 391 406 421 436 456 </table>
+		<table name="#npcIds"> 15173 15174 15175 15176 15177 15178 </table>
+		<set name="icon" val="icon.skill11256" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3799" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Summons Dark Crusader. Consumes $s1 summon points. --> 
 	<skill id="11373" levels="6" name="Summon Dark Crusader">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#magicLvl"> 89 91 93 95 97 105 </table>
+		<table name="#mpConsume"> 376 391 406 421 436 456 </table>
+		<table name="#npcIds"> 15179 15180 15181 15182 15183 15184 </table>
+		<set name="icon" val="icon.skill11256" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3799" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Summons Banshee Queen. Consumes $s1 summon points. --> 
 	<skill id="11374" levels="6" name="Summon Banshee Queen">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<table name="#magicLvl"> 89 91 93 95 97 105 </table>
+		<table name="#mpConsume"> 376 391 406 421 436 456 </table>
+		<table name="#npcIds"> 15185 15186 15187 15188 15189 15190 </table>
+		<set name="icon" val="icon.skill11256" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="3799" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<cond>
+			<and>
+				<player canSummonServitor="true" />
+				<player hasFreeSummonPoints="2" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="#npcIds" />
+				<param lifeTime="3600" />
+				<param summonPoints="2" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Jumps and hulrs attack to target and nearby enemies with $s1 Power added to P. Atk., and decreases Speed by $s3 for $s2. --> 
 	<skill id="11375" levels="1" name="Commando Jumping Attack">
