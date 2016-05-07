@@ -697,12 +697,14 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="10517" levels="1" name="Shadow Hide" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup9="10">
-		<table name="#ench1mpConsume">36 34 33 31 30 28 27 25 24 22</table>
-		<table name="#ench2abnormalTime">51 52 53 54 55 56 57 58 59 60</table>
-		<table name="#ench3windWalk">2 3 4 5 6 7 8 9 10 11</table>
-		<table name="#ench9Reuse"> 179000 178000 177000 176000 175000 174000 173000 172000 171000 170000 </table> <!-- Need verify -->
+	<skill id="10517" levels="1" name="Shadow Hide" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11">
+		<table name="#ench1mpConsume"> 36 34 33 31 30 28 27 25 24 22 </table>
+		<table name="#ench2abnormalTime"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#ench3windWalk"> 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 </table>
+		<table name="#ench9Reuse"> 179000 178000 177000 176000 175000 174000 173000 172000 171000 170000 169000 168000 167000 166000 165000 164000 163000 162000 161000 160000 </table> <!-- Need verify -->
 		<set name="hitTime" val="1000" />
+		<set name="abnormalType" val="HIDE" />
+		<set name="abnormalVisualEffect" val="STEALTH" />
 		<set name="coolTime" val="400" />
 		<set name="reuseDelay" val="180000" />
 		<set name="mpConsume" val="38" />
@@ -711,11 +713,14 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume" />
-		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
+		<enchant1 name="abnormalTime" val="#ench2abnormalTime" />
+		<table name="#runSpd"> 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 </table>
+		<enchant2 name="magicLvl" val="105" />
+		<enchant4 name="reuseDelay" val="#ench9Reuse" />
 		<for>
 			<effect name="Hide">
 				<add stat="regHp" val="6.7" />
+				<add stat="runSpd" val="#runSpd" />
 			</effect>
 			<effect name="DispelByCategory">
 				<param slot="debuff" rate="100" max="10" />
