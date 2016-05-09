@@ -169,34 +169,55 @@
 		</for>
 	</skill>
 	<skill id="10806" levels="1" name="Frost Trap">
-		<table name="#ench1power">81 82 83 84 85 86 87 88 89 90</table>
-		<set name="magicLvl" val="99" />
-		<set name="power" val="80" />
-		<set name="targetType" val="AURA" />
-		<set name="abnormalTime" val="30" />
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="ALL_SPEED_DOWN" />
+		<set name="activateRate" val="80" />
+		<set name="affectRange" val="200" />
+		<set name="basicProperty" val="MEN" />
+		<set name="effectPoint" val="-100" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<enchant1 name="power" val="#ench1power" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul stat="runSpd" val="0.6" />
-				<mul stat="pAtkSpd" val="0.67" />
-				<mul stat="mAtkSpd" val="0.6" />
+				<mul stat="runSpd" val="0.7" />
+				<mul stat="pAtkSpd" val="0.77" />
+				<mul stat="mAtkSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="10807" levels="1" name="Gravity Trap">
-		<table name="#ench1power">71 72 73 74 75 76 77 78 79 80</table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="abnormalVisualEffect" val="ROOT" />
+		<set name="activateRate" val="80" />
+		<set name="affectRange" val="200" />
 		<set name="magicLvl" val="99" />
-		<set name="power" val="70" />
-		<set name="targetType" val="AURA" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1100" />
+		<set name="icon" val="icon.skill0518" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
-		<enchant1 name="power" val="#ench1power" />
-		<!--<for>
-			<effect abnormalLvl="1" abnormalTime="30" abnormalType="root_magically" name="SELF" val="0" />
-		</for>-->
+		<for>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10808" levels="1" name="Decoy Provocation">
 		<set name="icon" val="icon.skill0000" />

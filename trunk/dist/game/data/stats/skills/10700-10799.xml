@@ -1426,28 +1426,46 @@
 	<skill id="10791" levels="4" name="Frost Trap">
 	<!-- Source: https://l2wiki.com/Frost_Trap_-_Yul_Sagittarius -->
 		<table name="#magicLvl"> 85 101 103 105 </table>
-		<set name="hitTime" val="800" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="45000" />
+		<table name="#npcId">13326 13326 13326 13326</table>
+		<set name="effectPoint" val="-1" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0516" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="39" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="reuseDelay" val="45000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="npcId" val="13037"/>
+		<for>
+			<effect name="SummonTrap">
+				<param npcId="13037" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10792" levels="4" name="Gravity Trap">
 	<!-- Source: https://l2wiki.com/Gravity_Trap_-_Yul_Ghost_Sentinel -->
 		<table name="#magicLvl"> 85 101 103 105 </table>
-		<table name="#ench1trigger"> 101 102 103 104 105 106 107 108 109 110 </table>
-		<set name="hitTime" val="800" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="45000" />
+		<table name="#npcId"> 13327 13327 13327 13327 </table>
+		<set name="effectPoint" val="-1" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0518" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="39" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="reuseDelay" val="45000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
+		<set name="npcId" val="13041"/>
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<for>
+			<effect name="SummonTrap">
+				<param npcId="13041" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10793" levels="1" name="Flash">
 		<set name="hitTime" val="800" />
