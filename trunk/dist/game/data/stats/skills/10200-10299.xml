@@ -268,7 +268,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10258" levels="11" name="Armor Destruction" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<skill id="10258" levels="11" name="Armor Destruction" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11">
 	<!-- Source: https://l2wiki.com/Armor_Destruction_-_Tyrr_Maestro -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 </table>
 		<table name="#magicLvl"> 85 87 89 90 92 93 94 95 101 103 105 </table>
@@ -279,8 +279,10 @@
 		<table name="#enchDuel"> 16990 17379 17767 18156 18545 18934 19322 19711 20100 20489 </table>
 		<table name="#enchElementPower"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#enchMagicLvl"> 95 95 96 96 97 97 98 98 99 99 </table>
-		<table name="#enchPower"> 16990 17379 17767 18156 18545 18934 19322 19711 20100 20489 </table>
+		<table name="#enchPower"> 16990 17379 17767 18156 18545 18934 19322 19711 20100 20489 26990 27379 27767 28156 28545 28934 29322 29711 30100 30489 </table>
 		<table name="#ench9Reuse"> 1950 1900 1850 1800 1750 1700 1650 1600 1550 1500 </table> <!-- Need verify -->
+		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#ench3-runSpd"> 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -301,38 +303,16 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="mpConsume" val="#ench2MpConsume" />
 		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="pvpPower" val="#enchDuel" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLvl" val="#enchMagicLvl" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLvl" val="#enchMagicLvl" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLvl" val="#enchMagicLvl" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant7 name="element" val="4" /> <!-- Holy -->
-		<enchant7 name="elementPower" val="#enchElementPower" />
-		<enchant7 name="magicLvl" val="#enchMagicLvl" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant8 name="element" val="5" /> <!-- Unholy -->
-		<enchant8 name="elementPower" val="#enchElementPower" />
-		<enchant8 name="magicLvl" val="#enchMagicLvl" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="magicLvl" val="#enchMagicLvl" />
-		<enchant9 name="power" val="#enchPower" />
+		<enchant1 name="magicLvl" val="105" />		
+		<enchant2 name="magicLvl" val="105" />
+		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant3 name="magicLvl" val="105" />	
+		<enchant3for>
+			<effect name="Debuff">
+				<sub stat="runSpd" val="#ench3-runSpd" />
+			</effect>
+		</enchant3for>
 		<cond msgId="113" addName="1">
 			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 		</cond>
@@ -348,7 +328,7 @@
 				</effect>
 			</selfEffects>
 	</skill>
-	<skill id="10260" levels="11" name="Mega Strike" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<skill id="10260" levels="11" name="Mega Strike" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11">
 	<!-- Source: https://l2wiki.com/Mega_Strike_-_Tyrr_Duelist -->
 		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
 		<table name="#mpConsumes"> 65 66 69 71 73 76 78 80 82 84 86 </table>
@@ -357,7 +337,7 @@
 		<table name="#enchDuel"> 30209 30896 31584 32272 32959 33647 34334 35022 35710 36397 </table>
 		<table name="#enchElementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
 		<table name="#enchMagicLvl"> 98 98 98 98 98 99 99 99 99 99 </table>
-		<table name="#enchPower"> 30209 30896 31584 32272 32959 33647 34334 35022 35710 36397 </table>
+		<table name="#enchPower"> 30209 30896 31584 32272 32959 33647 34334 35022 35710 36397 40209 40896 41584 42272 42959 43647 44334 45022 45710 46397 </table>
 		<table name="#ench9Reuse"> 6900 6800 6700 6600 6500 6400 6300 6200 6100 6000 </table> <!-- Need verify -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -372,29 +352,18 @@
 		<set name="reuseDelay" val="7000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="mpConsume" val="#ench2MpConsume" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLvl" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLvl" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLvl" val="#enchMagicLvl" />
-		<enchant7 name="element" val="4" /> <!-- Holy -->
-		<enchant7 name="elementPower" val="#enchElementPower" />
-		<enchant7 name="magicLvl" val="#enchMagicLvl" />
-		<enchant8 name="element" val="5" /> <!-- Unholy -->
-		<enchant8 name="elementPower" val="#enchElementPower" />
-		<enchant8 name="magicLvl" val="#enchMagicLvl" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="magicLevel" val="#enchMagicLvl" />
+		<enchant1 name="power" val="#enchPower" />
+		<enchant1 name="magicLvl" val="105" />
+		<table name="#baseCritRate">  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 </table>
+		<enchant2 name="magicLvl" val="105" />
+		<enchant2 name="baseCritRate" val="#baseCritRate" />
+		<table name="#enchpDef"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
+		<enchant3 name="magicLvl" val="105" />	
+		<enchant3for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#enchpDef" />
+			</effect>
+		</enchant3for>
 		<cond msgId="113" addName="1">
 			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 		</cond>
@@ -419,13 +388,6 @@
 				<param ignoreShieldDefence="true" />
 			</effect>
 		</enchant2for>
-		<enchant2pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#enchDuel" />
-				<param criticalChance="15" />
-				<param ignoreShieldDefence="true" />
-			</effect>
-		</enchant2pvpEffects>
 		<enchant3for>
 			<effect name="EnergyAttack">
 				<param power="#enchPower" />
@@ -433,50 +395,8 @@
 				<param ignoreShieldDefence="true" />
 			</effect>
 		</enchant3for>
-		<enchant4for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-				<param ignoreShieldDefence="true" />
-			</effect>
-		</enchant4for>
-		<enchant5for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-				<param ignoreShieldDefence="true" />
-			</effect>
-		</enchant5for>
-		<enchant6for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-				<param ignoreShieldDefence="true" />
-			</effect>
-		</enchant6for>
-		<enchant7for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-				<param ignoreShieldDefence="true" />
-			</effect>
-		</enchant7for>
-		<enchant8for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-				<param ignoreShieldDefence="true" />
-			</effect>
-		</enchant8for>
-		<enchant9for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-				<param ignoreShieldDefence="true" />
-			</effect>
-		</enchant9for>
 	</skill>
-	<skill id="10262" levels="9" name="Power Bomber" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<skill id="10262" levels="9" name="Power Bomber" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11">
 	<!-- Source: https://l2wiki.com/Power_Bomber_-_Tyrr_Duelist -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
 		<table name="#magicLvl"> 85 88 91 94 97 99 101 103 105 </table>
@@ -485,8 +405,10 @@
 		<table name="#ench2MpConsume"> 100 96 92 88 84 79 75 71 67 63 </table>
 		<table name="#enchDuel"> 31047 31751 32455 33160 33864 34568 35273 35977 36681 37386 </table>
 		<table name="#enchElementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#enchPower"> 31047 31751 32455 33160 33864 34568 35273 35977 36681 37386 </table>
+		<table name="#enchPower"> 31047 31751 32455 33160 33864 34568 35273 35977 36681 37386 41047 41751 42455 43160 43864 44568 45273 45977 46681 47386 </table>
 		<table name="#ench9Reuse"> 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 </table> <!-- Need verify -->
+		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#enchpDef"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="KNOCK_DOWN" />
@@ -507,20 +429,16 @@
 		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="KNOCKDOWN" />
-		<enchant1 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant7 name="element" val="4" /> <!-- Holy -->
-		<enchant7 name="elementPower" val="#enchElementPower" />
-		<enchant8 name="element" val="5" /> <!-- Unholy -->
-		<enchant8 name="elementPower" val="#enchElementPower" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
+		<enchant1 name="power" val="#enchPower" />
+		<enchant1 name="magicLvl" val="105" />
+		<enchant2 name="magicLvl" val="105" />
+		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant3 name="magicLvl" val="105" />	
+		<enchant3for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#enchpDef" />
+			</effect>
+		</enchant3for>
 		<cond msgId="113" addName="1">
 			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 		</cond>
@@ -554,16 +472,6 @@
 				<param speed="700" distance="50" />
 			</effect>
 		</enchant2for>
-		<enchant2pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#enchDuel" />
-				<param criticalChance="15" />
-				<param ignoreShieldDefence="true" />
-			</effect>
-			<effect name="KnockDown">
-				<param speed="700" distance="50" />
-			</effect>
-		</enchant2pvpEffects>
 		<enchant3for>
 			<effect name="EnergyAttack">
 				<param power="#enchPower" />
@@ -635,7 +543,7 @@
 			</effect>
 		</enchant9for>
 	</skill>
-	<skill id="10263" levels="11" name="Hurricane Blaster" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<skill id="10263" levels="11" name="Hurricane Blaster" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11">
 	<!-- Source: https://l2wiki.com/Hurricane_Blaster_-_Tyrr_Doombringer -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 </table>
 		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
@@ -646,8 +554,10 @@
 		<table name="#enchDuel"> 789 805 820 836 852 868 884 900 916 932 </table>
 		<table name="#enchElementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
 		<table name="#enchMagicLvl"> 98 98 98 98 98 99 99 99 99 99 </table>
-		<table name="#enchPower"> 789 805 820 836 852 868 884 900 916 932 </table>
+		<table name="#enchPower"> 789 805 820 836 852 868 884 900 916 932 989 1005 1020 1036 1052 1068 1084 1200 1216 1232 </table>
 		<table name="#ench9Reuse"> 6900 6800 6700 6600 6500 6400 6300 6200 6100 6000 </table> <!-- Need verify -->
+		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#enchpDef"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -665,38 +575,16 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="mpConsume" val="#ench2MpConsume" />
 		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="pvpPower" val="#enchDuel" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLvl" val="#enchMagicLvl" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLvl" val="#enchMagicLvl" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLvl" val="#enchMagicLvl" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant7 name="element" val="4" /> <!-- Holy -->
-		<enchant7 name="elementPower" val="#enchElementPower" />
-		<enchant7 name="magicLvl" val="#enchMagicLvl" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant8 name="element" val="5" /> <!-- Unholy -->
-		<enchant8 name="elementPower" val="#enchElementPower" />
-		<enchant8 name="magicLvl" val="#enchMagicLvl" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="magicLevel" val="#enchMagicLvl" />
-		<enchant9 name="power" val="#enchPower" />
+		<enchant1 name="magicLvl" val="105" />
+		<enchant2 name="magicLvl" val="105" />
+		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant3 name="magicLvl" val="105" />	
+		<enchant3for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#enchpDef" />
+			</effect>
+		</enchant3for>
 		<cond msgId="113" addName="1">
 			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 		</cond>
@@ -712,10 +600,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10265" levels="11" name="Eruption" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<skill id="10265" levels="11" name="Eruption" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11">
 	<!-- Source: https://l2wiki.com/Eruption_-_Tyrr_Doombringer -->
 		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#enchPower"> 17545 17945 18344 18743 19142 19542 19941 20340 20739 21139 </table>
+		<table name="#enchPower"> 17545 17945 18344 18743 19142 19542 19941 20340 20739 21139 21545 27945 28344 28743 29142 29542 29941 30340 30739 31139 </table>
 		<table name="#ench1MpConsume"> 144 138 132 126 120 114 108 102 96 90 </table>
 		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
 		<table name="#enchMagicLvl"> 98 98 98 98 98 99 99 99 99 99 </table>
@@ -724,6 +612,8 @@
 		<table name="#mpConsume"> 122 124 129 133 137 142 146 151 156 161 166 </table>
 		<table name="#ench9Reuse"> 4900 4800 4700 4600 4500 4400 4300 4200 4100 4000 </table> <!-- Need verify -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 </table>
+		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#enchpDef"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -736,7 +626,6 @@
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="activateRate" val="60" />
 		<set name="fanRange" val="0,0,80,150" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="150" />
@@ -747,38 +636,16 @@
 		<set name="effectRange" val="600" />
 		<set name="effectPoint" val="-100" /> <!-- Need verify -->
 		<set name="isDebuff" val="true" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant4 name="magicLvl" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant5 name="magicLvl" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant6 name="magicLvl" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant7 name="magicLvl" val="#enchMagicLvl" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant8 name="magicLvl" val="#enchMagicLvl" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant9 name="magicLvl" val="#enchMagicLvl" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="power" val="#enchPower" />
+		<enchant1 name="magicLvl" val="105" />
+		<enchant2 name="magicLvl" val="105" />
+		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant3 name="magicLvl" val="105" />	
+		<enchant3for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#enchpDef" />
+			</effect>
+		</enchant3for>
 		<cond msgId="113" addName="1">
 			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 		</cond>
@@ -795,7 +662,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10266" levels="11" name="Giant Punch" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup9="10">
+	<skill id="10266" levels="11" name="Giant Punch" enchantGroup1="11" enchantGroup2="11">
 	<!-- Source: https://l2wiki.com/Giant_Punch_-_Tyrr_Titan -->
 		<table name="#ench1MpConsume"> 91 87 83 79 76 72 68 64 60 57 </table>
 		<table name="#ench2Chance"> 61 62 63 64 65 66 67 68 69 70 </table>
@@ -804,12 +671,13 @@
 		<table name="#ench3Attack"> 3800 3900 4000 4100 4200 4300 4400 4500 4600 4700 </table> <!-- Need verify -->
 		<table name="#mpConsume"> 76 79 81 84 87 90 92 95 98 101 104 </table>
 		<table name="#ench9Reuse"> 119000 118000 117000 116000 115000 114000 113000 112000 111000 110000 </table> <!-- Need verify -->
+		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#enchpDef"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="element" val="3" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="KNOCK_DOWN" />
 		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
-		<set name="activateRate" val="60" />
 		<set name="fanRange" val="0,0,80,150" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="150" />
@@ -823,11 +691,14 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="AURA" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="activateRate" val="#ench2Chance" />
-		<enchant3 name="skillType" val="PDAM" />
-		<enchant3 name="power" val="#ench3Attack" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
+		<enchant1 name="magicLvl" val="105" />
+		<enchant1 name="activateRate" val="#ench2ActivateRates" />
+		<enchant2 name="magicLvl" val="105" />	
+		<enchant2for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#enchpDef" />
+			</effect>
+		</enchant2for>
 		<cond msgId="113" addName="1">
 			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 		</cond>
@@ -849,22 +720,21 @@
 			</effect>
 		</enchant4for>
 	</skill>
-	<skill id="10267" levels="9" name="Hurricane Rush" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup9="10">
+	<skill id="10267" levels="9" name="Hurricane Rush" enchantGroup1="11">
 	<!-- Source: https://l2wiki.com/Hurricane_Rush_-_Tyrr_Duelist -->
 		<table name="#magicLvl"> 85 87 90 93 96 99 101 103 105 </table>
 		<table name="#ench2effectPower"> 71 72 75 76 78 79 80 82 83 85 </table>
 		<table name="#ench3Attack"> 3800 3900 4000 4100 4200 4300 4400 4500 4600 4700 </table>
 		<table name="#ench4Hex"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90 </table>
 		<table name="#ench1MpConsume"> 45 43 41 39 37 35 33 31 30 28 </table>
-		<table name="#activateRate"> 61 62 63 64 65 66 67 68 69 70 </table>
 		<table name="#mpConsume"> 38 39 41 43 44 47 50 53 56 </table>
 		<table name="#ench9Reuse"> 14900 14800 14700 14600 14500 14400 14300 14200 14100 14000 </table> <!-- Need verify -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
+		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="activateRate" val="60" />
 		<set name="basicProperty" val="CON" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -882,11 +752,8 @@
 		<set name="flyType" val="CHARGE" />
 		<set name="isDebuff" val="true" />
 		<set name="nextActionAttack" val="true" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="activateRate" val="#activateRate" />
-		<enchant3 name="skillType" val="PDAM" />
-		<enchant3 name="power" val="#ench3Attack" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
+		<enchant1 name="magicLvl" val="105" />
+		<enchant1 name="activateRate" val="#ench2ActivateRates" />
 		<cond msgId="113" addName="1">
 			<and>
 				<target mindistance="200" />
@@ -896,15 +763,10 @@
 		<for>
 			<effect name="Stun" />
 		</for>
-		<enchant3for>
+		<enchant1for>
 			<effect name="PhysicalAttack" />
 			<effect name="Stun" />
-		</enchant3for>
-		<enchant4for>
-			<effect name="Stun">
-				<mul stat="pDef" val="#ench4Hex" />
-			</effect>
-		</enchant4for>
+		</enchant1for>
 	</skill>
 	<skill id="10268" levels="6" name="Rolling Thunder">
 		<table name="#mdot">30 32 34 36 38 40</table>
@@ -916,6 +778,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="rideState" val="NONE" />
 		<set name="operateType" val="TOGGLE" />
+		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
 		<for>
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="#mdot" />
@@ -926,12 +789,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10269" levels="10" name="Jump Attack" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<skill id="10269" levels="10" name="Jump Attack" enchantGroup1="11">
 	<!-- Source: https://l2wiki.com/Jump_Attack_-_Tyrr_Duelist -->
 		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15539 16297 17055 </table>
 		<table name="#magicLvl"> 87 89 91 93 95 97 99 101 103 105 </table>
 		<table name="#ench1MpConsume"> 128 123 117 112 107 101 96 91 85 80 </table>
-		<table name="#ench2activateRate"> 81 82 83 84 85 86 87 88 89 90 </table>
 		<table name="#enchElementalPower"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#enchPower"> 14941 15282 15623 15964 16305 16646 16987 17328 17669 18011 </table>
 		<table name="#mpConsume"> 111 114 118 122 126 130 134 138 142 146 </table>
@@ -945,7 +807,6 @@
 		<set name="hitTime" val="890" />
 		<set name="coolTime" val="500" />
 		<set name="abnormalTime" val="5" />
-		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="5000" />
 		<set name="effectRange" val="600" />
@@ -958,21 +819,9 @@
 		<set name="overHit" val="true" />
 		<set name="baseCritRate" val="10" />
 		<set name="nextActionAttack" val="true" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="activateRate" val="#ench2activateRate" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchElementalPower" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchElementalPower" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchElementalPower" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchElementalPower" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchElementalPower" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchElementalPower" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
+		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<enchant1 name="magicLvl" val="105" />
+		<enchant1 name="activateRate" val="#ench2ActivateRates" />
 		<cond msgId="113" addName="1">
 			<and>
 				<target mindistance="200" />
@@ -990,88 +839,16 @@
 		</for>
 		<enchant1for>
 			<effect name="EnergyAttack">
-				<param power="#enchPower" />
+				<param power="17055" />
 				<param criticalChance="15" />
 			</effect>
 			<effect name="Debuff">
 				<mul stat="runSpd" val="0.3" />
 			</effect>
 		</enchant1for>
-		<enchant2for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-			</effect>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.3" />
-			</effect>
-		</enchant2for>
-		<enchant3for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-			</effect>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.3" />
-			</effect>
-		</enchant3for>
-		<enchant4for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-			</effect>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.3" />
-			</effect>
-		</enchant4for>
-		<enchant5for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-			</effect>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.3" />
-			</effect>
-		</enchant5for>
-		<enchant6for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-			</effect>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.3" />
-			</effect>
-		</enchant6for>
-		<enchant7for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-			</effect>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.3" />
-			</effect>
-		</enchant7for>
-		<enchant8for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-			</effect>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.3" />
-			</effect>
-		</enchant8for>
-		<enchant9for>
-			<effect name="EnergyAttack">
-				<param power="#enchPower" />
-				<param criticalChance="15" />
-			</effect>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.3" />
-			</effect>
-		</enchant9for>
 	</skill>
-	<skill id="10270" levels="1" name="Second Wind" enchantGroup1="10">
-		<table name="#enchTime"> 132 142 156 168 180 192 204 216 228 240 </table>
+	<skill id="10270" levels="1" name="Second Wind" enchantGroup1="11">
+		<table name="#enchTime"> 132 142 156 168 180 192 204 216 228 230 232 242 256 268 280 292 304 316 328 340 </table>
 		<table name="#enchMagicLvl"> 93 93 94 95 95 96 97 97 98 99 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1085,7 +862,7 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="120000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant1 name="magicLvl" val="99" />
 		<enchant1 name="abnormalTime" val="#enchTime" />
 		<for>
 			<effect name="Buff">
@@ -1100,14 +877,15 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10271" levels="2" name="Power Provoke" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup9="10">
+	<skill id="10271" levels="2" name="Power Provoke" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11" enchantGroup4="11" enchantGroup5="11">
 		<table name="#ench1MpConsume">79 76 73 69 66 63 59 56 53 49</table>
-		<table name="#ench2effectPower">80 81 82 83 84 85 86 87 88 89</table>
+		<table name="#ench2effectPower">80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</table>
 		<table name="#magicLvl">97 99</table>
-		<table name="#ench3radius">320 340 360 380 400 420 440 460 480 500</table>
+		<table name="#ench3radius">320 340 360 380 400 420 440 460 480 500 510 520 530 540 550 560 570 580 590 600</table>
 		<table name="#mpConsume">76 83</table>
-		<table name="#rate"> -1 -2 -3 -4 -5 -6 -7 -8 -9 -10 </table>
-		<table name="#ench9Reuse"> 3900 3800 3700 3600 3500 3400 3300 3200 3100 3000 </table> <!-- Need verify -->
+		<table name="#rate"> -1 -2 -3 -4 -5 -6 -7 -8 -9 -10 -11 -12 -13 -14 -15 -16 -17 -18 -19 -20</table>
+		<table name="#ench9Reuse"> 3900 3800 3700 3600 3500 3400 3300 3200 3100 3000 2900 2800 2700 2600 2500 2400 2300 2200 2100 2000 </table> <!-- Need verify -->
+		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
 		<set name="abnormalTime" val="3" />
 		<set name="fanRange" val="0,0,80,300" />
 		<set name="affectLimit" val="10-10" />
@@ -1123,9 +901,12 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="effectPoint" val="-1000" />
 		<set name="trait" val="DERANGEMENT" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="magicLvl" val="105" />
+		<enchant1 name="activateRate" val="#ench2ActivateRates" />
+		<enchant2 name="magicLvl" val="105" />
+		<enchant2 name="activateRate" val="#ench2ActivateRates" />
 		<enchant3 name="skillRadius" val="#ench3radius" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
+		<enchant6 name="reuseDelay" val="#ench9Reuse" />
 		<for>
 			<effect name="TargetMeProbability">
 				<param chance="75" />
@@ -1173,20 +954,21 @@
 			</effect>
 		</enchant5for>
 	</skill>
-	<skill id="10273" levels="4" name="Lightning Disarm" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup9="10">
+	<skill id="10273" levels="4" name="Lightning Disarm" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11" enchantGroup4="11" enchantGroup5="11" >
 		<table name="#ench1MpConsume">88 84 80 77 73 69 66 62 58 55</table>
-		<table name="#ench2ActivateRate"> 71 72 73 74 75 76 77 78 79 80 </table>
 		<table name="#ench3radius">210 220 230 240 250 260 270 280 290 300</table>
 		<table name="#enchVuln">1 2 3 4 5 6 7 8 9 10</table>
 		<table name="#magicLvl">85 90 95 99</table>
 		<table name="#def">0.9 0.85 0.8 0.75</table>
-		<table name="#rate"> -1 -2 -3 -4 -5 -6 -7 -8 -9 -10 </table>
-		<table name="#ench9Reuse"> 119000 118000 117000 116000 115000 114000 113000 112000 111000 110000 </table> <!-- Need verify -->
+		<table name="#rate"> -1 -2 -3 -4 -5 -6 -7 -8 -9 -10 -11 -12 -13 -14 -15 -16 -17 -18 -19 -20 </table>
+		<table name="#ench9Reuse"> 119000 118000 117000 116000 115000 114000 113000 112000 111000 110000 109000 108000 107000 106000 105000 104000 103000 102000 101000 100000 </table> <!-- Need verify -->
+		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#enchpDef"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
+		<table name="#ench3-runSpd"> 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DISARM" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
-		<set name="activateRate" val="70" />
 		<set name="basicProperty" val="STR" />
 		<set name="fanRange" val="0,0,80,300" />
 		<set name="affectLimit" val="10-10" />
@@ -1199,10 +981,21 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="AURA" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="activateRate" val="#ench2ActivateRate" />
-		<enchant3 name="skillRadius" val="#ench3radius" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
+		<enchant1 name="magicLvl" val="99" />
+		<enchant1 name="activateRate" val="#ench2ActivateRates" />
+		<enchant2 name="magicLvl" val="99" />
+		<enchant2for>
+			<effect name="Disarm">
+				<mul stat="pDef" val="#enchpDef" />
+			</effect>
+		</enchant2for>
+		<enchant3 name="magicLvl" val="99" />
+		<enchant3for>
+			<effect name="Disarm">
+				<sub stat="runSpd" val="#ench3-runSpd" />
+			</effect>
+		</enchant3for>
+		<enchant6 name="reuseDelay" val="#ench9Reuse" />
 		<for>
 			<effect name="Disarm">
 				<mul stat="pDef" val="#def" />
@@ -1228,7 +1021,7 @@
 			</effect>
 		</enchant5for>
 	</skill>
-	<skill id="10274" levels="4" name="Berserker" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup9="10">
+	<skill id="10274" levels="4" name="Berserker" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11" enchantGroup4="11">
 		<table name="#magicLvl">85 90 95 99</table>
 		<table name="#mpConsume">38 41 45 47</table>
 		<table name="#runSpd">10 15 20 25</table>
@@ -1239,10 +1032,10 @@
 		<table name="#cAtkAdd">200 250 300 350</table>
 		<table name="#abnormalLvl">3 4 5 6</table>
 		<table name="#ench1MpConsume">45 43 41 39 37 35 33 31 30 28</table>
-		<table name="#ench2abnormalTime">61 62 63 64 65 66 67 68 69 70</table>
-		<table name="#ench3hpToActivate">71 72 73 74 75 76 77 78 79 80</table>
-		<table name="#ench4rate">1 2 3 4 5 6 7 8 9 10</table>
-		<table name="#ench9Reuse"> 299000 298000 297000 296000 295000 294000 293000 292000 291000 290000 </table> <!-- Need verify -->
+		<table name="#ench2abnormalTime">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
+		<table name="#ench3hpToActivate">71 72 73 74 75 76 77 78 79 80 81 81 82 82 83 83 84 84 84 85 </table>
+		<table name="#ench4rate">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</table>
+		<table name="#ench9Reuse"> 299000 298000 297000 296000 295000 294000 293000 292000 291000 290000 289000 288000 287000 286000 285000 284000 283000 282000 281000 280000 </table> <!-- Need verify -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="targetType" val="SELF" />
@@ -1251,15 +1044,20 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
 		<set name="abnormalTime" val="60" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
+		<enchant1 name="abnormalTime" val="#ench2abnormalTime" />
+		<enchant5 name="reuseDelay" val="#ench9Reuse" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 				<player hp="70" />
 			</and>
 		</cond>
+		<enchant2cond addName="1" msgId="113">
+			<and>
+				<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
+				<player hp="#ench3hpToActivate" />
+			</and>
+		</enchant2cond>
 		<enchant3cond addName="1" msgId="113">
 			<and>
 				<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
@@ -1332,20 +1130,20 @@
 			</effect>
 		</enchant4for>
 	</skill>
-	<skill id="10275" levels="4" name="Infinity Strike" enchantGroup1="10" enchantGroup2="10" enchantGroup9="10">
+	<skill id="10275" levels="4" name="Infinity Strike" enchantGroup1="11" enchantGroup2="11">
 	<!-- Source: https://l2wiki.com/Infinity_Strike_-_Tyrr_Doombringer -->
 		<table name="#magicLvl"> 99 101 103 105 </table>
-		<table name="#power"> 65085 69414 73352 77290 </table>
+		<table name="#power"> 65085 69414 73352 150000 </table>
 		<table name="#mpConsume"> 1178 1195 1213 1231 </table>
 		<table name="#ench1MpConsume"> 1131 1083 1037 989 942 896 848 801 753 707 </table>
-		<table name="#enchPower"> 66456 67827 69198 70569 71940 73311 74682 76053 77424 78795 </table>
+		<table name="#enchPower"> 66456 67827 69198 70569 71940 73311 74682 76053 77424 78795 86456 97827 99198 140569 151940 163311 174682 176053 177424 178795 </table>
 		<table name="#ench9Reuse"> 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 </table> <!-- Need verify -->
 		<set name="magicLvl" val="99" />
 		<set name="nextActionAttack" val="true" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<set name="overHit" val="true" />
-		<set name="hitTime" val="5000" />
+		<set name="hitTime" val="10000" />
 		<set name="coolTime" val="500" />
 		<set name="castRange" val="40" />
 		<set name="reuseDelay" val="30000" />
@@ -1353,11 +1151,11 @@
 		<set name="baseCritRate" val="7" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="effectRange" val="400" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="power" val="#enchPower" />
+		<enchant1 name="magicLvl" val="105" />
+		<table name="#baseCritRate">  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 </table>
+		<enchant2 name="magicLvl" val="105" />
+		<enchant2 name="baseCritRate" val="#baseCritRate" />
 		<cond msgId="113" addName="1">
 			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 		</cond>
@@ -1365,8 +1163,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="10276" levels="1" name="Force of Nature" enchantGroup1="10" enchantGroup2="10">
-		<table name="#enchRate">1 2 3 4 5 6 7 8 9 10</table>
+	<skill id="10276" levels="1" name="Force of Nature" enchantGroup1="11" enchantGroup2="11">
+		<table name="#enchRate">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</table>
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="300" />
@@ -1376,7 +1174,7 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<cond msgId="324">
 			<not>
-				<player Charges="15" />
+				<player Charges="10" />
 			</not>
 		</cond>
 		<for>
@@ -1401,13 +1199,13 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="10277" levels="4" name="Final Cry" enchantGroup1="10" enchantGroup2="10" enchantGroup9="10">
-		<table name="#ench2abnormalTime">125 125 130 135 135 140 145 150 155 160</table>
+	<skill id="10277" levels="4" name="Final Cry" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+		<table name="#ench2abnormalTime">125 125 130 135 135 140 145 150 155 160 175 175 180 185 185 190 195 200 205 210</table>
 		<table name="#ench1MpConsume">45 43 41 39 37 35 33 31 30 28</table>
 		<table name="#pAtk">1.2 1.22 1.26 1.33</table>
 		<table name="#physicalSkillPower">1.1 1.11 1.13 1.16</table>
 		<table name="#mpConsume">38 41 45 47</table>
-		<table name="#ench9Reuse"> 179000 178000 177000 176000 175000 174000 173000 172000 171000 170000 </table> <!-- Need verify -->
+		<table name="#ench9Reuse"> 179000 178000 177000 176000 175000 174000 173000 172000 171000 170000 169000 168000 167000 166000 165000 164000 163000 162000 161000 160000 </table> <!-- Need verify -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1200" />
@@ -1415,9 +1213,9 @@
 		<set name="reuseDelay" val="180000" />
 		<set name="abnormalTime" val="120" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpConsume" val="20" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
+		<enchant3 name="reuseDelay" val="#ench9Reuse" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="#pAtk" />
@@ -1428,11 +1226,11 @@
 		</for>
 	</skill>
 	<skill id="10278" levels="8" name="Reduce Anger" enchantGroup1="11" enchantGroup2="11">
-		<table name="#ench1MpConsume"> 90 86 82 78 75 71 67 63 60 56 </table>
-		<table name="#ench2Power"> -451 -502 -553 -604 -655 -706 -757 -808 -859 -910 -951 -1002 -1053 -1104 -1155 -1206 -1257 -1308 -1359 -1410 </table>
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsume"> 76 77 80 83 86 88 91 94 </table>
-		<table name="#ench9Reuse"> 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 19000 18000 17000 16000 15000 14000 13000 12000 11000 10000 </table> 
+		<table name="#ench1MpConsume">90 86 82 78 75 71 67 63 60 56</table>
+		<table name="#ench2Power"> -451 -502 -553 -604 -655 -706 -757 -808 -859 -910 -951 -1002 -1053 -1104 -1155 -1206 -1257 -1308 -1359 -1410 </table> <!-- Need verify -->
+		<table name="#magicLvl">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume">76 77 80 83 86 88 91 94</table>
+		<table name="#ench9Reuse"> 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 19000 18000 17000 16000 15000 14000 13000 12000 11000 10000 </table> <!-- Need verify -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="targetType" val="AURA" />
@@ -1444,26 +1242,25 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="rideState" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<set name="abnormalTime" val="30" />
 		<enchant1 name="mpConsume" val="50" />
 		<enchant3 name="reuseDelay" val="#ench9Reuse" />
 		<for>
 			<effect name="AddHate">
-				<param power="-450" />
+				<param power="-400" /> <!-- Need verify -->
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="AddHate">
-				<param power="#ench2Power" />
+				<param power="#ench2Power" /> <!-- Need verify -->
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="10279" levels="1" name="Giant Barrier" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup9="10">
+	<skill id="10279" levels="1" name="Giant Barrier" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11" enchantGroup4="11">
 		<table name="#ench1mpConsume">40 38 36 35 33 31 30 28 26 25</table>
-		<table name="#ench2abnormalTime">11 12 13 14 15 16 17 18 19 20</table>
-		<table name="#ench3playerHpRestrict">71 72 73 74 75 76 77 78 79 80</table>
-		<table name="#ench4rate">1 2 3 4 5 6 7 8 9 10</table>
-		<table name="#ench9Reuse"> 299000 298000 297000 296000 295000 294000 293000 292000 291000 290000 </table> <!-- Need verify -->
+		<table name="#ench2abnormalTime">11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 19 20</table>
+		<table name="#ench3playerHpRestrict">71 72 73 74 75 76 77 78 79 80 81 81 82 82 83 83 84 84 84 85</table>
+		<table name="#ench4rate">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</table>
+		<table name="#ench9Reuse"> 299000 298000 297000 296000 295000 294000 293000 292000 291000 290000 289000 288000 287000 286000 285000 284000 283000 282000 281000 280000 </table> <!-- Need verify -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
@@ -1475,15 +1272,17 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="mpConsume" val="42" />
 		<set name="abnormalTime" val="7" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume" />
-		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse"/>
+		<enchant1 name="abnormalTime" val="#ench2abnormalTime" />
+		<enchant5 name="reuseDelay" val="#ench9Reuse"/>
 		<cond msgId="113" addName="1">
 			<player hp="70" />
 		</cond>
-		<enchant3cond msgId="113" addName="1">
+		<enchant2cond msgId="113" addName="1">
 				<player hp="#ench3playerHpRestrict" />
-		</enchant3cond>
+		</enchant2cond>
+		<enchant2cond msgId="113" addName="1">
+				<player hp="#ench3playerHpRestrict" />
+		</enchant2cond>
 		<for>
 			<effect name="BlockDamage">
 				<param block="HP"/>
@@ -1537,11 +1336,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10281" levels="5" name="Sonic Star" enchantGroup1="10" enchantGroup2="10" enchantGroup9="10">
+	<skill id="10281" levels="5" name="Sonic Star" enchantGroup1="11" enchantGroup2="11">
 	<!-- Source: https://l2wiki.com/Sonic_Star_-_Tyrr_Duelist -->
 		<table name="#ench1MpConsume"> 1131 1083 1037 989 942 896 848 801 753 707 </table>
-		<table name="#enchPower"> 48735 49741 50747 51723 52759 53765 54771 55777 56783 57789 </table>
-		<table name="#power"> 44711 46723 50165 52369 54573 </table>
+		<table name="#enchPower"> 48735 49741 50747 51723 52759 53765 54771 55777 56783 60000 70000 80000 90000 100000 110000 120000 130000 140000 150000 160000 </table>
+		<table name="#power"> 44711 46723 50165 52369 100000 </table>
 		<table name="#magicLvl"> 95 98 101 103 105 </table>
 		<table name="#mpConsume"> 1103 1158 1213 1268 1323 </table>
 		<table name="#ench9Reuse"> 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 </table>
@@ -1552,7 +1351,7 @@
 		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="baseCritRate" val="10" />
-		<set name="hitTime" val="7500" />
+		<set name="hitTime" val="10000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isDebuff" val="true" />
@@ -1563,15 +1362,11 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="KNOCKDOWN" />
-		<enchant1 name="magicLevel" val="99" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="magicLevel" val="99" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant2 name="power" val="#enchPower" />
-		<enchant9 name="magicLevel" val="99" />
-		<enchant9 name="power" val="#enchPower" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
+		<enchant1 name="magicLvl" val="105" />
+		<table name="#baseCritRate">  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 </table>
+		<enchant2 name="magicLvl" val="105" />
+		<enchant2 name="baseCritRate" val="#baseCritRate" />	
 		<cond msgId="113" addName="1">
 			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 		</cond>
@@ -1675,6 +1470,7 @@
 		<set name="icon" val="icon.skill0494" />
 		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="targetType" val="AURA" />
+		<set name="abnormalVisualEffect" val="AURA_DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="3" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1686,12 +1482,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10288" levels="11" name="Hurricane Storm" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+	<skill id="10288" levels="11" name="Hurricane Storm" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11">
 	<!-- Source: https://l2wiki.com/Hurricane_Storm_-_Tyrr_Titan -->
 		<table name="#ench1MpConsume"> 190 182 174 166 158 150 142 134 126 118 </table>
 		<table name="#power"> 11557 11956 12754 13553 14351 15150 15948 16747 20787 21925 23063 </table>
 		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#enchPower"> 17546 17945 18344 18744 19143 19542 19941 20341 20740 21139 </table>
+		<table name="#enchPower"> 17546 17945 18344 18744 19143 19542 19941 20341 20740 21139 27546 27945 28344 28744 29143 29542 29941 30341 30740 31139 </table>
 		<table name="#enchelementPower"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#mpConsume"> 161 163 169 175 180 186 192 198 204 210 216 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1708,35 +1504,18 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="baseCritRate" val="10" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<enchant1 name="magicLevel" val="99" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="magicLevel" val="99" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant3 name="magicLevel" val="99" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant4 name="magicLevel" val="99" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant5 name="magicLevel" val="99" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant6 name="magicLevel" val="99" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant7 name="magicLevel" val="99" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant8 name="magicLevel" val="99" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
+		<enchant1 name="magicLvl" val="105" />
+		<table name="#baseCritRate">  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 </table>
+		<enchant2 name="magicLvl" val="105" />
+		<enchant2 name="baseCritRate" val="#baseCritRate" />
+		<table name="#enchpDef"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
+		<enchant3 name="magicLvl" val="105" />	
+		<enchant3for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#enchpDef" />
+			</effect>
+		</enchant3for>
 		<cond msgId="113" addName="1">
 			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 		</cond>
@@ -1751,7 +1530,7 @@
 	</skill>
 	<skill id="10289" levels="4" name="Boost" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10">
 		<table name="#ench1mpConsume">137 131 125 120 114 108 102 97 91 85</table>
-		<table name="#ench2Time">61 62 63 64 65 66 67 68 69 70</table>
+		<table name="#ench2Time">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
 		<table name="#power">1.3 1.35 1.4 1.45</table>
 		<table name="#power2">1.05 1.1 1.15 1.2</table>
 		<table name="#magicLvl">85 90 95 99</table>
@@ -1764,23 +1543,19 @@
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="300000" />
 		<set name="mpConsume" val="143" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume" />
-		<enchant2 name="abnormalTime" val="#ench2Time" />
-		<for>
-			<effect name="Buff">
-				<mul stat="physicalSkillPower" val="#power" />
-				<mul stat="pvpPhysDmg" val="#power2" />
-				<mul stat="pvpPhysSkillsDmg" val="#power2" />
-			</effect>
-		</for>
+		<enchant1 name="abnormalTime" val="#ench2Time" />
+		<table name="#defCritDamage">  0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 1.1  </table>
+		<enchant2 name="magicLvl" val="105" />	
+		<enchant2for>
+		<effect name="Buff">
+		<mul stat="defCritDamage" val="#defCritDamage" />
+		</effect>
+		</enchant2for>
+		<table name="#enchpDef"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
+		<enchant3 name="magicLvl" val="105" />	
 		<enchant3for>
-			<effect name="Buff">
-				<mul stat="physicalSkillPower" val="1.45" />
-				<mul stat="pvpPhysDmg" val="1.2" />
-				<mul stat="pvpPhysSkillsDmg" val="1.2" />
-			</effect>
-			<effect name="AttackTrait">
-				<param SHOCK="#enchRate" />
+			<effect name="Debuff">
+				<mul stat="mDef" val="#enchpDef" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
@@ -1793,6 +1568,13 @@
 				<param KNOCKDOWN="#enchRate" />
 			</effect>
 		</enchant4for>
+		<for>
+			<effect name="Buff">
+				<mul stat="physicalSkillPower" val="#power" />
+				<mul stat="pvpPhysDmg" val="#power2" />
+				<mul stat="pvpPhysSkillsDmg" val="#power2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10290" levels="8" name="Hurricane Slasher">
 		<table name="#mpConsume"> 138 141 146 150 155 160 165 170 </table>
@@ -1825,10 +1607,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10291" levels="1" name="Feral Bear Cry" enchantGroup1="10" enchantGroup2="10">
-		<table name="#enchTime"> 310 320 330 340 350 360 370 380 390 400 </table>
-		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+	<skill id="10291" levels="1" name="Feral Bear Cry" enchantGroup1="11" enchantGroup2="11">
+		<table name="#enchTime"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 </table>
+		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 99 99 99 99 99 99 99 99 99 99 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
@@ -1840,9 +1622,15 @@
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<enchant1 name="magicLvl" val="99" />
 		<enchant1 name="abnormalTime" val="#enchTime" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<table name="#defCritDamage">  0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 1.1  </table>
+		<enchant2 name="magicLvl" val="105" />	
+		<enchant2for>
+		<effect name="Buff">
+		<mul stat="defCritDamage" val="#defCritDamage" />
+		</effect>
+		</enchant2for>
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.3" />
@@ -1859,10 +1647,10 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="10292" levels="1" name="Feral Ogre Cry" enchantGroup1="10" enchantGroup2="10">
-		<table name="#enchTime"> 310 320 330 340 350 360 370 380 390 400 </table>
-		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+	<skill id="10292" levels="1" name="Feral Ogre Cry" enchantGroup1="11" enchantGroup2="11">
+		<table name="#enchTime"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 </table>
+		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 99 99 99 99 99 99 99 99 99 99 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
@@ -1876,7 +1664,13 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="abnormalTime" val="#enchTime" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<table name="#defCritDamage">  0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 1.1  </table>
+		<enchant2 name="magicLvl" val="105" />	
+		<enchant2for>
+		<effect name="Buff">
+		<mul stat="defCritDamage" val="#defCritDamage" />
+		</effect>
+		</enchant2for>
 		<for>
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.10" />
@@ -1899,10 +1693,10 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="10293" levels="1" name="Feral Puma Cry" enchantGroup1="10" enchantGroup2="10">
-		<table name="#enchTime"> 310 320 330 340 350 360 370 380 390 400 </table>
-		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+	<skill id="10293" levels="1" name="Feral Puma Cry" enchantGroup1="11" enchantGroup2="11">
+		<table name="#enchTime"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 </table>
+		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 99 99 99 99 99 99 99 99 99 99 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
@@ -1916,7 +1710,13 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="abnormalTime" val="#enchTime" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<table name="#defCritDamage">  0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 1.1  </table>
+		<enchant2 name="magicLvl" val="105" />	
+		<enchant2for>
+		<effect name="Buff">
+		<mul stat="defCritDamage" val="#defCritDamage" />
+		</effect>
+		</enchant2for>
 		<for>
 			<effect name="Buff">
 				<add stat="accCombat" val="7" />
@@ -1935,10 +1735,10 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="10294" levels="1" name="Feral Rabbit Cry" enchantGroup1="10" enchantGroup2="10">
-		<table name="#enchTime"> 310 320 330 340 350 360 370 380 390 400 </table>
-		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+	<skill id="10294" levels="1" name="Feral Rabbit Cry" enchantGroup1="11" enchantGroup2="11">
+		<table name="#enchTime"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 </table>
+		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 99 99 99 99 99 99 99 99 99 99 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
@@ -1952,7 +1752,13 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="abnormalTime" val="#enchTime" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<table name="#defCritDamage">  0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 1.1  </table>
+		<enchant2 name="magicLvl" val="105" />	
+		<enchant2for>
+		<effect name="Buff">
+		<mul stat="defCritDamage" val="#defCritDamage" />
+		</effect>
+		</enchant2for>
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.30" />
@@ -1971,10 +1777,10 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="10295" levels="1" name="Hawk Cry" enchantGroup1="10" enchantGroup2="10">
-		<table name="#enchTime"> 310 320 330 340 350 360 370 380 390 400 </table>
-		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+	<skill id="10295" levels="1" name="Hawk Cry" enchantGroup1="11" enchantGroup2="11">
+		<table name="#enchTime"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 </table>
+		<table name="#enchTraits"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 </table>
+		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 99 99 99 99 99 99 99 99 99 99 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
@@ -1988,7 +1794,13 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="abnormalTime" val="#enchTime" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<table name="#defCritDamage">  0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 1.1  </table>
+		<enchant2 name="magicLvl" val="105" />	
+		<enchant2for>
+		<effect name="Buff">
+		<mul stat="defCritDamage" val="#defCritDamage" />
+		</effect>
+		</enchant2for>
 		<for>
 			<effect name="Buff">
 				<add stat="accCombat" val="8" />
@@ -2007,8 +1819,8 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="10296" levels="1" name="Spirit of the Hunter" enchantGroup1="10">
-		<table name="#ench1Time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000</table>
+	<skill id="10296" levels="1" name="Spirit of the Hunter" enchantGroup1="11">
+		<table name="#ench1Time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000 3020 3040 3160 3280 3400 3520 3640 3760 3880 4000</table>
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="abnormalType" val="DETECT_WEAKNESS" />
@@ -2033,8 +1845,8 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="10297" levels="1" name="Spirit of the Slayer" enchantGroup1="10">
-		<table name="#ench1Time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000</table>
+	<skill id="10297" levels="1" name="Spirit of the Slayer" enchantGroup1="11">
+		<table name="#ench1Time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000 3020 3040 3160 3280 3400 3520 3640 3760 3880 4000</table>
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="abnormalType" val="DETECT_WEAKNESS" />
