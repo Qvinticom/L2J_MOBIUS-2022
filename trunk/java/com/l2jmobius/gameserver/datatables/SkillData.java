@@ -103,7 +103,7 @@ public final class SkillData
 	 */
 	public static int getSkillHashCode(int skillId, int skillLevel)
 	{
-		return (skillId * 1021) + skillLevel;
+		return (skillId * 1031) + skillLevel;
 	}
 	
 	public Skill getSkill(int skillId, int level)
