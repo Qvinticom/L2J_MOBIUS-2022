@@ -101,12 +101,12 @@ public class Q10331_StartOfFate extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32153-03.htm":
-			case "32147-03.htm":
-			case "32160-03.htm":
-			case "32150-03.htm":
-			case "32157-03.htm":
-			case "32146-03.htm":
+			case "32153-03.html":
+			case "32147-03.html":
+			case "32160-03.html":
+			case "32150-03.html":
+			case "32157-03.html":
+			case "32146-03.html":
 			{
 				showOnScreenMsg(player, NpcStringId.GO_TO_THE_ENTRANCE_OF_THE_RUINS_OF_YE_SAGIRA_THROUGH_GATEKEEPER_MILIA_IN_TALKING_ISLAND_VILLAGE, ExShowScreenMessage.TOP_CENTER, 10000);
 				qs.startQuest();
