@@ -36,7 +36,7 @@ public class DeathDropItem extends GeneralDropItem
 	
 	/*
 	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.drops.GeneralDropItem#getGlobalAmountMultiplier()
+	 * @see com.l2jmobius.gameserver.model.drops.GeneralDropItem#getGlobalAmountMultiplier()
 	 */
 	@Override
 	protected double getGlobalAmountMultiplier(boolean isPremium)
@@ -46,7 +46,7 @@ public class DeathDropItem extends GeneralDropItem
 	
 	/*
 	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.drops.GeneralDropItem#getGlobalChanceMultiplier()
+	 * @see com.l2jmobius.gameserver.model.drops.GeneralDropItem#getGlobalChanceMultiplier()
 	 */
 	@Override
 	protected double getGlobalChanceMultiplier(boolean isPremium)

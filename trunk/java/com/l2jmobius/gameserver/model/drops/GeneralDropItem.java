@@ -249,7 +249,7 @@ public class GeneralDropItem implements IDropItem
 	
 	/*
 	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.drop.IDropItem#calculateDrops(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.actor.L2Character)
+	 * @see com.l2jmobius.gameserver.model.drop.IDropItem#calculateDrops(com.l2jmobius.gameserver.model.actor.L2Character, com.l2jmobius.gameserver.model.actor.L2Character)
 	 */
 	@Override
 	public Collection<ItemHolder> calculateDrops(L2Character victim, L2Character killer)

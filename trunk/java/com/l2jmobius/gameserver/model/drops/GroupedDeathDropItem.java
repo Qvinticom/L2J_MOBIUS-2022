@@ -33,7 +33,7 @@ public class GroupedDeathDropItem extends GroupedGeneralDropItem
 	
 	/*
 	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.drops.GroupedGeneralDropItem#getGlobalChanceMultiplier()
+	 * @see com.l2jmobius.gameserver.model.drops.GroupedGeneralDropItem#getGlobalChanceMultiplier()
 	 */
 	@Override
 	protected double getGlobalChanceMultiplier()
