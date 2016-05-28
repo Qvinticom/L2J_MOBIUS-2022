@@ -353,8 +353,8 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		{
 			finalMsg = SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW);
 		}
-		Broadcast.toAllOnlinePlayers(finalMsg);
 		finalMsg.addString(_hall.getName());
+		Broadcast.toAllOnlinePlayers(finalMsg);
 		_missionAccomplished = false;
 		
 		_hall.updateSiegeZone(false);
