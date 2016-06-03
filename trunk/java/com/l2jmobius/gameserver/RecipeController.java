@@ -649,6 +649,9 @@ public class RecipeController
 					
 					sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CREATED_S2_AFTER_RECEIVING_S3_ADENA);
 					sm.addString(_player.getName());
+					sm.addItemName(itemId);
+					sm.addLong(_price);
+					_target.sendPacket(sm);
 				}
 				else
 				{
@@ -662,10 +665,10 @@ public class RecipeController
 					sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CREATED_S3_S2_S_AT_THE_PRICE_OF_S4_ADENA);
 					sm.addString(_player.getName());
 					sm.addInt(itemCount);
+					sm.addItemName(itemId);
+					sm.addLong(_price);
+					_target.sendPacket(sm);
 				}
-				sm.addLong(_price);
-				sm.addItemName(itemId);
-				_target.sendPacket(sm);
 			}
 			
 			if (itemCount > 1)
