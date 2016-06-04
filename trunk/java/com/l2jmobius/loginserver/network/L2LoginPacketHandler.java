@@ -24,6 +24,8 @@ import com.l2jmobius.commons.mmocore.ReceivablePacket;
 import com.l2jmobius.loginserver.network.L2LoginClient.LoginClientState;
 import com.l2jmobius.loginserver.network.clientpackets.AuthGameGuard;
 import com.l2jmobius.loginserver.network.clientpackets.RequestAuthLogin;
+import com.l2jmobius.loginserver.network.clientpackets.RequestPIAgreement;
+import com.l2jmobius.loginserver.network.clientpackets.RequestPIAgreementCheck;
 import com.l2jmobius.loginserver.network.clientpackets.RequestServerList;
 import com.l2jmobius.loginserver.network.clientpackets.RequestServerLogin;
 
@@ -91,6 +93,16 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 					case 0x05:
 					{
 						packet = new RequestServerList();
+						break;
+					}
+					case 0x0E:
+					{
+						packet = new RequestPIAgreementCheck(); // TODO: Verify names
+						break;
+					}
+					case 0x0F:
+					{
+						packet = new RequestPIAgreement();
 						break;
 					}
 					default:

@@ -97,8 +97,6 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 			if (!isChecksumValid)
 			{
 				// _log.warning("Wrong checksum from client: " + toString());
-				// super.getConnection().close((SendablePacket<L2LoginClient>) null);
-				// return false;
 			}
 			return true;
 		}

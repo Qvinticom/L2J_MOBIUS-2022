@@ -77,6 +77,7 @@ public class LoginController
 	private static final String ACCOUNT_ACCESS_LEVEL_UPDATE = "UPDATE accounts SET accessLevel = ? WHERE login = ?";
 	private static final String ACCOUNT_IPS_UPDATE = "UPDATE accounts SET pcIp = ?, hop1 = ?, hop2 = ?, hop3 = ?, hop4 = ? WHERE login = ?";
 	private static final String ACCOUNT_IPAUTH_SELECT = "SELECT * FROM accounts_ipauth WHERE login = ?";
+	private static final String ACCOUNT_OTP_SELECT = "SELECT value FROM account_data WHERE account_name = ? AND var = 'otp'";
 	
 	private LoginController() throws GeneralSecurityException
 	{
@@ -232,6 +233,18 @@ public class LoginController
 							// wrong password
 							recordFailedLoginAttemp(addr);
 							return null;
+						}
+						
+						try (PreparedStatement otpPs = con.prepareStatement(ACCOUNT_OTP_SELECT))
+						{
+							otpPs.setString(1, login);
+							try (ResultSet otpRset = otpPs.executeQuery())
+							{
+								if (otpRset.next())
+								{
+									info.setOTP(otpRset.getString(1));
+								}
+							}
 						}
 						
 						clearFailedLoginAttemps(addr);

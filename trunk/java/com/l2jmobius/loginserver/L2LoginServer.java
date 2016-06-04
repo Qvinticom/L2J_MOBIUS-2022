@@ -36,7 +36,6 @@ import com.l2jmobius.commons.mmocore.SelectorConfig;
 import com.l2jmobius.commons.mmocore.SelectorThread;
 import com.l2jmobius.loginserver.network.L2LoginClient;
 import com.l2jmobius.loginserver.network.L2LoginPacketHandler;
-import com.l2jmobius.status.Status;
 
 /**
  * @author KenM
@@ -49,7 +48,6 @@ public final class L2LoginServer
 	private static L2LoginServer _instance;
 	private GameServerListener _gameServerListener;
 	private SelectorThread<L2LoginClient> _selectorThread;
-	private Status _statusServer;
 	private Thread _restartLoginServer;
 	
 	public static void main(String[] args)
@@ -149,23 +147,6 @@ public final class L2LoginServer
 			System.exit(1);
 		}
 		
-		if (Config.IS_TELNET_ENABLED)
-		{
-			try
-			{
-				_statusServer = new Status(Server.serverMode);
-				_statusServer.start();
-			}
-			catch (IOException e)
-			{
-				_log.log(Level.WARNING, "Failed to start the Telnet Server. Reason: " + e.getMessage(), e);
-			}
-		}
-		else
-		{
-			_log.info("Telnet server is currently disabled.");
-		}
-		
 		try
 		{
 			_selectorThread.openServerSocket(bindAddress, Config.PORT_LOGIN);
@@ -177,11 +158,6 @@ public final class L2LoginServer
 			_log.log(Level.SEVERE, "FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
-	}
-	
-	public Status getStatusServer()
-	{
-		return _statusServer;
 	}
 	
 	public GameServerListener getGameServerListener()

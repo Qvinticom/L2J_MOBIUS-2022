@@ -44,7 +44,5 @@ public class PlayerLogout extends BaseRecievePacket
 		{
 			_log.info("Player " + account + " logged out from gameserver [" + server.getServerId() + "] " + GameServerTable.getInstance().getServerNameById(server.getServerId()));
 		}
-		
-		server.broadcastToTelnet("Player " + account + " disconnected from GameServer " + server.getServerId());
 	}
 }

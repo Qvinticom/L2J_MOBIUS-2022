@@ -1073,6 +1073,7 @@ public final class Config
 	public static double CP_REGEN_MULTIPLIER;
 	public static boolean IS_TELNET_ENABLED;
 	public static boolean SHOW_LICENCE;
+	public static boolean SHOW_PI_AGREEMENT;
 	public static boolean ACCEPT_NEW_GAMESERVER;
 	public static int SERVER_ID;
 	public static byte[] HEX_ID;
@@ -2943,6 +2944,7 @@ public final class Config
 			DATABASE_MAX_IDLE_TIME = ServerSettings.getInt("MaximumDbIdleTime", 0);
 			
 			SHOW_LICENCE = ServerSettings.getBoolean("ShowLicence", true);
+			SHOW_PI_AGREEMENT = ServerSettings.getBoolean("ShowPIAgreement", false);
 			
 			AUTO_CREATE_ACCOUNTS = ServerSettings.getBoolean("AutoCreateAccounts", true);
 			

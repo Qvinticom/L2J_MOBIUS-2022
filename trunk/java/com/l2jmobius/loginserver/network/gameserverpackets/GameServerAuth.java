@@ -91,7 +91,6 @@ public class GameServerAuth extends BaseRecievePacket
 			{
 				_log.info("Authed: id: " + server.getGameServerInfo().getId());
 			}
-			server.broadcastToTelnet("GameServer [" + server.getServerId() + "] " + GameServerTable.getInstance().getServerNameById(server.getServerId()) + " is connected");
 			server.setLoginConnectionState(GameServerState.AUTHED);
 		}
 	}

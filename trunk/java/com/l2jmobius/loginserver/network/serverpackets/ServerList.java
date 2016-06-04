@@ -63,7 +63,6 @@ public final class ServerList extends L2LoginServerPacket
 	private final List<ServerData> _servers;
 	private final int _lastServer;
 	private final Map<Integer, Integer> _charsOnServers;
-	private final Map<Integer, long[]> _charsToDelete;
 	
 	class ServerData
 	{
@@ -103,7 +102,7 @@ public final class ServerList extends L2LoginServerPacket
 			_ageLimit = 0;
 			_brackets = gsi.isShowingBrackets();
 			// If server GM-only - show status only to GMs
-			_status = (gsi.getStatus() == ServerStatus.STATUS_GM_ONLY) && (client.getAccessLevel() <= 0) ? ServerStatus.STATUS_DOWN : gsi.getStatus();
+			_status = gsi.getStatus() != ServerStatus.STATUS_GM_ONLY ? gsi.getStatus() : client.getAccessLevel() > 0 ? gsi.getStatus() : ServerStatus.STATUS_DOWN;
 			_serverId = gsi.getId();
 		}
 	}
@@ -117,7 +116,6 @@ public final class ServerList extends L2LoginServerPacket
 			_servers.add(new ServerData(client, gsi));
 		}
 		_charsOnServers = client.getCharsOnServ();
-		_charsToDelete = client.getCharsWaitingDelOnServ();
 	}
 	
 	@Override
@@ -144,31 +142,14 @@ public final class ServerList extends L2LoginServerPacket
 			writeD(server._serverType); // 1: Normal, 2: Relax, 4: Public Test, 8: No Label, 16: Character Creation Restricted, 32: Event, 64: Free
 			writeC(server._brackets ? 0x01 : 0x00);
 		}
-		writeH(0x00); // unknown
+		writeH(0xA4); // unknown
 		if (_charsOnServers != null)
 		{
-			writeC(_charsOnServers.size());
-			for (int servId : _charsOnServers.keySet())
+			for (ServerData server : _servers)
 			{
-				writeC(servId);
-				writeC(_charsOnServers.get(servId));
-				if ((_charsToDelete == null) || !_charsToDelete.containsKey(servId))
-				{
-					writeC(0x00);
-				}
-				else
-				{
-					writeC(_charsToDelete.get(servId).length);
-					for (long deleteTime : _charsToDelete.get(servId))
-					{
-						writeD((int) ((deleteTime - System.currentTimeMillis()) / 1000));
-					}
-				}
+				writeC(server._serverId);
+				writeC(_charsOnServers.getOrDefault(server._serverId, 0));
 			}
-		}
-		else
-		{
-			writeC(0x00);
 		}
 	}
 }
