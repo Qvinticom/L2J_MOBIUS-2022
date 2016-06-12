@@ -56,7 +56,7 @@ public class RecipeData implements IGameXmlReader
 	public void load()
 	{
 		_recipes.clear();
-		parseDatapackFile("data/recipes.xml");
+		parseDatapackFile("data/Recipes.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _recipes.size() + " recipes.");
 	}
 	
