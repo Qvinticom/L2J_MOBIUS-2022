@@ -3,60 +3,37 @@
 	<!-- General armor enchant group. -->
 	<enchantRateGroup name="ARMOR_GROUP">
 		<current enchant="0-2" chance="100" />
-		<current enchant="3" chance="66.67" />
-		<current enchant="4" chance="33.34" />
-		<current enchant="5" chance="25" />
-		<current enchant="6" chance="20" />
-		<current enchant="7" chance="16.67" />
-		<current enchant="8" chance="14.29" />
-		<current enchant="9" chance="12.5" />
-		<current enchant="10" chance="11.12" />
-		<current enchant="11" chance="10.0" />
-		<current enchant="12" chance="9.10" />
-		<current enchant="13" chance="8.34" />
-		<current enchant="14" chance="7.70" />
-		<current enchant="15" chance="7.15" />
-		<current enchant="16" chance="6.67" />
-		<current enchant="17" chance="6.25" />
-		<current enchant="18" chance="5.89" />
-		<current enchant="19" chance="5.56" />
-		<current enchant="20-127" chance="0" />
+		<current enchant="3-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
 	</enchantRateGroup>
 
 	<!-- General full armor enchant group. -->
 	<enchantRateGroup name="FULL_ARMOR_GROUP">
 		<current enchant="0-3" chance="100" />
-		<current enchant="4" chance="66.67" />
-		<current enchant="5" chance="33.34" />
-		<current enchant="6" chance="25" />
-		<current enchant="7" chance="20" />
-		<current enchant="8" chance="16.67" />
-		<current enchant="9" chance="14.29" />
-		<current enchant="10" chance="12.5" />
-		<current enchant="11" chance="11.12" />
-		<current enchant="12" chance="10.0" />
-		<current enchant="13" chance="9.10" />
-		<current enchant="14" chance="8.34" />
-		<current enchant="15" chance="7.70" />
-		<current enchant="16" chance="7.15" />
-		<current enchant="17" chance="6.67" />
-		<current enchant="18" chance="6.25" />
-		<current enchant="19" chance="5.89" />
-		<current enchant="20-127" chance="0" />
+		<current enchant="4-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
 	</enchantRateGroup>
 
 	<!-- General fighter weapon enchant group. -->
 	<enchantRateGroup name="FIGHTER_WEAPON_GROUP">
 		<current enchant="0-2" chance="100" />
-		<current enchant="3-14" chance="70" />
-		<current enchant="15-127" chance="35" />
+		<current enchant="3-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
 	</enchantRateGroup>
 
 	<!-- General mage weapon enchant group. -->
 	<enchantRateGroup name="MAGE_WEAPON_GROUP">
 		<current enchant="0-2" chance="100" />
-		<current enchant="3-14" chance="50" /> <!-- TODO: confirm on ertheia they increased success rate "significantly" -->
-		<current enchant="15-127" chance="30" /> <!-- TODO: confirm on ertheia they increased success rate "significantly" -->
+		<current enchant="3-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-65535" chance="0" />
 	</enchantRateGroup>
 
 	<!-- Default scrolls enchanting route line. -->
